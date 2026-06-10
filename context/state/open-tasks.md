@@ -1,0 +1,25 @@
+# State · Open Tasks & Known Gaps
+
+> **Holds:** what's in flight (pending manual steps, stragglers to confirm) + standing notes and known gaps (decisions, icon conventions, schema facts).
+> **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md)
+> **Siblings:** [databases](databases.md) · [records-harvard](records-harvard.md) · [records-consigli](records-consigli.md) · [pages](pages.md)
+
+---
+
+## Open tasks / in-flight
+- **TEMPLATE guide rows (2026-06-09):** done in place. Each of the 6 page-local tables has 1 merged guide row = in-cell `[…e.g…]` placeholders + a body "What goes in each field" list (every field, incl. relations/numbers); Bio + Attack Plan also guided. **Shared tables (Projects Underway, Existing Software) intentionally have NO example row** — their rows are shared across KBE/Consigl/Harvard, so a sample there would pollute every profile; guidance lives in their on-page notes (extended this session with "What goes in this table"). Pending Zack: (1) **delete archive page** `37a90644-d524-818c-bea9-e91b60b57e72` once the template looks right (now also holds the 6 retired standalone guide rows); (2) ⚠ **2 likely Linkedin stragglers found** — `58090644-d524-835f-909c-81e16563b0d3` ("41 Years ABC Member") + `49590644-d524-8318-a259-01918055016d` ("August Steelpointe Pre-Leasing") surfaced under the local Linkedin collection; confirm in UI and move to archive if they're leftover KBE data (left untouched — could be global-DB false positives); (3) optional — mark TEMPLATE as a native "New ▾" template (manual; MCP can't); (4) optional cleanup — Linkedin `Author` + Events `Location tags` select options are still KBE-specific leftovers (schema, not data); genericize if wanted.
+- Harvard construction-research build + department hierarchy + Harvard Projects page skim layout complete (2026-06-08).
+- **Consigli manual UI steps** (MCP can't set relation filters on shared/embedded views) — see [records-consigli.md](records-consigli.md) "Still manual in Notion UI".
+
+---
+
+## Notes / known gaps
+- **Single-owner decision:** all Harvard projects link to one "Harvard" owner record; owning department captured as text in each project brief (per Zack, 2026-06-08).
+- **Icons:** people `/icons/user_gray.svg`, owner/GC companies `/icons/building_blue.svg`. **Projects now use varied emojis** (per Zack, 2026-06-08): 🔬 ERC · 🎭 ART/100 South · 🏘️ Eliot · 📈 Pritzker · 🌳 William James Plaza · 🔨 Barker · 🏪 12 Palmer · 🎓 HBS · 🧬 HMS Bertarelli · 🌊 NASDEP · ♨️ Tunnel 29/30 · 🔧 ESL. Department companies also use varied emojis (see below).
+- **Verified-good built-in icon names** (normalize to `icons/<name>` on fetch): `building, user, map, megaphone, calendar, link, location, star`. INVALID names (e.g. `award`) store as a literal broken URL — see [playbook/notion-mcp.md](../playbook/notion-mcp.md).
+- Schema additions to Construction Projects: Type option `Infrastructure`; Location options `Massachusetts, Cambridge, Allston, Boston, Longwood`.
+- **New relations (2026-06-08, for departments):** Companies `Owned Projects`⇄ Projects `Owning Department`; Companies `Owner Institution`⇄ Owners `Departments`. Use these for owner-department links — NOT the GC relations (`Contractors`/`General Contractors`).
+- **Dept emoji exception (per Zack):** Harvard *department companies* use varied emoji icons (🏛️🏗️🗺️🏢⚡🏬🏠🧭🌱📐🛠️⚕️⚙️💼🎭📣); the earlier "no-emoji" rule still applies to projects/people/GCs.
+- Architects & developers (KieranTimberlake, Studio Gang, Tishman Speyer, Breakthrough, NorthStar, etc.) captured as **text in project briefs**, not separate company records (kept GC-focused/lean).
+- Owners DB schema is live (see [playbook/schemas.md](../playbook/schemas.md)).
+- One manual step pending in Notion: mark the "⟨Owner Name⟩ — TEMPLATE" page as the DB's native template (MCP can't register it in the **New ▾** dropdown).

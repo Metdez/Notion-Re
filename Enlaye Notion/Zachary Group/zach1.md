@@ -1,0 +1,611 @@
+{
+  "company": {
+    "name": "Zachry Group",
+    "description": { "value": "North America's pacesetter in turnkey engineering, construction, maintenance, turnaround and fabrication services to the energy, chemicals, power, manufacturing and industrial sectors. Operates as the Zachry Brands, Inc. family of companies; parent legal entity Zachry Holdings, Inc.", "source_url": "https://zachrygroup.com/about.php" },
+    "website": { "value": "https://zachrygroup.com/", "source_url": "https://zachrygroup.com/" },
+    "linkedin_url": { "value": "https://www.linkedin.com/company/zachry-group", "source_url": "https://zachrygroup.com/" },
+    "hq_address": { "value": "527 Logwood Avenue, San Antonio, TX 78221, United States (mailing PO Box 240130, San Antonio TX 78224); +1 210.588.5000", "lat": 29.318, "lng": -98.515, "source_url": "https://zachrygroup.com/about.php" },
+    "size": { "value": "Mutlinational", "source_url": "https://zachrygroup.com/about.php" },
+    "type": { "value": "Company", "source_url": "https://zachrygroup.com/about.php" },
+    "bw_category": ["Builder", "Design and Architecture"],
+    "ownership": { "value": "private (family-owned; Zachry family, Chairman & CEO John B. Zachry)", "source_url": "https://www.prnewswire.com/news-releases/zachry-holdings-inc-initiates-voluntary-court-supervised-chapter-11-process-to-address-financial-challenges-related-to-golden-pass-lng-export-terminal-site-302151187.html" },
+    "founded": { "value": "1924 (H.B. Zachry); Zachry Brands brand dates from 2008 split", "source_url": "https://zachrygroup.com/" },
+    "revenue_usd_m": { "value": 5400, "year": 2023, "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" },
+    "employees": { "value": 20000, "source_url": "https://sanantonioreport.org" },
+    "enr_rank": { "value": 28, "list": "ENR Top 400 Contractors", "year": 2024, "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" },
+    "legal_name": { "value": "Zachry Holdings, Inc.", "source_url": "https://www.veritaglobal.net/zhi/document/2490377240801000000000009" },
+    "former_names": [
+      { "name": "H.B. Zachry Company", "used_until_year": 2008, "source_url": "https://matrixbcg.com/blogs/owners/zachrygroup" },
+      { "name": "Zachry Industrial, Inc. (operating subsidiary)", "used_until_year": null, "source_url": "https://www.veritaglobal.net/zhi/document/2490377240801000000000009" }
+    ],
+    "dba_names": ["Zachry Brands, Inc.", "Zachry Group"],
+    "duns_number": { "value": null, "source_url": "" },
+    "uei_sam": { "value": null, "source_url": "" },
+    "cage_code": { "value": null, "source_url": "" },
+    "ein": { "value": "last four digits 6814 (Zachry Holdings, Inc.)", "source_url": "https://www.veritaglobal.net/zhi/document/2490377240801000000000009" },
+    "naics_codes": [
+      { "code": "213112", "description": "Support Activities for Oil and Gas Operations (third-party broker classification; not SAM-verified)", "primary": false, "source_url": "https://siccode.com/business/zachry-holdings-inc" }
+    ],
+    "sic_codes": ["1382"],
+    "state_of_incorporation": { "value": "Delaware (suggested, unverified); Texas foreign profit corporation registration", "source_url": "https://opencorporates.com/companies/us_tx/0803867941" },
+    "incorporation_date": { "value": "1998-07-31 (per BBB, secondary)", "source_url": "https://www.bbb.org/us/tx/san-antonio/profile/industrial-contractors/zachry-group-0825-90064801" },
+    "state_entity_ids": [
+      { "state": "TX", "entity_id": "0803867941 (Zachry Industrial, Inc.)", "status": "active", "source_url": "https://opencorporates.com/companies/us_tx/0803867941" }
+    ],
+    "stock_ticker": { "value": "none (private)", "exchange": "", "source_url": "https://zachrygroup.com/" },
+    "fiscal_year_end": { "value": null, "source_url": "" },
+    "financials": {
+      "revenue_history": [
+        { "year": 2022, "revenue_usd_m": 2500, "source_url": "https://craft.co/zachry-group" },
+        { "year": 2023, "revenue_usd_m": 5400, "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" },
+        { "year": 2024, "revenue_usd_m": 3300, "source_url": "https://www.zippia.com/zachry-holdings-careers-45232/revenue/" }
+      ],
+      "backlog_usd_m": { "value": null, "year": null, "source_url": "" },
+      "enr_rank_history": [
+        { "list": "ENR Top 400 Contractors", "rank": 31, "year": 2019, "source_url": "https://www.levelset.com/blog/zachry-group-subcontractor-guide/" },
+        { "list": "ENR Top 400 Contractors", "rank": 34, "year": 2020, "source_url": "https://www.levelset.com/blog/zachry-group-subcontractor-guide/" },
+        { "list": "ENR Top 400 Contractors", "rank": 33, "year": 2023, "source_url": "https://www.enr.com/articles/56502-enrs-2023-top-400-contractors-uncertainty-looms-over-market" },
+        { "list": "ENR Top 400 Contractors", "rank": 28, "year": 2024, "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" }
+      ],
+      "segment_revenue": [],
+      "credit": { "dnb_rating": "", "paydex": null, "source_url": "" }
+    },
+    "bonding": {
+      "single_project_limit_usd_m": { "value": null, "source_url": "" },
+      "aggregate_limit_usd_m": { "value": null, "source_url": "" },
+      "surety_provider": { "value": null, "source_url": "" },
+      "surety_am_best_rating": { "value": null, "source_url": "" }
+    },
+    "insurance": {
+      "carriers": [],
+      "wrap_up_programs": []
+    },
+    "safety_record": {
+      "emr": [], "trir": [], "dart": [], "osha_recordables": [], "osha_fatalities": [], "osha_inspections": [],
+      "safety_awards": [ { "name": "National Safety Council Industry Leader Award (Gulf Coast Partners)", "year": 2015, "issuer": "National Safety Council", "source_url": "https://zachrygroup.com/newsandstories.php" } ]
+    },
+    "litigation_and_claims": [
+      { "case_name": "In re Zachry Holdings, Inc., et al.", "court": "U.S. Bankruptcy Court, Southern District of Texas (Houston)", "case_number": "24-90377 (lead; Judge Marvin Isgur)", "filed_date": "2024-05-21", "type": "bankruptcy", "status": "Plan confirmed 2025-02-27; effective 2025-04-10", "amount_usd": null, "counterparty": "Golden Pass LNG (QatarEnergy/ExxonMobil)", "source_url": "https://www.veritaglobal.net/ZHI" },
+      { "case_name": "Allianz Global Risks US Insurance Co. et al. v. Zachry Industrial Inc. et al.", "court": "U.S. Bankruptcy Court, S.D. Texas", "case_number": "Adv. No. 24-03190", "filed_date": "2024-07-05", "type": "defect/injury (subrogation)", "status": "Dismissed 2024-11-21; insurers appealed 2024-12-02", "amount_usd": 1300000000, "counterparty": "Freeport LNG property insurers (incl. Allianz)", "source_url": "https://www.businesswire.com/news/home/20241121082839/en/" },
+      { "case_name": "FLNG Liquefaction, LLC et al. v. Zachry Industrial Inc. et al.", "court": "U.S. Bankruptcy Court, S.D. Texas", "case_number": "Adv. No. 24-03189", "filed_date": "2024-07-05", "type": "defect/injury (subrogation)", "status": "Dismissed 2024-11-21", "amount_usd": null, "counterparty": "FLNG Liquefaction / insurers", "source_url": "https://www.businesswire.com/news/home/20241121082839/en/" }
+    ],
+    "mechanics_liens": [],
+    "certifications": [
+      { "name": "6 ASME nuclear certifications added", "issuer": "ASME", "valid_until": null, "source_url": "https://zachrygroup.com/newsandstories.php" },
+      { "name": "OSHA Voluntary Protection Programs (VPP) participation", "issuer": "OSHA", "valid_until": null, "source_url": "https://zachrygroup.com/safety.php" }
+    ],
+    "contractor_licenses": [],
+    "states_licensed": ["TX", "LA", "NC", "IN", "NE", "WY", "WA", "UT", "ID", "CT", "IL"],
+    "labor_profile": {
+      "union_status": { "value": "self-perform / craft workforce model (open-shop oriented; self-performs craft)", "source_url": "https://zachrygroup.com/about.php" },
+      "self_perform_trades": [ { "trade": "welding/pipefitting/craft construction", "source_url": "https://www.ziprecruiter.com/Jobs/Zachry/-in-Houston,TX" } ],
+      "trade_agreements": []
+    },
+    "m_and_a_history": [
+      { "event_type": "split", "date": "2008", "counterparty": "Zachry Construction Corporation", "deal_value_usd_m": null, "resulting_division": "Zachry Group / Zachry Brands", "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" },
+      { "event_type": "acquisition", "date": "2012-10-02", "counterparty": "JVIC (J.V. Industrial Companies)", "deal_value_usd_m": null, "resulting_division": "JVIC", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      { "event_type": "acquisition", "date": "2014-01-30", "counterparty": "Commonwealth Engineering", "deal_value_usd_m": null, "resulting_division": "Zachry Engineering", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      { "event_type": "acquisition", "date": "2015-02-04", "counterparty": "CSA (Computer Simulation & Analysis)", "deal_value_usd_m": null, "resulting_division": "Zachry Nuclear", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      { "event_type": "acquisition", "date": "2016-09-01", "counterparty": "Catalyst Services (from Clean Harbors)", "deal_value_usd_m": null, "resulting_division": "JVIC", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      { "event_type": "acquisition", "date": "2017-03-01", "counterparty": "Ambitech Engineering Corporation", "deal_value_usd_m": null, "resulting_division": "Zachry Engineering", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      { "event_type": "acquisition", "date": "2021-09-02", "counterparty": "Trillium Advisory Group", "deal_value_usd_m": null, "resulting_division": "Trillium", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      { "event_type": "rebrand", "date": "2022-08-17", "counterparty": "Numerical Advisory Solutions (created)", "deal_value_usd_m": null, "resulting_division": "Numerical", "source_url": "https://zachrygroup.com/newsandstories.php" }
+    ],
+    "hiring_signals": {
+      "open_reqs_total": { "value": null, "as_of_date": "2026-04", "source_url": "https://careers.zachrygroup.com/" },
+      "open_reqs_by_category": [
+        { "category": "preconstruction/procurement", "count": null, "source_url": "https://careers.greatersatx.com/companies/zachry-group/jobs/76041022-procurement-specialist-i" },
+        { "category": "project controls", "count": null, "source_url": "https://www.zoominfo.com/c/zachry-brands-inc/195346907" }
+      ],
+      "named_tools_in_job_posts": [
+        { "tool": "Oracle Aconex PPMS", "req_title": "Procurement Specialist I", "source_url": "https://careers.greatersatx.com/companies/zachry-group/jobs/76041022-procurement-specialist-i" },
+        { "tool": "Procore", "req_title": "Project Manager / Coordinator", "source_url": "https://network.procore.com/p/zachry-group-omaha" },
+        { "tool": "Primavera P6", "req_title": "Construction PM", "source_url": "https://www.ziprecruiter.com/Jobs/Zachry/-in-Baytown,TX" }
+      ]
+    },
+    "federal_contracting": {
+      "active_set_asides": [],
+      "contract_vehicles": [],
+      "fpds_awards": []
+    }
+  },
+  "division_count": 6,
+  "divisions": [
+    {
+      "name": "Zachry Engineering Corporation",
+      "type": "subsidiary / market-sector unit",
+      "focus": { "value": "Full-service engineering & design: engineering studies, FEL/FEED, detailed design", "source_url": "https://zachrygroup.com/engineering.php" },
+      "address": { "value": "527 Logwood Ave, San Antonio, TX 78221 (HQ); Houston 3151 Briarpark Dr Ste 400, 77042", "lat": 29.318, "lng": -98.515, "source_url": "https://zachrygroup.com/about.php" },
+      "leader_title": { "value": "Matthew Czuba, President, Engineering", "source_url": "https://rocketreach.co/zachry-group-profile_b5c6a24af42e0cf6" },
+      "parent_company": "Zachry Group",
+      "project_names": ["NET Power SN1 (FEED)", "Calpine Baytown CCS (FEED)", "Lake Charles Methanol II (FEED)"],
+      "id": "div-engineering",
+      "founded": { "value": null, "source_url": "" },
+      "office_phone": { "value": "+1 210.588.5000", "source_url": "https://zachrygroup.com/about.php" },
+      "states_served": ["TX","NC","IL","NE"],
+      "metros_served": ["San Antonio","Houston","Corpus Christi","Charlotte","Chicago","Omaha","Metro Manila"],
+      "sectors_served": ["energy","chemicals","power","industrial"],
+      "revenue_usd_m": { "value": null, "year": null, "source_url": "" },
+      "employee_count": { "value": null, "source_url": "" },
+      "active_project_count": { "value": null, "source_url": "" },
+      "aggregate_active_value_usd_m": { "value": null, "source_url": "" },
+      "license_numbers": []
+    },
+    {
+      "name": "JVIC (J.V. Industrial Companies, LLC)",
+      "type": "subsidiary",
+      "focus": { "value": "Turnarounds, maintenance and specialty services to process industries", "source_url": "https://zachrygroup.com/turnarounds.php" },
+      "address": { "value": "3741 Red Bluff Rd #300, Pasadena, TX 77503 (admin)", "lat": 29.67, "lng": -95.18, "source_url": "https://zachrygroup.com/about.php" },
+      "leader_title": { "value": "President – Services Group (Rob Berra)", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "parent_company": "Zachry Group",
+      "project_names": ["Cheniere Energy maintenance (10-yr)", "Chevron Phillips Chemical maintenance (5-yr)"],
+      "id": "div-jvic",
+      "founded": { "value": "acquired 2012-10-02", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "office_phone": { "value": null, "source_url": "" },
+      "states_served": ["TX","LA","UT","WA"],
+      "metros_served": ["Pasadena","Corpus Christi","Freeport","Geismar","Salt Lake City","Burlington"],
+      "sectors_served": ["refining","chemicals","petrochemical"],
+      "revenue_usd_m": { "value": null, "year": null, "source_url": "" },
+      "employee_count": { "value": null, "source_url": "" },
+      "active_project_count": { "value": null, "source_url": "" },
+      "aggregate_active_value_usd_m": { "value": null, "source_url": "" },
+      "license_numbers": []
+    },
+    {
+      "name": "Zachry Nuclear (Zachry Nuclear Inc / Engineering / Construction)",
+      "type": "subsidiary",
+      "focus": { "value": "Nuclear engineering and construction; advanced/SMR reactor support", "source_url": "https://zachrygroup.com/nuclearanalysis.php" },
+      "address": { "value": "2810 Coliseum Centre Dr, Bldg 5 Ste 200, Charlotte, NC 28217; 14 Lords Hill Rd, Stonington, CT 06378", "lat": 35.18, "lng": -80.95, "source_url": "https://zachrygroup.com/about.php" },
+      "leader_title": { "value": "Ingmar Sterzing, President of Nuclear Construction (appt 2026-03-16); Jim Harrell, Chief Nuclear Officer (appt 2025-12-16)", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "parent_company": "Zachry Group",
+      "project_names": ["Natura Resources Molten Salt Reactor at ACU", "Seabrook Nuclear Station (engineering)"],
+      "id": "div-nuclear",
+      "founded": { "value": null, "source_url": "" },
+      "office_phone": { "value": null, "source_url": "" },
+      "states_served": ["NC","CT","TX"],
+      "metros_served": ["Charlotte","Stonington"],
+      "sectors_served": ["nuclear power"],
+      "revenue_usd_m": { "value": null, "year": null, "source_url": "" },
+      "employee_count": { "value": null, "source_url": "" },
+      "active_project_count": { "value": null, "source_url": "" },
+      "aggregate_active_value_usd_m": { "value": null, "source_url": "" },
+      "license_numbers": []
+    },
+    {
+      "name": "Numerical (Numerical Advisory Solutions)",
+      "type": "subsidiary",
+      "focus": { "value": "Analysis & simulation; owner's engineering and startup support", "source_url": "https://zachrygroup.com/analysisandsimulation.php" },
+      "address": { "value": "200 Regency Forest Dr Ste 330, Cary, NC 27518", "lat": 35.77, "lng": -78.78, "source_url": "https://zachrygroup.com/about.php" },
+      "leader_title": { "value": "Jim Harrell, President, Numerical Advisory Solutions", "source_url": "https://zachrygroup.com/press-releases/NAS_Zachry_Group_awarded_BOA_for_TerraPowers_Advanced_Nuclear_Project.html" },
+      "parent_company": "Zachry Group",
+      "project_names": ["TerraPower Natrium Demonstration Project (owner's engineering)"],
+      "id": "div-numerical",
+      "founded": { "value": "created 2022-08-17", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "office_phone": { "value": null, "source_url": "" },
+      "states_served": ["NC","ID","WA","CT"],
+      "metros_served": ["Cary","Charlotte","Idaho Falls","Richland","Stonington"],
+      "sectors_served": ["nuclear","power"],
+      "revenue_usd_m": { "value": null, "year": null, "source_url": "" },
+      "employee_count": { "value": null, "source_url": "" },
+      "active_project_count": { "value": null, "source_url": "" },
+      "aggregate_active_value_usd_m": { "value": null, "source_url": "" },
+      "license_numbers": []
+    },
+    {
+      "name": "Trillium (Trillium Advisory Group)",
+      "type": "subsidiary",
+      "focus": { "value": "Digital project delivery / advisory", "source_url": "https://zachrygroup.com/digitalprojectdelivery.php" },
+      "address": { "value": "PO Box 65103, RPO North Hill, Calgary, Alberta T2N 4T6, Canada", "lat": 51.07, "lng": -114.09, "source_url": "https://zachrygroup.com/about.php" },
+      "leader_title": { "value": "President, Trillium Advisory Group", "source_url": "https://www.zoominfo.com/pic/zachry-brands-inc/195346907" },
+      "parent_company": "Zachry Group",
+      "project_names": [],
+      "id": "div-trillium",
+      "founded": { "value": "acquired 2021-09-02", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "office_phone": { "value": "+1 587.900.0919", "source_url": "https://zachrygroup.com/about.php" },
+      "states_served": [],
+      "metros_served": ["Calgary"],
+      "sectors_served": ["digital project delivery"],
+      "revenue_usd_m": { "value": null, "year": null, "source_url": "" },
+      "employee_count": { "value": null, "source_url": "" },
+      "active_project_count": { "value": null, "source_url": "" },
+      "aggregate_active_value_usd_m": { "value": null, "source_url": "" },
+      "license_numbers": []
+    },
+    {
+      "name": "Madison (Madison Ltd)",
+      "type": "subsidiary",
+      "focus": { "value": "Listed brand within Zachry Group family (fabrication/industrial); details limited", "source_url": "https://zachrygroup.com/" },
+      "address": { "value": null, "lat": null, "lng": null, "source_url": "" },
+      "leader_title": { "value": null, "source_url": "" },
+      "parent_company": "Zachry Group",
+      "project_names": [],
+      "id": "div-madison",
+      "founded": { "value": null, "source_url": "" },
+      "office_phone": { "value": null, "source_url": "" },
+      "states_served": [],
+      "metros_served": [],
+      "sectors_served": [],
+      "revenue_usd_m": { "value": null, "year": null, "source_url": "" },
+      "employee_count": { "value": null, "source_url": "" },
+      "active_project_count": { "value": null, "source_url": "" },
+      "aggregate_active_value_usd_m": { "value": null, "source_url": "" },
+      "license_numbers": []
+    }
+  ],
+  "locations": [
+    { "name": "Home Office / HQ", "address": { "value": "527 Logwood Avenue, San Antonio, TX 78221", "lat": 29.318, "lng": -98.515 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "HQ", "phone": "+1 210.588.5000", "opened_date": "", "owning_division": "Corporate" },
+    { "name": "Gulf Coast Staffing Center", "address": { "value": "3741 Red Bluff Rd, Bldg D Ste 100, Pasadena, TX 77503", "lat": 29.67, "lng": -95.18 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "satellite", "phone": "", "opened_date": "", "owning_division": "Corporate" },
+    { "name": "Houston Engineering Office", "address": { "value": "3151 Briarpark Dr Ste 400, Houston, TX 77042", "lat": 29.73, "lng": -95.56 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "regional", "phone": "", "opened_date": "", "owning_division": "Zachry Engineering" },
+    { "name": "Charlotte Office", "address": { "value": "255 Hebron Street, Charlotte, NC 28273", "lat": 35.13, "lng": -80.93 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "regional", "phone": "", "opened_date": "", "owning_division": "Zachry Engineering" },
+    { "name": "Chicago Office", "address": { "value": "1411 Opus Place Ste 500, Downers Grove, IL 60515", "lat": 41.80, "lng": -88.04 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "regional", "phone": "", "opened_date": "", "owning_division": "Zachry Engineering" },
+    { "name": "Corpus Christi Office", "address": { "value": "539 N Carancahua St Ste 5100, Corpus Christi, TX 78401", "lat": 27.80, "lng": -97.40 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "regional", "phone": "", "opened_date": "", "owning_division": "Zachry Engineering" },
+    { "name": "Omaha Office", "address": { "value": "1121 North 102nd Court Ste 301, Omaha, NE 68114", "lat": 41.27, "lng": -96.07 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "regional", "phone": "", "opened_date": "", "owning_division": "Zachry Engineering" },
+    { "name": "Philippines Office", "address": { "value": "Units A & D 9th Floor Robinsons Cyber Omega, Pearl Drive, Ortigas Center, Pasig City, Metro Manila 1605", "lat": 14.59, "lng": 121.06 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "regional", "phone": "", "opened_date": "", "owning_division": "Zachry Engineering" },
+    { "name": "Fabrication - Pasadena", "address": { "value": "1107 Broadway, Pasadena, TX 77506", "lat": 29.69, "lng": -95.20 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "fabrication", "phone": "", "opened_date": "", "owning_division": "Fabrication" },
+    { "name": "JVIC Geismar Southeast Operations", "address": { "value": "36366 Hwy 30 W, Geismar, LA 70734", "lat": 30.22, "lng": -91.02 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "yard/shop", "phone": "", "opened_date": "", "owning_division": "JVIC" },
+    { "name": "Numerical - Idaho Falls", "address": { "value": "410 Memorial Dr Ste 205, Idaho Falls, ID 83402", "lat": 43.49, "lng": -112.03 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "satellite", "phone": "", "opened_date": "", "owning_division": "Numerical" },
+    { "name": "Numerical/Nuclear - Stonington", "address": { "value": "14 Lords Hill Rd, Stonington, CT 06378", "lat": 41.37, "lng": -71.86 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "satellite", "phone": "", "opened_date": "", "owning_division": "Zachry Nuclear / Numerical" },
+    { "name": "Trillium - Calgary", "address": { "value": "PO Box 65103 RPO North Hill, Calgary, AB T2N 4T6, Canada", "lat": 51.07, "lng": -114.09 }, "source_url": "https://zachrygroup.com/about.php", "office_type": "regional", "phone": "+1 587.900.0919", "opened_date": "", "owning_division": "Trillium" }
+  ],
+  "projects": [
+    {
+      "name": "NiSource Combined Cycle Generation Project",
+      "status": "In progress", "type": "Gas-fired combined cycle power plant",
+      "contract_value_usd_m": null,
+      "size_summary": "Two nominal 1,300 MW gas-fired combined cycle units in a 2 x 2 x 1 configuration (~3 GW total)",
+      "location": ["Wheatfield, Indiana"], "start_date": "2026", "est_completion": "2032 (full availability per Quanta)",
+      "owning_division": "EPC Group", "contractor": "Zachry Group",
+      "owner_client": { "value": "NiSource Inc. (NYSE: NI)", "source_url": "https://www.businesswire.com/news/home/20251030187212/en/" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://www.businesswire.com/news/home/20251030187212/en/",
+      "sources": [ { "title": "Zachry Group Awarded EPC Contract for NiSource", "url": "https://www.businesswire.com/news/home/20251030187212/en/", "primary": true } ],
+      "id": "proj-nisource", "brief": "EPC contract awarded 2025-10-30, executed by JV between Zachry Group and Quanta Services (50/50). Zachry leads engineering, procurement, PM, construction planning, commissioning.",
+      "full_address": { "value": "near Wheatfield, Jasper County, Indiana", "lat": 41.19, "lng": -87.05, "source_url": "https://www.businesswire.com/news/home/20251030187212/en/" },
+      "delivery_method": { "value": "EPC", "source_url": "https://www.businesswire.com/news/home/20251030187212/en/" },
+      "contract_type": { "value": null, "source_url": "" },
+      "joint_venture_partners": [ { "firm": "Quanta Services, Inc. (NYSE: PWR)", "role": "partner (50%)", "source_url": "https://www.businesswire.com/news/home/20251030187212/en/" } ],
+      "announced_date": "2025-10-30", "award_date": "2025-10-30",
+      "extra_size_metrics": { "mw_capacity": 2600, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "https://www.businesswire.com/news/home/20251030187212/en/" }
+    },
+    {
+      "name": "Person County Combined Cycle Project (Roxboro)",
+      "status": "In progress", "type": "Gas-fired combined cycle power plant",
+      "contract_value_usd_m": 2100,
+      "size_summary": "1,360 MW two-on-one (2x1) combined cycle plant at existing Roxboro plant site",
+      "location": ["Person County, North Carolina"], "start_date": "2025 (site clearing); major construction 2026", "est_completion": "2028 (commercial operation)",
+      "owning_division": "EPC Group", "contractor": "Zachry Group",
+      "owner_client": { "value": "Duke Energy (NYSE: DUK); Duke Energy Progress ~1,135 MW, NCEMC ~225 MW", "source_url": "https://www.businesswire.com/news/home/20250806890230/en/" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://www.businesswire.com/news/home/20250806890230/en/",
+      "sources": [ { "title": "Duke Energy Awards EPC Contract to Zachry", "url": "https://www.businesswire.com/news/home/20250806890230/en/", "primary": true } ],
+      "id": "proj-personcounty", "brief": "EPC awarded 2025-08-07 after competitive process; $2.1B; led by Ralph Biediger, EPC Group President. Site clearing started; commercial operation targeted 2028.",
+      "full_address": { "value": "Roxboro plant site, Person County, NC", "lat": 36.48, "lng": -79.06, "source_url": "https://www.businesswire.com/news/home/20250806890230/en/" },
+      "delivery_method": { "value": "EPC", "source_url": "https://www.businesswire.com/news/home/20250806890230/en/" },
+      "contract_type": { "value": null, "source_url": "" },
+      "announced_date": "2025-08-07", "award_date": "2025-08-07", "groundbreaking_date": "2025 (site clearing)",
+      "extra_size_metrics": { "mw_capacity": 1360, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "https://www.businesswire.com/news/home/20250806890230/en/" }
+    },
+    {
+      "name": "Lake Charles Methanol II",
+      "status": "Not started (FEED phase)", "type": "Low-carbon blue methanol facility",
+      "contract_value_usd_m": null,
+      "size_summary": "World's largest low-carbon 'blue' methanol facility / fifth-largest methanol plant globally; captures ~1M metric tons CO2/yr (CCS reduces hydrogen production emissions ~99%)",
+      "location": ["Lake Charles, Louisiana"], "start_date": "2025 (FEED)", "est_completion": null,
+      "owning_division": "Zachry Engineering / EPC Group", "contractor": "Zachry Group",
+      "owner_client": { "value": "Lake Charles Methanol II", "source_url": "https://www.businesswire.com/news/home/20251112632853/en/" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/press-releases/Zachry_Group_Selected_for_FEED_Scope_on_Worlds_Largest_Low_Carbon_Blue_Methanol_Project.html",
+      "sources": [ { "title": "Zachry FEED Lake Charles Methanol II", "url": "https://www.hydrocarbonprocessing.com/news/2025/11/zachry-group-selected-for-feed-on-world-s-largest-low-carbon-blue-methanol-project/", "primary": true } ],
+      "id": "proj-lcm2", "brief": "FEED scope awarded 2025-11-12; FID anticipated Q2 2026.",
+      "delivery_method": { "value": "FEED (pre-EPC)", "source_url": "https://www.businesswire.com/news/home/20251112632853/en/" },
+      "announced_date": "2025-11-12", "award_date": "2025-11-12",
+      "extra_size_metrics": { "mw_capacity": null, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "" }
+    },
+    {
+      "name": "Golden Pass LNG Export Terminal",
+      "status": "In progress (Zachry exited 2024)", "type": "LNG export terminal",
+      "contract_value_usd_m": 9250,
+      "size_summary": "Fixed-price EPC ~$9.25B (amended >$10B; Zachry Industrial share ~$5.8B); ~75% complete at Zachry exit; >$2.4B over original budget",
+      "location": ["Sabine Pass, Texas"], "start_date": "2019", "est_completion": null,
+      "owning_division": "EPC Group / Zachry Industrial", "contractor": "Zachry Group (via CCZJV)",
+      "owner_client": { "value": "Golden Pass LNG — QatarEnergy (70%) / ExxonMobil (30%)", "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://www.constructiondive.com/news/texas-lng-golden-pass-dispute-contractor/722620/",
+      "sources": [ { "title": "ENR: Zachry LNG project woes", "url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil", "primary": true } ],
+      "id": "proj-goldenpass", "brief": "EPC awarded 2019-02-05 to CCZJV (CB&I/Chiyoda/Zachry). Cost overruns drove Zachry Holdings Chapter 11 (2024-05-21); Zachry exited via court-approved settlement; work continuing with McDermott/Chiyoda.",
+      "full_address": { "value": "Sabine Pass, Jefferson County, TX", "lat": 29.73, "lng": -93.87, "source_url": "" },
+      "delivery_method": { "value": "EPC (fixed-price)", "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" },
+      "contract_type": { "value": "Lump Sum / fixed-price", "source_url": "https://elevenflo.com/blog/zachry-bankruptcy" },
+      "joint_venture_partners": [
+        { "firm": "Chiyoda International Corp.", "role": "partner", "source_url": "https://elevenflo.com/blog/zachry-bankruptcy" },
+        { "firm": "McDermott / CB&I LLC", "role": "partner", "source_url": "https://elevenflo.com/blog/zachry-bankruptcy" }
+      ],
+      "announced_date": "2019-02-05", "award_date": "2019-02-05",
+      "project_claims_litigation": [ { "type": "EPC owner dispute / bankruptcy", "amount_usd": 2400000000, "status": "settled 2024", "source_url": "https://www.constructiondive.com/news/texas-lng-golden-pass-dispute-contractor/722620/" } ],
+      "reported_incidents": [ { "type": "delay", "date": "2024-05", "description": "Zachry exit; ~4,410 workers laid off the day of Chapter 11 filing (notice to Texas Workforce Commission); ~126 more in July 2024", "source_url": "https://www.constructiondive.com/news/texas-lng-golden-pass-dispute-contractor/722620/" } ],
+      "extra_size_metrics": { "mw_capacity": null, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "" }
+    },
+    {
+      "name": "NET Power Utility-Scale Clean Power Plant (Serial Number 1 / SN1)",
+      "status": "In progress", "type": "Oxy-combustion supercritical CO2 power plant (near-zero emissions)",
+      "contract_value_usd_m": null,
+      "size_summary": "~300 MWe class plant; world's first large-scale gas-fired power facility with near-zero emissions",
+      "location": ["near Odessa / Permian Basin, West Texas"], "start_date": "2023 (FEED)", "est_completion": "2026 (targeted operational)",
+      "owning_division": "Zachry Engineering / EPC Group", "contractor": "Zachry Group",
+      "owner_client": { "value": "NET Power Inc. (NYSE: NPWR); Occidental-hosted site", "source_url": "https://zachrygroup.com/press-releases/Zachry_Group_selected_by_NETPower_to_Build_Utility_Scale_Clean_Power_Plant.html" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/press-releases/Zachry_Group_selected_by_NETPower_to_Build_Utility_Scale_Clean_Power_Plant.html",
+      "sources": [ { "title": "NET Power selects Zachry", "url": "https://www.worldconstructionnetwork.com/news/zachry-net-power-plant/", "primary": true } ],
+      "id": "proj-netpower", "brief": "FEED + EPC awarded 2023-04-11; FEED at Houston Engineering office; first EPC partner licensed by NET Power.",
+      "full_address": { "value": "near Odessa, Ector County, TX (Permian Basin)", "lat": 31.85, "lng": -102.37, "source_url": "https://www.sec.gov/Archives/edgar/data/0001845437/000121390023032098/ea177359ex99-1_riceacq2.htm" },
+      "delivery_method": { "value": "FEED + EPC", "source_url": "https://zachrygroup.com/press-releases/Zachry_Group_selected_by_NETPower_to_Build_Utility_Scale_Clean_Power_Plant.html" },
+      "announced_date": "2023-04-11", "award_date": "2023-04-11",
+      "extra_size_metrics": { "mw_capacity": 300, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "https://www.worldconstructionnetwork.com/news/zachry-net-power-plant/" }
+    },
+    {
+      "name": "Cameron LNG Train 4 Expansion",
+      "status": "In progress (FEED/bid agreement)", "type": "LNG liquefaction train",
+      "contract_value_usd_m": null,
+      "size_summary": "Fourth liquefaction train, max ~6.75 MTPA, electric drive (E-drive) motors; existing facility 12 MTPA across 3 trains",
+      "location": ["Cameron Parish, Louisiana"], "start_date": "2022 (FEED)", "est_completion": null,
+      "owning_division": "EPC Group / Zachry Industrial (JZJV)", "contractor": "Zachry Group (via JZJV)",
+      "owner_client": { "value": "Cameron LNG (Sempra Infrastructure 50.2%, TotalEnergies, Mitsui, Japan LNG Investment)", "source_url": "https://www.sempra.com/sempra-infrastructure-announces-heads-agreement-totalenergies-mitsui-mitsubishi-and-nyk-cameron-lng" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/press-releases/Zachry_Group_awarded_FEED_and_EPC_Bid_Agreement_contract_for_Cameron_LNG_expansion.html",
+      "sources": [ { "title": "Cameron LNG expansion FEED/EPC bid agreement", "url": "https://www.bicmagazine.com/departments/engineering-construction/zachry-group-awarded-feed-and-epc-bid-for-cameron-lng-expansion/", "primary": true } ],
+      "id": "proj-cameron", "brief": "JZJV (Zachry + JGC America) awarded FEED+EPC bid agreement 2022-04-04, competing against Bechtel.",
+      "delivery_method": { "value": "FEED + EPC bid agreement", "source_url": "https://zachrygroup.com/press-releases/Zachry_Group_awarded_FEED_and_EPC_Bid_Agreement_contract_for_Cameron_LNG_expansion.html" },
+      "joint_venture_partners": [ { "firm": "JGC America, Inc.", "role": "partner", "source_url": "https://www.bicmagazine.com/departments/engineering-construction/zachry-group-awarded-feed-and-epc-bid-for-cameron-lng-expansion/" } ],
+      "competing_bidders": [ { "firm": "Bechtel Energy Inc.", "bid_amount_usd_m": null, "source_url": "https://www.sempra.com/sempra-infrastructure-announces-heads-agreement-totalenergies-mitsui-mitsubishi-and-nyk-cameron-lng" } ],
+      "announced_date": "2022-04-04", "award_date": "2022-04-04",
+      "extra_size_metrics": { "mw_capacity": null, "lng_mtpa": 6.75, "trains": 1, "barrels_per_day": null, "source_url": "https://www.enerdata.net/publications/daily-energy-news/jgc-wins-epc-order-expand-12-mtyear-cameron-lng-plant-us.html" }
+    },
+    {
+      "name": "Calpine Baytown Energy Center Carbon Capture Unit",
+      "status": "In progress (FEED)", "type": "Carbon capture (CCS) unit",
+      "contract_value_usd_m": null,
+      "size_summary": "2 MTPA CO2 capture (95% of flue gas emissions) at natural gas combined cycle / cogen plant",
+      "location": ["Baytown, Texas"], "start_date": "2023 (FEED)", "est_completion": null,
+      "owning_division": "Zachry Engineering", "contractor": "Zachry Group (with Technip Energies + Shell Catalysts)",
+      "owner_client": { "value": "Calpine Corporation", "source_url": "https://zachrygroup.com/press-releases/Technip_Energies_Shell_Catalysts_Technologies_and_Zachry_Group_Selected_for_Calpine_Carbon_Capture_Unit_Project_in_Texas.html" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://www.hydrocarbonengineering.com/the-environment/10032023/shell-catalysts-technologies-technip-energies-and-zachry-selected-for-carbon-capture-project/",
+      "sources": [ { "title": "Calpine Baytown CCS FEED", "url": "https://investors.technipenergies.com/news-releases/news-release-details/technip-energies-shell-catalysts-technologies-and-zachry-group/", "primary": true } ],
+      "id": "proj-calpine", "brief": "FEED awarded 2023-03-09; Zachry scope = OSBL engineering, construction planning/estimating, final EPC cost estimate & schedule. Uses Shell CANSOLV technology.",
+      "delivery_method": { "value": "FEED", "source_url": "https://www.shell.com/business-customers/catalysts-technologies/resources-library/catalysts-technologies-technip-energies-zachry-group-calpine-carbon-capture-unit.html" },
+      "joint_venture_partners": [
+        { "firm": "Technip Energies", "role": "partner", "source_url": "https://www.ten.com/en/media/press-releases/technip-energies-shell-catalysts-technologies-and-zachry-group-selected" },
+        { "firm": "Shell Catalysts & Technologies", "role": "partner", "source_url": "https://www.shell.com/business-customers/catalysts-technologies/resources-library/catalysts-technologies-technip-energies-zachry-group-calpine-carbon-capture-unit.html" }
+      ],
+      "announced_date": "2023-03-09", "award_date": "2023-03-09",
+      "extra_size_metrics": { "mw_capacity": null, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "" }
+    },
+    {
+      "name": "OPPD Power with Purpose — Standing Bear Lake Station & Turtle Creek Station",
+      "status": "Done", "type": "Natural gas peaking power stations",
+      "contract_value_usd_m": null,
+      "size_summary": "Standing Bear Lake Station 150 MW (Douglas County; 9 Wärtsilä 18V50DF RICE engines); Turtle Creek Station 450 MW (Sarpy County; 2 Siemens SGT6-5000F turbines) + associated substations",
+      "location": ["Douglas County & Sarpy County, Nebraska"], "start_date": "2021 (award)", "est_completion": "2024 (commercial operation)",
+      "owning_division": "EPC Group", "contractor": "Zachry Group",
+      "owner_client": { "value": "Omaha Public Power District (OPPD)", "source_url": "https://zachrygroup.com/press-releases/ZachryGroup_awarded_EPC_contract_for_OPPD_Power_with_Purpose_project.html" },
+      "architect": { "value": "HDR (owner's engineer)", "source_url": "https://www.fortnightly.com/fortnightly/2022/01/nebraska-utilities-shaping-future-oppd" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/press-releases/ZachryGroup_awarded_EPC_contract_for_OPPD_Power_with_Purpose_project.html",
+      "sources": [ { "title": "OPPD awards EPC to Zachry", "url": "https://www.publicpower.org/periodical/article/oppd-awards-contract-design-and-construction-new-power-plants", "primary": true } ],
+      "id": "proj-oppd", "brief": "EPC awarded 2021-10-04; design & construction of both gas facilities + substations. Standing Bear Lake reached commercial operation; both online ~2024. (Note: subsequent Turtle Creek 3rd-unit expansion went to Kiewit, not Zachry.)",
+      "delivery_method": { "value": "EPC (Design-Build)", "source_url": "https://www.publicpower.org/periodical/article/oppd-awards-contract-design-and-construction-new-power-plants" },
+      "announced_date": "2021-10-04", "award_date": "2021-10-04",
+      "extra_size_metrics": { "mw_capacity": 600, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "https://www.oppdcommunityconnect.com/standing-bear-lake-station" }
+    },
+    {
+      "name": "TerraPower Natrium Demonstration Project (Owner's Engineering)",
+      "status": "In progress", "type": "Advanced nuclear reactor (sodium-cooled fast reactor + molten salt storage)",
+      "contract_value_usd_m": null,
+      "size_summary": "345 MWe sodium-cooled fast reactor with molten salt-based energy storage (boost to 500 MW)",
+      "location": ["Kemmerer, Wyoming"], "start_date": "2024", "est_completion": "2031 (per TerraPower)",
+      "owning_division": "Numerical (Numerical Advisory Solutions)", "contractor": "Zachry Group (NAS)",
+      "owner_client": { "value": "TerraPower", "source_url": "https://www.terrapower.com/terrapower-secures-major-support-services-at-the-natrium-site" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/press-releases/NAS_Zachry_Group_awarded_BOA_for_TerraPowers_Advanced_Nuclear_Project.html",
+      "sources": [ { "title": "NAS/Zachry BOA TerraPower", "url": "https://www.terrapower.com/terrapower-secures-major-support-services-at-the-natrium-site", "primary": true } ],
+      "id": "proj-natrium", "brief": "Basic Ordering Agreement awarded 2024-09-17 for owner's engineering & startup support. NRC construction permit issued March 2026; construction underway.",
+      "full_address": { "value": "near Kemmerer, Lincoln County, WY", "lat": 41.79, "lng": -110.54, "source_url": "https://www.terrapower.com/terrapower-begins-construction-in-wyoming" },
+      "delivery_method": { "value": "Owner's Engineering (Basic Ordering Agreement)", "source_url": "https://zachrygroup.com/press-releases/NAS_Zachry_Group_awarded_BOA_for_TerraPowers_Advanced_Nuclear_Project.html" },
+      "announced_date": "2024-09-17", "award_date": "2024-09-17",
+      "extra_size_metrics": { "mw_capacity": 345, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "https://www.terrapower.com/terrapower-secures-major-support-services-at-the-natrium-site" }
+    },
+    {
+      "name": "Natura Resources Molten Salt Reactor at ACU",
+      "status": "In progress", "type": "Molten salt research reactor",
+      "contract_value_usd_m": null, "size_summary": null,
+      "location": ["Abilene Christian University, Abilene, Texas"], "start_date": "2023", "est_completion": null,
+      "owning_division": "Zachry Nuclear (Zachry Nuclear Engineering)", "contractor": "Zachry Group",
+      "owner_client": { "value": "Natura Resources", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/newsandstories.php",
+      "sources": [ { "title": "Zachry Nuclear awarded Natura MSR", "url": "https://zachrygroup.com/newsandstories.php", "primary": true } ],
+      "id": "proj-natura", "brief": "Awarded to Zachry Nuclear Engineering 2023-08-10; received historic NRC construction permit 2024-09-17.",
+      "delivery_method": { "value": "engineering", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "announced_date": "2023-08-10", "award_date": "2023-08-10", "permit_issued_date": "2024-09-17",
+      "extra_size_metrics": { "mw_capacity": null, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "" }
+    },
+    {
+      "name": "Cheniere Energy Maintenance Services (10-year renewal)",
+      "status": "In progress", "type": "Routine maintenance services at LNG facilities",
+      "contract_value_usd_m": null, "size_summary": "10-year contract renewal",
+      "location": ["Gulf Coast LNG facilities (TX/LA)"], "start_date": "2026", "est_completion": "2036",
+      "owning_division": "Zachry Maintenance Services / JVIC", "contractor": "Zachry Group",
+      "owner_client": { "value": "Cheniere Energy (NYSE: LNG)", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/press-releases/Zachry_Maintenance_Services_Secures_10Year_Renewal_with_Cheniere_Energy.html",
+      "sources": [ { "title": "Zachry Maintenance Cheniere 10-yr renewal", "url": "https://zachrygroup.com/newsandstories.php", "primary": true } ],
+      "id": "proj-cheniere", "brief": "Announced 2026-03-30; 10-year renewal for routine maintenance at Cheniere LNG facilities.",
+      "delivery_method": { "value": "maintenance MSA", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "announced_date": "2026-03-30",
+      "extra_size_metrics": { "mw_capacity": null, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "" }
+    },
+    {
+      "name": "Chevron Phillips Chemical Maintenance (5-year renewal)",
+      "status": "In progress", "type": "Maintenance services",
+      "contract_value_usd_m": null, "size_summary": "5-year contract renewal",
+      "location": ["US Gulf Coast"], "start_date": "2026", "est_completion": "2031",
+      "owning_division": "Zachry Maintenance Services / JVIC", "contractor": "Zachry Group",
+      "owner_client": { "value": "Chevron Phillips Chemical", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "architect": { "value": null, "source_url": "" }, "is_recent": true, "confidence": "high",
+      "source_url": "https://zachrygroup.com/press-releases/Zachry_Maintenance_Services_Secures_Five_More_Years_with_Chevron_Phillips_Chemical.html",
+      "sources": [ { "title": "Zachry Maintenance CP Chem 5-yr", "url": "https://zachrygroup.com/newsandstories.php", "primary": true } ],
+      "id": "proj-cpchem", "brief": "Announced 2026-02-02; 5-year maintenance renewal.",
+      "announced_date": "2026-02-02",
+      "extra_size_metrics": { "mw_capacity": null, "lng_mtpa": null, "trains": null, "barrels_per_day": null, "source_url": "" }
+    }
+  ],
+  "events": [
+    { "name": "ECC Association Achievement Award", "date": "2022", "place": { "value": "Engineering and Construction Contracting (ECC) Association", "address": "", "lat": null, "lng": null }, "location_tags": [],
+      "what_it_is": { "value": "Annual industry award given by ECC Association", "source_url": "https://www.eccassociation.org/resources.html" }, "audience": { "value": "EPC owners/contractors/suppliers/academics", "source_url": "https://www.eccassociation.org/" },
+      "why_it_matters": { "value": "John Zachry (Chairman/CEO) received the 2022 ECC Achievement Award, signaling executive-level engagement with the leading EPC owner-contractor association", "source_url": "https://www.eccassociation.org/resources.html" }, "company_attendance": "confirmed", "source_url": "https://www.eccassociation.org/resources.html",
+      "company_role": "honoree/attendee", "sponsorship_tier": "", "booth_number": "", "recurrence": "annual" },
+    { "name": "POWER-GEN International", "date": "2015-2016", "place": { "value": "POWER-GEN International Conference", "address": "", "lat": null, "lng": null }, "location_tags": [],
+      "what_it_is": { "value": "Major power generation industry conference", "source_url": "https://zachrygroup.com/newsandstories.php" }, "audience": { "value": "power sector", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "why_it_matters": { "value": "Zachry EPC projects won 'Coal-Fired Project of the Year' (2016) and Warren County plant top honors (2015), demonstrating power-sector project credibility", "source_url": "https://zachrygroup.com/newsandstories.php" }, "company_attendance": "confirmed", "source_url": "https://zachrygroup.com/newsandstories.php",
+      "company_role": "awardee", "sponsorship_tier": "", "booth_number": "", "recurrence": "annual" },
+    { "name": "Valero Texas Open (PGA) partnership", "date": "2013", "place": { "value": "San Antonio, TX", "address": "", "lat": null, "lng": null }, "location_tags": [],
+      "what_it_is": { "value": "PGA Tour golf event multi-year sponsorship/partnership", "source_url": "https://zachrygroup.com/newsandstories.php" }, "audience": { "value": "industry/community", "source_url": "https://zachrygroup.com/newsandstories.php" },
+      "why_it_matters": { "value": "Zachry Holdings / JV Industrial Companies entered multi-year partnership (community/relationship marketing)", "source_url": "https://zachrygroup.com/newsandstories.php" }, "company_attendance": "confirmed", "source_url": "https://zachrygroup.com/newsandstories.php",
+      "company_role": "sponsor", "sponsorship_tier": "", "booth_number": "", "recurrence": "annual" }
+  ],
+  "memberships": [
+    { "association": "Engineering and Construction Contracting (ECC) Association", "level": "member (executive honoree)", "url": "https://www.eccassociation.org/", "source_url": "https://www.eccassociation.org/resources.html", "member_since": "", "chapter": "", "member_id": "", "board_or_committee_seat": { "value": null, "role": "", "source_url": "" } }
+  ],
+  "existing_software": [
+    { "company": "Zachry Group", "software_used": ["Procore"], "category": "PM", "evidence": "vendor site", "location": ["Charlotte NC","Omaha NE"], "source_url": "https://network.procore.com/p/zachry-group-omaha", "first_seen_date": "", "evidence_url": "https://network.procore.com/p/zachry-group-charlotte", "used_by_division": ["Zachry Engineering"], "deployment_scope": "division" },
+    { "company": "Zachry Group", "software_used": ["Oracle","Aconex"], "category": "PM", "evidence": "job post", "location": ["San Antonio","Houston","Pasadena"], "source_url": "https://careers.greatersatx.com/companies/zachry-group/jobs/76041022-procurement-specialist-i", "first_seen_date": "", "evidence_url": "https://careers.greatersatx.com/companies/zachry-group/jobs/76041022-procurement-specialist-i", "used_by_division": ["EPC Group"], "deployment_scope": "enterprise" },
+    { "company": "Zachry Group", "software_used": ["Primavera P6"], "category": "project controls", "evidence": "job post", "location": ["TX"], "source_url": "https://www.ziprecruiter.com/Jobs/Zachry/-in-Baytown,TX", "first_seen_date": "", "evidence_url": "https://www.ziprecruiter.com/Jobs/Zachry/-in-Baytown,TX", "used_by_division": [], "deployment_scope": "enterprise" },
+    { "company": "Zachry Group", "software_used": ["Bluebeam"], "category": "field", "evidence": "job post", "location": ["TX"], "source_url": "https://www.ziprecruiter.com/Jobs/Procore/--in-Texas", "first_seen_date": "", "evidence_url": "https://www.ziprecruiter.com/Jobs/Procore/--in-Texas", "used_by_division": [], "deployment_scope": "project-specific" },
+    { "company": "Zachry Group", "software_used": ["DocuSign","Adobe Sign","Microsoft 365"], "category": "ERP", "evidence": "job post", "location": ["San Antonio"], "source_url": "https://careers.greatersatx.com/companies/zachry-group/jobs/76041022-procurement-specialist-i", "first_seen_date": "", "evidence_url": "https://careers.greatersatx.com/companies/zachry-group/jobs/76041022-procurement-specialist-i", "used_by_division": [], "deployment_scope": "enterprise" }
+  ],
+  "owners_clients": [
+    { "id": "own-nisource", "name": "NiSource Inc.", "type": "public utility", "sector": "power/gas", "address": { "value": "Merrillville, IN", "lat": null, "lng": null }, "project_count": 1, "project_names": ["NiSource Combined Cycle Generation Project"], "total_value_usd_m": null, "profile": "NYSE: NI; regulated gas & electric utility.", "source_url": "https://www.businesswire.com/news/home/20251030187212/en/" },
+    { "id": "own-duke", "name": "Duke Energy", "type": "public utility", "sector": "power", "address": { "value": "Charlotte, NC", "lat": null, "lng": null }, "project_count": 1, "project_names": ["Person County Combined Cycle"], "total_value_usd_m": 2100, "profile": "NYSE: DUK; one of largest US electric utilities.", "source_url": "https://www.businesswire.com/news/home/20250806890230/en/" },
+    { "id": "own-goldenpass", "name": "Golden Pass LNG (QatarEnergy/ExxonMobil)", "type": "JV / energy", "sector": "LNG", "address": { "value": "Sabine Pass, TX", "lat": null, "lng": null }, "project_count": 1, "project_names": ["Golden Pass LNG"], "total_value_usd_m": 9250, "profile": "QatarEnergy 70% / ExxonMobil 30% LNG export terminal owner.", "source_url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil" },
+    { "id": "own-cheniere", "name": "Cheniere Energy", "type": "public energy", "sector": "LNG", "address": { "value": "Houston, TX", "lat": null, "lng": null }, "project_count": 1, "project_names": ["Cheniere Maintenance (10-yr)"], "total_value_usd_m": null, "profile": "NYSE: LNG; largest US LNG exporter. Repeat maintenance client.", "source_url": "https://zachrygroup.com/newsandstories.php" },
+    { "id": "own-oppd", "name": "Omaha Public Power District (OPPD)", "type": "public power utility", "sector": "power", "address": { "value": "Omaha, NE", "lat": null, "lng": null }, "project_count": 1, "project_names": ["Power with Purpose (Standing Bear Lake + Turtle Creek)"], "total_value_usd_m": null, "profile": "12th largest US public power utility; repeat client ('once again work with').", "source_url": "https://zachrygroup.com/press-releases/ZachryGroup_awarded_EPC_contract_for_OPPD_Power_with_Purpose_project.html" }
+  ],
+  "jv_partners_rollup": [
+    { "firm": "Quanta Services, Inc.", "project_count": 1, "project_names": ["NiSource Combined Cycle"], "source_url": "https://www.businesswire.com/news/home/20251030187212/en/" },
+    { "firm": "Chiyoda International Corp.", "project_count": 2, "project_names": ["Golden Pass LNG","Freeport LNG"], "source_url": "https://elevenflo.com/blog/zachry-bankruptcy" },
+    { "firm": "McDermott / CB&I LLC", "project_count": 2, "project_names": ["Golden Pass LNG","Freeport LNG"], "source_url": "https://elevenflo.com/blog/zachry-bankruptcy" },
+    { "firm": "JGC America, Inc.", "project_count": 1, "project_names": ["Cameron LNG Train 4"], "source_url": "https://www.bicmagazine.com/departments/engineering-construction/zachry-group-awarded-feed-and-epc-bid-for-cameron-lng-expansion/" },
+    { "firm": "Technip Energies", "project_count": 1, "project_names": ["Calpine Baytown CCS"], "source_url": "https://www.ten.com/en/media/press-releases/technip-energies-shell-catalysts-technologies-and-zachry-group-selected" },
+    { "firm": "Shell Catalysts & Technologies", "project_count": 1, "project_names": ["Calpine Baytown CCS"], "source_url": "https://www.shell.com/business-customers/catalysts-technologies/resources-library/catalysts-technologies-technip-energies-zachry-group-calpine-carbon-capture-unit.html" },
+    { "firm": "Mitsubishi Heavy Industries America", "project_count": 1, "project_names": ["Gulf Coast Growth Ventures polyethylene"], "source_url": "https://zachrygroup.com/newsandstories.php" }
+  ],
+  "design_partners_rollup": [
+    { "firm": "HDR", "discipline": "owner's engineer", "project_count": 1, "project_names": ["OPPD Power with Purpose"], "source_url": "https://www.fortnightly.com/fortnightly/2022/01/nebraska-utilities-shaping-future-oppd" }
+  ],
+  "subcontractor_network": [],
+  "competitors_rollup": [
+    { "firm": "Bechtel", "encountered_on": ["Cameron LNG Train 4 (competing FEED)"], "source_url": "https://www.sempra.com/sempra-infrastructure-announces-heads-agreement-totalenergies-mitsui-mitsubishi-and-nyk-cameron-lng" },
+    { "firm": "Fluor", "encountered_on": ["general EPC peer"], "source_url": "https://www.zoominfo.com/c/zachry-brands-inc/195346907" },
+    { "firm": "Kiewit", "encountered_on": ["OPPD Turtle Creek 3rd unit expansion (awarded to Kiewit)"], "source_url": "https://www.oppdcommunityconnect.com/turtle-creek-station" }
+  ],
+  "portfolio_metrics": {
+    "total_projects": 12, "total_active_value_usd_m": null,
+    "value_by_sector": [
+      { "sector": "Power (gas/combined cycle)", "count": 3, "value_usd_m": null },
+      { "sector": "LNG", "count": 2, "value_usd_m": null },
+      { "sector": "Nuclear", "count": 2, "value_usd_m": null },
+      { "sector": "Chemicals/CCS/Methanol", "count": 2, "value_usd_m": null },
+      { "sector": "Maintenance/Turnaround", "count": 2, "value_usd_m": null },
+      { "sector": "Clean power (NET Power)", "count": 1, "value_usd_m": null }
+    ],
+    "value_by_division": [
+      { "division": "EPC Group", "count": 5, "value_usd_m": null },
+      { "division": "Zachry Engineering", "count": 2, "value_usd_m": null },
+      { "division": "Zachry Nuclear", "count": 1, "value_usd_m": null },
+      { "division": "Numerical", "count": 1, "value_usd_m": null },
+      { "division": "JVIC / Maintenance Services", "count": 2, "value_usd_m": null }
+    ],
+    "value_by_delivery_method": [
+      { "method": "EPC", "count": 5, "value_usd_m": null },
+      { "method": "FEED", "count": 3, "value_usd_m": null },
+      { "method": "Owner's Engineering / maintenance", "count": 4, "value_usd_m": null }
+    ],
+    "value_by_state": [
+      { "state": "TX", "count": 3, "value_usd_m": null },
+      { "state": "LA", "count": 2, "value_usd_m": null },
+      { "state": "NC", "count": 1, "value_usd_m": null },
+      { "state": "IN", "count": 1, "value_usd_m": null },
+      { "state": "NE", "count": 1, "value_usd_m": null },
+      { "state": "WY", "count": 1, "value_usd_m": null }
+    ],
+    "avg_project_value_usd_m": null, "avg_duration_months": null
+  },
+  "sources": [
+    { "about": "Company home / brands", "url": "https://zachrygroup.com/", "source_type": "company site", "date_captured": "2026-06-10", "publication_date": "" },
+    { "about": "About / locations / leadership", "url": "https://zachrygroup.com/about.php", "source_type": "company site", "date_captured": "2026-06-10", "publication_date": "" },
+    { "about": "News & press releases index", "url": "https://zachrygroup.com/newsandstories.php", "source_type": "company site", "date_captured": "2026-06-10", "publication_date": "" },
+    { "about": "ENR 2024 Top 400 rank No.28; $5.4B; Zachry Construction separate", "url": "https://www.enr.com/articles/58703-zachry-details-big-texas-lng-project-woes-in-suit-against-owners-qatar-energy-exxonmobil", "source_type": "ENR", "date_captured": "2026-06-10", "publication_date": "2024" },
+    { "about": "Chapter 11 case docket / debtor list (Case 24-90377)", "url": "https://www.veritaglobal.net/ZHI", "source_type": "court", "date_captured": "2026-06-10", "publication_date": "2024-2025" },
+    { "about": "Chapter 11 filing press release", "url": "https://www.prnewswire.com/news-releases/zachry-holdings-inc-initiates-voluntary-court-supervised-chapter-11-process-to-address-financial-challenges-related-to-golden-pass-lng-export-terminal-site-302151187.html", "source_type": "press", "date_captured": "2026-06-10", "publication_date": "2024-05-21" },
+    { "about": "Freeport LNG $1.3B insurer suits dismissed", "url": "https://www.businesswire.com/news/home/20241121082839/en/", "source_type": "press", "date_captured": "2026-06-10", "publication_date": "2024-11-21" },
+    { "about": "NiSource EPC award", "url": "https://www.businesswire.com/news/home/20251030187212/en/", "source_type": "press", "date_captured": "2026-06-10", "publication_date": "2025-10-30" },
+    { "about": "Person County / Duke EPC award $2.1B", "url": "https://www.businesswire.com/news/home/20250806890230/en/", "source_type": "press", "date_captured": "2026-06-10", "publication_date": "2025-08-07" },
+    { "about": "Lake Charles Methanol II FEED", "url": "https://www.hydrocarbonprocessing.com/news/2025/11/zachry-group-selected-for-feed-on-world-s-largest-low-carbon-blue-methanol-project/", "source_type": "press", "date_captured": "2026-06-10", "publication_date": "2025-11-12" },
+    { "about": "Texas entity record (Zachry Industrial 0803867941)", "url": "https://opencorporates.com/companies/us_tx/0803867941", "source_type": "other", "date_captured": "2026-06-10", "publication_date": "" },
+    { "about": "Procore vendor profiles", "url": "https://network.procore.com/p/zachry-group-omaha", "source_type": "job board", "date_captured": "2026-06-10", "publication_date": "" }
+  ],
+  "extra": {
+    "notion_quirks_preserve": [
+      "'Contrat Value in Million' (misspelled, number in $M)",
+      "'Adress' (one d, Divisions/Locations)",
+      "'Website ', 'Tasks ', 'Competitor Involvement ' (trailing space, Companies DB)",
+      "Size option 'Mutlinational' and BW Category 'Environnement' (misspelled options)",
+      "Divisions are company records in Companies DB (Parent Company set), not a field",
+      "'Owning Department' = division linkage, 'Contractors' = company linkage (both relate to Companies DB)",
+      "Projects live in ONE shared DB; each profile is a filtered view on 'Contractors'",
+      "Existing Software options controlled list (Procore/Autodesk/Trimble/Kahua) — extend multi-select before writing Oracle/Aconex/Primavera P6/Bluebeam/DocuSign",
+      "New hard-data fields (safety, bonding, permits, owner profile, partners, rollups, portfolio_metrics) have no existing Notion column — write to 'extra' or create columns first"
+    ],
+    "data_source_ids": {
+      "divisions_company_map": "collection://37690644-d524-8088-abd7-000b818a9b6b",
+      "events": "collection://37690644-d524-80cb-82b1-000b78799305",
+      "sources_register": "collection://37690644-d524-805b-bdeb-000b6591168e",
+      "locations": "collection://37690644-d524-803c-b832-000b0ca49c9e",
+      "projects_shared": "collection://4c8ed827-78b9-4d34-9cca-0c3548304199",
+      "memberships": "collection://37690644-d524-80b0-b5eb-000b53bf2cd2",
+      "existing_software": "collection://37690644-d524-804f-b966-000b34a1901b",
+      "companies_parent_divisions": "collection://041b7f07-9564-4696-ae78-1b61b34df758"
+    },
+    "disambiguation": "Zachry Construction Corporation (heavy civil/building, zachryconstructioncorp.com, led by David Zachry) is legally separate from Zachry Group since the 2008 split. ENR 2024 ranked Zachry Construction Corp. No. 215 with $576.4M 2023 revenue, 'now is unaffiliated with Zachry Group.' Sources frequently conflate the two — distinct entities; this dossier covers only Zachry Group (Zachry Holdings/Zachry Industrial/Zachry Brands). Note: Zachry Construction's Sept 2025 acquisition of Crescent Constructors and Aug 2025 Jarco Ready Mix deal (via Arcline/Zachry Corporation) belong to the OTHER (construction) side and are out of scope.",
+    "layoffs_golden_pass": "4,410 employees laid off the day of the Chapter 11 filing (notice to Texas Workforce Commission); ~126 more cut in July 2024.",
+    "leadership_titles": {
+      "Chairman & CEO": "John B. Zachry",
+      "President, Engineering": "Matthew Czuba (hired 2022-06-13)",
+      "EPC Group President": "Ralph Biediger",
+      "President – Services Group": "Rob Berra (hired 2023-12-11)",
+      "President of Nuclear Construction": "Ingmar Sterzing (appointed 2026-03-16)",
+      "Chief Nuclear Officer": "Jim Harrell (appointed 2025-12-16)",
+      "President, Numerical Advisory Solutions": "Jim Harrell",
+      "VP Strategic Growth": "Scott Tanley (appointed 2026-01-06)",
+      "SVP Business Development": "Scott Duffy"
+    }
+  },
+  "gaps": [
+    "UEI (SAM.gov) — not found via public search; requires interactive SAM.gov entity lookup",
+    "CAGE code — not found",
+    "SAM-verified primary NAICS — not found (only broker classification 213112)",
+    "Texas Comptroller 11-digit taxpayer number — not found",
+    "Definitive state of incorporation — Delaware suggested but unverified",
+    "Federal contract (FPDS/USASpending) PIID/agency/value/date — not found; company is overwhelmingly private-sector",
+    "EMR / TRIR / DART safety metrics specific to Zachry — none published in accessible sources",
+    "ENR Top 400 ranks for 2021, 2022, 2025, 2026 — paywalled / not found",
+    "Bonding capacity, surety provider, AM Best rating — not found",
+    "Insurance carriers / OCIP/CCIP wrap-up programs — not found",
+    "Contract values for most projects (only Golden Pass ~$9.25B and Person County $2.1B disclosed)",
+    "Contractor license numbers by state with status/expiration — not found",
+    "Parcel/APN, permit numbers & valuations, FEMA flood zone, seismic design category per project — not found",
+    "Backlog, segment revenue, D&B credit rating — not found",
+    "Madison Ltd division details (focus, leadership, projects) — minimal public info",
+    "Open job-req counts by category (live count) — careers portal not crawlable in this pass",
+    "MBE/WBE/DBE/8(a)/ISO certifications — not found (private industrial firm; likely N/A for set-asides)"
+  ]
+}
