@@ -2,6 +2,7 @@
 
 > **Holds:** the Harvard dedup ledger — owner, 12 projects, 11 GCs, 27 people, 16 department companies. Checked FIRST in dedup ([playbook/loop-and-dedup.md](../playbook/loop-and-dedup.md) §1) before searching Notion.
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md)
+> **Ground truth:** `Enlaye Notion/Harvard Researsch/1Harvard University Construction Intelligence Resea.md` + `2Harvard Researsch.md` — index: [research-files.md](research-files.md)
 > **Siblings:** [databases](databases.md) · [records-consigli](records-consigli.md) · [pages](pages.md) · [open-tasks](open-tasks.md)
 
 > Append a row every time a record is created or updated.

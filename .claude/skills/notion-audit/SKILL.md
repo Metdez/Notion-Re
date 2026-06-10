@@ -29,6 +29,19 @@ Identify the source of truth for the data (research dossier, ledger, prior notes
 ### 3. Parallel READ-ONLY audit
 Dispatch parallel sub-agents (Sonnet is fine), split by record type/batch. Each agent **fetches and reports only** — no writes. Each returns, per record, a compact list of which fields are **empty** (properties *and* expected body elements).
 
+Two checks are ALWAYS part of the audit, on every run (per Zack, 2026-06-10):
+
+**3a. Interconnection check.** Verify the full relation graph, not just field values:
+- every person → `Company` AND `Division` relations set
+- every division row → company relation + `People` + `Projects` set (where the source names any)
+- every project → `Contractors` (company) + `Owning Department` (division) set
+- every location row → division + company relations set
+- every event/membership/software row → company relation set
+- one-way forward relations (e.g. Companies DB `Construction Projects`) hold the complete URL list
+A missing edge whose endpoints both exist is a fillable gap — fix it additively. **If the relation property itself doesn't exist** (common on page-local Locations tables), `ADD COLUMN "<name>" RELATION('<target ds id>')` is pre-authorized (additive only; report it).
+
+**3b. Description-depth check.** Project, division, and people bodies must carry the full sourced depth (projects: what-it-is/why-it-matters, scope + metrics, owner, delivery, JV partners, dates, incidents; divisions: focus, leader, footprint, founded, notable projects; people: role, dates, division context, flagship projects). A thin body where the ground truth has more detail = fillable gap.
+
 ### 4. Cross-reference: fillable vs. sourceless
 For every empty field the audit surfaced, check the ground-truth source:
 - **Source has a value** → fillable gap. Queue it.

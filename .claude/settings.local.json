@@ -44,7 +44,17 @@
       "Bash(printf \".DS_Store\\\\n\")",
       "Bash(git add *)",
       "Bash(git -c 'user.name=Zack Hanna' -c user.email=memelord258@gmail.com commit -m 'Initial commit: Enlaye to Notion working memory \\(harness, context, research dossiers\\) *)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "WebFetch(domain:www.dhcs.ca.gov)",
+      "WebFetch(domain:claycorp.com)",
+      "WebFetch(domain:stories.rivian.com)",
+      "Bash(sed -n '9,335p' 2026-06.md)",
+      "Read(//tmp/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(git -C \"/Users/zackhanna/Desktop/Enlaye to Notion\" remote -v)",
+      "Bash(git -C \"/Users/zackhanna/Desktop/Enlaye to Notion\" status --short)",
+      "Bash(git commit -m 'Update working memory: harness maintenance, Shawmut research, record ledgers *)"
     ]
   }
 }

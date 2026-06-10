@@ -2,6 +2,7 @@
 
 > **Holds:** the Consigli dedup ledger — 32 projects, 38 people, schema changes, and full cross-linking. Per Zack: "everything must be done, and everything must be linked together." No Owner records (owner-clients are sourced text in each project body).
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md)
+> **Ground truth:** `Enlaye Notion/Consigli Researsch/` — `Consig researsch.md` · `Con more.md` · `Con Perp Re.md` · `2[https___www.consigli.com_]…md` (crawl) — index: [research-files.md](research-files.md)
 > **Siblings:** [databases](databases.md) · [records-harvard](records-harvard.md) · [pages](pages.md) · [open-tasks](open-tasks.md)
 > **Related:** the Consigli profile page layout lives in [pages.md](pages.md).
 

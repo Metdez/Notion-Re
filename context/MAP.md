@@ -2,7 +2,7 @@
 
 > **What this file is:** the index of the whole harness. Every other file is reachable from here.
 > **Read it:** when you need to find *where* something lives but don't already know the file.
-> **Write to it:** whenever a file is added, split, renamed, or moved. The map must always match the tree.
+> **Write to it:** whenever a file is added, split, renamed, or moved. **The map must always match the tree** — verify at session start ([harness-maintenance §11.1](playbook/harness-maintenance.md)).
 
 This project spreads its working memory across many small, single-topic files so the agent loads **only what a task needs** — not everything at once. [CLAUDE.md](../CLAUDE.md) is the root router; it points here and nowhere else loads automatically.
 
@@ -13,7 +13,8 @@ This project spreads its working memory across many small, single-topic files so
 2. At chat start, glance at the four **hub** files — they are thin indexes, cheap to read:
    [STATE.md](../STATE.md) · [USER_PREFS.md](../USER_PREFS.md) · [PLAYBOOK.md](../PLAYBOOK.md) · [LOG.md](../LOG.md).
 3. **Open a spoke only when the task touches it.** Don't pre-read spokes. Follow the link when you hit the need.
-4. After acting, update the spoke(s) you changed, then append to the current log file. See [§ Update protocol](#update-protocol).
+4. After acting, update the spoke(s) you changed, then append to the current log file. See [§ Update protocol](#update-protocol--run-after-every-action).
+5. The harness maintains itself: health check, growth, splitting, and drift-repair protocols live in **[playbook/harness-maintenance.md](playbook/harness-maintenance.md)** — open it before creating/splitting any file.
 
 ---
 
@@ -32,26 +33,41 @@ This project spreads its working memory across many small, single-topic files so
 | File | Holds |
 |---|---|
 | [playbook/loop-and-dedup.md](playbook/loop-and-dedup.md) | The task loop (§0), dedup (§1), create (§2), update (§3) |
-| [playbook/schemas.md](playbook/schemas.md) | Field schemas (§4): Owners, Companies, People |
+| [playbook/schemas.md](playbook/schemas.md) | Field schemas (§4): Owners, Companies, People, Projects, profile-page tables |
 | [playbook/conventions.md](playbook/conventions.md) | Icon convention (§5), sourcing format (§6) |
 | [playbook/recipes.md](playbook/recipes.md) | Task recipes R1–R6 (§7) |
 | [playbook/safety.md](playbook/safety.md) | Pre-write safety protocol (§8) |
 | [playbook/notion-mcp.md](playbook/notion-mcp.md) | Notion MCP mechanics & gotchas (§9) |
+| [playbook/research-load-prompt.md](playbook/research-load-prompt.md) | Reusable "research → Notion" load prompt (§10) — paste version of `/notion-load` |
+| [playbook/harness-maintenance.md](playbook/harness-maintenance.md) | Self-healing protocol (§11): health check, content routing, growth, log rollover, splitting, drift repair, file templates |
 
 ### State spokes — *what exists* now
 | File | Holds |
 |---|---|
 | [state/databases.md](state/databases.md) | The 4 databases (IDs, URLs), Owners schema, template page |
-| [state/records-harvard.md](state/records-harvard.md) | Harvard owner, 12 projects, 11 GCs, 27 people, 16 departments |
-| [state/records-consigli.md](state/records-consigli.md) | Consigli profile build: 19 projects, 21 people, cross-linking |
-| [state/pages.md](state/pages.md) | Built pages: Harvard Projects, Company-profile TEMPLATE, Consigli profile |
+| [state/research-files.md](state/research-files.md) | **Ground-truth index:** company → dossier file(s) on disk, loaded-status, ledger links |
+| [state/records-harvard.md](state/records-harvard.md) | Harvard ledger: owner, 12 projects, 11 GCs, 27 people, 16 departments |
+| [state/records-consigli.md](state/records-consigli.md) | Consigli ledger: 34 projects, 41 people, 21 divisions, cross-linking |
+| [state/records-clayco.md](state/records-clayco.md) | Clayco ledger: company, CCDI, 19 divisions, 17 projects, page tables |
+| [state/records-zachry.md](state/records-zachry.md) | Zachry Group ledger: company, 7 divisions, 8 people, 12 projects (≠ Zachry Construction Corp) |
+| [state/records-dellbrook.md](state/records-dellbrook.md) | Dellbrook \| JKS ledger: company, 3 divisions, 28 projects, 25 people, page tables |
+| [state/records-og.md](state/records-og.md) | O&G Industries ledger: company, 7 divisions, 12 projects, page tables |
+| [state/records-fontaine.md](state/records-fontaine.md) | Fontaine Bros. ledger: company, 2 divisions, 13 projects, 8 people, page tables |
+| [state/pages.md](state/pages.md) | Built pages + view IDs: Harvard Projects, Company-profile TEMPLATE, Consigli profile |
 | [state/open-tasks.md](state/open-tasks.md) | Open tasks / in-flight + notes & known gaps |
 
 ### Log spokes — *what happened* (append-only)
 | File | Holds |
 |---|---|
-| [log/2026-06.md](log/2026-06.md) | June 2026 action journal (current) |
-| `log/archive/` | Past months, rolled here once a month closes |
+| [log/2026-06.md](log/2026-06.md) | June 2026 journal (current — company loads & audits from 06-09 Clayco onward) |
+| [log/archive/2026-06-part1.md](log/archive/2026-06-part1.md) | June 2026 part 1: Owners/Harvard builds, TEMPLATE work, full Consigli saga (06-08 → 06-09) |
+
+### Skills (Claude Code — `.claude/skills/`)
+| Skill | Does |
+|---|---|
+| `/notion-load` | Load a research dossier into Notion (dedup-first, additive, interlink checklist) |
+| `/notion-audit` | Read-only parallel audit of a company → verified additive fills only |
+⚠ Stray copies of the notion-audit SKILL.md exist at the repo root and in `Enlaye Notion/` — canonical lives in `.claude/skills/`; cleanup flagged in [state/open-tasks.md](state/open-tasks.md).
 
 ---
 
@@ -62,29 +78,15 @@ A change that isn't recorded didn't happen.
 3. **Procedure changed?** edit the matching `playbook/` spoke.
 4. **New preference/correction?** append to [USER_PREFS.md](../USER_PREFS.md).
 5. **Added/split/moved a file?** update this map and the relevant hub's link list.
+6. **New dossier on disk?** add its row to [state/research-files.md](state/research-files.md).
 
----
-
-## Splitting protocol — keep every file short
-The point of this system is that no single file is heavy to load. When a file grows past a comfortable read, split it.
-
-**Trigger:** a spoke crosses **~200 lines** (or covers two clearly separate topics, whichever comes first).
-
-**How to split:**
-1. Pick the natural seam (a heading, an entity, a date range).
-2. Create a new sibling spoke with a clear kebab-case name (e.g. `state/records-consigli.md` → split off `state/records-consigli-projects.md`).
-3. **Move** the content — never retype, never drop a line. Cut from the old file, paste into the new.
-4. Replace the moved block in the old file with a one-line pointer — a real markdown link to the new file plus a note of what it holds (e.g. `→ moved to context/state/records-consigli-projects.md — the 19 projects`).
-5. Add the new file to this map's tree and to its hub's link list.
-6. Cross-link: the new file links back to its hub and to siblings it references.
-
-**Naming:** `area/topic.md`, lowercase, hyphens. Logs are `YYYY-MM.md`. Keep names predictable so links are guessable.
-
-**Never delete content when splitting.** Splitting moves; it does not prune. If something is truly obsolete, move it to an archive note and log why — don't silently remove it.
+## Growth & splitting
+The harness grows itself — new company → new ledger; new topic → new spoke; file past ~200 lines (or two topics) → split; log past ~200 lines → roll to archive. Full protocols + the file/ledger templates: **[playbook/harness-maintenance.md](playbook/harness-maintenance.md)**.
 
 ---
 
 ## Conventions for all files
-- Every file opens with a `> What this is / Read it / Write to it` header and a sibling-links line.
+- Every file opens with a `> What this is / Read it / Write to it` header and a sibling-links line ([template](playbook/harness-maintenance.md)).
 - Use markdown links for every file/record reference (not backticks) — they're clickable.
 - Keep entries CEO-skimmable: bullets, short labels, no filler.
+- Names: `area/topic.md`, lowercase kebab-case; ledgers `records-<company-slug>.md`; logs `YYYY-MM.md`. Predictable names make links guessable.

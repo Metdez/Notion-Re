@@ -29,10 +29,26 @@ For EVERY record, search before creating — the relevant state-ledger spoke fir
 Load order: company record → divisions → people (link Company + Division) → projects (link Contractors + Owning Department) → events / memberships / software / locations → cross-link everything (a record nobody links to doesn't exist).
 Parallel sub-agents are fine for research/read work, but serialize creates per record type — concurrent creates are how past sessions made 18 duplicates.
 
+### Interlink checklist (mandatory — per Zack, 2026-06-10)
+The build is not done until this relation graph is complete. Verify each edge after loading:
+- **Person → Division** (People DB `Division` relation) and **Person → Company** (`Company` relation) — both, on every person.
+- **Division → Company** (Divisions table company relation) + **Division → People** + **Division → Projects** — every division row carries all three.
+- **Project → Contractors** (company) + **Project → Owning Department** (division) on every project.
+- **Location → Division** (its `owning_division`) and **Location → Company** — every location row.
+- **Events / Memberships / Software → Company** relation on every row.
+- One-way forward relations (e.g. Companies DB `Construction Projects`) need the FULL URL list re-passed — see [playbook/notion-mcp](../../../context/playbook/notion-mcp.md).
+**If a table lacks the relation property an edge needs** (page-local Locations tables usually have no relations): `ADD COLUMN "<name>" RELATION('<target ds id>')` via `notion-update-data-source` — this additive schema change is pre-authorized by Zack (2026-06-10); state it in the report. Never drop/alter existing columns for this.
+
+### Description depth (mandatory — per Zack, 2026-06-10)
+Bodies stay CEO-skim (bullets, short sentences) but must carry the full sourced depth, not one-liners:
+- **Projects:** what it is + why it matters (scope, technology, configuration, key metrics like MW/MTPA/SF), owner/client, delivery method + contract type, JV partners & competing bidders, award/announced dates and timeline, incidents/litigation — everything the dossier has, each with its source.
+- **Divisions:** focus, leader (+ appointment date), footprint (states/metros/sectors served), founded/acquired date, office phone, notable projects, parent entity.
+- **People:** role + appointment/hire date, division context, flagship projects/wins they're tied to, awards/events — everything the dossier sources about the person.
+
 ## Phase 4 — Rules (non-negotiable)
 - **Sourced data only.** Every value carries an inline source URL from the research. No source → leave the field empty. Never fabricate, never approximate dates/values, never geocode addresses you can't verify.
 - **Additive only.** Never `replace_content`, never delete, never overwrite a filled field. On conflict between research and an existing value, keep the existing value and flag the conflict.
-- **No new structure.** Use existing databases, properties, and select options (when extending a multi-select, preserve every existing option + color). If research data has no Notion home, flag it — don't add columns or databases.
+- **No new structure** — with ONE exception: relation properties needed to complete the Interlink checklist may be ADDed (additive `ADD COLUMN … RELATION(…)`, pre-authorized by Zack 2026-06-10; report it). Otherwise use existing databases, properties, and select options (when extending a multi-select, preserve every existing option + color). If research data has no Notion home, flag it — don't add columns or databases.
 - **Brevity.** Bullets, short sentences, written for a CEO who skims.
 - **Confirm before anything structural or destructive** — state the operations, bold the risky ones, wait.
 

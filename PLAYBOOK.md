@@ -16,7 +16,8 @@
 | §7 | [recipes](context/playbook/recipes.md) | a recurring task (R1–R6: owners, projects, GCs, departments, hub pages) |
 | §8 | [safety](context/playbook/safety.md) | **before any structural Notion change** |
 | §9 | [notion-mcp](context/playbook/notion-mcp.md) | **before writing to Notion** — relations, icons, newlines, view DSL, nested DBs |
-| §10 | [research-load-prompt](context/playbook/research-load-prompt.md) | loading a new company's research dossier — reusable copy-paste prompt |
+| §10 | [research-load-prompt](context/playbook/research-load-prompt.md) | loading a new company's research dossier — reusable copy-paste prompt (skill version: `/notion-load`) |
+| §11 | [harness-maintenance](context/playbook/harness-maintenance.md) | **the self-healing protocol** — session health check, where new content goes, when to create/split files, log rollover, drift repair, file templates |
 
 ## The loop, in one line
-Read [STATE.md](STATE.md) → match a [recipe](context/playbook/recipes.md) → [dedup](context/playbook/loop-and-dedup.md) → act via Notion MCP → record in the matching [state spoke](context/state/) + the current [log](context/log/2026-06.md). Full version: [loop-and-dedup §0](context/playbook/loop-and-dedup.md).
+Read [STATE.md](STATE.md) → match a [recipe](context/playbook/recipes.md) → [dedup](context/playbook/loop-and-dedup.md) → act via Notion MCP → record in the matching [state spoke](context/state/) + the current [log](context/log/2026-06.md). Full version: [loop-and-dedup §0](context/playbook/loop-and-dedup.md). Writing files? Route content per [harness-maintenance §11.2](context/playbook/harness-maintenance.md).

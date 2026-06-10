@@ -37,4 +37,10 @@ The map's top level is four thin **hub** files (cheap to glance at; each links d
 | [PLAYBOOK.md](PLAYBOOK.md) | how to do the work — procedures, schemas, recipes, safety, MCP gotchas | when a task arrives |
 | [LOG.md](LOG.md) | what happened — append-only journal, by month | when you need history |
 
-**How to work:** glance at the four hubs, then follow links into [context/](context/) **only as the task requires** — don't pre-read spokes. Before any create, dedup ([context/playbook/loop-and-dedup.md](context/playbook/loop-and-dedup.md) §1). After any write, update the matching state spoke and append to the current log. When a file grows too long, split it and update the map — protocol in [context/MAP.md](context/MAP.md). A change that isn't recorded didn't happen; this is how the rules above (no duplicates, sourced data, brevity, icons) get enforced.
+**How to work:** glance at the four hubs, then follow links into [context/](context/) **only as the task requires** — don't pre-read spokes. Before any create, dedup ([context/playbook/loop-and-dedup.md](context/playbook/loop-and-dedup.md) §1). After any write, update the matching state spoke and append to the current log. A change that isn't recorded didn't happen; this is how the rules above (no duplicates, sourced data, brevity, icons) get enforced.
+
+**The harness maintains itself** — full protocol in [context/playbook/harness-maintenance.md](context/playbook/harness-maintenance.md):
+- **Session start:** 30-second health check — current log under ~200 lines, [context/MAP.md](context/MAP.md) matches the file tree, STATE snapshot has a row per ledger. Fix drift before working.
+- **New topic → new file.** New company → create its `context/state/records-<slug>.md` ledger *before* the first Notion write; new procedure area → new playbook spoke. Register every new file in MAP + its hub + the log in the same session — an unregistered file doesn't exist.
+- **Full file → split it.** Past ~200 lines (or two topics in one file), move the older/secondary content to a new spoke, leave a pointer, update the map. Move — never retype, never prune.
+- **Finding more context:** the company → research-dossier index is [context/state/research-files.md](context/state/research-files.md); each ledger names its ground-truth files in its header.

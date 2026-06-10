@@ -2,6 +2,7 @@
 
 > **Holds:** the Clayco dedup ledger — company record, 19 divisions, 17 projects, events/memberships/locations/sources/software, cross-linking.
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md)
+> **Ground truth:** `Enlaye Notion/Clayco/Clay 1.md` — index: [research-files.md](research-files.md)
 > **Siblings:** [databases](databases.md) · [records-harvard](records-harvard.md) · [records-consigli](records-consigli.md) · [pages](pages.md) · [open-tasks](open-tasks.md)
 > **Research source:** `Enlaye Notion/Clayco/Clay 1.md` (single dossier; identity = Clayco Inc., claycorp.com, Chicago — NOT the Stoughton MA "Clay Corporation" auto dealer).
 
