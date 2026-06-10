@@ -53,8 +53,22 @@ This project spreads its working memory across many small, single-topic files so
 | [state/records-dellbrook.md](state/records-dellbrook.md) | Dellbrook \| JKS ledger: company, 3 divisions, 28 projects, 25 people, page tables |
 | [state/records-og.md](state/records-og.md) | O&G Industries ledger: company, 7 divisions, 12 projects, page tables |
 | [state/records-fontaine.md](state/records-fontaine.md) | Fontaine Bros. ledger: company, 2 divisions, 13 projects, 8 people, page tables |
+| [state/records-hitt.md](state/records-hitt.md) | HITT Contracting ledger: company (existing), 18 divisions, 10 projects, 14+6 people, locations/memberships/software/events/sources, full interlink |
+| [state/records-jingoli.md](state/records-jingoli.md) | Jingoli Nuclear Services ledger: company, 5 divisions, 2 people, 5 projects, location/event/sources, full interlink |
+| [state/records-cianbro.md](state/records-cianbro.md) | Cianbro ledger: existing company record extended, ~13 divisions (market units + subsidiaries), 24 projects, people, locations/events/memberships/software, full interlink |
+| [state/records-branch.md](state/records-branch.md) | Branch Group ledger: existing company record extended, 4 divisions, 7 people, 12 projects, events/memberships/software/locations, full interlink |
+| [state/records-bechtel.md](state/records-bechtel.md) | Bechtel Group ledger: existing company record extended, 6 divisions, 15 execs (+37 existing=52), 25 projects, 30 software, 16 locations, 11 events, 6 memberships, full interlink |
+| [state/records-alberici.md](state/records-alberici.md) | Alberici ledger: existing company record + 8 subsidiary records (extend) + 3 new, 11 divisions, 13 projects, ~13 people, events/memberships/software/locations, full interlink |
+| [state/records-kbe.md](state/records-kbe.md) | KBE Building ledger: large pre-existing build (06-05→06-09) extended — company record, 3 divisions (Company Map), ~180 people, ~13 projects + ~9 net-new, events/memberships/software/sources, full interlink |
+| [state/records-middlesex.md](state/records-middlesex.md) | Middlesex Corp ledger: existing company record (`1ce90644`) extended, 4 divisions, 4+4 people, 21 projects (3 JV pre-existing), 9 owners, events/memberships/software/locations, full interlink |
+| [state/records-flatirondragados.md](state/records-flatirondragados.md) | FlatironDragados ledger: existing company record (`24690644`) extended, 6 divisions, 11 people, 21 projects, 5 software/7 memberships/2 events/6 locations/34 sources, full interlink |
+| [state/records-sundt.md](state/records-sundt.md) | Sundt ledger: existing company record (`22b90644`) extended, 8 divisions, 3 execs (+15 existing), 18 projects, 2 events/1 membership/3 software/15 locations/16 sources, full interlink |
+| [state/records-kiewit.md](state/records-kiewit.md) | Kiewit Corp ledger: existing company record (`17b90644`) extended, 17 divisions, 15 projects, 2 people, events/memberships/software/locations, full interlink; InEight = Kiewit-owned in-house risk platform |
+| [state/records-shawmut.md](state/records-shawmut.md) | Shawmut ledger: prior-session build reconciled + completed — company (existing `19990644`) + profile, 5 divisions, 13 people, 19 projects, 12 locations, 2 events, AGC, 7 software, 14 owners (13 created), full interlink |
+| [state/records-event-imports.md](state/records-event-imports.md) | Event-import ledger (Apollo CSVs): Paris BuiltWorlds Summit 2026 + Soletanche Bachy Innovation Day — attendees, companies, enrichments, dup flags |
 | [state/pages.md](state/pages.md) | Built pages + view IDs: Harvard Projects, Company-profile TEMPLATE, Consigli profile |
 | [state/open-tasks.md](state/open-tasks.md) | Open tasks / in-flight + notes & known gaps |
+| [state/audit-pass-2026-06-10-deferred.md](state/audit-pass-2026-06-10-deferred.md) | **Transient** — deferred/manual-OK items from the 06-10 full-portfolio audit (shared-schema options, dups, structural gaps). Fold into open-tasks + delete when resolved |
 
 ### Log spokes — *what happened* (append-only)
 | File | Holds |
@@ -67,6 +81,7 @@ This project spreads its working memory across many small, single-topic files so
 |---|---|
 | `/notion-load` | Load a research dossier into Notion (dedup-first, additive, interlink checklist) |
 | `/notion-audit` | Read-only parallel audit of a company → verified additive fills only |
+| `/notion-bulk-import` | Import any bulk record list (CSV/export) into the right database(s) — dedup-first, clobber-safe write order, enrichment over recreation; example ledger: [state/records-event-imports.md](state/records-event-imports.md) |
 ⚠ Stray copies of the notion-audit SKILL.md exist at the repo root and in `Enlaye Notion/` — canonical lives in `.claude/skills/`; cleanup flagged in [state/open-tasks.md](state/open-tasks.md).
 
 ---

@@ -67,3 +67,82 @@
 2. **Existing Software** view — `__TEMPLATE__` filter still on; clear/curate manually.
 3. Company Map / Events / Sources / Locations / Memberships views may still carry inherited template filters or starter guide rows — clear filter rules + delete guide rows in UI if visible.
 4. `Size`=Regional vs dossier "Mutlinational" — decide and update manually if desired.
+
+---
+
+## Second pass — 2026-06-10 (Clayco1.md + Clayco3.md)
+> Enriched the pass-1 build additively. Ground truth added: `Enlaye Notion/Clayco/Clayco1.md` (firmographics/financials/safety) · `Clayco3.md` (people/projects/events). Clay 1.md still the pass-1 source.
+
+**People — 6 CREATED** (pass 1 made 0; each Company→Clayco, `## Role` body, dedup-searched People DB first — none existed). IDs prefix `37b90644-d524-`:
+| Person | ID | Function | Division (abd90644 People link) |
+|---|---|---|---|
+| Anthony Johnson | `818d-88bc` | CEO (since Jan 2025) | Corporate BU |
+| Steven Sieckhaus | `8189-9fb0` | Enterprise President | Corporate BU |
+| Ryan McGuire | `8111-a2e9` | President, Clayco Compute | Clayco Compute · → Cheyenne project |
+| Scott Watkins | `813b-aa0b` | VP Manufacturing | Industrial BU |
+| Jim Dearduff | `8146-9022` | Project Director (DBIA/LEED) | Institutional BU |
+| Alan Lurie | `813e-8b01` | Project Executive (data centers) | Clayco Compute · → Cheyenne project |
+
+**Jeff Miller** (existed `30390644-d524-80fa-89db-e05489e34263`) → added `## Role` body + FQ `+IT`; also linked on Corporate BU People. Bob Clark/Jeff Miller stay on Chicagoland (untouched).
+
+**Projects — 15 CREATED** in Construction Projects DB (dedup-confirmed absent; Contractors→Clayco, Owning Department→division row(s), varied emoji, Brief+Sources body; **values blank** — no clean Clayco contract $ disclosed). place set where lat/lng given; Stead/SIUE/STLCC address in body only (place needs lat/lng):
+| Project | ID (prefix `37b90644-d524-`) | Type / Status | Owning Dept |
+|---|---|---|---|
+| VinFast EV Campus (Ph.1) | `810b-b8e0` | Adv Mfg | Industrial |
+| Microsoft DC (Elk Grove Village) | `81a3-875a` | Data Center | Compute |
+| Canadian Solar Panel Facility | `81b2-8cd6` | Adv Mfg | Industrial |
+| O'Hare 21 – Airfield Basins | `81c6-a423` | Infrastructure | Aviation |
+| Gary C. Werths Bldg / Siteman | `8129-8c61` | Healthcare / **Done** | Institutional + St. Louis |
+| Kali Hotel | `8115-8af9` | Hospitality | West Coast |
+| The Cubes at Sparta Pike | `8172-b32a` | Distribution | Industrial + CRG |
+| Albion West End | `8116-8ebe` | Mixed-Use Res | St. Louis |
+| Life Time Living | `8178-8f1e` | Mixed-Use Res | SW (Phoenix) + Residential |
+| Confidential Distribution Facility (Hudson, NH) | `81d9-9f3d` | Distribution | Industrial |
+| Stead 220 | `81e5-90c7` | Mixed-Use Res / **Done** | Residential + Chicagoland |
+| SIUE Health Sciences Complex | `81f3-a037` | Higher Ed | Institutional |
+| STLCC Meramec Tech & Fin Centers | `8126-b2b7` | Higher Ed | Institutional + St. Louis |
+| Cheyenne Nuclear-Powered DC (Deep Atomic) | `8172-9e6b` | Data Center | Compute |
+| Illinois Solar and Battery Storage | `8119-8365` | Energy & Power / **Not started** | Power & Energy |
+
+**Dedup decisions:** "Hudson Distribution Facility" (Clayco3) = "Confidential Distribution Client" (Clayco1) → **one** record. **Cheyenne Nuclear (Deep Atomic, 184k SF, CM)** kept **distinct** from existing "Related Digital Cheyenne DC" (different developer); body flags possible same physical campus — **Zack to verify**.
+
+**Interlink (verified live):** Company `Construction Projects` re-passed = **32** (17+15). 11 division `Projects` lists updated to union(old,new) — non-destructive; Owning Department↔division Projects confirmed synced (Compute fetch = 4 projects/2 people post-write). People added on 4 divisions (Corporate ×3 · Compute ×2 · Industrial ×1 · Institutional ×1). Cheyenne project verified carrying Contractors+Owning Dept+People. *Person→Division reverse uses the abd90644 Division `People` relation; People.`Division` targets a separate DB (37690644-8088) unused for this profile — same as pass 1.*
+
+**Events — 3 CREATED** (Companies→Clayco): SelectUSA Investment Summit 2026 `8129-9ab8` (tag Maryland) · Clayco Rising Meet & Greet 2025 `813e-b9cf` (tag Florida) · AGC Convention 2026 `8135-b216`. Schema ALTER: Events `Location tags` +Maryland +Florida (all existing preserved).
+
+**Locations — 2 CREATED** (Adress text + Divisions→St. Louis BU): Overland MO `815c-9c2f` (2199 Innerbelt Business Center Dr) · Clayton MO `81dc-900e` (7800 Forsyth Blvd). (Locations collection has no Company/place field; reach Clayco via Division — same structure as pass-1's 9.)
+
+**Company body:** appended "Financial trend & safety (2026-06 update)" — revenue history 2018 $2.68B→2025 $8.1B · ENR Top 400 #21 / Green #3 / BD+C DC #5 · EMR 0.40→0.39 · TRIR 0.55 · structural moves · new leadership. All inline-sourced (the now-sourced figures pass 1 had to leave out).
+
+**Still left blank (no source):** project contract values; precise project dates (year-only stays in body). **Conflict kept:** Size=Regional vs "Multinational" (unchanged).
+
+---
+
+## Third pass — 2026-06-10 (notion-audit full pass — checks 3a–3e)
+> Read-only audit of all linked records; then fills. Ground truth: Clayco1.md + Clayco3.md + Clayco4.md (new — adds NAIOP Chicago + USGBC-CA memberships).
+
+**Cheyenne verify (open flag — resolved):** Fetched both project records. "Cheyenne Nuclear-Powered Data Center Campus (Deep Atomic)" `37b90644-d524-8172-9e6b-d2b5368c8cf2` owner=Deep Atomic, role=CM, 184k SF. "Related Digital Cheyenne Data Center Campus" `37b90644-d524-81e1-aec3-eb4b8a48fc58` owner=Related Digital. Different clients/developers → confirmed distinct projects. No merge. **Flag closed.**
+
+**Memberships — 2 NEW ROWS CREATED** in Memberships collection `76490644-d524-82bb-bad9-875ca2b280e6` (Clayco TEMPLATE page-local):
+| Name | ID (prefix `37b90644-d524-`) | Source |
+|---|---|---|
+| NAIOP Chicago — Member | `8154-b408-e38648168f31` | https://www.naiopchicago.org/membership/ |
+| USGBC-CA — Member | `8139-ad61-f9e5cb36326f` | https://usgbc-ca.org/companies/clayco/ |
+
+**Full membership list now in Notion (5 rows):** USGBC `81bd` · DBIA `811f` · AGC-unconfirmed `8119-a1ba` · **NAIOP Chicago `8154`** · **USGBC-CA `8139`**.
+
+**Schema gap — DEFERRED:** Memberships collection `76490644` only has a `Name` property — no Company relation column. The `create-pages` tool cannot alter collection schemas. MCP does not support ADD COLUMN operations. All 5 membership rows have sourced body content but no machine-readable Company→Clayco relation. **Action for Zack:** in Notion UI, add a Company relation property to this collection and link all 5 rows to Clayco.
+
+**Body cleanup needed — FLAG FOR ZACK:** The context-handoff session accidentally ran `insert_content` on page `bc990644-d524-823f-a715-816a74c54c45` (the Memberships+People database container page), inserting a raw markdown table as body text. The 2 correct DB rows were subsequently created via `create-pages`. Zack should manually delete the orphan markdown table text from that page body in the Notion UI.
+
+**3a Interconnection — confirmed clean:** all pass-2 people have Company→Clayco set; division rows carry People + Projects as built. Events all carry Companies→Clayco. No new edge gaps found.
+
+**3b Description depth — confirmed adequate:** all project, division, and people bodies have sourced depth matching ground truth. No thin-body fills needed.
+
+**3c Address/place — nothing new to fill:** Events: SelectUSA has Maryland tag (set pass 2); AGC Convention 2026 — no venue address in any dossier (genuinely sourceless). INTERPHEX has Life Sciences tag + no address (sourceless). All location rows have addresses from pass 1/2.
+
+**3d Membership completeness — complete after this pass:** 5/5 sourced memberships now in Notion (see above).
+
+**3e Location tags — confirmed:** all events and locations that have sourced location data carry tags. AGC Convention and INTERPHEX have no sourceable venue → tags left blank (correct).
+
+**Size conflict — unresolved:** Size=Regional vs dossier "Multinational". No new source to resolve. Zack to decide.

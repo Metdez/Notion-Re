@@ -50,6 +50,29 @@ Street-level Adress places set on Prouty/Doherty/Walpole/Court Square/Greylock (
 
 **✅ Audited 2026-06-10 (scope: FULL relation-graph interconnection + description-depth, all 28+ records — 3 parallel read-only agents + verified fills):** relation graph otherwise 100% intact (13/13 Contractors, 12/12 Owning Department + Salisbury correctly null, 13/13 company→project, 8/8 company↔people, division People/Projects edges, 4/4 software + 2/2 events company links). Fixed: Memberships/Locations missing relation properties (see schema changes) + linked MSBA→Fontaine, both location rows→division+company; Springfield location +opened 1933, Worcester location +phone (both fontainebros.com); 2025 Super 60 body +audience bullet (fontainebros.com/awards). All bodies at dossier depth. Person→Division edge confirmed STRUCTURALLY IMPOSSIBLE (division rows live in page-local `bf890644…`, not the relation's target master collection) — division→People reverse link carries it. Borderline held: UMass PHHS `Date` left blank (dossier has end-only 2026-05 completion, no start — convention can't represent; fact in body). Notes: dossier names Mountain View ES (Springfield) + Tyngsborough MS (Worcester) in division project lists but those projects were never built in Notion (outside the 13); leftover template starter rows remain in Events (3), Memberships (1), Locations (1), Sources (1).
 
+**✅ Second-pass LOAD 2026-06-10 (new dossier `Fontaine.md`, 16 projects — /goal):** A second dossier `Enlaye Notion/Fontaine Bros/Fontaine.md` (≠ `Font1.md`) landed; reconciled both vs Notion's 13 → **6 net-new projects created** in Construction Projects DB (`4c8ed827…`), all dedup-confirmed absent, Contractors→Fontaine + Owning Department→division + place address (geocoded) + Location [city,MA] + sourced bodies (Doherty format):
+| Project | Notion ID | Div | $M | Status |
+|---|---|---|---|---|
+| South High Community School | `37b90644-d524-8130-9d30-c662e6009320` | Worcester | 210 | Done |
+| East Longmeadow High School | `37b90644-d524-8141-bc4b-e7ed14f2a571` | Springfield | — | In progress |
+| William R. Peck Middle School | `37b90644-d524-812b-ae20-ff7633bac70c` | Springfield | 85.5 | Done |
+| Berkshire Hall, Berkshire School | `37b90644-d524-81dd-9c13-dc345fc6b6bd` | Springfield | 14.4 | Done (Private School type) |
+| Tyngsborough Middle School | `37b90644-d524-818d-b029-e000f66afa7f` | Worcester | 65 | Done |
+| Auburn High School | `37b90644-d524-81da-b42a-f5331a09f707` | Worcester | 35 | Done |
+- **Company `Construction Projects` relation re-passed to full 19** (13 + 6) — relation set via JSON-array string (comma-separated rejected).
+- **Division `Projects` relation is NOT dual with project `Owning Department`** — had to manually add to each: Worcester div now **9** (+South High, Tyngsborough, Auburn), Springfield div now **9** (+E. Longmeadow, Peck, Berkshire Hall). Both division "Notable projects" body lines extended too.
+- **Existing-project gaps filled from new dossier:** Beal Elementary +Architect LPA|A (`fontainebros.com/beal-elementary-school`); Clinton Middle +Architect LPA|A (`fontainebros.com/clinton-middle-school`). Both were blank.
+- **Sources table (`94290644…`) +5 rows** (W.T. Rich, The Reminder E.Longmeadow, Holyoke PS, Town of Tyngsborough, Flansburgh) — net-new external corroboration; fontainebros project pages left inline-only (table's existing pattern). Table now ~35 rows.
+- **Conflicts HELD (not overwritten):** new dossier Doherty $264M vs Notion $316M (Notion has detailed cost-event trail) · Court Square $49M vs Notion $51M · new dossier types "Higher Education" → kept Notion "K-12 School"/"Private School" convention. Berkshire Hall + Auburn Date left blank (year-only sources; completion noted in body). E. Longmeadow value blank (undisclosed).
+- **`Location` multi-select race (live):** concurrent FL/SC session clobbered options mid-create (saw "valid: Florida, South Carolina" only). Settled into a **union** — MA cities + FL/SC now coexist. Added 5 city options (East Longmeadow, Holyoke, Sheffield, Tyngsborough, Auburn). `K-12 School`/`Private School` + all MA cities confirmed intact. Multi-select writes need JSON-array string format. Created 6 projects without place first (place needs lat+lng), then patched place + Location.
+- **Place geocodes** on the 6 are approximate town/street centroids (address string is authoritative; per dossier geocoding_note convention).
+
+**✅ Audited 2026-06-10 (scope: full profile — company, 19 projects, 8 people, 2 divisions, Events/Locations/Memberships/Software/Sources — notion-audit skill):** All records re-fetched live vs Font1.md + Fontaine.md. 3 fillable gaps found and filled:
+1. **Memberships table** — AGC MA row MISSING (Fontaine.md confirmed member at `members.agcmass.org`). Created: "AGC MA (Associated General Contractors of Massachusetts) — General Contractor Member" `37b90644-d524-81ce-b149-e6ffc735c21b`; Company→Fontaine; body: GC Member, Skiff-tier sponsor 2025, 2 IAA recipients. Source: `https://members.agcmass.org/list/member/fontaine-brothers-inc-41`
+2. **Worcester Division — `People` relation empty.** Added Joel Kent (COO). Source: `https://fontainebros.com/awards`
+3. **Joel Kent — body blank.** Added ## Role body: COO, Worcester Office base, Enlaye context. Source: `https://fontainebros.com/awards`
+Verified false positives held (Jeff Cammuso / Mark Abdella blank bodies — no dossier role detail beyond title; Wambui — Growjo low-trust rule held). All other fields match prior audit results. Memberships now 2 rows: MSBA footprint + AGC MA.
+
 **⚠ Manual UI steps for Zack:**
 1. **Projects Underway** view on the profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = Fontaine Bros. Inc.
 2. **Memberships "View of People"** tab — re-point leftover company filter to Fontaine Bros. Inc.

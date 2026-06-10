@@ -1,6 +1,6 @@
 # State · Records — O&G Industries Build
 
-> **Holds:** the O&G Industries dedup ledger — company record, 7 divisions, 12 projects, 3 events, 25 sources, 12 locations, 4 memberships, 4 software rows.
+> **Holds:** the O&G Industries dedup ledger — company record, 7 divisions, 12 projects, 5 people, 3 events, 25 sources, 12 locations, 4 memberships, 4 software rows.
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md)
 > **Ground truth:** `Enlaye Notion/O&G/OG1.md` — index: [research-files.md](research-files.md)
 > **Siblings:** [databases](databases.md) · [records-harvard](records-harvard.md) · [records-consigli](records-consigli.md) · [pages](pages.md) · [open-tasks](open-tasks.md)
@@ -41,6 +41,18 @@ All 12 dedup-confirmed absent before create. Each: Contractors→O&G `1cf90644�
 
 Dates set: CT River Bridge start 2024-09-01 · Manchester Library start 2025-04-01 · Torrington start 2022-05-01 · both Cheshire schools 2024-12-16→2026-09-01. Year-only dates kept in body prose (Consigli convention).
 
+## People (shared People DB `0b7ff339-…`) — added 2026-06-10 (named-people pass)
+Dossier was framed titles-only, but 5 named people are sourced in its body/sources/memberships. All Company→O&G `1cf90644…` (dual relation; company `People` now = 7 incl. 2 pre-existing CRM contacts). Icon user_gray. Body = `## Role` w/ inline sources.
+| Person | Notion ID | Function | Status | Division link |
+|---|---|---|---|---|
+| Gregory Pomerleau | `1d290644-d524-80d4-bd75-f785e306a59b` | Project Manager | **pre-existing** (email gregpomerleau@ogind.com) — Bio +CCIA YCC Vice Chair line | company-level |
+| David Oneglia | `37b90644-d524-8103-b82f-d8ed47783e2f` | President | created | company-level (corporate) |
+| Raymond R. Oneglia | `37b90644-d524-8124-ad20-dbdbd41d8ec4` | Vice Chairman of the Board | created (Moles pres.'99/award'15, CRBA past pres., CCIA cmte) | company-level (board) |
+| Gregory Oneglia | `37b90644-d524-816f-90dd-d86ab07721e7` | Vice Chairman of the Board | created | company-level (board) |
+| Aaron Mednick | `37b90644-d524-8135-a849-dc749ae7189e` | VP & Group Leader, Building (former AGC-CT pres.) | created | **→ O&G Building division** `…8132-9fc6` |
+
+⚠ **Schema ALTER (additive, pre-authorized):** Company Map divisions collection `3c390644-d524-83b0-…` +`People` RELATION column (→ People DB) — one-way; used to link Building→Mednick. Other divisions' People empty (board/corporate people kept company-level). 2 pre-existing CRM People on the company record (`1d29…4fb1`, `1d29…918e`) left untouched. **No CFO created** — rocketreach references a CFO name but it is not in the dossier body; not fabricated.
+
 ## Page-local tables (O&G profile page)
 - **Events** (`fd690644-d524-8205-b26c-873fba047650`): 3 rows — CCIA Annual Meeting 2025-12-03 `81d8-86a5` · AGC CT Awards 2025-10-09 `812e-a3ac` · ENR NE Best Projects 2026 (no date — year-only) `8140-aac8`. All linked→O&G. Location tags option added: New England. ⚠ MCP gotcha confirmed: `Place` rejects name/address-only values (needs lat/lng) — venues kept in body.
 - **Sources** (`22990644-d524-82ec-8316-8770225a78d8`): 25 rows — full dossier source list.
@@ -56,10 +68,19 @@ Dates set: CT River Bridge start 2024-09-01 · Manchester Library start 2025-04-
 - Events `Location tags` +New England · Software `Software used` +JD Edwards E1, Egnyte (⚠ original ALTER did not persist; re-applied 2026-06-10 during audit — all 18 prior options + colors preserved, verified by option-URL match).
 
 ## Left empty (no source — per dossier gaps list; do NOT fill)
-EMR/TRIR/DART · bonding/surety · insurance carriers · UEI/CAGE/DUNS/EIN · CT SoS entity ID/incorporation date · license numbers · division revenue/headcounts · contract types (GMP/lump sum) · permits/APNs/FEMA/seismic · New Britain fuel-cell owner · Manchester Library final value/date · union status (widely assumed, uncitable) · liens/dockets · Huckleberry architect+value · event sponsorship tiers/booths · open-req counts. Values unknown for 6 projects; year-only dates on 6 projects (body only). **No People created** — dossier scope was titles-only (President; 2× Vice Chairman; VPs; Safety Director; CFO; General Counsel — listed in dossier `extra.leadership_titles`); named-people pass not yet run.
+EMR/TRIR/DART · bonding/surety · insurance carriers · UEI/CAGE/DUNS/EIN · CT SoS entity ID/incorporation date · license numbers · division revenue/headcounts · contract types (GMP/lump sum) · permits/APNs/FEMA/seismic · New Britain fuel-cell owner · Manchester Library final value/date · union status (widely assumed, uncitable) · liens/dockets · Huckleberry architect+value · event sponsorship tiers/booths · open-req counts. Values unknown for 6 projects; year-only dates on 6 projects (body only). ~~**No People created**~~ → **Named-people pass run 2026-06-10** (5 people, see People section above). Still NOT created (titles-only in dossier, no name sourced): Safety Director · CFO · General Counsel · VP Asphalt · VP Concrete & Materials · AVP Masonry · AVP Heavy Civil · Director Industrial & Healthcare — `extra.leadership_titles` lists the titles but no names; do not fabricate.
 
 ## Audit round 2 (2026-06-10, 2× /notion-audit agents, split scope)
 Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied by main session (Locations + Memberships relation columns, above). ⚠ Cross-company anomaly logged to [open-tasks](open-tasks.md): Procore ×3 and Bluebeam ×3 duplicate rows in shared Software DB (Zachry + Dellbrook sessions created own rows instead of extending canonical Consigli+O&G rows) — O&G data unaffected; dedup decision for Zack.
+
+## Audit round 3 (2026-06-10, /notion-audit with OD.md)
+**0 fills** — all existing records complete against OG1.md scope. Full record audit performed: company record, 7 divisions, 12 projects, 5 people, 3 events, 4 memberships, 12 locations, 4 software rows — all fields verified live against Notion. No empty fillable gaps found.
+
+**New data in OD.md (second research pass, NOT yet loaded):**
+- 13 additional projects: AirTrain Newark $1.18B (Heavy Civil JV w/ Tutor Perini), Darien Schools $101.5M JV (A.P. Construction, Building), UConn South Campus $75M (Building), Farmington HS 236k SF (Building), plus 9 others sourced to ogind.com project pages
+- 7 new named division leaders: Ryan Oneglia (VP Heavy Civil), Bradford 'Brad' Oneglia (VP Asphalt), Thomas J. 'TJ' Oneglia (VP Materials), Kara Oneglia (VP Mason), Jason Travelstead (EVP Building), Christina Oneglia Rossi (VP Business Dev), Tyson J. Burk (contact, Industrial/Mfg)
+- 4 additional Mason/Materials location rows not in current 12-row set: East Lyme showroom, Hartford showroom, Waterbury showroom, Torrington Mason Supply
+- These require a separate /notion-load pass — not created during this audit (additive-only, existing records only)
 
 ## Manual UI steps for Zack
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.

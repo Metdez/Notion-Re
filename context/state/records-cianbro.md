@@ -1,0 +1,75 @@
+# State · Records — Cianbro (The Cianbro Companies)
+
+> **Holds:** the Cianbro dedup ledger — every record created/updated in the 2026-06-10 load, with Notion IDs, so the next session deduplicates before touching a Cianbro record.
+> **Ground truth:** `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md = empty). Dossier index: [research-files](research-files.md).
+> **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md) · siblings: the other `records-*` ledgers (closest analog: [records-hitt](records-hitt.md) — existing company record + Divisions-variant profile + interlink ADDs).
+
+---
+
+## Profile page (hub)
+**"Cianbro"** (renamed from "Cianbro Template") — https://app.notion.com/p/37b90644d5248049a20bd5bb60563674 (Companies research → Zack Folder). Divisions-DB variant. Bio snapshot prepended; Attack Plan filled (replaced guide italic).
+
+Page-local data sources:
+- **Divisions** `collection://5ad90644-d524-83d8-90d2-07ef4700cd22` (Division · Adress place · Companies / People / Projects relations)
+- **Events** `collection://f4390644-d524-8271-8922-870b423d249b` (Event name · Date · Location tags · Place · Companies)
+- **Sources** `collection://b0190644-d524-8255-834f-071cd2fa3235` ("What the source is about" · userDefined:URL)
+- **Locations** `collection://4cc90644-d524-8365-a101-07f930d19024` (Location · Adress text · **+added** Companies + Division relations)
+- **Memberships** `collection://35890644-d524-8225-8654-870c64fce94a` (Name · **+added** Companies full database relation)
+- Linkedin Post `collection://cad90644-...` (unused) · Projects Underway = shared Construction Projects (linked view, `__TEMPLATE__` filter) · Existing Software = shared Companies Software (linked view, `__TEMPLATE__` filter)
+
+**Additive schema (pre-authorized 2026-06-10):** Locations DB +`Companies full database` +`Division`; Memberships DB +`Companies full database`. No shared-DB select ALTERs done (concurrent Bechtel/Branch sessions were writing the shared Projects/Software multi-selects — clobber avoided).
+
+## Company record (EXISTING — extended, not recreated)
+**"Cianbro"** `1cf90644-d524-8019-a5b9-d4d9851426fb` (Companies DB). Custom icon CIANBRO.png.
+- Filled: Description · Type=Company · Country=[Maine, USA, CT, TX, FL, MD, NH, VT, NY, RI, NJ, IL] · Company Snapshot + Sources body · Construction Projects (24, one-way list) · Companies Software (7). People auto-grew to 12 (two-way).
+- **Size=Regional kept** (pre-existing) vs dossier National (40+ states, ENR #96, ~$1.3B) — conflict preserved.
+- **Address place left empty** — dossier has no lat/lng; place property rejects name+address only (no-geocoding rule). HQ address in body + Location rows.
+- ⚠ **"Cianbro Construction"** `24e90644-d524-8016-87b9-ca1bd10c5cc8` = row in separate **Strategy** CRM DB (`collection://22590644`), linked via company's Strategy relation. **Left untouched.** Its leadership table sourced 7 of the people below.
+
+## Divisions (13 — Divisions DB `5ad90644`; all → Companies relation = company)
+**Market-sector units (6):** Building `37b90644-d524-81df-84b5-feb998399283` · Industrial & Manufacturing (IDM) `37b90644-d524-8179-8c77-de68c89f5e7f` · Infrastructure `37b90644-d524-813c-937d-d4d67a3126c4` · Power & Energy `37b90644-d524-8135-bd43-f74ddecc16bc` · Modular Manufacturing `37b90644-d524-81b3-815c-e111706b2a1c` · Support Services `37b90644-d524-81b4-80c3-e8b00a3504fa`
+**Subsidiaries/LLCs (7):** A/Z Corporation `37b90644-d524-81ce-8fb9-f4a2c6696a71` · Starcon International `37b90644-d524-817b-be15-fcfbe2f553f7` · R.C. Stevens `37b90644-d524-8122-b9f2-c730d2cc7eb1` · Total Specialty Services `37b90644-d524-81ae-ab16-fe9c285f0bc6` · CFCC `37b90644-d524-8145-8ae6-f4cd9db02fcc` · Cianbro Equipment LLC `37b90644-d524-81ee-9dc4-f71010315315` · Cianbro Constructors LLC `37b90644-d524-8156-895b-f20a3d06a52d`
+
+## People (12 — Company → company)
+**Existing (linked to divisions, not recreated):** Daniel Wolfe `2b690644-d524-809e-b45f-f52997652248` (QC Mgr → Support Services) · Pete Malikowski `2b690644-d524-8043-9aa1-d75ed5e08c7d` (GM IDM → IDM).
+**Created (10):** Andi Vigue (CEO) `37b90644-d524-813a-91b4-d957be2bab25` · David Schill (VP Special Projects) `…8129-b82e-f08df3a950c3` · Paul Franceschi (SVP) `…81a6-9ada-e97df9d9be86` · Peter Cianchette (EVP Corp Dev) `…8193-82c5-c015e421983d` · Sarah Malikowski (EVP) `…8149-9c52-e8815e945166` · James Doherty (CFO) `…81ca-90b9-f354378f3a93` · Eve J Parent (Dir Contracts) `…812a-a6bf-cdbbe00a106a` · Perry Lorenz (Pres A/Z → A/Z) `37b90644-d524-816e-9004-e5456e6d7876` · Jordan Henshaw (Reg Mgr Infra → Infrastructure) `37b90644-d524-81c0-941a-e5ca4db73f2b` · Lauren Walsh (Env Mgr → Power & Energy) `37b90644-d524-81ee-bae5-ddb0479beb74`.
+- 7 execs (Vigue→Parent) sourced to the Strategy-record leadership table LinkedIns (Vigue via Mainebiz, no LinkedIn). Corporate execs = company-level (no division). Division leaders linked to their division row's People relation.
+
+## Projects (24 — Construction Projects DB; Contractors → company, Owning Department → division)
+**Infrastructure (14):** WALK Bridge $935M `…812399b5…` · TIME-2 `…81ab93f4…` · CP243 $237M `…8136ae56…` · P-381 DD1 Ext $227M `…8136b945…` · PNSY 2-bay $1,700M `…81a79e03…` · Tidal Basin $113M (Done; 2023-08-29→2025-12-10) `…811785ee…` · Wharf Ph2 `…81b1aade…` · Bangor I-95 $54M `…8103a93e…` · Southport $21M `…8151a8d2…` · Ticonic `…81b0ba87…` · Veranda St $21M `…81909d6e…` · North Hero-Grand Isle $60M `…8107bc8b…` · Sarah Mildred Long $162M `…8140b9b7…` · USNA Farragut $38M `…8190842a…`
+**Power & Energy (2):** Cross Town BESS (Done, 2026-02-11) `…81e6b07e…` · Western Maine hydro $1,000M (Not started) `…81718aef…`
+**IDM (2):** Lockhart Power `…814abded…` · Puritan P4 $147M (Done) `…810787d8…`
+**Building (5):** MVH Augusta $91M (Done) `…81dab1c3…` · MVH Scarborough `…81acb30b…` · Alexandria Bay LPOE `…81589e71…` · Founders Hall MCI `…81b0904e…` · Canopy Hotel `…8169bb42…`
+**A/Z (1):** Portland Homeless Services Center (Done, LEED Gold) `…8186a161…`
+- All Type from existing options (no ALTER). Maine/Vermont/SC not in Projects Location select → those projects' Location left empty, location in body + Size. Dates set only where exact (Tidal Basin range, Cross Town single).
+
+## Other tables
+- **Locations (14 — `4cc90644`):** all → Company; division-linked: CFCC, Cianbro Equipment, Ricker's Wharf+Eastern Mfg (Modular), Bloomfield (Infrastructure), A/Z HQ, Starcon, R.C. Stevens, Total Specialty. HQ/Falmouth/Pittsfield-ops/Baltimore/Greenville = company-only.
+- **Events (5 — `f4390644`, all → Company):** ABC Natl Craft Champs 2025 + 2024, ABC Top Performers 2025/26, AGC Maine Build Maine Awards, ConExpo 2026. Location tags/Place empty (no matching options; place needs lat/lng).
+- **Memberships (12 — `35890644`, all → Company):** ABC, AGC, AGC Maine, DBIA, CII, CURT, CFMA, SAME, AISC, ACI, NAWIC, TAPPI. *(Dossier lists ~30 total per MWMCA; loaded the highest-signal subset.)*
+- **Software (7 — shared Companies Software DB, all → Company):** Oracle Primavera P6, Procore (both tagged `Software used`), Touchplan, HCSS, BIM/VDC, BuildingConnected, Citrix ShareFile (title-only — no option added, clobber-avoidance). Named "(Cianbro)" to avoid worsening the Procore/Bluebeam dup pile.
+- **Sources (13 — `b0190644`):** cianbro.com (+About/Locations), Mainebiz, ENR Top 400, NCEO EO 100, USASpending, NPS, Plus Power, Canary Media, FERC, CTDOT WALK, PR Newswire (Touchplan).
+
+## Interlink graph (verified by re-fetch 2026-06-10)
+Company ↔ 24 Construction Projects ✓ · Company ↔ 12 People ✓ · Company → 7 Software ✓ · Division→Company (all 13) ✓ · Infrastructure → Henshaw + 14 projects ✓ · Power&Energy → Walsh + 2 · IDM → P.Malikowski + 2 · Building → 5 · A/Z → Lorenz + Portland HSC · Support Services → Wolfe ✓ · Project→Contractors + Owning Department (all 24) ✓ · Locations → Company (14) + Division (9) ✓ · Events/Memberships → Company ✓.
+
+## Left empty (no sourced value — per dossier Caveats)
+EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates (year/month-only kept in body) · per-state license numbers · Cianbro revenue share of JV/program totals (WALK/PNSY/Western Maine are program totals) · company Address place (no lat/lng) · project Adress places (no lat/lng) · most new people Email/Phone (Vigue/Lorenz/Henshaw/Walsh also no LinkedIn) · ~18 of the ~30 trade memberships.
+
+## Audit fills (2026-06-10 — notion-audit run)
+- **Events DB `Location tags`:** 3 new options added (Las Vegas, Kissimmee, Maine) — all 9 original options preserved. Applied: ABC Craft Champs 2025 → Las Vegas · ConExpo 2026 → Las Vegas · ABC Craft Champs 2024 → Kissimmee · AGC Maine Build Maine Awards → Maine. ABC Top Performers left untagged (no location in source). Source: `Enlaye Notion/Cianbro/Cianbro.md`.
+- **Divisions DB `Adress` place:** A/Z Corporation filled → 40 East Dudley Town Road, Bloomfield CT 06002 (lat 41.8265, lng -72.7376). Source: `Enlaye Notion/Cianbro/Cianbro2.md`.
+- Starcon `Adress` not filled — Gonzales LA address in Cianbro2.md is an office, not HQ; primary HQ La Porte TX has no sourced lat/lng → left empty.
+- All other Divisions `Adress` (place): market-sector units have no physical address; R.C. Stevens/CFCC/Cianbro Equipment/Cianbro Constructors have no lat/lng in source → left empty.
+- Events `Date` not filled — no exact dates sourced in dossier for any events.
+- Events `Place` not filled — no lat/lng for event venues sourced.
+- Locations `Adress` (text): all 14 rows already populated from prior load session.
+
+## Manual UI steps outstanding
+1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
+2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).
+3. **Company Map / Memberships** People-tab views may carry leftover template filters.
+4. Possible template guide rows on local tables + remaining section guide italics (Company Map/Events/Locations/Memberships) — UI cleanup if wanted.
+5. **Software dedup (Zack's call, destructive):** Cianbro's Procore row adds to the existing Procore×3 pile — merge later if consolidating.
+6. Optional: add Maine/Vermont/SC + towns to Projects `Location` select (deferred — concurrent-session clobber risk at load time).
+7. Optional: event icons used `trophy_*`/`medal_*` (may be non-standard built-in names → verify render).

@@ -70,3 +70,32 @@ Departments are **Companies** (BW Category `Owner`), nested under parent **Harva
 | 📣 | CSL Consulting LLC (mitigation vendor) | `1cf90644-d524-80c2-9d8c-e1bbd9cc5c04` | — (not a subsidiary) | enriched |
 
 Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchanged (11 GCs, unpolluted).
+
+## Audit log — 2026-06-10
+**Addresses added (place:Adress, 3c):**
+- Eliot House Renewal → 101 Dunster Street, Cambridge, MA 02138
+- William James Hall Plaza → 33 Kirkland Street, Cambridge, MA 02138
+- Barker Center Roofing → 12 Quincy Street, Cambridge, MA 02138
+- HBS Chase/McCulloch/Dillon → 34 Harvard Way, Boston, MA 02163
+- HMS Building C / Bertarelli → 240 Longwood Avenue, Boston, MA 02115
+- ESL Infrastructure Renewal → 58 Oxford Street, Cambridge, MA 02138
+
+**Description fixes (departments):**
+- HMS Campus Planning & Facilities — `Description` was empty → filled
+- Harvard Office for Sustainability — `Description` was empty → filled
+- Harvard Office of the EVP — `Description` was empty → filled
+- Harvard FAS — `Description` corrected (removed erroneous "12 Palmer Street" attribution)
+
+**No fills (genuinely sourceless):**
+- Harvard owner `LinkedIn` — no URL in dossier
+- NASDEP / Steam Tunnel 29/30 `place:Adress` — no single precise street address in source
+- Lewis International Law Center address — dossier gives campus area only, no street number
+- All `LinkedIn` fields on departments — not in source
+- All `Website` fields on departments — not in source
+
+**3a check:** all owner↔department↔project edges intact. No missing relation edges.
+**3b check:** all project bodies complete; department bodies adequate.
+**3d memberships:** N/A (Owner entity, no memberships table).
+**3e location tags:** all project Location fields populated; no missing tags.
+
+**13th project found:** Lewis International Law Center Renovation `37b90644-d524-8198-a97e-fefc1444e834` (Shawmut GC, added after initial build from Shawmut dossier — not in original ledger). Owning dept: `37b90644-d524-811c-9937-c91b1e37bf88` (Harvard Law School, separate company — not in this ledger).

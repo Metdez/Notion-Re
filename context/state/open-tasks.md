@@ -13,6 +13,8 @@
 - **Consigli manual UI steps** (MCP can't set relation filters on shared/embedded views) — see [records-consigli.md](records-consigli.md) "Still manual in Notion UI".
 - **⚠ Software DB duplicates (found 2026-06-10, O&G audit round 2):** shared Companies Software DB `37690644-d524-804f…` now holds **Procore ×3** (canonical Consigli+O&G `37a90644-d524-817b…` · Zachry `37b90644-d524-812e-8ada-f4656dd5a13c` · Dellbrook `37b90644-d524-8163-9279-f314cfd1ebe7`) and **Bluebeam ×3** (canonical `37a90644-d524-81f1…` · Zachry `…815c-8592…` · Dellbrook `…8170-8e04…`) — concurrent sessions created per-company rows instead of extending the canonical one-row-per-tool pattern. Zack to decide: merge into canonical rows (move Companies relations + body notes, then archive dupes) or accept per-company rows as the new pattern. **Deletion = destructive, needs explicit OK.**
 
+- **Audit pass 2026-06-10 deferred items:** the full-portfolio `/notion-audit` (all 18 builds) left manual-OK follow-ups — shared Projects `Location` + Company `Country` options to add in UI; Events location-tag options (FL/MA/VA/NC/Las Vegas/San Diego); **KBE Mozaic dup** (`…814b` vs `…81d1`); **Cianbro** partial memberships (~12 of ~30); **Memberships collection missing `Company` relation** (Clayco, Zachry); **O&G `OD.md` needs `/notion-load`** (net-new); **Bechtel UEI/CAGE** verify (SAM.gov). Full list → [audit-pass-2026-06-10-deferred.md](audit-pass-2026-06-10-deferred.md).
+
 ---
 
 ## Notes / known gaps

@@ -39,6 +39,22 @@ The build is not done until this relation graph is complete. Verify each edge af
 - One-way forward relations (e.g. Companies DB `Construction Projects`) need the FULL URL list re-passed — see [playbook/notion-mcp](../../../context/playbook/notion-mcp.md).
 **If a table lacks the relation property an edge needs** (page-local Locations tables usually have no relations): `ADD COLUMN "<name>" RELATION('<target ds id>')` via `notion-update-data-source` — this additive schema change is pre-authorized by Zack (2026-06-10); state it in the report. Never drop/alter existing columns for this.
 
+### Addresses → data fields (mandatory — per Zack, 2026-06-10)
+Every location's address must land in the **actual `place` data field** (`place:X:name/address/lat/lng`), not just in the body description. The build is not done until each of these carries its sourced address in the place property:
+- **Company locations** — the Companies DB `Address` (place) property AND every page-local Locations / Company Map row.
+- **Project locations** — each Construction Projects `Adress` (place) property (plus `Location`).
+- **Event locations** — each Events-table row's `place` property (plus location tags).
+Fill the address in the place field for every such record. If a company **location** doesn't already exist and the research gives its address, creating that one location record (address filled) is pre-authorized — dedup first, additive only. No location row should end the load with a blank address field when the source has the address.
+
+### Memberships — load all (mandatory — per Zack, 2026-06-10)
+Load **every** membership the research lists — every association, alliance, certification body, trade group, consortium, or program the company belongs to. The Memberships table is not done until each sourced membership has a row, with its company relation and inline source URL. Dedup first (a membership may already exist under a name variant); additive only. A partial membership list is a failed load.
+
+### Location tags — tag every location (mandatory — per Zack, 2026-06-10)
+Every record with a location must carry its **location tag** (the location-tag select/multi-select on Events, Locations, and any tagged record), for *every* location variable present. For each such record:
+- If the tag option exists → apply it.
+- **If the tag option doesn't exist yet → create it** (additive: extend the select, preserving every existing option + color — never replace), then apply it. This is pre-authorized.
+No located record ends the load untagged, and no location variable is skipped for want of an option.
+
 ### Description depth (mandatory — per Zack, 2026-06-10)
 Bodies stay CEO-skim (bullets, short sentences) but must carry the full sourced depth, not one-liners:
 - **Projects:** what it is + why it matters (scope, technology, configuration, key metrics like MW/MTPA/SF), owner/client, delivery method + contract type, JV partners & competing bidders, award/announced dates and timeline, incidents/litigation — everything the dossier has, each with its source.
@@ -54,7 +70,7 @@ Bodies stay CEO-skim (bullets, short sentences) but must carry the full sourced 
 
 ## Phase 5 — Record + report
 1. Update the state ledger (create a `records-<company-slug>.md` spoke under `context/state/` if none exists, and add its row to `STATE.md`) and append to the current month's log.
-2. Report (CEO-skim): counts created/updated per database · every field left empty because the research had no source (so nothing fillable was silently missed) · conflicts found · anything needing a manual UI step.
+2. Report (CEO-skim): counts created/updated per database · the full membership list now in Notion (confirm none missed) · confirmation every located record is tagged (and any tag options created) · every field left empty because the research had no source (so nothing fillable was silently missed) · conflicts found · anything needing a manual UI step.
 
 ## After loading
 Suggest running `/notion-audit <company>` as the verification pass — it re-audits the build against the same research and fills stragglers.
