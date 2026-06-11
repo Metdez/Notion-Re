@@ -135,3 +135,28 @@ All corporate → homed to **Northeast Region** (Littleton HQ) division per exis
 **Genuinely sourceless (unchanged from prior session):** People LinkedIn (Whiteman, Bennett, Hebert) · People email/phone · FTBA event specific date · Events Place/venue coords · Mass Ready Mix address · Paving LLC Projects relation · division revenue/headcount · most project APN/bond/FEMA/seismic · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon).
 
 **Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB — Middlesex page-local Company Map divisions can't link there.
+
+---
+
+## Audit — 2026-06-11 (manual full audit pass)
+**Result: 6 fields filled across 2 records; 5 icons fixed.**
+
+**Filled (verified post-write):**
+- **PNSY Dry Dock** `37b90644…cbb9b` — `Location` corrected New Hampshire→**Maine** (Kittery ME is in Maine, not NH) · `userDefined:URL` set → https://middlesexco.com/projects/p-381-multi-mission-dry-dock-1/ · `date:Date:start` = 2021-08-13 · `date:Date:end` = 2028-12-31 · body location line updated to "Kittery, ME (Portsmouth Naval Shipyard)". All sourced: https://middlesexco.com/projects/p-381-multi-mission-dry-dock-1/
+- **People icons** (placeholder `/icons/user_gray` → emoji): Seth Whiteman 🧭 · Kevin Bennett 🌴 · Michael Iapaluccio 🛣️ · Jonathan Hebert 📡. Confirmed live on re-fetch.
+
+**False positives rejected:**
+- Brightman Street Bridge JV partners — dossier `joint_venture_partners:[]` (empty); brief says "largest JV" but no partner named. Sourceless.
+- I-75 Overpass contract value/dates — all `null` in dossier. Sourceless.
+- Brightline Zone 2 contract value — `null` in dossier. Sourceless.
+- Events Place (4 events) — no venue coordinates in dossier. Sourceless.
+- FTBA Annual Conference date — no specific date in dossier. Sourceless.
+- LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) — not in dossier. Sourceless.
+- Function Qualification (4 field-ops people) — not in dossier. Sourceless.
+- Asphalt LLC / Mass Ready Mix leader/address — not in dossier. Sourceless.
+
+**3a Interconnection:** All confirmed clean (same as prior pass). No new missing edges found.
+**3b Description depth:** Project bodies are appropriately thin where source data was thin (I-75 Overpass, Brightline Zone 2 — no contract value or dates sourced).
+**3c Address/location:** PNSY location tag corrected to Maine ✓. All other project addresses confirmed set.
+**3d Memberships:** All 4 still present and complete. No new memberships found in dossier.
+**3e Location tags:** All 4 events tagged (Florida/Florida/Connecticut/Massachusetts). No change needed.
