@@ -112,6 +112,14 @@ Parallel read-only audit: events, memberships, divisions (sample), locations, pe
 - **Left empty-for-cause (sourceless):** Construction Safety Week + Subcontractor Appreciation Day — no Adress, no Location tags, no end date (dossier: "National"/"offices nationwide"); NAIOP NoVA Awards — no date (dossier null).
 - **False positives rejected:** Division People/Projects empty for LA/SF/Santa Clara/Raleigh/Brycon = correct (no named contacts or projects in dossier for those offices).
 
+## Post-load audit #5 (2026-06-11, /notion-audit HITT Contracting)
+Full read-only pass vs HITT1.md on profile hub, company record, 18 divisions, 16 locations, 7 memberships, 5 events, 10 projects, 14 named people.
+- **Fills (2):**
+  1. HITT New Headquarters project `37b90644-d524-8115-8d66-c69befca1c22` → `Adress` (place) = 7125 West Falls Station Blvd, Falls Church, VA 22043 (38.864, -77.196). Source: [HITT](https://www.hitt.com/news-hub/hitt-contracting-unveils-new-hq/)
+  2. Andaz Miami Beach project `37b90644-d524-81bb-8ab9-fd6332569690` → `Date` start = 2025-01-01 (year of completion; no specific date in dossier). Source: [HITT](https://www.hitt.com/projects/andaz-miami-beach/)
+- **Verified clean (no write needed):** 5 events (DBIA/CONEXPO: Adress+Date+Location tags ✓; NAIOP: Location tags ✓; Safety Week/SubDay: sourceless OK); 7 memberships all Company-linked ✓; 18 divisions all Adress+Companies+People/Projects ✓; 16 locations all Adress(text)+Company+Division ✓; 10 projects all Contractors+Location+Type+Status ✓; 14 people all Company+Function+bio ✓.
+- **Left empty-for-cause:** 9 project `Adress` place fields (dossier city/state only, no street; place requires lat/lng, no-geocoding rule); Locations DB `Adress` = text type not place (schema — converting = destructive); Size=Regional conflict preserved; people LinkedIn/Email/Phone (none in dossier); NAIOP Adress (source: "Northern Virginia"); Safety Week/SubDay Adress/date (National = sourceless).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
