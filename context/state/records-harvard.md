@@ -128,7 +128,7 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3d memberships:** N/A (owner entity, no memberships table).
 **3e location tags:** all 13 project Location fields populated; no missing tags.
 
-## Audit log — 2026-06-11
+## Audit log — 2026-06-11 (pass 1)
 **Filled:**
 - HMS Building C / Bertarelli Renovation `37990644-d524-812b-9709-fb6e79b94ce4` → `Contrat Value in Million` = 75 (sourced: Bertarelli $75M gift — https://hms.harvard.edu/about-hms/office-dean/messages/big-news-about-building-c)
 
@@ -147,3 +147,19 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 - Steam Tunnel 29/30 `Contractors` — GC not publicly disclosed
 - ESL SEAS `Contractors` — GC not publicly disclosed
 - All `LinkedIn` / `Website` fields on departments — not in source
+
+## Audit log — 2026-06-11 (pass 2 — full re-audit)
+**0 fills — already complete.**
+
+All 13 projects fetched live. Full pass:
+- **3a (relations):** All owner↔department↔project↔people↔GC edges intact. All 13 projects have Owner=Harvard, Owning Department(s), and Contractors where the source names one. No missing edges.
+- **3b (body depth):** All project bodies carry full sourced brief (scope, GC, owner, dates, sources). Department bodies adequate. People bodies adequate for priority level.
+- **3c (addresses):** All projects with a confirmed street address have it set in `place:Adress`. Genuinely sourceless cases (NASDEP, Steam Tunnel 29/30, Lewis Law Center precise street) remain blank — correct.
+- **3d (memberships):** N/A — Owner entity has no memberships table.
+- **3e (location tags):** All 13 projects have `Location` property populated. No missing tags.
+
+**Genuinely sourceless — confirmed again (no change):**
+- Pritzker Hall `place:Adress` precise street — dossier marks "Approx. 1805 Cambridge Street [ESTIMATED]" (not confirmed)
+- NASDEP / Steam Tunnel 29/30 / Lewis Law Center street addresses — sourced as corridor/campus area only
+- Barker Center / Steam Tunnel 29/30 / ESL SEAS `Contractors` — GC not publicly disclosed
+- All department `LinkedIn` / `Website` — not in source

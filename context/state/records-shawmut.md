@@ -109,6 +109,23 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **Genuinely sourceless gaps (unchanged from prior audits):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-11 (notion-audit skill, 3rd manual run)
+**Full audit run.** Live-fetched: profile page (`37b90644`), company record (`19990644`), 2 divisions (New England + NY Metro), 2 events (Safety Week 2026 + 12th Annual), 1 membership (AGC), Boston HQ location row, Divisions/Locations/Events/Memberships data-source schemas.
+**Result: 0 fills executed.** All live Notion records exactly match the ledger. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.
+**Live verification confirmed:**
+- Profile page body: Attack Plan + all inline DB sections intact ✅
+- Company record: Description, LinkedIn, Website, Address (place), Country, BW Category=Builder, Type=Company, Size=Regional, Strategy, 7 software, 20 projects, 14 owners, ~215 People — all populated ✅
+- New England Region division: Companies=Shawmut ✅, People=Kevin Sullivan ✅, 14 Projects ✅, Adress place=560 Harrison Ave ✅, body full depth ✅
+- NY Metro Region division: Companies=Shawmut ✅, People=David Margolius ✅, 1 Project ✅, Adress place=New York NY ✅, body full depth ✅
+- Safety Week 2026 event: Companies=Shawmut ✅, Date=May 4–8 2026 ✅, Location tags [9 tags: MA/Boston/RI/Providence/NY/CA/NV/FL/National] ✅. Place legitimately empty (nationwide) ✅
+- 12th Annual Safety Week: Companies=Shawmut ✅, Location tags [Boston/Massachusetts/National] ✅. Date blank (no source date) ✅
+- AGC membership: Name + Company relation ✅
+- Boston HQ location: Adress text="560 Harrison Avenue, Boston, MA 02118 · (617) 622-7000 · HQ" ✅, Company=Shawmut ✅, Division=New England Region ✅
+- Divisions schema: 5 properties intact ✅. Locations schema: 5 properties intact ✅. Events schema: correct properties + 18 location tag options ✅. Memberships schema: 2 properties ✅
+**3a–3e checks:** All pass — same findings as all prior audits. No new gaps detected.
+**Genuinely sourceless gaps (unchanged, 5th confirmation):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations.
+**Harness updated:** this ledger only. No Notion writes executed.
+
 ## Audit log — 2026-06-11 (notion-audit skill, 2nd manual run)
 **Full audit run.** Live-fetched: profile page (`37b90644`), company record (`19990644`), 2 divisions (New England + NY Metro), 2 events, 1 membership, Divisions/Locations/Events/Memberships data-source schemas.
 **Result: 0 fills executed.** All live Notion records exactly match the ledger. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.

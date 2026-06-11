@@ -223,3 +223,18 @@ All checks passed clean:
 - **False positives rejected:** 0.
 
 No fillable gaps found. Notion fully reflects all three dossiers.
+
+---
+
+## Audit — 2026-06-11 (manual /notion-audit — current session)
+**Status: ✅ audit complete — 0 fills, 0 writes.** Live Notion re-verified vs all three dossiers (Flat.md + Flatiron1.md + Flat1.md).
+
+All checks passed clean on live fetches:
+- **3a:** Company record `24690644…` live — 29 Construction Projects, 6 software rows, 45 people confirmed. All 6 divisions → company + People + Projects edges confirmed (Canada + J.F. White — no People, confirmed sourceless). All 7 memberships (AGC, DBIA, IPI, The Beavers, Calif. Alliance for Jobs, Hispanic Contractors of CO, NECA Boston) + 2 events + location rows → company confirmed.
+- **3b:** All 6 division bodies at full dossier depth. Sample projects (HRBT, SR 400, Howard Hanson, Upper San Leandro) confirmed full body depth with sourced inline links.
+- **3c:** Company HQ place (Atlanta, 33.8746/-84.3389) confirmed. All 6 division Adress places confirmed live: USA-Atlanta / Canada-Toronto / Pulice-Scottsdale / SPC-Whitestone / Prince-Tampa / JFWhite-Framingham. Project Adress correctly empty (no geocoords in dossier).
+- **3d (memberships):** 7/7 confirmed live and company-linked. Match dossiers exactly; no missing memberships.
+- **3e (location tags):** DBIA Conference → Las Vegas ✅; Groundbreaking Women → San Diego ✅; Howard Hanson Dam → Washington ✅. All confirmed live.
+- **False positives rejected:** 0.
+
+No fillable gaps found. Notion fully reflects all three dossiers (Flat.md + Flatiron1.md + Flat1.md).

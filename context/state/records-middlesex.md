@@ -178,3 +178,18 @@ All corporate → homed to **Northeast Region** (Littleton HQ) division per exis
 
 **Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · Event Place/venue coords · FTBA exact date · Mass Ready Mix/Asphalt LLC leader+address · division revenue/headcount · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier) · project APN/bond/FEMA/seismic.
 **Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB.
+
+---
+
+## Audit — 2026-06-11 (notion-audit skill pass #2 — manual)
+**Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows detected — flagged, not deleted (additive-only policy).**
+
+**All checks PASS:**
+- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Company→Software(7)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)✓ · Events(4)→Company+Location tags✓ · Memberships→Company✓ · Location rows(4)→Company+Division✓
+- **3b Description depth:** All division bodies full ✓ · Company Snapshot complete ✓ · Project bodies appropriate to available source data ✓
+- **3c Addresses:** Company place ✓ · NE/SE/Paving division Adress place ✓ · 4 Location rows Adress text ✓ · Mass Ready Mix/Asphalt LLC = genuinely sourceless (no address in dossier)
+- **3d Memberships:** All 4 sourced memberships present. ⚠ CCIA · DBIA-FL · FTBA each have DUPLICATE rows (created by automated pass on 2026-06-11 09:15). Originals: `37b90644…1f4e` / `…5678` / `…7ced`. Duplicates: `37c90644…b2a1` / `…d97b` / `…4612`. ABC has no duplicate. **Deletion is a destructive operation — flag for Zack to manually remove the `37c90644…` duplicates in Notion UI.**
+- **3e Location tags:** All 4 events tagged — FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓
+
+**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · Event Place/venue coords · FTBA exact date · Mass Ready Mix/Asphalt LLC leader+address · division revenue/headcount · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier) · project APN/bond/FEMA/seismic.
+**Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB.
