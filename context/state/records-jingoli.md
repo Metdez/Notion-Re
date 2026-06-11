@@ -110,7 +110,35 @@ Full live re-verify: company record (`37b9…f55131`) + profile page (`37b9…13
 - **3e Location tags ✓:** Event `Location tags = ["New York"]` confirmed set (live fetch verified).
 - **No fillable gaps → zero writes.**
 
+## Audit pass 2026-06-11 (this session — `notion-audit Jingoli Nuclear Services`) — 9 writes
+Full live re-verify of all records (company + 5 divs + 4 people + 5 projects + 1→2 locations + 1→5 events + 0→4 memberships + 3 software) against both dossiers.
+
+**NEW from prior sessions (not in older ledger rows):**
+- 2 new People added (`Jingoli1.md`): Joseph R. Jingoli Jr. `37c9…fe15` (CEO & Chairman) + Michael D. Jingoli `37c9…06d` (COO) — linked Company ✓.
+- 3 new Events (`Jingoli1.md`): NJ Alliance 50th Eagle Awards 2024 `37c9…38e5`, PWC NJ 2025 `37c9…7bc`, HELIX H1 Topping Out 2024 `37c9…f59` — all linked Company + Location tags NJ ✓.
+- 3 Companies Software rows added (`Jingoli1.md`): Procore `37c9…eb04`, Oracle Primavera P6 `37c9…927`, Hard Dollar `37c9…583` — all linked Company ✓.
+
+**This-session fills (9 writes):**
+1. **Memberships schema:** Added `Companies full database` RELATION to Memberships DB `ffb90644` (additive, pre-authorized).
+2. **Membership — GBCA** `37c9…ea3`: General Building Contractors Association, linked Company. ([GBCA](https://gbca.com/hard-hat-chat/job-opportunities-jingoli-dco-energy/))
+3. **Membership — NJ Alliance for Action** `37c9…af9`: linked Company. ([jingoli.com/news](https://jingoli.com/news/))
+4. **Membership — PWC NJ** `37c9…271`: Professional Women in Construction – NJ, linked Company. ([jingoli.com/news](https://jingoli.com/news/))
+5. **Membership — ACCNJ** `37c9…ae3`: Associated Construction Contractors of NJ, linked Company. ([GBCA spotlight](https://gbca.com/hard-hat-chat/gbca-member-spotlight-jingoli-dco-energy-llc/))
+6. **Event — NJ Alliance 51st Eagle Awards** `37c9…db7` (2025-10-30, inferred): linked Company + Location tag NJ. ([NJ Alliance](https://allianceforaction.com/event/51st-annual-eagle-awards/))
+7. **Event PWC NJ 2025 — Place filled:** Liberty House, 76 Audrey Zapp Drive, Jersey City NJ (40.7057, -74.0436). ([Jingoli1.md])
+8. **Event HELIX H1 — Place filled:** HELIX NJ H1 Site, Downtown New Brunswick NJ (40.4927, -74.4463). ([Jingoli1.md])
+9. **Location — DCO Energy Office, Mays Landing NJ** `37c9…5d6`: Brickworks Office Park, 5429 Harding Highway Bldg 500, Mays Landing NJ 08330; linked Company + Jingoli-DCO division. ([jingoli.com/contact](https://jingoli.com/contact))
+
+**3a Interconnection ✓:** all 5 divs→company; Nuclear Services→Mockaitis+5 projects; Power→Karl Miller; all 5 projects→Contractors; 4 people→company; 2 locations→company+division; 5 events→company; 4 memberships→company. People `Division` still DEFERRED (global DB `37690644` has no Jingoli rows).
+**3b Description-depth ✓:** all bodies at full sourced depth.
+**3c Address/location ✓:** HQ location row address text ✓. DCO location row added. PWC NJ + HELIX Place fields filled (lat/lng available). NJ Alliance events lat/lng null → place fields genuinely unfillable.
+**3d Memberships ✓:** all 4 sourced memberships now in Notion (GBCA, NJ Alliance, PWC NJ, ACCNJ).
+**3e Location tags ✓:** ENR event = New York ✓. NJ Alliance 50th/51st = New Jersey ✓. PWC NJ = New Jersey ✓. HELIX H1 = New Jersey ✓.
+
+## Record counts (updated)
+Company (1) · Divisions (5) · People (4) · Projects (5) · Locations (2) · Events (5) · Memberships (4) · Software (3) · Sources (14+)
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
-2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).
+2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 3 software rows).
 3. Possible template guide rows on local tables (Divisions/Events/Sources/Locations) — UI delete if Zack wants them gone.

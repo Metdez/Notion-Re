@@ -223,3 +223,21 @@ Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](htt
 **0 writes. Build remains fully converged.**
 
 **Genuinely sourceless (final, unchanged):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (Rivian $5B + Obama $615M only) · project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL) · Size=Regional vs "Multinational" (Zack to decide).
+
+---
+
+## Seventh pass — 2026-06-11 (notion-audit, context-resumption fix)
+> Detected and corrected: pass-5 claimed to create Ryan Johnson People record at ID `37c90644-d524-81e6-b43d-f6fb74781c5c`, but live fetch returned 404 (object_not_found). Pass-6 declared "fully converged" — incorrect; the gap was real.
+
+**Fillable gap found and filled — 1 write:**
+| Record | Action | Correct ID |
+|---|---|---|
+| **Ryan Johnson** (VP, Power and Energy) | People record RE-CREATED (prior ID was 404); Company→Clayco `19990644-d524-80e6-9107-fd693a9ad1e7`; Division→Power & Energy `37b90644-d524-819e-bddd-c2536dcaa9a5`; Function=VP, Power and Energy; FQ=Vice President; Location=Illinois; body=role+background+source | `37c90644-d524-8192-bb6e-d12c50e7c628` |
+
+**Ledger corrections in this pass:**
+- Clayco Power & Energy division: live suffix corrected from `bba79f48c8a0` (404) to `c2536dcaa9a5` (confirmed live).
+- Pass-5/6 Ryan Johnson ID annotated as incorrect; new ID recorded above.
+
+**3a–3e — confirmed clean after this write:** 8 people → Company=Clayco; Power & Energy division now has People→Ryan Johnson. All other checks same as pass 6.
+
+**Genuinely sourceless (final, unchanged):** same as pass 6.
