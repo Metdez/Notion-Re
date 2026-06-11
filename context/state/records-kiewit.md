@@ -98,6 +98,20 @@ Key values: Homer City $10,000M · CA HSR $3,500M · Canada nuclear $3,200M · B
 
 ---
 
+## Audit pass — 2026-06-11 pass #2 (full re-audit)
+
+**0 fills.** Record fully converged. No fillable gaps found.
+
+- **3a Interconnection ✓:** All 17 divisions→company; 10/17 divisions have Projects relations (7 genuinely have no named projects in dossier); 7 memberships/2 events/11 locations/4 software all company-linked; both people company-linked. Project `Owning Department` not set per DB convention (division.Projects carries the edge).
+- **3b Description depth ✓:** All 17 division bodies + all 15 project bodies at full dossier depth.
+- **3c Addresses ✓:** Company HQ place confirmed; all 17 division Adress places confirmed; 8/15 project Adress places filled; 7 genuinely sourceless (multi-state/multi-site); all 11 location rows have Adress text.
+- **3d Memberships ✓ (7/7):** The Beavers · AGC · DBIA · CSRA · CISI · Nat'l Construction Safety Executives · Canadian Construction Safety Council — all company-linked.
+- **3e Location tags ✓:** Both events national/virtual — no location to tag (genuinely sourceless). Location rows use text Adress field, no location-tag property in schema.
+- **Reconfirmed genuinely sourceless:** People Division relation (structural mismatch), Events Date, People Email/Phone/LinkedIn, 7 project Adress (multi-state), 6 project Size values, division-level People for 8 units, Oregon/Alaska schema gap (UI-only fix).
+- **Still manual UI:** Projects Underway + Existing Software filters; Memberships People-tab filter; add Alaska/Oregon to Projects Location.
+
+---
+
 ## Audit pass — 2026-06-11 (post-load verification)
 
 **3 fills:**
