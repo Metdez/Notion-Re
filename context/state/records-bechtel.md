@@ -48,8 +48,12 @@ Corporate (company-level, no single division): Brendan Bechtel `81fa99ac` (CEO),
 Division leads: Paul Marsden `81c782f6` (Energy), Darren Mort `81c4ba38` (Infra), Lucy Martin `817b8956` (M&M), Dena Volovar `81a69fab` (NS&E), Catherine Hunt Ryan `8170b75c` (M&T), Mark Campbell `8112b51e` (Enterprises), John Platt `8167b14b` (M&T/EPC Transformation), Ahmet Tokpinar `81f5992c` (NS&E/Nuclear Power), Rick Holmes `812d9c96` (NS&E/UPF). (All `37b90644-d524-…` prefix.)
 ≠ existing "Darren Bechtel" (VC founder) and the 37 pre-existing CRM contacts (untouched).
 
-## Projects (25 — Construction Projects DB; Contractors → company, Owning Department → division)
-Disclosed values: Port Arthur LNG $10.5B (`8137`), Rio Grande LNG $12B (`8163`), WSI Airport $3.5B (`8149`), Dulles Silver Line $1.177B (`8135`). Other 21 values undisclosed per dossier gaps (left empty). Port Arthur body carries the 4/29/25 triple-fatality risk signal. All `37b90644-d524-…` prefix; Location tag set where a state option existed (Georgia/Tennessee/Pennsylvania/Wyoming/Texas/Louisiana/Virginia); international + unlisted-state locations carried in body only.
+## Projects (27 — Construction Projects DB; Contractors → company, Owning Department → division)
+Disclosed values: Port Arthur LNG $10.5B (`8137`), Rio Grande LNG $12B (`8163`), WSI Airport $3.5B (`8149`), Dulles Silver Line $1.177B (`8135`), Sabine Pass Stage 5 $4.69B (`37c90644-d524-8180-b1dd-cbc634d4dba6`), WIPP $3B (`37c90644-d524-81d6-9ee9-fb80f2d755f0`). Other 21 values undisclosed per dossier gaps (left empty). Port Arthur body carries the 4/29/25 triple-fatality risk signal. Original 25 are `37b90644-d524-…` prefix; 2 new projects from Bechtel1.md are `37c90644-d524-…` prefix. Location tag set where a state option existed (Georgia/Tennessee/Pennsylvania/Wyoming/Texas/Louisiana/Virginia/New Mexico); international + unlisted-state locations carried in body only.
+
+**Net-new from Bechtel1.md (added 2026-06-11 audit pass #3):**
+- Sabine Pass Liquefaction Stage 5 / Train 7 `37c90644-d524-8180-b1dd-cbc634d4dba6` — Cheniere Energy, Cameron Parish LA, EPC $4.69B, LNTP May 2025, Energy division. Source: constructiondive.com/news/bechtel-sabine-pass-lng-expansion-louisiana/822049/
+- Waste Isolation Pilot Plant (WIPP) `37c90644-d524-81d6-9ee9-fb80f2d755f0` — DOE EM, Carlsbad NM, M&O up to $3B/10yr, awarded July 2022 + 3-yr extension 2025, Bechtel-led SIMCO, NS&E division. Source: energy.gov/em/articles/doe-awards-waste-isolation-pilot-plant-wipp-management-and-operating-contract
 
 ## Software (30 — shared Companies Software `37690644-d524-804f`; each → company)
 One row per tool; "Software used" multi-select tag set where an option already existed (Primavera P6, Oracle Aconex, Autodesk×4, Trimble, Procore, Bluebeam, Power BI, Microsoft 365); other 18 tools carry the name in title + body only (no schema option-extension, by design). Includes internal CIAR risk logs / PFSR / Digital Execution Hub (risk-SaaS competitive intel).
@@ -83,6 +87,18 @@ Company ↔ People (52: 37 existing + 15 new) ✓ · Company → Construction Pr
 
 ### Left empty (no sourced value per dossier gaps)
 21 of 25 project contract values (undisclosed); division-level revenue/headcount (not published); firm TRIR/EMR/DART (not published); per-project street addresses/parcels/lat-lng; Place fields on divisions/projects/events (require coords — no-geocoding rule); London street address; distinct UEI/CAGE (conflicting across the two dossiers — flagged, not loaded).
+
+## Audit — 2026-06-11 pass #3 (Bechtel1.md cross-reference)
+
+### Filled
+- **Sabine Pass Liquefaction Stage 5 / Train 7** `37c90644-d524-8180-b1dd-cbc634d4dba6` — net-new project from Bechtel1.md, absent from Notion. Created in Construction Projects DB; all properties set (Contractors, Owning Department → Energy, Location=[Louisiana], Status=In progress, Contrat Value in Million=4690, URL). Body: scope/owner/delivery/dates sourced from dossier.
+- **Waste Isolation Pilot Plant (WIPP)** `37c90644-d524-81d6-9ee9-fb80f2d755f0` — net-new project from Bechtel1.md, absent from Notion. Created in Construction Projects DB; all properties set (Contractors, Owning Department → NS&E, Location=[New Mexico], Status=In progress, Contrat Value in Million=3000, URL). Body: scope/owner/delivery/JV/dates sourced from dossier.
+- **Company record** `18490644` Construction Projects relation updated: 25 → 27 URLs.
+
+### Left empty (genuinely sourceless — confirmed)
+Same list as prior passes. WIPP and Sabine Pass place (lat/lng) not set (no-geocoding rule; location covered by Location tag + body).
+
+---
 
 ## Audit — 2026-06-11 (notion-audit hourly pass)
 
