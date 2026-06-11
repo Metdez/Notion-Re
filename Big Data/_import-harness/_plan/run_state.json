@@ -1,0 +1,18 @@
+{
+  "phase": "resolve_companies",
+  "companies_needed": [
+    "kiewit",
+    "clayco",
+    "flatirondragados",
+    "og",
+    "dellbrook",
+    "branch",
+    "alberici",
+    "middlesex",
+    "cianbro",
+    "jingoli"
+  ],
+  "existing_people_fetched": 0,
+  "netnew_created": 0,
+  "notes": "Dedup-first chosen 2026-06-11. Single throttled worker. Reads existing people via company People-relation URLs, then batch-creates net-new."
+}

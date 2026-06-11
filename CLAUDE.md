@@ -44,3 +44,11 @@ The map's top level is four thin **hub** files (cheap to glance at; each links d
 - **New topic → new file.** New company → create its `context/state/records-<slug>.md` ledger *before* the first Notion write; new procedure area → new playbook spoke. Register every new file in MAP + its hub + the log in the same session — an unregistered file doesn't exist.
 - **Full file → split it.** Past ~200 lines (or two topics in one file), move the older/secondary content to a new spoke, leave a pointer, update the map. Move — never retype, never prune.
 - **Finding more context:** the company → research-dossier index is [context/state/research-files.md](context/state/research-files.md); each ledger names its ground-truth files in its header.
+
+### Bulk parallel import — the fan-out environment
+For large list imports (thousands of records), there's a self-contained, resumable harness at **[Big Data/_import-harness/](Big%20Data/_import-harness/)** that lets up to **18 agents import in parallel**, each owning one batch and writing progress constantly so any interruption is recoverable.
+- **Start here:** [Big Data/_import-harness/README.md](Big%20Data/_import-harness/README.md) — how to dispatch, resume, and loop-until-done.
+- **Coordinator view:** [BOARD.md](Big%20Data/_import-harness/BOARD.md) — status of all 18 batches; relaunch anything `pending` or stale.
+- **Per-agent instructions:** [agent-brief.md](Big%20Data/_import-harness/agent-brief.md) — one agent = one batch = one ledger; dedup-first, additive, sourced.
+- **Per-batch ledgers:** `Big Data/_import-harness/ledgers/batch-NN.md` — per-file checkboxes + a resume cursor (`file X, row R`) updated after every record. **The ledger is the source of truth**, not the agent's memory.
+- **How it's crash-safe:** one agent per batch = zero write-collisions; the cursor + LinkedIn dedup key make every record idempotent, so a re-run skips done work and resumes mid-file. Throttle the parallel count if Notion rate-limits — the harness is agnostic to how many run at once.

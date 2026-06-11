@@ -54,7 +54,28 @@
       "Bash(python3 -c ' *)",
       "Bash(git -C \"/Users/zackhanna/Desktop/Enlaye to Notion\" remote -v)",
       "Bash(git -C \"/Users/zackhanna/Desktop/Enlaye to Notion\" status --short)",
-      "Bash(git commit -m 'Update working memory: harness maintenance, Shawmut research, record ledgers *)"
+      "Bash(git commit -m 'Update working memory: harness maintenance, Shawmut research, record ledgers *)",
+      "Bash(git checkout *)",
+      "Bash(GIT_EDITOR=true git rebase --continue)",
+      "Skill(loop)",
+      "Skill(loop:*)",
+      "Skill(schedule)",
+      "Skill(schedule:*)",
+      "mcp__claude_ai_Notion__notion-update-view",
+      "Bash(python3)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(git version *)",
+      "Bash(git commit *)",
+      "Bash(git pull *)",
+      "Bash(git branch *)",
+      "Bash(rm -rf .git/rebase-merge)",
+      "Bash(git symbolic-ref *)",
+      "Bash(git update-ref *)",
+      "Bash(echo \"exit-grep:$?\")",
+      "Bash(rm -rf .git/rebase-merge .git/REBASE_HEAD; echo \"removed\"; echo \"===STATUS===\"; git status; echo \"===still ahead?===\"; git log --oneline -2)"
+    ],
+    "additionalDirectories": [
+      "/Users/zackhanna/Desktop/Enlaye to Notion/.git/rebase-merge"
     ]
   }
 }
