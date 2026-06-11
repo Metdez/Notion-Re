@@ -100,6 +100,17 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
 - No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).
 
+## Audit log — 2026-06-11 (pass 5 — notion-audit skill)
+**0 fills — record fully complete.**
+- Company record (`26890644`): Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12] — all confirmed live. ✓
+- Divisions (4): Branch Civil spot-checked live — Company relation, Adress/place (3635 Peters Creek Rd, lat/lng), People [1], Projects [5] all set. ✓
+- People (7): Bob Wills spot-checked live — Company, Function, Function Qualification=[CEO], Location=[Virginia] all set. ✓
+- Projects (12): I-95 Express Lanes ($420M) spot-checked live — Contractors, Location=[Virginia], Adress/place w/ coords, Date (2019-04-18 → 2023-08-17), Status=Done, Type=Transportation, URL set. ✓
+- Events (2): Golf Tournament = Virginia tag + date 2026-06-08 + company-linked ✓ · DBIA Award = North Carolina tag + date 2026-04-28 + company-linked ✓.
+- Memberships (4): ABC (AQC + STEP Platinum), AGC (VA + Carolinas), DBIA (Southeast), VTCA — all company-linked + URL confirmed live. ✓
+- Locations (7): schema confirmed (Adress text, Companies full database, Division relations). ✓
+- No fillable gaps found. Outstanding manual UI (unchanged): Country NC/WV options (item 3); template row cleanup (item 4).
+
 ## Audit log — 2026-06-11 (pass 4 — notion-audit skill)
 **0 fills — record fully complete.**
 - Company record (`26890644`): Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12] — all confirmed. ✓
