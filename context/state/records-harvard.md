@@ -100,6 +100,34 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 
 **13th project found:** Lewis International Law Center Renovation `37b90644-d524-8198-a97e-fefc1444e834` (Shawmut GC, added after initial build from Shawmut dossier — not in original ledger). Owning dept: `37b90644-d524-811c-9937-c91b1e37bf88` (Harvard Law School, separate company — not in this ledger).
 
+## Audit log — 2026-06-11 (second pass — completion dates)
+**Filled — `date:Date:end` (estimated completion) added to 11 of 13 projects:**
+- ERC Phase A `37990644-d524-8142-9b0d-c39f4eb862dc` → end = 2026-12-31 (source: dossier 1, WCN)
+- ART / 100 South Campus Drive `37990644-d524-81c6-81e5-e7dad395faab` → end = 2026-10-31 (source: dossier 2)
+- Eliot House Renewal `37990644-d524-8120-80c8-d33d0231cc0f` → end = 2027-09-01 (source: dossier 2, Crimson)
+- Pritzker Hall `37990644-d524-8143-bbc6-ec4a765df64c` → end = 2027-12-01 (source: dossier 2, Crimson)
+- William James Hall Plaza `37990644-d524-81f1-a367-c6f43651fbff` → end = 2026-06-30 (source: dossier 2)
+- Barker Center Roofing `37990644-d524-81e9-bc61-cd0907ef686d` → end = 2026-06-30 (source: dossier 1 + 2)
+- 12 Palmer Street `37990644-d524-8128-aea7-ff8451df575d` → end = 2026-04-30 (source: dossier 2)
+- HBS Chase/McCulloch/Dillon `37990644-d524-8102-b2bf-eb263b4b06e1` → end = 2026-08-31 (source: dossier 2)
+- HMS Building C / Bertarelli `37990644-d524-812b-9709-fb6e79b94ce4` → end = 2026-10-01 (source: dossier 2)
+- NASDEP `37990644-d524-817a-83a3-dc7aec135af6` → end = 2025-12-31 (source: dossier 1)
+- Steam Tunnel 29/30 `37990644-d524-8103-a870-f0946fa2319b` → end = 2027-11-01 (source: dossier 1)
+
+**Filled — body depth (3b):**
+- Tom O'Connor `24890644-d524-80c9-a96a-f4f85471f707` — Bio section filled (was empty; dossier has role, scope, reporting chain)
+
+**No fills (genuinely sourceless — confirmed this pass):**
+- ESL SEAS `date:Date:end` — completion not disclosed in source
+- Lewis International Law Center `date:Date:end` — not disclosed in source
+- Lewis International Law Center `date:Date:start` — not disclosed in source
+- All `Contrat Value in Million` fields not already filled — not publicly disclosed
+
+**3a check:** all owner↔department↔project↔people↔GC edges intact — no missing relation edges.
+**3b check:** project bodies complete; department bodies adequate; people bodies adequate for priority level.
+**3d memberships:** N/A (owner entity, no memberships table).
+**3e location tags:** all 13 project Location fields populated; no missing tags.
+
 ## Audit log — 2026-06-11
 **Filled:**
 - HMS Building C / Bertarelli Renovation `37990644-d524-812b-9709-fb6e79b94ce4` → `Contrat Value in Million` = 75 (sourced: Bertarelli $75M gift — https://hms.harvard.edu/about-hms/office-dean/messages/big-news-about-building-c)

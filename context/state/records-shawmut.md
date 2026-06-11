@@ -97,3 +97,14 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026: [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — complete. 12th Annual: [Boston, Massachusetts, National] — complete.
 **Worcester ID note:** correct ID confirmed as `37b90644-d524-8131-9783-e64663faa7fb` (ledger had a space in the ID string — corrected above).
 **Harness updated:** this ledger only. No Notion writes executed.
+
+## Audit log — 2026-06-11 (manual run, notion-audit skill)
+**Full audit run.** Checked: profile page body, 5 divisions (all properties + body depth), all 12 locations (all properties), 2 events (all properties + location tags), 1 membership, 3 sampled people records (Les Hiscoe CEO, Reza Amirkhalili COO, Shaun Carvalho CSO).
+**Result: 0 fills executed.** No properties found that were both (a) empty AND (b) have a sourced value in the dossier not yet applied.
+**3a interconnection check:** All 5 divisions → Companies relation ✅. All confirmed people → Company relation ✅. Division-People relations: New England (Kevin Sullivan), NY Metro (David Margolius), West (Greg Skalaski + Sam Ragsdale), Mission Critical (Joel Nickel) — all wired ✅. Large Project Division People empty — no named person in dossier (sourceless). Division-Projects all wired ✅. Locations-Company all wired ✅. Locations-Division wired for 10/12 (Miami + West Palm Beach null per dossier) ✅. Events-Company wired ✅. Membership-Company wired ✅.
+**3b description-depth check:** All 5 division bodies confirmed full depth matching dossier. People bodies (3 sampled) full depth with sourced content. No thin bodies found.
+**3c address check:** All 12 location Adress text fields filled and correct. Division Adress place properties all set (except Mission Critical — dossier null). Events Place property legitimately empty (nationwide). No regression.
+**3d membership check:** AGC of America — only confirmed membership in dossier. 1 row, Name + Company filled ✅. No missing memberships.
+**3e location tags check:** Safety Week 2026: [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all 9 tags present ✅. 12th Annual: [Boston, Massachusetts, National] — all 3 tags present ✅.
+**Genuinely sourceless gaps (unchanged from prior audits):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations.
+**Harness updated:** this ledger only. No Notion writes executed.

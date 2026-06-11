@@ -73,6 +73,12 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **Verified complete:** company record · 13 divisions (all → Company + People + Projects) · 12 people (all → Company + Division) · 24 projects (all → Contractors + Owning Department) · 14 locations (all → Company + Division) · 5 events (4 location-tagged; ABC Top Performers untagged = no location in source ✓) · ~25 memberships (all → Company) · 7 software (all → Company) · 13 sources · full interlink graph intact.
 - **Genuinely sourceless (no data available, confirmed):** EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount splits · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · company/project Address place coords · people Email/Phone/LinkedIn (most).
 
+## Audit fills (2026-06-11 — notion-audit skill run)
+- **0 new writes.** Full re-verify: all 5 events live-fetched (tags confirmed — ABC Craft 2025 → Las Vegas ✓, ABC Craft 2024 → Kissimmee ✓, ConExpo 2026 → Las Vegas ✓, AGC Maine → Maine ✓, ABC Top Performers → untagged/no location in source ✓). All 25 membership rows present + Company relation confirmed on ABC spot-check. Infrastructure division body verified. WALK Bridge project body verified (complete depth). Andi Vigue people record verified (Company + Function + body ✓).
+- **1 address judgment confirmed:** Starcon `Adress` place property empty — Cianbro2.md gives Gonzales LA office address (lat 30.2241/lng -90.9201) but HQ is La Porte TX (no lat/lng); filling place with a secondary office address would be misleading. Left empty correctly. Body already lists both addresses.
+- **1 SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — expansion unverified. Recommend Zack confirm or rename to "SBBA".
+- **Sourceless gaps confirmed unchanged:** same list as prior audit run.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).

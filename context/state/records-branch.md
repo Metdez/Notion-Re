@@ -89,7 +89,7 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 ## Audit log — 2026-06-10
 **Audit pass completed.** Filled 6 batch-2 project Location tags (all → Virginia). Confirmed all other records complete. No new gaps found beyond what ledger already documented.
 
-## Audit log — 2026-06-11
+## Audit log — 2026-06-11 (pass 1)
 **Automated hourly audit — no writes needed. Record is complete.**
 - Company record: all core properties filled (Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12]). ✓
 - Divisions (4): all → Company relation, Address/place, People, Projects set. ✓
@@ -99,3 +99,10 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Memberships (4): ABC, AGC, DBIA, VTCA — all present, company relation + URL set. ✓
 - Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
 - No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).
+
+## Audit log — 2026-06-11 (pass 2 — notion-audit skill)
+**2 fills made.** Jason Hoyle and John Anglin were missing `Function Qualification`.
+- **Jason Hoyle** (`37b90644-d524-812e-b073-c254158982e6`) → Function Qualification = [Vice President]. Source: COO title per [virginiabusiness.com/branch-group-jason-hoyle-coo-promotion/](https://virginiabusiness.com/branch-group-jason-hoyle-coo-promotion/)
+- **John Anglin** (`37b90644-d524-81dc-a3d5-d04a5627763b`) → Function Qualification = [Director]. Source: regional director-level role per [branchgroup.com/contact/](https://www.branchgroup.com/contact/)
+- All other records confirmed complete: Company ✓ · Divisions (4) ✓ · People (7 — now all have Function Qualification) ✓ · Projects (12, all Location-tagged + Adress place filled) ✓ · Events (2, Location tags set) ✓ · Memberships (4, all company-linked + URL) ✓ · Locations (7, all Adress + company relation; 6/7 Division) ✓.
+- No new sourceless gaps found. Outstanding manual UI: Country NC/WV options; template row cleanup.

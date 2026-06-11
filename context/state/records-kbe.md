@@ -114,3 +114,15 @@ Event `place:Place` on Golf Tournament + CBC events — dossier gives only "Conn
 ## Audit (2026-06-11 — hourly cycle)
 **Result: No fills needed. Record fully up to date.**
 Verified live: company record, 3 divisions, 14+ projects, 6 memberships, 4 events. All fields that have sourced data are already populated. No new gaps found vs. 2026-06-10 state. Genuinely sourceless fields remain empty (see above).
+
+## Audit (2026-06-11 — notion-audit skill pass)
+**3 location tag fills applied (3e — city-level tags missing):**
+| Project | ID | Tag added |
+|---|---|---|
+| The August at Steelpointe Harbor | 37b90644-d524-814c | + Bridgeport |
+| Residence Inn by Marriott (Steelpointe Harbor) | 37b90644-d524-81e4 | + Bridgeport |
+| UConn Health Emergency Department Expansion | 37b90644-d524-8120 | + Farmington |
+
+**Schema change:** Added "Bridgeport" and "Farmington" as new options to Construction Projects `Location` multi-select (additive, all existing options preserved). Source: dossier city-level project locations.
+
+All other records verified: company, 3 divisions, 6 memberships, 7 events, all remaining projects — no further gaps found. Genuinely sourceless fields remain empty (see above).
