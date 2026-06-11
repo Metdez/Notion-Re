@@ -132,3 +132,15 @@ Live re-fetch: company record (22b9…), profile page (37b9…3af), Advanced Fac
 - 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless — confirmed unchanged).
 - Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
 - **Result: 0 writes. Record fully converged — no fillable gaps remain.**
+
+## Audit — 2026-06-11 (sixth pass — /notion-audit Sundt)
+Independent full audit: company record (22b9…), profile page (37b9…3af), all 8 divisions (spot: Advanced Facilities, Water, Renewables), 4 people (Cade Rowley confirmed; 20th People link `37c90644…08` = Kipp Amaker — NOT a duplicate of Rowley; prior audit false-positive corrected), AGC event, DBIA membership, DBIA event, SLC Water project, Apache Junction project, Tempe HQ, Salt Lake City, El Paso locations. Full dossier re-read (company · memberships · events · extra · gaps · all 15 locations · all 18 projects · all 8 divisions).
+- **No new fillable gaps found.** All records confirmed intact.
+- 3a Interconnection ✓: company→20 people · 18 projects · 3 software · 1 membership · 2 events. 8 divisions→company+People+Projects. 15 locations→company+Division. All edges intact.
+- 3b Description depth ✓: Advanced Facilities, Water, Renewables divisions confirmed with full sourced bodies. Projects (SLC Water, Apache Junction) confirmed with full project-brief, owner, scope, timeline, sources. Cade Rowley people record confirmed with role, dates, sourced body.
+- 3c Addresses ✓: Salt Lake City location `Adress` = "1970 N Redwood Rd, Salt Lake City, UT 84116" + Division link = Renewables. El Paso `Adress` = "909 Texas AVE, El Paso, TX 79901" + Division link = Water. All 15 location rows confirmed with street address in `Adress` text field. Company place (lat/lng) genuinely unfillable — no coords in dossier.
+- 3d Memberships ✓ (1/1): DBIA present with company relation and sourced body. Dossier has exactly 1 membership.
+- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone no location (sourceless). All located records tagged.
+- False positive corrected: 20th People link (`37c90644-d524-810c-8027-f68b227ced08`) = Kipp Amaker (Project Executive, Phoenix area) — not a Rowley duplicate as prior audit noted; both are legitimate distinct Sundt people records.
+- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount (except Renewables >$700M in body) · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
+- **Result: 0 writes. Record fully converged — no fillable gaps remain.**

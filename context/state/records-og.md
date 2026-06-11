@@ -128,6 +128,20 @@ All existing records complete: company record, 7 divisions (leader names from OD
 - `37b90644-d524-8182-9ac4-f95438c3c771` — no Division link, user_gray icon, created 23:23
 Both have Company→O&G and identical Function. Likely created in two separate OD.md load sub-agents racing. Delete the second (no Division link) in UI — **no destructive action taken pending Zack's confirmation.**
 
+## Audit round 7 (2026-06-11, /notion-audit — full live re-verification)
+**0 fills** — all records verified complete against OG1.md + OD.md. No new fillable gaps found.
+
+**Live verification summary:**
+- Company record: complete (22 Construction Projects, 4 software, all properties + Address place + body)
+- 7 divisions: complete — Companies + Projects + People relations all set; Address (place) populated on all; Power & Energy has no People (genuinely sourceless — no named leader in dossier)
+- 15 people confirmed live (Ryan Oneglia ×2 dup still present — see Manual UI below; all others unique)
+- 3 events: complete (CCIA Place = Aqua Turf Club, Connecticut + Plantsville tags; AGC = Connecticut tag, Place genuinely sourceless; ENR = New England tag, Place TBA)
+- 4 memberships: all rows present, Companies relation set, bodies sourced
+- 17 locations: all present (original 12 + 4 OD.md Mason rows + 1 Building RI) — Adress text + Company relation on all; Division relation on 16/17 (HQ = company-only, correct)
+- 4 software rows: complete
+
+**No new gaps — Ryan Oneglia dup still outstanding (manual UI action required, see below).**
+
 ## Manual UI steps for Zack
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
 2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
