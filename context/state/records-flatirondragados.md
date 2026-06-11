@@ -148,3 +148,48 @@ All checks passed clean:
 6. ~~Events `Location tags` — add "Las Vegas" + "San Diego"~~ ✅ DONE.
 7. Section guide italics + template starter rows → delete in UI if unwanted.
 8. Size conflict: Regional (existing) vs Multinational (dossier) — pick one.
+
+---
+
+## Audit — 2026-06-11 (manual /notion-audit from Flat1.md)
+**Status: ✅ audit complete — 13 new records created.** Full re-verification of all checks 3a–3e; discovered 8 projects + 4 locations + 1 software row sourced in Flat1.md but not previously loaded.
+
+### Filled in audit
+**8 new projects** (Contractors→FD; company Construction Projects relation updated to 29 total):
+| Project | ID | $M | Status | Location tag |
+|---|---|---|---|---|
+| Upper San Leandro Water Treatment Plant | `37c90644-d524-81f6…` | 237 | In progress | California |
+| Isabella Lake Dam Safety Modification | `37c90644-d524-814e…` | 204 | Done | California |
+| Wellsburg Bridge | `37c90644-d524-810d…` | 131 | Done | USA |
+| North Coast Corridor | `37c90644-d524-8185…` | 860 | In progress | California, San Diego |
+| US 50 Multimodal Corridor Enhancement | `37c90644-d524-81ae…` | 460 | In progress | California |
+| Site C Dam — Generating Station & Spillway Civil Works | `37c90644-d524-819c…` | — | Done | Canada |
+| I-10 Broadway Curve Improvement | `37c90644-d524-8122…` | — | Done | Arizona |
+| VIA Rapid Green Line | `37c90644-d524-8106…` | 446 | In progress | Texas |
+
+**4 new location rows** (Companies full database→FD; Division linked):
+| Location | ID | Address | Division |
+|---|---|---|---|
+| Prince Contracting — Winter Garden, FL | `37c90644-d524-8134…` | 13640 W Colonial Dr, Suite 130B, Winter Garden FL 34787 | Prince Contracting |
+| Pulice — Irving, TX (North Texas Office) | `37c90644-d524-81f2…` | 1320 Greenway Dr, Suite 815, Irving TX 75038 | Pulice |
+| Pulice — Houston, TX (South Texas Office) | `37c90644-d524-819c…` | 2050 W. Sam Houston Pkwy S., Suite 825, Houston TX 77042 | Pulice |
+| SPC Construction — Secaucus, NJ | `37c90644-d524-8153…` | 150 Meadowlands Pkwy, Floor 2, Secaucus NJ 07094 | SPC Construction |
+
+**1 new software row** (Companies full database→FD):
+- HCSS HeavyJob (FlatironDragados) `37c90644-d524-8147…` — field/job-costing; moderate confidence (TrustRadius — FD Corporate Apps Mgr). Source: https://www.trustradius.com/products/hcss/reviews
+
+### Still empty / genuinely sourceless (unchanged from prior audit)
+- EMR/TRIR/DART/OSHA · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN · most per-project full date sets · People Email/Phone/LinkedIn.
+- FlatironDragados Canada division People relation: no named Canada-specific leader in any dossier.
+- J.F. White division People relation: no named leader in any dossier.
+- Site C Dam: no $ value in sources; Location tag = Canada (British Columbia not in schema — deferred).
+- Wellsburg Bridge: WV/OH not in Location schema as state options; "USA" used as fallback.
+- I-10 Broadway Curve: no $ value in Flat1.md sources.
+
+### Manual UI steps (updated)
+1. Projects Underway view — set Contractors = FlatironDragados.
+2. Existing Software view — remove `__TEMPLATE__` filter.
+3. Memberships "View of People" tab — repoint company filter.
+4. Restore the clobbered Projects `Location` option list (was ~115, reset to FL+SC) — cross-company impact; Zack's call.
+5. Size conflict: Regional (existing) vs Multinational (dossier) — pick one.
+6. Projects Location schema: add "British Columbia" option for Site C Dam; add "West Virginia"/"Ohio" for Wellsburg Bridge (currently tagged "USA").
