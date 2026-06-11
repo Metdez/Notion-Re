@@ -181,6 +181,20 @@ All corporate → homed to **Northeast Region** (Littleton HQ) division per exis
 
 ---
 
+## Audit — 2026-06-11 (notion-audit skill pass #3 — manual)
+**Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows re-confirmed from prior pass — now escalated to open-tasks for Zack deletion.**
+
+Checks performed — all PASS:
+- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Company→Software(7)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)+Adress place✓ · Events(4)→Company+Location tags✓ · Memberships→Company✓ · Location rows(4)→Company+Division✓
+- **3b Description depth:** All division bodies full ✓ · Company Snapshot complete ✓ · Project bodies (South Coast Rail, NE Region division) verified full ✓
+- **3c Addresses:** Company place ✓ · NE/SE/Paving division Adress place ✓ · 4 Location rows Adress text ✓ · Mass Ready Mix/Asphalt LLC = genuinely sourceless
+- **3d Memberships:** All 4 sourced memberships present (CCIA `37b…1f4e`, ABC `37b…9358`, DBIA-FL `37b…5678`, FTBA `37b…7ced`) ✓ · ⚠ CCIA/DBIA-FL/FTBA each have a duplicate `37c90644` row (created 06-11 09:15 by automated pass) → logged to open-tasks for Zack to delete.
+- **3e Location tags:** FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓
+
+**No writes made — record is complete against all sourced dossier data. Dossier has 28 projects total; 21 loaded (7 are older repeat/on-call items not separately recorded); dossier counts confirmed via parse.**
+
+---
+
 ## Audit — 2026-06-11 (notion-audit skill pass #2 — manual)
 **Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows detected — flagged, not deleted (additive-only policy).**
 
