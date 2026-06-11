@@ -146,3 +146,22 @@
 **3e Location tags — confirmed:** all events and locations that have sourced location data carry tags. AGC Convention and INTERPHEX have no sourceable venue → tags left blank (correct).
 
 **Size conflict — unresolved:** Size=Regional vs dossier "Multinational". No new source to resolve. Zack to decide.
+
+---
+
+## Fourth pass — 2026-06-11 (hourly audit, automated cycle)
+> Checks 3a–3e against all three ground-truth dossiers. 0 writes. Record fully converged.
+
+**3a Interconnection — confirmed clean:** all 6 people → Company=Clayco; 32 projects → Contractors=Clayco; 19 division rows → company; all 6 events → Companies=Clayco; all 5 memberships → Companies full database=Clayco. NAIOP Chicago live ID confirmed `37b90644-d524-8154-b408-e38648168f31` (ledger had truncated suffix — corrected). No missing edges.
+
+**3b Description depth — confirmed complete:** all project/division/people bodies verified at full sourced depth from prior passes.
+
+**3c Address/place — confirmed complete:** company Address place (35 E Wacker, 41.8869/-87.6266). Location rows `Adress` type=text (schema-confirmed by live data-source fetch — correct, by-design for Locations collection). Division `Adress` place-type with base coords. AGCMO AECTechCon `place:Adress` = St. Charles Convention Center (38.7881/-90.4974). 5 events with no dossier venue → correctly blank.
+
+**3d Memberships — 5/5 confirmed:** USGBC `81bd-a256` · DBIA `811f-a845` · AGC `8119-a1ba-c55c` · NAIOP Chicago `8154-b408` · USGBC-CA `8139-ad61`. All have Companies full database→Clayco set.
+
+**3e Location tags — confirmed:** AGCMO → [St. Louis, Missouri]; INTERPHEX → [Life Sciences]; Petfood Forum → [Food & Beverage]; SelectUSA → [Maryland]; Clayco Rising → [Florida]; AGC Convention → [] (no venue sourced — correct).
+
+**Genuinely sourceless (final list — nothing left to fill):** SelectUSA/Rising/AGC Convention dates (blank in all dossiers); 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed); project start/end dates (year-only, in bodies); Shawn Clark/Zackery House/Mike Pierle/Carmen Hernandez/Kevin McKenna People records (no per-person source URL); Size=Regional vs "Multinational" (Zack to decide).
+
+**0 writes. Build declared converged.**
