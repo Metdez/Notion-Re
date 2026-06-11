@@ -87,6 +87,30 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 All existing records complete: company record, 7 divisions (leader names from OD.md already loaded), 22 projects linked (OD.md load already applied — 10 projects beyond original 12 confirmed in Building division Projects list), 5 people, 3 events, 4 memberships, 12 locations, 4 software rows. No other fillable gaps found.
 **OD.md net-new still pending** (flagged since round 3): 4 new Mason location rows (East Lyme, Hartford, Waterbury, Torrington Mason Supply) not yet created — confirmed by live Locations table having only original 12-row schema. These require /notion-load.
 
+## Audit round 5 (2026-06-11, /notion-audit with OG1.md + OD.md)
+**1 fill** — CCIA Annual Meeting event (`37b90644-d524-81d8-86a5-f75575c0a4d9`) `Place` property filled: Aqua Turf Club, 556 Mulberry St, Plantsville CT 06479 (41.5588°N / 72.8904°W). Source: ogind.com/2025/og-industries-honored-with-top-safety-and-community-service-awards-from-ccia/
+
+**Full record audit completed — all records verified live:**
+- Company record: complete (22 Construction Projects, 4 software, all properties)
+- 7 divisions: complete (leadership, focus, projects, company + people relations)
+- 15 people linked to company (OD.md pass already applied): Ryan Oneglia, Brad Oneglia, TJ Oneglia, Kara Oneglia, Jason Travelstead, Christina Oneglia Rossi, Tyson J. Burk + original 5 + 3 pre-existing CRM contacts
+- 3 events: complete (company relation, date, location tags set; CCIA Place now filled)
+- 4 memberships: complete (company relation, sourced body content)
+- 17 locations: all present with Adress text + Company + Division relations. 4 new OD.md Mason rows (East Lyme, Hartford, Waterbury, Torrington Mason Supply) already loaded — ⚠ ledger round 4 incorrectly flagged these as "pending"; they were in fact created in a prior session.
+- 4 software rows: complete
+
+**⚠ Ledger ID corrections:** Event/membership row IDs in ledger header/section were stale. Live IDs confirmed:
+- CCIA Annual Meeting: `37b90644-d524-81d8-86a5-f75575c0a4d9`
+- AGC CT Awards: `37b90644-d524-812e-a3ac-dd26381cb8fb`
+- ENR NE Best Projects: `37b90644-d524-8140-aac8-fb1799029211`
+- CCIA membership: `37b90644-d524-81e8-af6f-d0be9930ff2e`
+- AGCCT membership: `37b90644-d524-819a-b4a5-ccc20a2e6c63`
+- CT Road Builders: `37b90644-d524-817f-8fe8-edd8fa149f07`
+- The Moles: `37b90644-d524-81e4-ad3d-dda9ce7cfb6a`
+
+**AGC CT Awards event Place**: venue not specified in source beyond "Connecticut" — genuinely sourceless, left blank.
+**ENR NE Best Projects event Place**: venue TBA — genuinely sourceless, left blank.
+
 ## Manual UI steps for Zack
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
 2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
