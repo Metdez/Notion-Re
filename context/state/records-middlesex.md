@@ -160,3 +160,21 @@ All corporate → homed to **Northeast Region** (Littleton HQ) division per exis
 **3c Address/location:** PNSY location tag corrected to Maine ✓. All other project addresses confirmed set.
 **3d Memberships:** All 4 still present and complete. No new memberships found in dossier.
 **3e Location tags:** All 4 events tagged (Florida/Florida/Connecticut/Massachusetts). No change needed.
+
+---
+
+## Audit — 2026-06-11 (automated notion-audit skill pass)
+**Result: 1 fill — company record icon updated; all other fields confirmed complete.**
+
+**Filled (verified post-write):**
+- **Company record** `1ce90644-d524-809e-ab40-e6e6c0a21c76` — icon upgraded from grey placeholder attachment → 🏗️ emoji (per CLAUDE.md icon rule).
+
+**All checks PASS:**
+- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Company→Software(7)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)+Adress place✓ · Events(4)→Company+Location tags✓ · Memberships(4)→Company✓
+- **3b Description depth:** All division bodies confirmed full (focus/leader/footprint/founded/notable projects) · Company Snapshot complete · PNSY body complete with JV/scope/dates.
+- **3c Addresses:** Company Adress place set ✓ · NE/SE/Paving division Adress place set ✓ · Mass Ready Mix + Asphalt LLC genuinely sourceless · 4 Location rows Adress text filled ✓ · Project Adress place confirmed set on sampled records ✓
+- **3d Memberships:** All 4 present — CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓ — each with company relation and source URL.
+- **3e Location tags:** All 4 events tagged — FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓
+
+**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · Event Place/venue coords · FTBA exact date · Mass Ready Mix/Asphalt LLC leader+address · division revenue/headcount · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier) · project APN/bond/FEMA/seismic.
+**Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB.

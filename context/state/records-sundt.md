@@ -119,3 +119,16 @@ Full re-fetch of all 52 records: company record, 8 divisions, 4 people (Charland
 - 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless).
 - Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · AGC/DBIA event venues · 5 project contract values · TRIR/EMR · bonding · permits/APN/FEMA.
 - **Result: 1 write (AGC event body enrichment). Record otherwise fully converged.**
+
+## Audit — 2026-06-11 (fifth pass — /notion-audit Sundt)
+Live re-fetch: company record (22b9…), profile page (37b9…3af), Advanced Facilities division, Building Group division, Cade Rowley (CEO), AGC event, DBIA membership, DBIA event, SLC Water project, Tempe HQ location. Cross-referenced against Sundt.md dossier.
+- **No new fillable gaps found.** All records confirmed intact from prior passes.
+- Company Country now shows Utah, New Mexico, North Carolina — previously flagged as manual-UI items, now confirmed filled.
+- Company record shows 20 People linked (15 pre-existing + 4 new from load + 1 additional `37c90644…08` — likely a near-duplicate of Cade Rowley from a different session; noted, non-destructive, no action taken).
+- 3a Interconnection ✓: company→20 people · 18 projects · 3 software. 8 divisions→company+people+projects. 15 locations→company. Events/membership→company.
+- 3b Description depth ✓: Advanced Facilities, Building Group confirmed with full sourced bodies. AGC event confirmed with historical-first detail.
+- 3c Addresses ✓: Tempe HQ `Adress` = "2620 S 55th St, Tempe, AZ 85282" confirmed. Company place (lat/lng) remains genuinely unfillable.
+- 3d Memberships ✓ (1/1): DBIA present with company relation. Complete per dossier.
+- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless — confirmed unchanged).
+- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
+- **Result: 0 writes. Record fully converged — no fillable gaps remain.**

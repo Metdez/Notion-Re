@@ -126,3 +126,7 @@ Verified live: company record, 3 divisions, 14+ projects, 6 memberships, 4 event
 **Schema change:** Added "Bridgeport" and "Farmington" as new options to Construction Projects `Location` multi-select (additive, all existing options preserved). Source: dossier city-level project locations.
 
 All other records verified: company, 3 divisions, 6 memberships, 7 events, all remaining projects — no further gaps found. Genuinely sourceless fields remain empty (see above).
+
+## Audit (2026-06-11 — notion-audit skill pass #2)
+**Result: No fills needed. Record fully up to date.**
+Verified live (parallel fetches): company record (`1cf90644`) — all properties populated (Description, Type, Country ×7, Address place, BW Category, LinkedIn, Website, 19 Construction Projects linked, body complete). 3 divisions (NE/MA/West) — all linked to company, People, Projects; Adress place filled on all 3; bodies complete. 7 net-new projects + 12 pre-existing — Adress place filled on all checked; Location multi-select tags applied (Bridgeport+Farmington confirmed from prior pass); bodies sourced and complete. 6 memberships confirmed in live Memberships DB (ABC-CT, ABC Metro Washington, ABC Baltimore/Chesapeake, Arizona Builders Alliance, CBC, Stamford Chamber). 4 events confirmed (KBE Annual Golf Tournament + CBC Project Team Awards + 2 pre-existing). Locations table schema is text-only (no place/relation fields; accepted per prior notes). No fillable gaps identified. Genuinely sourceless fields remain empty (see §Left empty above).

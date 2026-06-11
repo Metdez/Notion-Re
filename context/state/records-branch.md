@@ -100,6 +100,28 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
 - No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).
 
+## Audit log — 2026-06-11 (pass 4 — notion-audit skill)
+**0 fills — record fully complete.**
+- Company record (`26890644`): Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12] — all confirmed. ✓
+- Divisions (4): Branch Civil, Branch Builds, Hopkins Lacy, Young & McQueen — all → Company relation, Adress/place, People, Projects confirmed. ✓
+- People (7): Bob Wills (CEO), Jason Hoyle (COO/VP), Brian Quinlan (President), Colin Robinson (EVP/VP), Berton Austin (EVP/VP), Wilber Chen (President), John Anglin (Director) — all → Company, Function, Function Qualification, Location confirmed. ✓
+- Projects (12): I-95 ($420M) spot-checked: Contractors, Location=[Virginia], Adress/place w/ coords, Date, Status, Type, URL — all set. ✓
+- Events (2): DBIA Award = Location tags=[North Carolina], company-linked ✓ · Golf Tournament = Location tags=[Virginia], company-linked ✓.
+- Memberships (4): ABC, AGC, DBIA, VTCA — all present, company-linked, URL set. ✓
+- Locations (7): schema confirmed — Adress (text), Companies full database, Division columns present. ✓
+- No fillable gaps found anywhere. Outstanding manual UI (unchanged): Country NC/WV options (item 3); template row cleanup (item 4).
+
+## Audit log — 2026-06-11 (pass 3 — notion-audit skill)
+**0 fills — record fully complete.**
+- Company record: all core properties confirmed filled. ✓
+- Divisions (4): all → Company, Adress/place, People, Projects relations confirmed. Hopkins Lacy has no Projects (correct — no standalone projects in dossier). ✓
+- People (7): all → Company, Function, Function Qualification, Location confirmed. Bob Wills = CEO · Jason Hoyle = COO/VP · Brian Quinlan = President · Colin Robinson = EVP/VP · Berton Austin = EVP/VP · Wilber Chen = President · John Anglin = Director. ✓
+- Projects (12): all confirmed with Contractors, Location tag, Adress/place, Date, Status, Type. ✓
+- Events (2): Golf Tournament = Virginia tag ✓ · DBIA Award = North Carolina tag ✓ · both company-linked ✓.
+- Memberships (4): ABC, AGC, DBIA, VTCA — all company-linked + URL confirmed. ✓
+- Locations (7): all 7 confirmed Adress text + Companies relation; 6/7 Division relation (HQ = corporate, no division — correct). ✓
+- No fillable gaps found. Outstanding manual UI: Country NC/WV options; template row cleanup.
+
 ## Audit log — 2026-06-11 (pass 2 — notion-audit skill)
 **2 fills made.** Jason Hoyle and John Anglin were missing `Function Qualification`.
 - **Jason Hoyle** (`37b90644-d524-812e-b073-c254158982e6`) → Function Qualification = [Vice President]. Source: COO title per [virginiabusiness.com/branch-group-jason-hoyle-coo-promotion/](https://virginiabusiness.com/branch-group-jason-hoyle-coo-promotion/)

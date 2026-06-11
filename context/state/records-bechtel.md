@@ -111,6 +111,25 @@ All other records verified complete: Company record (18490644) — all key prope
 ### Left empty (genuinely sourceless — confirmed again)
 21/25 project contract values (undisclosed); division revenue/headcount (not published); TRIR/EMR/DART (not published); Place (lat/lng) fields on divisions/projects/events (no geocoding rule); London street address (null in dossier); UEI/CAGE conflict still unresolved (pending manual SAM.gov verification).
 
+---
+
+## Audit — 2026-06-11 (notion-audit pass — current)
+
+### Filled
+Nothing — all live records confirmed complete. Zero writes needed.
+
+### Verified complete (live re-fetch 2026-06-11)
+- **Company record** `18490644`: Description ✓ · Address (place, lat/lng) ✓ · BW Category [Builder, Advisor] ✓ · Country (9 values) ✓ · Construction Projects (31 URLs) ✓ · Companies Software (31 URLs) ✓ · People (53 URLs) ✓ · Website/LinkedIn ✓.
+- **6 Divisions**: all have Companies full database → company ✓, People ✓, Projects ✓, body with focus/president/base/parent ✓, icons ✓. Adress (place) property exists in schema but left empty per no-geocoding rule ✓.
+- **6 Memberships** (BRT, CII, NEI, ETEBA, CCITNZ, NABTU): all have Companies full database → company ✓, body with level/role/source ✓, icons ✓. Membership completeness check (3d): all 6 sourced memberships present ✓.
+- **11 Events**: all have Companies full database ✓, Date set on 9/11 (ENR LA Forum + LACMTA C-Line = no confirmed date in dossier), Location tags set on all ✓. Place property exists in schema but empty per no-coords rule ✓. Location tag options all present (Texas, Georgia, Tennessee, Pennsylvania, Washington DC, South Carolina, California, Thailand) ✓.
+- **16 Locations**: all present with Adress (text) + Companies full database + Division relations ✓.
+- **27 Projects** (+ 2 new from Bechtel1 = 29 total on company record; 31 URLs visible including 4 extra from `37c90644-d524-` prefix range from later adds): Contractors + Owning Department set ✓.
+- **30 Software** (+ 1 extra = 31 on company record): Companies relation set ✓.
+
+### Left empty (genuinely sourceless — confirmed)
+Same as prior passes: 21/27 project contract values undisclosed; division revenue/headcount not published; TRIR/EMR/DART not published; Place fields (lat/lng) on all records (no-geocoding rule); London street address null in dossier; UEI/CAGE conflict unresolved (pending SAM.gov verification). ENR LA Forum and LACMTA C-Line dates genuinely unknown (dossier: "exact date not confirmed").
+
 ## Conflicts between the two dossiers (Bechtel2 = primary)
 - **Division count:** Bechtel2 = 6 (incl. Bechtel Enterprises); Bechtel1 = 5. Loaded all 6.
 - **UEI/CAGE:** Bechtel1 parent UEI QYLMXH4B2KX8 / BNI CAGE 324H5; Bechtel2 parent UEI EMYFRLWRHV25 / BNI CAGE 1S307. Conflict — neither loaded (no Notion home + unresolved); flagged for manual SAM.gov verification.

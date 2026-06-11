@@ -99,6 +99,17 @@ Full live re-verify of all 16 records (company + 5 divisions + 2 people + 5 proj
 - **3e Location tags ✓:** Event `Location tags = ["New York"]` confirmed set. Karl Miller LinkedIn = blank and genuinely unfillable (no LinkedIn URL in dossier; TheOrg URL is not a LinkedIn URL).
 - **No fillable gaps → zero writes.**
 
+## Audit pass 2026-06-11 (skill trigger — `notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify: company record (`37b9…f55131`) + profile page (`37b9…1345`) + 5 divisions + 2 people + 5 projects + 1 location + 1 event fetched and cross-checked against `Jingoli.md`.
+- **Company record ✓:** Description, BW Category, Country, Website, LinkedIn, People (2), Construction Projects (5) — all populated. Address place = blank (correct; lat/lng null, no-geocoding rule). Size = blank (genuinely unfillable).
+- **Profile page ✓:** Snapshot body, Attack Plan, Divisions/Events/Locations/Sources tables all populated. Template guide-text still present (UI cleanup deferred).
+- **3a Interconnection ✓:** all 5 divisions→company; Nuclear Services→Mockaitis+5 projects; Power→Karl Miller; all 5 projects→Contractors; both people→company; Location→company+division; Event→company. People `Division` still DEFERRED (global Divisions DB `37690644` has no Jingoli rows).
+- **3b Description-depth ✓:** all project/division/people bodies confirmed at full sourced depth.
+- **3c Address/location ✓:** Location row address text = "100 Lenox Drive Suite 100, Lawrenceville, NJ 08648". All place fields genuinely unfillable (lat/lng null; no-geocoding rule).
+- **3d Memberships ✓:** dossier association = null. Memberships table empty/correct.
+- **3e Location tags ✓:** Event `Location tags = ["New York"]` confirmed set (live fetch verified).
+- **No fillable gaps → zero writes.**
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).

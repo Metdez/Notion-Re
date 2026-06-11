@@ -108,3 +108,19 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026: [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all 9 tags present ✅. 12th Annual: [Boston, Massachusetts, National] — all 3 tags present ✅.
 **Genuinely sourceless gaps (unchanged from prior audits):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations.
 **Harness updated:** this ledger only. No Notion writes executed.
+
+## Audit log — 2026-06-11 (notion-audit skill, 2nd manual run)
+**Full audit run.** Live-fetched: profile page (`37b90644`), company record (`19990644`), 2 divisions (New England + NY Metro), 2 events, 1 membership, Divisions/Locations/Events/Memberships data-source schemas.
+**Result: 0 fills executed.** All live Notion records exactly match the ledger. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.
+**Live verification confirmed:**
+- Company record: Description, LinkedIn, Website, Address (place), Country, BW Category, Type, Size, Strategy, 7 software, 20 projects, 14 owners, ~210 People — all populated as recorded.
+- New England Region: Companies relation, People (Kevin Sullivan), 14 Projects, Adress place (560 Harrison Ave) — all ✅.
+- NY Metro Region: Companies relation, People (David Margolius), 1 Project, Adress place (New York, NY) — all ✅.
+- Safety Week 2026 event: Companies relation, Date (May 4–8 2026), Location tags [9 tags] — all ✅. Place legitimately empty (nationwide).
+- 12th Annual event: Companies relation, Location tags [Boston, Massachusetts, National] — all ✅. Date blank (no source date).
+- AGC membership: Name + Company relation — both ✅.
+- Divisions schema: 5 properties (Division, Adress[place], Companies, People, Projects) — intact.
+- Locations schema: 5 properties (Location, Adress[text], Company, Division, People) — intact.
+**3a–3e checks:** All pass — same findings as prior audits. No new gaps detected.
+**Genuinely sourceless gaps (unchanged, 4th confirmation):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations.
+**Harness updated:** this ledger only. No Notion writes executed.

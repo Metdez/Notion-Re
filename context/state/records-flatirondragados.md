@@ -151,6 +151,21 @@ All checks passed clean:
 
 ---
 
+## Audit — 2026-06-11 (automated /notion-audit cycle #2)
+**Status: ✅ audit complete — 0 fills, 0 writes.** Full re-verification vs Flat.md + Flatiron1.md + Flat1.md (all three dossiers).
+
+All checks passed clean:
+- **3a:** 6 divisions live (+ TEMPLATE stub skipped); all division→company, People, Projects edges confirmed. Company record → 29 Construction Projects + 6 software + 45 people. All 7 memberships, 2 events, 10 location rows → company.
+- **3b:** all division and project bodies at full dossier depth (Flat.md + Flatiron1.md + Flat1.md).
+- **3c:** company HQ place (Atlanta, 33.8746/-84.3389) confirmed. All 6 division Adress places set (USA/Canada/Pulice/JFWhite/Prince/SPC). All 10 location row Adress text fields populated. Project Adress correctly empty — no geocoords in dossier.
+- **3d (memberships):** 7/7 present (AGC, DBIA, IPI, The Beavers, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston) — all company-linked.
+- **3e (location tags):** both events fully tagged — DBIA Conference → Las Vegas; Groundbreaking Women → San Diego. Both confirmed live.
+- **False positives rejected:** 0 (no sub-agent hallucinations detected).
+
+No fillable gaps found. All sourced data from all three dossiers is reflected in Notion.
+
+---
+
 ## Audit — 2026-06-11 (manual /notion-audit from Flat1.md)
 **Status: ✅ audit complete — 13 new records created.** Full re-verification of all checks 3a–3e; discovered 8 projects + 4 locations + 1 software row sourced in Flat1.md but not previously loaded.
 

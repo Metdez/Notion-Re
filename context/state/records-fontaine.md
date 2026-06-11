@@ -86,6 +86,8 @@ Relation graph intact: 19/19 Contractors, 19/18 Owning Department (Salisbury=nul
 ⚠ Division conflict held: Fontaine.md assigns David Prouty HS to Springfield Office; Font1.md (primary load) + Notion both say Worcester Office — not overwritten; conflict logged.
 False positives rejected: Jeff Cammuso / Mark Abdella blank bodies (no dossier role detail); Wambui (Growjo low-trust, held); Prouty division conflict (held). Genuinely sourceless: revenue/employees, bonding/surety, EMR/TRIR, DUNS/UEI/EIN, per-office financials, Email/Phone for most people.
 
+**✅ Audited 2026-06-11 (scope: full profile — company, 19 projects, 8 people, 2 divisions, Memberships, Events, Locations, Software — notion-audit skill, automated cycle):** All records re-fetched live vs Font1.md + Fontaine.md. **0 fillable gaps found. 0 writes made.** Every field matches prior audit state. Relation graph intact: 19/19 Contractors, 19/18 Owning Department (Salisbury=null), 19 company→project, 8/8 company↔people, both divisions fully linked, 2 memberships (MSBA + AGC MA), 2 events, 2 location rows, 4 software rows. All bodies at dossier depth. False positives confirmed held: Jeff Cammuso / Mark Abdella blank bodies (no dossier role detail); Wambui (Growjo low-trust rule); Prouty division conflict (Font1 primary wins). Genuinely sourceless (no change): revenue/employees, bonding/surety, EMR/TRIR, DUNS/UEI/EIN, per-office financials, Email/Phone for most people.
+
 **⚠ Manual UI steps for Zack:**
 1. **Projects Underway** view on the profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = Fontaine Bros. Inc.
 2. **Memberships "View of People"** tab — re-point leftover company filter to Fontaine Bros. Inc.
