@@ -9,7 +9,7 @@
 |---|---|---|---|
 | Harvard | `Enlaye Notion/Harvard Researsch/1Harvard University Construction Intelligence Resea.md` · `2Harvard Researsch.md` | ✅ 2026-06-08 | [records-harvard](records-harvard.md) |
 | Consigli | `Enlaye Notion/Consigli Researsch/Consig researsch.md` · `Con more.md` · `Con Perp Re.md` · `2[https___www.consigli.com_].md` (crawl) | ✅ 2026-06-09 (load + ~6 audit passes) | [records-consigli](records-consigli.md) |
-| Clayco | `Enlaye Notion/Clayco/Clay 1.md` · `Clayco1.md` · `Clayco3.md` (2nd-pass, 06-10) | ✅ 2026-06-09 (+2nd pass 06-10) | [records-clayco](records-clayco.md) |
+| Clayco | `Enlaye Notion/Clayco/Clay 1.md` · `Clayco1.md` · `Clayco3.md` (2nd-pass, 06-10) · `Clayco4.md` (confirmed identical structure to Clayco3.md; registered 06-11) | ✅ 2026-06-09 (+2nd pass 06-10) | [records-clayco](records-clayco.md) |
 | Zachry Group | `Enlaye Notion/Zachary Group/zach1.md` | ✅ 2026-06-10 | [records-zachry](records-zachry.md) |
 | Dellbrook \| JKS | `Enlaye Notion/DellbrrokJKS/Dell 1.md` | ✅ 2026-06-10 | [records-dellbrook](records-dellbrook.md) |
 | O&G Industries | `Enlaye Notion/O&G/OG1.md` | ✅ 2026-06-10 | [records-og](records-og.md) |
