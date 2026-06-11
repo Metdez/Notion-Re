@@ -153,6 +153,20 @@ Contract values: most project values undisclosed (only Port Arthur $10.5B, Rio G
 - **Division count:** Bechtel2 = 6 (incl. Bechtel Enterprises); Bechtel1 = 5. Loaded all 6.
 - **UEI/CAGE:** Bechtel1 parent UEI QYLMXH4B2KX8 / BNI CAGE 324H5; Bechtel2 parent UEI EMYFRLWRHV25 / BNI CAGE 1S307. Conflict — neither loaded (no Notion home + unresolved); flagged for manual SAM.gov verification.
 
+## Audit — 2026-06-11 (notion-audit current session)
+
+### Filled
+- **Eva Copper Mine Project** `37c90644-d524-8129-84c7-c470486a3aa2`: `Type` set → "Industrial / Chemicals". Mining project under Mining & Metals division; consistent with Thacker Pass (same division, same Type). Source: dossier project record (`im-mining.com/2025/12/12/bechtel-selected-to-deliver-epc-scope-for-harmony-eva-copper-project/`).
+- **Quebrada Blanca Phase 2 (QB2)** `37c90644-d524-817e-84b1-e50811a87d1d`: `Type` set → "Industrial / Chemicals". Copper mine/processing — same reasoning. Source: dossier (`bechtel.com/projects/quebrada-blanca-phase-2/`).
+
+### Already complete — no changes needed
+All other records verified complete. Company record · 6 Divisions · 6 Memberships · 11 Events · 16 Locations · 29+ Projects · 31 Software confirmed intact.
+
+### Left empty (genuinely sourceless — reconfirmed)
+Same list as all prior passes. Eva Copper Mine + QB2 Location tags: no Australia/Chile options in Projects Location schema — kept in body only. All other sourceless fields unchanged.
+
+---
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view (page-local linked view of shared Construction Projects) → clear `__TEMPLATE__` filter, set Contractors = Bechtel Group (relation CONTAINS filters can't be set via API — UI only).
 2. **Existing Software** view → clear `__TEMPLATE__` filter, set Companies = Bechtel Group.
