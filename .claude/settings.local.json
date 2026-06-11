@@ -72,7 +72,9 @@
       "Bash(git symbolic-ref *)",
       "Bash(git update-ref *)",
       "Bash(echo \"exit-grep:$?\")",
-      "Bash(rm -rf .git/rebase-merge .git/REBASE_HEAD; echo \"removed\"; echo \"===STATUS===\"; git status; echo \"===still ahead?===\"; git log --oneline -2)"
+      "Bash(rm -rf .git/rebase-merge .git/REBASE_HEAD; echo \"removed\"; echo \"===STATUS===\"; git status; echo \"===still ahead?===\"; git log --oneline -2)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)"
     ],
     "additionalDirectories": [
       "/Users/zackhanna/Desktop/Enlaye to Notion/.git/rebase-merge"
