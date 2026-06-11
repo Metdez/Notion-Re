@@ -82,6 +82,11 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 - 4 additional Mason/Materials location rows not in current 12-row set: East Lyme showroom, Hartford showroom, Waterbury showroom, Torrington Mason Supply
 - These require a separate /notion-load pass — not created during this audit (additive-only, existing records only)
 
+## Audit round 4 (2026-06-11, /notion-audit — hourly cycle)
+**1 fill** — stale Attack Plan text on profile page (`37b90644-d524-808c-9074-eb377b409060`) updated: "named-people pass not yet run" replaced with named targets + "completed 2026-06-10" note.
+All existing records complete: company record, 7 divisions (leader names from OD.md already loaded), 22 projects linked (OD.md load already applied — 10 projects beyond original 12 confirmed in Building division Projects list), 5 people, 3 events, 4 memberships, 12 locations, 4 software rows. No other fillable gaps found.
+**OD.md net-new still pending** (flagged since round 3): 4 new Mason location rows (East Lyme, Hartford, Waterbury, Torrington Mason Supply) not yet created — confirmed by live Locations table having only original 12-row schema. These require /notion-load.
+
 ## Manual UI steps for Zack
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
 2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.

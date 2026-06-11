@@ -81,6 +81,15 @@ Full re-verify of all 16 records (added `Jingoli1.md` as second dossier). One fi
 - **Memberships (3d):** none — both dossiers confirm null.
 - **Software:** `Jingoli1.md` surfaces Procore, Oracle Primavera P6, Hard Dollar (broader Jingoli entity / nuclear job posts). Existing Software DB is shared → DEFERRED (shared rows).
 
+## Audit pass 2026-06-11 (hourly cycle — `/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 16 records (company + 5 divisions + 2 people + 5 projects + 1 location + 1 event) against `Jingoli.md`.
+- **3a Interconnection ✓:** all 5 divisions→company; Nuclear Services→Mockaitis+5 projects; Power→Karl Miller; all 5 projects→Contractors; both people→company; Location→company+division; Event→company. People `Division` still DEFERRED (shared global Divisions DB `37690644` has no Jingoli rows).
+- **3b Description-depth ✓:** all project/division/people bodies carry full sourced depth. No thinning detected.
+- **3c Address/location ✓:** Location row address text populated. All place fields genuinely unfillable (lat/lng null in dossier; no-geocoding rule).
+- **3d Memberships ✓:** dossier association = null. Nothing to add.
+- **3e Location tags ✓:** Event `Location tags = ["New York"]` confirmed set.
+- **No fillable gaps → zero writes.**
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).

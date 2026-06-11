@@ -84,7 +84,18 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
 3. Company Country → add **North Carolina** + **West Virginia** options (no option exists; not added via MCP to avoid full-list clobber).
 4. Possible template guide rows on local tables — UI delete if Zack wants them gone.
-5. Events `Location tags` → add **Virginia** and **North Carolina** options via UI, then apply to DBIA Award row (NC) and Golf Tournament row (VA). Cannot do via MCP (shared schema, anti-clobber).
+5. ~~Events `Location tags` → add **Virginia** and **North Carolina** options via UI, then apply to DBIA Award row (NC) and Golf Tournament row (VA).~~ **RESOLVED** (verified 2026-06-11 audit: both event rows now have Location tags set — Golf Tournament = Virginia, DBIA Award = North Carolina).
 
 ## Audit log — 2026-06-10
 **Audit pass completed.** Filled 6 batch-2 project Location tags (all → Virginia). Confirmed all other records complete. No new gaps found beyond what ledger already documented.
+
+## Audit log — 2026-06-11
+**Automated hourly audit — no writes needed. Record is complete.**
+- Company record: all core properties filled (Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12]). ✓
+- Divisions (4): all → Company relation, Address/place, People, Projects set. ✓
+- People (7): all → Company relation, Function, Function Qualification, Location set. ✓
+- Projects (12): all have Location tag [Virginia]. ✓
+- Events (2): Location tags now confirmed set — Golf Tournament = Virginia, DBIA Award = North Carolina. ✓ (previously deferred, now resolved)
+- Memberships (4): ABC, AGC, DBIA, VTCA — all present, company relation + URL set. ✓
+- Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
+- No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).

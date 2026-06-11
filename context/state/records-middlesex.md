@@ -119,3 +119,19 @@ All corporate → homed to **Northeast Region** (Littleton HQ) division per exis
 **Company body** Snapshot extended (additive): added "Named in job reqs" tool line + corporate-leadership line. Description/revenue/ENR/Size untouched.
 
 **Not loaded (scope):** safety certs (ABC STEP Diamond/Gold 25+ yrs already on ABC membership; AQC 2025 available to add to ABC row if wanted) · enr_rank_history · richer federal FPDS PIID `N4008521C0077` (PNSY already captured). Bennett/Iapaluccio (SE/Paving leaders) were from the disk file, already loaded — not in this exec roster.
+
+---
+
+## Audit — 2026-06-11 (automated hourly cycle)
+**Result: NO WRITES NEEDED. Record is complete against all sourced dossier data.**
+
+**Checks performed (all PASS):**
+- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)✓ · Asphalt/MassReady→Company only (no sourced people/projects) · Locations(4)→Company+Division✓ · Events(4)→Company✓ · Memberships(4)→Company✓ · Software(7)→Company✓
+- **3b Description depth:** All division bodies contain focus/leader/footprint/founded/notable-projects per dossier. Company Snapshot complete. Project bodies contain what-it-is/scope/owner/delivery/JV/timeline per available source data.
+- **3c Address/location:** Company Address place set (1 Spectacle Pond Rd, Littleton MA) ✓ · NE/SE/Paving division Adress place set ✓ · Mass Ready Mix + Asphalt LLC address = genuinely sourceless (dossier: "exact address not public") · All 4 Location rows have text Adress filled ✓ · Project Adress place set on sampled records (South Coast Rail, PNSY) ✓
+- **3d Memberships:** All 4 sourced memberships present — CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓ — each with company relation and source URL in body.
+- **3e Location tags:** Events all tagged — FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA Awards=Connecticut ✓ · Golf=Massachusetts ✓. (Florida + Massachusetts options were added in prior session; confirmed present in schema.)
+
+**Genuinely sourceless (unchanged from prior session):** People LinkedIn (Whiteman, Bennett, Hebert) · People email/phone · FTBA event specific date · Events Place/venue coords · Mass Ready Mix address · Paving LLC Projects relation · division revenue/headcount · most project APN/bond/FEMA/seismic · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon).
+
+**Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB — Middlesex page-local Company Map divisions can't link there.

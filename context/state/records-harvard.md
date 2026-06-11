@@ -99,3 +99,23 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3e location tags:** all project Location fields populated; no missing tags.
 
 **13th project found:** Lewis International Law Center Renovation `37b90644-d524-8198-a97e-fefc1444e834` (Shawmut GC, added after initial build from Shawmut dossier — not in original ledger). Owning dept: `37b90644-d524-811c-9937-c91b1e37bf88` (Harvard Law School, separate company — not in this ledger).
+
+## Audit log — 2026-06-11
+**Filled:**
+- HMS Building C / Bertarelli Renovation `37990644-d524-812b-9709-fb6e79b94ce4` → `Contrat Value in Million` = 75 (sourced: Bertarelli $75M gift — https://hms.harvard.edu/about-hms/office-dean/messages/big-news-about-building-c)
+
+**Already complete (no gaps found):**
+- Harvard owner record — all key fields populated
+- 12 of 13 projects: all had Owner, Location, Owning Department, Contractors (where known), Status, Type, Date, Adress, Size, URL, and sourced body
+- All relation edges (owner↔department↔project↔people↔GC) intact
+- All project Location tags set
+
+**No fills (genuinely sourceless — confirmed):**
+- NASDEP `place:Adress` — corridor description only, no single street address in source
+- Steam Tunnel 29/30 `place:Adress` — no single street address in source
+- Lewis International Law Center `place:Adress` precise street — dossier gives campus area only
+- Lewis International Law Center `date:Date:start` — not disclosed in source
+- Barker Center `Contractors` — GC not publicly disclosed
+- Steam Tunnel 29/30 `Contractors` — GC not publicly disclosed
+- ESL SEAS `Contractors` — GC not publicly disclosed
+- All `LinkedIn` / `Website` fields on departments — not in source

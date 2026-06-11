@@ -101,6 +101,17 @@ HITT2.md (JSON) and HITT3.md (JSON) now contain content (not 0 bytes as previous
 - **DEFERRED (shared schema):** Country options `North Carolina`, `New Mexico`, `South Carolina` not in Companies DB Country schema — cannot add options without risk to shared data. UI add needed.
 - **False positives rejected:** Addresses on divisions already populated from HITT1 load — HITT3 has some updated addresses (e.g., Dallas = Frisco TX, Houston = 9300 Bamboo Rd, LA = Culver City) but fields already filled → additive rule prevents overwrite. Verified Adress (place) values set on all 18 divisions.
 
+## Post-load audit #4 (2026-06-11, automated hourly cycle → /notion-audit)
+Parallel read-only audit: events, memberships, divisions (sample), locations, people (Aaron Martens, Peter Lanfranchi), projects (NASA JSC MACC).
+- **Fills (4):**
+  1. DBIA 2025 event `37b90644…81a2aeed` → `Adress` (place) = MGM Grand Las Vegas, 3799 S Las Vegas Blvd, NV 89109 (36.102, -115.169). Source: [HITT](https://www.hitt.com/leadership/jennifer-macks/)
+  2. DBIA 2025 event → `Date` end = **2025-11-07** (was start-only). Source: [HITT](https://www.hitt.com/leadership/jennifer-macks/)
+  3. CONEXPO 2026 event `37b90644…81b7a53c` → `Adress` (place) = Las Vegas Convention Center, 3150 Paradise Rd, NV 89109 (36.13, -115.152). Source: [ZoomInfo](https://www.zoominfo.com/c/hitt-contracting-inc/17842496)
+  4. CONEXPO 2026 event → `Date` end = **2026-03-07** (was start-only). Source: [ZoomInfo](https://www.zoominfo.com/c/hitt-contracting-inc/17842496)
+- **Verified correct (no change needed):** 7 memberships (all linked to HITT); 16 locations (all addresses + company + division linked); 18 divisions (Adress place + Companies + People/Projects set); all sampled projects filled; Aaron Martens + Peter Lanfranchi company-level people records intact.
+- **Left empty-for-cause (sourceless):** Construction Safety Week + Subcontractor Appreciation Day — no Adress, no Location tags, no end date (dossier: "National"/"offices nationwide"); NAIOP NoVA Awards — no date (dossier null).
+- **False positives rejected:** Division People/Projects empty for LA/SF/Santa Clara/Raleigh/Brycon = correct (no named contacts or projects in dossier for those offices).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.

@@ -84,6 +84,17 @@ Company ↔ People (52: 37 existing + 15 new) ✓ · Company → Construction Pr
 ### Left empty (no sourced value per dossier gaps)
 21 of 25 project contract values (undisclosed); division-level revenue/headcount (not published); firm TRIR/EMR/DART (not published); per-project street addresses/parcels/lat-lng; Place fields on divisions/projects/events (require coords — no-geocoding rule); London street address; distinct UEI/CAGE (conflicting across the two dossiers — flagged, not loaded).
 
+## Audit — 2026-06-11 (notion-audit hourly pass)
+
+### Filled
+- **NVIDIA GTC 2025** event (`37b90644-d524-81f2-897a-fc3c81b15a3f`): `Date` set → 2025-10-28 (sourced: Bechtel press release date for NVIDIA Omniverse partnership announcement, confirmed in dossier ledger).
+
+### Already complete — no changes needed
+All other records verified complete: Company record (18490644) — all key properties populated; 6 Divisions — relations/body/icons complete; 6 Memberships — all present with company relation and source; 11 Events — all present with location tags and company relation; 16 Locations — all present with address text + company/division relations; 25 Projects and 30 Software in shared DBs — company relation set.
+
+### Left empty (genuinely sourceless — confirmed again)
+21/25 project contract values (undisclosed); division revenue/headcount (not published); TRIR/EMR/DART (not published); Place (lat/lng) fields on divisions/projects/events (no geocoding rule); London street address (null in dossier); UEI/CAGE conflict still unresolved (pending manual SAM.gov verification).
+
 ## Conflicts between the two dossiers (Bechtel2 = primary)
 - **Division count:** Bechtel2 = 6 (incl. Bechtel Enterprises); Bechtel1 = 5. Loaded all 6.
 - **UEI/CAGE:** Bechtel1 parent UEI QYLMXH4B2KX8 / BNI CAGE 324H5; Bechtel2 parent UEI EMYFRLWRHV25 / BNI CAGE 1S307. Conflict — neither loaded (no Notion home + unresolved); flagged for manual SAM.gov verification.

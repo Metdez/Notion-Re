@@ -73,6 +73,12 @@ Street-level Adress places set on Prouty/Doherty/Walpole/Court Square/Greylock (
 3. **Joel Kent — body blank.** Added ## Role body: COO, Worcester Office base, Enlaye context. Source: `https://fontainebros.com/awards`
 Verified false positives held (Jeff Cammuso / Mark Abdella blank bodies — no dossier role detail beyond title; Wambui — Growjo low-trust rule held). All other fields match prior audit results. Memberships now 2 rows: MSBA footprint + AGC MA.
 
+**✅ Audited 2026-06-11 (scope: full profile — company, 19 projects, 8 people, 2 divisions, Memberships, Events, Locations, Software — notion-audit skill, automated hourly cycle):** All records re-fetched live vs Font1.md + Fontaine.md. 2 fillable gaps found and filled:
+1. **Springfield Division body** — MA contractor license `MCO.0900246` missing. Added bullet: `Contractor License (MA): MCO.0900246` with source `https://www.buildzoom.com/contractor/fontaine-bros-inc` (from Fontaine.md `license_numbers` field, Springfield div).
+2. **MSBA Memberships row body** — stale note "No trade-association memberships (AGC MA…) confirmed in sources" was incorrect since AGC MA was added last pass. Updated to confirm AGC MA is loaded.
+Relation graph intact: 19/19 Contractors, 19/18 Owning Department (Salisbury=null), 19 company→project, 8/8 company↔people, both divisions fully linked. All other fields match prior audit. No new records created. Memberships: 2 rows (MSBA footprint + AGC MA).
+False positives rejected: Jeff Cammuso / Mark Abdella blank bodies (no dossier role detail); Wambui (Growjo low-trust, held); Worcester Division People=1 (Joel Kent only — by convention, Bisson/Gelinas/Wambui/DFJr are Springfield-based). Genuinely sourceless: revenue/employees, bonding/surety, EMR/TRIR, DUNS/UEI/EIN, per-office financials, Email/Phone for most people, Agawam SF conflict unresolved.
+
 **⚠ Manual UI steps for Zack:**
 1. **Projects Underway** view on the profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = Fontaine Bros. Inc.
 2. **Memberships "View of People"** tab — re-point leftover company filter to Fontaine Bros. Inc.

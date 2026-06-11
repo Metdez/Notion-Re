@@ -38,13 +38,14 @@ Page-local data sources on this page:
 | Transportation and Infrastructure | `37b90644-d524-812c-b46c-c159138e2c32` | — | I-20, I-10, 183 North, Nashville CONRAC |
 | Water | `37b90644-d524-819f-b471-c8448cb6155a` | Sam Reidy (founded 1950) | SLC, El Paso, Gilbert, Lake Dams |
 
-## People (3 — People DB; Company → `22b9…fb7`; division via Divisions.People back-link)
-Derived from sourced division-leadership announcements (dossier has no people array). Function Qualification=[President]. No email/phone/LinkedIn in dossier.
+## People (4 — People DB; Company → `22b9…fb7`; division via Divisions.People back-link)
+Derived from sourced division-leadership announcements + dossier `extra.ceo_succession_2025`. Function Qualification=[President/CEO]. No email/phone/LinkedIn in dossier.
 | Person | ID | Role | Division |
 |---|---|---|---|
 | Alex Charland | `37b90644-d524-81b8-9568-dadd126ff3a7` | President, Advanced Facilities Group (late 2024) | Advanced Facilities |
 | Chad Buck | `37b90644-d524-8160-afae-ddab7ddb12f1` | President, Building Group (2025) | Building Group |
 | Sam Reidy | `37b90644-d524-8102-b8df-c812366346f3` | President, Water & Wastewater Group (2024) | Water |
+| Cade Rowley | `37c90644-d524-8169-9f5b-cd6093d89651` | President & CEO (since Oct 1, 2024) | — (enterprise) |
 - **Pre-existing 15 Sundt People** (Feb-2026 import) left as-is on company record; not in dossier.
 
 ## Projects (18 — Construction Projects DB; Contractors → company; body brief+sources)
