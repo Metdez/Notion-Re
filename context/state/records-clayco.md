@@ -241,3 +241,41 @@ Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](htt
 **3a–3e — confirmed clean after this write:** 8 people → Company=Clayco; Power & Energy division now has People→Ryan Johnson. All other checks same as pass 6.
 
 **Genuinely sourceless (final, unchanged):** same as pass 6.
+
+---
+
+## Eighth pass — 2026-06-11 (notion-audit, context-resumed from session compaction)
+> Full 3a–3e audit against all four ground-truth dossiers (Clay 1.md · Clayco1.md · Clayco3.md · Clayco4.md). Live-fetched: profile page, company record, all 5 collections, all named People records, all division/membership rows, Apollo-imported people. **0 writes to Notion.**
+
+**Ledger corrections made in this pass:**
+- **Anthony Johnson** live ID: ledger row had wrong UUID suffix `cd8ca5ff3562` → **correct ID is `37b90644-d524-818d-88bc-e5f30f7560ed`** (record IS live; only the ledger annotation was wrong).
+- **Ryan Johnson — DUPLICATE SITUATION:**
+  - Pass-5 ID `37c90644-d524-81e6-b43d-f6fb74781c5c` → **IS LIVE** (was incorrectly declared 404 by pass-6). Power & Energy division `People` relation links to this record.
+  - Pass-7 ID `37c90644-d524-8192-bb6e-d12c50e7c628` → **IS ALSO LIVE** but is an orphaned duplicate (no division People relation, thinner body). ⚠ **Zack must delete `37c90644-d524-8192-bb6e-d12c50e7c628` in Notion UI.**
+  - Canonical Ryan Johnson = `37c90644-d524-81e6-b43d-f6fb74781c5c` (has Power & Energy division link).
+
+**New unregistered Apollo record found:**
+| Person | ID | Source | Notes |
+|---|---|---|---|
+| **Cedric Robinson** | `37c90644-d524-812c-98ba-ded6b96bf8f7` | Apollo CSV import `2026-06-11T02:32` | VP Preconstruction, AZ; Company→Clayco set; not in any dossier; thin body |
+
+**3a Interconnection — confirmed clean:** 9 People in Notion linked to Clayco (7 Clayco-created + Jeff Miller + Cedric Robinson/Apollo). 32 projects → Contractors=Clayco. 20 division rows → company. 6 events → Companies=Clayco. 5 memberships → Companies full database=Clayco. Duplicate Ryan Johnson (`8192`) is company-linked but orphaned from all divisions — flag for deletion.
+
+**3b Description depth — confirmed complete:** all project/division/people bodies at full sourced depth from prior passes.
+
+**3c Address/place — confirmed complete:** company Address place (35 E Wacker, 41.8869/-87.6266). Division Adress place-type with base coords. AGCMO AECTechCon place:Adress = St. Charles Convention Center (38.7881/-90.4974). 5 events have no venue address in any dossier — genuinely sourceless, correctly blank.
+
+**3d Memberships — 5/5 confirmed:** USGBC `81bd-a256` · DBIA `811f-a845` · AGC `8119-a1ba-c55c` · NAIOP Chicago `8154-b408-e38648168f31` · USGBC-CA `8139-ad61-f9e5cb36326f`. All carry Companies full database→Clayco. Clayco4.md lists the same 3 already present — no new rows needed.
+
+**3e Location tags — confirmed:** AGCMO→[St. Louis, Missouri]; INTERPHEX→[Life Sciences]; Petfood Forum→[Food & Beverage]; SelectUSA→[Maryland]; Clayco Rising→[Florida]; AGC Convention→[] (no venue sourced — correct).
+
+**0 writes. Build remains fully converged after this pass.**
+
+**Genuinely sourceless (final, unchanged):** SelectUSA/Rising/AGC Convention dates (blank in all 4 dossiers) · 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed) · precise project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL in any dossier) · Size=Regional vs "Multinational" (Zack to decide).
+
+**⚠ Manual UI actions for Zack (unchanged + new):**
+1. Delete duplicate Ryan Johnson `37c90644-d524-8192-bb6e-d12c50e7c628` — canonical is `37c90644-d524-81e6-b43d-f6fb74781c5c`.
+2. Projects Underway view — set filter Contractors=Clayco (MCP cannot set relation filters).
+3. Existing Software view — clear `__TEMPLATE__` filter.
+4. Size=Regional vs "Multinational" — decide and update manually.
+5. (From pass-3) Memberships+People container page — delete orphan markdown table text inserted by a context-handoff session.

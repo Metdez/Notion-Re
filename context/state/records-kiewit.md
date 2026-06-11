@@ -181,3 +181,25 @@ Sources: https://www.kiewit.com/locations/
 - Events location tags — both events are national/virtual; no location to tag.
 - Projects `Adress` for Grain Belt (multi-state corridor), NRG (TX/PJM — multiple sites), Canada nuclear (Canada), Federal Way (WA route), Klamath (OR/CA), YVR (Vancouver BC), South Central LR (Phoenix AZ) — addresses are in body/Location; no single precise address applicable.
 - Projects `Size` for Austin LR, Federal Way, Klamath, YVR, Salamanca, South Central LR — no contract value or size metric in dossier.
+
+---
+
+## Audit pass — 2026-06-11 pass #3
+
+**1 fill.**
+
+- **Lone Tree, CO location row** `37b90644-d524-81fd-88c9-e69869705fc7` — `Division` relation extended from `[Kiewit Infrastructure Co.]` → `[Kiewit Infrastructure Co., TIC – The Industrial Company, Kiewit Engineering Group Inc., Kiewit Mining Group Inc.]`. Source: https://www.kiewit.com/locations/. All four subsidiaries share the 10055 Trainstation Circle address per dossier.
+
+**3a Interconnection ✓:** All 17 divisions→company; all 15 projects→Contractors=Kiewit; both people company-linked; 7 memberships/2 events/11 locations/4 software company-linked. Lone Tree location row now carries all 4 co-located division relations (was 1 of 4). All other location rows Division relations confirmed.
+
+**3b Description depth ✓:** All 17 division bodies + all 15 project bodies confirmed at full dossier depth — no new gaps found.
+
+**3c Addresses ✓:** Company HQ, all 17 division Adress places, and 8/15 project places confirmed filled. 7 project Adress fields remain genuinely sourceless (multi-state/multi-site corridors with no single coordinate).
+
+**3d Memberships ✓ (7/7):** The Beavers · AGC · DBIA · CSRA · CISI · Nat'l Construction Safety Executives · Canadian Construction Safety Council — all company-linked; no additions needed.
+
+**3e Location tags ✓:** Both events national/virtual — no location to tag. Location rows use text Adress field; no location-tag column in schema.
+
+**Genuinely sourceless (confirmed, no change):** People Division relation (structural DB mismatch — shared Division DB ≠ page-local 3cf90644), Events Date, People Email/Phone/LinkedIn, 7 project Adress (multi-state), 6 project Size values, division-level People for 8 units.
+
+**Manual UI (unchanged):** Projects Underway + Existing Software template filters; Memberships People-tab filter; add Alaska/Oregon to shared Construction Projects Location multi-select (then tag Nome AK, Bull Run OR, Klamath OR/CA).
