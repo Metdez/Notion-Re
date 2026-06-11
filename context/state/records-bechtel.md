@@ -23,7 +23,7 @@
 
 **Additive schema changes (pre-authorized 2026-06-10):** added `Companies full database` + `Division` relations to Locations DB; added `Companies full database` relation to Memberships DB — to complete interlink.
 
-## Build status: ✅ COMPLETE (2026-06-10)
+## Build status: ✅ COMPLETE (2026-06-10; +2 projects from Bechtel1.md added 2026-06-11)
 
 ## Profile page (hub)
 **"Bechtel Group"** (renamed from "BECHTEL GROUP TEMPLATE (1)") `37b90644-d524-8057-b6c4-d3a01e195f6f`. Bio snapshot + risk-SaaS signals at top; Attack Plan filled at bottom. Older "Company Map" template variant.
