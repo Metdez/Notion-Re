@@ -128,6 +128,20 @@ All existing records complete: company record, 7 divisions (leader names from OD
 - `37b90644-d524-8182-9ac4-f95438c3c771` — no Division link, user_gray icon, created 23:23
 Both have Company→O&G and identical Function. Likely created in two separate OD.md load sub-agents racing. Delete the second (no Division link) in UI — **no destructive action taken pending Zack's confirmation.**
 
+## Audit round 8 (2026-06-11, /notion-audit — full live re-verification)
+**0 fills** — all records verified live against OG1.md + OD.md. No new fillable gaps found.
+
+**Live verification summary:**
+- Company record: complete (22 Construction Projects linked, 4 software, all properties + Address place + full body)
+- 7 divisions: complete — Companies + Projects + People relations set; Address (place) filled on all; Power & Energy no People (genuinely sourceless)
+- 15 people confirmed (Ryan Oneglia ×2 dup still present — delete `...8182-9ac4` in UI; keep `...81c4-b7f1` which has Division link + 👤 icon)
+- 3 events: complete (CCIA Place = Aqua Turf Club 556 Mulberry St Plantsville CT, tags CT + Plantsville; AGC = CT tag, Place genuinely sourceless; ENR = New England tag, date TBA)
+- 4 memberships: present with Companies relation + sourced bodies
+- 17 locations: all present (original 12 + 4 OD.md Mason rows + 1 Building RI) — Adress text + Company + Division relations all set
+- 4 software rows: complete (Procore, Bluebeam, JD Edwards E1, Egnyte)
+
+**No new fillable gaps identified. Ryan Oneglia dup remains (pending manual UI delete).**
+
 ## Audit round 7 (2026-06-11, /notion-audit — full live re-verification)
 **0 fills** — all records verified complete against OG1.md + OD.md. No new fillable gaps found.
 

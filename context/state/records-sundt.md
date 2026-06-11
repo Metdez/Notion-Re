@@ -144,3 +144,14 @@ Independent full audit: company record (22b9…), profile page (37b9…3af), all
 - False positive corrected: 20th People link (`37c90644-d524-810c-8027-f68b227ced08`) = Kipp Amaker (Project Executive, Phoenix area) — not a Rowley duplicate as prior audit noted; both are legitimate distinct Sundt people records.
 - Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount (except Renewables >$700M in body) · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
 - **Result: 0 writes. Record fully converged — no fillable gaps remain.**
+
+## Audit — 2026-06-11 (seventh pass — /notion-audit Sundt)
+Full re-fetch: company record (22b9…), profile page (37b9…3af), all 8 divisions (all fetched), 4 people (Charland, Buck, Reidy, Rowley), AGC event, DBIA membership, DBIA event, SLC Water project, Gilbert North WTP project, Lake McQueeney Dams project, Nashville CONRAC project, Tempe HQ location. Full dossier re-read.
+- **Fillable gap found & filled (×3):** `Location` multi-select was empty on Alex Charland, Chad Buck, and Sam Reidy. Dossier places all three at Tempe HQ (Arizona). `Arizona` + `USA` options exist in People.Location schema. Filled additively. Sources: Sundt division-leadership announcements ([Charland](https://www.sundt.com/2024/sundt-promotes-charland-to-lead-advanced-facilities-group/) · [Buck](https://www.sundt.com/2025/sundt-construction-announces-chad-buck-as-new-building-group-president/) · [Reidy](https://www.sundt.com/2024/sundt-taps-reidy-to-lead-water-wastewater-group/)).
+- 3a Interconnection ✓: company→20 people · 18 projects · 3 software · 1 membership · 2 events. 8 divisions→company+People+Projects. 15 locations→company+Division. All edges intact.
+- 3b Description depth ✓: all 8 division bodies confirmed with full sourced content. Projects (SLC Water, Nashville CONRAC, Gilbert North WTP, Lake McQueeney) confirmed with full briefs, owners, timelines, sources.
+- 3c Addresses ✓: Tempe HQ `Adress` = "2620 S 55th St, Tempe, AZ 85282" confirmed. All 15 location rows have street addresses in `Adress` text. Company place (lat/lng) genuinely unfillable.
+- 3d Memberships ✓ (1/1): DBIA present, company-linked. Complete per dossier.
+- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless). People now all tagged (Charland/Buck/Reidy filled; Rowley already had [Arizona, USA]).
+- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount (except Renewables >$700M in body) · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
+- **Result: 3 writes (Location fills on Charland, Buck, Reidy). Record converged after fills.**

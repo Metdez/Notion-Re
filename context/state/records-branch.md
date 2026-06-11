@@ -100,6 +100,12 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
 - No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).
 
+## Audit log — 2026-06-11 (pass 6 — notion-audit skill)
+**0 fills — record fully complete.**
+- Fresh live re-fetch of all 7 people, 4 divisions, 3 projects (spot-check), 2 events, 4 memberships, 7 locations, profile page + company record — all confirmed complete against Branch1.md dossier.
+- 3a relations ✓ · 3b description depth ✓ · 3c addresses ✓ · 3d memberships (4/4) ✓ · 3e location tags ✓.
+- No new fillable gaps. Outstanding manual UI unchanged: Country NC/WV options (item 3); template row cleanup (item 4).
+
 ## Audit log — 2026-06-11 (pass 5 — notion-audit skill)
 **0 fills — record fully complete.**
 - Company record (`26890644`): Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12] — all confirmed live. ✓

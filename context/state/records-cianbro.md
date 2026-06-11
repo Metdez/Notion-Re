@@ -95,6 +95,18 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
 - **Genuinely sourceless (confirmed):** Richard Brescia (no source URL) · EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · project Adress place coords (most) · most people Email/Phone/LinkedIn · Starcon Adress place · Pete Vigue LinkedIn URL (not in source).
 
+## Audit fills (2026-06-11 — notion-audit pass 6)
+- **0 new writes.** Full live verification across all record types — no fillable gaps found.
+- **Company record:** all properties confirmed populated (Description ✓, Type ✓, Country 12 values ✓, Address place lat/lng ✓, LinkedIn ✓, Website ✓, 25 Construction Projects ✓, 7 Software ✓, 13 People ✓, Strategy ✓).
+- **Divisions (13):** all live — Company + People + Projects relations confirmed on Infrastructure (14 projects, Henshaw) and Power & Energy (2 projects, Walsh) spot-checks ✓. Bodies carry focus/leader/footprint/parent/source ✓.
+- **People (13):** Andi Vigue (CEO) — Company ✓, Function ✓, Location=Maine ✓, body complete ✓. Pete Vigue (Chair) — Company ✓, Function Qualification="President" (closest schema option; no "Chair" option exists — correct) ✓.
+- **Projects (25):** WALK Bridge spot-check — Contractors ✓, Owning Department=Infrastructure ✓, Adress place lat/lng ✓, body complete ✓. Dry Dock 4 NNSY — Contractors ✓, Owning Department=Infrastructure ✓, value $120.3M ✓.
+- **Events (5):** ABC Craft 2025 → Company ✓, Location tags=["Las Vegas"] ✓. ABC Top Performers → Company ✓, no Location tag (no location in source) ✓ (correct). All 5 confirmed present.
+- **Memberships (24 rows confirmed live):** ABC, AGC, AGC Maine, AIHA, AISC, ARTCA, BPA, BWI Business Partnership, CII, CFMA, CURT, DBIA, GBC, MD Chamber, MWII, MTBMA, NAWIC, NSPE, Propeller Club, SAME, SBBA, SMPS, TAPPI, ACI — all with Company relation ✓. Dossier source (MWMCA) lists all 24 — complete match.
+- **Locations (14 confirmed live):** Corporate HQ, Pittsfield ME ops, Falmouth, Ricker's Wharf, Eastern Mfg Facility, Baltimore/Morgan's Wharf, Greenville SC, Cianbro Equipment, CFCC, A/Z HQ North Stonington, Bloomfield CT, Starcon La Porte TX, Total Specialty Baytown TX, R.C. Stevens Winter Garden FL — all present.
+- **SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified in source. Recommend Zack confirm or rename to "SBBA".
+- **Genuinely sourceless (confirmed):** same list as prior runs — Richard Brescia (EVP, no source URL) · EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · most project Adress place coords · most people Email/Phone/LinkedIn · Starcon Adress place · Pete Vigue LinkedIn URL.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).

@@ -163,3 +163,23 @@ All 13 projects fetched live. Full pass:
 - NASDEP / Steam Tunnel 29/30 / Lewis Law Center street addresses — sourced as corridor/campus area only
 - Barker Center / Steam Tunnel 29/30 / ESL SEAS `Contractors` — GC not publicly disclosed
 - All department `LinkedIn` / `Website` — not in source
+
+## Audit log — 2026-06-11 (pass 3 — notion-audit skill)
+**0 fills — all records complete.**
+
+Live-fetched: all 13 projects, 4 department companies, Harvard owner record, Harvard University Companies DB record, Tom O'Connor (P0) + Shallan Fitzgerald (P1). Cross-checked against dossier `2Harvard Researsch.md` (project JSON + GC JSON).
+
+- **3a (relations):** All owner↔department↔project↔people↔GC edges intact. Harvard owner has 13 Projects, 16 Departments, 11 General Contractors, 26 Key Contacts — all verified.
+- **3b (body depth):** All 13 project bodies complete with scope, GC, owner, dates, sourced URLs. Department About/Owns/Sources sections present. Tom O'Connor bio fully filled.
+- **3c (addresses):** All projects with confirmed street addresses have `place:Adress` set. Genuinely sourceless cases (NASDEP no street, Steam Tunnel 29/30 no street, Lewis Law Center no precise street, Pritzker Hall address estimated not confirmed) remain blank — correct.
+- **3d (memberships):** N/A — owner entity has no memberships table.
+- **3e (location tags):** All 13 projects have `Location` populated. No missing tags.
+- **Amy Finlayson (Pritzker PM, LOW CONFIDENCE):** dossier flags as possible Pritzker day-to-day PM but explicitly marks LOW CONFIDENCE. Not added to Notion — no reliable source URL.
+
+**False positives rejected:** None. All prior fills verified correct in live records.
+
+**Genuinely sourceless — confirmed (no change from prior passes):**
+- Pritzker Hall precise street address
+- NASDEP / Steam Tunnel 29/30 / Lewis Law Center street addresses
+- Barker Center / Steam Tunnel 29/30 / ESL SEAS Contractors
+- All department LinkedIn / Website fields
