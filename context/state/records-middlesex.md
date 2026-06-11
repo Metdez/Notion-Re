@@ -195,6 +195,24 @@ Checks performed — all PASS:
 
 ---
 
+## Audit — 2026-06-11 (notion-audit skill pass #4 — manual)
+**Result: 1 fill — Meriden CT location body phone number added.**
+
+**Filled (verified post-write):**
+- **Meriden, CT — Regional Office** `37b90644-d524-8199-b5a2-e760ce3c2d6b` — body updated to add "Phone (978) 742-4400" (sourced from https://middlesexco.com/contact/; was present in Littleton HQ and Orlando/Tampa bodies but missing from Meriden CT).
+
+**All checks PASS:**
+- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Company→Software(7)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)✓ · Events(4)→Company+Location tags✓ · Memberships(4)→Company✓ · Location rows(4)→Company+Division✓
+- **3b Description depth:** All division bodies full ✓ · Company Snapshot complete ✓ · Project bodies verified ✓
+- **3c Addresses:** Company place ✓ · NE/SE/Paving division Adress place ✓ · 4 Location rows Adress text ✓ · Mass Ready Mix/Asphalt LLC = genuinely sourceless
+- **3d Memberships:** All 4 sourced memberships present (CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓) · ⚠ CCIA/DBIA-FL/FTBA each have a duplicate `37c90644` row → flagged for Zack deletion.
+- **3e Location tags:** FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓
+
+**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · Event Place/venue coords · FTBA exact date · Mass Ready Mix/Asphalt LLC leader+address · division revenue/headcount · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier) · project APN/bond/FEMA/seismic.
+**Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB.
+
+---
+
 ## Audit — 2026-06-11 (notion-audit skill pass #2 — manual)
 **Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows detected — flagged, not deleted (additive-only policy).**
 

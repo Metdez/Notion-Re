@@ -238,3 +238,24 @@ All checks passed clean on live fetches:
 - **False positives rejected:** 0.
 
 No fillable gaps found. Notion fully reflects all three dossiers (Flat.md + Flatiron1.md + Flat1.md).
+
+---
+
+## Audit — 2026-06-11 (manual /notion-audit — session #5)
+**Status: ✅ audit complete — 0 fills, 0 writes.** Full live re-verification vs all three dossiers.
+
+**New state confirmed since prior ledger entry:**
+- Memberships table now has **9 rows** (7 prior + NTEA + AGC San Diego added by a prior session): all company-linked, all sourced.
+- Events table now has **3 rows** (DBIA Conference, Groundbreaking Women, + CI Student Days 2025 Gold Sponsor): all company-linked.
+- Location rows remain **10** (unchanged).
+- CI Student Days 2025: Place and Location tags correctly empty — venue address is genuinely sourceless (Flat1.md `location_tags:[]`, `address:null`). No fill.
+
+All checks passed clean on fresh live fetches:
+- **3a:** Company record `24690644…` — 29 Construction Projects + 6 software + 45 people. All 6 divisions → company + People + Projects confirmed (Canada + J.F. White: no People, sourceless). All 9 memberships + 3 events + 10 location rows → company confirmed.
+- **3b:** Division bodies at full dossier depth; sample projects (Upper San Leandro, VIA Green Line) confirmed full body depth.
+- **3c:** Company HQ place (Atlanta, 33.8746/-84.3389) confirmed. All 6 division Adress places confirmed. Location row text fields populated. Project Adress correctly empty.
+- **3d (memberships):** 9/9 confirmed (AGC, DBIA, IPI, The Beavers, Calif. Alliance for Jobs, Hispanic Contractors of CO, NECA Boston, NTEA, AGC San Diego). J.F. White address conflict (111 Speen St vs 10 Burr St): primary source wins — no overwrite.
+- **3e (location tags):** DBIA → Las Vegas ✅; Groundbreaking Women → San Diego ✅; Howard Hanson Dam → Washington ✅; CI Student Days → no tag (sourceless) ✅.
+- **False positives rejected:** 0.
+
+No fillable gaps found.
