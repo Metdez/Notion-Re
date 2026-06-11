@@ -145,6 +145,32 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **Genuinely sourceless gaps (unchanged, 6th confirmation):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-11 (notion-audit skill, 5th manual run)
+**Full audit run.** Live-fetched: profile page (`37b90644`), company record (`19990644`), all 5 division rows (New England + NY Metro + West + Large Project + Mission Critical), both event rows (Safety Week 2026 + 12th Annual), AGC membership row, Boston HQ location row; fetched all 4 data-source schemas (Divisions, Locations, Events, Memberships); cross-referenced Shawmut3.md dossier (full read of company/locations/memberships sections).
+**Result: 0 fills executed.** All live Notion records exactly match the ledger. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.
+**Live verification confirmed (this run):**
+- Company record: Description, LinkedIn, Website, Address (place=560 Harrison Ave), Country (7 states), BW Category=Builder, Type=Company, Size=Regional, Strategy, 7 software, 20 projects, 14 owners, ~240 People — all populated ✅
+- New England Region: Companies=Shawmut ✅, People=Kevin Sullivan ✅, 14 Projects ✅, Adress place=560 Harrison Ave ✅, body full depth ✅
+- NY Metro Region: Companies=Shawmut ✅, People=David Margolius ✅, 1 Project ✅, Adress place=New York NY ✅, body full depth ✅
+- West Region: Companies=Shawmut ✅, People=[Greg Skalaski + Sam Ragsdale] ✅, 2 Projects ✅, Adress place=Los Angeles CA ✅, body full depth ✅
+- Large Project Division: Companies=Shawmut ✅, People=[] (dossier has titles only, no named person — sourceless) ✅, 4 Projects ✅, Adress place=560 Harrison Ave ✅, body full depth ✅
+- Mission Critical: Companies=Shawmut ✅, People=Joel Nickel ✅, Adress empty (dossier null) ✅, body 4 bullets (full depth for new division) ✅
+- Safety Week 2026: Companies=Shawmut ✅, Date=May 4–8 2026 ✅, Location tags [Massachusetts/Boston/Rhode Island/Providence/New York/California/Nevada/Florida/National — 9 tags] ✅, Place legitimately empty ✅
+- 12th Annual: Companies=Shawmut ✅, Location tags [Boston/Massachusetts/National — 3 tags] ✅, Date blank (no source date) ✅
+- AGC membership: Name + Company relation ✅
+- Boston HQ: Adress text="560 Harrison Avenue, Boston, MA 02118 · (617) 622-7000 · HQ" ✅, Company=Shawmut ✅, Division=New England Region ✅
+- Divisions schema: 5 properties (Division, Adress[place], Companies, People, Projects) intact ✅
+- Locations schema: 5 properties (Location, Adress[text], Company, Division, People) intact ✅
+- Events schema: 18 location tag options intact ✅ (including all 9 tags applied to Safety Week 2026)
+- Memberships schema: 2 properties (Name, Company) intact ✅
+**3a interconnection check:** All 5 divisions → Companies relation ✅. All named people → Company relation ✅. Division-People: NE=Kevin Sullivan ✅, NY=David Margolius ✅, West=Greg Skalaski+Sam Ragsdale ✅, MC=Joel Nickel ✅, LPD=empty (sourceless) ✅. Division-Projects all wired ✅. Locations-Company all wired ✅. Locations-Division: 10/12 wired (Miami + WPB null per dossier) ✅. Events-Company ✅. Membership-Company ✅.
+**3b description-depth check:** All 5 division bodies confirmed full depth vs. dossier. No thin bodies detected.
+**3c address check:** All 12 location Adress text fields filled. San Diego has street-level address (3655 Nobel Drive). Locations Adress is text-type by schema design (not a place property — by design). Events Place legitimately empty (nationwide). Division Adress place properties all set (Mission Critical — dossier null ✅). No regression.
+**3d membership check:** Dossier explicitly states "Memberships beyond AGC (ABC, DBIA, USGBC, NAIOP, ULI, CREW corporate membership) — only individual-employee involvement signals found, not confirmed corporate memberships." AGC of America = sole confirmed corporate membership. 1 row, Name + Company filled ✅. No missing memberships (7th confirmation).
+**3e location tags check:** Safety Week 2026: [Massachusetts/Boston/Rhode Island/Providence/New York/California/Nevada/Florida/National] — 9 tags ✅. 12th Annual: [Boston/Massachusetts/National] — 3 tags ✅. All location tag options exist in Events schema. No new tags needed.
+**Genuinely sourceless gaps (unchanged, 7th confirmation):** Large Project Division People (VP titles only, no named person in dossier); Mission Critical Adress (dossier null); Miami + West Palm Beach Division relation (dossier null); Events Place (nationwide events, no geocode); all-office People relations (people assigned to divisions, not offices in dossier).
+**Harness updated:** this ledger only. No Notion writes executed.
+
 ## Audit log — 2026-06-11 (notion-audit skill, 2nd manual run)
 **Full audit run.** Live-fetched: profile page (`37b90644`), company record (`19990644`), 2 divisions (New England + NY Metro), 2 events, 1 membership, Divisions/Locations/Events/Memberships data-source schemas.
 **Result: 0 fills executed.** All live Notion records exactly match the ledger. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.
