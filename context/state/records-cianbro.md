@@ -54,7 +54,9 @@ Page-local data sources:
 Company ↔ 24 Construction Projects ✓ · Company ↔ 12 People ✓ · Company → 7 Software ✓ · Division→Company (all 13) ✓ · Infrastructure → Henshaw + 14 projects ✓ · Power&Energy → Walsh + 2 · IDM → P.Malikowski + 2 · Building → 5 · A/Z → Lorenz + Portland HSC · Support Services → Wolfe ✓ · Project→Contractors + Owning Department (all 24) ✓ · Locations → Company (14) + Division (9) ✓ · Events/Memberships → Company ✓.
 
 ## Left empty (no sourced value — per dossier Caveats)
-EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates (year/month-only kept in body) · per-state license numbers · Cianbro revenue share of JV/program totals (WALK/PNSY/Western Maine are program totals) · company Address place (no lat/lng) · project Adress places (no lat/lng) · most new people Email/Phone (Vigue/Lorenz/Henshaw/Walsh also no LinkedIn) · ~18 of the ~30 trade memberships.
+EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates (year/month-only kept in body) · per-state license numbers · Cianbro revenue share of JV/program totals (WALK/PNSY/Western Maine are program totals) · company Address place (no lat/lng) · project Adress places (no lat/lng) · most new people Email/Phone (Vigue/Lorenz/Henshaw/Walsh also no LinkedIn) · SBBA long-form name (row exists, name expansion "Specialty Balance Beam Association" is fabricated — MWMCA source only lists the abbreviation).
+
+**Note on memberships:** as of 2026-06-11 audit, Notion Memberships DB contains ~25 rows covering all named associations from the dossier. The prior "~18 missing" gap was filled in a session after the initial 06-10 load (timestamps 23:18 UTC). All are linked to company.
 
 ## Audit fills (2026-06-10 — notion-audit run)
 - **Events DB `Location tags`:** 3 new options added (Las Vegas, Kissimmee, Maine) — all 9 original options preserved. Applied: ABC Craft Champs 2025 → Las Vegas · ConExpo 2026 → Las Vegas · ABC Craft Champs 2024 → Kissimmee · AGC Maine Build Maine Awards → Maine. ABC Top Performers left untagged (no location in source). Source: `Enlaye Notion/Cianbro/Cianbro.md`.
@@ -64,6 +66,12 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - Events `Date` not filled — no exact dates sourced in dossier for any events.
 - Events `Place` not filled — no lat/lng for event venues sourced.
 - Locations `Adress` (text): all 14 rows already populated from prior load session.
+
+## Audit fills (2026-06-11 — hourly /notion-audit cycle)
+- **0 new writes.** All sourced fields verified populated. Membership gap (~18 missing noted at load) was closed by a subsequent session; all ~25 MWMCA-named associations now present in Memberships DB.
+- **1 data quality flag (no destructive action taken):** SBBA row title reads "SBBA (Specialty Balance Beam Association)" — the full-name expansion is not found in any source; dossier and MWMCA profile only list the abbreviation "SBBA". Row and Company relation are correct; only the parenthetical expansion is unverified. Recommend Zack confirm the correct SBBA full name or rename to "SBBA" only.
+- **Verified complete:** company record · 13 divisions (all → Company + People + Projects) · 12 people (all → Company + Division) · 24 projects (all → Contractors + Owning Department) · 14 locations (all → Company + Division) · 5 events (4 location-tagged; ABC Top Performers untagged = no location in source ✓) · ~25 memberships (all → Company) · 7 software (all → Company) · 13 sources · full interlink graph intact.
+- **Genuinely sourceless (no data available, confirmed):** EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount splits · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · company/project Address place coords · people Email/Phone/LinkedIn (most).
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.

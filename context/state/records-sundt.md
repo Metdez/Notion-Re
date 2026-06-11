@@ -99,3 +99,12 @@ Full re-fetch of all records: company record, 8 divisions, 3 people, 18 projects
 - Profile page (`37b90644…3af`) body retains template instruction text — non-destructive rule; no `replace_content` permitted without explicit confirmation.
 - Genuinely sourceless blanks unchanged: place fields (no coords), division revenue/headcount, people email/phone/LinkedIn, DBIA event date, AGC event venue address, 5 project contract values.
 - **Result: 0 writes, 0 new gaps filled, 0 data corrupted. Record is complete per available dossier data.**
+
+## Audit — 2026-06-11 (third pass — automated hourly)
+Full re-fetch: company record, divisions (spot: Advanced Facilities, Building Group, Water), people (Charland, Reidy), projects (SLC Water), events (AGC, DBIA milestone), membership (DBIA), locations (Tempe HQ). Cross-referenced all `extra` dossier fields against live Notion body.
+- **Fillable gap found & filled:** `extra.ceo_succession_2025` — Cade Rowley (President & CEO, Oct 1, 2024) was absent from Notion. Created People record `37c90644-d524-8169-9f5b-cd6093d89651`; linked to company; added CEO + President Function Qualification. Source: [Construction Dive](https://www.constructiondive.com/news/sundt-new-president-coo-cade-rowley/729527/).
+- **Fillable gap filled:** Company body — added CEO, Water milestone ($9B / 60 plants), ENR trajectory bullets with sources (3 additional fact lines under Company Snapshot).
+- All 8 divisions, 18 projects, 2 events, 1 membership, 15 locations confirmed intact — no missing relations, no broken edges.
+- Genuinely sourceless blanks (unchanged): place fields (no coords/lat/lng), division revenue/headcount, people email/phone/LinkedIn, AGC event venue address, 5 project contract values.
+- Memberships complete per dossier: DBIA only (no other membership sourced).
+- **Result: 2 write operations, 1 new People record, 3 company-body facts added. No data corrupted.**

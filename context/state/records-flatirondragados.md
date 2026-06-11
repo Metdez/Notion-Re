@@ -123,3 +123,28 @@ Mid-load, a **parallel session reset the shared Projects `Location` multi-select
 6. **Events `Location tags`** — add "Las Vegas" (DBIA) + "San Diego" (Groundbreaking Women) options, then tag both rows.
 7. Section guide italics + any template starter rows in Company Map/Events/Sources/Locations/Memberships → delete in UI if unwanted.
 8. **Size conflict** on company record: Regional (existing) vs Multinational (dossier) — pick one.
+
+## Audit — 2026-06-11 (automated hourly cycle)
+**Status: ✅ audit complete — 0 fills, 0 writes.** Full re-verification vs Flat.md + Flatiron1.md.
+
+All checks passed clean:
+- **3a:** all 6 division→company + People + Projects edges live; company→21 projects; all side-tables→company.
+- **3b:** all division + project bodies at full dossier depth.
+- **3c:** all 6 division Adress places confirmed; company HQ place confirmed. Project Adress correctly empty (no-geocoding rule — no project coordinates in dossier).
+- **3d (memberships):** 7/7 present and company-linked.
+- **3e (location tags):** both events fully tagged (Las Vegas / San Diego). Howard Hanson Dam `Location`=`["Washington"]` confirmed set — the deferred 06-10 item was resolved by a subsequent session adding the Washington option to the shared Projects multi-select.
+
+**Deferred items resolved since 06-10:**
+- Howard Hanson Dam "Washington" Location tag: ✅ NOW SET.
+- DBIA Conference "Las Vegas" location tag: ✅ NOW SET.
+- Groundbreaking Women "San Diego" location tag: ✅ NOW SET.
+
+**Manual UI steps (updated — items 4/6 resolved; remaining):**
+1. Projects Underway view — set Contractors = FlatironDragados.
+2. Existing Software view — remove `__TEMPLATE__` filter.
+3. Memberships "View of People" tab — repoint company filter.
+4. ~~Projects `Location` — add "Washington" + tag Howard Hanson~~ ✅ DONE.
+5. Restore the clobbered Projects `Location` option list (was ~115, reset to FL+SC) — cross-company impact; Zack's call.
+6. ~~Events `Location tags` — add "Las Vegas" + "San Diego"~~ ✅ DONE.
+7. Section guide italics + template starter rows → delete in UI if unwanted.
+8. Size conflict: Regional (existing) vs Multinational (dossier) — pick one.

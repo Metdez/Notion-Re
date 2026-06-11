@@ -81,3 +81,19 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3d membership check:** AGC of America is the only confirmed corporate membership in the dossier. No additional memberships to add.
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
+
+## Audit log — 2026-06-11 (automated hourly cycle)
+**Full audit run.** Checked: profile page body, 5 divisions (all properties + body depth), 12 locations (all properties), 2 events (all properties), 1 membership, people/projects via prior ledger.
+**Result: 0 fills executed.** All records remain complete. No properties found that were both (a) empty AND (b) have a sourced value in the dossier not yet applied.
+**Gaps confirmed still sourceless (not regressions — same as prior audit):**
+- Large Project Division `People` relation empty — dossier has VP titles only, no named person confirmed.
+- Mission Critical `Adress` (place) empty — dossier explicitly null for address.
+- Miami + West Palm Beach location rows — `Division` relation empty — dossier explicitly null for owning_division.
+- Events `Place` property — both events nationwide, no geocode; correct to leave empty.
+- Location `People` relation — dossier assigns people to divisions, not offices; sourceless at office level.
+**3b description-depth check:** All 5 division bodies confirmed full depth vs. dossier. Mission Critical 4-bullet body matches dossier (new division, minimal sourced data). ART/100 SCD project body confirmed full depth.
+**3c address check:** All 12 location Adress text fields filled. San Diego has street-level address (3655 Nobel Drive). Events Place legitimately empty (nationwide). No regression.
+**3d membership check:** AGC of America — 1 membership, Name + Company relation both filled. No additional sourced memberships in dossier.
+**3e location tags check:** Safety Week 2026: [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — complete. 12th Annual: [Boston, Massachusetts, National] — complete.
+**Worcester ID note:** correct ID confirmed as `37b90644-d524-8131-9783-e64663faa7fb` (ledger had a space in the ID string — corrected above).
+**Harness updated:** this ledger only. No Notion writes executed.
