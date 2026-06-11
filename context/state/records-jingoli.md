@@ -136,9 +136,25 @@ Full live re-verify of all records (company + 5 divs + 4 people + 5 projects + 1
 **3e Location tags ✓:** ENR event = New York ✓. NJ Alliance 50th/51st = New Jersey ✓. PWC NJ = New Jersey ✓. HELIX H1 = New Jersey ✓.
 
 ## Record counts (updated)
-Company (1) · Divisions (5) · People (4) · Projects (5) · Locations (2) · Events (5) · Memberships (4) · Software (3) · Sources (14+)
+Company (1) · Divisions (5) · People (4) · Projects (5) · Locations (2→3 rows, 1 dup pending) · Events (5→7 rows, 2 dup pending) · Memberships (4→8 rows, 4 dup pending) · Software (3) · Sources (14+)
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 3 software rows).
 3. Possible template guide rows on local tables (Divisions/Events/Sources/Locations) — UI delete if Zack wants them gone.
+4. **Delete 9 duplicate rows (concurrent-session clobber, 2026-06-11)** — both sets now fully linked; delete the 11:07 batch:
+   - Memberships: GBCA `37c90644-d524-8192-931c-d3b671d36ea3` · ACCNJ `37c90644-d524-81ad-9c94-caf4defe6ae3` · PWC NJ `37c90644-d524-81d7-a2a1-da72361a5271` · NJ Alliance `37c90644-d524-8118-ae22-ee0a1cba9af9`
+   - Locations: DCO Mays Landing `37c90644-d524-814c-8cc2-f1fb6dfca5d6`
+
+## Audit pass 2026-06-11 (dup-cleanup pass — `notion-audit Jingoli Nuclear Services`) — 5 writes
+Full live re-verify of all records. Found concurrent-session duplicate rows (two sessions ran 08:09 and 11:07 same day, both created same 4 memberships + 1 DCO location). The 08:09 batch had richer content but was missing company/division relations; the 11:07 batch had relations but thinner content.
+
+**Fills (5):**
+1. GBCA membership `37c90644…d88e25` (08:09) — added `Companies full database` → Jingoli Nuclear Services.
+2. ACCNJ membership `37c90644…b59db3` (08:09) — added `Companies full database` → Jingoli Nuclear Services.
+3. PWC NJ membership `37c90644…14091a` (08:09) — added `Companies full database` → Jingoli Nuclear Services.
+4. NJ Alliance membership `37c90644…12994` (08:09) — added `Companies full database` → Jingoli Nuclear Services.
+5. DCO Mays Landing location `37c90644…15959f` (08:09) — added `Division` → Jingoli-DCO.
+
+**3a–3e ✓:** All checks pass (see prior session detail). **Pending manual dup deletion** (see UI steps #4 above) — MCP cannot trash pages.
+**False positives rejected:** None — all 5 fills were genuine missing relations confirmed by live re-fetch before writing.
