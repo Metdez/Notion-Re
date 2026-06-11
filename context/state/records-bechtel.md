@@ -167,6 +167,24 @@ Same list as all prior passes. Eva Copper Mine + QB2 Location tags: no Australia
 
 ---
 
+## Audit — 2026-06-11 (notion-audit pass — this session)
+
+### Filled
+- **Bechtel Enterprises division** `37b90644-d524-8198-b988-c4a1793233ce`: `Projects` relation set → Morava Corridor Motorway (`37b90644-d524-81e6-aac2-d594c7d6cff0`). Source: Bechtel2.md dossier + project body (Bechtel Enterprises provided development/financing support, UKEF €430M guarantee). Verified live post-write. (bechtel.com/projects/morava-motorway/)
+
+### Verified complete — no other changes needed
+- **Company record** `18490644`: Description ✓ · Address/place ✓ · BW Category [Builder, Advisor] ✓ · Country (9 values) ✓ · 31 Construction Projects ✓ · 31 Companies Software ✓ · 53 People ✓.
+- **6 Divisions**: all have Companies full database ✓, People ✓, Projects ✓ (Bechtel Enterprises now filled), body ✓, icons ✓. Adress (place) empty per no-geocoding rule ✓.
+- **6 Memberships** (BRT, CII, NEI, ETEBA, CCITNZ, NABTU): all rows in collection `ddc90644`, all have Companies full database → Bechtel Group ✓. Completeness check 3d: all 6 sourced memberships present ✓.
+- **11 Events**: all 11 confirmed in data source `66490644` (4 were hidden by view filter — not missing). All have Companies full database ✓, location tags set ✓. Dates set on 9/11 (ENR LA Forum + LACMTA C-Line genuinely unknown). Place fields empty per no-coords rule ✓.
+- **16 Locations**: Adress text ✓, Companies full database ✓, Division ✓.
+- **31 Projects + 31 Software**: Companies/Contractors set ✓.
+
+### Left empty (genuinely sourceless — confirmed)
+Contract values (21/31 undisclosed). Division revenue/headcount (not published). TRIR/EMR/DART (not published). Place (lat/lng) on all records (no-geocoding rule). London street address (null in dossier). UEI/CAGE conflict (pending SAM.gov). ENR LA Forum + LACMTA C-Line dates unknown. Eva Copper Mine + QB2 Location tags (no Australia/Chile schema options).
+
+---
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view (page-local linked view of shared Construction Projects) → clear `__TEMPLATE__` filter, set Contractors = Bechtel Group (relation CONTAINS filters can't be set via API — UI only).
 2. **Existing Software** view → clear `__TEMPLATE__` filter, set Companies = Bechtel Group.

@@ -132,6 +132,23 @@ Full pass vs HITT1.md + HITT2.md + HITT3.md. HITT3.md contains richer per-divisi
 - **False positives / non-fills:** division address fields already populated → HITT3 updated addresses (Dallas=Frisco TX, LA=Culver City) noted in bodies only, not overwritten (additive rule). 13 other divisions had sufficient bodies already.
 - **Verified clean:** 7 memberships ✓, 16 locations ✓, 5 events ✓, 10 projects ✓, 6 software ✓, all 20 people ✓.
 
+## Post-load audit #7 (2026-06-11, /notion-audit HITT Contracting — full verification pass)
+Full read-only pass vs HITT1.md + HITT2.md + HITT3.md, covering: company record, 18 divisions, 16 locations, 7 memberships, 5 events, 10 projects, 20 people, 6 software.
+- **Fills (0):** Record is fully built after 6 prior audit passes. No empty fields with available sourced data were found.
+- **Verified correct (no change needed):**
+  - Company record `30a90644`: Description/DUNS 003258746/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance all filled ✓; Country = 14 values including NC/SC/NM ✓; Address place ✓; 10 Construction Projects linked ✓; 6 Software linked ✓; 20 People linked ✓
+  - All 5 events: DBIA (Date 2025-11-05→07, Adress MGM Grand, Location=Nevada/Las Vegas ✓), CONEXPO (Date 2026-03-03→07, Adress LVCC, Location=Nevada/Las Vegas ✓), NAIOP (Location=Virginia ✓), Safety Week (Date start only = correct/national), SubDay (no data = correct/nationwide)
+  - All 18 divisions: Adress place ✓, Companies relation ✓, body content with leaders/focus/projects ✓ (enriched via Audits #2/#6)
+  - All 7 memberships: AGC, NAIOP, USGBC, CoreNet Global, IFMA, IIDA, DBIA — all Company-linked ✓ (3d complete)
+  - All 6 software: Procore, Bluebeam, Autodesk/BIM, OpenSpace, Hilti Jaibot, Microsoft 365 ✓
+  - All 20 people: Company linked ✓, Function Qualification set ✓, sourced body content ✓
+  - Interconnection (3a): All 18 divisions → Companies(HITT) ✓; all people → Company(HITT) ✓; all events/memberships → Companies(HITT) ✓
+  - Location tags (3e): DBIA=Nevada/Las Vegas ✓, CONEXPO=Nevada/Las Vegas ✓, NAIOP=Virginia ✓, Safety Week/SubDay = no tag (national/sourceless ✓)
+- **Left empty-for-cause (genuinely sourceless):** Safety Week / SubDay — no Adress, no Location tags, no end date (dossier: "National"/"offices nationwide"); NAIOP — no date, no Adress (source: "Northern Virginia" only); Size=Regional conflict preserved (non-destructive rule); people LinkedIn/Email/Phone (none in dossiers).
+- **DEFERRED (requires /notion-load, not /notion-audit):**
+  - 5-6 net-new projects confirmed absent: JCC Advanced Manufacturing Training Facility ($35M, Four Oaks NC), MedImmune R&D ($40M, Gaithersburg MD), Inova Women's/Children's (Falls Church VA), Inova Fairfax PSB 5th Floor (Falls Church VA), Inova Fairfax Perioperative (Falls Church VA), Leidos HQ (Reston VA, Boston Properties client)
+  - Net-new people not yet in People DB: Triloka Shanbhag (Mission Critical co-leader), Jason Hair (NY VP), Brad Hunley (Government EVP), Sven Sahkul/Luke Marshall/J. Fontaine (Government VPs), Kyle Sugrowe (Advanced Manufacturing VP), Scott Decker/Gary Stewart (Life Sciences), Kevin Daniels/Chris Lukawski/JoAnna Heath (Healthcare BU), Brian Kilpatrick (Fort Lauderdale VP), Ryan Bixler/Erik Kandler/Edward Miko (Atlanta), Paul Zimmerman/Todd Hudson (Houston), Chris Jewell/Jon Duffey (Dallas), Trevor Coffey/Kavan Ranasinghe (LA), Sam Holbrook (Raleigh)
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
