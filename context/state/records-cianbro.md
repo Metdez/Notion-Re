@@ -79,6 +79,14 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **1 SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — expansion unverified. Recommend Zack confirm or rename to "SBBA".
 - **Sourceless gaps confirmed unchanged:** same list as prior audit run.
 
+## Audit fills (2026-06-11 — notion-audit pass 4, autonomous)
+- **0 new writes.** All sourced fields verified populated across full record set.
+- **Company Address place confirmed filled:** `place:Address` = Cianbro Corporation HQ / 101 Cianbro Square Pittsfield ME (lat 44.7831 / lng -69.3836) — ledger previously noted as empty; live fetch confirms it is populated. No gap.
+- **Events (5):** all tags and company relations confirmed live. ABC Craft 2025 → Las Vegas ✓ · ABC Craft 2024 → Kissimmee ✓ · ConExpo 2026 → Las Vegas ✓ · AGC Maine → Maine ✓ · ABC Top Performers → no location in source (untagged = correct) ✓.
+- **Memberships (24 rows):** all 24 MWMCA-sourced associations present and linked to company. Full list: ABC, AGC, AGC Maine, AIHA, AISC, ARTCA, BPA, BWI Business Partnership, CII, CFMA, CURT, DBIA, GBC, MD Chamber, MWII, MTBMA, NAWIC, NSPE, Propeller Club, SAME, SBBA, SMPS, TAPPI, ACI ✓.
+- **SBBA flag still open:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
+- **Genuinely sourceless (confirmed):** same list as prior runs — EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · project Adress place coords · most people Email/Phone/LinkedIn · Starcon Adress place.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).

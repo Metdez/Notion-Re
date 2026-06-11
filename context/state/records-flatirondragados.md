@@ -208,3 +208,18 @@ No fillable gaps found. All sourced data from all three dossiers is reflected in
 4. Restore the clobbered Projects `Location` option list (was ~115, reset to FL+SC) — cross-company impact; Zack's call.
 5. Size conflict: Regional (existing) vs Multinational (dossier) — pick one.
 6. Projects Location schema: add "British Columbia" option for Site C Dam; add "West Virginia"/"Ohio" for Wellsburg Bridge (currently tagged "USA").
+
+---
+
+## Audit — 2026-06-11 (automated /notion-audit cycle #3)
+**Status: ✅ audit complete — 0 fills, 0 writes.** Live Notion re-verified vs all three dossiers (Flat.md + Flatiron1.md + Flat1.md).
+
+All checks passed clean:
+- **3a:** Company record live (`24690644…`) — 29 Construction Projects + 6 software + 45 people confirmed. All 6 divisions → company + People + Projects edges intact (Canada + J.F. White have no People — confirmed sourceless). All 7 memberships, 2 events, 10 location rows → company. Relations verified live.
+- **3b:** All 6 division bodies at full dossier depth. Sample projects (Upper San Leandro, VIA Green Line, Howard Hanson, Site C Dam, Wellsburg Bridge) confirmed full body depth with sourced inline links.
+- **3c:** Company HQ place (Atlanta, 33.8746/-84.3389) confirmed. All 6 division Adress places confirmed live (USA/Canada/Pulice-Scottsdale/SPC-Whitestone/Prince-Tampa/JFWhite-Framingham). 10 location rows confirmed present. Project Adress correctly empty (no geocoords in dossier).
+- **3d (memberships):** 7/7 confirmed live — AGC, DBIA, IPI, The Beavers, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston. All company-linked.
+- **3e (location tags):** Both events fully tagged — DBIA Conference → Las Vegas ✅; Groundbreaking Women → San Diego ✅. Howard Hanson Dam → Washington ✅. All confirmed live.
+- **False positives rejected:** 0.
+
+No fillable gaps found. Notion fully reflects all three dossiers.
