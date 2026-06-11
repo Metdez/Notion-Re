@@ -28,7 +28,7 @@
 | Aviation Business Unit | `8186-a852` | O'Hare 21, Idaho Falls |
 | Science & Technology BU | `818a-890f` | IQMP |
 | Clayco Compute (Data Centers) | `819a-9f46` | Cheyenne, Helios |
-| Clayco Power & Energy | `819e-bddd` | — |
+| Clayco Power & Energy | `819e-bddd` (**live suffix: `c2536dcaa9a5`; full: `37b90644-d524-819e-bddd-c2536dcaa9a5`**) | Illinois Solar and Battery Storage; People: Ryan Johnson |
 | Government Business Unit | `812a-9ff3` | — |
 | Chicagoland Region (HQ) | `8164-a5a3` | Obama, O'Hare, IQMP · People: Bob Clark, Jeff Miller |
 | St. Louis BU (Berkeley, MO) | `810d-b7e6` | Hirsch, WEG |
@@ -179,7 +179,7 @@
 **Fillable gap found and filled — 1 write:**
 | Record | Action | ID |
 |---|---|---|
-| **Ryan Johnson** (VP, Power and Energy) | Created People record; Company→Clayco; Function=VP, Power and Energy; body=role+background+source; linked to Clayco Power & Energy division `People` | `37c90644-d524-81e6-b43d-f6fb74781c5c` |
+| **Ryan Johnson** (VP, Power and Energy) | Created People record; Company→Clayco; Function=VP, Power and Energy; body=role+background+source; linked to Clayco Power & Energy division `People` | `37c90644-d524-81e6-b43d-f6fb74781c5c` (**⚠ see pass 7 — this ID was 404; re-created at `37c90644-d524-8192-bb6e-d12c50e7c628`**) |
 
 Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](https://www.enr.com/articles/62622-clayco-launches-new-solar-and-energy-storage-business-unit)
 
@@ -208,7 +208,7 @@ Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](htt
 - Division **Clayco Self-Perform Group** `37c90644-d524-8151-b8c9-fe25a727248f` — Company→Clayco; Address place set; sourced body.
 - Software **Procore / PMWeb / Primavera P6 (Clayco PM stack)** `37c90644-d524-811a-82f0-e0ff10674518` — Company→Clayco; sourced.
 - Software **Bluebeam (Clayco design/field)** `37c90644-d524-8126-aac9-d01a6715dff4` — Company→Clayco; sourced.
-- People **Ryan Johnson** (VP, Power and Energy) `37c90644-d524-81e6-b43d-f6fb74781c5c` — Company→Clayco; Power & Energy division People linked.
+- People **Ryan Johnson** (VP, Power and Energy) `37c90644-d524-81e6-b43d-f6fb74781c5c` — ⚠ ID incorrect; record was 404. Re-created in pass 7 at `37c90644-d524-8192-bb6e-d12c50e7c628`.
 
 **3a Interconnection — confirmed clean:** 8 people (7 new + Jeff Miller) → Company=Clayco; 32 projects → Contractors=Clayco; 20 division rows → company; 6 events → Companies=Clayco; 5 memberships → Companies full database=Clayco. All edges intact.
 
