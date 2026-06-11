@@ -108,3 +108,14 @@ Full re-fetch: company record, divisions (spot: Advanced Facilities, Building Gr
 - Genuinely sourceless blanks (unchanged): place fields (no coords/lat/lng), division revenue/headcount, people email/phone/LinkedIn, AGC event venue address, 5 project contract values.
 - Memberships complete per dossier: DBIA only (no other membership sourced).
 - **Result: 2 write operations, 1 new People record, 3 company-body facts added. No data corrupted.**
+
+## Audit — 2026-06-11 (fourth pass — /notion-audit Sundt)
+Full re-fetch of all 52 records: company record, 8 divisions, 4 people (Charland, Buck, Reidy, Rowley), 18 projects, 2 events, 1 membership, 15 locations, 3 software, 16 sources. Cross-referenced against full Sundt.md dossier including `extra` fields.
+- **Fillable gap found & filled:** AGC Construction Safety Excellence Award event body — `extra.safety_recognition` contained "first contractor in the award's history to win three times" which was absent from the Notion event body (body only had "third overall grand-prize win"). Added the historical-first detail. Source: [AGC](https://www.agc.org/news/2026/04/16/sundt-construction-tempe-arizona-named-nations-safest-construction-company-2025-national-con).
+- 3a Interconnection ✓: all edges intact. company→20 people/18 projects/3 software. 8 divisions→company+People+Projects. 15 locations→company+division. Events/membership/software→company.
+- 3b Description depth ✓: all division/project/people bodies confirmed at full dossier depth.
+- 3c Addresses ✓: all 15 location rows have full street addresses in `Adress` text. Company Adress place genuinely unfillable (no lat/lng; confirmed for 4th time). Project place empty per no-geocoding rule.
+- 3d Memberships ✓ (1/1): DBIA present, company-linked. Dossier has exactly 1 membership. Complete.
+- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless).
+- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · AGC/DBIA event venues · 5 project contract values · TRIR/EMR · bonding · permits/APN/FEMA.
+- **Result: 1 write (AGC event body enrichment). Record otherwise fully converged.**

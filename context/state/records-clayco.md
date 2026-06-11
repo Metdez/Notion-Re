@@ -165,3 +165,36 @@
 **Genuinely sourceless (final list — nothing left to fill):** SelectUSA/Rising/AGC Convention dates (blank in all dossiers); 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed); project start/end dates (year-only, in bodies); Shawn Clark/Zackery House/Mike Pierle/Carmen Hernandez/Kevin McKenna People records (no per-person source URL); Size=Regional vs "Multinational" (Zack to decide).
 
 **0 writes. Build declared converged.**
+
+---
+
+## Fifth pass — 2026-06-11 (notion-audit, manual trigger)
+> Full 3a–3e audit against all four ground-truth dossiers (Clay 1.md, Clayco1.md, Clayco3.md, Clayco4.md). Ground truth is unchanged; audited live Notion state against all dossiers.
+
+**New records found in Notion (created between pass 4 and this pass, ~2026-06-11T02:09):**
+- Division row **Clayco Self-Perform Group** `37c90644-d524-8151-b8c9-fe25a727248f` — sourced from Clayco1.md (Jason Mrozek, Jan 2026); Company→Clayco set; Address place set (35 E Wacker); no Projects/People (correct — none sourced for this unit). Interlink 3a: clean.
+- Software row **Procore / PMWeb / Primavera P6 (Clayco PM stack)** `37c90644-d524-811a-82f0-e0ff10674518` — Company→Clayco; sourced from job postings.
+- Software row **Bluebeam (Clayco design/field)** `37c90644-d524-8126-aac9-d01a6715dff4` — Company→Clayco; sourced from job posting.
+
+**Fillable gap found and filled — 1 write:**
+| Record | Action | ID |
+|---|---|---|
+| **Ryan Johnson** (VP, Power and Energy) | Created People record; Company→Clayco; Function=VP, Power and Energy; body=role+background+source; linked to Clayco Power & Energy division `People` | `37c90644-d524-81e6-b43d-f6fb74781c5c` |
+
+Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](https://www.enr.com/articles/62622-clayco-launches-new-solar-and-energy-storage-business-unit)
+
+**3a Interconnection — confirmed clean:** 20 division rows (19 original + Self-Perform Group) all have Company→Clayco. 7 people (6 original + Ryan Johnson) → Company=Clayco. 32 projects → Contractors=Clayco. 6 events → Companies=Clayco. 5 memberships → Companies full database=Clayco. Clayco Power & Energy division now has People→Ryan Johnson.
+
+**3b Description depth — confirmed complete:** Self-Perform Group body has sourced depth (leader, founded date, focus, source). Ryan Johnson body has role+background+source. All prior records unchanged.
+
+**3c Address/place — confirmed complete:** Self-Perform Group has place:Adress set (35 E Wacker, 41.8866/-87.6266). All 11 locations have addresses. All events confirmed same as pass 4.
+
+**3d Memberships — 5/5 confirmed and complete:** USGBC · DBIA · AGC · NAIOP Chicago · USGBC-CA. No new memberships in dossiers.
+
+**3e Location tags — confirmed:** no changes. All event/location tags same as pass 4.
+
+**People DB Division field:** People.`Division` targets `collection://37690644-d524-8088-abd7-000b818a9b6b` (global Divisions DB, not profile-local) — left empty for all Clayco people per established precedent (pass 1). Division links maintained via division-row `People` relation only.
+
+**Genuinely sourceless (final):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (only Rivian $5B + Obama $615M) · project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL) · Size=Regional vs "Multinational" (Zack to decide). Clay Carter appears in Clayco3.md division list but no primary source URL — not created.
+
+**False positives rejected:** 0. All writes verified against live Notion state before executing.
