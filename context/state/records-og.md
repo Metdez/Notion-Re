@@ -111,9 +111,27 @@ All existing records complete: company record, 7 divisions (leader names from OD
 **AGC CT Awards event Place**: venue not specified in source beyond "Connecticut" — genuinely sourceless, left blank.
 **ENR NE Best Projects event Place**: venue TBA — genuinely sourceless, left blank.
 
+## Audit round 6 (2026-06-11, /notion-audit — full live verification)
+**0 fills** — all records verified complete against OG1.md + OD.md. No new fillable gaps found.
+
+**Live record counts verified:**
+- Company record: complete (22 Construction Projects, 4 software, all properties filled)
+- 7 divisions: complete (leadership, focus, projects, company + people relations)
+- 15 people linked (all OD.md leaders confirmed live: Ryan Oneglia, Brad Oneglia, TJ Oneglia, Kara Oneglia, Jason Travelstead, Christina Oneglia Rossi, Tyson J. Burk + original 5 + 3 pre-existing CRM contacts)
+- 3 events: complete (CCIA Place = Aqua Turf Club filled round 5; AGC Place genuinely sourceless; ENR NE Place TBA)
+- 4 memberships: complete
+- 17 locations: all present with Adress + Company + Division relations (original 12 + 4 OD.md Mason rows + 1 Building RI)
+- 4 software rows: complete
+
+**⚠ New dup flagged (round 6):** Ryan Oneglia ×2 in People DB:
+- `37b90644-d524-81c4-b7f1-d5883c8d67ab` — has Division link (Heavy Civil), emoji icon 👤, created 23:22
+- `37b90644-d524-8182-9ac4-f95438c3c771` — no Division link, user_gray icon, created 23:23
+Both have Company→O&G and identical Function. Likely created in two separate OD.md load sub-agents racing. Delete the second (no Division link) in UI — **no destructive action taken pending Zack's confirmation.**
+
 ## Manual UI steps for Zack
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
 2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
 3. **Memberships "View of People" tab** — repoint leftover company filter to O&G or remove.
 4. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
 5. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
+6. **Ryan Oneglia dup** — delete `37b90644-d524-8182-9ac4-f95438c3c771` (no Division link, user_gray icon); keep `37b90644-d524-81c4-b7f1-d5883c8d67ab` (Division linked, 👤 icon).

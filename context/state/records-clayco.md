@@ -198,3 +198,28 @@ Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](htt
 **Genuinely sourceless (final):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (only Rivian $5B + Obama $615M) · project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL) · Size=Regional vs "Multinational" (Zack to decide). Clay Carter appears in Clayco3.md division list but no primary source URL — not created.
 
 **False positives rejected:** 0. All writes verified against live Notion state before executing.
+
+---
+
+## Sixth pass — 2026-06-11 (notion-audit, manual trigger)
+> Full 3a–3e audit vs all four ground-truth dossiers (Clay 1.md · Clayco1.md · Clayco3.md · Clayco4.md). Live-fetched profile page, company record, all collections and linked records. 0 writes.
+
+**New records confirmed live since pass 5 (created ~06-11T02:09):**
+- Division **Clayco Self-Perform Group** `37c90644-d524-8151-b8c9-fe25a727248f` — Company→Clayco; Address place set; sourced body.
+- Software **Procore / PMWeb / Primavera P6 (Clayco PM stack)** `37c90644-d524-811a-82f0-e0ff10674518` — Company→Clayco; sourced.
+- Software **Bluebeam (Clayco design/field)** `37c90644-d524-8126-aac9-d01a6715dff4` — Company→Clayco; sourced.
+- People **Ryan Johnson** (VP, Power and Energy) `37c90644-d524-81e6-b43d-f6fb74781c5c` — Company→Clayco; Power & Energy division People linked.
+
+**3a Interconnection — confirmed clean:** 8 people (7 new + Jeff Miller) → Company=Clayco; 32 projects → Contractors=Clayco; 20 division rows → company; 6 events → Companies=Clayco; 5 memberships → Companies full database=Clayco. All edges intact.
+
+**3b Description depth — confirmed complete:** all bodies at full sourced depth, including Self-Perform Group and Ryan Johnson.
+
+**3c Address/place — confirmed complete:** company Address place set; division Adress place-type set; AGCMO event place confirmed (St. Charles Convention Center coords); 5 other events have no venue address in any dossier — genuinely sourceless.
+
+**3d Memberships — 5/5 confirmed:** USGBC · DBIA · AGC · NAIOP Chicago · USGBC-CA. Clayco4.md lists same 3 already present — no new rows.
+
+**3e Location tags — confirmed:** same as pass 4 and 5.
+
+**0 writes. Build remains fully converged.**
+
+**Genuinely sourceless (final, unchanged):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (Rivian $5B + Obama $615M only) · project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL) · Size=Regional vs "Multinational" (Zack to decide).

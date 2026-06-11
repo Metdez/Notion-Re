@@ -113,7 +113,7 @@ All other records verified complete: Company record (18490644) — all key prope
 
 ---
 
-## Audit — 2026-06-11 (notion-audit pass — current)
+## Audit — 2026-06-11 (notion-audit pass — prior)
 
 ### Filled
 Nothing — all live records confirmed complete. Zero writes needed.
@@ -129,6 +129,25 @@ Nothing — all live records confirmed complete. Zero writes needed.
 
 ### Left empty (genuinely sourceless — confirmed)
 Same as prior passes: 21/27 project contract values undisclosed; division revenue/headcount not published; TRIR/EMR/DART not published; Place fields (lat/lng) on all records (no-geocoding rule); London street address null in dossier; UEI/CAGE conflict unresolved (pending SAM.gov verification). ENR LA Forum and LACMTA C-Line dates genuinely unknown (dossier: "exact date not confirmed").
+
+---
+
+## Audit — 2026-06-11 (notion-audit pass — current)
+
+### Filled
+Nothing — all live records confirmed complete. Zero writes needed.
+
+### Verified complete (live re-fetch 2026-06-11)
+- **Company record** `18490644`: all key properties populated ✓ (Description, Address/place/lat-lng, BW Category [Builder, Advisor], Country [9 values], 31 Construction Projects, 31 Companies Software, 53 People, Website, LinkedIn) ✓.
+- **6 Divisions** (Energy, Infrastructure, Mining & Metals, NS&E, M&T, Bechtel Enterprises): Companies full database relation ✓, People ✓, Projects ✓, body ✓, icons ✓.
+- **6 Memberships** (BRT, CII, NEI, ETEBA, CCITNZ, NABTU): all present, Companies full database → company ✓. Membership completeness check (3d): all 6 sourced memberships confirmed present ✓.
+- **11 Events**: Companies full database ✓, NVIDIA GTC 2025 date (2025-10-28) ✓, Location tags set on all 11 ✓ (Texas, Georgia, Tennessee, Pennsylvania, Washington DC, South Carolina, California, Thailand options confirmed in schema).
+- **16 Locations**: all present with Adress text ✓, Companies full database ✓, Division ✓.
+- **31 Projects total** (27 original + 2 from Bechtel1 round + 4 net-new from Bechtel1.md: Cold Creek Solar $460M TX, Mammoth Solar IN, Eva Copper Mine Australia, QB2 Chile): all have Contractors → Bechtel + Owning Department set ✓. Eva Copper + QB2 have no Location tag (schema lacks Australia/Chile options; bodies carry location ✓).
+- **31 Software**: Companies relation set ✓.
+
+### Left empty (genuinely sourceless — confirmed)
+Contract values: most project values undisclosed (only Port Arthur $10.5B, Rio Grande $12B, WSI Airport $3.5B, Dulles $1.177B, Sabine Pass Stage 5 $4.69B, WIPP $3B, Cold Creek $460M disclosed). Mammoth Solar contract value undisclosed (dossier: "1.3 GW across 3 phases" only). Division revenue/headcount not published. TRIR/EMR/DART not published. Place (lat/lng) on all records (no-geocoding rule). London street address null in dossier. UEI/CAGE conflict unresolved (pending SAM.gov verification). ENR LA Forum + LACMTA C-Line dates genuinely unknown. Eva Copper Mine + QB2 Location tags: no Australia/Chile schema options — kept in body only.
 
 ## Conflicts between the two dossiers (Bechtel2 = primary)
 - **Division count:** Bechtel2 = 6 (incl. Bechtel Enterprises); Bechtel1 = 5. Loaded all 6.
