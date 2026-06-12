@@ -98,6 +98,23 @@ Key values: Homer City $10,000M · CA HSR $3,500M · Canada nuclear $3,200M · B
 
 ---
 
+## Audit pass — 2026-06-12 (#4 — /notion-audit skill, full build re-verification)
+
+**1 data error corrected:**
+- TECO CHP `37d90644-d524-81d4` — Adress was Tampa FL (wrong city). Corrected → Texas Medical Center, Houston TX 77030 (29.7061/-95.3961). Source: https://www.kiewit.com/projects/teco-combined-heat-and-power-plant/
+
+**Location multi-select rebuilt + all 39 projects tagged (3e):**
+- Prior audit (06-11) Location writes had been lost (schema reset to 4 options). Re-added 24 new options to Construction Projects Location multi-select (additive, preserving existing 4). Then applied Location tags to all 39 Kiewit projects from dossier. ECA LNG (Mexico) untaggable — no Mexico option, stays in body.
+
+**3a–3e confirmed complete:**
+- 27 divisions → Companies=Kiewit ✓; 39 projects → Contractors=Kiewit ✓; 2 people → Company ✓
+- 8/8 memberships present + company-linked ✓; 6/6 events + company-linked ✓; 8/8 software ✓
+- 27 division Adress places filled; 25/39 project Adress places filled (14 genuinely sourceless multi-site)
+- Company record: all properties filled; 39 Construction Projects / 8 software / 615+ people
+- Confirmed genuinely sourceless: Lanoha+Miles LinkedIn · most event dates · Kiewit Louisiana/Supply Network addresses · ECA LNG Location tag · 14 project Adress (multi-state) · division People edges (26/27)
+
+---
+
 ## Audit pass — 2026-06-11 (post-load verification)
 
 **3 fills:**
