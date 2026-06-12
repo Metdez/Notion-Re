@@ -126,6 +126,25 @@ Company ↔ 26 Construction Projects ✓ · Company ↔ 15 People ✓ (3 new) ·
 - **SBBA flag still open:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
 - **Genuinely sourceless (confirmed):** same list as prior runs.
 
+## Audit fills (2026-06-12 — notion-audit pass 6)
+- **2 new writes** from Cianbro3.md source gaps not previously loaded.
+
+### New Software row
+- **CMiC (Cianbro — ERP/project financials)** `37d90644-d524-81e8-85f6-ce6c26772e0e` — Software used=CMiC · Location=United States · Companies full database→Cianbro. Source: [cianbro.com/careerdetail?11fb4601_page=72](https://www.cianbro.com/careerdetail?11fb4601_page=72) (job posting names CMiC alongside Procore and P6). Company `Companies Software` relation updated: 7→**8** software rows.
+
+### New Construction Project
+- **PNSY Dry Dock 2 Complex Pre-Construction Services** `37d90644-d524-816b-b419-ea0a60288171` — Type=Infrastructure · Status=In progress · Location=Maine · Value=$99,572,000 · Date=2024-12-06→2027-07-21 · Contractors→Cianbro · Owning Department→Infrastructure. Source: [USASpending](https://www.usaspending.gov/award/CONT_AWD_N6247025C4000_9700_-NONE-_-NONE-) (PIID N6247025C4000). Company Construction Projects relation updated: 26→**27** projects. Infrastructure division Projects relation updated: 14→**15** projects.
+
+### Verified complete (no new gaps found)
+- Company record, 13 divisions, 35 people, 27 projects, 14 locations, 5 events (all location-tagged correctly), 24 memberships, 8 software, 13 sources — all relations intact.
+- **SBBA flag still open:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified. Recommend Zack confirm or rename to "SBBA".
+
+### Genuinely sourceless (confirmed, same list)
+EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates · per-state license numbers · Cianbro revenue share of JV/program totals · project Adress places (no lat/lng for most) · most people Email/Phone/LinkedIn · Starcon Adress place (La Porte TX HQ has no sourced lat/lng).
+
+### Data quality note (not acted on — field already populated)
+A/Z Corporation `place:Adress` is set to Bloomfield CT (40 East Dudley Town Road) from the prior audit fill (Cianbro2.md). The primary HQ per dossier is North Stonington CT (46 Norwich Westerly Rd). The place property is already filled — additive protocol prevents overwriting. Flagged for Zack to correct manually if desired.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).
