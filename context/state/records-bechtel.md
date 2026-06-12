@@ -185,6 +185,31 @@ Contract values (21/31 undisclosed). Division revenue/headcount (not published).
 
 ---
 
+## Audit — 2026-06-12 (notion-audit current session, location-tag fills)
+
+### Filled
+- **Hanford Waste Treatment & Immobilization Plant (WTP)** `37b90644-d524-819a-baa1-f147ecbf1f9a`: `Location` set → ["Washington"]. Project at Richland (Hanford Site), WA; "Washington" option confirmed in Projects Location multi-select schema. Source: https://www.bechtel.com/projects/hanford-waste-treatment-plant/. Verified live post-write.
+- **Morava Corridor Motorway** `37b90644-d524-81e6-aac2-d594c7d6cff0`: `Location` set → ["Europe"]. Project in Serbia; "Europe" is closest available option in schema (no "Serbia" option exists). Source: https://www.bechtel.com/projects/morava-motorway/. Verified live post-write.
+
+### Observed (no action — net-new from another session 2026-06-12)
+- **Los Angeles — Satellite Office** `37d90644-d524-8124-9de0-d5b926dbc94a`: Created 2026-06-12 (source: Craft.co). Has Adress text + Companies full database=Bechtel. Division relation empty — genuinely sourceless (neither dossier assigns LA office to a specific division).
+- **New York — Satellite Office** `37d90644-d524-8132-903c-e95bf7326058`: Same as above. Division empty, genuinely sourceless.
+- **Boston Central Artery/Tunnel Project (Big Dig)** `37d90644-d524-8192-915b-e2a5befdf2ea`: Created 2026-06-12. Already fully populated (Contractors=Bechtel, Owning Department=Infrastructure, Location=[Massachusetts, Boston], Type=Transportation, Status=Done, Value=$14,600M, dates set, body complete). No action needed.
+
+### Locations count update
+16 original locations → now 18 (LA Satellite + NY Satellite added by another session).
+
+### Already complete — no other changes needed
+Company record (18490644) · 6 Divisions · 6 Memberships · 11 Events · 18 Locations · 31+ Projects · 31 Software all confirmed intact.
+
+### Left empty (genuinely sourceless — confirmed)
+Same list as all prior passes. John Platt LinkedIn (not in either dossier). Division Adress (place) empty per no-geocoding rule. LA/NY location Division relation (no dossier source). Body detail on Brendan Bechtel/Craig Albert/Hennessey (titles only in dossier). Contract values on most projects (undisclosed). UEI/CAGE conflict unresolved (pending SAM.gov). Eva Copper Mine + QB2 Location tags (no Australia/Chile schema options).
+
+### Write-format note
+Notion MCP multi-select writes require JSON-encoded string value `"[\"Washington\"]"` not a raw array — raw array returns `InputValidationError: expected string, received array`.
+
+---
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view (page-local linked view of shared Construction Projects) → clear `__TEMPLATE__` filter, set Contractors = Bechtel Group (relation CONTAINS filters can't be set via API — UI only).
 2. **Existing Software** view → clear `__TEMPLATE__` filter, set Companies = Bechtel Group.
