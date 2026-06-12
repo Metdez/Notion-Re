@@ -68,6 +68,19 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 - Employees ~1,200 (LeadIQ) vs ~1,500 (older snapshot) — both kept.
 - Gaps the dossier itself flags (EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, litigation, exact 2024 revenue, most office street addresses) — **do not fill** (no source).
 
+## Audit log — 2026-06-12 (Pass #2)
+**Full audit run (3a–3e).** Checked: company record, 5 divisions, 13 people, 20 projects, 14 owners, 12 locations, 2 events, 1 membership, 7 software.
+**1 fill executed:**
+- Company body Snapshot: corrected stale "~$1.67B revenue (2025)" → "~$2.3B revenue (2025)" with ENR #61 national + ENR East #15 + broader sector list. ([PRNewswire Jan 2026](https://www.prnewswire.com/news-releases/shawmut-design-and-construction-announces-bold-growth-strategy-including-new-leadership-roles-and-entry-into-mission-critical-302665935.html))
+
+**1 deferred:**
+- `Country` missing **Nevada** — "Nevada" option not in shared Companies DB multi-select. Needs shared-schema-alters pass.
+
+**Genuinely sourceless:** EMR/TRIR, bonding/surety, UEI/CAGE/DUNS, state license #s, per-office addresses beyond HQ+San Diego, litigation, per-project delivery/architect/dates for most, contract values for 13/19 projects, memberships beyond AGC.
+**Profile page:** now titled "Shawmut" (TEMPLATE suffix gone — prior session). Attack Plan section present.
+**3d membership check:** AGC of America is the only corporate membership in the dossier. Confirmed complete.
+**3e location tags check:** both events tagged correctly. Locations table uses text Adress field (schema design) — no place property to audit.
+
 ## Audit log — 2026-06-10 (this session)
 **Full audit run.** Checked: company record, 5 divisions, 13 named people, 20 projects, 14 owners, 12 locations, 2 events, 1 membership, 7 software records.
 **Result: 0 fills executed.** Build from prior session (2026-06-10 ~10:52) was complete. No properties found that were both (a) empty AND (b) have a sourced value in the dossier not yet applied.
