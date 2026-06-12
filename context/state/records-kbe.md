@@ -111,112 +111,38 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 DUNS · EIN · CT/MD state entity IDs · numeric EMR/TRIR/DART · surety provider · insurance carriers · division-level revenue/headcount · FPDS PIIDs/obligation amounts · MBE/WBE/8(a) certs (none — merit-shop).
 Event `place:Place` on Golf Tournament + CBC events — dossier gives only "Connecticut" (no venue address).
 
-## Audit (2026-06-11 — hourly cycle)
-**Result: No fills needed. Record fully up to date.**
-Verified live: company record, 3 divisions, 14+ projects, 6 memberships, 4 events. All fields that have sourced data are already populated. No new gaps found vs. 2026-06-10 state. Genuinely sourceless fields remain empty (see above).
+---
 
-## Audit (2026-06-11 — notion-audit skill pass)
-**3 location tag fills applied (3e — city-level tags missing):**
-| Project | ID | Tag added |
-|---|---|---|
-| The August at Steelpointe Harbor | 37b90644-d524-814c | + Bridgeport |
-| Residence Inn by Marriott (Steelpointe Harbor) | 37b90644-d524-81e4 | + Bridgeport |
-| UConn Health Emergency Department Expansion | 37b90644-d524-8120 | + Farmington |
+## Audit pass #6 (2026-06-12 — notion-audit skill, KBE2.md additional_federal_awards)
 
-**Schema change:** Added "Bridgeport" and "Farmington" as new options to Construction Projects `Location` multi-select (additive, all existing options preserved). Source: dossier city-level project locations.
+**Ground truth used:** `KBE2.md` — `additional_federal_awards` section (2 projects absent from all prior dossiers + loads).
 
-All other records verified: company, 3 divisions, 6 memberships, 7 events, all remaining projects — no further gaps found. Genuinely sourceless fields remain empty (see above).
+### Findings
+- **All 36 KBE2.md projects** verified present in Notion EXCEPT the 2 below — systematically searched by name; confirmed absent before creating.
+- **11 memberships** in Notion: ABC-CT · ABC Metro Washington · ABC Baltimore/Chesapeake · Arizona Builders Alliance · CBC · Stamford Chamber · ABC-CT EIC Awards (event) · Women in Construction (pre-existing event) — matches all sourced memberships; DBIA/USGBC/AGC national explicitly "not fully confirmed" in KBE2.md → NOT added (genuinely sourceless).
+- **4 software rows** confirmed: Procore · Sage 300 CRE · On-Screen Takeoff · iSqFt — all linked to KBE; matches KBE2.md confirmed stack.
+- **Company record, 3 divisions, 9+ events, interconnection graph** — verified clean.
 
-## KBEboston.md load (2026-06-12)
-**Ground truth:** `Enlaye Notion/KBE Building/KBEboston.md`. 0 confirmed MA projects. 21 CT nearest-New-England context projects → 14 net-new loaded.
+### 2 net-new projects created
+Both from KBE2.md `additional_federal_awards`; both linked Contractors→KBE, Zack Database→KBE Northeast; Adress place filled with coords; sourced body.
 
-**14 new projects created** (all KBE Northeast; CT-based; Adress place set on all 14):
-| Project | ID | City |
-|---|---|---|
-| Choate Rosemary Hall – Pedestrian Bridge | 37d90644-d524-8191-9cac-d4b7ef0253e8 | Wallingford |
-| Choate Rosemary Hall – Welcome Center & Parking Garage | 37d90644-d524-81fe-889d-d88eee1c3ce2 | Wallingford |
-| Sacred Heart University Community Theatre | 37d90644-d524-8146-ac85-d335ddfb4d70 | Fairfield |
-| Seabury Active Life Community – The Collamore Wing | 37d90644-d524-8163-a00f-ea6a4c566b1b | Bloomfield |
-| Seabury Active Life Community – Earlier Phase | 37d90644-d524-81b6-9a18-d38c10092de1 | Bloomfield |
-| The Linden at Brookfield | 37d90644-d524-8149-9537-e0d621396dc4 | Brookfield |
-| The Vero at Orange | 37d90644-d524-8114-94b8-f292a92b3fff | Orange |
-| Piper (TB Norwalk Apartments) | 37d90644-d524-810c-95d0-cc806a683289 | Norwalk |
-| The Station House Greenwich | 37d90644-d524-816b-93f9-cba1a8d511b4 | Old Greenwich |
-| SoNo Collection | 37d90644-d524-8113-ad0c-f0604a784eed | South Norwalk |
-| 1928 Farmington Town Hall | 37d90644-d524-813c-a10d-e18f6c72b6cb | Farmington |
-| City of Waterbury ARPA/ESSER School Renovation Program | 37d90644-d524-8139-8bea-e23bd02bf774 | Waterbury |
-| 200 Connecticut Avenue | 37d90644-d524-818a-8924-fe066720cdd2 | Norwalk |
-| OneBeacon Insurance Group | 37d90644-d524-8105-9271-c7d196ad5154 | Farmington |
-
-**Company CP relation:** updated from 19 → **33 URLs** (one-way, full list re-passed).
-**Schema:** Projects Location +Wallingford/Fairfield/Bloomfield/Orange/Old Greenwich/Waterbury (additive, 129→135 options).
-**Not loaded:** no MA projects (0 confirmed MA sites in dossier). KBE West "assisted-living multiple states incl. MA" = low-confidence aggregate, no name/city/date.
-
-## Audit (2026-06-11 — notion-audit skill pass #2)
-**Result: No fills needed. Record fully up to date.**
-Verified live (parallel fetches): company record (`1cf90644`) — all properties populated (Description, Type, Country ×7, Address place, BW Category, LinkedIn, Website, 19 Construction Projects linked, body complete). 3 divisions (NE/MA/West) — all linked to company, People, Projects; Adress place filled on all 3; bodies complete. 7 net-new projects + 12 pre-existing — Adress place filled on all checked; Location multi-select tags applied (Bridgeport+Farmington confirmed from prior pass); bodies sourced and complete. 6 memberships confirmed in live Memberships DB (ABC-CT, ABC Metro Washington, ABC Baltimore/Chesapeake, Arizona Builders Alliance, CBC, Stamford Chamber). 4 events confirmed (KBE Annual Golf Tournament + CBC Project Team Awards + 2 pre-existing). Locations table schema is text-only (no place/relation fields; accepted per prior notes). No fillable gaps identified. Genuinely sourceless fields remain empty (see §Left empty above).
-
-## Audit (2026-06-11 — notion-audit skill pass #3)
-**Result: No fills needed. Record fully up to date.**
-Full parallel re-audit against live Notion and dossier KBE.md.
-- **Company record** (`1cf90644`): all properties populated ✓ (Description, Type, Country ×7, Address place, BW Category, LinkedIn, Website, 19 CP links, body complete).
-- **3 divisions** (NE/MA/West): Companies + People + Projects relations ✓; Adress place ✓; bodies complete ✓.
-- **19 projects**: Contractors (KBE) ✓, Zack Database (division) ✓, Adress place ✓, Location tags ✓, sourced bodies ✓. Mozaic duplicate (`…81d1` + `…814b`) still live — manual merge required (Zack).
-- **6 memberships** (3d — completeness check ✓): ABC-CT, ABC Metro Washington, ABC Baltimore/Chesapeake, Arizona Builders Alliance, CBC, Stamford Chamber — all present with Companies relation ✓ and sourced bodies ✓. Ledger IDs had minor UUID variants; all records confirmed live via search.
-- **7 events** (all linked to KBE): InterFace Active Adult, CALA/ISLE, CT ABC EIC Awards, CT ABC Women in Construction, CT ABC Membership Meeting, KBE Golf Tournament, CBC Project Team Awards. Company relation ✓ on all. Place filled on 5; Golf Tournament + CBC = genuinely sourceless (no venue address in dossier).
-- **Location tags** (3e): all projects and events with location data tagged ✓.
-- **Interconnection** (3a): verified — all division → company ✓, all projects → division + company ✓, all memberships/events → company ✓.
-- **No new fillable gaps found.** Genuinely sourceless fields remain empty (see §Left empty).
-
-## Audit (2026-06-12 — notion-audit skill pass #4)
-**Result: No fills needed. Record fully up to date.**
-Full re-audit against live Notion and dossiers KBE.md + KBEboston.md (partial read KBE2.md — 36-proj 298KB file, partial read only; core fields confirmed).
-- **Company record** (`1cf90644`): all properties populated ✓ (Description, Type, Country ×7, Address place, BW Category, LinkedIn, Website, 43 CP links, body complete).
-- **3 divisions** (NE/MA/West): Companies + People + Projects relations ✓; Adress place ✓; bodies complete ✓.
-- **43 Construction Projects** (includes 14 KBEboston.md + 9 pre-existing net-new): Contractors (KBE) ✓, Zack Database (division) ✓, Adress place ✓, Location tags ✓, sourced bodies ✓. Spot-checked Choate Rosemary Hall Bridge + Seabury Collamore Wing — fully wired.
-- **6 memberships** (3d — completeness check ✓): ABC-CT `37b90644-d524-815f`, ABC Metro Washington `…8180-823a`, ABC Baltimore/Chesapeake `…8152-ba82`, Arizona Builders Alliance `…81d0`, CBC `…81a2`, Stamford Chamber `…81c9-9a96` — all present with Companies relation ✓ and sourced bodies ✓. (Note: 3 ledger UUIDs had wrong suffixes — confirmed correct IDs via live Notion search.)
-- **9 events** (all linked to KBE ✓): KBE Annual Golf Tournament, CBC Project Team Awards, CT ABC EIC Awards, CT ABC Women in Construction, CT ABC Membership Meeting, InterFace Active Adult, CALA/ISLE, + 2 pre-existing. Company relation ✓ on all 9. Place/venue = genuinely sourceless on Golf Tournament + CBC events (no venue address in any dossier).
-- **Location tags** (3e): all projects and events with location data tagged ✓.
-- **Interconnection** (3a): all division → company ✓, all projects → division + company ✓, all memberships/events → company ✓.
-- **No new fillable gaps found.** Genuinely sourceless fields remain empty (see §Left empty). Persisting data-quality issues (Mozaic duplicate, stray Bridgeport row, TEMPLATE stubs) remain for Zack UI action.
-
-## Audit (2026-06-12 — notion-audit skill pass #5)
-**Result: 2 fills applied. 1 data-quality issue flagged. 5 net-new memberships + 2 net-new events discovered (from a prior session, not in ledger) — all fully wired, no action needed.**
-
-### Fills applied
-| Record | ID | Field | Value written | Source |
+| Project | ID | Location | Value | Source |
 |---|---|---|---|---|
-| Special Olympics Unified Fishing Tournament | `37d90644-d524-810c-bae4-c486d1891216` | Location tags | Connecticut | kbefoundation.org/events/ |
-| KBE Foundation Construction Career Scholarship Awards Night | `37d90644-d524-8178-8201-dfc7b85463b8` | Place (place property) | Farmington Gardens, Farmington, CT (41.726 / -72.832) | kbebuilding.com/news/ (body: "May 13, 2025 at Farmington Gardens, CT") |
+| Naval Submarine Base Commissary (Groton) | 37d90644-d524-81d1-8ff6-cdd252308cfe | Groton, CT 06340 (41.3535/-72.0887) | $14.5M | kbebuilding.com/portfolio-cat/government/ |
+| Armed Forces Reserve Center (Middletown, CT) | 37d90644-d524-81a6-94e7-e8dba20bb68b | Middletown, CT 06457 (41.5623/-72.6506) | Design-Build | kbebuilding.com/portfolio-cat/government/ + awards-recognition |
 
-### New records discovered (from prior 06-12 session — not in ledger until now)
-**11 net-new memberships** (all linked to KBE `1cf90644`, Companies full database ✓, sourced bodies ✓):
-| Name | ID |
-|---|---|
-| AGC-CT / CCIA | `37d90644-d524-8114-816f-f56c5435395b` |
-| Greater Norwalk Chamber of Commerce | `37d90644-d524-81dd-832c-fda6809246f8` |
-| WESTMARC | `37d90644-d524-8195-b7b7-caccf6f48b9e` |
-| National Builders Alliance | `37d90644-d524-81a7-80f6-fc094cb5ec31` |
-| Retail Contractors Association (RCA) | `37d90644-d524-8151-a46b-dbd7d1c691da` |
+### Company record update
+- `1cf90644-d524-802a` `Construction Projects` relation updated **43 → 45 URLs** (full list re-passed with both new project URLs appended; additive replace).
 
-**2 net-new events** (all linked to KBE, Companies relation ✓):
-| Name | ID | Notes |
-|---|---|---|
-| Special Olympics Unified Fishing Tournament | `37d90644-d524-810c-bae4-c486d1891216` | Location tags now filled (this pass) |
-| KBE Foundation Construction Career Scholarship Awards Night | `37d90644-d524-8178-8201-dfc7b85463b8` | Place now filled (this pass); Date: 2025-05-13 |
+### New data-quality issues (not auto-fixed — non-destructive rule)
+- **Station House Greenwich duplicate ×3:** `37c90644…` (rich) + `37d90644…81b5` + `37d90644…816b` (2 thin copies from prior sessions). Recommend Zack trash the 2 thin copies.
+- **SoNo Collection duplicate ×3:** similar pattern — rich copy + 2 thin copies from prior sessions. Recommend Zack trash 2 thin copies.
+- **Choate Rosemary Hall Pedestrian Bridge** `37d90644…` — still DELETED (in trash). Recommend Zack restore if the project should remain.
 
-**Total memberships now in Notion:** 11 (ABC-CT, ABC Metro Washington, ABC Baltimore/Chesapeake, Arizona Builders Alliance, CBC, Stamford Chamber, AGC-CT/CCIA, Greater Norwalk Chamber, WESTMARC, National Builders Alliance, RCA)
-**Total events now in Notion:** 11+ (KBE Golf Tournament, KBE Foundation Scholarship Awards Night, CBC Project Team Awards, CT ABC EIC Awards, CT ABC Women in Construction, CT ABC Membership Meeting, InterFace Active Adult, CALA/ISLE, Special Olympics Fishing Tournament + pre-existing)
+### Persisting data-quality issues (unchanged)
+- Mozaic duplicate: `37790644-d524-814b` + `37790644-d524-81d1` — same Stamford project.
+- "Bridgeport" stray division row `37690644-d524-8010` — satellite stub; pre-existing.
+- 3 trashed/mislabeled Mid-Atlantic rows under TEMPLATE — left as-is.
 
-### Data-quality issue flagged (for Zack)
-- **Choate Rosemary Hall – Pedestrian Bridge** `37d90644-d524-8191-9cac-d4b7ef0253e8` — page is marked **DELETED** in Notion (shows `deleted` attribute on fetch). Was created 2026-06-12 during KBEboston.md load. Content and links are still visible but the page is in trash. If this project should be live, Zack needs to restore it from trash in the Notion UI.
-
-### Already complete (no fill needed)
-- Company record: all properties ✓
-- 3 divisions: relations + Adress place + bodies ✓
-- 43 Construction Projects: wired to KBE + division, Adress place, Location tags ✓
-- All events/memberships: Companies relation ✓, Location tags ✓ on all with known locations
-- KBE Annual Golf Tournament + CBC Project Team Awards — Place still genuinely sourceless (no venue confirmed in any dossier)
-
-### Genuinely sourceless (leave blank)
-Same as prior audits: EMR/TRIR/DART numerics · surety provider · insurance carriers · division-level revenue/headcount · DUNS/EIN/state entity IDs · FPDS PIIDs · Golf Tournament and CBC Project Team Awards venue addresses.
+### Genuinely sourceless (confirmed, no write)
+EMR/TRIR/DART · surety provider · insurance carriers · DUNS/EIN/state IDs · FPDS PIIDs · Golf Tournament + CBC Project Team Awards venue addresses · DBIA/USGBC/AGC national memberships (unconfirmed in KBE2.md).
