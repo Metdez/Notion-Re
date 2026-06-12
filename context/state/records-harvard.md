@@ -164,6 +164,33 @@ All 13 projects fetched live. Full pass:
 - Barker Center / Steam Tunnel 29/30 / ESL SEAS `Contractors` — GC not publicly disclosed
 - All department `LinkedIn` / `Website` — not in source
 
+## Audit log — 2026-06-12 (pass 4 — notion-audit skill)
+**2 fills — department Website fields.**
+
+Live-fetched: all 13 projects (full audit agent), 8 department companies (parallel agent). Cross-checked against dossiers `1Harvard University Construction Intelligence Resea.md` + `2Harvard Researsch.md`.
+
+**Filled — Website property on 2 departments:**
+- FAS House Renewal PMO `37990644-d524-811d-bf3b-df3091837c8e` → `https://oprp.fas.harvard.edu/capital-project-management` (source: dossier 1, seed URL list)
+- Harvard Office of the EVP `37990644-d524-8159-b043-f9c1ea28270e` → `https://evp.harvard.edu` (source: dossier 1, `evp.harvard.edu/people` used as stakeholder source → root URL is the department's public site)
+
+- **3a (relations):** All owner↔department↔project↔people↔GC edges intact. No missing edges found.
+- **3b (body depth):** All 13 project bodies complete. 4 thin records (Barker, Steam Tunnel, ESL, Lewis) confirmed genuinely sourceless — no additional detail available in dossier. Department bodies adequate.
+- **3c (addresses):** NASDEP, Steam Tunnel 29/30, Lewis Law Center street addresses remain blank — confirmed corridor/campus-area only in source. All other projects have `place:Adress` set. No change.
+- **3d (memberships):** N/A — Owner entity, no memberships table.
+- **3e (location tags):** All 13 projects have Location populated. No missing tags.
+
+**Genuinely sourceless — confirmed (no change from prior passes):**
+- All 13 projects: `Contrat Value in Million` blank on 10 of 13 (ERC $1,500M, NASDEP $50M, HMS Bertarelli $75M already set; rest NOT DISCLOSED in dossier)
+- Barker Center / Steam Tunnel 29/30 / ESL SEAS Contractors — GC not publicly disclosed
+- ESL SEAS Date start/end — not disclosed in source
+- Lewis Law Center Date start/end — not disclosed in source
+- NASDEP / Steam Tunnel 29/30 / Lewis Law Center / Pritzker Hall precise street addresses — sourced as corridor/campus area or estimated only
+- Harvard Capital Projects `Website` — only source is an intranet URL (not public-facing)
+- Harvard Real Estate `Website` — no public website URL in dossier
+- All department `LinkedIn` — not in source
+
+**False positives rejected:** None.
+
 ## Audit log — 2026-06-11 (pass 3 — notion-audit skill)
 **0 fills — all records complete.**
 
