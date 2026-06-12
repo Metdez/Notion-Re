@@ -81,6 +81,15 @@ Full re-verify of all 16 records (added `Jingoli1.md` as second dossier). One fi
 - **Memberships (3d):** none — both dossiers confirm null.
 - **Software:** `Jingoli1.md` surfaces Procore, Oracle Primavera P6, Hard Dollar (broader Jingoli entity / nuclear job posts). Existing Software DB is shared → DEFERRED (shared rows).
 
+## Audit pass 2026-06-12 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 Jingoli projects + 1 location + 1 event + local table schemas). Ground truth: `Jingoli.md`. No fillable gaps found from dossier source — all sourced fields already populated.
+- **New data observed (not by this audit):** Company body has "Jing3 Enrichment (2026-06-12)" section — legal name, founded (1922), revenue ($884M), ENR Top 400 #153, ENR Power #15, 1,500+ employees, phone, CEO, COO, 19+ states. Added in a separate session after last ledger entry. PSEG ISFSI project now shows $27M contract value (was null in dossier).
+- **Interconnection (3a) ✓:** all edges confirmed — 5 divisions→company; Nuclear Services→Mockaitis + 11 projects; Power→Karl Miller + 5 Power projects; all 5 Jingoli projects→Contractors; both people→company; Location→company+division; Event→company. People `Division` property still deferred (global Divisions DB `37690644` has no Jingoli rows).
+- **Description-depth (3b) ✓:** all project + division bodies carry full sourced depth.
+- **Address/location (3c):** place fields genuinely unfillable — no lat/lng in dossier; no-geocoding rule unchanged. Location row `Adress` text ✓.
+- **Memberships (3d):** none in dossier → none in Notion ✓.
+- **Location tags (3e):** Event "New York" ✓ (set in prior pass). No other located records with missing tags.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).

@@ -66,6 +66,25 @@ Business Roundtable, Construction Industry Institute, Nuclear Energy Institute, 
 ## Interlink graph (verified by company re-fetch)
 Company ↔ People (52: 37 existing + 15 new) ✓ · Company → Construction Projects (25) ✓ · Company → Companies Software (30) ✓ · Division → Company (all 6) ✓ · Division → People + Projects (all set) ✓ · Project → Contractors + Owning Department (all 25) ✓ · Location → Company + Division ✓ · Event/Membership/Software → Company ✓.
 
+## Audit — 2026-06-12 (notion-audit pass)
+
+### Filled
+- **Energy division** `37b90644-d524-817a`: `Adress` place set → CityWestPlace, 2105 CityWest Blvd, Houston TX 77042. (Bechtel2.md / bizjournals)
+- **Mining & Metals division** `37b90644-d524-8157`: `Adress` place set → Santiago, Chile (primary HQ). (Bechtel2.md / Wikipedia)
+- **Manufacturing & Technology division** `37b90644-d524-818a`: `Adress` place set → 3133 W Frye Road, Chandler AZ 85226. (Bechtel2.md / bechtel.com press release)
+
+### Post-prior-audit additions (found present, not needing fill)
+- **Gastech 2025** (Milan/Italy) event added since last audit; fully populated (date, Italy tag, Fiera Milano place coords) — no gaps.
+- **3 new location rows** (New York, Los Angeles, Richland) added since last audit; all have Adress text, Companies relation, Division relation — no gaps.
+
+### Confirmed no-gap
+All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relation ✓. All 6 memberships: Companies relation ✓. All 16+3 locations: Adress text ✓, Companies ✓, Division ✓. All 6 divisions: Companies ✓, People ✓, Projects ✓, Adress now ✓ (all 6).
+
+### Left empty (no sourced value per dossier gaps)
+21 of 25 project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only in dossier, no street addresses); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting — flagged for manual SAM.gov verification).
+
+---
+
 ## Audit — 2026-06-10 (notion-audit pass)
 
 ### Filled

@@ -146,3 +146,49 @@ Both from KBE2.md `additional_federal_awards`; both linked Contractors→KBE, Za
 
 ### Genuinely sourceless (confirmed, no write)
 EMR/TRIR/DART · surety provider · insurance carriers · DUNS/EIN/state IDs · FPDS PIIDs · Golf Tournament + CBC Project Team Awards venue addresses · DBIA/USGBC/AGC national memberships (unconfirmed in KBE2.md).
+
+---
+
+## Audit pass #7 (2026-06-12 — notion-audit skill, KBE.md full re-audit)
+
+**Ground truth used:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier).
+
+### Audit scope
+Full read-only scan across: company record · 3 divisions (NE/MA/West) · all events (9 in DB) · all memberships (11 in DB) · sampled projects (15+ fetched) · Locations DB · Company Map (Zack Database) structure.
+
+### Findings — all clean, no writes needed
+
+**Company record `1cf90644-d524-802a`:** All key properties filled (Description, Type, Address place, Countries, Construction Projects=45 URLs, LinkedIn, Website, BW Category). Body complete (Snapshot/Leadership/Safety/Risk/Sources + Boston BD context). No gaps.
+
+**Divisions (3 rows in Zack Database):**
+- KBE Northeast `37690644-d524-8037`: Companies rel ✓ · People (63 linked) ✓ · Projects (44 linked) ✓ · Adress place (Farmington) ✓ · bio body ✓
+- KBE Mid-Atlantic `37690644-d524-807c`: Companies rel ✓ · People (6) ✓ · Projects (9) ✓ · Adress place (Laurel, MD) ✓ · bio body ✓
+- KBE West `37690644-d524-80e6`: Companies rel ✓ · People (4) ✓ · Projects (2) ✓ · Adress place (Scottsdale, AZ) ✓ · bio body ✓
+
+**Events (9 rows in Events DB):** All linked to KBE via Companies full database ✓. Place/Location tags check:
+- ABC EIC Awards (2026): Place = Aqua Turf Club, Plantsville CT ✓; tags = Connecticut + Southington + Plantsville ✓
+- ABC WIC Breakfast (2026): Place = Bristol Event Center CT ✓; tag = Connecticut ✓
+- KBE Foundation Scholarship Night: Place = Farmington Gardens CT ✓; tag = Connecticut ✓
+- InterFace Active Adult: Place = Plano TX ✓; tags = Texas + Plano ✓
+- KBE Annual Golf Tournament: Place EMPTY — no venue address in any source → genuinely sourceless (confirmed)
+- CBC Project Team Awards: Place EMPTY — dossier says "Connecticut" only → genuinely sourceless (confirmed)
+- Special Olympics Fishing Tournament: Place EMPTY — no venue in dossier → genuinely sourceless (confirmed)
+- ABC-CT Membership Meeting (2026) + CALA/ISLE 2026: pre-existing events, not KBE-specific; linked to KBE.
+
+**Memberships (11 rows confirmed in Memberships DB):** ABC-CT · ABC Metro Washington · ABC Baltimore/Chesapeake · Arizona Builders Alliance (ABC) · CBC · Stamford Chamber · Greater Norwalk Chamber · WESTMARC · National Builders Alliance · AGC-CT/CCIA · Retail Contractors Association. All linked to KBE ✓. Matches full sourced list from KBE.md + KBE2.md. No missing memberships from KBE.md dossier.
+
+**Projects sampled (15+ checked):** All have Contractors→KBE ✓, Zack Database→division ✓, Adress place filled ✓, sourced body ✓. Includes: The August, Stonington Village, Mozaic, Wampanoag CC, SUNY Grace Hall, Sunrise Tarrytown, Residence Inn, UConn Health ED, Annapolis Commissary, NASCAR Clash, Naval Sub Base Commissary, Armed Forces Reserve Center, Choate Rosemary Hall Pedestrian Bridge.
+
+**Locations DB `37690644-d524-803c`:** Empty (zero rows). Intentionally left unpopulated — addresses live on division Adress place fields and company Address place. No change.
+
+### No writes executed
+All sourced data already present in Notion. Zero fillable gaps found from KBE.md ground truth.
+
+### Data-quality issues updated
+- **Mozaic duplicate RESOLVED:** `37790644-d524-814b` now shows as `deleted` (in trash) — live record is `37790644-d524-81d1` only. Duplicate effectively resolved.
+- **Choate Rosemary Hall Welcome Center `37d90644-d524-813e`**: shows as `deleted` but still in KBE NE Projects list and Companies Construction Projects relation. Flag for Zack to restore or remove from relations.
+- **Station House Greenwich ×3 + SoNo Collection ×3 duplicates**: still present from prior sessions. Recommend Zack trash thin copies.
+- **"Bridgeport" stray division row `37690644-d524-8010`**: still present; pre-existing; safe to ignore.
+
+### Genuinely sourceless (confirmed for KBE.md dossier)
+DUNS/EIN/state entity IDs · EMR/TRIR/DART numerics · surety provider · insurance carriers · division-level revenue/headcount · FPDS PIIDs · Golf Tournament, CBC Awards, Special Olympics Fishing Tournament venue addresses · DBIA/USGBC/AGC national memberships.

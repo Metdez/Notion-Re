@@ -146,3 +146,27 @@
 **3e Location tags — confirmed:** all events and locations that have sourced location data carry tags. AGC Convention and INTERPHEX have no sourceable venue → tags left blank (correct).
 
 **Size conflict — unresolved:** Size=Regional vs dossier "Multinational". No new source to resolve. Zack to decide.
+
+---
+
+## Fourth pass — 2026-06-12 (notion-audit full pass — all checks re-verified)
+> Full re-audit against Clay 1.md + Clayco1.md + Clayco3.md. Read-only scan of all linked records; one fillable gap found and filled.
+
+**3a Interconnection — confirmed clean:** All 5 membership rows carry `Companies full database` → Clayco (the schema gap from pass 3 was resolved — the column now exists and all rows are linked). All 6 events carry Companies → Clayco. All 19 division rows carry Companies full database → Clayco. No new edge gaps.
+
+**3b Description depth — confirmed adequate:** All project, division, people, and event bodies have sourced depth matching ground truth. One location body was blank (see fill below).
+
+**3c Address/location check — all locations have address in text field:** Locations collection uses plain-text `Adress` field (not place type) — all 11 location rows have addresses populated. No `place` property exists on this schema; addresses are correctly held in the text field. Events with sourced venue addresses have `place:Adress` set (SelectUSA, AECTechCon). AGC Convention, Clayco Rising, INTERPHEX — no venue address in any dossier (genuinely sourceless → blank correct).
+
+**3d Membership completeness — complete:** All 5 sourced memberships present and linked to Clayco: USGBC `81bd` · DBIA `811f` · AGC-unconfirmed `8119-a1ba` · NAIOP Chicago `8154` · USGBC-CA `8139`. No new memberships named in dossiers.
+
+**3e Location tags — confirmed:** AECTechCon has [St. Louis, Missouri] ✓ · SelectUSA has [Maryland] ✓ · Clayco Rising has [Florida] ✓ · AGC Convention has no tag (no sourceable venue) ✓ · INTERPHEX has [Life Sciences] ✓ · Petfood Forum has [Food & Beverage] ✓.
+
+**Fill executed (1 item):**
+| Record | Field | Value written | Source |
+|---|---|---|---|
+| St. Louis / Berkeley, MO location `815d-bc64` | Body (was blank) | Operations hub context paragraph | https://claycorp.com/contact-us + https://claycorp.com/company-overview |
+
+**Event dates — genuinely sourceless:** SelectUSA 2026, Clayco Rising 2025, AGC Convention 2026 — no specific dates in any dossier (Clayco3 explicitly notes dates not stated). Left blank (correct).
+
+**Leftovers still blank (no source):** project contract values (15 of 32 projects) · precise project dates (most) · Size=Regional conflict unresolved · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty (no division assignment in source) · Clayco Self-Perform Group division has no Projects linked (source lists none).

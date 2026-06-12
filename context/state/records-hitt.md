@@ -65,12 +65,12 @@ All linked Company → HITT (`30a9…`). Pre-existing & kept: Fernando Arias `31
 | Jim Landefeld | 37b90644-d524-810c-afe6-f50553cb7731 | SVP Operations Technology | DC HQ |
 | Karl Sorensen | 37b90644-d524-81fe-abd4-dc63926452bb | Director, Project Solutions | DC HQ |
 
-## Projects (10 — Construction Projects DB; Contractors → HITT)
-JMACC `…81b8befa…` · Next NGA West `…8110a40a…` · Boeing SC 787 `…81899867…` · Andaz Miami Beach `…81bb8ab9…` · One Preserve Labs `…81f383db…` · Omni Homestead `…814894c1…` · QTS Data Centers `…81099135…` · NASA HQ `…815ab210…` · HITT New HQ `…81158d66…` · HCA Chippenham `…81bab3f1…`. QTS left company-level (multi-state, no single office).
+## Projects (11 — Construction Projects DB; Contractors → HITT)
+JMACC `…81b8befa…` · Next NGA West `…8110a40a…` · Boeing SC 787 `…81899867…` · Andaz Miami Beach `…81bb8ab9…` · One Preserve Labs `…81f383db…` · Omni Homestead `…814894c1…` · QTS Data Centers `…81099135…` · NASA HQ `…815ab210…` · HITT New HQ `…81158d66…` · HCA Chippenham `…81bab3f1…` · Microsoft Alviso Datacenter Campus `37d90644-d524-8129-8974-d18123b548c2` (Location=California, Adress place filled, Contractors→HITT; added Jun 12 2026). QTS left company-level (multi-state, no single office).
 
 ## Other tables
 - **Locations (16):** office addresses, each linked Company + Division (`11290644`).
-- **Memberships (7):** AGC · NAIOP · USGBC · CoreNet Global · IFMA · IIDA · DBIA — each linked Company (`79490644`).
+- **Memberships (9):** AGC · NAIOP · USGBC · CoreNet Global · IFMA · IIDA · DBIA · Associated Builders and Contractors (ABC) `37d90644…81fcbadf…` · ABC of Metro Washington `37d90644…81148d36…` — each linked Company (`79490644`).
 - **Software (6):** Procore · Bluebeam · Autodesk/BIM · OpenSpace · Hilti Jaibot · Microsoft 365 — each linked Company (`37690644` shared).
 - **Events (5):** DBIA 2025 · CONEXPO 2026 · NAIOP NoVA Awards · Construction Safety Week · Subcontractor Appreciation Day — each linked Company (`71890644`).
 - **Sources (10):** firmographics, ENR, NASA JSC, N2W, Boeing, Brycon, Central, Procore, Federal IDs, new HQ (`0f590644`).
@@ -100,6 +100,14 @@ HITT2.md (JSON) and HITT3.md (JSON) now contain content (not 0 bytes as previous
 - **Left empty-for-cause (sourceless or blocked):** Construction Safety Week / Subcontractor Appreciation Day — no specific location tags (dossier says "National" / "offices nationwide"); Size "Regional" remains (conflict with dossier "Mutlinational" — non-destructive rule prohibits overwrite of set value).
 - **DEFERRED (shared schema):** Country options `North Carolina`, `New Mexico`, `South Carolina` not in Companies DB Country schema — cannot add options without risk to shared data. UI add needed.
 - **False positives rejected:** Addresses on divisions already populated from HITT1 load — HITT3 has some updated addresses (e.g., Dallas = Frisco TX, Houston = 9300 Bamboo Rd, LA = Culver City) but fields already filled → additive rule prevents overwrite. Verified Adress (place) values set on all 18 divisions.
+
+## Post-load audit #4 (2026-06-12, /notion-audit solo agent vs HITT1.md)
+Full re-audit of all HITT records: company, 18 divisions, 11 projects, 9 memberships, 5 events, 16 locations, 5 events, all people.
+- **0 fills needed** — all records verified clean against HITT1.md ground truth.
+- **New records since last audit (pre-existing, no action needed):** Microsoft Alviso Datacenter Campus project (`37d90644…81298974…`, Location=California, Adress place set, Contractors→HITT set, complete body); ABC `37d90644…81fcbadf…` and ABC of Metro Washington `37d90644…81148d36…` memberships (both have Companies relation set + sourced bodies).
+- **Ledger updated:** Projects count 10→11; Memberships count 7→9 to reflect new records.
+- **Verified genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags (dossier: National/nationwide); Size="Regional" vs. "Mutlinational" conflict (non-destructive rule).
+- **No false positives identified.**
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.

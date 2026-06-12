@@ -99,3 +99,24 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3e location tags:** all project Location fields populated; no missing tags.
 
 **13th project found:** Lewis International Law Center Renovation `37b90644-d524-8198-a97e-fefc1444e834` (Shawmut GC, added after initial build from Shawmut dossier — not in original ledger). Owning dept: `37b90644-d524-811c-9937-c91b1e37bf88` (Harvard Law School, separate company — not in this ledger).
+
+## Audit log — 2026-06-12
+**Fill:**
+- NASDEP Status `In progress` → `Done` — source: [Allston Development Update Oct 2025](https://construction.harvard.edu/2025/11/04/allston-development-update-october-2025/) confirms substantially complete / close-out.
+
+**No fills (genuinely sourceless or already filled):**
+- All 15 project `place:Adress` fields already populated (except NASDEP/Steam Tunnel 29/30 which have no street address in dossier — confirmed sourceless).
+- All 26+ people `LinkedIn` fields: already set where sourced (Lisa Giovanetti, Sarah Henning, Tory Wolcott Green, Alyssa Hubbard, John Martell, David Armitage, Anne-Sophie Divenyi, Tom O'Connor). Remaining people (HALC leadership, HMS team, CSL team) have no public LinkedIn URLs in either dossier.
+- Email fields already complete on CSL team (Edward LeFlore, Ann Davis, Nicole Clement, Holly Sutherland, Shane O'Halloran) and Purnima Kapur. No new emails found in dossier for remaining people.
+- Pritzker Hall/Lewis Law Center date fields: start/end not in dossier for Lewis; Pritzker already set.
+- 12 Palmer Street / Barker Center status: targeted for completion ~Apr–Jun 2026 per dossier, but actual completion not confirmed in source — Status left as "In progress."
+- ART/Goel Center end date: body notes "expected 2027" for ART theater itself but property shows 2026-10-31 (for combined package with 100 SCD housing). Ambiguous; not updated.
+
+**Flags (non-destructive, for Zack):**
+- **Duplicate Gund Hall records:** `37c90644-d524-8159-a591-c390f06ce2e3` and `37c90644-d524-813f-98c8-efd5cad0f266` are both "George Gund Hall Renovation — Harvard GSD." First has Owning Department + more data; second is a thinner duplicate. Cannot delete per safety rules — Zack should manually archive/delete the second one.
+- Gund Hall `Owning Department` on first record (`37c90644-d524-8159`) points to `37b90644-d524-811c` which is actually the "Shawmut — New England Region" Division record (not a Harvard dept) — this is by design, reflecting the project's origin in the Shawmut dossier.
+
+**3a check:** All owner↔department↔project relation edges intact across all 15 projects and 26 people. No missing edges found.
+**3b check:** All project bodies complete; no thin bodies where source has more detail.
+**3d memberships:** N/A — no memberships table on Harvard Owner record.
+**3e location tags:** All project `Location: ["Massachusetts"]` populated. ✓

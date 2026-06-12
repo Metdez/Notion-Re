@@ -76,15 +76,41 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 ## Audit round 3 (2026-06-10, /notion-audit with OD.md)
 **0 fills** — all existing records complete against OG1.md scope. Full record audit performed: company record, 7 divisions, 12 projects, 5 people, 3 events, 4 memberships, 12 locations, 4 software rows — all fields verified live against Notion. No empty fillable gaps found.
 
-**New data in OD.md (second research pass, NOT yet loaded):**
-- 13 additional projects: AirTrain Newark $1.18B (Heavy Civil JV w/ Tutor Perini), Darien Schools $101.5M JV (A.P. Construction, Building), UConn South Campus $75M (Building), Farmington HS 236k SF (Building), plus 9 others sourced to ogind.com project pages
-- 7 new named division leaders: Ryan Oneglia (VP Heavy Civil), Bradford 'Brad' Oneglia (VP Asphalt), Thomas J. 'TJ' Oneglia (VP Materials), Kara Oneglia (VP Mason), Jason Travelstead (EVP Building), Christina Oneglia Rossi (VP Business Dev), Tyson J. Burk (contact, Industrial/Mfg)
-- 4 additional Mason/Materials location rows not in current 12-row set: East Lyme showroom, Hartford showroom, Waterbury showroom, Torrington Mason Supply
-- These require a separate /notion-load pass — not created during this audit (additive-only, existing records only)
+**New data in OD.md (second research pass, NOT yet loaded at time of round 3):**
+- 13 additional projects, 7 new named leaders, 4 new Mason location rows — flagged for /notion-load pass.
 
-## Manual UI steps for Zack
+## Audit round 4 (2026-06-12, /notion-audit — OD.md data check)
+**0 fills** — OD.md data was fully loaded by an intervening session (between round 3 and round 4). All records verified live.
+
+**What was loaded (by a post-round-3 session, not recorded):**
+- 22 Construction Projects now linked on company record (was 12 after round 3) — OD.md projects confirmed present: AirTrain Newark ($1.18B), Darien Schools ($101.5M JV w/ A.P. Construction), UConn South Campus ($75M), Farmington HS, Winsted Health Center ($30M), USJ Pope Pious XII Library ($10M), Middlefield Memorial School ($63M), Cricket Valley Energy Center, SMART Technology Solution, and others.
+- 7 OD.md division leaders created in People DB: Ryan Oneglia (VP Heavy Civil) `37b90644-d524-81c4`, Bradford 'Brad' Oneglia (VP Asphalt) `37b90644-d524-8179`, Thomas J. 'TJ' Oneglia (VP Materials) `37b90644-d524-81ac`, Kara Oneglia (VP Mason) `37b90644-d524-819c`, Jason Travelstead (EVP Building) `37b90644-d524-8162`, Christina Oneglia Rossi (VP Business Dev) `37b90644-d524-81d1`, Tyson J. Burk (contact, Industrial/Mfg) `37b90644-d524-81f6`. All linked to O&G company record + respective divisions.
+- 4 new Mason location rows: East Lyme `37b90644-d524-8192` · Hartford `37b90644-d524-81fd` · Waterbury `37b90644-d524-814a` · Torrington Mason Supply `37b90644-d524-813c`. All linked to company + Mason division. Addresses filled (text field).
+- 3 additional Memberships: AGC National `37c90644-d524-81e8` · NAPA `37c90644-d524-81da` · CMAA CT Chapter `37c90644-d524-8140`. All linked → O&G.
+
+⚠ **DUPLICATES detected — flag for Zack (dedup decisions needed):**
+
+**Memberships (3 duplicate pairs, all linked to O&G):**
+- AGC National: `37c90644-d524-81e8` (2026-06-11) AND `37d90644-d524-8158` (2026-06-12) — identical content
+- NAPA: `37c90644-d524-81da` (2026-06-11) AND `37d90644-d524-81ec` (2026-06-12) — identical content
+- CMAA CT Chapter: `37c90644-d524-8140` (2026-06-11) AND `37d90644-d524-8135` (2026-06-12) — identical content
+→ Delete the 37d-prefix rows in each pair (they are the later duplicates). Decision for Zack.
+
+**People (duplicates from LinkedIn/Apollo bulk import ~2026-06-12):**
+- Ryan Oneglia: `37b90644-d524-81c4` (OD.md load, has Division) AND `37b90644-d524-8182` (second OD.md load) — identical content; keep `81c4`, delete `8182`
+- Raymond R. Oneglia: `37b90644-d524-8124` (original, full bio) AND `37d90644-d524-81cc` "Raymond Oneglia" (LinkedIn import, thin) — keep `8124`, delete `81cc`
+- Gregory Oneglia (Vice Chairman): `37b90644-d524-816f` AND `37d90644-d524-8133` "Greg Oneglia" (LinkedIn) — keep `816f`, delete `8133`
+- T.J. Oneglia: `37b90644-d524-81ac` "Thomas J. 'TJ' Oneglia" (OD.md, full) AND `37d90644-d524-8156` "T.J. Oneglia" (LinkedIn) — keep `81ac`, delete `8156`
+- Many more 37d-prefix LinkedIn imports may be present on the company People relation (company has 100+ People linked as of 2026-06-12 — bulk import). These are NOT O&G-specific audit scope — flag to Zack as a broader dedup/data-quality issue.
+→ **Dedup of 37d-prefix LinkedIn People is an open task for Zack (UI or bulk operation).**
+
+**Left empty (unchanged from OG1.md gaps — no source):** EMR/TRIR/DART · bonding/surety · insurance carriers · UEI/CAGE/DUNS/EIN · CT SoS entity ID · license numbers · division revenue/headcounts · contract types for most projects · permits/APNs/FEMA/seismic · New Britain fuel-cell owner · union status.
+
+## Manual UI steps for Zack (updated 2026-06-12)
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
 2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
 3. **Memberships "View of People" tab** — repoint leftover company filter to O&G or remove.
-4. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
-5. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
+4. **Duplicate Memberships** — delete 3 duplicate 37d-prefix rows: AGC National `37d90644-d524-8158`, NAPA `37d90644-d524-81ec`, CMAA CT Chapter `37d90644-d524-8135`.
+5. **Duplicate People** — delete: Ryan Oneglia `37b90644-d524-8182`; LinkedIn-import dupes `37d90644-d524-81cc` (Raymond), `37d90644-d524-8133` (Greg), `37d90644-d524-8156` (T.J.). Broader 37d-prefix LinkedIn import may have 100+ thin People rows linked to O&G — review and dedup in bulk.
+6. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
+7. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.

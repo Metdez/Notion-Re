@@ -82,9 +82,21 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Branch Group.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
-3. Company Country → add **North Carolina** + **West Virginia** options (no option exists; not added via MCP to avoid full-list clobber).
+3. ~~Company Country → add NC + WV options~~ — **RESOLVED** (Country now shows Virginia, Maryland, Tennessee, North Carolina, West Virginia).
 4. Possible template guide rows on local tables — UI delete if Zack wants them gone.
-5. Events `Location tags` → add **Virginia** and **North Carolina** options via UI, then apply to DBIA Award row (NC) and Golf Tournament row (VA). Cannot do via MCP (shared schema, anti-clobber).
+5. ~~Events `Location tags` → add Virginia and North Carolina options~~ — **RESOLVED** (both options now exist in schema; DBIA Award = North Carolina, Golf Tournament = Virginia).
 
 ## Audit log — 2026-06-10
 **Audit pass completed.** Filled 6 batch-2 project Location tags (all → Virginia). Confirmed all other records complete. No new gaps found beyond what ledger already documented.
+
+## Audit log — 2026-06-12
+**Full re-audit pass completed (no writes needed).** All Branch Group records verified clean:
+- Company: all properties filled incl. Country (VA/MD/TN/NC/WV) ✓
+- Events (2): Location tags now both set — DBIA Award=North Carolina, Golf Tournament=Virginia ✓ (prior deferred issue resolved)
+- Place property on events: genuinely sourceless (dossier has name only, no address/coords for either event)
+- Memberships (4): ABC, AGC, DBIA, VTCA — all have company relation + URL + body ✓
+- Locations (7): all have Adress text + company relation + Division (HQ has no Division — no corporate division row exists) ✓
+- Divisions (4): company + people + projects relations, body content ✓
+- Projects (12): Location tags, place/address, Contractors relation, body content ✓
+- People (7): Company, Function, Function Qualification, Location=Virginia, body ✓
+- Zero fillable gaps remain. All outstanding items from prior audit resolved or confirmed genuinely sourceless.

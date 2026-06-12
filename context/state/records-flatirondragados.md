@@ -84,6 +84,41 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-12 (second pass)
+**Status: ✅ audit complete (read-only review; no new writes needed — all fillable gaps resolved by prior sessions).** Verified full record graph vs Flat.md + Flatiron1.md.
+
+### What the 2026-06-11/12 sessions added (confirmed live)
+- **FlatironDragados Canada** division: People relation now populated (Stephanie Hun + 1 other: IDs `37d90644-d524-8127b32d…` + `37d90644-d524-818b9d93…`).
+- **Howard Hanson Dam** Location tag: "Washington" now set (confirmed live `[\"Washington\"]`). Prior deferred item resolved.
+- **Events `Location tags`**: "Las Vegas" + "San Diego" options added to schema; both events now tagged ✅.
+- **Memberships (additional):** AGC of California `37d90644-d524-8100-857f…`, AGC San Diego `37c90644-d524-8179-b17c…`, Carolinas AGC (CAGC) `37d90644-d524-8110-8e42…`, CCIB `37d90644-d524-811a-9962…` — all added with body content + FD company link. Total membership rows now **11+ (original 7 plus 4 new valid ones)**.
+- **Locations table:** Multiple new rows added — Atlanta USA HQ, Toronto ON (Canada HQ), Broomfield CO, Whitestone NY (SPC), Tampa FL (Prince), Scottsdale AZ (Pulice), Framingham MA (J.F. White), Richmond BC, Montreal QC, Raleigh NC (Mid-Atlantic), Orlando FL (Prince), Concord CA (FD West), San Diego CA (FD West). All linked to FD company + owning division.
+- **Events:** DBIA Conference & Expo (Las Vegas, `37d90644-d524-81f4…`) + Groundbreaking Women in Construction (San Diego, `37d90644-d524-812f…`) — new rows replacing/supplementing original rows; place + location tags + dates all set. Additional events added: 2025 IAI Summit (`37d90644-d524-8126…`), IPI Awards 2022 (`37d90644-d524-81ea…`), CI Student Days 2025 (`37c90644-d524-8186…`).
+- **Company record `Description`**: Updated to full rich description (no longer thin). `Size` = "Mutlinational" (typo persists from Flatiron1.md; "Regional" conflict resolved).
+
+### ⚠ Duplicate membership rows (created ~2026-06-12 20:20 — blank, need Zack cleanup)
+A session at ~20:20 UTC created blank duplicate rows for: DBIA, AGC of California, The Beavers, IPI, California Alliance for Jobs, Carolinas AGC, CCIB. These are empty pages in the Memberships DB but linked to FD. **Not deleted (non-destructive rule) — Zack to delete in UI.** IDs: `37d90644-815f…` (DBIA dup), `37d90644-81e1…` (AGC CA dup), `37d90644-8139…` (Beavers dup), `37d90644-81c6…` (IPI dup), `37d90644-8182…` (CA Alliance dup), `37d90644-819f…` (Carolinas AGC dup), `37d90644-81fc…` (CCIB dup).
+
+### Still empty (genuinely sourceless)
+- EMR/TRIR/DART/OSHA records · bonding/surety/insurance carriers/wrap-ups · per-division revenue & headcount · exact firm employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source).
+- **J.F. White division** People relation: no named leader in dossier (still empty).
+
+### All prior deferred items — resolved
+- Howard Hanson Dam "Washington" location tag ✅ resolved
+- Events "Las Vegas" + "San Diego" tags ✅ resolved
+- Company Size conflict: "Mutlinational" (from Flatiron1.md) is now set — typo but consistent with dossier
+
+## Manual UI steps for Zack (updated 2026-06-12)
+1. **Delete 7 blank duplicate Memberships rows** from 2026-06-12 ~20:20 (listed above).
+2. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set Contractors = FlatironDragados.
+3. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
+4. **Memberships "View of People" tab** — repoint/clear leftover company filter.
+5. **Restore the clobbered Projects `Location` option list** (was reset to FL+SC) — cross-company impact; decide approach. (Most FD projects survived with their tags intact; new option assignments still blocked for any project needing non-FL/SC tags.)
+6. Section guide italics + any template starter rows in Company Map/Events/Sources/Locations/Memberships → delete in UI if unwanted.
+7. **Fix "Mutlinational" typo** → "Multinational" in company record `Size` field.
+
+---
+
 ## Audit — 2026-06-10 (post-load)
 **Status: ✅ audit complete.** Verified build vs Flat.md + Flatiron1.md + Flat1.md. Filled stragglers:
 

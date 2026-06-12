@@ -54,9 +54,9 @@ Page-local data sources:
 Company ↔ 24 Construction Projects ✓ · Company ↔ 12 People ✓ · Company → 7 Software ✓ · Division→Company (all 13) ✓ · Infrastructure → Henshaw + 14 projects ✓ · Power&Energy → Walsh + 2 · IDM → P.Malikowski + 2 · Building → 5 · A/Z → Lorenz + Portland HSC · Support Services → Wolfe ✓ · Project→Contractors + Owning Department (all 24) ✓ · Locations → Company (14) + Division (9) ✓ · Events/Memberships → Company ✓.
 
 ## Left empty (no sourced value — per dossier Caveats)
-EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates (year/month-only kept in body) · per-state license numbers · Cianbro revenue share of JV/program totals (WALK/PNSY/Western Maine are program totals) · company Address place (no lat/lng) · project Adress places (no lat/lng) · most new people Email/Phone (Vigue/Lorenz/Henshaw/Walsh also no LinkedIn) · ~18 of the ~30 trade memberships.
+EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates (year/month-only kept in body) · per-state license numbers · Cianbro revenue share of JV/program totals (WALK/PNSY/Western Maine are program totals) · project Adress places for most projects (no lat/lng; WALK Bridge confirmed filled) · most new people Email/Phone/LinkedIn (Vigue/Lorenz/Henshaw/Walsh have no sourced contact details) · ABC Craft Champs 2024 exact date (no specific date in dossier) · ABC Top Performers Place (national program, no venue).
 
-## Audit fills (2026-06-10 — notion-audit run)
+## Audit fills (2026-06-10 — notion-audit run #1)
 - **Events DB `Location tags`:** 3 new options added (Las Vegas, Kissimmee, Maine) — all 9 original options preserved. Applied: ABC Craft Champs 2025 → Las Vegas · ConExpo 2026 → Las Vegas · ABC Craft Champs 2024 → Kissimmee · AGC Maine Build Maine Awards → Maine. ABC Top Performers left untagged (no location in source). Source: `Enlaye Notion/Cianbro/Cianbro.md`.
 - **Divisions DB `Adress` place:** A/Z Corporation filled → 40 East Dudley Town Road, Bloomfield CT 06002 (lat 41.8265, lng -72.7376). Source: `Enlaye Notion/Cianbro/Cianbro2.md`.
 - Starcon `Adress` not filled — Gonzales LA address in Cianbro2.md is an office, not HQ; primary HQ La Porte TX has no sourced lat/lng → left empty.
@@ -64,6 +64,16 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - Events `Date` not filled — no exact dates sourced in dossier for any events.
 - Events `Place` not filled — no lat/lng for event venues sourced.
 - Locations `Adress` (text): all 14 rows already populated from prior load session.
+
+## Audit fills (2026-06-12 — notion-audit run #2, read-only verify)
+**State as of 2026-06-12 audit (re-verified against live Notion):**
+- **Company Address place:** NOW FILLED — lat 44.7831, lng -69.3836, "101 Cianbro Square, Pittsfield, ME 04967". Previously listed as empty; now resolved. Source: cianbro.com.
+- **Memberships expanded to 24:** Added since prior audit — GBC, SBBA, ARTCA, MD Chamber of Commerce, BWI Business Partnership, BPA, Propeller Club, MTBMA, MWII, NAWIC, SMPS, NSPE, AIHA, plus prior 10 (ABC, AGC, AGC Maine, DBIA, CII, CURT, CFMA, SAME, AISC, ACI, NAWIC, TAPPI). All → Company relation confirmed. Source: MWMCA contractor profile.
+- **Events expanded to 6:** New event added — "Junior Achievement of Maine Business Hall of Fame (Andi Vigue, 2024)" · date 2024-11-12 · Location tag Maine · Company → Cianbro. Source: cianbro.com/news/andi-vigue-junior-achievement-hall-of-fame.
+- **ABC Craft Champs 2025 date:** set to 2025-03-06. **ABC Top Performers date:** set to 2026-02-23 (rankings in body: #21 Top GC, #2 Top Infrastructure, #3 Top Military, #6 Top Renewables).
+- **New project (post-initial-load):** PNSY Dry Dock 2 Complex Pre-Construction Services `37d90644-d524-816b-b419-ea0a60288171` — $99.6M, signed 2024-12-06, end 2027-07-21, Owning Department → Infrastructure, Contractors → Cianbro, address place filled. Not in original 24-project ledger.
+- **WALK Bridge address place:** confirmed filled (lat 41.1176, lng -73.4082, "Norwalk River, Norwalk, CT 06850").
+- **No remaining fillable gaps found** per Cianbro.md dossier. All MWMCA-listed memberships now in Notion.
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
