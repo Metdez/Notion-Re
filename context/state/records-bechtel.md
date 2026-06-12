@@ -199,6 +199,23 @@ Same as prior passes: most project contract values undisclosed; division revenue
 
 ---
 
+## Audit — 2026-06-12 (notion-audit pass — Country fill)
+
+### Filled
+- **Company record** `18490644`: `Country` extended **9→11 values** — added `Canada` (Calgary Energy office, confirmed in Bechtel2.md + Bechtel1.md) + `India` (New Delhi/Gurgaon office, confirmed in Bechtel2.md + Bechtel1.md). Both options confirmed present in Companies DB schema before write. Source: https://en.wikipedia.org/wiki/Bechtel
+
+### Verified complete (live re-fetch 2026-06-12)
+- **Company record** `18490644`: Description ✓ · Address/place/lat-lng ✓ · BW Category [Builder, Advisor] ✓ · Country (11 values: +Canada, +India) ✓ · 32 Construction Projects ✓ · 31 Companies Software ✓ · 53+ People ✓ · Website/LinkedIn ✓.
+- **6 Divisions**: Companies full database ✓, People ✓, Projects ✓, body ✓, icons ✓.
+- **6 Memberships** (BRT, CII, NEI, ETEBA, CCITNZ, NABTU): all present, Companies full database→company ✓ (3d check complete).
+- **11 Events**: Companies full database ✓, Location tags set on all 11 ✓, dates on 9/11 (ENR LA Forum + LACMTA C-Line = genuinely unknown) ✓.
+- **19 Locations**: Adress text ✓, Companies full database ✓, Division relation ✓ where sourced.
+
+### Left empty (genuinely sourceless — confirmed)
+Same as prior passes: 21/32 project contract values undisclosed; division revenue/headcount; TRIR/EMR/DART; Place (lat/lng) on all records (no-geocoding rule); London street address null; UEI/CAGE conflict unresolved; ENR LA Forum + LACMTA C-Line dates unknown; Eva Copper Mine + QB2 no Location tag (no Australia/Chile schema options); 6 location Division relations (DC/SF/Shanghai/Nairobi/Taipei/New Delhi — no division mapping in any dossier).
+
+---
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view (page-local linked view of shared Construction Projects) → clear `__TEMPLATE__` filter, set Contractors = Bechtel Group (relation CONTAINS filters can't be set via API — UI only).
 2. **Existing Software** view → clear `__TEMPLATE__` filter, set Companies = Bechtel Group.
