@@ -345,7 +345,53 @@ The ledger's "Flat2.md Load" section lists `37d90644…8191` (FD West) and `37d9
 
 ---
 
-## Audit — 2026-06-12 (manual /notion-audit cycle)
+## Audit — 2026-06-12 (2nd manual /notion-audit cycle — post-Flat2 load)
+**Status: ✅ audit complete — 9 fills.** Full re-verification vs all 4 dossiers (Flat.md + Flatiron1.md + Flat1.md + Flat2.md). Live Notion fetched for company record, profile page, all 8 divisions, all projects with deferred location tags, all memberships/events/software for dup check, and Projects DB schema.
+
+### Filled in audit
+- **Company record body:** added "ENR #1 Transportation · ENR #1 Domestic Heavy Contracting" to revenue/ENR bullet. Source: [ACS press release](https://www.grupoacs.com/en/press-releases/acs-group-ranked-1-in-transportation-and-domestic-heavy-contracting-by-enr/)
+- **Company record body:** new Federal contract vehicles bullet — "USACE Galveston District MATOC IDIQ — $7.0B ceiling (W912HY25D0017) · USAF AFICA C2E IDIQ — $15.0B ceiling (FA890325D0081)". Source: Flat2.md / USAspending.gov
+- **Profile page body:** same ENR #1 rankings additions.
+- **Projects `Location` schema (shared DB `4c8ed827`):** added 4 new options — Hawaii · British Columbia · West Virginia · Ohio (all 136 prior options preserved).
+- **Pearl Harbor Dry Dock 5** `Location` → `["Hawaii"]`. Body "deferred" note cleaned. Source: fdcorp.com
+- **Site C Dam** `Location` → `["British Columbia"]`. Source: sitecproject.com
+- **Wellsburg Bridge** `Location` → `["West Virginia", "Ohio"]`. Source: wvdot.gov
+
+### Duplicate records found (Zack to delete in Notion UI)
+- **Memberships:** AGC San Diego ×2 (`37c90644…79b17ceb` = older richer; `37d90644…f3aabae0` = Flat2 load dup) · Carolinas AGC ×2 (`37d90644…108e42c9` = older richer; `37d90644…36b2c5fa` = dup) · CCIB ×2 (`37d90644…1a9962cd` = older richer; `37d90644…fab67eae` = dup)
+- **Events:** 2025 IAI Summit ×2 (`37d90644…268618d8` = older w/ date; `37d90644…2586f3d4` = Flat2 load dup, no date) · IPI Awards 2022 ×2 (`37d90644…019311d2` = older w/ date; `37d90644…eab116f5` = dup, no date)
+- **Software:** Oracle Contract Management ×2 (`37d90644…08ac21d7` = canonical, has Location+tag+body; `37d90644…4290c5f2` = dup, no Location/tag)
+
+### Still empty / genuinely sourceless (unchanged + 3 items resolved)
+- ~~Pearl Harbor Dry Dock 5 Location: Hawaii option missing~~ **✅ RESOLVED — Hawaii option added + tagged**
+- ~~Site C Dam: British Columbia not in schema~~ **✅ RESOLVED — British Columbia option added + tagged**
+- ~~Wellsburg Bridge: WV/OH not in schema~~ **✅ RESOLVED — West Virginia + Ohio options added + tagged**
+- EMR/TRIR/DART/OSHA · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN · most per-project full date sets · People Email/Phone/LinkedIn.
+- FD West / Mid-Atlantic `Adress` place: no office coordinates in any dossier.
+- IAI Summit 2025 + IPI Awards 2022 + CI Student Days 2025 venue: not disclosed in source → genuinely sourceless.
+- FlatironDragados Canada division People: no additional named Canada-specific leader beyond Stephanie Hun in any dossier.
+- J.F. White division People: no named leader in any dossier.
+
+### All checks 3a–3e
+- **3a:** 8 divisions live; company→37 Construction Projects + 8 software + people. All 15 memberships (incl. 3 dup pairs) + 7 events (incl. 2 dup pairs) + 17 locations → company. Division→People + Projects edges intact.
+- **3b:** all 8 division + sampled project bodies at full dossier depth.
+- **3c:** company HQ place confirmed; all 8 division Adress places confirmed; 17 location Adress text fields confirmed. Project Adress empty = correct (no geocoords in dossier).
+- **3d:** 10 unique memberships (15 rows incl. 3 dup pairs) — AGC, AGC of California, AGC San Diego, Carolinas AGC, CCIB, DBIA, IPI, The Beavers, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston, NTEA. All company-linked.
+- **3e:** DBIA Conference → Las Vegas ✅ · Groundbreaking Women → San Diego ✅ · Howard Hanson → Washington ✅ · Denver Airport → Colorado ✅ · Pearl Harbor → **Hawaii ✅** · Site C Dam → **British Columbia ✅** · Wellsburg Bridge → **West Virginia + Ohio ✅** · CI Student Days + IAI Summit + IPI Awards → no venue in source, correctly blank.
+- **False positives rejected:** 0.
+
+### Manual UI steps (updated)
+1. Projects Underway view — set Contractors = FlatironDragados.
+2. Existing Software view — remove `__TEMPLATE__` filter.
+3. Memberships "View of People" tab — repoint company filter.
+4. Size conflict: Regional (existing) vs Multinational (dossier) — Zack's call.
+5. Delete dup division rows: FD West `37d90644…8191` + Mid-Atlantic `37d90644…81b3`.
+6. Delete 8 dup project rows (listed in cross-link section above).
+7. Delete 6 dup side-table rows: AGC San Diego dup `37d90644…f3aabae0` + Carolinas AGC dup `37d90644…36b2c5fa` + CCIB dup `37d90644…fab67eae` + IAI Summit dup `37d90644…2586f3d4` + IPI Awards dup `37d90644…eab116f5` + Oracle CM dup `37d90644…4290c5f2`.
+
+---
+
+## Audit — 2026-06-12 (1st manual /notion-audit cycle — immediately post load)
 **Status: ✅ audit complete — 1 fill.** Full re-verification vs all dossiers (Flat.md + Flatiron1.md + Flat1.md + Flat2.md). Live Notion fetched for company, all 8 divisions, sample projects, all memberships, events, locations, and shared Projects DB schema.
 
 ### Filled in audit
