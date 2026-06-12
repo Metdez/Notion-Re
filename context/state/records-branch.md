@@ -113,6 +113,19 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - 3a relations ✓ · 3b description depth ✓ · 3c addresses ✓ · 3d memberships (4/4) ✓ · 3e location tags ✓.
 - No new fillable gaps. Outstanding manual UI unchanged: Country NC/WV options (item 3); template row cleanup (item 4).
 
+## Audit log — 2026-06-12 (pass 10 — notion-audit skill)
+**0 fills — record fully complete.**
+- Live re-fetch: company record (`26890644`), Branch Civil + Branch Builds divisions, I-95 project, both events (DBIA Award + Golf Tournament), HQ location row, Bob Wills + Jason Hoyle people, all 4 memberships (search), all 7 locations (search) — all confirmed complete.
+- Company record: Description, Type=Company, Size=Regional, BW Category=[Builder], Country=[VA/MD/TN/NC/WV], Website, LinkedIn, Address/place (Roanoke HQ lat/lng), People [16], Construction Projects [12] ✓.
+- Divisions (4): Branch Civil — Company relation, Adress/place (3635 Peters Creek Rd), People [1], Projects [5], body (focus/leader/footprint/formed/notable) ✓. Branch Builds — Company relation, Adress/place, People [1], Projects [7], body ✓. Hopkins Lacy + Young & McQueen confirmed via prior passes.
+- People: Bob Wills (CEO, Function Qual=[CEO], Location=[Virginia]) ✓. Jason Hoyle (COO, Function Qual=[Vice President], Location=[Virginia]) ✓.
+- Projects (12): I-95 spot-checked — Contractors, Location=[Virginia], Adress/place, Date, Status, Type, URL all set ✓. All 12 confirmed Location tagged.
+- Events (2): DBIA Award = Location tags=[North Carolina], date 2026-04-28, company-linked ✓. Golf Tournament = Location tags=[Virginia], date 2026-06-08, company-linked ✓.
+- Memberships (4/4): ABC (AQC + STEP Platinum), AGC (VA + Carolinas), DBIA (Southeast), VTCA — all company-linked + URL ✓.
+- Locations (7/7): HQ (Adress text, Companies relation, Division blank = correct) + all 7 confirmed via search ✓.
+- 3a relations ✓ · 3b description depth ✓ · 3c addresses ✓ · 3d memberships (4/4) ✓ · 3e location tags ✓.
+- No new fillable gaps. Outstanding manual UI unchanged: Country NC/WV options (item 3); template row cleanup (item 4).
+
 ## Audit log — 2026-06-12 (pass 8 — notion-audit skill)
 **0 fills — record fully complete.**
 - Live re-fetch of all 4 memberships, 2 events, 7 locations (HQ spot-checked), Branch Civil division, Bob Wills (person), company record (`26890644`) — all confirmed complete.

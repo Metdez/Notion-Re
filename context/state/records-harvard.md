@@ -211,6 +211,66 @@ Live-fetched: all 13 projects, 4 department companies, Harvard owner record, Har
 - Barker Center / Steam Tunnel 29/30 / ESL SEAS Contractors
 - All department LinkedIn / Website fields
 
+## Audit log — 2026-06-12 (pass 8 — notion-audit skill)
+**0 fills — all records complete.**
+
+Live-fetched: Harvard owner (Owners DB), all 14 project records, all 13 department company records (full set). Cross-checked against both Harvard dossiers (`1Harvard University Construction Intelligence Resea.md` + `2Harvard Researsch.md`).
+
+- **3a (relations):** Harvard owner → 15 entries in Projects (14 unique + 1 duplicate `813f`), 16 depts, 11 GCs, 26 contacts. All intact. All project→Owner/Owning Department/Contractors edges correct for the 12 projects with known GCs.
+- **3b (body depth):** All 14 project bodies complete with full sourced depth. All department bodies adequate. No thin bodies with more dossier detail available.
+- **3c (addresses):** NASDEP/Steam Tunnel/Lewis Law Center/Pritzker Hall estimated-only remain blank — correct (genuinely sourceless). All other 10 projects have `place:Adress` set.
+- **3d (memberships):** N/A — Owner entity, no memberships table.
+- **3e (location tags):** All 14 projects have `Location` populated. No missing tags.
+
+**No fills made — nothing fillable found after full dossier cross-check.**
+
+**Open structural issues (require Zack action — no change):**
+- Gund Hall `8159` + Lewis Law Center `8198` `Owning Department` wrongly point to Shawmut NE Region div
+- Duplicate Gund Hall `813f` still present — Zack to delete in UI
+
+**Genuinely sourceless — confirmed (no change from prior passes):**
+- NASDEP/Steam Tunnel 29/30/Lewis Law Center/Pritzker Hall precise street addresses
+- Barker Center/Steam Tunnel 29/30/ESL SEAS Contractors
+- ESL SEAS/Lewis Law Center dates (start/end)
+- 10 of 14 project contract values
+- Harvard Capital Projects/Harvard Real Estate/HBS/SEAS/A.R.T. Website (no public URL in dossier)
+- All department LinkedIn
+
+---
+
+## Audit log — 2026-06-12 (pass 7 — notion-audit skill)
+**2 fills — department Website fields.**
+
+Live-fetched: Harvard owner Owners DB record, all 16 department company records. Cross-checked against both Harvard dossiers.
+
+**Filled — Website property on 2 departments:**
+- Harvard Office for Sustainability `37990644-d524-818b-84d8-d88bb4c63aac` → `https://sustainable.harvard.edu` (source: dossier 1 + dossier 2 — `sustainable.harvard.edu/our-plan/how-we-build/` used as primary source URL throughout both dossiers)
+- Harvard University Housing `37990644-d524-812a-b3dd-ea882c35077b` → `https://huhousing.harvard.edu` (source: dossier 1 — `huhousing.harvard.edu/our-properties/100-south-campus-drive` + `huhousing.harvard.edu/introducing-100-south-campus-drive`)
+
+- **3a (relations):** Harvard owner → 15 entries in Projects (14 unique + 1 dup `813f`), 16 depts, 11 GCs, 26 contacts. All intact.
+- **3b (body depth):** All 14 project bodies complete. Department bodies adequate.
+- **3c (addresses):** NASDEP/Steam Tunnel/Lewis Law Center/Pritzker Hall estimated-only remain blank — correct.
+- **3d (memberships):** N/A — Owner entity.
+- **3e (location tags):** All 14 projects have Location populated. No missing tags.
+
+**Genuinely sourceless — confirmed (no change):**
+- Harvard Capital Projects Website — intranet URL only, not public-facing
+- Harvard Real Estate Website — no public URL in dossier
+- Harvard Business School Website — `hbs.edu` not in dossier source URLs
+- Harvard SEAS Website — `seas.harvard.edu` not in dossier source URLs
+- A.R.T. Website — no ART website URL in dossier sources
+- All department LinkedIn
+- NASDEP/Steam Tunnel 29/30/Lewis Law Center/Pritzker Hall precise street addresses
+- Barker Center/Steam Tunnel 29/30/ESL SEAS Contractors
+- ESL SEAS/Lewis Law Center dates (start/end)
+- 10 of 14 project contract values
+
+**Open structural issues (require Zack action — no change):**
+- Gund Hall `8159` + Lewis Law Center `8198` `Owning Department` wrongly point to Shawmut NE Region div
+- Duplicate Gund Hall `813f` still present — Zack to delete in UI
+
+---
+
 ## Audit log — 2026-06-12 (pass 6 — notion-audit skill)
 **0 fills — all records complete.**
 

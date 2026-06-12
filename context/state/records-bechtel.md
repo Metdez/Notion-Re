@@ -216,6 +216,25 @@ Same as prior passes: 21/32 project contract values undisclosed; division revenu
 
 ---
 
+## Audit — 2026-06-12 (notion-audit pass — current)
+
+### Filled
+Nothing — all live records confirmed complete. Zero writes needed.
+
+### Verified complete (live re-fetch 2026-06-12)
+- **Company record** `18490644`: Description ✓ · Address/place/lat-lng ✓ · BW Category [Builder, Advisor] ✓ · Country (11 values) ✓ · 32 Construction Projects ✓ · 31 Companies Software ✓ · 65+ People ✓ · Website/LinkedIn ✓.
+- **6 Divisions** (Energy, Infrastructure, M&M, NS&E, M&T, Bechtel Enterprises): Companies full database ✓, People ✓, Projects ✓, body (focus/president/base/notable projects/parent) ✓, icons ✓.
+- **6 Memberships** (BRT, CII, NEI, ETEBA, CCITNZ, NABTU): all present, Companies full database→company ✓. Membership completeness check (3d): all 6 sourced memberships confirmed ✓.
+- **11 Events**: Companies full database ✓, Location tags set on all 11 ✓ (Texas/Georgia/Tennessee/Pennsylvania/Washington DC/South Carolina/California/Thailand options all present in schema), dates on 9/11 (ENR LA Forum + LACMTA C-Line = genuinely unknown) ✓.
+- **19 Locations**: Adress text ✓ on all 19 (spot-checked Reston/Houston/London/DC/SF/Shanghai/Richland/NYC/LA), Companies full database ✓, Division relation ✓ where sourced. Interconnection check (3a) passed — all relations verified.
+- **32 Projects**: Contractors→Bechtel + Owning Department set ✓ on sampled records.
+- **31 Software**: Companies relation → Bechtel ✓.
+
+### Left empty (genuinely sourceless — confirmed)
+Same as prior passes: 21/32 project contract values undisclosed; division revenue/headcount; TRIR/EMR/DART; Place (lat/lng) on all records (no-geocoding rule); London street address null; UEI/CAGE conflict unresolved; ENR LA Forum + LACMTA C-Line dates unknown; Eva Copper Mine + QB2 no Location tag (no Australia/Chile schema options); 6 location Division relations (DC/SF/Shanghai/Nairobi/Taipei/New Delhi — no division mapping in any dossier).
+
+---
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view (page-local linked view of shared Construction Projects) → clear `__TEMPLATE__` filter, set Contractors = Bechtel Group (relation CONTAINS filters can't be set via API — UI only).
 2. **Existing Software** view → clear `__TEMPLATE__` filter, set Companies = Bechtel Group.

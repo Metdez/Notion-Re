@@ -362,3 +362,42 @@ PoweR VP/president (not named in either dossier) · Concrete division Projects (
 5. Chris Steves dup: `37d90644…811f` (Sundt3) + `37c90644…81a4` (Apollo CSV) — merge in UI.
 
 **Result: 5 writes (Concrete + Building Group People relations filled; PoweR body enriched; Gilbert NWTP + SLC NWRF bodies enriched). Major structural gap flagged (40 orphan project pages). No data corrupted.**
+
+---
+
+## Audit — 2026-06-12 (eighth pass — /notion-audit Sundt)
+4 parallel read-only sub-agents (9 divisions / memberships+events / 6 project sample / 9 new people) + schema fetches for People DB + Construction Projects DB + global Divisions DB.
+
+### Findings — 0 fillable gaps
+- **Divisions (9/9):** All proper DB rows in `f4f90644`. All bodies at full dossier depth with inline source URLs. People/Projects/Companies relations set on all except PoweR (0 People — genuinely sourceless, no VP named in either dossier) and Concrete (0 Projects — no discrete Concrete projects in either dossier). Adress (place) empty on all 9 — no-geocoding rule, confirmed unfillable.
+- **Memberships (5/5):** DBIA · AGC · APWA · Arizona Builders Alliance · The Beavers — all in Memberships DB with Company relation and sourced body. Complete per both dossiers.
+- **Events (8/8):** All in Events DB with Companies relation. AGC Award = [Arizona] tag ✓. DBIA Milestone date blank — no date sourced in either dossier, genuinely unfillable. Events 3–8 have no location tag — internal/HQ/virtual events, venue not sourced.
+- **Projects (6 sampled):** All proper Construction Projects DB rows. Bodies at dossier depth. Location tags present on all except SLC NWRF — "Utah" option does not exist in Construction Projects Location multi-select schema (confirmed live). Genuinely unfillable without manual UI schema ALTER.
+- **9 new people (Sundt3):** All proper People DB rows. Company relation → Sundt ✓. Function Qualification set ✓. Body + source URL ✓. Division relation empty on all 9 — People.Division targets `collection://37690644` (global "Zack Database"), but Sundt divisions live in page-local `collection://f4f90644`. Cross-collection link is architecturally impossible via MCP; genuinely unfillable. (Same constraint noted in prior audit ledger entry.)
+- **Company record:** 53 Construction Projects linked (company record shows 53 in Properties), 4 Software, 10 Country options including UT/NM/NC ✓, full Company Snapshot body ✓.
+- **Interconnection (3a) ✓:** All edges intact per prior pass; no regressions.
+- **Description depth (3b) ✓:** All division/project/people bodies confirmed sourced.
+- **Addresses (3c) ✓:** All 16 location rows have Adress text. Company place (lat/lng) genuinely unfillable.
+- **Memberships (3d) ✓:** 5/5 per dossiers.
+- **Location tags (3e) ✓:** AGC Award = [Arizona]. SLC NWRF Utah tag = schema gap (manual UI).
+
+### Genuinely sourceless / structurally blocked blanks (confirmed)
+- Place coords everywhere (no-geocoding rule)
+- Division revenue/headcount (not in either dossier)
+- People email/phone/LinkedIn (not in either dossier)
+- SLC NWRF Location tag "Utah" (option missing from Construction Projects Location multi-select — UI ALTER needed)
+- People.Division relations for 9 new people (wrong target collection — architecturally blocked)
+- DBIA Milestone event date (no date sourced)
+- 5 project contract values (rPlus, Data Center, APS Four Corners, Hermosa, Apache Junction) — genuinely undisclosed
+- 40 Sundt3 project pages still orphaned (structural — requires `/notion-load` recreation pass)
+- TRIR/EMR/bonding/surety (not in either dossier)
+
+### Outstanding for Zack (manual UI)
+1. Delete ~22 orphan pages from Sundt3 first-pass load (IDs in sixth-pass section above).
+2. Recreate 40 Sundt3 projects as proper Construction Projects DB rows (structural).
+3. Construction Projects Location multi-select → add **Utah** option (SLC NWRF untagged).
+4. View filters: Projects Underway + Existing Software still filtered to `__TEMPLATE__`.
+5. David Rieken Jr. dup: `37d90644…8191` vs `37c90644…81e5` — merge in UI.
+6. Chris Steves dup: `37d90644…811f` vs `37c90644…81a4` — merge in UI.
+
+**Result: 0 writes. Record fully converged — no fillable gaps remain per current dossier data.**

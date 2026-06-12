@@ -342,3 +342,52 @@ Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](htt
 **0 writes. Build remains fully converged. This is pass 10.**
 
 **Genuinely sourceless (final, unchanged):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed) · precise project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL in any dossier) · Size=Regional vs "Multinational" (Zack to decide).
+
+---
+
+## Eleventh pass — 2026-06-12 (notion-audit, automated cycle)
+> Full 3a–3e audit vs all four ground-truth dossiers. No new dossiers on disk. Live-fetched: profile page, company record, Memberships schema, Events schema, Divisions schema. **0 writes.**
+
+**3a Interconnection — confirmed clean:** Company record has 32 projects, 6 software, 5 subsidiaries, 150+ People links — all intact. Memberships schema now has `Companies full database` relation column (Zack resolved pass-3 deferred gap in UI). Events schema has all 15 location-tag options. Divisions schema has `Companies full database`, `People`, `Projects`, `Adress`, `Untitled Database` (Locations) relations — all present.
+
+**3b Description depth — confirmed complete:** company body (Snapshot + Financial trend & safety sections) fully populated. All division/project/people bodies at full sourced depth from prior passes.
+
+**3c Address/place — confirmed complete:** Company `place:Address` = 35 E Wacker (41.8869/-87.6266) live. Division `Adress` place-type confirmed in schema. 5 events with no sourced venue correctly blank.
+
+**3d Memberships — 5/5 confirmed:** Memberships collection schema has `Companies full database` relation (pass-3 deferred gap resolved by Zack). USGBC · DBIA · AGC · NAIOP Chicago · USGBC-CA all present.
+
+**3e Location tags — confirmed:** Events schema has Missouri, St. Louis, Life Sciences, Food & Beverage, Maryland, Florida — all required options present.
+
+**0 writes. Build remains fully converged. This is pass 11.**
+
+**Genuinely sourceless (final, unchanged from pass 10):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed) · precise project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL in any dossier) · Size=Regional vs "Multinational" (Zack to decide).
+
+**⚠ Manual UI actions for Zack (carry-forward):**
+1. Delete duplicate Ryan Johnson `37c90644-d524-8192-bb6e-d12c50e7c628` — canonical is `37c90644-d524-81e6-b43d-f6fb74781c5c`.
+2. Projects Underway view — set filter Contractors=Clayco.
+3. Existing Software view — clear `__TEMPLATE__` filter.
+4. Size=Regional vs "Multinational" — decide.
+5. Memberships+People container page — delete orphan markdown table text (from pass-3 context-handoff).
+
+---
+
+## Twelfth pass — 2026-06-12 (notion-audit, manual trigger)
+> Full 3a–3e audit vs all four ground-truth dossiers (Clay 1.md · Clayco1.md · Clayco3.md · Clayco4.md). No new dossiers on disk. Live-fetched: profile page, company record (properties + body), Memberships schema + USGBC/NAIOP rows, Events schema + AGCMO event, Locations schema, Divisions schema, Anthony Johnson people record, canonical Ryan Johnson (`81e6`), orphan Ryan Johnson (`8192`). **0 writes.**
+
+**3a Interconnection — confirmed clean:** Company record: 32 projects, 6 software, 5 subsidiaries, 150+ People links — all intact. All 5 membership rows carry `Companies full database`→Clayco. Canonical Ryan Johnson (`81e6`) has Division→Power & Energy set (confirmed live). Orphan Ryan Johnson (`8192`) also has Division→Power & Energy set (confirmed live; still pending UI deletion). Anthony Johnson: Company→Clayco, Location=Missouri — correct. AGCMO event: Companies full database→Clayco set. Divisions schema: Companies full database, People, Projects, Adress, Untitled Database (Locations) — all present.
+
+**3b Description depth — confirmed complete:** Company body (Snapshot + Financial trend & safety sections) fully populated. AGCMO event body confirmed (briefing, audience, warm-channel note, sourced). Anthony Johnson body: role, succession context, St. Louis location, sourced. Ryan Johnson (`81e6`) body: title, division, background, source. All prior records unchanged.
+
+**3c Address/place — confirmed complete:** Company `place:Address` = 35 E Wacker (41.8869/-87.6266) live. AGCMO event `place:Adress` = St. Charles Convention Center (38.7881/-90.4974) confirmed. Locations schema: `Adress` text-type (by design). 5 events with no sourced venue correctly blank.
+
+**3d Memberships — 5/5 confirmed live:** USGBC `81bd-a256-c578a79193a7` · DBIA `811f-a845-fdec9e97490d` · AGC `8119-a1ba-c55c924fc91a` · NAIOP Chicago `8154-b408-e38648168f31` · USGBC-CA `8139-ad61-f9e5cb36326f`. All carry Companies full database→Clayco. No new memberships in any dossier.
+
+**3e Location tags — confirmed:** AGCMO→[St. Louis, Missouri]; INTERPHEX→[Life Sciences]; Petfood Forum→[Food & Beverage]; SelectUSA→[Maryland]; Clayco Rising→[Florida]; AGC Convention→[] (no venue sourced — correct). Events schema has all 15 options.
+
+**Orphan Ryan Johnson — still live (Zack UI action still pending):**
+- Canonical: `37c90644-d524-81e6-b43d-f6fb74781c5c` (Function="Vice President, Power and Energy"; richer body; Division→Power & Energy)
+- Orphan: `37c90644-d524-8192-bb6e-d12c50e7c628` (Function="VP, Power and Energy"; thinner body; also has Division→Power & Energy) — Zack to delete
+
+**0 writes. Build remains fully converged. This is pass 12.**
+
+**Genuinely sourceless (final, unchanged):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed) · precise project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL in any dossier) · Size=Regional vs "Multinational" (Zack to decide).

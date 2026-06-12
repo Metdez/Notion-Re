@@ -290,6 +290,27 @@ Checks performed — all PASS:
 
 ---
 
+## Audit — 2026-06-12 (notion-audit skill pass — auto, latest)
+**Result: 1 body-text fill. All structural checks PASS.**
+
+**State delta (new records since prior ledger pass — registered now):**
+- **Divisions (8 now, was 6):** Energy Division `37d90644…1fcf` (Companies rel ✓, no Adress — genuinely sourceless) · Rail/Transit Division `37d90644…55d5` (Companies rel ✓, Projects→MBTA On-Call+Orange Line Surge ✓, no Adress — genuinely sourceless)
+
+**Filled (verified post-write):**
+- **Hub page** `37b90644d5248003baf7e3d038b7c037` — division count body text updated "6 divisions" → **"8 divisions"** (adding Energy Division + Rail/Transit Division; src: https://middlesexco.com/who-we-are/overview-history/)
+
+**All checks PASS:**
+- **3a Interconnection:** Company→People(30)✓ · Company→Projects(24)✓ · Company→Owners(12)✓ · Company→Software(8)✓ · Divisions(8)→Company✓ · NE Region→People(12)+Projects(15)✓ · SE Region→Projects(9)✓ · Rail/Transit→Projects(2)✓ · Events(6)→Company+Location tags✓ · Memberships(5+3dups)→Company✓ · Locations(7+1dup)→Company+Division✓
+- **3b Description depth:** Energy Division body full (focus/footprint/parent) ✓ · Rail/Transit Division body full (focus/leader/footprint/founded/notable-projects) ✓ · All other division bodies unchanged ✓
+- **3c Addresses:** Company place ✓ · NE/SE/Paving/Asphalt/Corridor Mining division Adress place ✓ · Energy/Rail/Transit divisions = genuinely sourceless (no address in dossier) · Mass Ready Mix place ✓ · All 7 Location rows Adress text ✓ · All 24 project Adress places confirmed on sampled records ✓
+- **3d Memberships:** CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓ · NSC ✓ (5/5 sourced) · ⚠ CCIA/DBIA-FL/FTBA `37c90644` duplicate rows still pending Zack deletion
+- **3e Location tags:** FTBA Annual=Florida ✓ · DBIA-FL 18th=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓ · FTBA Symposium=Florida ✓ · DBIA-FL 19th=Florida ✓
+
+**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · CCIA + Golf event Place/venue coords · FTBA Annual exact date · Mass Ready Mix/Asphalt LLC/Energy/Rail-Transit division leader+address · division revenue/headcount · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon) · project APN/bond/FEMA/seismic.
+**Structural deferred (unchanged):** People→Division → global KBE-only Divisions DB · dup Orlando location `37c90644…886ff1` · dup CCIA/DBIA-FL/FTBA `37c90644` memberships — Zack deletion required.
+
+---
+
 ## Audit — 2026-06-11 (notion-audit skill pass #2 — manual)
 **Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows detected — flagged, not deleted (additive-only policy).**
 

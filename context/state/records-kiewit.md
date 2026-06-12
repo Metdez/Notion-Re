@@ -98,6 +98,25 @@ Key values: Homer City $10,000M · CA HSR $3,500M · Canada nuclear $3,200M · B
 
 ---
 
+## Audit pass — 2026-06-12 (#5 — /notion-audit skill, Kiewitt4 dossier cross-check)
+
+**2 fills:**
+1. **Kiewit Engineering Technical Summit 2026** `37d90644-d524-8108` — `Date` was empty; dossier gives year "2026" → set 2026-01-01. Source: https://www.kiewit.com/pages/kiewit-engineering-technical-summit/
+2. **AGC Annual Convention 2026** `37d90644-d524-8135` — `Location tags` empty, `Place` empty; dossier says Orlando FL → added "Florida" + "Orlando" options to Events Location tags schema (additive, preserving 9 existing), then applied both tags; set Place = Orange County Convention Center, 9800 International Dr, Orlando FL 32819 (28.4249/-81.4686). Source: https://convention.agc.org
+
+**Schema change (additive, pre-authorized):** Events Location tags `17a90644` += "Florida":blue + "Orlando":green (11 total options, all prior preserved).
+
+**3a–3e confirmed complete (Kiewitt4.md cross-check):**
+- Company record: all properties filled ✓ (Description, Address/place, Size, BW Category, Website, LinkedIn, Country, 39 Construction Projects, 8 Software)
+- 27 divisions → Companies=Kiewit ✓; 39 projects → Contractors=Kiewit ✓; 2 people → Company ✓
+- 8/8 memberships present + company-linked ✓ (Beavers, AGC, DBIA, CSRA, CISI, Nat'l Safety Executives, Canadian Construction Safety Council, ASCE)
+- 6/6 events present + company-linked ✓; EPC Show has date+Texas tag+Place ✓; FWIK has date ✓; KETS now has date ✓; AGC now has FL+Orlando tags + Place ✓
+- 3c: company Address place ✓; 25+ project Adress places filled; locations table populated
+
+**CONEXPO-CON/AGG 2026 rejected (false positive):** Dossier marks attendance as "likely" with no exhibitor listing confirmed — genuinely sourceless. Not added.
+
+---
+
 ## Audit pass — 2026-06-12 (#4 — /notion-audit skill, full build re-verification)
 
 **1 data error corrected:**

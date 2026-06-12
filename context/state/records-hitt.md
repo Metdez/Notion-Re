@@ -174,3 +174,18 @@ Full verification pass vs HITT1.md + HITT2.md + HITT3.md + HITT4.md. Scope: all 
   2. `Size` set → "397,205 sf / 2-building campus / 48 MW / 65 acres". Source: HITT4.md.
 - **Verified clean (0 additional writes needed):** all 3 new people (Brett Hitt/John Kane/Megan Lantz) Company+FQ+Location ✓ · ABC membership Companies→HITT ✓ · Santa Clara division Adress+People=Kane+Projects=Alviso ✓ · all 5 new software Company→HITT ✓ · 5 events ✓ · 18 divisions ✓ · 8 memberships ✓ · 16 locations ✓.
 - **Left empty-for-cause (unchanged from prior passes):** Construction Safety Week/SubDay (national/sourceless) · NAIOP date/Adress ("Northern Virginia" only) · Size=Regional conflict · people LinkedIn/Email/Phone (none in any dossier).
+
+## Post-load audit #10 (2026-06-12, /notion-audit HITT Contracting — Size field sweep)
+Full read-only pass vs HITT1.md + live Notion on all 11 Construction Projects. Company record, events, memberships, divisions, people, locations verified clean from prior audits.
+- **Fills (9 — project `Size` field on all previously empty records):**
+  1. NASA JSC MACC `37b90644…81b8befa` → `Size` = "Up to $300M IDIQ ceiling (shared by 7 firms); mission-support facilities, utilities & equipment". Source: HITT1.md / [HITT](https://www.hitt.com/news-hub/hitt-awarded-nasa-johnson-space-center-contract/)
+  2. Next NGA West `37b90644…8110a40a` → `Size` = "712,000 sf office + 2 garages on 97 acres; $1.7B total program". Source: HITT1.md / [HITT](https://www.hitt.com/news-hub/mccarthy-hitt-celebrate-next-nga-west-completion/)
+  3. Boeing SC 787 `37b90644…81899867` → `Size` = "~1.2M sf final assembly building; ~2,500 construction workers / 6.2M labor hours". Source: HITT1.md / [HITT](https://www.hitt.com/news-hub/boeing-south-carolina-breaks-ground/)
+  4. Andaz Miami Beach `37b90644…81bb8ab9` → `Size` = "250,000 sf; 287 keys". Source: HITT1.md / [HITT](https://www.hitt.com/projects/andaz-miami-beach/)
+  5. One Preserve Labs `37b90644…81f383db` → `Size` = "Office-to-lab repositioning + spec suites; LEED v4 Silver; I-270 corridor". Source: HITT1.md / [HITT](https://www.hitt.com/projects/one-preserve-labs-spec-suites/)
+  6. Omni Homestead `37b90644…814894c1` → `Size` = "483 rooms; $140M+ program ($50M+ HITT scope); National Historic Landmark". Source: HITT1.md / [HITT](https://www.hitt.com/projects/omni-homestead-resort/)
+  7. HITT New HQ `37b90644…81158d66` → `Size` = "270,000 sf; 6 stories; net-zero-ready; 100,000 sf solar canopy". Source: HITT1.md / [HITT](https://www.hitt.com/news-hub/hitt-contracting-unveils-new-hq/)
+  8. QTS Data Centers `37b90644…81099135` → `Size` = "7M+ sf delivered across 6+ states; part of HITT's 20M+ sf / 1.25+ GW data center record since 2007". Source: HITT1.md / [QTS](https://qtsdatacenters.com/resources/qts-construction-update-qa-with-hitt-contracting/)
+  9. NASA HQ renovation `37b90644…815ab210` → `Size` = "600,000 sf; 10 stories; LEED Gold". Source: HITT1.md / [HITT](https://www.hitt.com/projects/nasa-headquarters/)
+- **Left empty-for-cause (genuinely sourceless):** HCA Chippenham `Size` (no sf/scope metric in dossier; medium-confidence single-LinkedIn source) · Construction Safety Week/SubDay (national/sourceless) · NAIOP date/Adress · Size=Regional conflict · people LinkedIn/Email/Phone.
+- **Verified clean (no additional writes):** company record (Description/DUNS/UEI/CAGE/ENR/M&A/litigation/insurance all filled) · 8 memberships (AGC, NAIOP, USGBC, CoreNet, IFMA, IIDA, DBIA, ABC — all company-linked) · 5 events (DBIA+CONEXPO: Adress+Date+Location tags ✓; NAIOP: Virginia tag ✓; Safety Week/SubDay: sourceless OK) · 18 divisions (Adress place + Companies + enriched bodies) · 16 locations · 11 software · all people Company-linked · full interlink graph intact.

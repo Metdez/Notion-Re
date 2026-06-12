@@ -145,6 +145,37 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 ### Data quality note (not acted on — field already populated)
 A/Z Corporation `place:Adress` is set to Bloomfield CT (40 East Dudley Town Road) from the prior audit fill (Cianbro2.md). The primary HQ per dossier is North Stonington CT (46 Norwich Westerly Rd). The place property is already filled — additive protocol prevents overwriting. Flagged for Zack to correct manually if desired.
 
+## Audit fills (2026-06-12 — notion-audit pass 7, autonomous)
+- **10 new writes** from Cianbro3.md ground truth (Starcon/R.C. Stevens leaders + event dates + body enrichments).
+
+### Event date fills (2 events)
+- **ABC Top Performers (2025 & 2026)** `37b90644-d524-81f5-b296-c6143b4f16d2` — `Date` set to **2026-02-23**. Source: [cianbro.com/news/abc-top-performers-2026](https://www.cianbro.com/news/abc-top-performers-2026). Body enriched with specific 2026 rankings: No. 37 Top 250 Performers · **No. 2 Top Infrastructure Contractors** · No. 3 Top Military Contractors · No. 6 Top Renewables Contractors.
+- **ABC National Craft Championships 2025 (Las Vegas)** `37b90644-d524-8119-84eb-ed31a61e5b4e` — `Date` set to **2025-03-06**. Source: [cianbro.com/news/abc-national-craft-championships](https://www.cianbro.com/news/abc-national-craft-championships).
+
+### Division body fills (2 divisions)
+- **Starcon International, Inc.** `37b90644-d524-817b-be15-fcfbe2f553f7` — added **Mark Parsons (President)**. Source: [bicmagazine.com — 40-year anniversary](https://www.bicmagazine.com/departments/engineering-construction/celebrating-40-years-vision-future-success/). Division `People` relation updated → Mark Parsons.
+- **R.C. Stevens Construction Co.** `37b90644-d524-8122-b9f2-c730d2cc7eb1` — added leadership: **Tim Keating (President) · Allyn Brice (Strategic Collaboration Director) · Tim Keating III (General Manager)** + founded 1926 detail. Source: [rcstevens.com/leadership/](https://www.rcstevens.com/leadership/) · [rcstevens.com/history/](https://rcstevens.com/history/). Division `People` relation updated → 3 people.
+
+### New People records (4)
+- **Mark Parsons** `37d90644-d524-8166-918e-dd674ed527de` — President, Starcon International · Company→Cianbro · Location=Texas. Source: bicmagazine.com.
+- **Tim Keating** `37d90644-d524-8111-92ce-c67d16fe1f0a` — President, R.C. Stevens · Company→Cianbro · Location=Florida. Source: rcstevens.com/leadership/.
+- **Allyn Brice** `37d90644-d524-8109-b12f-eed79fd8e23f` — Strategic Collaboration Director, R.C. Stevens · Company→Cianbro · Location=Florida. Source: rcstevens.com/leadership/.
+- **Tim Keating III** `37d90644-d524-8192-b79c-d3eac48ddb6b` — General Manager, R.C. Stevens · Company→Cianbro · Location=Florida. Source: rcstevens.com/leadership/.
+
+### New Event (1)
+- **Junior Achievement of Maine Business Hall of Fame (Andi Vigue, 2024)** `37d90644-d524-81f2-ad0d-ca7926fa4647` — Date=2024-11-12 · Location tag=Maine · Companies→Cianbro. Source: [cianbro.com/news/andi-vigue-junior-achievement-hall-of-fame](https://www.cianbro.com/news/andi-vigue-junior-achievement-hall-of-fame).
+
+### Updated counts (post pass 7)
+Company ↔ **27** Construction Projects ✓ · Company ↔ **~39** People (35 prior + 4 new) · 13 divisions · **8** software · **25** memberships · **6 events** (was 5) · 14 locations · 13 sources. All new people → Company relation ✓. Starcon + R.C. Stevens → People relations updated ✓.
+
+### Verified complete (no further gaps found)
+- Company Description intentional hold ("ENR #96 / ~$1.3B") per additive protocol — profile body has updated #94 / $1,342M / ABC #21 ✓.
+- 24 memberships all → Company ✓. All 14 locations → Company + Division ✓. All 6 events → Company + Location tagged (ABC Top Performers untagged = no location in source ✓).
+- **SBBA flag still open:** "SBBA (Specialty Balance Beam Association)" — expansion unverified. Recommend Zack confirm or rename to "SBBA".
+
+### Genuinely sourceless (confirmed, same list)
+EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates · per-state license numbers · Cianbro revenue share of JV/program totals · project Adress places (no lat/lng for most) · most people Email/Phone/LinkedIn · Starcon Adress place (La Porte TX HQ has no sourced lat/lng).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).

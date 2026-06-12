@@ -241,3 +241,25 @@ Full live re-verify of all records (company + 12 divs + 8 people + 27 projects +
 - **PDS Vista software:** `37d90644-d524-8158-b644-f0f5ef648711` — `Software used` property empty (no matching schema option for "PDS Vista" in shared Software DB). Not fillable from `Jingoli.md` (Jing3 only). Flagged for future Zack review.
 
 **False positives rejected:** None. All fields verified live before declaring converged.
+
+## Audit pass 2026-06-12 (automated skill run — `notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all records (company + profile page + 13 divs + 8 people + 27 projects + 5 location rows + 4 events (Jing3 primary) + 5 memberships (Jing3 primary) + 7 software) against `Jingoli.md`.
+
+## Audit pass 2026-06-12 (notion-audit skill — `Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all records (company + profile page + 12 divs + 8 people + 4 events + 4 locations + 5 memberships + 7 software) against `Jingoli.md`. Parallel sub-agents fetched all records live.
+
+- **Company record ✓:** Description, BW Category=[Builder], Country=[NJ/PA/ON/NY], Website, LinkedIn, People (8), Construction Projects (27), Companies Software (7) — all populated. Body has Jing3 enrichment. Address place = blank (correct; lat/lng null, no-geocoding rule).
+- **3a Interconnection ✓:** 12 divs→company (all); Nuclear Svcs→Mockaitis+11 projects; Power→Karl Miller+5 projects; General Const.→Dennis Mockaitis+8 projects; Construction Mgmt.→Deon+3 projects; Infrastructure Svcs.→Reager; DCO Energy→Gary Fromer; all 8 people→company; all 4 location rows→company+division; all 4 events→company; all 5 memberships→company. People `Division` global-DB relation DEFERRED (global Divisions DB `37690644` has no Jingoli rows — structural, not a data gap). Divisions JDC Energy / Goldstar / Jingoli-DCO / JBM / JET / EID Solutions have no People or Projects → genuinely sourceless (no sourced leaders or projects in dossier).
+- **3b Description-depth ✓:** All division/people/event/location/membership bodies confirmed at full sourced depth. No thinning detected.
+- **3c Address/location ✓:** Lawrenceville HQ = "100 Lenox Drive Suite 100, Lawrenceville, NJ 08648" ✓. DCO Corporate Office = "Brickworks Office Park, 5429 Harding Highway, Building 500, Mays Landing, NJ 08330" ✓. TMI = "Middletown, PA" (city-level; no street address in any source). JET Hamilton = "Hamilton, NJ" (city-level; no street in dossier). All `place` properties genuinely unfillable (lat/lng null throughout dossier; no-geocoding rule).
+- **3d Memberships ✓:** 5 Jing3 memberships confirmed linked — GBCA, PWC NJ, NJSDA, ACCNJ, DoD SkillBridge. Dossier primary (`Jingoli.md`) confirms `association: null` — no additional memberships sourced.
+- **3e Location tags ✓:** ENR NY = New York ✓ · Eagle Award = New Jersey ✓ · PWC NJ = New Jersey + Jersey City ✓ · HELIX H-1 = New Jersey + New Brunswick ✓.
+- **No fillable gaps → zero writes.**
+
+- **Company record ✓:** Description, BW Category=[Builder], Country=[NJ/PA/ON/NY], Website, LinkedIn, People (8), Construction Projects (27), Companies Software (7) — all populated. Body has Jing3 enrichment (legal name, founded 1922, $884M revenue, ENR #153 + #15 Power, 1,500+ employees, CEO/COO, footprint). Address place = blank (correct; lat/lng null, no-geocoding rule).
+- **3a Interconnection ✓:** 13 divs→company; Nuclear Svcs→Mockaitis+5 projects; Jingoli Power→Karl Miller; General Const.→Dennis Mockaitis; Construction Mgmt.→Deon; Infrastructure Svcs.→Reager; DCO Energy→Gary Fromer; all 27 projects→Contractors; 8 people→company; 2 location rows→company+division; 4 events→company; 5 memberships→company. People `Division` global-DB relation DEFERRED (global Divisions DB `37690644` has no Jingoli rows — structural gap, not a data gap).
+- **3b Description-depth ✓:** All company body, event bodies, location bodies, membership bodies carry full sourced detail. No thinning detected.
+- **3c Address/location ✓:** Lawrenceville HQ = "100 Lenox Drive Suite 100, Lawrenceville, NJ 08648" ✓. DCO Energy Corporate Office = "Brickworks Office Park, 5429 Harding Highway, Building 500, Mays Landing, NJ 08330" ✓. All `place` properties genuinely unfillable (lat/lng null throughout dossier; no-geocoding rule).
+- **3d Memberships ✓:** 5 Jing3 memberships all confirmed linked to company — GBCA, PWC NJ, NJSDA, ACCNJ, DoD SkillBridge.
+- **3e Location tags ✓:** ENR NY = New York ✓ · Eagle Award = New Jersey ✓ · PWC NJ = New Jersey + Jersey City ✓ · HELIX H-1 = New Jersey + New Brunswick ✓.
+- **No fillable gaps → zero writes.**

@@ -391,6 +391,34 @@ The ledger's "Flat2.md Load" section lists `37d90644…8191` (FD West) and `37d9
 
 ---
 
+## Audit — 2026-06-12 (3rd manual /notion-audit cycle — Flat2.md gap-fill)
+**Status: ✅ audit complete — 6 fills.** Full re-verification vs all 4 dossiers (Flat.md + Flatiron1.md + Flat1.md + Flat2.md). Ground truth: Flat2.md. Caught a body/property mismatch on LAX APM (prior session documented correct values in body but never applied them to Notion properties), and extended the Software DB schema to add two HCSS options that had been deferred.
+
+### Filled in audit
+| # | Record | Field | Old value | New value | Source |
+|---|---|---|---|---|---|
+| 1 | LAX Automated People Mover `37b90644-d524-812c-953a-c29a425bb4cf` | `Contrat Value in Million` | 2400 | **4900** | fdcorp.com/lax-skylink (Flat2.md) |
+| 2 | LAX Automated People Mover | `Status` | Done | **In progress** | fdcorp.com/lax-skylink (~95% complete mid-2025; opening pushed late 2026) |
+| 3 | Software DB schema `37690644-d524-804f-b966-000b34a1901b` | `Software used` multi-select | — (34 options) | Added `"HCSS HeavyBid"` (green) + `"HCSS HeavyJob"` (blue); all 34 prior options preserved |
+| 4 | HCSS HeavyBid `37b90644-d524-81db-871d-ed1403d145a3` | `Software used` | [] | `["HCSS HeavyBid"]` | HCSS job postings (San Diego, LA, Denver, Richmond BC) |
+| 5 | HCSS HeavyBid | `Location` | [] | `["United States", "Canada"]` | HCSS job postings (San Diego=US, Richmond BC=Canada) |
+| 6 | HCSS HeavyJob `37c90644-d524-8147-9053-f1573a78bfcd` | `Software used` | [] | `["HCSS HeavyJob"]` | TrustRadius review by FD Corporate Apps Manager |
+
+### Genuinely sourceless / unfillable (confirmed)
+EMR/TRIR/DART/OSHA · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN · most per-project full date sets · People Email/Phone/LinkedIn · FD Canada 2nd leader · J.F. White leader · IAI Summit 2025 + IPI Awards 2022 venue (UNKNOWN in Flat2.md).
+
+### All checks 3a–3e
+- **3a:** 8 divisions, company→37 projects, all People/Projects/division/event/membership/software/location edges intact ✅
+- **3b:** all division and project bodies at full dossier depth ✅
+- **3c:** company HQ place + all 8 division Adress places + 17 location rows all populated ✅
+- **3d:** 10 unique memberships (15 rows incl. 3 dup pairs) all company-linked ✅
+- **3e:** DBIA→Las Vegas · Groundbreaking Women→San Diego · Howard Hanson→Washington · Denver→Colorado · Pearl Harbor→Hawaii · Site C Dam→British Columbia · Wellsburg→WV+OH — all tagged ✅
+
+### Manual UI steps (no change — same 7 items as prior audit)
+(See 2nd manual audit section above — steps 1–7 unchanged.)
+
+---
+
 ## Audit — 2026-06-12 (1st manual /notion-audit cycle — immediately post load)
 **Status: ✅ audit complete — 1 fill.** Full re-verification vs all dossiers (Flat.md + Flatiron1.md + Flat1.md + Flat2.md). Live Notion fetched for company, all 8 divisions, sample projects, all memberships, events, locations, and shared Projects DB schema.
 
