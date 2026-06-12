@@ -262,6 +262,34 @@ Checks performed — all PASS:
 
 ---
 
+## Audit — 2026-06-12 (notion-audit skill pass)
+**Result: 4 body-text counter fills on hub page. All structural checks PASS.**
+
+**Filled (verified post-write — hub page `37b90644d5248003baf7e3d038b7c037`):**
+- "5 divisions" → **6 divisions** (Corridor Mining now present in live DB)
+- "21 projects linked" → **24 projects linked** (Basiliere Bridge + SR-429 + OIA GMP 5S.2 added in prior session)
+- "18 people linked" → **30 people linked** (12 Apollo-CSV contacts added in prior session)
+- "7 software tools" → **8 software tools** (Virtual Shift Tickets / VST added in prior session)
+
+**All checks PASS:**
+- **3a Interconnection:** Company→People(30)✓ · Company→Projects(24)✓ · Company→Owners(12)✓ · Company→Software(8)✓ · Divisions(6)→Company✓ · NE Region→People(12)+Projects(15)✓ · SE Region→Projects(9)✓ · Paving→People(1)+Adress place✓ · Asphalt LLC→Adress place✓ · Corridor Mining→Adress place✓ · Events(6)→Company+Location tags✓ · Memberships(5)→Company✓ · Locations(7+1dup)→Company+Division✓
+- **3b Description depth:** All 6 division bodies full ✓ · Company Snapshot complete ✓ · Sampled project bodies (SR-429, OIA GMP 5S.2, Basiliere) full ✓
+- **3c Addresses:** Company place ✓ · NE/SE/Paving/Asphalt/Corridor Mining division Adress place ✓ · Mass Ready Mix Adress place ✓ · All 7 Location rows Adress text ✓ · Events with sourced venues have Place field set (FTBA Annual / DBIA 18th / FTBA Symposium / DBIA 19th ✓); CCIA + Golf genuinely sourceless
+- **3d Memberships:** CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓ · NSC ✓ (5/5) · ⚠ CCIA/DBIA-FL/FTBA `37c90644` duplicate rows still present — awaiting Zack deletion
+- **3e Location tags:** All 6 events tagged — FTBA Annual=Florida ✓ · DBIA-FL 18th=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓ · FTBA Symposium=Florida ✓ · DBIA-FL 19th=Florida ✓
+
+**State delta since last ledger pass (new records added by prior sessions — now registered):**
+- Divisions: 6 total (was 5 in ledger) — Corridor Mining `37d90644…8ea8` ✓
+- Projects: 24 total (was 22) — SR-429 Widening `37d90644…4a93adb7` + OIA GMP 5S.2 `37d90644…aa1019b0` (both SE Region; Contractors→Middlesex ✓)
+- People: 30 total (was 18 in original ledger; 12 Apollo-CSV contacts added `37c90644…`)
+- Software: 8 total (was 7) — Virtual Shift Tickets (VST) `37d90644…d33bc22` ✓
+- Owners: 12 total (was 9) — 3 new owners added by prior sessions (FTE `…824ca4b` · CFCCA `…a5a5e9` · Hillsborough `…bb92f`)
+
+**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · CCIA + Golf event Place/venue coords · FTBA Annual exact date · Mass Ready Mix/Asphalt LLC division leader · division revenue/headcount · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon) · project APN/bond/FEMA/seismic.
+**Structural deferred:** People→Division relation → global KBE-only Divisions DB (structural impossibility) · dup Orlando location `37c90644…886ff1` (blank body) · dup CCIA/DBIA-FL/FTBA `37c90644` memberships — Zack deletion required.
+
+---
+
 ## Audit — 2026-06-11 (notion-audit skill pass #2 — manual)
 **Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows detected — flagged, not deleted (additive-only policy).**
 

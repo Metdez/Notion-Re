@@ -193,6 +193,29 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **Genuinely sourceless gaps (unchanged, 8th confirmation):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations; per-project delivery/contract/permit details; per-state license numbers; bonding/EMR/TRIR/UEI/CAGE; street addresses for 8 non-HQ offices.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-12 (notion-audit skill, 7th manual run — Shaw5.md integration)
+**New ground truth:** `Shaw5.md` discovered on disk (not previously registered). Run date 2026-06-12; 28 projects, 12 divisions, 94 sources. Registered in research-files.md this session.
+**Result: 9 fills executed** (7 location Adress upgrades + 1 new membership row + 1 AGC row note).
+
+**Fills made:**
+- **New York location** `37b90644-d524-8128-9f2a-ddd8762684cc`: Adress upgraded from "New York, NY · regional office" → "3 E 54th St, New York, NY 10022 · regional office" ([craft.co](https://craft.co/shawmut-design-and-construction/locations))
+- **Providence location** `37b90644-d524-81f6-87d4-f7048bff50df`: Adress upgraded from "Providence, RI · regional office" → "3 Davol Square, Suite A275, Providence, RI 02903 · regional office" ([craft.co](https://craft.co/shawmut-design-and-construction/locations))
+- **West Springfield location** `37b90644-d524-8104-abdb-c650226a58c0`: Adress upgraded from "West Springfield, MA · satellite" → "1111 Elm St, Suite 21, West Springfield, MA 01089 · satellite" ([craft.co](https://craft.co/shawmut-design-and-construction/locations))
+- **North Haven location** `37b90644-d524-81ca-b505-deed72e42d8e`: Adress upgraded from "North Haven, CT · satellite" → "116 Washington Ave, North Haven, CT 06473 · satellite" ([craft.co](https://craft.co/shawmut-design-and-construction/locations))
+- **Los Angeles location** `37b90644-d524-81b6-b603-ca894362a536`: Adress upgraded from "Los Angeles, CA · regional office · opened 2012/2013..." → "11390 W Olympic Blvd, Suite 200, Los Angeles, CA 90064 · regional office · opened 2012/2013" ([craft.co](https://craft.co/shawmut-design-and-construction/locations))
+- **Miami location** `37b90644-d524-819c-a1f4-f6d915a2c09b`: Adress upgraded from "Miami, FL · regional office · owning division not stated..." → "10800 Biscayne Blvd, Suite 1000 PH, Miami, FL 33161 · (786) 580-3200 · regional office · Head of Florida: Alexis Leal" ([casf.org](https://www.casf.org/membership/active/shawmut-design-and-construction/))
+- **Las Vegas location** `37b90644-d524-813c-b3dc-f8db707f1d89`: Adress upgraded from "Las Vegas, NV · regional office" → "3068 E Sunset Rd #1, Las Vegas, NV 89120 · regional office" ([craft.co](https://craft.co/shawmut-design-and-construction/locations))
+- **New membership row** `37d90644-d524-81d6-8c88-cb4f023c7800`: "🏗️ CASF — Contractors Association of South Florida" created in Memberships DS `d5f90644…`; Company=Shawmut ✅; source: casf.org active membership directory
+- **AGC of America row** `37b90644-d524-81fc-84bd-c2425d4260e5`: AGC Mass chapter note appended to body ([AGC Mass](https://members.agcmass.org/list/member/shawmut-design-and-construction-boston-67))
+
+**3a interconnection:** All relations verified unchanged. Miami + WPB Division still null per dossier (sourced gap).
+**3b description-depth:** Company body already has Shaw5 update block (added prior session). No new body depth gaps.
+**3c address check:** 7 location rows now have street-level addresses. Remaining without street: Worcester (city only — no street in Shaw5), Irvine (not in Shaw5 locations list), San Diego (already has 3655 Nobel Drive ✅), Boston HQ (already 560 Harrison Ave ✅). WPB has city-level only in Shaw5 — no upgrade available.
+**3d membership check:** Now 2 confirmed memberships in Notion: AGC of America + CASF. Shaw5 gaps section still notes ABC/DBIA/USGBC/NAIOP/ULI/CREW as unconfirmed corporate (individual-level signals only).
+**3e location tags:** Unchanged from prior audit — all tags complete.
+**Genuinely sourceless gaps (updated):** Large Project Division People; Mission Critical Adress; Miami + WPB Division relation; Events Place; all-office People relations; Irvine street address (not in Shaw5); WPB street address (city-level only in Shaw5); per-project delivery/contract/permit details; per-state license numbers; bonding/EMR/TRIR/UEI/CAGE.
+**Harness updated:** this ledger + research-files.md (Shaw5 registration) + LOG.md append.
+
 ## Audit log — 2026-06-11 (notion-audit skill, 2nd manual run)
 **Full audit run.** Live-fetched: profile page (`37b90644`), company record (`19990644`), 2 divisions (New England + NY Metro), 2 events, 1 membership, Divisions/Locations/Events/Memberships data-source schemas.
 **Result: 0 fills executed.** All live Notion records exactly match the ledger. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.

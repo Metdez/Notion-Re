@@ -120,6 +120,13 @@ CAGE code · numeric EMR/TRIR · MO SOS charter # / exact incorporation date · 
 2. **Existing Software** view → clear `__TEMPLATE__` (shows the Alberici row).
 3. ~~**Projects Location** select has no **Kansas / Oklahoma / Michigan** option~~ — **RESOLVED (2026-06-11 audit):** Kansas, Oklahoma, Michigan options are now present in the Construction Projects Location schema; all 6 projects are correctly tagged. Stale "(Location tag omitted)" body notes cleaned up.
 4. Possible template guide rows / leftover italics on the page + local tables (cosmetic UI delete).
+5. **⚠ Duplicate membership rows to delete in UI (6 rows — Alb2 load created dups; keep the richer row in each pair):**
+   - USGBC dup `37d90644-d524-8175-a9b1-f4436f8588e1` → keep original `37b90644-d524-8180-abe4-f95e8edf4658`
+   - DBIA dup `37d90644-d524-81ef-85eb-c33d9d7c3280` → keep original `37b90644-d524-81aa-93a1-fd8c847b14a6`
+   - AGC of America dup `37d90644-d524-8171-bb61-e67895741afc` → keep original `37b90644-d524-81cc-a60b-e1d63dd94e5b`
+   - LCI dup `37d90644-d524-8136-99a2-f64665a84a64` → keep `37d90644-d524-810e-9e33-d144c723c39d` (richer body)
+   - WCDA dup `37d90644-d524-813f-b2b1-e8476cbd7592` → keep `37d90644-d524-8157-aa36-d582a9f26308` (richer body)
+   - CIRT dup `37d90644-d524-8127-94c1-f3ea21a77986` → keep `37d90644-d524-8195-9b4b-fc9ed85db08b` (has "Member since 2016" in name)
 
 ## Build log
 - 2026-06-10: full load — company extended; 8 subsidiaries extended + 3 created; 11 division rows; 13 projects; 13 new people (Brooks Williams pre-existing, enriched; Liam O'Donnell dropped); 4 events; 4 memberships; 1 software row; 10 locations; 10 sources; full interlink verified by re-fetch.

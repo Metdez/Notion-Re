@@ -223,3 +223,21 @@ Full live re-verify of all records (company + 13 divs + 8 people + 27 projects +
 **3d Memberships ✓:** 13 rows total (includes GBCA, NJ Alliance, PWC NJ, ACCNJ, NJSDA, DoD SkillBridge + dup rows pending deletion). All sourced memberships present.
 **3e Location tags ✓:** ENR NY = New York ✓ · NJ Alliance 50th/51st = NJ ✓ · PWC NJ = NJ + Jersey City ✓ · HELIX H-1 = NJ + New Brunswick ✓ · Eagle Award = **New Jersey filled this pass** ✓.
 **Dups flagged for UI deletion (MCP cannot trash):** see Manual UI steps #4 above — 10 older rows to delete across memberships, locations, events.
+
+## Audit pass 2026-06-12 (this session — `notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all records (company + 12 divs + 8 people + 27 projects + 5 locations + 4 events (Jing3 primary) + 5 memberships (Jing3 primary) + 7 software) against `Jingoli.md` as ground truth.
+
+**3a Interconnection ✓:** 12 original divs→company; Nuclear Svcs→Mockaitis+11 projects; Jingoli Power→Karl Miller+5 projects; General Const.→Dennis Mockaitis+8 projects; Construction Mgmt.→Deon+3 projects; Infrastructure Svcs.→Reager; DCO Energy→Gary Fromer; all 27 projects→Contractors; 8 people→company; all location rows→company+division; all event rows→company; all 5 Jing3 memberships→company. People `Division` global-DB relation still DEFERRED (global Divisions DB `37690644` has no Jingoli rows — structural, not a gap in sourced data).
+**3b Description-depth ✓:** all division/people bodies carry full sourced depth. No thinning detected.
+**3c Address/location ✓:** all location rows have `Adress` text filled. `place` fields genuinely unfillable throughout (`lat:null`/`lng:null` in `Jingoli.md`; no-geocoding rule). Consistent with prior passes and other companies in workspace.
+**3d Memberships ✓:** 5 Jing3 memberships present and linked — GBCA, PWC NJ, NJSDA, ACCNJ, DoD SkillBridge. All company relations set. Older duplicate membership rows from 06-11 sessions: NJ Alliance `37c90644…ae22` confirmed 404 (already deleted). Remaining older dups (GBCA `37c9…d3b6` + `37c9…8e25`, ACCNJ `37c9…ae3` + `37c9…b59d3`, PWC NJ `37c9…271` + `37c9…14091a`) — status unknown, flagged for Zack UI verification.
+**3e Location tags ✓:** ENR NY = New York ✓ · Eagle Award = New Jersey ✓ · PWC NJ = NJ + Jersey City ✓ · HELIX H-1 = NJ + New Brunswick ✓.
+**No fillable gaps → zero writes.**
+
+**Active duplicate rows still requiring UI deletion (MCP cannot trash):**
+- **HELIX H-1 dup:** `37c90644-d524-8155-9259-c7f3e4680f59` ("HELIX NJ H1 Topping Out Ceremony") — confirmed live 404-not-found; keep Jing3 `37d90644…9309`.
+- **PWC NJ event dup:** `37c90644-d524-8194-afbf-e33fbb1ca7bc` ("PWC NJ Annual Women of Achievement Awards Luncheon 2025") — confirmed live; keep Jing3 `37d90644…3934`.
+- **Primavera P6 software dup:** `37d90644-d524-81be-bbd4-d7a75135caad` ("Primavera P6 Oracle P6") duplicates `37c90644-d524-8129-ad83-e7e221aa4927` ("Oracle Primavera P6 Jingoli") — both confirmed live; keep `37c90644` (richer name + source); delete Jing3 dup.
+- **PDS Vista software:** `37d90644-d524-8158-b644-f0f5ef648711` — `Software used` property empty (no matching schema option for "PDS Vista" in shared Software DB). Not fillable from `Jingoli.md` (Jing3 only). Flagged for future Zack review.
+
+**False positives rejected:** None. All fields verified live before declaring converged.

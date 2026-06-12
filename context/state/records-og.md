@@ -187,3 +187,20 @@ Both have Company→O&G and identical Function. Likely created in two separate O
 **All other records verified complete (unchanged from rounds 6–8):**
 - Company record, 7 divisions, 22 projects, 15 people, 17 locations, 4 software — no new gaps.
 - Ryan Oneglia dup still present (pending manual UI delete, see below).
+
+## Audit round 10 (2026-06-12, /notion-audit — full live re-verification)
+**0 fills** — all records verified complete against OG1.md + OD.md. No new fillable gaps found.
+
+**Live verification summary:**
+- Company record: complete (22 Construction Projects, 4 software, all properties + Address place + full body)
+- 7 divisions: complete — all have Companies + Place (Adress) + body (focus/leadership/phone/states/sectors); Building/HC/Heavy Civil/Asphalt/Mason/Materials all have People linked; Power & Energy has no People (genuinely sourceless); all have Projects except Asphalt/Mason/Industrial (none in dossier). Body depth is full-dossier throughout.
+- 22 projects confirmed live (all in Companies `Construction Projects` relation + sharing DB): all have Contractors→O&G, Owning Department→division, Size, Status, URL, body with sourced brief. Newer OD.md projects (AirTrain Newark, Darien Schools, Farmington HS, etc.) confirmed with place addresses where coords available.
+- 15 people confirmed (Ryan Oneglia ×2 dup still present — see Manual UI step 6)
+- 5 events confirmed live (CCIA Annual Meeting with Place=Aqua Turf Club filled; AGC CT + ENR NE Place genuinely sourceless; CMAA CT + CONN-OSHA confirmed complete)
+- 7 memberships in DS — but 3 are duplicated: AGC National ×2, NAPA ×2, CMAA CT ×2 (concurrent-session race between rounds 6/7 and round 9). All 6 dup rows have Company relation + sourced body. Unique memberships: CCIA, AGCCT, CT Road Builders, The Moles = 4 clean. AGC National/NAPA/CMAA CT = 3 each have a dup (see Manual UI step 7 to delete `37c90644-…` set).
+- 17 locations: all confirmed in search (HQ, RI Building office, Bridgeport/Danbury/Wallingford/Beacon Falls/Stamford/Southbury/New Milford/Burrville/Woodbury/Dover Plains original 12 + East Lyme/Hartford/Waterbury/Torrington Mason Supply OD.md 4 + 1 TEMPLATE row)
+- 4 software rows: complete
+
+**⚠ NEW DUP FLAGGED (round 10):** 3 membership rows doubled — AGC National, NAPA, CMAA CT each appear twice in the Memberships DS. Both copies have Company relation + matching content. Caused by concurrent audit sessions. Pending Zack UI delete (see Manual UI step 7). No destructive action taken.
+
+**False positives rejected:** Location row IDs in ledger header were stale (404 on direct fetch) but records found via DS search — data intact, IDs updated above.
