@@ -1,5 +1,7 @@
 # Batch 11 — records 25001–27500 (2500 total)
 
+> **Harness:** [BOARD](../BOARD.md) · [README](../README.md) · [agent-brief](../agent-brief.md) · [company-cache](../company-cache.md) · [excluded](../excluded-not-in-notion.md) · registered in [records-bulk-import](../../../context/state/records-bulk-import.md)
+
 > One agent owns this batch. Update this file **after every record** — cursor, count, heartbeat.
 > If you are resuming: read **Resume cursor** below and continue from the next row. Never restart a file from the top.
 

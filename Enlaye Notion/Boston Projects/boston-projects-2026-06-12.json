@@ -1,0 +1,666 @@
+{
+  "dataset": "Greater Boston Active Construction Projects",
+  "as_of": "2026-06-12",
+  "scope": "Major active or recently-started large construction projects in Greater Boston / Eastern Massachusetts (2023-2026 and ongoing), regardless of contractor.",
+  "value_units": "USD millions (estimates; null where undisclosed)",
+  "project_count": 31,
+  "projects": [
+    {
+      "id": 1,
+      "name": "South Station Tower",
+      "neighborhood_city": "Downtown / Financial District, Boston",
+      "sector": "Office / Residential / Mixed-Use",
+      "value_usd_m": 1500,
+      "value_note": "~$1.5B reported (tower alone ~$1B)",
+      "size": "1,980,000 SF total (3 buildings); Tower 51 stories, 677 ft; 166 condos",
+      "gc_cm": "Suffolk Construction",
+      "owner_developer": "Hines Interests LP / TUDC (Tufts University subsidiary)",
+      "architect": "Pelli Clarke Pelli; Kendall/Heaton; SLCE Architects",
+      "status": "Completed (Phase 1 tower)",
+      "start_date": "2020-01",
+      "completion_date": "2025-09",
+      "delivery_method": "Design-Bid-Build / CM at Risk",
+      "sources": [
+        "https://suffolk.com/project/south-station-redevelopment/",
+        "https://en.wikipedia.org/wiki/South_Station_Tower"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Phillip & Susan Ragon Building (MGH)",
+      "neighborhood_city": "West End / Beacon Hill, Boston",
+      "sector": "Healthcare",
+      "value_usd_m": 2000,
+      "value_note": "Estimated $2B+ (one of NE's largest healthcare projects)",
+      "size": "1.9M SF; 17+15 stories (two towers); 418 inpatient rooms",
+      "gc_cm": "Walsh Brothers + Turner Construction (JV)",
+      "owner_developer": "Mass General Brigham",
+      "architect": "NBBJ",
+      "status": "Under Construction",
+      "start_date": "2022-09",
+      "completion_date": "2030",
+      "delivery_method": "CM at Risk / JV",
+      "sources": [
+        "https://www.walshbrothers.com/project/phillip-and-susan-ragon-building-at-mgh/",
+        "https://www.massgeneral.org/news/ragon-building"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Dana-Farber Future Cancer Hospital",
+      "neighborhood_city": "Longwood Medical Area, Boston",
+      "sector": "Healthcare",
+      "value_usd_m": 1680,
+      "value_note": "~$1.68B",
+      "size": "450,000 SF; 10 inpatient floors; 300 beds",
+      "gc_cm": null,
+      "owner_developer": "Dana-Farber Cancer Institute (BIDMC partner)",
+      "architect": "Payette",
+      "status": "Under Construction (site prep started Mar 2026)",
+      "start_date": "2026-03",
+      "completion_date": "2030",
+      "delivery_method": null,
+      "sources": [
+        "https://www.dana-farber.org/about/our-vision-for-the-future-of-cancer-care/future-cancer-hospital/construction-updates",
+        "https://hconews.com/2026/03/05/dana-farber-outlines-timeline-for-future-cancer-hospital-construction/"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Harvard Enterprise Research Campus (ERC) Phase A",
+      "neighborhood_city": "Allston, Boston",
+      "sector": "Life Sciences / Mixed-Use / Residential",
+      "value_usd_m": 1500,
+      "value_note": "~$1-1.5B (Phase A)",
+      "size": "Multi-building campus; ~345 residential units; hotel; two lab buildings",
+      "gc_cm": "John Moriarty & Associates (JMA)",
+      "owner_developer": "Harvard University (land); Tishman Speyer (developer)",
+      "architect": "Multiple (Tishman Speyer team)",
+      "status": "Nearing Completion (lab buildings finishing 2026)",
+      "start_date": "2021",
+      "completion_date": "2026",
+      "delivery_method": "Ground lease development",
+      "sources": [
+        "https://construction.harvard.edu/2025/12/02/allston-development-monthly-update-december-2025/",
+        "https://www.tishmanspeyer.com/properties/boston/erc"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Biogen Global HQ — 75 Broadway (Kendall Common Bldg 1)",
+      "neighborhood_city": "Kendall Square, Cambridge",
+      "sector": "Life Sciences / Office / R&D",
+      "value_usd_m": 700,
+      "value_note": "Not disclosed; estimated $700M+",
+      "size": "585,000 SF; ~16-18 stories",
+      "gc_cm": "John Moriarty & Associates (JMA)",
+      "owner_developer": "BioMed Realty (Blackstone) / MITIMCO (JV)",
+      "architect": "Elkus Manfredi Architects",
+      "status": "Under Construction (broke ground Sep 2025)",
+      "start_date": "2025-09",
+      "completion_date": "2028",
+      "delivery_method": "Developer-led / GC",
+      "sources": [
+        "https://news.mit.edu/2025/biogen-groundbreaking-stirs-optimism-in-kendall-square-0918",
+        "https://www.jm-a.com/about/news/biogens-new-hq/"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "585 Kendall — Takeda Global R&D HQ",
+      "neighborhood_city": "Kendall Square (Canal District), Cambridge",
+      "sector": "Life Sciences / Office / Performing Arts",
+      "value_usd_m": 600,
+      "value_note": "Not disclosed; estimated $600M+",
+      "size": "600,000 SF lab/office; 30,000 SF performing arts center; 400-seat venue",
+      "gc_cm": "Suffolk Construction",
+      "owner_developer": "BioMed Realty (Blackstone); tenant Takeda (100% pre-leased)",
+      "architect": "CBT Architects",
+      "status": "Topped out Jan 2025; completing 2026",
+      "start_date": null,
+      "completion_date": "2026",
+      "delivery_method": null,
+      "sources": [
+        "https://www.takeda.com/en-us/newsroom/news-releases/2025/585-kendall-construction-milestone/"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Suffolk Downs Redevelopment (Phase 1+)",
+      "neighborhood_city": "East Boston / Revere, MA",
+      "sector": "Residential / Mixed-Use / Life Sciences / Retail",
+      "value_usd_m": 3000,
+      "value_note": "~$3-5B full multi-decade buildout",
+      "size": "161 acres; 10,000+ units; 10.5M SF planned",
+      "gc_cm": "John Moriarty & Associates (JMA)",
+      "owner_developer": "The HYM Investment Group",
+      "architect": "CBT Architects (master plan)",
+      "status": "Under Construction (Portico broke ground Dec 2025)",
+      "start_date": "2022",
+      "completion_date": "2028",
+      "delivery_method": "Multi-phase master developer with per-parcel GCs",
+      "sources": [
+        "https://www.hyminvestments.com/suffolk-downs/",
+        "https://atsuffolkdowns.com/construction-updates/"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Bunker Hill Housing Redevelopment",
+      "neighborhood_city": "Charlestown, Boston",
+      "sector": "Residential (public housing / mixed-income)",
+      "value_usd_m": 1500,
+      "value_note": "~$1.5B+ full 10-year buildout",
+      "size": "26 acres; 2,699 total units; 15 buildings",
+      "gc_cm": "Varies per building (Consigli on some phases)",
+      "owner_developer": "Boston Housing Authority; Leggat McCall + Joseph J. Corcoran Co.",
+      "architect": "Various (per building)",
+      "status": "Under Construction (Bldg F started 2024)",
+      "start_date": "2024",
+      "completion_date": null,
+      "delivery_method": "Phased master development",
+      "sources": [
+        "https://www.bunkerhillhousing.com",
+        "https://www.lmp.com/stellata-bunker-hill-housing-redevelopment/"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Mary Ellen McCormack Redevelopment",
+      "neighborhood_city": "South Boston, Boston",
+      "sector": "Residential (public housing / affordable / mixed-income)",
+      "value_usd_m": 1000,
+      "value_note": "$62M (Bldg A); ~$1B+ full project",
+      "size": "3,300 total units planned; Building A: 94 apartments",
+      "gc_cm": null,
+      "owner_developer": "Boston Housing Authority; WinnCompanies (developer)",
+      "architect": null,
+      "status": "Under Construction (Bldg A financing closed Mar 2025)",
+      "start_date": "2025-03",
+      "completion_date": "2026",
+      "delivery_method": null,
+      "sources": [
+        "https://www.winncompanies.com/news/3211-winncompanies-and-boston-housing-authority-secure-financing-to-start-redevelopment-of-mary-ellen-mccormack-complex",
+        "https://www.memredevelopment.com"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "FORUM @ Boston Landing",
+      "neighborhood_city": "Boston Landing, Allston-Brighton, Boston",
+      "sector": "Life Sciences / Lab / Office",
+      "value_usd_m": 545,
+      "value_note": "$545M",
+      "size": "350,000 SF; 9 stories; 50,000 SF floor plates",
+      "gc_cm": "Consigli Construction",
+      "owner_developer": "Lendlease + Ivanhoé Cambridge (JV)",
+      "architect": null,
+      "status": "Topped out; completing 2025-2026",
+      "start_date": null,
+      "completion_date": "2025",
+      "delivery_method": null,
+      "sources": [
+        "https://www.lacaisse.com/en/news/pressreleases/lendlease-ivanhoe-cambridge-top-out-forum-life-science-development-boston",
+        "https://www.forumbostonlanding.com"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "BU Warren Towers Renovation",
+      "neighborhood_city": "BU / Kenmore, Boston",
+      "sector": "Higher Education / Residential",
+      "value_usd_m": 550,
+      "value_note": "$550M",
+      "size": "Three 18-story towers; ~1,800 students",
+      "gc_cm": "Shawmut Design and Construction",
+      "owner_developer": "Boston University",
+      "architect": null,
+      "status": "Under Construction (Jan 2025 - Summer 2028, phased)",
+      "start_date": "2025-01",
+      "completion_date": "2028",
+      "delivery_method": "CM at Risk",
+      "sources": [
+        "https://www.shawmut.com/project/boston-university-warren-towers",
+        "https://www.bu.edu/articles/2025/fall-campus-construction-update-at-bu-starring-warren-towers/"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Logan Airport Terminal E TERC Parking Garage",
+      "neighborhood_city": "East Boston (Logan Airport), Boston",
+      "sector": "Transportation / Infrastructure",
+      "value_usd_m": 250,
+      "value_note": "$250M (Skanska contract)",
+      "size": "~67,400 m² (~725,000 SF); ~4,000 parking spaces",
+      "gc_cm": "Skanska USA",
+      "owner_developer": "Massachusetts Port Authority (Massport)",
+      "architect": null,
+      "status": "Under Construction (Q2 2025 start)",
+      "start_date": "2025-04",
+      "completion_date": "2030",
+      "delivery_method": "Design-Build / CM (Massport procurement)",
+      "sources": [
+        "https://group.skanska.com/media/press-releases-articles/300237/Skanska-signs-additional-contract-for-improvements-at-Logan-Airport-in-Boston,-USA,-for-USD-250M,-about-SEK-2-6-billion",
+        "https://www.massport.com/logan-airport/about-logan/airport-modernization"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Logan Airport Terminal E Modernization (Suffolk)",
+      "neighborhood_city": "East Boston (Logan Airport), Boston",
+      "sector": "Transportation / Infrastructure",
+      "value_usd_m": null,
+      "value_note": "Not publicly stated (multi-hundred million)",
+      "size": "565,000 SF",
+      "gc_cm": "Suffolk Construction",
+      "owner_developer": "Massachusetts Port Authority (Massport)",
+      "architect": "AECOM + Luis Vidal (design team)",
+      "status": "Phases complete (ongoing enhancements)",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": "CM at Risk / Design-Build",
+      "sources": [
+        "https://suffolk.com/project/logan-international-airport-terminal-e-modernization/",
+        "https://aecom.com/projects/boston-logan-international-airports-terminal-e/"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Northeastern University 23-Story Student Housing Tower",
+      "neighborhood_city": "South Bay / Roxbury Crossing, Boston",
+      "sector": "Higher Education / Residential",
+      "value_usd_m": 350,
+      "value_note": "~$350M",
+      "size": "23 stories; ~1,200-1,370 student beds; 4,000 SF retail",
+      "gc_cm": null,
+      "owner_developer": "Northeastern University; American Campus Communities (ACC)",
+      "architect": "Elkus Manfredi + Studio Luz Architects",
+      "status": "Under Construction (groundbreaking late 2025/early 2026)",
+      "start_date": "2026-02",
+      "completion_date": "2028",
+      "delivery_method": "Public-Private Partnership (PPP)",
+      "sources": [
+        "https://cps.northeastern.edu/news/northeastern-23-story-student-housing-tower/",
+        "https://www.bizjournals.com/boston/news/2025/08/28/new-northeastern-dorm-begins-construction.html"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Harvard Goel Center for Creativity & Performance (A.R.T.)",
+      "neighborhood_city": "Allston, Boston",
+      "sector": "Higher Education / Cultural / Arts",
+      "value_usd_m": null,
+      "value_note": "Not stated; catalyzed by $100M Goel gift",
+      "size": "70,000-85,000 SF; 4 stories; 700-seat + 300-seat venues",
+      "gc_cm": "Shawmut Design and Construction",
+      "owner_developer": "Harvard University",
+      "architect": null,
+      "status": "Nearing completion (topped off Oct 2025; opens early 2027)",
+      "start_date": null,
+      "completion_date": "2027",
+      "delivery_method": "CM at Risk",
+      "sources": [
+        "https://americanrepertorytheater.org/a-new-home-in-allston/",
+        "https://www.shawmut.com/the-new-art"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Harvard Medical School Building C Renovation",
+      "neighborhood_city": "Longwood / Fenway, Boston",
+      "sector": "Higher Education",
+      "value_usd_m": 75,
+      "value_note": "$75M+ (catalyzed by $75M gift)",
+      "size": "Historic marble Beaux-Arts building (SF not specified)",
+      "gc_cm": null,
+      "owner_developer": "Harvard Medical School / Harvard University",
+      "architect": null,
+      "status": "Under Construction (started Jan 2025)",
+      "start_date": "2025-01",
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://www.thecrimson.com/article/2025/2/24/hms-renovates-building-c/",
+        "https://hms.harvard.edu/about-hms/office-dean/messages/big-news-about-building-c"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Fenway Corners (full phase)",
+      "neighborhood_city": "Fenway, Boston",
+      "sector": "Office / Mixed-Use",
+      "value_usd_m": 1600,
+      "value_note": "~$1.6B full program",
+      "size": "1.6M SF (8 buildings); Phase 1: 250,000 SF office, 7 stories",
+      "gc_cm": null,
+      "owner_developer": "WS Development + Fenway Sports Group Real Estate + D'Angelo family",
+      "architect": "Morris Adjmi + Jaklitsch/Gardner + Gensler; Sasaki (master plan)",
+      "status": "Board Approved / Pre-construction (earliest groundbreak 2026)",
+      "start_date": "2026",
+      "completion_date": "2029",
+      "delivery_method": null,
+      "sources": [
+        "https://www.archpaper.com/2025/06/morris-adjmi-jaklitsch-gardner-gensler-fenway/",
+        "https://www.wsdevelopment.com/our-properties/fenway/"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Tufts Medicine Behavioral Health Hospital — Malden",
+      "neighborhood_city": "Malden, MA",
+      "sector": "Healthcare",
+      "value_usd_m": null,
+      "value_note": "Not disclosed",
+      "size": "144 beds; 6 specialized psychiatric units",
+      "gc_cm": null,
+      "owner_developer": "Tufts Medicine + Acadia Healthcare (JV)",
+      "architect": null,
+      "status": "Completed / Opened 2025",
+      "start_date": "2024-03",
+      "completion_date": "2025",
+      "delivery_method": null,
+      "sources": [
+        "https://www.acadiahealthcare.com/about/news-media-events/acadia-and-tufts-medicine-break-ground-on-new-hospital/",
+        "https://www.bizjournals.com/boston/news/2026/02/03/tufts-open-behavioral-health-hospital-malden.html"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Boston Children's Hospital Pediatric Psychiatric Hospital (Brighton)",
+      "neighborhood_city": "Brighton, Boston",
+      "sector": "Healthcare",
+      "value_usd_m": 640,
+      "value_note": "$640M",
+      "size": "New standalone inpatient psychiatric hospital (size TBD)",
+      "gc_cm": null,
+      "owner_developer": "Boston Children's Hospital + Franciscan Children's Hospital",
+      "architect": null,
+      "status": "Announced / Pre-construction (Dec 2025)",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://www.childrenshospital.org/newsroom/media-archive/boston-childrens-hospital-plans-new-640m-pediatric-psychiatric-hospital",
+        "https://giving.childrenshospital.org/mission-impact/mental-health/new-campus"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "7INK — Ink Block Final Phase",
+      "neighborhood_city": "South End, Boston",
+      "sector": "Residential (co-living)",
+      "value_usd_m": null,
+      "value_note": "Not disclosed",
+      "size": "14 stories; 180 units (co-living)",
+      "gc_cm": "Cranshaw Construction (confirmed prior Ink Block phases)",
+      "owner_developer": "National Development",
+      "architect": null,
+      "status": "Under Construction",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://natdev.com/project/ink-block/",
+        "https://cranshaw.com/portfolio-page/ink-block/"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Assembly Row Block 8",
+      "neighborhood_city": "Somerville, MA",
+      "sector": "Residential / Mixed-Use",
+      "value_usd_m": null,
+      "value_note": "Not disclosed",
+      "size": "~500 residential units; 26,000 SF retail; 500 parking spaces",
+      "gc_cm": null,
+      "owner_developer": "Federal Realty Investment Trust",
+      "architect": null,
+      "status": "Under Construction",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://bradvisors.com/block-8-officially-under-construction/",
+        "https://voice.somervillema.gov/assemblynp"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "MIT Kendall Common (Volpe Site Master Development)",
+      "neighborhood_city": "Kendall Square, Cambridge",
+      "sector": "Life Sciences / Residential / Mixed-Use / Office",
+      "value_usd_m": 3000,
+      "value_note": "$3B+ estimated (full 10-acre buildout)",
+      "size": "10 acres; 8 buildings; ~40% residential",
+      "gc_cm": "John Moriarty & Associates (first building); TBD remaining",
+      "owner_developer": "MIT (MITIMCO); BioMed Realty (JV on first bldg)",
+      "architect": "Elkus Manfredi (first bldg); others TBD",
+      "status": "Under Construction (Biogen bldg); site prep underway",
+      "start_date": "2025-09",
+      "completion_date": null,
+      "delivery_method": "MIT master developer with per-parcel development/GC",
+      "sources": [
+        "https://capitalprojects.mit.edu/projects/kendall-common",
+        "https://kendallcommon.com"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Drexel Village — 175 Ruggles Street",
+      "neighborhood_city": "Roxbury, Boston",
+      "sector": "Residential (affordable / mixed-income)",
+      "value_usd_m": null,
+      "value_note": "Not stated",
+      "size": "217 residential units (190 income-restricted)",
+      "gc_cm": null,
+      "owner_developer": "TBD (public land)",
+      "architect": null,
+      "status": "BPDA Approved (Jan 2025); construction planned",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "http://www.bostonplans.org/news-calendar/news-updates/2025/01/the-planning-department-advances-new-affordable-ho/the-planning-department-advances-new-affordable-ho"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "MBTA Capital Investment Program (FY2026-2031)",
+      "neighborhood_city": "Metro Boston",
+      "sector": "Transportation / Infrastructure",
+      "value_usd_m": 10300,
+      "value_note": "$10.3B 5-year CIP (660+ projects)",
+      "size": "660+ projects (Green Line E Symphony accessibility, Red/Orange fleet, drawbridge replacement, signals)",
+      "gc_cm": "Multiple (Kiewit on Red/Orange Line; varies per project)",
+      "owner_developer": "Massachusetts Bay Transportation Authority (MBTA)",
+      "architect": null,
+      "status": "Ongoing",
+      "start_date": "2025",
+      "completion_date": "2031",
+      "delivery_method": "Multiple (CM at Risk, design-build, per project)",
+      "sources": [
+        "https://www.metro-magazine.com/news/mbta-board-approves-103-billion-capital-plan-through-2031",
+        "https://commonwealthbeacon.org/transportation/drawbridge-green-line-investments-top-narrower-mbta-capital-plan/"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "One Congress / Bulfinch Crossing (later phases)",
+      "neighborhood_city": "Government Center / West End, Boston",
+      "sector": "Office / Residential",
+      "value_usd_m": null,
+      "value_note": "Phase 1 tower (528 ft, 43 stories, 1M SF office) completed 2023; later phases planned",
+      "size": "528 ft, 43 stories, 1M SF office (Phase 1 tower)",
+      "gc_cm": "Skanska (Phase 1 tower)",
+      "owner_developer": "HYM Investment Group",
+      "architect": null,
+      "status": "Phase 1 complete; later phases planned",
+      "start_date": null,
+      "completion_date": "2023",
+      "delivery_method": null,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bulfinch_Crossing"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Winthrop Center (115 Federal St)",
+      "neighborhood_city": "Financial District, Boston",
+      "sector": "Office / Residential",
+      "value_usd_m": null,
+      "value_note": "691 ft, 53 stories; completed 2023",
+      "size": "812K SF office + 317 condos; 691 ft, 53 stories",
+      "gc_cm": "John Moriarty & Associates (JMA)",
+      "owner_developer": "Carr Properties",
+      "architect": null,
+      "status": "Completed 2023",
+      "start_date": null,
+      "completion_date": "2023",
+      "delivery_method": null,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Winthrop_Center"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Harvard Allston Athletic Complex (IMP)",
+      "neighborhood_city": "Allston, Boston",
+      "sector": "Higher Education",
+      "value_usd_m": null,
+      "value_note": "Planned 2025-2034 (tennis/squash center, rugby building, stadium renovation)",
+      "size": "Tennis/squash center ~200K SF; rugby building; Harvard Stadium renovation",
+      "gc_cm": null,
+      "owner_developer": "Harvard University",
+      "architect": null,
+      "status": "Planned (2025-2034)",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://www.harvardmagazine.com/2025/03/harvard-land-development-plans-allston"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Boston Medical Center Campus Redesign (Phase 2)",
+      "neighborhood_city": "South End / South Boston, Boston",
+      "sector": "Healthcare",
+      "value_usd_m": null,
+      "value_note": "Multi-phase; 2nd campus redesign completed 2025",
+      "size": "Multiple phases including Menino Pavilion",
+      "gc_cm": null,
+      "owner_developer": "Boston Medical Center",
+      "architect": null,
+      "status": "Completed 2025",
+      "start_date": null,
+      "completion_date": "2025",
+      "delivery_method": null,
+      "sources": [
+        "https://www.bmc.org/visiting-us/directions-and-transportation/campus-redesign"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Trident Logistics Center",
+      "neighborhood_city": "Near Logan (East Boston), Boston",
+      "sector": "Industrial / Logistics",
+      "value_usd_m": null,
+      "value_note": "635,000 SF Class A industrial; groundbreaking 2025",
+      "size": "635,000 SF Class A industrial",
+      "gc_cm": "Gilbane Building Company",
+      "owner_developer": null,
+      "architect": null,
+      "status": "Under Construction (groundbreaking 2025)",
+      "start_date": "2025",
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://www.gilbaneco.com/about/whats-new/news/gilbane-building-company-celebrates-groundbreaking-of-trident-logistics-center/"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Allston Post (25-39 Antwerp St)",
+      "neighborhood_city": "Allston, Boston",
+      "sector": "Residential",
+      "value_usd_m": null,
+      "value_note": "6-story, 170-unit mixed-income",
+      "size": "6 stories; 170 units (mixed-income)",
+      "gc_cm": "Cranshaw Construction",
+      "owner_developer": null,
+      "architect": null,
+      "status": "Under Construction",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://cranshaw.com/portfolio-page/allston-post/"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Boston Children's Hospital Longwood Campus Expansion",
+      "neighborhood_city": "Longwood, Boston",
+      "sector": "Healthcare",
+      "value_usd_m": null,
+      "value_note": "New 11-story clinical tower in planning; $1B+ prior phases",
+      "size": "New 11-story clinical tower (planning)",
+      "gc_cm": null,
+      "owner_developer": "Boston Children's Hospital",
+      "architect": null,
+      "status": "Ongoing / Planning",
+      "start_date": null,
+      "completion_date": null,
+      "delivery_method": null,
+      "sources": [
+        "https://www.childrenshospital.org/about-us/expansion-renewal/longwood-campus"
+      ]
+    }
+  ],
+  "key_active_contractors": [
+    {
+      "contractor": "Suffolk Construction",
+      "projects": "South Station Tower, Logan Terminal E (phases), 585 Kendall/Takeda"
+    },
+    {
+      "contractor": "John Moriarty & Associates (JMA)",
+      "projects": "Suffolk Downs, Biogen/75 Broadway, Harvard ERC Phase A, Winthrop Center"
+    },
+    {
+      "contractor": "Walsh Brothers + Turner (JV)",
+      "projects": "Ragon Building at MGH"
+    },
+    {
+      "contractor": "Shawmut Design & Construction",
+      "projects": "BU Warren Towers, Harvard Goel Center (A.R.T.)"
+    },
+    {
+      "contractor": "Consigli Construction",
+      "projects": "FORUM @ Boston Landing, Bunker Hill (some buildings)"
+    },
+    {
+      "contractor": "Skanska USA",
+      "projects": "Logan TERC Garage, One Congress/Bulfinch Crossing (prior)"
+    },
+    {
+      "contractor": "Cranshaw Construction",
+      "projects": "Ink Block / 7INK, Allston Post"
+    },
+    {
+      "contractor": "Gilbane Building Company",
+      "projects": "Trident Logistics Center"
+    },
+    {
+      "contractor": "WinnCompanies",
+      "projects": "Mary Ellen McCormack (developer)"
+    },
+    {
+      "contractor": "Leggat McCall + Corcoran",
+      "projects": "Bunker Hill Housing (developer)"
+    },
+    {
+      "contractor": "Kiewit / White (JV)",
+      "projects": "MBTA Green Line Extension (completed 2022)"
+    }
+  ]
+}

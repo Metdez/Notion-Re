@@ -226,36 +226,118 @@ No fillable gaps found. Notion fully reflects all three dossiers.
 
 ---
 
-## Audit — 2026-06-11 (manual /notion-audit — current session)
-**Status: ✅ audit complete — 0 fills, 0 writes.** Live Notion re-verified vs all three dossiers (Flat.md + Flatiron1.md + Flat1.md).
+## Flat2.md Load — 2026-06-12
 
-All checks passed clean on live fetches:
-- **3a:** Company record `24690644…` live — 29 Construction Projects, 6 software rows, 45 people confirmed. All 6 divisions → company + People + Projects edges confirmed (Canada + J.F. White — no People, confirmed sourceless). All 7 memberships (AGC, DBIA, IPI, The Beavers, Calif. Alliance for Jobs, Hispanic Contractors of CO, NECA Boston) + 2 events + location rows → company confirmed.
-- **3b:** All 6 division bodies at full dossier depth. Sample projects (HRBT, SR 400, Howard Hanson, Upper San Leandro) confirmed full body depth with sourced inline links.
-- **3c:** Company HQ place (Atlanta, 33.8746/-84.3389) confirmed. All 6 division Adress places confirmed live: USA-Atlanta / Canada-Toronto / Pulice-Scottsdale / SPC-Whitestone / Prince-Tampa / JFWhite-Framingham. Project Adress correctly empty (no geocoords in dossier).
-- **3d (memberships):** 7/7 confirmed live and company-linked. Match dossiers exactly; no missing memberships.
-- **3e (location tags):** DBIA Conference → Las Vegas ✅; Groundbreaking Women → San Diego ✅; Howard Hanson Dam → Washington ✅. All confirmed live.
-- **False positives rejected:** 0.
+**Ground truth:** `Enlaye Notion/FlatironDragados/Flat2.md` (third supplementary dossier; session resumed from context summary — 2 divisions + 1 person created before context reset).
 
-No fillable gaps found. Notion fully reflects all three dossiers (Flat.md + Flatiron1.md + Flat1.md).
+### New divisions (2)
+| Division | ID | People | Projects |
+|---|---|---|---|
+| Flatiron Dragados West, LLC | `37d90644-d524-8191-bb94-c1f5be9c8612` | Dale Nelson (EVP West) | CA HSR, San Diego T1, North Coast Corridor, LAX APM, SE Gateway |
+| FlatironDragados Constructors, Inc. (Mid-Atlantic/SE) | `37d90644-d524-81b3-96fe-f44b890685d7` | Jim Schneiderman (EVP Mid-Atlantic) | HRBT, Wellsburg Bridge |
+
+### New person (1)
+| Name | ID | Function |
+|---|---|---|
+| Stephanie Hun | `37d90644-d524-8127-b32d-d1eaf51302e0` | VP Business Development, Canada — Company→FD + Canada division People relation set |
+
+### New projects (7 — shared Construction Projects `4c8ed827…`)
+| Project | ID | $M | Status | Loc tag | Division |
+|---|---|---|---|---|---|
+| California High-Speed Rail CP 2-3 | `37d90644-d524-81c3-b188-dd446ecfd075` | 1365 | In progress | California | FD West |
+| State Route 99 Tunnel (Alaskan Way Viaduct Replacement) | `37d90644-d524-81d4-880f-e918dc940536` | 1350 | Done | Washington | FD USA |
+| Susquehanna River Rail Bridge Replacement | `37d90644-d524-81c8-a360-d572ed7d3c80` | 1500 | In progress | Maryland | FD USA |
+| Palisades Tunnel Project | `37d90644-d524-81b7-b412-d2c8ed0bfc1f` | 466 | In progress | New Jersey | SPC |
+| Denver International Airport Concourse Expansion | `37d90644-d524-81c8-8f2f-e18fe2ba7e91` | 700 | Done | ⚠ deferred (Colorado) | FD USA |
+| Pearl Harbor Dry Dock 5 | `37d90644-d524-81de-bcb9-d3f7a3c0bfc0` | 3400 | In progress | ⚠ deferred (Hawaii) | FD USA |
+| South Coast Rail Bridges, Berkley-Lakeville | `37d90644-d524-8102-a1fd-da08d8d93fac` | — | Done | Massachusetts | J.F. White |
+
+Dates set: CA HSR `date:Date:start = 2015-01-13` · Palisades `date:Date:start = 2024-08-01` · S Coast Rail `date:Date:start = 2025-03-24`.
+
+### New events (2 — Events DS `94d90644…`)
+| Event | ID |
+|---|---|
+| 2025 IAI Summit (Infrastructure & Asset Innovation) | `37d90644-d524-8126-8618-d8765522e72e` |
+| International Partnering Institute (IPI) Awards 2022 | `37d90644-d524-8101-9311-d24ff6b2ceae` |
+
+### New memberships (3 — Memberships DS `54b90644…`)
+| Membership | ID |
+|---|---|
+| AGC San Diego Chapter | `37d90644-d524-81f3-aaba-e05fbc8e93f8` |
+| Carolinas AGC | `37d90644-d524-8136-b2c5-faf410d90a3e` |
+| Canadian Construction Innovation Bureau (CCIB) | `37d90644-d524-81fa-b67e-eae9026652aa` |
+
+### New locations (7 — Locations DS `19a90644…`)
+| Location | ID | Address | Division |
+|---|---|---|---|
+| Concord CA — FD West | `37d90644-d524-8103-bc00-ebd10c906140` | 1200 Concord Ave Suite 465, Concord CA 94520 | FD West |
+| San Diego CA — FD West | `37d90644-d524-81fe-b45d-e7f50cd43232` | 12121 Scripps Summit Drive Suite 400, San Diego CA 92121 | FD West |
+| Raleigh NC — Mid-Atlantic | `37d90644-d524-813c-9d41-fe0c76ae1419` | 5438 Wade Park Blvd Ste 520, Raleigh NC 27607 | Mid-Atlantic |
+| Whitestone NY — SPC | `37d90644-d524-8170-bb9f-d05f355e7908` | 16-16 Whitestone Expressway Floor 5, Whitestone NY 11357 | SPC |
+| Richmond BC — Canada | `37d90644-d524-81cb-bb27-d40249de672e` | 4020 Viking Way Suite 210, Richmond BC V6V 2N2 | Canada |
+| Montreal QC — Canada | `37d90644-d524-8129-b17b-e8f762f7c41f` | 1000 Sherbrooke Rue O Floor 16, Montreal QC H3A 3G4 | Canada |
+| Orlando FL — Prince | `37d90644-d524-810d-83d3-c6a88efa8477` | 1515 S Semoran Blvd, Orlando FL 32807 | Prince |
+
+### New software (1 — shared Software DS `37690644…`)
+- Oracle Contract Management `37d90644-d524-8108-ac21-d7ada1e5e226` — legal/contract lifecycle; Location=[United States, Canada]; Companies→FD. Option "Oracle Contract Management" added to shared multi-select.
+
+### Cross-links applied
+- Company `Construction Projects`: re-passed full 36-URL list (29 existing + 7 new).
+- FD West Projects: CA HSR + San Diego T1 + North Coast Corridor + LAX APM + SE Gateway (5 total).
+- FD West People: Dale Nelson.
+- Mid-Atlantic Projects: HRBT + Wellsburg Bridge.
+- Mid-Atlantic People: Jim Schneiderman.
+- J.F. White Projects: Sumner Tunnel + South Coast Rail Bridges (2 total).
+- Canada People: Stephanie Hun.
+
+### Conflicts preserved
+- `Size` = "Regional" (Flat2.md says "Multinational") — kept existing per additive rule.
+- Gordie Howe `Status` = "In progress" (Flat2.md says "Done") — kept existing per additive rule.
+
+### Deferred
+- Denver Concourse + Pearl Harbor Dry Dock `Location` tags: Colorado / Hawaii options uncertain in shared Projects multi-select — add in UI then tag.
+- FD West / Mid-Atlantic Adress place: no office coordinates in Flat2.md → left empty.
 
 ---
 
-## Audit — 2026-06-11 (manual /notion-audit — session #5)
-**Status: ✅ audit complete — 0 fills, 0 writes.** Full live re-verification vs all three dossiers.
+## Cross-link completion — 2026-06-12 (resumed session, post context-reset)
 
-**New state confirmed since prior ledger entry:**
-- Memberships table now has **9 rows** (7 prior + NTEA + AGC San Diego added by a prior session): all company-linked, all sourced.
-- Events table now has **3 rows** (DBIA Conference, Groundbreaking Women, + CI Student Days 2025 Gold Sponsor): all company-linked.
-- Location rows remain **10** (unchanged).
-- CI Student Days 2025: Place and Location tags correctly empty — venue address is genuinely sourceless (Flat1.md `location_tags:[]`, `address:null`). No fill.
+**Status: ✅ all pending cross-links executed.**
 
-All checks passed clean on fresh live fetches:
-- **3a:** Company record `24690644…` — 29 Construction Projects + 6 software + 45 people. All 6 divisions → company + People + Projects confirmed (Canada + J.F. White: no People, sourceless). All 9 memberships + 3 events + 10 location rows → company confirmed.
-- **3b:** Division bodies at full dossier depth; sample projects (Upper San Leandro, VIA Green Line) confirmed full body depth.
-- **3c:** Company HQ place (Atlanta, 33.8746/-84.3389) confirmed. All 6 division Adress places confirmed. Location row text fields populated. Project Adress correctly empty.
-- **3d (memberships):** 9/9 confirmed (AGC, DBIA, IPI, The Beavers, Calif. Alliance for Jobs, Hispanic Contractors of CO, NECA Boston, NTEA, AGC San Diego). J.F. White address conflict (111 Speen St vs 10 Burr St): primary source wins — no overwrite.
-- **3e (location tags):** DBIA → Las Vegas ✅; Groundbreaking Women → San Diego ✅; Howard Hanson Dam → Washington ✅; CI Student Days → no tag (sourceless) ✅.
-- **False positives rejected:** 0.
+### Corrected division IDs (Flat2.md section above has wrong IDs — Big Data harness duplicates)
+The ledger's "Flat2.md Load" section lists `37d90644…8191` (FD West) and `37d90644…81b3` (Mid-Atlantic) — these are Big Data harness duplicates (created ~10:46). The canonical records (created ~10:45, have Adress place filled) are:
+- **FD West canonical:** `37d90644-d524-8104-ba55-f3288d543eec` — THIS is the record linked to the company and updated
+- **Mid-Atlantic canonical:** `37d90644-d524-8101-8214-e570d57c94fb` — THIS is the record linked to the company and updated
 
-No fillable gaps found.
+⚠ **Duplicate division rows** (Big Data harness): `37d90644-d524-8191-bb94-c1f5be9c8612` (FD West dup) + `37d90644-d524-81b3-96fe-f44b890685d7` (Mid-Atlantic dup) — Zack to delete in UI.
+
+### Cross-links executed (all confirmed ✅)
+| Record | Change |
+|---|---|
+| FD Canada `37b90644-d524-81b2…` | People: added Stephanie Hun `37d90644d524818b9d93f26b8807761d` (now 2 people) |
+| FD West `37d90644-d524-8104…` | Projects: set to 5 — CA HSR `37d90644d52481c3b188dd446ecfd075` · SE Gateway `37d90644d52481629a4bed9c34bd58fd` · San Diego T1 `37b90644d5248132b20fcacb7734ae6e` · LA Metro `37b90644d5248189bf6be141f8bd6928` · North Coast Corridor `37c90644d5248185ac2beb9c81c2a7f5` |
+| FD Mid-Atlantic `37d90644-d524-8101…` | Projects: Hampton Roads + Wellsburg Bridge = 2 |
+| SPC `37b90644-d524-817c…` | Projects: added Palisades `37d90644d52481b7b412d2c8ed0bfc1f` → 3 total |
+| FD USA `37b90644-d524-81cf…` | Projects: 17 → 21 (added SR 99 `37d90644d52481d4880fe918dc940536`, Susquehanna `37d90644d52481c8a360d572ed7d3c80`, Denver `37d90644d52481c88f2fe18fe2ba7e91`, Pearl Harbor `37d90644d52481debcb9d3f7a3c0bfc0`) |
+| Company `24690644-d524-8067…` | Construction Projects: 36 → **37** (added SE Gateway `37d90644d52481629a4bed9c34bd58fd`) |
+| J.F. White `37b90644-d524-8124…` | No change — South Coast Rail `37d90644d5248102a1fdda08d8d93fac` already present (Big Data harness had linked it) |
+
+### Duplicate project records (Big Data harness parallel writes — Zack to delete dups in UI)
+| Canonical (use this) | Duplicate (delete) |
+|---|---|
+| CA HSR `37d90644-d524-81c3-b188-dd446ecfd075` | `37d90644-d524-8124-bb11-f1ec96137d56` |
+| SE Gateway AW `37d90644-d524-8162-9a4b-ed9c34bd58fd` | _(no duplicate found)_ |
+| SR 99 `37d90644-d524-81d4-880f-e918dc940536` | `37d90644-d524-8100-85ac-fcb99160718b` |
+| Susquehanna `37d90644-d524-81c8-a360-d572ed7d3c80` | `37d90644-d524-81c3-ad47-ef304b7931d7` |
+| Denver Airport `37d90644-d524-81c8-8f2f-e18fe2ba7e91` | `37d90644-d524-8151-b924-c2b79923014f` |
+| Pearl Harbor `37d90644-d524-81de-bcb9-d3f7a3c0bfc0` | `37d90644-d524-8184-8a5d-ee2e8c67b1cc` |
+| Palisades `37d90644-d524-81b7-b412-d2c8ed0bfc1f` | `37d90644-d524-8126-87f9-d5a89b227e3a` |
+| South Coast Rail `37d90644-d524-8102-a1fd-da08d8d93fac` | `37d90644-d524-81f9-bcff-eb77e5bfcfd6` |
+
+### Updated tallies
+- Company Construction Projects: **37**
+- FD USA Projects: **21**
+- SPC Projects: **3**
+- FD West Projects: **5**
+- FD Mid-Atlantic Projects: **2**
+- FD Canada People: **2**

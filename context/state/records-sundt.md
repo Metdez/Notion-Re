@@ -133,25 +133,112 @@ Live re-fetch: company record (22b9…), profile page (37b9…3af), Advanced Fac
 - Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
 - **Result: 0 writes. Record fully converged — no fillable gaps remain.**
 
-## Audit — 2026-06-11 (sixth pass — /notion-audit Sundt)
-Independent full audit: company record (22b9…), profile page (37b9…3af), all 8 divisions (spot: Advanced Facilities, Water, Renewables), 4 people (Cade Rowley confirmed; 20th People link `37c90644…08` = Kipp Amaker — NOT a duplicate of Rowley; prior audit false-positive corrected), AGC event, DBIA membership, DBIA event, SLC Water project, Apache Junction project, Tempe HQ, Salt Lake City, El Paso locations. Full dossier re-read (company · memberships · events · extra · gaps · all 15 locations · all 18 projects · all 8 divisions).
-- **No new fillable gaps found.** All records confirmed intact.
-- 3a Interconnection ✓: company→20 people · 18 projects · 3 software · 1 membership · 2 events. 8 divisions→company+People+Projects. 15 locations→company+Division. All edges intact.
-- 3b Description depth ✓: Advanced Facilities, Water, Renewables divisions confirmed with full sourced bodies. Projects (SLC Water, Apache Junction) confirmed with full project-brief, owner, scope, timeline, sources. Cade Rowley people record confirmed with role, dates, sourced body.
-- 3c Addresses ✓: Salt Lake City location `Adress` = "1970 N Redwood Rd, Salt Lake City, UT 84116" + Division link = Renewables. El Paso `Adress` = "909 Texas AVE, El Paso, TX 79901" + Division link = Water. All 15 location rows confirmed with street address in `Adress` text field. Company place (lat/lng) genuinely unfillable — no coords in dossier.
-- 3d Memberships ✓ (1/1): DBIA present with company relation and sourced body. Dossier has exactly 1 membership.
-- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone no location (sourceless). All located records tagged.
-- False positive corrected: 20th People link (`37c90644-d524-810c-8027-f68b227ced08`) = Kipp Amaker (Project Executive, Phoenix area) — not a Rowley duplicate as prior audit noted; both are legitimate distinct Sundt people records.
-- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount (except Renewables >$700M in body) · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
-- **Result: 0 writes. Record fully converged — no fillable gaps remain.**
+---
 
-## Audit — 2026-06-11 (seventh pass — /notion-audit Sundt)
-Full re-fetch: company record (22b9…), profile page (37b9…3af), all 8 divisions (all fetched), 4 people (Charland, Buck, Reidy, Rowley), AGC event, DBIA membership, DBIA event, SLC Water project, Gilbert North WTP project, Lake McQueeney Dams project, Nashville CONRAC project, Tempe HQ location. Full dossier re-read.
-- **Fillable gap found & filled (×3):** `Location` multi-select was empty on Alex Charland, Chad Buck, and Sam Reidy. Dossier places all three at Tempe HQ (Arizona). `Arizona` + `USA` options exist in People.Location schema. Filled additively. Sources: Sundt division-leadership announcements ([Charland](https://www.sundt.com/2024/sundt-promotes-charland-to-lead-advanced-facilities-group/) · [Buck](https://www.sundt.com/2025/sundt-construction-announces-chad-buck-as-new-building-group-president/) · [Reidy](https://www.sundt.com/2024/sundt-taps-reidy-to-lead-water-wastewater-group/)).
-- 3a Interconnection ✓: company→20 people · 18 projects · 3 software · 1 membership · 2 events. 8 divisions→company+People+Projects. 15 locations→company+Division. All edges intact.
-- 3b Description depth ✓: all 8 division bodies confirmed with full sourced content. Projects (SLC Water, Nashville CONRAC, Gilbert North WTP, Lake McQueeney) confirmed with full briefs, owners, timelines, sources.
-- 3c Addresses ✓: Tempe HQ `Adress` = "2620 S 55th St, Tempe, AZ 85282" confirmed. All 15 location rows have street addresses in `Adress` text. Company place (lat/lng) genuinely unfillable.
-- 3d Memberships ✓ (1/1): DBIA present, company-linked. Complete per dossier.
-- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless). People now all tagged (Charland/Buck/Reidy filled; Rowley already had [Arizona, USA]).
-- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount (except Renewables >$700M in body) · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
-- **Result: 3 writes (Location fills on Charland, Buck, Reidy). Record converged after fills.**
+## Sundt3.md Second-Pass Load — 2026-06-12
+
+**Dossier:** `Enlaye Notion/Sundt/Sundt3.md` (run_date 2026-06-12). Additive second pass — all original Sundt.md records remain untouched; only net-new data added.
+
+**Totals after this pass:** 9 divisions · 13 people · 58 projects · 8 events · 5 memberships · 4 software · 16 locations.
+
+### Division (1 new)
+| Name | Notion ID |
+|---|---|
+| Concrete | `37d90644-d524-810e-9a9c-fc8149ba1b6e` |
+
+*(Also enriched body depth on Transportation, Building Group, Advanced Facilities from Sundt3.md detail.)*
+
+### People (9 new)
+| Name | Role | Notion ID |
+|---|---|---|
+| Omar Chavez | Water Group VP | `37d90644-d524-81f6-a15a-e5704bbfd8dd` |
+| Matt Bothun | Transportation President | `37d90644-d524-81f8-91ce-ec5f9753fe23` |
+| Paul Laufer | Advanced Facilities VP | `37d90644-d524-81e0-bea0-cc4366282e9a` |
+| Patrick Bulman | Heavy Industrial VP | `37d90644-d524-814b-b6b4-eae31169b9a4` |
+| Jim Bergin | Renewables VP | `37d90644-d524-814e-a9f9-cb4e80944e9c` |
+| David Rieken Jr. | Concrete VP | `37d90644-d524-8192-b1fd-c346079d2c27` |
+| Tom Dodson | Mining VP | `37d90644-d524-81c6-ab1f-d59f7f0835fa` |
+| Chris Steves | PoweR VP | `37d90644-d524-8149-b0f6-f377765be654` |
+| Shawn Blubaum | Building Group VP | `37d90644-d524-819e-87c4-df396ef8433e` |
+
+### Events (6 new; DBIA + AGC Award pre-existing from original build)
+| Name | Date | Notion ID |
+|---|---|---|
+| IPS Acquisition | 2021-12 | `37d90644-d524-8156-8f44-c7a6b2e4d294` |
+| Chad Buck Building Pres | 2025 | `37d90644-d524-81fa-ae0f-ebac4fbf5945` |
+| Advanced Facilities Created | 2018 | `37d90644-d524-81f9-8a23-e16328527967` |
+| Water Group Created | 1950 | `37d90644-d524-812d-8d55-f1f4f9572f87` |
+| Cade Rowley CEO | 2024-10-01 | `37d90644-d524-816e-971a-c868ea71e586` |
+| Renewables Launch | 2020-12-07 | `37d90644-d524-8106-adf1-cee404fec1ac` |
+
+### Memberships (4 new; DBIA pre-existing)
+| Name | Notion ID |
+|---|---|
+| AGC | `37d90644-d524-81f6-9104-f1a3500aab01` |
+| APWA | `37d90644-d524-816e-ab69-e7fe2a855060` |
+| Arizona Builders Alliance | `37d90644-d524-8131-88b4-fe84dd615e11` |
+| The Beavers | `37d90644-d524-8187-9c57-d36b1780124f` |
+
+### Software (1 new)
+| Name | DB | Notion ID |
+|---|---|---|
+| Bluebeam Revu (Sundt) | Companies Software `collection://37690644-d524-804f-b966-000b34a1901b` | `37d90644-d524-81dc-becd-d1e972e48aaa` |
+
+### Locations (1 new)
+| Name | Address | Notion ID |
+|---|---|---|
+| Austin TX | 1701 Directors Blvd Ste 730, Austin TX 78744 | `37d90644-d524-8174-bbe3-e660d8e77087` |
+
+### Projects — Sundt3 (40 new)
+| Name | Division | Contract Value | Notion ID |
+|---|---|---|---|
+| SR 347 | Transportation | — | `37d90644-d524-8102-873c-d781ae85e9fd` |
+| Rocky Point | Transportation | — | `37d90644-d524-8141-98aa-c1d1fb1d8296` |
+| US-89 Bridge | Transportation | — | `37d90644-d524-8143-b28c-d7e6d248ed6b` |
+| TxDOT I-10 Phase I | Transportation | $174M | `37d90644-d524-816e-a3fc-f68a7a08c9eb` |
+| Windhaven Parkway | Transportation | $16.57M | `37d90644-d524-81dc-8d08-d7afa98a124a` |
+| Upper Brushy Creek Dam 101 | Transportation | — | `37d90644-d524-810e-958a-f453adfdddce` |
+| San Pedro Creek Culture Park | Transportation | — | `37d90644-d524-812e-871b-d819dbc05bde` |
+| GO 10 El Paso | Transportation | $160M | `37d90644-d524-8130-91c6-f776491fcbea` |
+| I-10 Connect El Paso | Transportation | $96M | `37d90644-d524-8143-b98e-e2ff4ca0335f` |
+| Boeckman Road Corridor | Transportation | $27M | `37d90644-d524-81d3-acc8-ec8cddc16445` |
+| Sellwood Bridge | Transportation | — | `37d90644-d524-81d8-9020-c98021a91e2c` |
+| West 7th Street Bridge | Transportation | — | `37d90644-d524-812f-971b-fa8850fda302` |
+| Valley Metro NW Extension | Transportation | — | `37d90644-d524-814a-b187-f99010a3b6f5` |
+| Valley Metro Rail Lines 4 and 5 | Transportation | — | `37d90644-d524-81b1-9b45-c1c05d7effa8` |
+| Hausman Road | Transportation | — | `37d90644-d524-8164-9e7e-f6d6e31f2f7b` |
+| White Tanks FRS | Transportation | — | `37d90644-d524-81e9-b1d7-d786e302b70d` |
+| Los Alamos Dam | Transportation | — | `37d90644-d524-81f7-b883-d1f46021ddbf` |
+| London Bridge | Transportation | — | `37d90644-d524-81ff-a5d7-d5964c4e17d6` |
+| Phoenix Pipeline | Water | — | `37d90644-d524-8136-bec1-f788814bc364` |
+| Cave Creek WRP | Water | — | `37d90644-d524-8162-b03e-dd3936ba4be3` |
+| CL-N1 Pipeline | Water | $34M | `37d90644-d524-81f2-a91b-c59e2e8caf42` |
+| SE Headworks SF | Water | $540M | `37d90644-d524-8157-b0ba-e73f7993e96e` |
+| KR Harrington & Omohundro WTP | Water | — | `37d90644-d524-8127-ae17-cff35334cebb` |
+| Wilson Creek Regional WRF | Water | — | `37d90644-d524-8145-9f5f-dfef6ccc47a5` |
+| Green River Energy Center | Renewables | — | `37d90644-d524-81f6-adbf-f6ee37108df0` |
+| Hornshadow PV | Renewables | — | `37d90644-d524-81ab-bb86-f120e8264624` |
+| Pleasant Valley Solar | Renewables | — | `37d90644-d524-8181-b1a8-c3dbc332b50f` |
+| DESRI Arroyo | Renewables | — | `37d90644-d524-8143-9c58-d2b72e05107a` |
+| CSUF Phase V | Building Group | — | `37d90644-d524-81b4-b306-d6865bf0b56e` |
+| SDSU Brawley STEM | Building Group | — | `37d90644-d524-8106-8376-c4351656e6b5` |
+| UTEP AMAC | Building Group | $80M | `37d90644-d524-818b-a499-c184c6bf6db1` |
+| SAN Airport Support | Building Group | — | `37d90644-d524-8192-9c42-d08d3477b6ae` |
+| Banner Tucson Tower | Building Group | — | `37d90644-d524-8119-990e-ea9d5db34a2a` |
+| BSPB | Building Group | — | `37d90644-d524-8136-b4bc-fda00284ef3c` |
+| El Paso Police Command Center | Building Group | — | `37d90644-d524-8129-a1b8-da737d6b4d5e` |
+| Sac State Science Complex | Building Group | — | `37d90644-d524-8105-9f30-ece24e07a527` |
+| Project Fusion | Advanced Facilities | — | `37d90644-d524-8115-8cd5-d668259c67a9` |
+| Sitewide Semiconductor IWTR | Advanced Facilities | — | `37d90644-d524-81fb-97e6-e6836d0e504c` |
+| Kruger/Project Benjamin | Heavy Industrial | $2M | `37d90644-d524-8144-85b1-c2b519744c94` |
+| NICB Ontario Mill | Heavy Industrial | — | `37d90644-d524-819c-aab0-dd74052bdf0c` |
+
+### Cross-links completed
+- All 40 new projects: `Owning Department` → their division; `Contractors` → Sundt.
+- Company `Construction Projects` relation re-passed as full 58-URL list (18 original + 40 new).
+- All 9 new people: `Company` → Sundt; `Division` → their division.
+- Concrete Division: `Company` → Sundt.
+- All 4 new memberships + 6 new events + 1 new software + 1 new location: `Company` → Sundt.
+
+### Genuinely sourceless blanks (unchanged)
+Place coords · division revenue/headcount · people email/phone/LinkedIn · most project contract values · delivery/contract method on several projects · event venue addresses.

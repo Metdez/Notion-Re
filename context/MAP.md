@@ -66,6 +66,7 @@ This project spreads its working memory across many small, single-topic files so
 | [state/records-kiewit.md](state/records-kiewit.md) | Kiewit Corp ledger: existing company record (`17b90644`) extended, 17 divisions, 15 projects, 2 people, events/memberships/software/locations, full interlink; InEight = Kiewit-owned in-house risk platform |
 | [state/records-shawmut.md](state/records-shawmut.md) | Shawmut ledger: prior-session build reconciled + completed — company (existing `19990644`) + profile, 5 divisions, 13 people, 19 projects, 12 locations, 2 events, AGC, 7 software, 14 owners (13 created), full interlink |
 | [state/records-event-imports.md](state/records-event-imports.md) | Event-import ledger (Apollo CSVs): Paris BuiltWorlds Summit 2026 + Soletanche Bachy Innovation Day — attendees, companies, enrichments, dup flags |
+| [state/records-bulk-import.md](state/records-bulk-import.md) | Bulk-import ledger: registration + index for the `Big Data/` 44,669-contact LinkedIn/Apollo import harness (18 batches, company-cache, excluded list) — scaffolded, not yet run |
 | [state/pages.md](state/pages.md) | Built pages + view IDs: Harvard Projects, Company-profile TEMPLATE, Consigli profile |
 | [state/open-tasks.md](state/open-tasks.md) | Open tasks / in-flight + notes & known gaps |
 | [state/audit-pass-2026-06-10-deferred.md](state/audit-pass-2026-06-10-deferred.md) | **Transient** — deferred/manual-OK items from the 06-10 full-portfolio audit (shared-schema options, dups, structural gaps). Fold into open-tasks + delete when resolved |
@@ -83,6 +84,11 @@ This project spreads its working memory across many small, single-topic files so
 | `/notion-audit` | Read-only parallel audit of a company → verified additive fills only |
 | `/notion-bulk-import` | Import any bulk record list (CSV/export) into the right database(s) — dedup-first, clobber-safe write order, enrichment over recreation; example ledger: [state/records-event-imports.md](state/records-event-imports.md) |
 ⚠ Stray copies of the notion-audit SKILL.md exist at the repo root and in `Enlaye Notion/` — canonical lives in `.claude/skills/`; cleanup flagged in [state/open-tasks.md](state/open-tasks.md).
+
+### External harnesses (outside `context/`, indexed by a state spoke)
+| Location | What | Indexed by |
+|---|---|---|
+| [`Big Data/_import-harness/`](../Big%20Data/_import-harness/) | Self-contained 18-agent parallel import harness for 44,669 US construction contacts (BOARD, ledgers, company-cache, excluded) | [state/records-bulk-import.md](state/records-bulk-import.md) |
 
 ---
 

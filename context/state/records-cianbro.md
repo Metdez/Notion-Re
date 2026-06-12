@@ -30,7 +30,7 @@ Page-local data sources:
 **Market-sector units (6):** Building `37b90644-d524-81df-84b5-feb998399283` · Industrial & Manufacturing (IDM) `37b90644-d524-8179-8c77-de68c89f5e7f` · Infrastructure `37b90644-d524-813c-937d-d4d67a3126c4` · Power & Energy `37b90644-d524-8135-bd43-f74ddecc16bc` · Modular Manufacturing `37b90644-d524-81b3-815c-e111706b2a1c` · Support Services `37b90644-d524-81b4-80c3-e8b00a3504fa`
 **Subsidiaries/LLCs (7):** A/Z Corporation `37b90644-d524-81ce-8fb9-f4a2c6696a71` · Starcon International `37b90644-d524-817b-be15-fcfbe2f553f7` · R.C. Stevens `37b90644-d524-8122-b9f2-c730d2cc7eb1` · Total Specialty Services `37b90644-d524-81ae-ab16-fe9c285f0bc6` · CFCC `37b90644-d524-8145-8ae6-f4cd9db02fcc` · Cianbro Equipment LLC `37b90644-d524-81ee-9dc4-f71010315315` · Cianbro Constructors LLC `37b90644-d524-8156-895b-f20a3d06a52d`
 
-## People (13 — Company → company)
+## People (12 — Company → company)
 **Existing (linked to divisions, not recreated):** Daniel Wolfe `2b690644-d524-809e-b45f-f52997652248` (QC Mgr → Support Services) · Pete Malikowski `2b690644-d524-8043-9aa1-d75ed5e08c7d` (GM IDM → IDM).
 **Created (10):** Andi Vigue (CEO) `37b90644-d524-813a-91b4-d957be2bab25` · David Schill (VP Special Projects) `…8129-b82e-f08df3a950c3` · Paul Franceschi (SVP) `…81a6-9ada-e97df9d9be86` · Peter Cianchette (EVP Corp Dev) `…8193-82c5-c015e421983d` · Sarah Malikowski (EVP) `…8149-9c52-e8815e945166` · James Doherty (CFO) `…81ca-90b9-f354378f3a93` · Eve J Parent (Dir Contracts) `…812a-a6bf-cdbbe00a106a` · Perry Lorenz (Pres A/Z → A/Z) `37b90644-d524-816e-9004-e5456e6d7876` · Jordan Henshaw (Reg Mgr Infra → Infrastructure) `37b90644-d524-81c0-941a-e5ca4db73f2b` · Lauren Walsh (Env Mgr → Power & Energy) `37b90644-d524-81ee-bae5-ddb0479beb74`.
 - 7 execs (Vigue→Parent) sourced to the Strategy-record leadership table LinkedIns (Vigue via Mainebiz, no LinkedIn). Corporate execs = company-level (no division). Division leaders linked to their division row's People relation.
@@ -87,25 +87,32 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **SBBA flag still open:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
 - **Genuinely sourceless (confirmed):** same list as prior runs — EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · project Adress place coords · most people Email/Phone/LinkedIn · Starcon Adress place.
 
-## Audit fills (2026-06-11 — notion-audit pass 5)
-- **1 new write:** Created People record **Pete Vigue** (Chair, The Cianbro Companies) `37c90644-d524-8103-8d17-dfeface077ca` — sourced to LinkedIn press post `https://www.linkedin.com/posts/cianbro-corporation_the-cianbro-companies-named-to-enrs-top-activity-7340469421796167680-ERZJ`. Company → Cianbro ✓. Function Qualification = President. Location = Maine. Body includes role + source link. Division = none (company-level role). **Total people: 13.**
-- **1 gap confirmed sourceless:** Richard Brescia (EVP) named in dossier `extra.leadership` with no source URL → left blank.
-- **25th project confirmed:** "Dry Dock 4 Refueling Complex, Norfolk Naval Shipyard (NNSY)" `37c90644-d524-811d-ac66-c3891e4bf982` — created after initial load, fully linked (Contractors → Cianbro, Owning Department → Infrastructure) ✓. Ledger now reflects 25 projects.
-- **Full re-verify:** company record ✓ · 13 divisions ✓ · 13 people (12 prior + Pete Vigue) ✓ · 25 projects (Contractors + Owning Department all set) ✓ · 14 locations (Company + Division relations) ✓ · 5 events (4 tagged, 1 correctly untagged) ✓ · 24 memberships (all → Company) ✓ · 7 software ✓ · 13 sources ✓.
-- **SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
-- **Genuinely sourceless (confirmed):** Richard Brescia (no source URL) · EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · project Adress place coords (most) · most people Email/Phone/LinkedIn · Starcon Adress place · Pete Vigue LinkedIn URL (not in source).
+## Additive pass (2026-06-12 — Cianbro3.md, /notion-load)
+Ground truth: `Enlaye Notion/Cianbro/Cianbro3.md`. Additive-only on top of 06-10/06-11 build.
 
-## Audit fills (2026-06-11 — notion-audit pass 6)
-- **0 new writes.** Full live verification across all record types — no fillable gaps found.
-- **Company record:** all properties confirmed populated (Description ✓, Type ✓, Country 12 values ✓, Address place lat/lng ✓, LinkedIn ✓, Website ✓, 25 Construction Projects ✓, 7 Software ✓, 13 People ✓, Strategy ✓).
-- **Divisions (13):** all live — Company + People + Projects relations confirmed on Infrastructure (14 projects, Henshaw) and Power & Energy (2 projects, Walsh) spot-checks ✓. Bodies carry focus/leader/footprint/parent/source ✓.
-- **People (13):** Andi Vigue (CEO) — Company ✓, Function ✓, Location=Maine ✓, body complete ✓. Pete Vigue (Chair) — Company ✓, Function Qualification="President" (closest schema option; no "Chair" option exists — correct) ✓.
-- **Projects (25):** WALK Bridge spot-check — Contractors ✓, Owning Department=Infrastructure ✓, Adress place lat/lng ✓, body complete ✓. Dry Dock 4 NNSY — Contractors ✓, Owning Department=Infrastructure ✓, value $120.3M ✓.
-- **Events (5):** ABC Craft 2025 → Company ✓, Location tags=["Las Vegas"] ✓. ABC Top Performers → Company ✓, no Location tag (no location in source) ✓ (correct). All 5 confirmed present.
-- **Memberships (24 rows confirmed live):** ABC, AGC, AGC Maine, AIHA, AISC, ARTCA, BPA, BWI Business Partnership, CII, CFMA, CURT, DBIA, GBC, MD Chamber, MWII, MTBMA, NAWIC, NSPE, Propeller Club, SAME, SBBA, SMPS, TAPPI, ACI — all with Company relation ✓. Dossier source (MWMCA) lists all 24 — complete match.
-- **Locations (14 confirmed live):** Corporate HQ, Pittsfield ME ops, Falmouth, Ricker's Wharf, Eastern Mfg Facility, Baltimore/Morgan's Wharf, Greenville SC, Cianbro Equipment, CFCC, A/Z HQ North Stonington, Bloomfield CT, Starcon La Porte TX, Total Specialty Baytown TX, R.C. Stevens Winter Garden FL — all present.
-- **SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified in source. Recommend Zack confirm or rename to "SBBA".
-- **Genuinely sourceless (confirmed):** same list as prior runs — Richard Brescia (EVP, no source URL) · EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · most project Adress place coords · most people Email/Phone/LinkedIn · Starcon Adress place · Pete Vigue LinkedIn URL.
+**Profile page body updated:**
+- ENR Top 400 #96 → **#94**, ~$1.3B → **$1,342M** (2024 revenue; Chubb ENR list). Source: Chubb ENR top-400.pdf.
+- Added **ABC 2026 Top General Contractors #21**. Source: cianbro.com/news/abc-top-performers-2026.
+
+**3 new people created (People DB):**
+- Charlie Cianchette `37d90644-d524-813d-a8bd-cdfac41ba8f4` — President, A/Z Corporation · A/Z Corp division → A/Z div People relation updated (now: Lorenz + C.Cianchette)
+- Gary Smith `37d90644-d524-81f8-a6ab-ea1675506a8a` — Regional Manager, IDM (Baltimore MD) · IDM division → IDM div People relation updated (now: P.Malikowski + Smith)
+- Aric Dreher `37d90644-d524-8137-bd4d-f26b6ae59856` — Asst GM Infrastructure · Infrastructure division → Infra div People relation updated (now: Henshaw + Dreher)
+
+**3 division bodies updated (additive — no replace_content):**
+- A/Z Corp: added C.Cianchette as current president + 2024 Building group merger note (a-zcorp.com/announcements/…)
+- IDM: added Gary Smith as Regional Manager (cianbro.com/news/project-aims-to-provide-cleaner-air-in-baltimore)
+- Infrastructure: added Aric Dreher as Asst GM (cianbro.com/news/cianbros-andrew-hallett…)
+
+**1 new Construction Project created:**
+- WIN Waste Wheelabrator Baltimore WTE Overhaul `37d90644-d524-81ce-b559-fcb457fff5e4` — Type=Energy & Power · Status=In progress · Location=[Baltimore, Maryland] · Size=64.5 MW WTE facility · Contractors→Cianbro · Owning Department→IDM
+  - IDM div Projects relation updated: now [Lockhart Power, Puritan P4, **WIN Waste**]
+  - Company Construction Projects relation updated: 25→**26** projects
+
+**Conflict (additive-only — held):** company Description field still reads "~$1.3B … ENR #96" (filled field; not overwritten). Body on profile page updated; company record Description left as-is.
+
+**Interlink additions (2026-06-12):**
+Company ↔ 26 Construction Projects ✓ · Company ↔ 15 People ✓ (3 new) · A/Z→Lorenz+C.Cianchette ✓ · IDM→P.Malikowski+G.Smith ✓ · Infrastructure→Henshaw+Dreher ✓ · WIN Waste→Contractors+Owning Department ✓.
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.

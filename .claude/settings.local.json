@@ -1,6 +1,7 @@
 {
   "permissions": {
     "allow": [
+      "Bash",
       "Bash(ls ~/.claude/CLAUDE.md 2>/dev/null && echo \"exists\" || echo \"not found\")",
       "Read(//Users/zackhanna/.claude/**)",
       "Bash(curl -fsSL https://ntn.dev)",
@@ -74,7 +75,14 @@
       "Bash(echo \"exit-grep:$?\")",
       "Bash(rm -rf .git/rebase-merge .git/REBASE_HEAD; echo \"removed\"; echo \"===STATUS===\"; git status; echo \"===still ahead?===\"; git log --oneline -2)",
       "Bash(git fetch *)",
-      "Bash(git rebase *)"
+      "Bash(git rebase *)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:www.enlaye.com)",
+      "Bash(ls -la ledgers/)",
+      "Bash(ls -la _plan/ _a05_tmp/)",
+      "Bash(python3 -)",
+      "Bash(sed -n '50:72p' /dev/null)",
+      "Bash(awk 'NR>=56 && NR<=75' \"/Users/zackhanna/Desktop/Enlaye to Notion/context/playbook/schemas.md\")"
     ],
     "additionalDirectories": [
       "/Users/zackhanna/Desktop/Enlaye to Notion/.git/rebase-merge"

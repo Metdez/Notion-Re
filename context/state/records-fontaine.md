@@ -104,3 +104,34 @@ Relation graph intact: 19/19 Contractors ✓, 19/18 Owning Department (Salisbury
 2. **Memberships "View of People"** tab — re-point leftover company filter to Fontaine Bros. Inc.
 3. Template guide/starter rows in Company Map/Events/Sources/Locations/Memberships may still show — delete in UI if unwanted.
 4. Consider renaming the page from "Fontaine Bros TEMPLATE" to "Fontaine Bros." once reviewed.
+
+---
+
+**✅ Third-pass LOAD 2026-06-12 (new dossier `Fon2.md`, run_date 2026-06-12 — /notion-load Fon2.md):**
+Dedup: 16 Fon2 projects vs 19 in Notion → 1 net-new; 8 named people → 2 found (Boudreau, Fulton from Big Data import), 1 absent (Langan).
+Schema: `Fitchburg` added to Projects Location multi-select (all 130+ options preserved).
+
+**Net-new records created:**
+| Record | Type | Notion ID |
+|---|---|---|
+| Crocker Elementary School (Fitchburg MA; CM-at-Risk/MSBA; 116k SF; Done 2023–2025-06-05) | Project (Worcester div) | `37d90644-d524-81c0-b293-f821842373c3` |
+| Tyler Langan (Sr. Marketing & BD Coordinator) | Person | `37d90644-d524-81dc-9f28-d9563ec95bc5` |
+
+**Body fills (additive, insert_content — all confirmed ✅):**
+| Record | ID | Added |
+|---|---|---|
+| Jason Boudreau | `37c90644-d524-8100-af70-c1e991d2de65` | Hire & Credentials (VP CM Services, 2024, ICC Tall Mass Timber cert) |
+| Mark Fulton | `37c90644-d524-81f6-b3ee-e9cf4b54b3c6` | Additional Source (hire announcement URL) |
+| Doherty Memorial HS | `37b90644-d524-8174-a099-d1e195f8fe2f` | Procurement (competing bidders: Consigli, Shawmut, Skanska, Suffolk, Turner, Walsh Brothers) |
+| Agawam HS | `37b90644-d524-81a8-87bf-f3b0f9f07065` | JV & Project Team (W.T. Rich JV; OPM Leftfield LLC) |
+| Tyngsborough MS | `37b90644-d524-818d-b029-e000f66afa7f` | OPM & Budget (Leftfield LLC; $65M budget; ~$2M under budget) |
+| Peck MS | `37b90644-d524-812b-ae20-ff7633bac70c` | Procurement & Financials (Design-Bid-Build; MSBA ~$58.4M/68%; Anser Advisory OPM; Mount Vernon Group Arch; lowest of 7; ~10% under budget) |
+| Longmeadow MS | `37b90644-d524-81eb-8e7c-e52e2162d991` | Competing Bidders (BOND Building, Consigli, Shawmut) |
+| Company record | `19990644-d524-80cb-b37f-d7f58bc63bda` | Community & Sponsorships (WooSox founding sponsor; Fontaine Community Foundation) |
+
+**Relations updated:** Company `Construction Projects` → full 20 URLs (19+Crocker) · Worcester division `Projects` → full 10 URLs (9+Crocker).
+
+**Sources table** (`94290644-d524-83c8-91e2-87e2415273ba`) **+9 rows** (news index · school-experts · Commonwealth Beacon Holyoke · hire announcement · Springfield Chamber · BusinessWest $145.4M · MSBA Capital Planning Oct 2025 · Ai3 Whitman · iBerkshires story/82016). Table now ~44 rows.
+
+**Conflicts held:** Tyngsborough delivery method (Notion: Design-Bid-Build vs Fon2: CM-at-Risk) · Peck delivery method (Notion: CM-at-Risk vs Fon2: Design-Bid-Build) — Notion values kept per additive rule.
+**Already in Notion (no write):** ENR #52 Green · $145.4M revenue · union affiliation bullets — all confirmed present from prior sessions.

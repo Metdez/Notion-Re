@@ -1,3 +1,5 @@
+> ⚠ **SUPERSEDED — scratch copy.** Canonical cache: [company-cache.md](../../company-cache.md). Kept for history only.
+
 # Batch-05 Company → pageID cache (A05)
 
 Resolved existing Companies-DB records. Use these for the Company relation on people.

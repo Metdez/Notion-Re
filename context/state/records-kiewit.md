@@ -98,20 +98,6 @@ Key values: Homer City $10,000M · CA HSR $3,500M · Canada nuclear $3,200M · B
 
 ---
 
-## Audit pass — 2026-06-11 pass #2 (full re-audit)
-
-**0 fills.** Record fully converged. No fillable gaps found.
-
-- **3a Interconnection ✓:** All 17 divisions→company; 10/17 divisions have Projects relations (7 genuinely have no named projects in dossier); 7 memberships/2 events/11 locations/4 software all company-linked; both people company-linked. Project `Owning Department` not set per DB convention (division.Projects carries the edge).
-- **3b Description depth ✓:** All 17 division bodies + all 15 project bodies at full dossier depth.
-- **3c Addresses ✓:** Company HQ place confirmed; all 17 division Adress places confirmed; 8/15 project Adress places filled; 7 genuinely sourceless (multi-state/multi-site); all 11 location rows have Adress text.
-- **3d Memberships ✓ (7/7):** The Beavers · AGC · DBIA · CSRA · CISI · Nat'l Construction Safety Executives · Canadian Construction Safety Council — all company-linked.
-- **3e Location tags ✓:** Both events national/virtual — no location to tag (genuinely sourceless). Location rows use text Adress field, no location-tag property in schema.
-- **Reconfirmed genuinely sourceless:** People Division relation (structural mismatch), Events Date, People Email/Phone/LinkedIn, 7 project Adress (multi-state), 6 project Size values, division-level People for 8 units, Oregon/Alaska schema gap (UI-only fix).
-- **Still manual UI:** Projects Underway + Existing Software filters; Memberships People-tab filter; add Alaska/Oregon to Projects Location.
-
----
-
 ## Audit pass — 2026-06-11 (post-load verification)
 
 **3 fills:**
@@ -184,22 +170,75 @@ Sources: https://www.kiewit.com/locations/
 
 ---
 
-## Audit pass — 2026-06-11 pass #3
+## Second-pass load — 2026-06-12 (Kiewitt4.md)
 
-**1 fill.**
+Ground truth: `Enlaye Notion/Kiewitt/Kiewitt4.md` (4016 lines, run date 2026-06-12). Additive-only on top of 06-10 build. Schema note: Type options "Water/Marine/Nuclear" were never in the live DB; mapped water→Municipal & Community/Infrastructure, nuclear→Government, LNG→Industrial/Chemicals.
 
-- **Lone Tree, CO location row** `37b90644-d524-81fd-88c9-e69869705fc7` — `Division` relation extended from `[Kiewit Infrastructure Co.]` → `[Kiewit Infrastructure Co., TIC – The Industrial Company, Kiewit Engineering Group Inc., Kiewit Mining Group Inc.]`. Source: https://www.kiewit.com/locations/. All four subsidiaries share the 10055 Trainstation Circle address per dossier.
+**New divisions (2):**
+| Division | ID |
+|---|---|
+| Western Summit Constructors Inc. (WSCI) | `37d90644-d524-8142-b339-d1e6533f785a` |
+| Kiewit Water Facilities Florida Co. | `37d90644-d524-8174-b919-f5bf50335298` |
 
-**3a Interconnection ✓:** All 17 divisions→company; all 15 projects→Contractors=Kiewit; both people company-linked; 7 memberships/2 events/11 locations/4 software company-linked. Lone Tree location row now carries all 4 co-located division relations (was 1 of 4). All other location rows Division relations confirmed.
+**New projects (23 — Contractors→Kiewit, Type/Location mapped to existing schema):**
+| Project | ID | Type | Status |
+|---|---|---|---|
+| I-55 Bridge Replacement (Memphis) | `37d90644-d524-81fc-82db-e3dd82d983e9` | Transportation | In progress |
+| Midtown Tunnel (Elizabeth River Crossing) | `37d90644-d524-81c7-9635-cea0aaeaa51f` | Transportation | Done |
+| Central 70 (I-70 East Reconstruction) | `37d90644-d524-818c-8437-e69f8265e58c` | Transportation | Done |
+| Alaskan Way Viaduct Demolition (SR 99) | `37d90644-d524-811b-8fef-ea12f0622458` | Transportation | Done |
+| BART Silicon Valley Phase II - CP2 | `37d90644-d524-81dc-bac3-ed7f35375f46` | Transportation | In progress |
+| DART Irving Orange Line Expansion | `37d90644-d524-81e9-ac93-e603624ef660` | Transportation | Done |
+| Monroe County Combined-Cycle Power Plant | `37d90644-d524-81bc-93f6-e35bdf9e2668` | Energy & Power | Not started |
+| Birdsboro Power Plant (485 MW CCGT) | `37d90644-d524-81b8-b1bd-e281f39791b6` | Energy & Power | Done |
+| AES Southland Projects | `37d90644-d524-814b-b7e6-f3cc5e67a892` | Energy & Power | Done |
+| Henry Ford Health Central Energy Hub | `37d90644-d524-81ca-9a03-f4d81951f6f5` | Energy & Power | In progress |
+| South Fork Wind - Offshore Substation | `37d90644-d524-8152-bbd7-cbdcf5dd994a` | Energy & Power | Done |
+| Prospect Lake Clean Water Center | `37d90644-d524-817c-8303-d83b6f08b39f` | Municipal & Community | In progress |
+| Elliott West Wet Weather Treatment Station | `37d90644-d524-8114-aab5-fc6ae9602909` | Municipal & Community | In progress |
+| Oroville Dam Spillways Emergency Recovery | `37d90644-d524-81b3-94b5-e4b0e030bcfe` | Infrastructure | Done |
+| Calcasieu Pass LNG Export Facility | `37d90644-d524-81b3-be19-db579d54acb7` | Industrial / Chemicals | Done |
+| Texas LNG Export Terminal (Brownsville) | `37d90644-d524-8199-a0a8-d17e8c3dda9b` | Industrial / Chemicals | Not started |
+| Energia Costa Azul (ECA) LNG | `37d90644-d524-81cf-98f0-eb0d6a646979` | Industrial / Chemicals | Done |
+| Front Range Pipeline Facilities (NGL) | `37d90644-d524-8188-a76f-fc8107a3ba32` | Industrial / Chemicals | Done |
+| Savannah River HFTOC | `37d90644-d524-81ac-9f13-f229e4dded51` | Government | In progress |
+| Connecticut State Pier Redevelopment | `37d90644-d524-8172-8104-f8571458bce1` | Infrastructure | Done |
+| Miramar Water Treatment Plant Expansion | `37d90644-d524-813f-b8b4-f45bd26a3900` | Municipal & Community | Done |
+| Beaver Lake Renewable Energy (FEED) | `37d90644-d524-816d-94cb-d965a738ba5f` | Industrial / Chemicals | Not started |
+| TECO Combined Heat and Power Plant | `37d90644-d524-81d4-b9f3-c0aca7c475c9` | Energy & Power | Done |
 
-**3b Description depth ✓:** All 17 division bodies + all 15 project bodies confirmed at full dossier depth — no new gaps found.
+**Division Projects relations updated (full URL list re-passed):**
+- Kiewit Infrastructure Co. → Key Bridge + Midtown Tunnel + Central 70 + DART + Savannah River + CT State Pier
+- Kiewit Infrastructure West Co. → CA HSR + Port Arthur + Nome + Federal Way + Klamath + S.Central LR + Alaskan Way + BART + Elliott West + Oroville Dam
+- Kiewit Infrastructure South Co. → I-55 Bridge
+- Kiewit Power Constructors Co. → Homer City + AES Southland + Henry Ford CEH
+- Kiewit Energy Group Inc. → Grain Belt + Calcasieu Pass + Texas LNG + ECA LNG
+- TIC – The Industrial Company → NRG + Monroe County + Birdsboro + Calcasieu Pass + Front Range + TECO CHP
+- Kiewit Engineering Group Inc. → Texas LNG + Beaver Lake
+- Kiewit Offshore Services → Salamanca + South Fork Wind
+- Kiewit Development Company → Central 70 + Henry Ford CEH
+- Western Summit Constructors Inc. → Miramar WTP
+- Kiewit Water Facilities Florida Co. → Prospect Lake
 
-**3c Addresses ✓:** Company HQ, all 17 division Adress places, and 8/15 project places confirmed filled. 7 project Adress fields remain genuinely sourceless (multi-state/multi-site corridors with no single coordinate).
+**New events (3):**
+| Event | ID |
+|---|---|
+| Kiewit Engineering Technical Summit 2026 | `37d90644-d524-8108-ad8f-ca4695ea9fae` |
+| Future Women in Kiewit (FWIK) Summit 2025 | `37d90644-d524-8175-a559-cbafefc92f73` |
+| EPC Show 2026 (Houston TX, George R. Brown) | `37d90644-d524-813b-8e20-f34b1ab21c42` |
 
-**3d Memberships ✓ (7/7):** The Beavers · AGC · DBIA · CSRA · CISI · Nat'l Construction Safety Executives · Canadian Construction Safety Council — all company-linked; no additions needed.
+**New membership (1):** ASCE `37d90644-d524-81f0-bec0-fdcc32b47137`
 
-**3e Location tags ✓:** Both events national/virtual — no location to tag. Location rows use text Adress field; no location-tag column in schema.
+**New software (4):**
+| Row | ID |
+|---|---|
+| SAP ERP ECC 6.0 + SAP HCM | `37d90644-d524-81c5-ad69-c15448674a9b` |
+| Autodesk Revit / Navisworks / BIM360 | `37d90644-d524-8196-813f-fcf0f6300ce8` |
+| Bentley OpenRoads Designer (ORD) | `37d90644-d524-817c-91fa-ceac9b74ac4d` |
+| Tekla Structures | `37d90644-d524-81b7-aaf2-f88cc39bc0f1` |
 
-**Genuinely sourceless (confirmed, no change):** People Division relation (structural DB mismatch — shared Division DB ≠ page-local 3cf90644), Events Date, People Email/Phone/LinkedIn, 7 project Adress (multi-state), 6 project Size values, division-level People for 8 units.
+**Companies DB updated:** Construction Projects = 39 URLs (16 existing + 23 new). Companies Software = 8 URLs (4 existing + 4 new).
 
-**Manual UI (unchanged):** Projects Underway + Existing Software template filters; Memberships People-tab filter; add Alaska/Oregon to shared Construction Projects Location multi-select (then tag Nome AK, Bull Run OR, Klamath OR/CA).
+**Company body enriched (insert_content):** ENR 2025/2026 ranks · net income $1.315B · 4K+ engineering / 16K+ craft staff · NAVFAC SIOP $8B / Medical $1B / Key Bridge est $1.7B / VA Denver $570.75M / JBER $310M · UEI J9FBNDSUJCW3 / CAGE 6EVG6 · 1,000+ reqs / 24 EHS openings / tool stack.
+
+**Not filled (no sourced value):** ECA LNG Location tag (Mexico not in DB options — noted in body). Project `Adress` place for projects with no single precise address (multi-state, corridor, or Mexico).

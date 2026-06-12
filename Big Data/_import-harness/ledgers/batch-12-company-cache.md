@@ -1,3 +1,5 @@
+> ⚠ **SUPERSEDED — scratch copy.** Canonical cache: [company-cache.md](../company-cache.md). Kept for history only.
+
 # Batch-12 company→pageID cache (A12)
 
 Resolved Companies-DB pageIDs for the GCs in batch-12. Core-name rule applied (variants/subsidiaries map to closest existing record). Used by A12 only; aids resume.

@@ -127,6 +127,31 @@ Verified live: company record, 3 divisions, 14+ projects, 6 memberships, 4 event
 
 All other records verified: company, 3 divisions, 6 memberships, 7 events, all remaining projects — no further gaps found. Genuinely sourceless fields remain empty (see above).
 
+## KBEboston.md load (2026-06-12)
+**Ground truth:** `Enlaye Notion/KBE Building/KBEboston.md`. 0 confirmed MA projects. 21 CT nearest-New-England context projects → 14 net-new loaded.
+
+**14 new projects created** (all KBE Northeast; CT-based; Adress place set on all 14):
+| Project | ID | City |
+|---|---|---|
+| Choate Rosemary Hall – Pedestrian Bridge | 37d90644-d524-8191-9cac-d4b7ef0253e8 | Wallingford |
+| Choate Rosemary Hall – Welcome Center & Parking Garage | 37d90644-d524-81fe-889d-d88eee1c3ce2 | Wallingford |
+| Sacred Heart University Community Theatre | 37d90644-d524-8146-ac85-d335ddfb4d70 | Fairfield |
+| Seabury Active Life Community – The Collamore Wing | 37d90644-d524-8163-a00f-ea6a4c566b1b | Bloomfield |
+| Seabury Active Life Community – Earlier Phase | 37d90644-d524-81b6-9a18-d38c10092de1 | Bloomfield |
+| The Linden at Brookfield | 37d90644-d524-8149-9537-e0d621396dc4 | Brookfield |
+| The Vero at Orange | 37d90644-d524-8114-94b8-f292a92b3fff | Orange |
+| Piper (TB Norwalk Apartments) | 37d90644-d524-810c-95d0-cc806a683289 | Norwalk |
+| The Station House Greenwich | 37d90644-d524-816b-93f9-cba1a8d511b4 | Old Greenwich |
+| SoNo Collection | 37d90644-d524-8113-ad0c-f0604a784eed | South Norwalk |
+| 1928 Farmington Town Hall | 37d90644-d524-813c-a10d-e18f6c72b6cb | Farmington |
+| City of Waterbury ARPA/ESSER School Renovation Program | 37d90644-d524-8139-8bea-e23bd02bf774 | Waterbury |
+| 200 Connecticut Avenue | 37d90644-d524-818a-8924-fe066720cdd2 | Norwalk |
+| OneBeacon Insurance Group | 37d90644-d524-8105-9271-c7d196ad5154 | Farmington |
+
+**Company CP relation:** updated from 19 → **33 URLs** (one-way, full list re-passed).
+**Schema:** Projects Location +Wallingford/Fairfield/Bloomfield/Orange/Old Greenwich/Waterbury (additive, 129→135 options).
+**Not loaded:** no MA projects (0 confirmed MA sites in dossier). KBE West "assisted-living multiple states incl. MA" = low-confidence aggregate, no name/city/date.
+
 ## Audit (2026-06-11 — notion-audit skill pass #2)
 **Result: No fills needed. Record fully up to date.**
 Verified live (parallel fetches): company record (`1cf90644`) — all properties populated (Description, Type, Country ×7, Address place, BW Category, LinkedIn, Website, 19 Construction Projects linked, body complete). 3 divisions (NE/MA/West) — all linked to company, People, Projects; Adress place filled on all 3; bodies complete. 7 net-new projects + 12 pre-existing — Adress place filled on all checked; Location multi-select tags applied (Bridgeport+Farmington confirmed from prior pass); bodies sourced and complete. 6 memberships confirmed in live Memberships DB (ABC-CT, ABC Metro Washington, ABC Baltimore/Chesapeake, Arizona Builders Alliance, CBC, Stamford Chamber). 4 events confirmed (KBE Annual Golf Tournament + CBC Project Team Awards + 2 pre-existing). Locations table schema is text-only (no place/relation fields; accepted per prior notes). No fillable gaps identified. Genuinely sourceless fields remain empty (see §Left empty above).

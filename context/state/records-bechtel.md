@@ -153,60 +153,20 @@ Contract values: most project values undisclosed (only Port Arthur $10.5B, Rio G
 - **Division count:** Bechtel2 = 6 (incl. Bechtel Enterprises); Bechtel1 = 5. Loaded all 6.
 - **UEI/CAGE:** Bechtel1 parent UEI QYLMXH4B2KX8 / BNI CAGE 324H5; Bechtel2 parent UEI EMYFRLWRHV25 / BNI CAGE 1S307. Conflict — neither loaded (no Notion home + unresolved); flagged for manual SAM.gov verification.
 
-## Audit — 2026-06-11 (notion-audit current session)
+## Audit — 2026-06-12 (Bech3.md load — net-new from 3rd dossier)
 
-### Filled
-- **Eva Copper Mine Project** `37c90644-d524-8129-84c7-c470486a3aa2`: `Type` set → "Industrial / Chemicals". Mining project under Mining & Metals division; consistent with Thacker Pass (same division, same Type). Source: dossier project record (`im-mining.com/2025/12/12/bechtel-selected-to-deliver-epc-scope-for-harmony-eva-copper-project/`).
-- **Quebrada Blanca Phase 2 (QB2)** `37c90644-d524-817e-84b1-e50811a87d1d`: `Type` set → "Industrial / Chemicals". Copper mine/processing — same reasoning. Source: dossier (`bechtel.com/projects/quebrada-blanca-phase-2/`).
+### Created
+- **Big Dig (Central Artery/Tunnel Project)** `37d90644-d524-8192-915b-e2a5befdf2ea` — Construction Projects DB. CM-Agency/Design-Build hybrid, $14.6B total (CA/T Project), MassDOT/FHWA owner, Boston MA, 1991–2007, JV w/ PB Americas; $458M Bechtel settlement 2008. Contractors→Bechtel, Owning Department→Infrastructure. Location=[Massachusetts], Status=Done, Date 1991–2007, URL set. Source: https://en.wikipedia.org/wiki/Big_Dig
+- **New York City office** `37d90644-d524-8132-903c-e95bf7326058` — page-local Locations `1eb90644`. Adress="140 Broadway Suite 2420, New York, NY 10005", Company→Bechtel, Division→Infrastructure. Source: Bech3.md dossier / Bechtel.com contacts page.
+- **Los Angeles office** `37d90644-d524-8124-9de0-d5b926dbc94a` — page-local Locations `1eb90644`. Adress="707 Wilshire Blvd Suite 3088, Los Angeles, CA 90017", Company→Bechtel, Division→Infrastructure. Source: Bech3.md dossier / Bechtel.com contacts page.
 
-### Already complete — no changes needed
-All other records verified complete. Company record · 6 Divisions · 6 Memberships · 11 Events · 16 Locations · 29+ Projects · 31 Software confirmed intact.
+### Updated
+- **Infrastructure division** `37b90644-d524-818d-9d66-e46ae3c45a53` → `Projects` extended from 9→10 (Big Dig added).
+- **Company record** `18490644` → `Construction Projects` extended from 31→**32 URLs** (Big Dig appended to full list).
 
-### Left empty (genuinely sourceless — reconfirmed)
-Same list as all prior passes. Eva Copper Mine + QB2 Location tags: no Australia/Chile options in Projects Location schema — kept in body only. All other sourceless fields unchanged.
-
----
-
-## Audit — 2026-06-11 (notion-audit pass — this session)
-
-### Filled
-- **Bechtel Enterprises division** `37b90644-d524-8198-b988-c4a1793233ce`: `Projects` relation set → Morava Corridor Motorway (`37b90644-d524-81e6-aac2-d594c7d6cff0`). Source: Bechtel2.md dossier + project body (Bechtel Enterprises provided development/financing support, UKEF €430M guarantee). Verified live post-write. (bechtel.com/projects/morava-motorway/)
-
-### Verified complete — no other changes needed
-- **Company record** `18490644`: Description ✓ · Address/place ✓ · BW Category [Builder, Advisor] ✓ · Country (9 values) ✓ · 31 Construction Projects ✓ · 31 Companies Software ✓ · 53 People ✓.
-- **6 Divisions**: all have Companies full database ✓, People ✓, Projects ✓ (Bechtel Enterprises now filled), body ✓, icons ✓. Adress (place) empty per no-geocoding rule ✓.
-- **6 Memberships** (BRT, CII, NEI, ETEBA, CCITNZ, NABTU): all rows in collection `ddc90644`, all have Companies full database → Bechtel Group ✓. Completeness check 3d: all 6 sourced memberships present ✓.
-- **11 Events**: all 11 confirmed in data source `66490644` (4 were hidden by view filter — not missing). All have Companies full database ✓, location tags set ✓. Dates set on 9/11 (ENR LA Forum + LACMTA C-Line genuinely unknown). Place fields empty per no-coords rule ✓.
-- **16 Locations**: Adress text ✓, Companies full database ✓, Division ✓.
-- **31 Projects + 31 Software**: Companies/Contractors set ✓.
-
-### Left empty (genuinely sourceless — confirmed)
-Contract values (21/31 undisclosed). Division revenue/headcount (not published). TRIR/EMR/DART (not published). Place (lat/lng) on all records (no-geocoding rule). London street address (null in dossier). UEI/CAGE conflict (pending SAM.gov). ENR LA Forum + LACMTA C-Line dates unknown. Eva Copper Mine + QB2 Location tags (no Australia/Chile schema options).
-
----
-
-## Audit — 2026-06-12 (notion-audit current session, location-tag fills)
-
-### Filled
-- **Hanford Waste Treatment & Immobilization Plant (WTP)** `37b90644-d524-819a-baa1-f147ecbf1f9a`: `Location` set → ["Washington"]. Project at Richland (Hanford Site), WA; "Washington" option confirmed in Projects Location multi-select schema. Source: https://www.bechtel.com/projects/hanford-waste-treatment-plant/. Verified live post-write.
-- **Morava Corridor Motorway** `37b90644-d524-81e6-aac2-d594c7d6cff0`: `Location` set → ["Europe"]. Project in Serbia; "Europe" is closest available option in schema (no "Serbia" option exists). Source: https://www.bechtel.com/projects/morava-motorway/. Verified live post-write.
-
-### Observed (no action — net-new from another session 2026-06-12)
-- **Los Angeles — Satellite Office** `37d90644-d524-8124-9de0-d5b926dbc94a`: Created 2026-06-12 (source: Craft.co). Has Adress text + Companies full database=Bechtel. Division relation empty — genuinely sourceless (neither dossier assigns LA office to a specific division).
-- **New York — Satellite Office** `37d90644-d524-8132-903c-e95bf7326058`: Same as above. Division empty, genuinely sourceless.
-- **Boston Central Artery/Tunnel Project (Big Dig)** `37d90644-d524-8192-915b-e2a5befdf2ea`: Created 2026-06-12. Already fully populated (Contractors=Bechtel, Owning Department=Infrastructure, Location=[Massachusetts, Boston], Type=Transportation, Status=Done, Value=$14,600M, dates set, body complete). No action needed.
-
-### Locations count update
-16 original locations → now 18 (LA Satellite + NY Satellite added by another session).
-
-### Already complete — no other changes needed
-Company record (18490644) · 6 Divisions · 6 Memberships · 11 Events · 18 Locations · 31+ Projects · 31 Software all confirmed intact.
-
-### Left empty (genuinely sourceless — confirmed)
-Same list as all prior passes. John Platt LinkedIn (not in either dossier). Division Adress (place) empty per no-geocoding rule. LA/NY location Division relation (no dossier source). Body detail on Brendan Bechtel/Craig Albert/Hennessey (titles only in dossier). Contract values on most projects (undisclosed). UEI/CAGE conflict unresolved (pending SAM.gov). Eva Copper Mine + QB2 Location tags (no Australia/Chile schema options).
-
-### Write-format note
-Notion MCP multi-select writes require JSON-encoded string value `"[\"Washington\"]"` not a raw array — raw array returns `InputValidationError: expected string, received array`.
+### Tallies after this load
+- **Locations:** 16 original + 2 new (NYC + LA) = **18 total**
+- **Projects:** 31 (post-Bech1/Bech3 audits) + 1 Big Dig = **32 total**
 
 ---
 

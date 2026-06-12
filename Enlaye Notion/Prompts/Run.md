@@ -1,0 +1,1 @@
+Read @Enlaye Notion/Shawmut/Shawmut1.md    In Notion go to the shawmut template in the sales market researsxh zack folder then company research then run /notion-load after that is complete run adn dispatch 2 agents that run /notion-audit /loop /goal
