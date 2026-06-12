@@ -147,3 +147,25 @@ Sources: https://www.kiewit.com/locations/
 - Events location tags — both events are national/virtual; no location to tag.
 - Projects `Adress` for Grain Belt (multi-state corridor), NRG (TX/PJM — multiple sites), Canada nuclear (Canada), Federal Way (WA route), Klamath (OR/CA), YVR (Vancouver BC), South Central LR (Phoenix AZ) — addresses are in body/Location; no single precise address applicable.
 - Projects `Size` for Austin LR, Federal Way, Klamath, YVR, Salamanca, South Central LR — no contract value or size metric in dossier.
+
+---
+
+## Audit pass — 2026-06-12
+
+**Duplicate resolution:** A prior session on 2026-06-12 ran a separate enrichment pass and created duplicate rows in Memberships and Events. All duplicates renamed with "DUPLICATE —" prefix for Zack to delete in Notion UI:
+- Memberships dups (6): The Beavers `37d90644-8169` · AGC `37d90644-81e1` · CSRA `37d90644-81ab` · CISI `37d90644-81e3` · NCSE `37d90644-81ca` · CCSC `37d90644-8141`
+- Events dups (2): Construction Safety Week `37d90644-81d7` · The Beavers/WIHC `37d90644-81fb`
+
+**Genuinely new additions from 2026-06-12 session (kept):**
+- ASCE membership `37d90644-81f0` (new — not in dossier)
+- Events: EPC Show 2026 `37d90644-813b` (Houston TX; tagged Texas; Place filled) · FWIK Summit 2025 `37d90644-8175` · Kiewit Engineering Technical Summit 2026 `37d90644-8108` · AGC Annual Convention 2026 `37d90644-8135` (Orlando FL; tagged Florida+Orlando; Place filled)
+- Projects: Multiple historical completed projects added (Midtown Tunnel $1.5B/VA, Central 70 $1.27B/CO, DART Orange Line $585M/TX, + others)
+
+**3a–3e verified ✓ (all clean):**
+- 3a: 17 divisions → Kiewit ✓; 39 projects → Kiewit ✓; 24 people → Kiewit ✓; all tables company-linked ✓
+- 3b: all bodies at full dossier depth ✓
+- 3c: company HQ place ✓; all 17 division Adress place ✓; Locations `Adress` = TEXT (not place type — structural limit, flagged)
+- 3d: memberships (7 originals + ASCE = 8 live) all company-linked ✓
+- 3e: EPC Show 2026 → Texas ✓; AGC Convention → Florida+Orlando ✓; national events correctly untagged ✓
+
+**Manual UI for Zack:** delete 8 "DUPLICATE —" rows in Memberships + Events inline tables.
