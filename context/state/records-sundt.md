@@ -98,3 +98,44 @@ Full re-fetch of all records: company record, 8 divisions, 3 people, 18 projects
 - Profile page (`37b90644…3af`) body retains template instruction text — non-destructive rule; no `replace_content` permitted without explicit confirmation.
 - Genuinely sourceless blanks unchanged: place fields (no coords), division revenue/headcount, people email/phone/LinkedIn, DBIA event date, AGC event venue address, 5 project contract values.
 - **Result: 0 writes, 0 new gaps filled, 0 data corrupted. Record is complete per available dossier data.**
+
+## Audit — 2026-06-12 (third pass — /notion-audit Sundt)
+Full re-fetch: company record, all linked tables (Divisions, Events, Memberships, Locations, Software, Projects). Workspace was substantially enriched by a subsequent session between 06-10 and 06-12.
+
+### What has grown since the 06-10 audit
+- **Company body** — significantly expanded: CEO (Cade Rowley, Oct 2024), M&A (electrical contractor acquisition May 2026), ENR trajectory (#62→#42), legal name/UEI/CAGE/NAICS, state licenses, 2025 Fact Sheet data, water milestone (60 plants/15 years/$9B+).
+- **Construction Projects** — 18 → 53+ linked. New projects include (partial list): State Route 347 ($396M, Arizona/Transportation), Boeckman Road Corridor Improvement (Sundt-Tapani JV, $27M, WA/Transportation), US-30 Rocky Point Wildlife Crossing ($11.9M, Idaho/Transportation), TxDOT I-10 Widening Phase II ($120M, Texas/Transportation), Windhaven Parkway ($16.57M, Texas/Transportation), Valley Metro NW Extension Light Rail (Phoenix/Transportation), City of Phoenix Scenario 3B Water Pipeline Rehab (Phoenix/Water), SF SE Water Pollution Control Headworks ($540M, CA/Water), and many more.
+- **Divisions** — 8 → 9 (new: Concrete division `37d90644-d524-8155-b8ec-ea2507ae6474` — Leader: Danny Gumm; 400+ concrete craft workers; linked to company ✓ / People ✓; Projects not linked).
+- **People (Divisions)** — multiple new leaders added to division People relations: Renewables has Tom Dodson + Chris Steves; Transportation has Jeff Williamson + Ken Kubacki + Jasen Bennie + Jeffrey Hamilton; Water has Omar Chavez + Matt Bothun + Paul Laufer; Advanced Facilities has +Josh Anderson; Building Group has +Ryan Nessen, Sarah Owen, Shawn Blubaum (+ Chad Buck).
+- **Memberships** — 1 → 4+: DBIA (original), AGC (`37d90644-d524-811e-b8fc-fa65bc716c58`), APWA (`37d90644-d524-81f2-902d-c7ddbe28f8e6`), Arizona Builders Alliance (`37d90644-d524-8146-abe0-d82ef36fe939`). All linked to company ✓.
+- **Events** — 2 → 3+: AGC Safety Award (original), DBIA Milestone (original), Sundt Renewables Launch (`37d90644-d524-812a-b79f-dbc5cb84f476`, Dec 2020, linked to company ✓).
+- **Software** — 3 → 5: original 3 + Bluebeam Revu `37d90644-d524-81d1-b9a4-f706d6b2a573` + Bluebeam Revu/Studio `37d90644-d524-8156-a8c7-f53ec8c5253e`. Both linked to company ✓.
+- **Country** — Utah, New Mexico, North Carolina now present in company record (previously flagged as "manual UI only" — resolved by another session).
+
+### ⚠ Duplicate records flagged (non-destructive — cannot delete; Zack should clean via UI)
+| Table | Dup records | Note |
+|---|---|---|
+| Locations | "Tempe Headquarters" `37b90644-d524-81e6-85cf-e4bb503a84a2` (original, has body) vs "Tempe HQ" `37d90644-d524-81f8-816c-efbc1f976755` (blank body, same address) | Retain original; delete new via UI |
+| Locations | "Phoenix Operations Support Services" `37b90644-d524-81f2-ad5d-fcaa77e88c99` (original, has body) vs `37d90644-d524-8114-8c2c-e8dbd32e549b` AND `37d90644-d524-810a-b472-d132ceb0ee9d` (both blank bodies, same address) | Retain original; delete two new via UI |
+| Memberships | "Associated General Contractors of America (AGC)" — 3 records: `37d90644-d524-811e-b8fc-fa65bc716c58` (has body) + `37d90644-d524-81e5-8e61-d9c95e3f1cdc` + `37d90644-d524-814c-8ff7-fda3024fb70a` (blank) | Retain first; delete two via UI |
+| Memberships | "Arizona Builders Alliance" — 2 records: `37d90644-d524-8146-abe0-d82ef36fe939` (has body) + `37d90644-d524-819e-a255-d55764fbe062` | Retain first; delete second via UI |
+| Memberships | "American Public Works Association (APWA)" — 2 records: `37d90644-d524-81f2-902d-c7ddbe28f8e6` (has body) + `37d90644-d524-817b-a5dd-ce8a49b5bb0c` | Retain first; delete second via UI |
+| Projects | "I-10 Widening West Phase II" `37b90644-d524-8102-85cd-efb13a29614c` ($87M) vs "TxDOT I-10 Widening Phase II" `37d90644-d524-81a5-af38-c58e478f03a3` ($120M) — same source URL, different scope/name → possible same project re-created with different value; review before deleting |
+
+### Orphan standalone page
+- `37d90644-d524-810e-9a9c-fc8149ba1b6e` — blank-titled standalone Notion page (not in any DB) containing Concrete Division content identical to the DB row `37d90644-d524-8155-b8ec-ea2507ae6474`. The DB row is correct; this orphan should be deleted via UI.
+
+### No new fillable gaps found from dossier
+- Division `Adress` (place) still requires lat/lng → dossier has none → unchanged.
+- All new records have company relation set ✓.
+- DBIA event date still null (sourceless).
+- place fields on all records remain empty (no coords; no-geocoding rule).
+- **Result: 0 writes this pass. No dossier-sourceable gaps remain. Duplicate/orphan cleanup requires manual UI action.**
+
+### Manual UI steps outstanding (cumulative)
+1. **Dup cleanup** (see table above) — delete 2 Tempe HQ, 2 Phoenix Ops, 2 AGC, 1 AzBA, 1 APWA membership dups; orphan Concrete page.
+2. **I-10 duplicate review** — determine if $87M vs $120M are the same project or different phases; merge or archive accordingly.
+3. Projects Underway view → clear `__TEMPLATE__` filter, set Contractors = Sundt.
+4. Existing Software view → clear `__TEMPLATE__` filter.
+5. Country → Utah, New Mexico, North Carolina now present ✓ (resolved).
+6. Construction Projects Location multi-select → add Idaho, Oregon options for new Northwest projects.
