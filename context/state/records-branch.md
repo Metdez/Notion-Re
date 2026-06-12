@@ -100,6 +100,19 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
 - No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).
 
+## Audit log — 2026-06-12 (pass 7 — notion-audit skill)
+**0 fills — record fully complete.**
+- Live re-fetch: company record (`26890644`), Branch Civil (division), I-95 project, both events, HQ location row, Bob Wills (person) — all confirmed complete.
+- Company record: Description, Type=Company, Size=Regional, BW Category=[Builder], Country=[VA/MD/TN/NC/WV], Website, LinkedIn, Address/place (Roanoke HQ lat/lng), People [16 — 7 dossier + 9 Apollo import], Construction Projects [12] ✓. Note: icon is attachment image, not building_brown svg — pre-existing (not changed).
+- Divisions (4): Branch Civil spot-checked — Company relation, Adress/place (3635 Peters Creek Rd), People [1], Projects [5] ✓. All 4 divisions confirmed via search.
+- People (7 dossier + 9 Apollo imports): Bob Wills live — Company, Function=CEO, Function Qualification=[CEO], Location=[Virginia] ✓. Apollo imports (e.g. Jessica Kinsley VP Preconstruction, Beth Hoel Safety Mgr) confirmed Company-linked, Function/Function Qualification/Location set ✓.
+- Projects (12): I-95 Express Lanes spot-checked live — Contractors, Location=[Virginia], Adress/place, Date, Status, URL all set ✓. All 12 confirmed Location tagged in prior passes.
+- Events (2): DBIA Award = Location tags=[North Carolina] + company-linked ✓. Golf Tournament = Location tags=[Virginia] + company-linked ✓.
+- Memberships (4): ABC, AGC, DBIA (Southeast), VTCA — all confirmed via search, company-linked + URL ✓.
+- Locations (7): HQ row spot-checked — Adress text set, Companies full database linked, Division blank (correct for HQ) ✓. All 7 confirmed via search.
+- 3a relations ✓ · 3b description depth ✓ · 3c addresses ✓ · 3d memberships (4/4) ✓ · 3e location tags ✓.
+- No new fillable gaps. Outstanding manual UI unchanged: Country NC/WV options (item 3); template row cleanup (item 4).
+
 ## Audit log — 2026-06-11 (pass 6 — notion-audit skill)
 **0 fills — record fully complete.**
 - Fresh live re-fetch of all 7 people, 4 divisions, 3 projects (spot-check), 2 events, 4 memberships, 7 locations, profile page + company record — all confirmed complete against Branch1.md dossier.
