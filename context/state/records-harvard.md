@@ -211,6 +211,29 @@ Live-fetched: all 13 projects, 4 department companies, Harvard owner record, Har
 - Barker Center / Steam Tunnel 29/30 / ESL SEAS Contractors
 - All department LinkedIn / Website fields
 
+## Audit log — 2026-06-12 (pass 6 — notion-audit skill)
+**0 fills — all records complete.**
+
+Live-fetched: all 14 projects, Harvard owner Owners DB record, 5 department companies (FAS House Renewal PMO, EVP, Harvard Capital Projects, Harvard Real Estate, Harvard Engineering & Utilities). Cross-checked against both Harvard dossiers.
+
+- **3a (relations):** Harvard owner → 15 entries in Projects (14 unique + 1 duplicate `813f` still present), 16 depts, 11 GCs, 26 contacts. All project→Owner/Owning Department/Contractors edges intact and correct for all 12 projects with known GCs.
+- **3b (body depth):** All 14 project bodies complete. Department bodies adequate. No thin bodies with more dossier detail available.
+- **3c (addresses):** NASDEP/Steam Tunnel/Lewis Law Center/Pritzker Hall estimated-only remain blank — correct.
+- **3d (memberships):** N/A — Owner entity.
+- **3e (location tags):** All 14 projects have Location populated. No missing tags.
+
+**Open structural issues (require Zack action):**
+- Gund Hall `8159` + Lewis Law Center `8198` `Owning Department` → both wrongly point to `37b90644-d524-811c` = "Shawmut — New England Region" (contractor division). No Harvard GSD or Harvard Law School company dept records exist in Notion. Fix: create those dept records → repoint Owning Department on both projects.
+- Duplicate Gund Hall `37c90644-d524-813f` — still in Harvard owner's Projects list. Zack should delete in Notion UI.
+
+**Genuinely sourceless — confirmed (no change):**
+- NASDEP/Steam Tunnel 29/30/Lewis Law Center/Pritzker Hall precise street addresses
+- Barker Center/Steam Tunnel 29/30/ESL SEAS Contractors
+- ESL SEAS/Lewis Law Center dates (start/end)
+- 10 of 14 project contract values
+- Harvard Capital Projects/Harvard Real Estate Website (no public URL)
+- All department LinkedIn
+
 ## Audit log — 2026-06-12 (pass 5 — notion-audit skill)
 **2 fills — Gund Hall dates+address + duplicate record Owner link.**
 

@@ -317,3 +317,28 @@ Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](htt
 3. Existing Software view — clear `__TEMPLATE__` filter.
 4. Size=Regional vs "Multinational" — decide.
 5. Memberships+People container page — delete orphan markdown table text (from pass-3 context-handoff).
+
+---
+
+## Tenth pass — 2026-06-12 (notion-audit, manual trigger)
+> Full 3a–3e audit against all four ground-truth dossiers (Clay 1.md · Clayco1.md · Clayco3.md · Clayco4.md). Note: Clayco3.md and Clayco4.md are confirmed identical files. Live-fetched: profile page (`37b90644…808d`), company record (`19990644…80e6`), Divisions schema (`abd90644`), Events schema (`73e90644`), Memberships schema (`76490644`), Locations schema (`6ab90644`), Anthony Johnson people record (`37b90644…818d`), Ryan Johnson canonical (`37c90644…81e6`), Ryan Johnson orphan (`37c90644…8192`), AGCMO event (`37b90644…8133`), USGBC membership (`37b90644…81bd`), NAIOP Chicago membership (`37b90644…8154`). **0 writes.**
+
+**3a Interconnection — confirmed clean:** Company record: 32 projects in `Construction Projects`, 6 software, 5 subsidiaries, 150+ People links — all intact. All 5 membership rows carry `Companies full database`→Clayco (confirmed live). Canonical Ryan Johnson (`81e6`) has Division→Power & Energy set. Anthony Johnson has `Company`→Clayco + `Location`=[Missouri] — `Division` property targets global Divisions DB (`37690644…8088`), intentionally left empty per established precedent (same as all other Clayco people). No missing edges.
+
+**3b Description depth — confirmed complete:** Company body (Snapshot + Financial trend sections) fully populated. AGCMO event body confirmed (briefing, audience, warm-channel note, sourced). Anthony Johnson body: role, succession context, St. Louis location, sourced. Ryan Johnson (`81e6`) body: role, background, ENR source. All prior records unchanged.
+
+**3c Address/place — confirmed complete:** Company `place:Address` = 35 E Wacker (41.8869/-87.6266) live. AGCMO event `place:Adress` = St. Charles Convention Center (38.7881/-90.4974) live. Locations schema: `Adress` is text-type (by design). 5 events with no sourced venue: correctly blank.
+
+**3d Memberships — 5/5 confirmed live:** USGBC `81bd-a256-c578a79193a7` (Gold sponsor AZ/Central Plains) · DBIA `811f-a845-fdec9e97490d` · AGC `8119-a1ba-c55c924fc91a` · NAIOP Chicago `8154-b408-e38648168f31` · USGBC-CA `8139-ad61-f9e5cb36326f`. All carry `Companies full database`→Clayco. No new memberships found in any dossier.
+
+**3e Location tags — confirmed:** AGCMO→[St. Louis, Missouri] live. Other 5 events same as passes 4–9. Schema has all required options.
+
+**Duplicate Ryan Johnson — still live (Zack UI action still pending):**
+- Canonical: `37c90644-d524-81e6-b43d-f6fb74781c5c` (Division→Power & Energy; richer body; created 06-11T05:08)
+- Orphan: `37c90644-d524-8192-bb6e-d12c50e7c628` (also has Division→Power & Energy; thinner body; created 06-11T11:08) — Zack to delete
+
+**Dossier cross-check (Clayco3.md/Clayco4.md):** Confirmed identical files. All 8 divisions, 7 people, 8 projects, 3 events, 3 memberships, and software listed in Clayco3/4 are already present in Notion from prior passes. No net-new content.
+
+**0 writes. Build remains fully converged. This is pass 10.**
+
+**Genuinely sourceless (final, unchanged):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed) · precise project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL in any dossier) · Size=Regional vs "Multinational" (Zack to decide).

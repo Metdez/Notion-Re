@@ -179,3 +179,44 @@ Full re-audit against live Notion and dossiers KBE.md + KBEboston.md (partial re
 - **Location tags** (3e): all projects and events with location data tagged ✓.
 - **Interconnection** (3a): all division → company ✓, all projects → division + company ✓, all memberships/events → company ✓.
 - **No new fillable gaps found.** Genuinely sourceless fields remain empty (see §Left empty). Persisting data-quality issues (Mozaic duplicate, stray Bridgeport row, TEMPLATE stubs) remain for Zack UI action.
+
+## Audit (2026-06-12 — notion-audit skill pass #5)
+**Result: 2 fills applied. 1 data-quality issue flagged. 5 net-new memberships + 2 net-new events discovered (from a prior session, not in ledger) — all fully wired, no action needed.**
+
+### Fills applied
+| Record | ID | Field | Value written | Source |
+|---|---|---|---|---|
+| Special Olympics Unified Fishing Tournament | `37d90644-d524-810c-bae4-c486d1891216` | Location tags | Connecticut | kbefoundation.org/events/ |
+| KBE Foundation Construction Career Scholarship Awards Night | `37d90644-d524-8178-8201-dfc7b85463b8` | Place (place property) | Farmington Gardens, Farmington, CT (41.726 / -72.832) | kbebuilding.com/news/ (body: "May 13, 2025 at Farmington Gardens, CT") |
+
+### New records discovered (from prior 06-12 session — not in ledger until now)
+**11 net-new memberships** (all linked to KBE `1cf90644`, Companies full database ✓, sourced bodies ✓):
+| Name | ID |
+|---|---|
+| AGC-CT / CCIA | `37d90644-d524-8114-816f-f56c5435395b` |
+| Greater Norwalk Chamber of Commerce | `37d90644-d524-81dd-832c-fda6809246f8` |
+| WESTMARC | `37d90644-d524-8195-b7b7-caccf6f48b9e` |
+| National Builders Alliance | `37d90644-d524-81a7-80f6-fc094cb5ec31` |
+| Retail Contractors Association (RCA) | `37d90644-d524-8151-a46b-dbd7d1c691da` |
+
+**2 net-new events** (all linked to KBE, Companies relation ✓):
+| Name | ID | Notes |
+|---|---|---|
+| Special Olympics Unified Fishing Tournament | `37d90644-d524-810c-bae4-c486d1891216` | Location tags now filled (this pass) |
+| KBE Foundation Construction Career Scholarship Awards Night | `37d90644-d524-8178-8201-dfc7b85463b8` | Place now filled (this pass); Date: 2025-05-13 |
+
+**Total memberships now in Notion:** 11 (ABC-CT, ABC Metro Washington, ABC Baltimore/Chesapeake, Arizona Builders Alliance, CBC, Stamford Chamber, AGC-CT/CCIA, Greater Norwalk Chamber, WESTMARC, National Builders Alliance, RCA)
+**Total events now in Notion:** 11+ (KBE Golf Tournament, KBE Foundation Scholarship Awards Night, CBC Project Team Awards, CT ABC EIC Awards, CT ABC Women in Construction, CT ABC Membership Meeting, InterFace Active Adult, CALA/ISLE, Special Olympics Fishing Tournament + pre-existing)
+
+### Data-quality issue flagged (for Zack)
+- **Choate Rosemary Hall – Pedestrian Bridge** `37d90644-d524-8191-9cac-d4b7ef0253e8` — page is marked **DELETED** in Notion (shows `deleted` attribute on fetch). Was created 2026-06-12 during KBEboston.md load. Content and links are still visible but the page is in trash. If this project should be live, Zack needs to restore it from trash in the Notion UI.
+
+### Already complete (no fill needed)
+- Company record: all properties ✓
+- 3 divisions: relations + Adress place + bodies ✓
+- 43 Construction Projects: wired to KBE + division, Adress place, Location tags ✓
+- All events/memberships: Companies relation ✓, Location tags ✓ on all with known locations
+- KBE Annual Golf Tournament + CBC Project Team Awards — Place still genuinely sourceless (no venue confirmed in any dossier)
+
+### Genuinely sourceless (leave blank)
+Same as prior audits: EMR/TRIR/DART numerics · surety provider · insurance carriers · division-level revenue/headcount · DUNS/EIN/state entity IDs · FPDS PIIDs · Golf Tournament and CBC Project Team Awards venue addresses.
