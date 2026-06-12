@@ -114,6 +114,18 @@ Ground truth: `Enlaye Notion/Cianbro/Cianbro3.md`. Additive-only on top of 06-10
 **Interlink additions (2026-06-12):**
 Company ↔ 26 Construction Projects ✓ · Company ↔ 15 People ✓ (3 new) · A/Z→Lorenz+C.Cianchette ✓ · IDM→P.Malikowski+G.Smith ✓ · Infrastructure→Henshaw+Dreher ✓ · WIN Waste→Contractors+Owning Department ✓.
 
+## Audit fills (2026-06-12 — notion-audit pass 5)
+- **0 new writes.** Full re-verify of all record types via live Notion fetches.
+- **Company record:** 26 Construction Projects linked ✓ · 35 People linked (12 dossier + 3 Cianbro3.md + 20 bulk Apollo import, all Company-linked ✓) · 7 Software ✓ · Address place lat/lng confirmed filled ✓ · Description intentional hold ("ENR #96 / ~$1.3B") = additive protocol preserved ✓.
+- **Profile page body:** Shows updated ENR #94 / $1,342M / ABC #21 ✓. Template guide section headers remain (UI cleanup items only).
+- **Divisions (13):** All 13 confirmed. Infrastructure body: Type/Focus/Footprint/both leaders (Henshaw + Dreher)/source ✓. All divisions → Company + People + Projects relations confirmed.
+- **Events (5):** All 5 confirmed live. Location tags: ABC Craft 2025 → Las Vegas ✓ · ABC Craft 2024 → Kissimmee ✓ · ConExpo 2026 → Las Vegas ✓ · AGC Maine → Maine ✓ · ABC Top Performers → untagged (no location in source ✓). All → Companies relation ✓.
+- **Memberships (24):** All 24 rows confirmed present + Companies relation linked ✓.
+- **Locations (14):** All 14 rows confirmed. Text `Adress` field populated ✓. Companies + Division relations set ✓. Note: Locations DB schema uses plain-text `Adress` (not a place type) — correct per schema, no place property to fill.
+- **Projects (spot-check):** WALK Bridge and PNSY both have `place:Adress` filled with lat/lng ✓. Bodies complete with JV/delivery/scope ✓.
+- **SBBA flag still open:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
+- **Genuinely sourceless (confirmed):** same list as prior runs.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).

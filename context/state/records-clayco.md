@@ -279,3 +279,41 @@ Source: [ENR — Clayco Launches New Solar and Energy Storage Business Unit](htt
 3. Existing Software view — clear `__TEMPLATE__` filter.
 4. Size=Regional vs "Multinational" — decide and update manually.
 5. (From pass-3) Memberships+People container page — delete orphan markdown table text inserted by a context-handoff session.
+
+---
+
+## Ninth pass — 2026-06-12 (notion-audit, manual trigger)
+> Full 3a–3e audit against all four ground-truth dossiers (Clay 1.md · Clayco1.md · Clayco3.md · Clayco4.md). No new dossiers on disk since pass 8. Live-fetched: profile page, company record (properties + body), Divisions schema, Events schema, Locations schema, Memberships schema + all 5 rows, AGCMO event row, Anthony Johnson + Cedric Robinson people, both Ryan Johnson records. **0 writes to Notion.**
+
+**Ledger corrections (ID drift found in ledger — records ARE live at corrected suffixes):**
+| Ledger entry | Ledger suffix (incorrect) | Live suffix (correct) |
+|---|---|---|
+| USGBC membership | `81bd-a256-d9b804793a82` (404) | `81bd-a256-c578a79193a7` (live) |
+| DBIA membership | `811f-a845-b9dce4c41c7a` (404) | `811f-a845-fdec9e97490d` (live) |
+| AGC membership | `8119-a1ba-c55cc7e9a316` (404) | `8119-a1ba-c55c924fc91a` (live) |
+| AGCMO AECTechCon event | `8133-b4c7-e97b19b5b0f2` (404 was ledger reference — actual ID `8133-8475-f4bba62ea214` (live)) |
+
+**3a Interconnection — confirmed clean:** all 5 membership rows carry `Companies full database`→Clayco (the Memberships collection schema now has the relation column — gap from pass 3 has been resolved by Zack in UI). 9+ people linked to Clayco (7 created + Jeff Miller + Cedric Robinson/Apollo). 32 projects → Contractors=Clayco. 20 division rows → company. 6 events → Companies=Clayco.
+
+**3b Description depth — confirmed complete:** company body fully populated (Snapshot + Financial trend & safety sections). AGCMO event body complete with briefing, audience, warm-channel note. People bodies confirmed at sourced depth (Anthony Johnson verified live with LinkedIn + role + source).
+
+**3c Address/place — confirmed complete:** company Address place (35 E Wacker, 41.8869/-87.6266). AGCMO event `place:Adress` = St. Charles Convention Center (38.7881/-90.4974) confirmed. Locations schema confirmed as `Adress` text-type (not place-type) — by design for this collection. All 5 events without sourced venues correctly blank.
+
+**3d Memberships — 5/5 confirmed live:** USGBC `…81bd-a256-c578a79193a7` · DBIA `…811f-a845-fdec9e97490d` · AGC `…8119-a1ba-c55c924fc91a` · NAIOP Chicago `…8154-b408-e38648168f31` · USGBC-CA `…8139-ad61-f9e5cb36326f`. All carry `Companies full database`→Clayco. No new memberships in any dossier.
+
+**3e Location tags — confirmed:** AGCMO→[St. Louis, Missouri]; INTERPHEX→[Life Sciences]; Petfood Forum→[Food & Beverage]; SelectUSA→[Maryland]; Clayco Rising→[Florida]; AGC Convention→[] (no venue sourced — correct).
+
+**Ryan Johnson duplicate — still live (Zack UI action still pending):**
+- Canonical: `37c90644-d524-81e6-b43d-f6fb74781c5c` (Division→Power & Energy linked; created 06-11T05:08)
+- Orphan: `37c90644-d524-8192-bb6e-d12c50e7c628` (also Division→Power & Energy linked as of pass 7; created 06-11T11:08; thinner body) — delete this one
+
+**0 writes. Build remains fully converged.**
+
+**Genuinely sourceless (final, unchanged from pass 8):** SelectUSA/Rising/AGC Convention dates · 30 of 32 project contract values (only Rivian $5B + Obama $615M disclosed) · precise project start/end dates (year-only, in bodies) · Shawn Clark / Zackery House / Mike Pierle / Carmen Hernandez / Kevin McKenna / Clay Carter People records (no primary per-person source URL in any dossier) · Size=Regional vs "Multinational" (Zack to decide).
+
+**⚠ Manual UI actions for Zack (carry-forward, unchanged):**
+1. Delete duplicate Ryan Johnson `37c90644-d524-8192-bb6e-d12c50e7c628` — canonical is `37c90644-d524-81e6-b43d-f6fb74781c5c`.
+2. Projects Underway view — set filter Contractors=Clayco.
+3. Existing Software view — clear `__TEMPLATE__` filter.
+4. Size=Regional vs "Multinational" — decide.
+5. Memberships+People container page — delete orphan markdown table text (from pass-3 context-handoff).

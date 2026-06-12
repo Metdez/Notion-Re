@@ -171,6 +171,28 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **Genuinely sourceless gaps (unchanged, 7th confirmation):** Large Project Division People (VP titles only, no named person in dossier); Mission Critical Adress (dossier null); Miami + West Palm Beach Division relation (dossier null); Events Place (nationwide events, no geocode); all-office People relations (people assigned to divisions, not offices in dossier).
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-12 (notion-audit skill, 6th manual run)
+**Full audit run.** Live-fetched: company record (`19990644`), profile page (`37b90644`), all 5 division rows (New England, NY Metro, West, Large Project, Mission Critical), both event rows (Safety Week 2026 + 12th Annual), AGC membership row, Boston HQ location row; fetched all 4 data-source schemas (Divisions, Locations, Events, Memberships). Cross-referenced Shawmut3.md dossier in full (company firmographics, all 5 divisions, all 12 locations, all software, memberships, gaps section).
+**Result: 0 fills executed.** All live Notion records exactly match the ledger and dossier. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.
+**Live verification confirmed (this run):**
+- Company record: Description, LinkedIn, Website, Address (place=560 Harrison Ave), Country (7 states), BW Category=Builder, Type=Company, Size=Regional, Strategy, 11 software entries, 39 Construction Projects listed, 30 Owners, ~240+ People — all populated ✅
+- New England Region: Companies=Shawmut ✅, People=Kevin Sullivan ✅, 29 Projects ✅, Adress place=560 Harrison Ave ✅, body full depth ✅
+- NY Metro Region: Companies=Shawmut ✅, People=David Margolius ✅, 2 Projects ✅, Adress place=New York NY ✅, body full depth ✅
+- West Region: Companies=Shawmut ✅, People=[Greg Skalaski + Sam Ragsdale] ✅, 2 Projects ✅, Adress place=Los Angeles CA ✅, body full depth ✅
+- Large Project Division: Companies=Shawmut ✅, People=[] (dossier has titles only, no named person — sourceless) ✅, 4 Projects ✅, Adress place=560 Harrison Ave ✅, body full depth ✅
+- Mission Critical: Companies=Shawmut ✅, People=Joel Nickel ✅, Adress empty (dossier null) ✅, body 4 bullets (full depth for new division) ✅
+- Safety Week 2026: Companies=Shawmut ✅, Date=May 4–8 2026 ✅, Location tags [9 tags] ✅, Place legitimately empty ✅
+- 12th Annual: Companies=Shawmut ✅, Location tags [Boston/Massachusetts/National — 3 tags] ✅, Date blank (no source date) ✅
+- AGC membership: Name + Company relation ✅
+- Boston HQ: Adress text="560 Harrison Avenue, Boston, MA 02118 · (617) 622-7000 · HQ" ✅, Company=Shawmut ✅, Division=New England Region ✅
+- Divisions schema: 5 properties intact ✅. Locations schema: 5 properties intact ✅. Events schema: 18 location tag options intact ✅. Memberships schema: 2 properties intact ✅
+**3a interconnection check:** All relations confirmed wired ✅. LPD People empty = sourceless ✅. Miami + WPB Division null = sourceless ✅.
+**3b–3e checks:** All pass — same findings as all prior audits. No new gaps detected.
+**3d membership check:** AGC of America = sole confirmed corporate membership per dossier gaps section (8th confirmation). No missing memberships.
+**3e location tags check:** Safety Week 2026: 9 tags ✅. 12th Annual: 3 tags ✅. All options exist in schema.
+**Genuinely sourceless gaps (unchanged, 8th confirmation):** Large Project Division People; Mission Critical Adress; Miami + West Palm Beach Division relation; Events Place; all-office People relations; per-project delivery/contract/permit details; per-state license numbers; bonding/EMR/TRIR/UEI/CAGE; street addresses for 8 non-HQ offices.
+**Harness updated:** this ledger only. No Notion writes executed.
+
 ## Audit log — 2026-06-11 (notion-audit skill, 2nd manual run)
 **Full audit run.** Live-fetched: profile page (`37b90644`), company record (`19990644`), 2 divisions (New England + NY Metro), 2 events, 1 membership, Divisions/Locations/Events/Memberships data-source schemas.
 **Result: 0 fills executed.** All live Notion records exactly match the ledger. No properties found that were both (a) empty AND (b) have a sourced value in Shawmut3.md not yet applied.

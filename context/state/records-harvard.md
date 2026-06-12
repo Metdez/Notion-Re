@@ -210,3 +210,33 @@ Live-fetched: all 13 projects, 4 department companies, Harvard owner record, Har
 - NASDEP / Steam Tunnel 29/30 / Lewis Law Center street addresses
 - Barker Center / Steam Tunnel 29/30 / ESL SEAS Contractors
 - All department LinkedIn / Website fields
+
+## Audit log — 2026-06-12 (pass 5 — notion-audit skill)
+**2 fills — Gund Hall dates+address + duplicate record Owner link.**
+
+Live-fetched: all 14 projects (Harvard owner shows 14 in Projects relation). Ground truth: both Harvard dossiers + `Shaw5.md` for Gund Hall.
+
+**Filled:**
+- Gund Hall `37c90644-d524-8159-a591-c390f06ce2e3` → `date:Date:start`=2024-05-01, `date:Date:end`=2025-01-31, `place:Adress`="48 Quincy Street, Cambridge, MA 02138" (42.3748, -71.1151). Source: https://www.gsd.harvard.edu/2025/02/five-lessons-from-the-gund-hall-renovation/
+- Gund Hall duplicate `37c90644-d524-813f-98c8-efd5cad0f266` → `Owner`→Harvard + `Location`+=[Cambridge]. Source: same.
+
+**14th project (new, from Shawmut dossier, not in original ledger):**
+- Harvard GSD — George Gund Hall Renovation (Phase 1) `37c90644-d524-8159-a591-c390f06ce2e3` — Status=Done · Type=Historic Preservation · Contractor=Shawmut · GC=Shawmut NE Region
+
+**⚠ Structural flags (require Zack action — cannot fix additively):**
+- **Gund Hall `8159` + Lewis Law Center `37b90644-d524-8198` `Owning Department`** both wrongly point to `37b90644-d524-811c` = Shawmut — New England Region division (a Shawmut DIVISION, not a Harvard dept). No Harvard GSD or Harvard Law School company dept records exist in Notion. Fix: create those Harvard dept Company records, then repoint Owning Department on both projects.
+- **Duplicate Gund Hall record `37c90644-d524-813f-98c8-efd5cad0f266`** — sparser copy (no Owner until this pass, no Owning Dept, Location=Massachusetts only). Canonical = `8159` which has full data. Zack should delete `813f` in Notion UI.
+
+- **3a (relations):** Harvard owner→14 projects/16 depts/11 GCs/26 contacts. All intact. Gund Hall `813f` now Owner+Cambridge linked.
+- **3b (body depth):** Gund Hall `8159` body carries full scope, GC, owner, award, sources.
+- **3c (addresses):** Gund Hall `8159` `place:Adress` now filled. NASDEP, Steam Tunnel, Lewis Law Center, Pritzker Hall estimated-only remain blank.
+- **3d (memberships):** N/A — Owner entity.
+- **3e (location tags):** all 14 projects have Location populated. No missing tags.
+
+**Genuinely sourceless — confirmed (no change):**
+- NASDEP / Steam Tunnel 29/30 / Lewis Law Center / Pritzker Hall precise street addresses
+- Barker Center / Steam Tunnel 29/30 / ESL SEAS Contractors
+- ESL SEAS / Lewis Law Center dates
+- 10 of 14 project contract values
+- Harvard Capital Projects / Harvard Real Estate Website (no public URL)
+- All dept LinkedIn

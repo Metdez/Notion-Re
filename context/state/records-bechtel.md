@@ -170,6 +170,35 @@ Contract values: most project values undisclosed (only Port Arthur $10.5B, Rio G
 
 ---
 
+## Audit — 2026-06-12 (notion-audit pass — current)
+
+### Discovered (net-new since last ledger entry)
+- **Richland — NS&E Operations** `37d90644-d524-8143-ad65-e8ff3a620429` — page-local Locations `1eb90644`. Created in a prior session (not logged). Adress="450 Hills St, Richland, Washington 99354, USA", Company→Bechtel `18490644`, Division→NS&E `37b90644-d524-81f2`. Body: "NS&E division field operations supporting the Hanford Waste Treatment Plant." Source: Bech3.md / craft.co/bechtel/locations.
+- **Additional bulk-import People** (2+ new `37d90644` prefix, e.g. Amy Michaud PHR/SHRM-CP, Richard Colwell — Apollo CSV, 2026-06-12) now linked to company via People relation. People count is now 53+ (exact count not re-tallied; bulk-import harness ongoing).
+
+### Filled
+Nothing — all audited records confirmed complete. Zero writes needed.
+
+### Tallies (updated)
+- **Locations:** 16 original + 2 (NYC + LA) + 1 (Richland) = **19 total**
+- **Projects:** 32 (unchanged)
+- **Memberships:** 6 (unchanged)
+- **Events:** 11 (unchanged)
+- **Divisions:** 6 (unchanged)
+- **Software:** 31 (unchanged)
+
+### Verified complete (live re-fetch 2026-06-12)
+- **Company record** `18490644`: Description ✓ · Address/place/lat-lng ✓ · BW Category [Builder, Advisor] ✓ · Country (9 values) ✓ · 32 Construction Projects ✓ · 31 Companies Software ✓ · 53+ People ✓ · Website/LinkedIn ✓.
+- **6 Divisions** (Energy, Infrastructure, M&M, NS&E, M&T, Bechtel Enterprises): Companies full database ✓, People ✓, Projects ✓, body ✓, icons ✓.
+- **6 Memberships** (BRT, CII, NEI, ETEBA, CCITNZ, NABTU): Companies full database ✓, body ✓. All 6 sourced memberships present (3d) ✓.
+- **11 Events**: Companies full database ✓, Location tags set on all 11 ✓, dates set on 9/11 (ENR LA Forum + LACMTA C-Line = genuinely unknown per dossier) ✓.
+- **19 Locations**: Adress text ✓, Companies full database ✓, Division relation ✓ on all records examined.
+
+### Left empty (genuinely sourceless — confirmed)
+Same as prior passes: most project contract values undisclosed; division revenue/headcount; TRIR/EMR/DART; Place (lat/lng) on all records (no-geocoding rule); London street address null; UEI/CAGE conflict unresolved; ENR LA Forum + LACMTA C-Line dates unknown; Eva Copper Mine + QB2 no Location tag (no Australia/Chile schema options).
+
+---
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view (page-local linked view of shared Construction Projects) → clear `__TEMPLATE__` filter, set Contractors = Bechtel Group (relation CONTAINS filters can't be set via API — UI only).
 2. **Existing Software** view → clear `__TEMPLATE__` filter, set Companies = Bechtel Group.

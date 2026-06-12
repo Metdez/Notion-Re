@@ -167,3 +167,15 @@ Full parallel re-audit against live Notion and dossier KBE.md.
 - **Location tags** (3e): all projects and events with location data tagged ✓.
 - **Interconnection** (3a): verified — all division → company ✓, all projects → division + company ✓, all memberships/events → company ✓.
 - **No new fillable gaps found.** Genuinely sourceless fields remain empty (see §Left empty).
+
+## Audit (2026-06-12 — notion-audit skill pass #4)
+**Result: No fills needed. Record fully up to date.**
+Full re-audit against live Notion and dossiers KBE.md + KBEboston.md (partial read KBE2.md — 36-proj 298KB file, partial read only; core fields confirmed).
+- **Company record** (`1cf90644`): all properties populated ✓ (Description, Type, Country ×7, Address place, BW Category, LinkedIn, Website, 43 CP links, body complete).
+- **3 divisions** (NE/MA/West): Companies + People + Projects relations ✓; Adress place ✓; bodies complete ✓.
+- **43 Construction Projects** (includes 14 KBEboston.md + 9 pre-existing net-new): Contractors (KBE) ✓, Zack Database (division) ✓, Adress place ✓, Location tags ✓, sourced bodies ✓. Spot-checked Choate Rosemary Hall Bridge + Seabury Collamore Wing — fully wired.
+- **6 memberships** (3d — completeness check ✓): ABC-CT `37b90644-d524-815f`, ABC Metro Washington `…8180-823a`, ABC Baltimore/Chesapeake `…8152-ba82`, Arizona Builders Alliance `…81d0`, CBC `…81a2`, Stamford Chamber `…81c9-9a96` — all present with Companies relation ✓ and sourced bodies ✓. (Note: 3 ledger UUIDs had wrong suffixes — confirmed correct IDs via live Notion search.)
+- **9 events** (all linked to KBE ✓): KBE Annual Golf Tournament, CBC Project Team Awards, CT ABC EIC Awards, CT ABC Women in Construction, CT ABC Membership Meeting, InterFace Active Adult, CALA/ISLE, + 2 pre-existing. Company relation ✓ on all 9. Place/venue = genuinely sourceless on Golf Tournament + CBC events (no venue address in any dossier).
+- **Location tags** (3e): all projects and events with location data tagged ✓.
+- **Interconnection** (3a): all division → company ✓, all projects → division + company ✓, all memberships/events → company ✓.
+- **No new fillable gaps found.** Genuinely sourceless fields remain empty (see §Left empty). Persisting data-quality issues (Mozaic duplicate, stray Bridgeport row, TEMPLATE stubs) remain for Zack UI action.

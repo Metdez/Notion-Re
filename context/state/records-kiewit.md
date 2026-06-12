@@ -170,6 +170,54 @@ Sources: https://www.kiewit.com/locations/
 
 ---
 
+## Audit pass — 2026-06-12 (#3 — post Kiewitt3-thin + Kiewitt4 load)
+
+**27 division rows now live** (17 original + WSCI + KW-FL + InEight + Kiewit Supply Network + Kiewit Foundations + Kiewit Canada Group + Kiewit Water Facilities South + Kiewit Louisiana + Healy Tibbitts + McNally Tunneling). Came from 06-12 sessions loading Kiewitt3-thin.md and Kiewitt4.md.
+
+**3 division Adress places filled:**
+- Kiewit Foundations Co. `37d90644-d524-8100` → 1550 Mike Fahey St., Omaha, NE 68102 (41.265948/-95.935909). Source: https://www.kiewit.com/locations/
+- Healy Tibbitts Builders, Inc. `37d90644-d524-8176` → 99-994 Iwaena Street, Suite A, Aiea, HI 96701 (21.3831/-157.929). Source: https://www.kiewit.com/locations/
+- McNally Tunneling Corp. `37d90644-d524-816a` → 800 Westpoint Parkway, Suite 1130, Westlake, OH 44145 (41.4553/-81.9179). Source: https://www.kiewit.com/locations/
+
+**1 division Projects edge filled:**
+- Kiewit Louisiana Co. `37d90644-d524-8167` → Projects: Calcasieu Pass LNG `37d90644-d524-81b3-be19`. Source: https://www.prnewswire.com/news-releases/venture-global-lng-and-kiewit-announce-execution-of-epc-contract-for-calcasieu-pass-lng-export-facility-300761731.html
+
+**20 project Adress places filled:**
+| Project | ID | Place |
+|---|---|---|
+| I-55 Bridge (Memphis) | `37d90644-d524-81fc` | Memphis, TN 38103 (35.1495/-90.0489) |
+| Midtown Tunnel | `37d90644-d524-81c7` | Portsmouth, VA 23704 (36.8354/-76.2983) |
+| Alaskan Way Viaduct | `37d90644-d524-811b` | Alaskan Way, Seattle, WA 98101 (47.6062/-122.3432) |
+| BART SV Phase II CP2 | `37d90644-d524-81dc` | San Jose, CA 95110 (37.3382/-121.8863) |
+| DART Irving Orange Line | `37d90644-d524-81e9` | Irving, TX 75038 (32.814/-96.9489) |
+| Monroe County CCGT | `37d90644-d524-81bc` | Monroe County, GA 31029 (33.0209/-83.9196) |
+| Birdsboro Power Plant | `37d90644-d524-81b8` | Birdsboro, PA 19508 (40.2662/-75.8138) |
+| AES Southland | `37d90644-d524-814b` | 21730 Newland St., Huntington Beach, CA (33.7092/-118.0001) |
+| Henry Ford Health CEH | `37d90644-d524-81ca` | Detroit, MI 48202 (42.3674/-83.0552) |
+| South Fork Wind | `37d90644-d524-8152` | Narragansett, RI 02882 (41.3802/-71.4773) |
+| Prospect Lake CWC | `37d90644-d524-817c` | Fort Lauderdale, FL 33301 (26.1224/-80.1373) |
+| Elliott West | `37d90644-d524-8114` | Seattle, WA 98119 (47.6272/-122.3745) |
+| Savannah River HFTOC | `37d90644-d524-81ac` | Aiken, SC 29802 (33.5604/-81.7198) |
+| CT State Pier | `37d90644-d524-8172` | New London, CT 06320 (41.3557/-72.0995) |
+| Miramar WTP | `37d90644-d524-813f` | San Diego, CA 92131 (32.9157/-117.1325) |
+| TECO CHP | `37d90644-d524-81d4` | Tampa, FL 33601 (27.9506/-82.4572) |
+| Texas LNG | `37d90644-d524-8199` | Brownsville, TX 78520 (25.9017/-97.4975) |
+| Beaver Lake FEED | `37d90644-d524-816d` | Rapides Parish, LA 71301 (31.3065/-92.4454) |
+| ECA LNG | `37d90644-d524-81cf` | Ensenada, Baja California, Mexico (31.8676/-116.5956) |
+| Canada Nuclear Waste | `37b90644-d524-819c` | Ignace, Ontario, Canada (49.4166/-91.6667) |
+
+**Genuinely sourceless / left empty:**
+- Kiewit Louisiana Co. Adress — no street address in source
+- Kiewit Supply Network Adress — corporate unit, no distinct office address
+- NRG Gas Plants + Front Range Pipeline Adress — multi-site/multi-state, no single address
+- KETS 2026 + AGC Convention 2026 dates — year-only in source
+- Rick Lanoha + Dave Miles LinkedIn URLs — not in dossier
+- Kiewit Infrastructure West address — dossier null (multi-district)
+
+**Confirmed intact:** 39 Construction Projects · 8 software rows · 8 memberships · 6 events · 12 locations · 615+ people
+
+---
+
 ## Second-pass load — 2026-06-12 (Kiewitt4.md)
 
 Ground truth: `Enlaye Notion/Kiewitt/Kiewitt4.md` (4016 lines, run date 2026-06-12). Additive-only on top of 06-10 build. Schema note: Type options "Water/Marine/Nuclear" were never in the live DB; mapped water→Municipal & Community/Infrastructure, nuclear→Government, LNG→Industrial/Chemicals.

@@ -135,16 +135,68 @@ Full live re-verify of all records (company + 5 divs + 4 people + 5 projects + 1
 **3d Memberships ✓:** all 4 sourced memberships now in Notion (GBCA, NJ Alliance, PWC NJ, ACCNJ).
 **3e Location tags ✓:** ENR event = New York ✓. NJ Alliance 50th/51st = New Jersey ✓. PWC NJ = New Jersey ✓. HELIX H1 = New Jersey ✓.
 
+## Jing3 enrichment session (2026-06-12) — NEW RECORDS (not from this audit)
+A separate session loaded a third dossier (`Jing3`) and created the following net-new records. All were verified as fully linked during the 2026-06-12 audit below.
+
+**8 new Divisions** (all Companies full database → company ✓):
+| Division | ID |
+|---|---|
+| Infrastructure Services Group | 37d90644-d524-81f8-a2fb-c3635073b5c2 |
+| JBM Energy Solutions | 37d90644-d524-81ad-94d4-e13d4161c310 |
+| JET Electrical Testing | 37d90644-d524-814a-b638-d96c80c4a411 |
+| Construction Management | 37d90644-d524-815d-817a-f8bae96dde21 |
+| General Construction | 37d90644-d524-812a-b54d-d052b77c08e6 |
+| DCO Energy | 37d90644-d524-813a-b316-c87bd98e0c68 |
+| EID Solutions | 37d90644-d524-81dc-b4aa-f93a0d60ab66 |
+
+**4 new People** (all Company → company ✓):
+| Person | ID | Role | Division |
+|---|---|---|---|
+| Dennis T. Mockaitis | 37d90644-d524-8158-954b-c2499bb8c897 | SVP – General Construction | General Construction |
+| Pasquale T. Deon Jr. | 37d90644-d524-810a-8848-d746bc0ca6a1 | SVP – CM; VP – BD | Construction Management |
+| Patrick Reager, P.E. | 37d90644-d524-811c-ae09-d2f15c5bea0b | SVP – Infrastructure Services Group | Infrastructure Services Group |
+| Gary Fromer | 37d90644-d524-8122-b302-d76052de12b3 | CEO, DCO Energy | DCO Energy |
+
+**3 new Locations** (all Company + Division linked ✓):
+- DCO Energy Corporate Office `37d90644-d524-815e-9fcb-ef44d2db31dd` → DCO Energy div `37d9…c68`; Brickworks Office Park, 5429 Harding Hwy Bldg 500, Mays Landing NJ 08330
+- Three Mile Island Nuclear Station `37d90644-d524-8187-a002-e89ce5b7286c` → Nuclear Services div; Middletown PA
+- JET Electrical Testing — Hamilton Field Office `37d90644-d524-8139-97a9-dafe01ef7b0c` → JET div; Hamilton NJ
+
+**3 new Events** (all Company linked ✓):
+- Eagle Award Ceremony `37d90644-d524-8165-991c-ed496e9f50c1` (2024-01-01, NJ Alliance Eagle Award) — Location tags filled 2026-06-12 audit
+- PWC NJ Annual Women of Achievement Awards Luncheon `37d90644-d524-8137-9f42-e1e9b04c3934` (2025-05-21) — Location tags New Jersey + Jersey City ✓
+- HELIX H-1 Topping Out Ceremony `37d90644-d524-8116-95c6-e64610be9309` (2024-09-06) — Location tags New Jersey + New Brunswick ✓
+
+**5 new Memberships** (all Company linked ✓):
+- General Building Contractors Association (GBCA) `37d90644-d524-81c1-af0b-db58bc999958`
+- Professional Women in Construction NJ `37d90644-d524-810a-9962-cd50c70c969b`
+- NJ Schools Development Authority (NJSDA) — Pre-qualified Vendor `37d90644-d524-81a6-ae05-c8f5b96c6a69`
+- Associated Construction Contractors of NJ (ACCNJ) `37d90644-d524-8156-89dc-e54364a49186`
+- DoD SkillBridge Program (Jingoli Power) `37d90644-d524-81e3-b2b7-f83bfd3caa3b`
+
+**22 new Construction Projects** — linked via Contractors → company. Not enumerated individually here; visible in company record's `Construction Projects` list (now 27 total incl. prior 5).
+
+---
+
 ## Record counts (updated)
-Company (1) · Divisions (5) · People (4) · Projects (5) · Locations (2→3 rows, 1 dup pending) · Events (5→7 rows, 2 dup pending) · Memberships (4→8 rows, 4 dup pending) · Software (3) · Sources (14+)
+Company (1) · Divisions (13) · People (8) · Projects (27) · Locations (6 rows, dups pending) · Events (10 rows, dups pending) · Memberships (13 rows, dups pending) · Software (3+) · Sources (14+)
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 3 software rows).
 3. Possible template guide rows on local tables (Divisions/Events/Sources/Locations) — UI delete if Zack wants them gone.
-4. **Delete 9 duplicate rows (concurrent-session clobber, 2026-06-11)** — both sets now fully linked; delete the 11:07 batch:
-   - Memberships: GBCA `37c90644-d524-8192-931c-d3b671d36ea3` · ACCNJ `37c90644-d524-81ad-9c94-caf4defe6ae3` · PWC NJ `37c90644-d524-81d7-a2a1-da72361a5271` · NJ Alliance `37c90644-d524-8118-ae22-ee0a1cba9af9`
-   - Locations: DCO Mays Landing `37c90644-d524-814c-8cc2-f1fb6dfca5d6`
+4. **Delete duplicate rows (multiple concurrent-session clobbers)** — keep the 06-12 Jing3 batch (richest/cleanest), delete older rows:
+   - **Memberships (keep Jing3 `37d9…` rows; delete all older dups):**
+     - GBCA: delete `37c90644-d524-8192-931c-d3b671d36ea3` (11:07) + `37c90644-d524-81d8-8e25-f63da3126784` (08:09)
+     - ACCNJ: delete `37c90644-d524-81ad-9c94-caf4defe6ae3` (11:07) + `37c90644-d524-81b5-9db3-e4ec56b033a0` (08:09)
+     - PWC NJ: delete `37c90644-d524-81d7-a2a1-da72361a5271` (11:07) + `37c90644-d524-8140-91af-e795e38d0fef` (08:09)
+     - NJ Alliance: delete `37c90644-d524-8118-ae22-ee0a1cba9af9` (11:07) + `37c90644-d524-8129-9477-f153b8b7a3f3` (08:09)
+   - **Locations — DCO Mays Landing (3 rows; keep Jing3 `37d9…31dd`):**
+     - Delete `37c90644-d524-814c-8cc2-f1fb6dfca5d6` (11:07) + `37c90644-d524-8115-959f-e4d74cf8a13d` (08:09)
+   - **Events — PWC NJ (2 rows; keep Jing3 `37d9…3934`):**
+     - Delete `37c90644-d524-8194-afbf-e33fbb1ca7bc` (08:09)
+   - **Events — HELIX H-1 (2 rows; keep Jing3 `37d9…9309`):**
+     - Delete `37c90644-d524-8155-9259-c7f3e4680f59` (08:09)
 
 ## Audit pass 2026-06-11 (dup-cleanup pass — `notion-audit Jingoli Nuclear Services`) — 5 writes
 Full live re-verify of all records. Found concurrent-session duplicate rows (two sessions ran 08:09 and 11:07 same day, both created same 4 memberships + 1 DCO location). The 08:09 batch had richer content but was missing company/division relations; the 11:07 batch had relations but thinner content.
@@ -158,3 +210,16 @@ Full live re-verify of all records. Found concurrent-session duplicate rows (two
 
 **3a–3e ✓:** All checks pass (see prior session detail). **Pending manual dup deletion** (see UI steps #4 above) — MCP cannot trash pages.
 **False positives rejected:** None — all 5 fills were genuine missing relations confirmed by live re-fetch before writing.
+
+## Audit pass 2026-06-12 (`notion-audit Jingoli Nuclear Services`) — 1 write
+Full live re-verify of all records (company + 13 divs + 8 people + 27 projects + 6 locations + 10 events + 13 memberships + 3 software) against `Jingoli.md`. Jing3 enrichment session (06-12) had added 8 divs, 4 people, 3 locations, 3 events, 5 memberships, 22 projects since last audit.
+
+**Filled (1):**
+1. **Event — Eagle Award Ceremony** `37d90644-d524-8165-991c-ed496e9f50c1` — `Location tags = ["New Jersey"]` added. NJ Alliance Eagle Award ceremony is a NJ event; "New Jersey" option exists in Events schema. Source: NJ Alliance for Action / YouTube reference in event body. ([youtube.com](https://youtube.com))
+
+**3a Interconnection ✓:** 13 divs→company; Nuclear Services→Mockaitis+5 projects; Power→Karl Miller; General Const.→Dennis Mockaitis+8 projects; Construction Mgmt.→Deon+3 projects; Infrastructure Svcs.→Reager; DCO Energy→Gary Fromer; all original 5 projects→Contractors; 8 people→company; locations→company+divisions; events→company; memberships→company. People `Division` global-DB relation still DEFERRED (global Divisions DB `37690644` has no Jingoli rows).
+**3b Description-depth ✓:** all new div/people bodies carry full sourced depth. Jing3 projects carry what/owner/scope/opened.
+**3c Address/location ✓:** all 6 location rows have Adress text. All place fields genuinely unfillable (lat/lng null; no-geocoding rule). New PA + NJ locations in bodies.
+**3d Memberships ✓:** 13 rows total (includes GBCA, NJ Alliance, PWC NJ, ACCNJ, NJSDA, DoD SkillBridge + dup rows pending deletion). All sourced memberships present.
+**3e Location tags ✓:** ENR NY = New York ✓ · NJ Alliance 50th/51st = NJ ✓ · PWC NJ = NJ + Jersey City ✓ · HELIX H-1 = NJ + New Brunswick ✓ · Eagle Award = **New Jersey filled this pass** ✓.
+**Dups flagged for UI deletion (MCP cannot trash):** see Manual UI steps #4 above — 10 older rows to delete across memberships, locations, events.

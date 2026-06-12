@@ -135,3 +135,16 @@ Schema: `Fitchburg` added to Projects Location multi-select (all 130+ options pr
 
 **Conflicts held:** Tyngsborough delivery method (Notion: Design-Bid-Build vs Fon2: CM-at-Risk) · Peck delivery method (Notion: CM-at-Risk vs Fon2: Design-Bid-Build) — Notion values kept per additive rule.
 **Already in Notion (no write):** ENR #52 Green · $145.4M revenue · union affiliation bullets — all confirmed present from prior sessions.
+
+**✅ Audited 2026-06-12 (scope: full profile — company, 20 projects, 15 people, 2 divisions, 3 Events, 2 Memberships, 2 Locations, Software — notion-audit skill, Fon2.md ground truth):** All records re-fetched live vs Font1.md + Fontaine.md + Fon2.md. **5 fillable gaps found and filled:**
+1. **Events `Location tags` schema** — "Boston" option did not exist; added pre-authorized (additive, preserving all 11 existing options). Source: `https://members.agcmass.org/news/details/summer-social-2025`
+2. **AGC MA Summer Social 2025 event `Location tags`** — was ["Massachusetts"] only; set to ["Massachusetts","Boston"]. Source: `https://members.agcmass.org/news/details/summer-social-2025`
+3. **AGC MA Summer Social 2025 event `Place` property** — was blank; set name="Tall Ship Boston", address="Boston, MA", lat=42.3601, lng=-71.0589. Source: `https://members.agcmass.org/news/details/summer-social-2025`
+4. **Springfield Regional Chamber Super 60 2025 `Location tags`** — was blank; set to ["Massachusetts","Springfield"]. Source: `https://fontainebros.com/awards` (Springfield event). Place also set: name="Springfield, MA area", address="Springfield, MA", lat=42.1015, lng=-72.5898.
+5. **Tyler Langan + Liz Wambui `Company name`** — text field blank on both; filled "Fontaine Bros., Inc.". Sources: `https://business.springfieldregionalchamber.com/list/Details/fontaine-brothers-inc-3539296?rendermode=print` (Langan) · `https://fontainebros.com/awards` (Wambui).
+
+**Relation graph (post-audit):** 20/20 company Construction Projects ✓ · 20/18 Owning Department (Salisbury=null, Gilder=null) ✓ · Springfield div (5 people, 9 projects) ✓ · Worcester div (Joel Kent, 10 projects incl. Crocker) ✓ · 3 events (all tagged Massachusetts; Super60s Springfield; AGC Summer Social Boston) ✓ · 2 memberships (MSBA footprint + AGC MA) ✓ · 2 location rows (Division+Company relations, both addresses in place fields) ✓ · 4 software rows ✓ · 15 people all Company→Fontaine ✓.
+
+**⚠ Manual cleanup note:** `2b690644-…66fa` (stale Jeff Cammuso ID) appears in Company `People` relation alongside canonical `37c90644-…16c` — stale record returns 404. Zack should remove the stale relation entry in UI. Also 3 Big Data import people (`Everett Rauch`, + 2 others `37c90644-…17c`, `37c90644-…1e1`) linked to Fontaine — confirm they belong before treating them as Fontaine contacts.
+
+**Genuinely sourceless (no change):** revenue/employees exact, bonding/surety, EMR/TRIR, DUNS/UEI/EIN, per-office financials, Email/Phone for most people, Date on Super 60 2025 (year-only from source), Gilder Center/Berkshire Hall dates and values.

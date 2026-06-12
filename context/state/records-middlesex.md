@@ -213,6 +213,55 @@ Checks performed — all PASS:
 
 ---
 
+## Audit — 2026-06-12 (notion-audit skill pass — Middlesex TEMPLATE page)
+**Target:** Middlesex TEMPLATE page `37b90644-d524-80b2-b047-ef5e4b3a576a` (Companies research, distinct from "The Middlesex Corp" operational page).
+
+**Result: 3 rows added to TEMPLATE Locations table; all other checks PASS.**
+
+**Filled:**
+- **TEMPLATE Locations DB** `collection://71c90644-d524-8344-a307-870ecc7d5238` — 3 missing rows added (body listed 7 locations, table had only 4):
+  - 🏗️ Mass Ready Mix Plant – Littleton, MA `37d90644-d524-813e-9de1-f4c2b03fd270` · Adress=1 Spectacle Pond Road, Littleton, MA 01460 · [src](https://middlesexco.com/what-we-do/materials/)
+  - 🏭 Orlando Asphalt Plant & Rail Terminal `37d90644-d524-81a0-b6a2-df3f6e7a4a2f` · Adress=10801 Cosmonaut Boulevard, Orlando, FL 32824 · [src](https://middlesexco.com/what-we-do/materials/)
+  - ⛰️ Sparta Quarry – Sparta, GA `37d90644-d524-818d-af10-cae59ebcf313` · Adress=Sparta, GA 31087 · [src](https://middlesexco.com/what-we-do/materials/aggregates/)
+
+**TEMPLATE page structure note:** TEMPLATE uses its own local collections (separate from "The Middlesex Corp" operational page). TEMPLATE Divisions view filters on "TEMPLATE" row only — by design (template placeholder). TEMPLATE Events and Software views show real operational data via filtered views. TEMPLATE Locations now has 7 rows matching the body count.
+
+**All checks PASS:**
+- **3a Interconnection:** TEMPLATE Locations→Companies relation not present in schema (TEMPLATE DB schema is simpler: Location + Adress text only — no Company/Division relations). This is a schema difference from the operational locations DB. Pre-authorized to add column if needed but schema is consistently minimal across all 4 original rows — left as-is.
+- **3b Description depth:** TEMPLATE page body is fully sourced with attack plan, software signals, people summaries, memberships ✓
+- **3c Addresses:** TEMPLATE Location rows use text `Adress` (not place type) — 7 rows now all have addresses ✓
+- **3d Memberships:** Memberships section is body-only on TEMPLATE page (no inline DB here); 5 memberships listed — CCIA, FTBA, DBIA-FL, ABC, NSC ✓
+- **3e Location tags:** TEMPLATE Events DB has no rows (view filter = TEMPLATE placeholder only); real events live on "The Middlesex Corp" page ✓
+
+**Genuinely sourceless (TEMPLATE-specific):** TEMPLATE Divisions view shows no real rows by design (filtered to "TEMPLATE" placeholder) · TEMPLATE Locations schema has no Company/Division relations (minimal schema). No venue coordinates available for CCIA/Golf events. No Asphalt LLC People/Projects relation data.
+
+---
+
+## Audit — 2026-06-12 (notion-audit skill pass — auto)
+**Result: NO WRITES (no fillable gaps). Record substantially expanded by a prior session since last ledger audit. State delta reconciled below.**
+
+**State delta (new records since 06-11 pass #4 — added by prior sessions):**
+- **Divisions (6 now, was 5):** Corridor Mining `37d90644-d524-81a9-8ea8-dae779ede653` (Sparta GA quarry affiliate, place set, Companies rel ✓)
+- **Events (6, was 4):** FTBA 2025 Construction Symposium `37d90644…e488edbae6bf` (Date 2025-02-11, Place=Orlando, Location=Florida, Companies ✓) · DBIA-FL 19th Annual Florida Design-Build Conference `37d90644…f41dc750e401` (Date 2025-10-15, Place=Ponte Vedra Beach FL, Location=Florida, Companies ✓)
+- **Locations (7, was 4):** Mass Ready Mix Plant–Littleton MA `37d90644…f1cff9156c07` (Adress=Littleton MA 01460, Companies ✓, Division=Mass Ready Mix ✓) · Orlando Asphalt Plant & Rail Terminal `37d90644…d2c4e1af9c25` (Adress=10801 Cosmonaut Blvd Orlando FL 32824, Companies ✓, Division=Middlesex Asphalt LLC ✓) · Sparta Quarry–Sparta GA `37d90644…dbf06b3724f4` (Adress=Sparta GA, Companies ✓, Division=Corridor Mining ✓)
+- **Memberships (5, was 4):** NSC — National Safety Council `37d90644…d1a0c23eb6cb` (Companies ✓, source=middlesexco.com/middlesex-receives-nsc-perfect-record-award/)
+- **Projects (22, was 21):** PFC Ralph T. Basiliere Bridge Replacement `37d90644…fdbbcc0e2965` ($214.98M, MassDOT, Route 125 Haverhill MA, Aug 2025 D-B, Location=Massachusetts, Contractors=Middlesex ✓, linked to NE Region Projects ✓)
+- **People (30, was 18):** 12 Apollo-CSV contacts `37c90644…` linked to Middlesex (Cost Managers, Schedule Engineers, field staff — all Company ✓, no Division — structural deferred)
+- **Software (8, was 7):** 1 new row `37d90644-d524-8190-be14-d1554d33bc22` linked (unverified title — fetching skipped per rate limit; Companies ✓)
+- ⚠ **Duplicate Orlando location** `37c90644-d524-8138-a94d-fe1e0e886ff1` "Orlando FL — Southeast Regional HQ" — blank body, same address as original `37b90644…81db` row. Flagged for Zack deletion.
+
+**All checks PASS:**
+- **3a Interconnection:** Company→People(30)✓ · Company→Projects(22)✓ · Company→Owners(9)✓ · Company→Software(8)✓ · Divisions(6)→Company✓ · NE Region→People(12)+Projects(15)✓ · SE Region→Projects(7)✓ · Events(6)→Company+Location tags✓ · Memberships(5)→Company✓ · Locations(7)→Company+Division✓
+- **3b Description depth:** Corridor Mining division body full ✓ · Basiliere Bridge body full ✓ · all existing division/project bodies unchanged ✓
+- **3c Addresses:** Company place ✓ · All 7 Location rows Adress text ✓ · Basiliere Bridge Adress place ✓ · NE/SE/Paving/Corridor Mining division Adress place ✓ · Mass Ready Mix/Asphalt LLC divisions = sourceless ✓
+- **3d Memberships:** All 5 sourced memberships present (CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓ · NSC ✓) · ⚠ CCIA/DBIA-FL/FTBA each retain prior duplicate `37c90644` rows → still awaiting Zack deletion.
+- **3e Location tags:** FTBA Annual=Florida ✓ · DBIA-FL Awards=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓ · FTBA Symposium=Florida ✓ · DBIA-FL 19th Annual=Florida ✓
+
+**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · Event Place/venue coords · FTBA exact date · Mass Ready Mix/Asphalt LLC division leader/address · division revenue/headcount · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in original dossier) · project APN/bond/FEMA/seismic.
+**Structural deferred (unchanged):** 12 Apollo-CSV people have no Division (global Divisions DB ≠ page-local Company Map) · `37c90644` Orlando dup location · `37c90644` CCIA/DBIA-FL/FTBA dup memberships — all require Zack manual deletion.
+
+---
+
 ## Audit — 2026-06-11 (notion-audit skill pass #2 — manual)
 **Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows detected — flagged, not deleted (additive-only policy).**
 

@@ -295,7 +295,8 @@ Dates set: CA HSR `date:Date:start = 2015-01-13` · Palisades `date:Date:start =
 - Gordie Howe `Status` = "In progress" (Flat2.md says "Done") — kept existing per additive rule.
 
 ### Deferred
-- Denver Concourse + Pearl Harbor Dry Dock `Location` tags: Colorado / Hawaii options uncertain in shared Projects multi-select — add in UI then tag.
+- Denver Concourse `Location` tag: ~~Colorado option uncertain~~ **✅ RESOLVED 2026-06-12 audit** — Colorado option confirmed present; tag applied.
+- Pearl Harbor Dry Dock `Location` tag: Hawaii option **still absent** from shared Projects multi-select — Zack to add in UI then tag.
 - FD West / Mid-Atlantic Adress place: no office coordinates in Flat2.md → left empty.
 
 ---
@@ -341,3 +342,41 @@ The ledger's "Flat2.md Load" section lists `37d90644…8191` (FD West) and `37d9
 - FD West Projects: **5**
 - FD Mid-Atlantic Projects: **2**
 - FD Canada People: **2**
+
+---
+
+## Audit — 2026-06-12 (manual /notion-audit cycle)
+**Status: ✅ audit complete — 1 fill.** Full re-verification vs all dossiers (Flat.md + Flatiron1.md + Flat1.md + Flat2.md). Live Notion fetched for company, all 8 divisions, sample projects, all memberships, events, locations, and shared Projects DB schema.
+
+### Filled in audit
+- **Denver International Airport Concourse Expansion** `Location` tag: **Colorado** — schema confirmed present (Colorado option exists in Projects DB multi-select); property was empty. Source: [fdcorp.com](https://www.fdcorp.com/en/projects/aviation/denver-international-airport-concourse-expansion). Body note updated to remove "deferred" text.
+
+### Still empty / genuinely sourceless (unchanged)
+- **Pearl Harbor Dry Dock 5** `Location` tag: "Hawaii" option still absent from shared Projects multi-select schema → remains deferred; Zack to add option in UI then tag.
+- EMR/TRIR/DART/OSHA · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN · most per-project full date sets · People Email/Phone/LinkedIn.
+- FD West / Mid-Atlantic `Adress` place: no office coordinates in any dossier.
+- IAI Summit 2025 + IPI Awards 2022 `Location tags`: location not disclosed in source → genuinely sourceless.
+- FlatironDragados Canada division People: no additional named Canada-specific leader beyond Stephanie Hun in any dossier.
+- J.F. White division People: no named leader in any dossier.
+- Site C Dam: British Columbia not in Projects Location schema as state option — deferred (UI).
+- Wellsburg Bridge: WV/OH not in Projects Location schema — currently tagged "USA".
+
+### All checks 3a–3e
+- **3a:** 8 divisions live + company relation confirmed; company → 37 Construction Projects + 8 software + people (all confirmed). All 10 memberships + 4 events + 17 locations → company linked. Division→People + Projects edges intact.
+- **3b:** All 8 division bodies at full dossier depth. Sample projects at full body depth.
+- **3c:** Company HQ place confirmed (Atlanta 33.8746/-84.3389). All 8 division Adress places confirmed (FD West at Concord CA; Mid-Atlantic at Raleigh NC; original 6 unchanged). All 17 location row Adress text fields populated. Pearl Harbor and Denver project Adress correctly empty (no geocoords in dossier).
+- **3d (memberships):** 10/10 confirmed live — AGC, DBIA, IPI, The Beavers, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston, AGC San Diego Chapter, Carolinas AGC, CCIB. All company-linked.
+- **3e (location tags):** DBIA Conference → Las Vegas ✅; Groundbreaking Women → San Diego ✅; Howard Hanson Dam → Washington ✅. Denver Airport → **Colorado ✅ (filled this audit)**. Pearl Harbor → ⏳ Hawaii option missing from schema. Both new events (IAI Summit + IPI Awards) have no venue disclosed → genuinely sourceless.
+- **False positives rejected:** 0.
+
+### Manual UI steps (updated)
+1. Projects Underway view — set Contractors = FlatironDragados.
+2. Existing Software view — remove `__TEMPLATE__` filter.
+3. Memberships "View of People" tab — repoint company filter.
+4. ~~Restore clobbered Projects `Location` option list~~ — ongoing; current list is large (Colorado, Hawaii, etc. present for many companies).
+5. **Add "Hawaii" to Projects `Location` schema** → then tag Pearl Harbor Dry Dock 5.
+6. Size conflict: Regional (existing) vs Multinational (dossier) — pick one.
+7. Delete Big Data harness dup division rows: FD West `37d90644…8191` + Mid-Atlantic `37d90644…81b3`.
+8. Delete Big Data harness dup project rows (8 dupes listed in cross-link section above).
+9. Add "British Columbia" to Projects `Location` schema → tag Site C Dam.
+10. Add "West Virginia" / "Ohio" to Projects `Location` schema → re-tag Wellsburg Bridge (currently "USA").

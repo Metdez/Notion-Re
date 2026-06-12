@@ -163,3 +163,23 @@ Both have Company→O&G and identical Function. Likely created in two separate O
 4. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
 5. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
 6. **Ryan Oneglia dup** — delete `37b90644-d524-8182-9ac4-f95438c3c771` (no Division link, user_gray icon); keep `37b90644-d524-81c4-b7f1-d5883c8d67ab` (Division linked, 👤 icon).
+
+## Audit round 9 (2026-06-12, /notion-audit — vs OD.md)
+**5 fills** — 3 missing memberships + 2 missing events found in OD.md not yet in Notion.
+
+**New membership rows created** (Memberships DS `ba190644-d524-82ca-8f0b-0776584cf423`):
+- AGC National `37d90644-d524-8158-bbac-dc8e03f0e0d7` — Associated General Contractors of America. O&G Platinum Safety Award + Certificate of Commendation. Source: ogind.com/about/awards/
+- NAPA `37d90644-d524-81ec-89b4-e28bba80eeab` — National Asphalt Pavement Association. NAPA Quality in Construction + Community Involvement Award. Source: ogind.com/about/awards/
+- CMAA CT Chapter `37d90644-d524-8135-8336-c64493d6d45e` — 2025 Best Buildings Project >$25M for Torrington MS/HS. Source: LinkedIn post.
+
+**Memberships full list (7 total, all company-linked):** CCIA · AGCCT · Connecticut Road Builders Association · The Moles · AGC National · NAPA · CMAA CT Chapter
+
+**New event rows created** (Events DS `fd690644-d524-8205-b26c-873fba047650`):
+- CMAA CT Project Achievement Awards (2025) `37d90644-d524-8175-8ede-d861642bd3e5` — O&G Best Buildings Project honoree; CT tag. Source: LinkedIn post.
+- CONN-OSHA Strategic Partnership Signing (2025) `37d90644-d524-8147-a823-d576b4c1e2dd` — 2025-07-21; O&G as host/signatory; EHS investment signal; CT tag. Source: ogind.com/2025/og-partners-with-conn-osha-to-strengthen-jobsite-safety/
+
+**Events full list (5 total, all company-linked):** CCIA Annual Meeting · AGC CT Awards · ENR NE Best Projects · CMAA CT Awards · CONN-OSHA Partnership
+
+**All other records verified complete (unchanged from rounds 6–8):**
+- Company record, 7 divisions, 22 projects, 15 people, 17 locations, 4 software — no new gaps.
+- Ryan Oneglia dup still present (pending manual UI delete, see below).

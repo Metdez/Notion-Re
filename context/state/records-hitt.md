@@ -149,6 +149,18 @@ Full read-only pass vs HITT1.md + HITT2.md + HITT3.md, covering: company record,
   - 5-6 net-new projects confirmed absent: JCC Advanced Manufacturing Training Facility ($35M, Four Oaks NC), MedImmune R&D ($40M, Gaithersburg MD), Inova Women's/Children's (Falls Church VA), Inova Fairfax PSB 5th Floor (Falls Church VA), Inova Fairfax Perioperative (Falls Church VA), Leidos HQ (Reston VA, Boston Properties client)
   - Net-new people not yet in People DB: Triloka Shanbhag (Mission Critical co-leader), Jason Hair (NY VP), Brad Hunley (Government EVP), Sven Sahkul/Luke Marshall/J. Fontaine (Government VPs), Kyle Sugrowe (Advanced Manufacturing VP), Scott Decker/Gary Stewart (Life Sciences), Kevin Daniels/Chris Lukawski/JoAnna Heath (Healthcare BU), Brian Kilpatrick (Fort Lauderdale VP), Ryan Bixler/Erik Kandler/Edward Miko (Atlanta), Paul Zimmerman/Todd Hudson (Houston), Chris Jewell/Jon Duffey (Dallas), Trevor Coffey/Kavan Ranasinghe (LA), Sam Holbrook (Raleigh)
 
+## Post-load audit #8 (2026-06-12, /notion-audit HITT Contracting — HITT4.md)
+New dossier `HITT4.md` (2026-06-12 run, 38 sources, region_hint=Boston/New England) discovered. Compared against all prior audits and live Notion state.
+- **1 new project created:** Microsoft Alviso Datacenter Campus `37d90644-d524-8129-8974-d18123b548c2` (Data Center / Mission Critical, San Jose CA, groundbreaking 2026-06-10, est. completion 2028, 397,205 sf / 48 MW, Microsoft owner, Santa Clara BU). [ConnectCRE](https://www.connectcre.com/stories/microsoft-breaks-ground-on-long-planned-north-san-jose-data-center-site/)
+- **1 new membership created:** Associated Builders and Contractors (ABC) `37d90644-d524-81fc-badf-f9207d030b02` → linked to HITT. [HITT](https://www.hitt.com/news-hub/hitt-earns-abc-eagle-award/)
+- **3 new people created:** Brett Hitt (Co-Chairman) `37d90644-d524-8142-afe6-f4f32c89044c`; John Kane (SVP Santa Clara/Mission Critical) `37d90644-d524-8168-a299-f6dacd6f2e39`; Megan Lantz (VP R&D) `37d90644-d524-8116-acdc-c23227c4831f`. All linked Company→HITT.
+- **5 new software rows created:** Autodesk Navisworks `37d90644-…818f97d8`, Autodesk Revit `37d90644-…815a8c90`, FARO Scene `37d90644-…81eea866`, Synchro (Bentley) `37d90644-…811092e6`, Building Transparency EC3 `37d90644-…81be9531`. Schema extended with 5 new `Software used` options (additive; 34 total options, all prior preserved).
+- **Interlinks set:** company `Construction Projects` updated (+Microsoft Alviso); company `Companies Software ` updated (+5 new rows); Santa Clara division `Projects` += Microsoft Alviso; Santa Clara division `People` += John Kane; John Kane `Division` = Santa Clara.
+- **Verified no change needed:** Boeing SC body already rich (JV/BRPH/dates/delivery ✓); all prior 7 audits' fills still intact; 7 memberships (now 8 with ABC) ✓; 18 divisions ✓; 20 original people ✓.
+- **False positives rejected:** HITT4 division_count=0/divisions=[] (no division detail); locations array populated but addresses already set in Notion (additive rule); hq_address updated to new HQ — current operational address already in place field (additive rule prevents overwrite); employees/revenue: HITT4 shows $8.7B 2024 and 3,300 staff — body already has richer $13.1B 2025 figures.
+- **DEFERRED from HITT4 (virtual event, low signal):** DBIA 2025/2026 Webinar — virtual event, optional add.
+- **Left empty-for-cause:** all prior sourceless items unchanged (Safety Week/SubDay, NAIOP date/address, Size=Regional conflict, LinkedIn/Email/Phone for people).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.

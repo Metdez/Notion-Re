@@ -19,7 +19,7 @@
 | Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) | ✅ 2026-06-10 | [records-cianbro](records-cianbro.md) |
 | Bechtel Group | `Enlaye Notion/Bechtel Group/Bechtel2.md` (primary) · `Bechtel1.md` (mapped) | ✅ 2026-06-10 | [records-bechtel](records-bechtel.md) |
 | Branch Group | `Enlaye Notion/Branch Group/Branch1.md` (single-line JSON dossier) | ✅ 2026-06-10 | [records-branch](records-branch.md) |
-| Alberici | `Enlaye Notion/Alberici Corp/Alb.md` (single sourced JSON dossier) | 🔄 2026-06-10 in progress | [records-alberici](records-alberici.md) |
+| Alberici | `Enlaye Notion/Alberici Corp/Alb.md` (1st dossier) · **`Alb2.md`** (2nd dossier, 2026-06-12; 49 projects, 13 divisions, 22 locations, 94 sources) | ✅ 2026-06-10 (Alb.md) · ✅ 2026-06-12 (Alb2.md loaded in prior op + ABC membership gap-fill) | [records-alberici](records-alberici.md) |
 | KBE Building | `Enlaye Notion/KBE Building/KBE.md` (KBE1.md empty) | ✅ 2026-06-10 (additive gap-fill on pre-existing 06-05 build) | [records-kbe](records-kbe.md) |
 | The Middlesex Corporation | `Enlaye Notion/The Middlesex Corp/Middlesex.md` (disk dossier; truncated mid-`sources`) **+ richer in-chat-only dossier** (not on disk: exec roster, $609.9M/#203, more tools) | ✅ 2026-06-10 (disk) · ✅ 2026-06-10 2nd pass (in-chat extras: +10 execs, Middlesex Asphalt div, +4 software) | [records-middlesex](records-middlesex.md) |
 | FlatironDragados | `Enlaye Notion/FlatironDragados/Flat.md` (primary) · `Flatiron1.md` (secondary; Flat1.md empty) | ✅ 2026-06-10 | [records-flatirondragados](records-flatirondragados.md) |

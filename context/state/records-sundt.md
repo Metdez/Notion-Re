@@ -242,3 +242,67 @@ Live re-fetch: company record (22b9…), profile page (37b9…3af), Advanced Fac
 
 ### Genuinely sourceless blanks (unchanged)
 Place coords · division revenue/headcount · people email/phone/LinkedIn · most project contract values · delivery/contract method on several projects · event venue addresses.
+
+---
+
+## Audit — 2026-06-12 (sixth pass — /notion-audit Sundt)
+
+**Root cause discovered:** The Sundt3.md load (prior session, same day) created **two parallel sets of records** for every new entity — one correct set (in the proper databases, IDs ending in higher hex at ~12:09–12:10) and one broken orphan set (loose pages outside any database, IDs recorded in the ledger above at ~10:54–11:06). The ledger captured the orphan IDs, not the proper IDs.
+
+### Real proper records (in correct DBs — correct IDs)
+| Type | Name | Correct ID |
+|---|---|---|
+| Division | Concrete | `37d90644-d524-8155-b8ec-ea2507ae6474` |
+| People | Omar Chavez | `37d90644-d524-810c-a557-caf25fc47c03` |
+| People | Matt Bothun | `37d90644-d524-813b-bbb5-c70b0e0da436` |
+| People | Paul Laufer | `37d90644-d524-817c-b023-d3a28f99c637` |
+| People | Patrick Bulman | `37d90644-d524-816c-9467-f820953d4d1d` |
+| People | Jim Bergin | `37d90644-d524-81b5-a9ec-e4ebfc5153b9` |
+| People | David Rieken Jr. | `37d90644-d524-8191-a39c-cdf04527a90c` |
+| People | Tom Dodson | `37d90644-d524-813d-b525-e80b7744d6e8` |
+| People | Chris Steves | `37d90644-d524-811f-8daf-fb3a09086c54` |
+| People | Shawn Blubaum | `37d90644-d524-8125-9d40-e8fee7f3f0cc` |
+| Membership | AGC (full name) | `37d90644-d524-811e-b8fc-fa65bc716c58` |
+| Membership | APWA | `37d90644-d524-81f2-902d-c7ddbe28f8e6` |
+| Membership | Arizona Builders Alliance | `37d90644-d524-8146-abe0-d82ef36fe939` |
+| Membership | The Beavers | `37d90644-d524-8156-93f8-f9e1d65afa77` (**created this pass**) |
+| Software | Bluebeam Revu (Sundt) | `37d90644-d524-81d1-b9a4-f706d6b2a573` (**created this pass**) |
+| Location | Austin | `37d90644-d524-81fb-bebb-e76c42c97838` |
+| Event | IPS Acquisition | (search-confirmed, in Events DB) |
+| Event | Chad Buck Building Group President | (search-confirmed) |
+| Event | Advanced Facilities Group Created | (search-confirmed) |
+| Event | Water Group Founded | (search-confirmed) |
+| Event | Cade Rowley Named President & CEO | (search-confirmed) |
+| Event | Sundt Renewables Launch | `37d90644-d524-812a-b79f-dbc5cb84f476` |
+
+### Orphan pages (outside any DB — Zack to delete in UI)
+All IDs recorded in the Sundt3.md section above (the ones ending in `…81f6-a15a`, `…81f8-91ce`, `…81e0-bea0`, `…814b-b6b4`, `…814e-a9f9`, `…8192-b1fd`, `…81c6-ab1f`, `…8149-b0f6`, `…819e-87c4`, `…81f6-9104`, `…816e-ab69`, `…8131-88b4`, `…8187-9c57`, `…81dc-becd`, `…8174-bbe3`, `…810e-9a9c`, `…8156-8f44`, `…81fa-ae0f`, `…81f9-8a23`, `…812d-8d55`, `…816e-971a`, `…8106-adf1`) are **loose orphan pages not in any database** — they have correct body content but no DB parent, no Name title property (some were given names by this audit's update calls, but remain outside any DB). Recommend Zack delete these ~22 orphans in the Notion UI.
+
+### Fills made this pass
+1. **The Beavers** membership created in Memberships DB (`b1c90644`), Company → Sundt. ID `37d90644-d524-8156-93f8-f9e1d65afa77`.
+2. **Bluebeam Revu (Sundt)** software created in Companies Software DB (`37690644`), Company → Sundt, Software used = [Bluebeam]. ID `37d90644-d524-81d1-b9a4-f706d6b2a573`.
+3. Orphan pages given names via update_properties (partially fixed — titles set but pages remain outside DBs): all 9 people orphans + 4 membership orphans + 1 software orphan named. Non-destructive.
+
+### 3a Interconnection ✓
+Company→People (all 9 new properly linked) · Company→Projects (58, confirmed from company record) · 9 divisions→company · Memberships (5: DBIA + AGC + APWA + AzBA + The Beavers) all company-linked · Austin location company-linked.
+
+### 3b Description depth ✓
+Concrete division, all 9 new people records — bodies confirmed with roles/sources at correct depth.
+
+### 3c Addresses ✓
+Austin TX location: address `1701 Directors Blvd Suite 730, Austin TX 78744` in `Adress` field. All 16 location rows have addresses. Company place (lat/lng) genuinely unfillable (no coords sourced).
+
+### 3d Memberships (5/5 complete)
+DBIA (pre-existing) · AGC · APWA · Arizona Builders Alliance · The Beavers — all now in Memberships DB with Company relation. Complete per Sundt3.md dossier.
+
+### 3e Location tags
+AGC Award = [Arizona] ✓. Events without sourced venue (DBIA milestone, milestone events) = no location tag, genuinely sourceless.
+
+### Pre-existing dup flags (not caused by this audit)
+- David Rieken Jr.: `37d90644…8191` (Sundt3 load) + `37c90644…81e5` (Apollo CSV import "David Rieken Jr, P.E., DBIA, ENV SP") — Zack to merge/keep preferred in UI.
+- Chris Steves: `37d90644…811f` (Sundt3) + `37c90644…81a4` (Apollo CSV) — same.
+
+### Genuinely sourceless blanks (unchanged)
+Place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · most project contract values · event venue addresses · TRIR/EMR · bonding/surety.
+
+**Result: 2 new proper records created (The Beavers, Bluebeam). ~22 orphan pages flagged for UI deletion. Ledger corrected with real IDs. Record fully converged per dossier.**

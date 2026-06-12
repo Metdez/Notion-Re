@@ -100,6 +100,18 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
 - No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).
 
+## Audit log — 2026-06-12 (pass 8 — notion-audit skill)
+**0 fills — record fully complete.**
+- Live re-fetch of all 4 memberships, 2 events, 7 locations (HQ spot-checked), Branch Civil division, Bob Wills (person), company record (`26890644`) — all confirmed complete.
+- Company record: Description, Type=Company, Size=Regional, BW Category=[Builder], Country=[VA/MD/TN/NC/WV], Website, LinkedIn, Address/place (Roanoke HQ lat/lng), People [16], Construction Projects [12] ✓.
+- Divisions (4): Branch Civil live — Companies full database relation, place/Adress (3635 Peters Creek Rd, lat/lng), People [1], Projects [5] ✓. Body: focus/leader/footprint/formed/notable all set ✓.
+- People: Bob Wills live — Company, Function=CEO, Function Qualification=[CEO], Location=[Virginia], body content set ✓.
+- Memberships (4/4): ABC (AQC + STEP Platinum), AGC (VA + Carolinas), DBIA (Southeast), VTCA — all confirmed company-linked + URL set ✓.
+- Locations (7/7): HQ row live — Adress text, Companies full database relation set; Division blank (correct for HQ) ✓. All 7 rows confirmed via search.
+- Events (2/2): Golf Tournament = Location tags=[Virginia], date 2026-06-08, company-linked ✓. DBIA Award = Location tags=[North Carolina], date 2026-04-28, company-linked ✓.
+- 3a relations ✓ · 3b description depth ✓ · 3c addresses ✓ · 3d memberships (4/4) ✓ · 3e location tags ✓.
+- No new fillable gaps. Outstanding manual UI unchanged: Country NC/WV options (item 3); template row cleanup (item 4).
+
 ## Audit log — 2026-06-12 (pass 7 — notion-audit skill)
 **0 fills — record fully complete.**
 - Live re-fetch: company record (`26890644`), Branch Civil (division), I-95 project, both events, HQ location row, Bob Wills (person) — all confirmed complete.
