@@ -166,3 +166,11 @@ New dossier `HITT4.md` (2026-06-12 run, 38 sources, region_hint=Boston/New Engla
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
 3. **Memberships-note People view** → re-point hardcoded company filter to HITT.
 4. **Company Country** → add options: North Carolina, New Mexico, South Carolina (cannot do via MCP on shared schema).
+
+## Post-load audit #9 (2026-06-12, /notion-audit HITT Contracting — HITT4.md post-#8 gap fill)
+Full verification pass vs HITT1.md + HITT2.md + HITT3.md + HITT4.md. Scope: all records created or modified in Audit #8 (Microsoft Alviso project, ABC membership, 3 people, 5 software) + full 3c/3d/3e sweep.
+- **Fills (2 — both on Microsoft Alviso Datacenter Campus `37d90644-d524-8129-8974-d18123b548c2`):**
+  1. `Adress` (place) set → "Microsoft Alviso Datacenter Campus", 1657 Alviso-Milpitas Road, San Jose, CA 95002 (37.432, -121.967). Source: ConnectCRE.
+  2. `Size` set → "397,205 sf / 2-building campus / 48 MW / 65 acres". Source: HITT4.md.
+- **Verified clean (0 additional writes needed):** all 3 new people (Brett Hitt/John Kane/Megan Lantz) Company+FQ+Location ✓ · ABC membership Companies→HITT ✓ · Santa Clara division Adress+People=Kane+Projects=Alviso ✓ · all 5 new software Company→HITT ✓ · 5 events ✓ · 18 divisions ✓ · 8 memberships ✓ · 16 locations ✓.
+- **Left empty-for-cause (unchanged from prior passes):** Construction Safety Week/SubDay (national/sourceless) · NAIOP date/Adress ("Northern Virginia" only) · Size=Regional conflict · people LinkedIn/Email/Phone (none in any dossier).

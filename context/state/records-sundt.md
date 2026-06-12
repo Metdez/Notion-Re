@@ -306,3 +306,59 @@ AGC Award = [Arizona] ✓. Events without sourced venue (DBIA milestone, milesto
 Place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · most project contract values · event venue addresses · TRIR/EMR · bonding/surety.
 
 **Result: 2 new proper records created (The Beavers, Bluebeam). ~22 orphan pages flagged for UI deletion. Ledger corrected with real IDs. Record fully converged per dossier.**
+
+---
+
+## Audit — 2026-06-12 (seventh pass — /notion-audit Sundt)
+4 parallel read-only sub-agents (9 divisions / 13 people / memberships+events / 10 project sample) + main-session live verify. Cross-referenced against both Sundt.md and Sundt3.md.
+
+### Fills made this pass (5 writes, all verified live before write)
+1. **Concrete division `People`** → linked Danny Gumm `37c90644-d524-8181-aa27-f0e32ae99315` (VP Concrete Division Manager). Existed in People DB from Apollo CSV import, linked to Sundt company, but division relation was empty. Source: [sundt.com/employees/danny-gumm/](https://www.sundt.com/employees/danny-gumm/)
+2. **Building Group division `People`** → added Ryan Nessen `37d90644-d524-8198-a52d-f5ae4921a106` (SVP CA District Manager) + Sarah Owen `37d90644-d524-811d-9e28-e9cbab6b74ad` (SW District BD Manager). Both existed in People DB from Sundt3 load; not yet linked to division. Building Group People now 4/4 (Chad Buck + Shawn Blubaum + Ryan Nessen + Sarah Owen). Sources: [sundt.com/about-sundt/regions/california/](https://www.sundt.com/about-sundt/regions/california/) + [sundt.com/employees/sarah-owen/](https://www.sundt.com/employees/sarah-owen/)
+3. **PoweR division body** → enriched from 4 thin bullets (no inline sources) to fully sourced content: Focus · Sectors served · Footprint · Notable project · Base. All bullets carry inline source URLs. Source: [sundt.com/what-we-build/](https://www.sundt.com/what-we-build/) + [sundt.com/contact/](https://www.sundt.com/contact/)
+4. **Gilbert NWTP project body** → added: CMAR delivery method, 45→60 MGD scope expansion (serves >70% of Gilbert water supply), $500M full program value note (additive — property $95M from Gilbert CIP preserved; $500M from Sundt3 in body note). Source: [sundt.com/projects/31074-2/](https://www.sundt.com/projects/31074-2/)
+5. **SLC NWRF project body** → added: PCL Construction JV partner (Sundt/PCL JV), Sundt self-performs 50% of work, >99% waste diversion from landfills, clarifying note on $528M (Sundt contract share) vs $900M (full program per Sundt project page). Source: [sundt.com/about-sundt/regions/intermountain/](https://www.sundt.com/about-sundt/regions/intermountain/)
+
+### Major structural finding — 40 Sundt3 projects are orphan pages
+The Sundt3.md second-pass load (prior session) created **all 40 new project records as standalone pages outside the Construction Projects database**. Confirmed by fetching a sample of 8 (SR 347, Rocky Point, US-89 Bridge, TxDOT I-10 Phase I, Green River, CSU Fullerton Phase V, DESRI Hornshadow, Cave Creek WRP) — none show an ancestor database, all have blank Name properties, none have Contractors/Owning Department fields. Content in the bodies is accurate but the records are structurally broken.
+- The IDs recorded in the Sundt3.md load ledger section above (the `37d90644…` project IDs) point to these orphans.
+- This is a structural issue: MCP `update_properties` cannot add a page to a database retroactively. The fix requires recreating these 40 projects as proper Construction Projects DB rows.
+- **Action required (Zack):** confirm; a future `/notion-load` pass can recreate these 40 projects properly. The orphan pages can then be deleted.
+
+### 3a Interconnection check
+- Building Group People: 4/4 ✓ (Chad Buck + Shawn Blubaum + Ryan Nessen + Sarah Owen)
+- Concrete People: 1/1 ✓ (Danny Gumm)
+- Transportation People: 4/4 ✓ (Jeff Williamson + Ken Kubacki + Jasen Bennie + Jeffrey Hamilton)
+- Water People: 4/4 ✓ (Sam Reidy + Omar Chavez + Matt Bothun + Paul Laufer)
+- Heavy Industrial People: 3/3 ✓ (Patrick Bulman + Jim Bergin + David Rieken Jr.)
+- Renewables People: 2/2 ✓ (Tom Dodson + Chris Steves)
+- Advanced Facilities People: 2/2 ✓ (Alex Charland + Josh Anderson)
+- Mining People: 4 linked (identities unclear from body — 4 people linked without matching names in body)
+- PoweR People: 0 — no VP/president sourced in either dossier (genuinely sourceless)
+- Memberships (5/5): DBIA + AGC + APWA + Arizona Builders Alliance + The Beavers → all Company-linked ✓
+- Events (8 total): all Company-linked ✓
+- Company → 58 Construction Projects (confirmed from company record) ✓
+
+### 3b Description depth
+All division bodies at dossier depth. PoweR enriched this pass. All 13 named people have sourced role bodies (9 second-pass records have minimal 1-2 bullet bodies = full dossier depth for those records).
+
+### 3c Addresses
+All 16 location rows have `Adress` text filled ✓. Company place (lat/lng) genuinely unfillable (no coords). Project place genuinely unfillable (no coords).
+
+### 3d Memberships (5/5 complete)
+DBIA · AGC · APWA · Arizona Builders Alliance · The Beavers — all in Memberships DB with Company relation ✓.
+
+### 3e Location tags
+AGC Award = [Arizona] ✓. All 6 leadership/milestone events = no location tag (internal/HQ events, venue not sourced) ✓.
+
+### Genuinely sourceless blanks (confirmed this pass)
+PoweR VP/president (not named in either dossier) · Concrete division Projects (no discrete Concrete-only projects in dossier) · people email/phone/LinkedIn (no dossier source) · place coords everywhere (no-geocoding rule) · division revenue/headcount · TRIR/EMR · bonding/surety · 40 Sundt3 project contract values (structural orphan issue supersedes) · DBIA Milestone event date · Mining division leader (unnamed in both dossiers).
+
+### Outstanding for Zack (manual UI / structural)
+1. Delete ~22 orphan pages from Sundt3 first-pass (IDs in sixth-pass section above).
+2. Recreate 40 Sundt3 projects as proper Construction Projects DB rows (structural — requires `/notion-load` pass or manual creation).
+3. View filters: Projects Underway + Existing Software still filtered to `__TEMPLATE__`.
+4. David Rieken Jr. dup: `37d90644…8191` (Sundt3) + `37c90644…81e5` (Apollo CSV) — merge in UI.
+5. Chris Steves dup: `37d90644…811f` (Sundt3) + `37c90644…81a4` (Apollo CSV) — merge in UI.
+
+**Result: 5 writes (Concrete + Building Group People relations filled; PoweR body enriched; Gilbert NWTP + SLC NWRF bodies enriched). Major structural gap flagged (40 orphan project pages). No data corrupted.**
