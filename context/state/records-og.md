@@ -163,6 +163,10 @@ Both have Company→O&G and identical Function. Likely created in two separate O
 4. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
 5. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
 6. **Ryan Oneglia dup** — delete `37b90644-d524-8182-9ac4-f95438c3c771` (no Division link, user_gray icon); keep `37b90644-d524-81c4-b7f1-d5883c8d67ab` (Division linked, 👤 icon).
+7. **Membership dups (3 pairs, round 10)** — delete the `37c90644-…` set (created in a prior session before round 9 re-created them); keep the `37d90644-…` rows (round 9 canonical, all verified complete):
+   - Delete AGC National `37c90644-d524-81e8-8a8b-e6f2124b6636` (keep `37d90644-d524-8158-bbac-dc8e03f0e0d7`)
+   - Delete NAPA `37c90644-d524-81da-ab76-cf57a54fdd30` (keep `37d90644-d524-81ec-89b4-e28bba80eeab`)
+   - Delete CMAA CT Chapter `37c90644-d524-8140-81d8-e5e58b705d5c` (keep `37d90644-d524-8135-8336-c64493d6d45e`)
 
 ## Audit round 9 (2026-06-12, /notion-audit — vs OD.md)
 **5 fills** — 3 missing memberships + 2 missing events found in OD.md not yet in Notion.
