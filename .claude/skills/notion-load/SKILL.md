@@ -61,9 +61,6 @@ Bodies stay CEO-skim (bullets, short sentences) but must carry the full sourced 
 - **Divisions:** focus, leader (+ appointment date), footprint (states/metros/sectors served), founded/acquired date, office phone, notable projects, parent entity.
 - **People:** role + appointment/hire date, division context, flagship projects/wins they're tied to, awards/events — everything the dossier sources about the person.
 
-### Descriptions — add them, near-verbatim (mandatory — per Zack, 2026-06-12)
-Every record being loaded gets its description filled (Companies DB `Description`, body sections, etc.) when the research provides one. **If the research already contains a description of the thing, carry it over with very few changes — very few edits.** Light trims for brevity/format are fine; do not rewrite, paraphrase heavily, or re-compose it in your own words. The source's wording is the description.
-
 ## Phase 4 — Rules (non-negotiable)
 - **Sourced data only.** Every value carries an inline source URL from the research. No source → leave the field empty. Never fabricate, never approximate dates/values, never geocode addresses you can't verify.
 - **Additive only.** Never `replace_content`, never delete, never overwrite a filled field. On conflict between research and an existing value, keep the existing value and flag the conflict.
