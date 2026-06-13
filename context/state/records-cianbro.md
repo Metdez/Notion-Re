@@ -101,6 +101,46 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **No new fillable gaps found** per Cianbro.md dossier as of 2026-06-13.
 - **Infrastructure Projects relation shows 1 entry** in division view — this is a Notion view filter issue (`__TEMPLATE__` filter still active on Projects Underway view), not a data gap. All 14+ infrastructure projects have Owning Department → Infrastructure set correctly.
 
+## Audit fills (2026-06-13 — notion-audit run #5, Cianbro3.md)
+**New dossier registered:** `Enlaye Notion/Cianbro/Cianbro3.md` (JSON, 2026-06-12, 69 projects, full division office data, Starcon/A-Z office lists). Added to research-files.md index.
+
+**Division Adress fills (6 market-sector units — all were empty; addresses from Cianbro3.md division office data):**
+- **Building** → 46 Norwich Westerly Road, North Stonington, CT 06359 (A/Z HQ post-2024). Source: a-zcorp.com/contact/
+- **Industrial & Manufacturing (IDM)** → 605 Pittman Road, Baltimore, MD 21226. Source: Cianbro3.md
+- **Infrastructure** → 60 Cassidy Point Drive, Portland, ME 04102. Source: Cianbro3.md
+- **Power & Energy** → 360 US Route 1, Falmouth, ME 04105. Source: Cianbro3.md
+- **Modular Manufacturing** → 517 South Main Street, Brewer, ME 04412. Source: Cianbro3.md
+- **Support Services** → 335 Hunnewell Ave, Pittsfield, ME 04967 (CFCC/equipment hub). Source: Cianbro3.md
+
+**Location → Division relation fills (5 existing rows — Division was empty):**
+- Greenville SC office → IDM division
+- Falmouth ME office → Power & Energy division
+- Bloomfield CT office → Infrastructure division (Cianbro operational office; A/Z HQ is North Stonington CT per Cianbro3.md)
+- Baltimore MD office → IDM + Infrastructure + Modular Manufacturing divisions
+
+**Event Location tag fill (1):**
+- ABC Top Performers 2026 → Location tag: **Las Vegas** (applied; ⚠ verify: ABC Top Performers is a national ranking publication, not a Vegas event; 2026 ceremony venue not explicitly confirmed in Cianbro3.md)
+
+**New Location rows created (10 — all sourced to Cianbro3.md; Division + Companies relations set):**
+- Starcon New Lenox IL (Starcon division)
+- Starcon Gonzales LA (Starcon division)
+- A/Z East Hartford CT (A/Z Corporation division)
+- A/Z Milford CT (A/Z Corporation division)
+- A/Z Groton CT (A/Z Corporation division)
+- A/Z North Kingstown RI (A/Z Corporation division)
+- A/Z Hopkinton RI (A/Z Corporation division)
+- A/Z Marlborough MA (A/Z Corporation division)
+- A/Z Portsmouth NH (A/Z Corporation division)
+- A/Z Iselin NJ (A/Z Corporation division)
+
+**People confirmed already present (no new creates needed):** Gary Smith, Aric Dreher, Mark Parsons, Tim Keating, Allyn Brice, Tim Keating III — all present as 37d-prefix records from prior run #4 (created 2026-06-12/13).
+
+**Memberships:** 24 rows confirmed, ABC + AGC (from Cianbro3.md) already present. No new rows needed.
+
+**Location count now:** 24 rows (14 original + 10 new A/Z/Starcon offices).
+
+**Genuinely unfillable (Cianbro3.md sourced but no fix applicable):** 69 projects in Cianbro3.md vs 25 in Notion — the delta are projects without sufficient data to create full sourced records (no contract values, no clean addresses). Market-sector division Adress values are primary-office best-guess from multi-location units. EMR/TRIR/DART, bonding capacity, insurance carriers remain null.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).

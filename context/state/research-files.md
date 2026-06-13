@@ -16,7 +16,7 @@
 | Fontaine Bros. | `Enlaye Notion/Fontaine Bros/Font1.md` (1st) · `Fontaine.md` (2nd-pass, 16 proj → +6 net-new) | ✅ 2026-06-10 (both passes) | [records-fontaine](records-fontaine.md) |
 | HITT Contracting | `Enlaye Notion/HITT/HITT1.md` (primary) · `HITT4.md` (2nd-pass, 2026-06-12, 7 projects, 38 sources) | ✅ 2026-06-10 (HITT1) · ✅ 2026-06-13 (HITT4 audit pass #7) | [records-hitt](records-hitt.md) |
 | Jingoli Nuclear Services | `Enlaye Notion/Jingoli/Jingoli.md` | ✅ 2026-06-10 | [records-jingoli](records-jingoli.md) |
-| Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) | ✅ 2026-06-10 | [records-cianbro](records-cianbro.md) |
+| Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) · `Cianbro3.md` (2nd dossier, JSON, 69 projects, 2026-06-12) | ✅ 2026-06-10 (+run #5 2026-06-13 from Cianbro3.md) | [records-cianbro](records-cianbro.md) |
 | Bechtel Group | `Enlaye Notion/Bechtel Group/Bechtel2.md` (primary) · `Bechtel1.md` (mapped) | ✅ 2026-06-10 | [records-bechtel](records-bechtel.md) |
 | Branch Group | `Enlaye Notion/Branch Group/Branch1.md` (single-line JSON dossier) | ✅ 2026-06-10 | [records-branch](records-branch.md) |
 | Alberici | `Enlaye Notion/Alberici Corp/Alb.md` (single sourced JSON dossier) | 🔄 2026-06-10 in progress | [records-alberici](records-alberici.md) |
