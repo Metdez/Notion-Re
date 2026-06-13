@@ -387,6 +387,35 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 
 ---
 
+## Audit — 2026-06-13 (eleventh pass — /notion-audit Sundt)
+Full live re-fetch: company record (all properties confirmed via file parse), Memberships DB (8 unique rows + dups confirmed via search), Locations DB (Austin `37d90644…81fb` + 15 originals + dups confirmed), Events DB (13 rows confirmed), USGBC page (blank body confirmed), Gilbert NWTP project, I-20 Odessa project. Ground truth: Sundt.md (run 2026-06-10) + Sundt3.md (run 2026-06-12, now formally designated as second ground-truth dossier per research-files.md).
+
+### What's new since tenth pass
+- **Sundt3.md** formally designated as second ground truth — all 16 locations (incl. Austin), 37 projects, 7 divisions, 7 events, 5 memberships fully cross-checked.
+- **Austin location** `37d90644-d524-81fb-bebb-e76c42c97838` — confirmed populated: Adress "1701 Directors Blvd Suite 730, Austin TX 78744", Companies→Sundt ✓, Division→Transportation ✓, body sourced. Already loaded by intervening session.
+- **Value conflicts noted (no write — non-destructive):** I-20 Odessa $225M (Notion) vs $237.9M (Sundt3.md same source URL); Lake McQueeney $746M vs $82M; Gilbert $95M vs $500M — body already notes dual values on Gilbert; no writes made.
+
+### Checks performed (3a–3e)
+- **3a Interconnection:** All 9 divisions→company ✓. All 13 events→company ✓. All 8 unique memberships (incl. dups)→company ✓. Austin + 15 original locations→company+Division ✓. No unset edges.
+- **3b Description depth:** Company body very rich (CEO Rowley, M&A, ENR trajectory, ESOP, licenses) ✓. All division bodies rich ✓. Project bodies sourced ✓.
+- **3c Address/location:** Company Address place filled (lat 33.3979/lng -111.9662) ✓. Austin location Adress text filled ✓. All 15 original location Adress text filled ✓. Division Adress (place type) empty — no coords in any dossier → genuinely sourceless ✓.
+- **3d Membership completeness:** Sundt.md names 1 (DBIA); Sundt3.md names 5 (DBIA+AGC+APWA+AzBA+Beavers). All 5 present ✓. ESOP/ENR/USGBC are valid post-dossier enrichment. USGBC body blank — no source in any dossier → genuinely sourceless.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. All other events no venue → sourceless ✓.
+
+### No new fillable gaps found
+All data from both dossiers (Sundt.md + Sundt3.md) correctly recorded. No empty field with a sourced value identified.
+**Result: 0 writes this pass. Record complete per all dossier data. 11th consecutive no-write pass.**
+
+### Manual UI steps outstanding (unchanged from tenth pass)
+1. **Dup cleanup** — Memberships: AGC ×2 delete (`37d90644…81e5` + `37d90644…814c`); APWA ×1 delete (`37d90644…817b`); AzBA ×1 delete (`37d90644…8146`); Beavers ×2 delete (`37d90644…8156` + `37d90644…8160`). Locations: Tempe HQ ×2 delete (`37d90644…81a6` + `37d90644…81f8`); El Paso ×2 delete (`37d90644…8116` + `37d90644…81df`); San Antonio ×2 delete (`37d90644…815a` + `37d90644…815d`); Phoenix Training ×2 delete (`37d90644…8136` + `37d90644…8173`). Orphan Concrete page: `37d90644-d524-810e` delete.
+2. **I-10 dup review** — $87M vs $120M same or different project.
+3. **USGBC membership body** — blank; no source in any dossier; fill manually if Zack has a source.
+4. Projects Underway view → clear `__TEMPLATE__` filter.
+5. Existing Software view → clear `__TEMPLATE__` filter.
+6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+---
+
 ## Audit — 2026-06-13 (tenth pass — /notion-audit Sundt)
 Full live re-fetch: company record (60K-char subagent), Memberships table (all rows via 5 search queries), Events table (all 13 rows), USGBC page direct fetch, DBIA Milestone + Renewables Launch direct fetch, 5 new event rows direct fetch. Dossier (Sundt.md, run_date 2026-06-10) re-confirmed as ground truth.
 

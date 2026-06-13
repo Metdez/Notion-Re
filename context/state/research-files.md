@@ -23,7 +23,7 @@
 | KBE Building | `Enlaye Notion/KBE Building/KBE.md` (KBE1.md empty) | ✅ 2026-06-10 (additive gap-fill on pre-existing 06-05 build) | [records-kbe](records-kbe.md) |
 | The Middlesex Corporation | `Enlaye Notion/The Middlesex Corp/Middlesex.md` (disk dossier; truncated mid-`sources`) **+ richer in-chat-only dossier** (not on disk: exec roster, $609.9M/#203, more tools) | ✅ 2026-06-10 (disk) · ✅ 2026-06-10 2nd pass (in-chat extras: +10 execs, Middlesex Asphalt div, +4 software) | [records-middlesex](records-middlesex.md) |
 | FlatironDragados | `Enlaye Notion/FlatironDragados/Flat.md` (primary) · `Flatiron1.md` (secondary; Flat1.md empty) | ✅ 2026-06-10 | [records-flatirondragados](records-flatirondragados.md) |
-| Sundt | `Enlaye Notion/Sundt/Sundt.md` (single-line JSON dossier; no people array) | ✅ 2026-06-10 | [records-sundt](records-sundt.md) |
+| Sundt | `Enlaye Notion/Sundt/Sundt.md` (primary; run 2026-06-10; 1 membership/18 projects/15 locations) · `Sundt3.md` (2nd-pass; run 2026-06-12; 7 divisions/37 projects/16 locations/5 memberships/7 events — bulk loaded by prior session 2026-06-12; Sundt2-PARTIAL.md = partial/truncated) | ✅ 2026-06-10 (initial) · ✅ 2026-06-12 (Sundt3.md bulk loaded) | [records-sundt](records-sundt.md) |
 | Kiewit Corporation | `Enlaye Notion/Kiewitt/Kiewitt.md` (Kiewitt1.md empty) | ✅ 2026-06-10 | [records-kiewit](records-kiewit.md) |
 | Shawmut | `Enlaye Notion/Shawmut/Shawmut3.md` (Shawmut2 truncated/corrupt; 1 & 4 empty) · `Shaw5.md` (2nd-pass 2026-06-12; 12 divisions, 28 projects, 4 events, 7 memberships, 94 sources — bulk loaded by prior session 2026-06-12) | ✅ 2026-06-10 (initial) · ✅ 2026-06-12 (Shaw5.md bulk loaded) | [records-shawmut](records-shawmut.md) |
 
