@@ -124,3 +124,15 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3d membership check:** AGC of America is the only confirmed corporate membership in the dossier. No additional memberships to add.
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
+
+## Audit log — 2026-06-13 (Pass #6) — automated hourly cycle
+**Full audit run.** Verified: company record (`19990644`), 5 divisions, 12 locations, 2 events, 1 membership (AGC of America), 7 software records. Ground truth: `Shawmut3.md`.
+**Result: 0 fills executed.** All dossier-sourced data confirmed present in Notion. No empty field found with a sourced value not yet applied.
+**3a Interconnection ✓:** 5 divisions → Companies full database (Shawmut) ✓; 12 locations → Company ✓ (10/12 → Division; Miami + WPB Division empty = genuinely sourceless — dossier owning_division:null); 2 events → Companies ✓; AGC membership → Company ✓; 19 projects → Contractors + Owning Department ✓.
+**3b Description depth ✓:** profile page body intact (Company Map / Events / Locations / Memberships / Software / Projects / Attack Plan). Company record body rich (4 dated update blocks through 2026-06-12T23:07 including ENR #61, revenue $1.3B→$2.3B, First Finish acquisition, NACD Board of Year).
+**3c Addresses ✓:** Company Address place (560 Harrison Ave, Boston, MA 02118, lat/lng set) ✓. All 12 location Adress text fields filled ✓. Events Place empty (nationwide, no geocode) ✓.
+**3d Memberships ✓:** AGC of America present with Company relation + body ✓. AGC-CA also present (prior beyond-dossier addition — left untouched). Dossier confirms no other corporate memberships.
+**3e Location tags ✓:** Safety Week 2026 = [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] ✓. 12th Annual = [Boston, Massachusetts, National] ✓.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond HQ+San Diego, litigation, contract values for 13/19 projects, memberships beyond AGC, Miami/WPB owning division.
+**Structural gap noted (not actioned — out of scope):** First Finish (acquired Nov 2024) in company body but no separate Companies DB record; `Subsidiaries` relation empty. Creating a new company record = structural, not an additive field-fill — deferred to Zack.
+**Harness updated:** ledger + LOG + STATE.
