@@ -84,6 +84,22 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (eighth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (eighth pass)
+- **Company record** `24690644…`: all 18 properties populated — Size="Mutlinational", Address place (4004 Summit Blvd NE Atlanta GA 33.8746/-84.3389), Description, BW Category=Builder, Website, LinkedIn, Country×15, Parent Company, Construction Projects×37, People×716 — complete ✓
+- **Profile page body** `37b90644…8039`: Bio, Snapshot, Attack Plan — complete ✓
+- **All 6 Divisions:** live-fetched all 6; all Companies→FD, Adress place (where sourced), body content, People+Projects linked ✓. J.F. White People still empty — genuinely sourceless (no named leader in any dossier, confirmed again) ✓
+- **Memberships (raw collection):** 25 rows in collection — 10 content rows + 7 blank dup rows from 2026-06-12 20:20 + duplicate name variants (AGC San Diego ×3, Carolinas AGC ×2, DBIA ×3, IPI ×3, CCIB ×3) + TEMPLATE. All 10 content rows confirmed linked to FD ✓. Blank dups unchanged (non-destructive, pending Zack UI).
+- **Events (raw collection):** 10 rows in collection — DBIA Conference & Expo 2025 `37b90644…8141` (Las Vegas, 2025-11-05, place+tag ✓, body ✓) · Groundbreaking Women 2026 `37b90644…810f` (San Diego, tag ✓) · IAI Summit 2025 `37d90644…8126` (UNKNOWN — sourceless ✓) · IPI Awards 2022 `37d90644…81ea` (UNKNOWN — sourceless ✓) · CI Student Days 2025 `37c90644…8186` (venue not sourced — correctly noted in body ✓) + TEMPLATE + duplicate event rows from 2026-06-12 sessions (DBIA dup `37d90644…81f4`, IAI dup `37d90644…8125`, IPI dup `37d90644…8101`). All FD-linked content rows complete ✓
+- **Sub-agent view-filter false positive:** sub-agent reading filtered inline-DB view saw only 4 memberships and 4 events — confirmed view-filter artifact (same pattern as Pass #6), not real gaps. Rejected.
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — UNKNOWN/not disclosed in all dossiers).
+
+---
+
 ## Audit — 2026-06-13 (seventh pass)
 **Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md`. Zero fillable gaps found. No writes made this pass.
 
