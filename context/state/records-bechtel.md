@@ -114,6 +114,23 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
 
+## Audit — 2026-06-13 (notion-audit Pass #6 — automated hourly cycle, 0 writes)
+
+### Filled
+Nothing. **0 writes made.** All live records re-fetched; no fillable gaps found.
+
+### Verified complete (all 3a–3e checks pass — live re-fetch 2026-06-13 Pass #6)
+- **3a Interconnection ✓:** Company record has 52+ People, **32 Construction Projects** (25 Bechtel2 + 7 Bechtel1-sourced: Sabine Pass S5, WIPP, Mammoth Solar, Cold Creek Solar, Eva Copper, QB2, + Poland AP1000 enriched), 30+ Software. All 6 divisions carry Companies+People+Projects. All project Contractors+Owning Department set. 19 Locations/13 Events/12 Membership rows (6 unique + 6 dups)/Software all carry Companies relation.
+- **3b Description depth ✓:** All 6 division bodies confirmed present and full. Project bodies carry sourced scope/owner/delivery/dates/fatality signal (Port Arthur). People bodies carry sourced role detail.
+- **3c Addresses ✓:** Company HQ Address place (Reston, lat 38.9586/lng -77.357) ✓; all 6 division Adress places ✓; all 19 location rows Adress text ✓ (incl. 3 newer rows: New York 140 Broadway, Los Angeles, Richland 450 Hills St — all fully linked). Project Adress place = genuinely sourceless (no coords in dossier).
+- **3d Memberships ✓ — 6/6 (ignoring 6 dup rows):** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — all company-linked. ⚠ 6 duplicate rows persist — Zack to trash in UI (Manual UI step #6).
+- **3e Location tags ✓ — 13 events georeferenced, 17 options in Events schema:** Gastech 2024 [Texas] · Gastech 2025 [Italy, Fiera Milano place coords confirmed] · Gastech 2026 [Thailand] · H2 & Ammonia 2024 [Texas] · NECX 2025 [Georgia] · ETEBA BOTC 2025 [Tennessee] · ETEBA Savannah River 2025 [South Carolina] · NEI Policy Forum 2025 [Washington DC] · NEI Assembly 2024 [Pennsylvania] · NVIDIA GTC 2025 [Washington DC] · ENR LA Forum [California] · LACMTA C-Line [California] · Gastech 2026 [Thailand]. ENR LA + LACMTA dates genuinely unconfirmed in dossier.
+
+### Left empty (genuinely sourceless — unchanged)
+21 of 25 core project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification). 6 location rows missing Division (Washington DC / San Francisco / New Delhi / Shanghai / Taipei / Nairobi — general offices, no single division in source).
+
+---
+
 ## Audit — 2026-06-13 (notion-audit Pass #4 — confirmed no-gap)
 
 ### Filled
