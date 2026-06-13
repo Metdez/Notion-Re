@@ -102,6 +102,15 @@ Verified: all 21 projects have Contractors→Fontaine + Owning Department set (S
 2. **AGC MA Membership — body missing member categories** → added bullet: Corporate/Commercial Constructor · Criminal Justice · Education · Historic Preservation/Restoration · Parking Structures · Public Work · Religious. Source: `https://members.agcmass.org/list/member/fontaine-brothers-inc-41`
 - **Verified complete (no write needed):** company record, all 22 projects (Contractors + Owning Department + place + body depth), both divisions, 3 events (Place + Location tags + Company + body), 2 locations, Sources ~37 rows, Software 4 rows. All remaining blanks are confirmed dossier-gaps (revenue, EMR/TRIR, bonding, DUNS/UEI, contract values for Beal/Whitman/Crocker/Clinton, etc.).
 
+**✅ Audited 2026-06-13 (scope: full profile — company, 22 projects, 10+ people, 2 divisions, 3 events, 2 locations, 2 memberships, 4 software — notion-audit skill, ninth pass):** All records re-fetched vs Font1.md + Fontaine.md + Fon2.md. **7 fills: 3 people + 4 icons.**
+1. **Mark Abdella** — Function Qualification ["Vice President"] + Location ["Massachusetts", "USA"] + Role body (VP CM Services + AGC MA; sources: fontainebros.com + members.agcmass.org)
+2. **Liz Wambui** — Function Qualification ["Director"] (confirmed: fontainebros.com/awards)
+3. **Jeff Cammuso** — Function Qualification ["Vice President"] + Location +USA (source: linkedin.com/in/jeff-cammuso-b4306956)
+4–7. Icons: William R. Peck MS 🏫, Berkshire Hall 🏛️, Tyngsborough MS 🏫, Auburn HS 🏫 (all were blank since load creation).
+- False positives rejected: Architect property (no schema field; body-only correct); Size conflict HELD; Projects count 20 vs 22 (display artifact).
+- 3a–3e verified: All 22 projects Contractors+Owning Dept ✓; divisions People+Projects+Company ✓; 3 events Place+Location tags+Company ✓; 2 memberships Company ✓; 2 locations Company+Division ✓.
+- ⚠ Dup David Fontaine Jr. `37d90644-d524-8189` still outstanding — Zack UI action needed.
+
 **✅ Audited 2026-06-13 (scope: full profile — company, 22 projects, 2 divisions, 3 events, 2 locations, 2 memberships — notion-audit skill, eighth pass, automated hourly cycle):** All records re-fetched vs Font1.md + Fontaine.md + Fon2.md. **2 icon fills (CLAUDE.md formatting rule), 0 sourced-data fills.**
 1. **East Longmeadow High School `37b90644-d524-8141`** — icon set to 🏫 (blank since second-pass load creation).
 2. **South High Community School `37b90644-d524-8130`** — icon set to 🏗️ (blank since second-pass load creation).
