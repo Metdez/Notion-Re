@@ -83,6 +83,12 @@ Verified: all 21 projects have Contractors→Fontaine + Owning Department set (S
 1. **Agawam High School — `place:Adress` absent.** Font1.md said "street address not stated in collected sources" but Fontaine.md provides `760 Cooper Street, Agawam, MA 01001` (source: `https://thereminder.com/local-news/public-gets-look-at-future-agawam-high-school/`). Filled: name="Agawam High School" / address="760 Cooper Street, Agawam, MA 01001" / lat=42.0695 / lng=-72.6148.
 - All other records verified complete. Confirmed false positives held (Prouty division conflict, cost conflicts on Doherty/Court Square/Agawam). Remaining blanks all confirmed dossier-gaps.
 
+**✅ Audited 2026-06-13 (scope: full profile — company, 22 projects, 10+ people, 2 divisions, 3 events, 2 locations, 2 memberships, 4 software — notion-audit skill, tenth pass):** All records re-fetched live vs Font1.md + Fontaine.md + Fon2.md. **1 fill.**
+1. **David Fontaine Jr.** — Function Qualification corrected from ["President"] to ["CEO"]. Pre-existing CRM value "President" was never updated despite dossier clearly showing CEO role. Source: `https://fontainebros.com/` + `https://www.clintonmiddleschoolbuildingproject.com/project-team`
+- False positives rejected: Joel Kent FQ ["Project"] → no COO option in schema; no write. All other records verified clean.
+- 3a–3e verified: all relations intact; 3 events all tagged ✓; 2 memberships ✓; 2 locations ✓.
+- ⚠ Dup David Fontaine Jr. `37d90644-d524-8189` still outstanding — Zack UI action needed.
+
 **⚠ Manual UI steps for Zack:**
 1. **Projects Underway** view on the profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = Fontaine Bros. Inc.
 2. **Memberships "View of People"** tab — re-point leftover company filter to Fontaine Bros. Inc.

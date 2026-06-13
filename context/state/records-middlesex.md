@@ -346,3 +346,22 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 
 **Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
 **Structural deferred (unchanged — Zack deletion required):** People→Division → global KBE-only Divisions DB structural mismatch · dup Orlando location `37c90644-d524-8138-a94d-fe1e0e886ff1` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows.
+
+---
+
+## Audit — 2026-06-13 (notion-audit skill pass #11 — current session)
+**Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions live-fetched + 7 locations + 5 memberships + 6 events + Basiliere Bridge project spot-check.
+**Result: 0 fills. All structural checks PASS. Full clean audit.**
+
+**Live-verified (no write needed):**
+- Company record `1ce90644`: Description ✓ · Website ✓ · LinkedIn ✓ · Address place (1 Spectacle Pond Rd, Littleton MA, lat 42.5412/lng -71.4773) ✓ · BW Category=[Builder] ✓ · Type=Company ✓ · Size=Regional ✓ · Country (7) ✓ · People (417+) ✓ · Construction Projects (23 forward + 2 backlink = 25 total) ✓ · Owners (12) ✓ · Software (8) ✓ · body full ✓.
+- Operational hub body: 8 divs ✓ · 6 events ✓ · 7 locations ✓ · 24 projects ✓ · 5 memberships ✓ · 417 people ✓ · 8 software ✓ · Attack Plan ✓.
+- TEMPLATE body: matches operational hub ✓.
+- All 8 divisions live-fetched: NE (12p/15proj/Adress ✓) · SE (1p/9proj/Adress ✓) · Paving (1p/Adress ✓) · MassReadyMix (Adress ✓) · AsphaltLLC (Adress ✓) · CorridorMining (Adress ✓) · Energy (Adress ✓) · Rail/Transit (2proj/Adress ✓). All → Companies ✓.
+- Events: 3f590644 schema has Florida ✓ + Massachusetts ✓ options. FTBA Annual = Florida ✓ (Place filled: Waldorf Astoria Orlando, date 2025-07-31) ✓.
+- Locations: Littleton HQ row — Adress text "1 Spectacle Pond Road, Littleton, MA 01460" ✓ · Companies→`1ce90644` ✓ · Division→NE Region ✓.
+- Basiliere Bridge `37d90644…0e2965`: Contractors=Middlesex ✓ · Owner=MassDOT ✓ · Adress place ✓ · Location=[Massachusetts] ✓ · body full ✓.
+- CCIA membership confirmed in collection `83490644` (search hit → `37b90644-d524-8178-a16a-dd738c4d1f4e`); Companies relation set ✓.
+
+**Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
+**Structural deferred (unchanged — Zack deletion required):** People→Division → global KBE-only Divisions DB structural mismatch · dup Orlando location `37c90644-d524-8138-a94d-fe1e0e886ff1` · dup CCIA/DBIA-FL/FTBA `37c90644`-era membership rows.
