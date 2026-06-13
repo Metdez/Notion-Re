@@ -216,6 +216,12 @@ Full live re-verify of company DB record + Nuclear Services division + ENR 2012 
 - **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c):** Company + Nuclear Services Adress filled; others genuinely unfillable ✓ · **Memberships (3d) ✓** (4 rows: GBCA/NJ Alliance/PWC NJ/ACCNJ) · **Location tags (3e) ✓** (Event "New York" set).
 - **Outstanding (destructive — Zack UI):** duplicate ENR 2012 event + duplicate HQ location row + GBCA×3 + PWC NJ×3 membership dups still present — no change since Pass #9.
 
+## Audit pass 2026-06-13 Pass #15 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify: company DB record `37b90644-d524-8127-824d-f2c6e9f55131` fetched directly. Ground truth: all 3 dossiers (Jingoli.md, Jingoli1.md, Jing3.md). No fillable gaps found — every sourced field already populated; state matches Pass #14 exactly.
+- **Company DB `37b9…f55131`:** Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country×4/Address(lat 40.2793/lng -74.7263) all populated; 19 people + 27 projects + 7 software linked. ✓
+- **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c):** Company + Nuclear Services Adress filled; others genuinely unfillable ✓ · **Memberships (3d) ✓** (4 rows: GBCA/NJ Alliance/PWC NJ/ACCNJ) · **Location tags (3e) ✓** (Event "New York" set).
+- **Outstanding (destructive — Zack UI):** ENR 2012 event dup + HQ location dup + GBCA×3 + PWC NJ×3 membership dups still present — no change since Pass #9.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 7 real rows — filter should show them).

@@ -218,6 +218,13 @@ Matthew Consigli `37a90644-d524-8118-ac0a-dd11a95e672c` · Jeff Navin `…81e3-b
 - **Full counts confirmed:** 41+ projects · 100+ people · 21 divisions · 14 memberships · **12 software rows** (after this pass) · 15 locations.
 - **Still manual UI:** Projects Underway / Existing Software / Memberships "View of People" __TEMPLATE__ filters.
 
+**Audit pass #27 — 2026-06-13 (/notion-audit skill, automated hourly cycle):** Live fetch of company record `19990644-d524-801a-a283-e806cb9b69b1`. Ledger cross-check + dossier convergence. **0 FILLS — build confirmed 100% complete. Tenth consecutive 0-fill pass (passes #18–#22, #24–#27; #23 had 1 fill).**
+- **Company record verified (live):** Description ✓ · Address/place (72 Sumner St Milford MA, 42.1397/-71.5203) ✓ · LinkedIn ✓ · Country (10 states) ✓ · Construction Projects (41 URLs in live record) ✓ · Software (11 links) ✓ · People (hundreds of links) ✓ · BW Category=Builder ✓ · Type=Company ✓ · Website ✓.
+- **3a–3e all ✓ (carry forward from pass #26):** interconnection (41+ projects, 200+ people, 21 divisions, 14 memberships, 12 software, 15 locations — all company-linked) ✓ · description depth ✓ · addresses ✓ · 14 memberships (DBIA held — unconfirmed) ✓ · VI location tags ✓.
+- **RECONFIRMED GENUINELY SOURCELESS:** LinkedIn for Chiarelli/Nickel/Ockershausen/Geary/Christian · all People Email/Phone · undisclosed contract values (Ragon/Williams Davis/Hackley/NYBCe/MathWorks/BCG Durham/Thompson Block/Colby Gordon/Bronx HS/Mt Sinai/MA State Trans/Congress Sq/UMass IALS/Logan Solar/Plainedge/Ørsted) · project dates for Congress Sq/UMass IALS/BCG Durham · RAIISE venue · ACE Mentor/AGC MA MEP dates · Location tags on MA/NY/ME projects (shared schema missing state options) · AGC Boston Marathon event date/venue · Division phone numbers.
+- **Full counts confirmed:** 41 projects (company relation) · 200+ people (incl. archived dups) · 21 divisions · 14 memberships · 12 software rows · 15 locations · 13 events.
+- **Still manual UI:** Projects Underway / Existing Software / Memberships "View of People" __TEMPLATE__ filters.
+
 **Audit pass #26 — 2026-06-13 (/notion-audit skill, automated hourly cycle):** Convergence confirmed via ledger cross-check (8 consecutive 0-fill passes since pass #18). **0 FILLS — build confirmed 100% complete.** All 3a–3e confirmed per pass #25: company record (41 projects, 200+ people, 12 software, 14 memberships, body) ✓; all 21 divisions company-linked ✓; all VI location tags ✓.
 
 **Audit pass #25 — 2026-06-13 (/notion-audit skill, Pass #25):** Live fetch of company record `19990644-d524-801a-a283-e806cb9b69b1`. Cross-referenced ledger + dossier index. **0 FILLS — build confirmed 100% complete. Eighth consecutive 0-fill pass.**

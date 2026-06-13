@@ -286,6 +286,14 @@ All prior fills from runs #1–#11 confirmed intact ✓. 3a–3e all pass. Full 
 ### Genuinely unfillable (confirmed — all sources exhausted)
 EMR/TRIR/DART · bonding/surety/insurance · division revenue/headcount splits · ABC NCC 2024 exact date · AGC Maine Awards exact dates · Bangor I-95/Southport/Sarah Mildred Long/CP243/P-381 direct project URLs · most People Email/Phone/LinkedIn · per-state license numbers · JV revenue shares · Owner relation for 18 projects (owner records absent from Owners DB) · Division Projects for 8 subsidiary/support units (no dossier-named standalone projects).
 
+## Audit fills (2026-06-13 — notion-audit run #13, automated hourly)
+**State as of 2026-06-13 (full live re-fetch verify — 0 writes):**
+- **Company record** `1cf90644` — Address place (44.7831/-69.3836) ✓ · Description ✓ · Country ✓ · LinkedIn ✓ · Website ✓ · People (330+ records) ✓ · Construction Projects + Companies Software ✓.
+- **Memberships DB** — 24 named rows + 1 TEMPLATE; no duplicates ✓. All ABC/AGC/AGC Maine/ACI/AIHA/AISC/ARTCA/BPA/BWI/CFMA/CII/CURT/DBIA/GBC/MD Chamber/MTBMA/MWII/NAWIC/NSPE/Propeller Club/SAME/SBBA/SMPS/TAPPI confirmed present → Company ✓.
+- **Events DB** — exactly 6 Cianbro-linked rows (ConExpo 2026 primary only, no dup) ✓ · 2 non-Cianbro rows (SCUP + CALA/ISLE) = correct ✓.
+- **Profile page** `37b90644-d524-8049` — Events header (6 sourced) ✓ · Locations header (13 locations) ✓ · Memberships body (30 listed) ✓.
+- **No new fillable gaps found.** Record fully saturated vs Cianbro.md + Cianbro3.md.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).

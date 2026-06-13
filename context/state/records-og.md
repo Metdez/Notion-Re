@@ -138,6 +138,15 @@ Live verification confirmed: company record (all properties populated), profile 
 5. **Duplicate People** — delete: Ryan Oneglia `37b90644-d524-8182`; LinkedIn-import dupes `37d90644-d524-81cc` (Raymond), `37d90644-d524-8133` (Greg), `37d90644-d524-8156` (T.J.). Broader 37d-prefix LinkedIn import may have 100+ thin People rows linked to O&G — review and dedup in bulk.
 6. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
 7. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
+## Audit round 15 (2026-06-13, /notion-audit — automated hourly cycle)
+**0 fills** — convergence confirmed via ledger cross-check (14 prior 0-fill passes) + live spot-check of company CRM record (`1cf90644`): all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 6 Software rows). No new data in either dossier. All 3a–3e confirmed per rounds 12–14.
+
+**No changes made this pass.** All dossier scope fully loaded.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National `37d90644-d524-8158` / NAPA `37d90644-d524-81ec` / CMAA CT `37d90644-d524-8135`) · LinkedIn/Apollo People dupes (~100+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave) · 3 view TEMPLATE filters (UI).
+
+---
+
 ## Audit round 14 (2026-06-13, /notion-audit — OG1.md full re-verify)
 **0 fills** — all records verified live against Notion; no fillable gaps against OG1.md dossier.
 
