@@ -304,6 +304,30 @@ Sources: https://www.kiewit.com/locations/
 
 ---
 
+## Audit pass — 2026-06-13 (Pass #6 — /notion-audit skill)
+
+**Ground truth:** All 5 dossier files read (Kiewitt.md primary + Kiewitt1.md empty + Kiewitt2-PARTIAL.md + Kiewitt3-thin.md + Kiewitt4.md). No fabrication.
+
+**Live fetches:** Company record (`17b90644` — Size/Type/Website/Address/Description/BW/LinkedIn/Country/Projects/Software confirmed), profile page (`37b90644d524…830de18cf6ea0d89`), Memberships schema + search (8 live + 6 DUPLICATE— + 1 TEMPLATE = 15 rows), Events schema + search (6 live + 2 DUPLICATE— + TEMPLATE), Locations schema + search (11 rows confirmed), company record overflow sliced (all key properties verified).
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company — Description ✓; Address place (Omaha 41.265948/-95.935909) ✓; Size=Mutlinational ✓; BW=[Builder/Design and Architecture/Developer] ✓; 39+ Construction Projects ✓; 8 Software ✓; 700+ People ✓; Memberships schema Companies full database col ✓; Events schema Companies+Date+Location tags+Place ✓; Locations schema Companies+Division ✓
+- 3b: All project/division/people bodies at full dossier depth — confirmed via prior passes + spot checks ✓
+- 3c: Company HQ place ✓; all 17+ division Adress place ✓; Kiewit Corporate HQ project confirmed in Notion (`37d90644-d524-8124`) ✓; Scottsdale InEight HQ Adress text = street address ✓; Locations `Adress` = TEXT type (structural limit, flagged, unchanged)
+- 3d: 8 live memberships (The Beavers · AGC · DBIA · CSRA · CISI · CCSC · NCSE · ASCE) all company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Annual Convention 2026 → Florida+Orlando ✓; Construction Safety Week + Women in Heavy Civil untagged ✓ (national); FWIK Summit + Engineering Technical Summit untagged ✓ (no sourced venue); 2 DUPLICATE— Events still pending (`37d90644-81d7/81fb`)
+
+**False positives rejected:**
+- All Kiewitt4.md (06-12) projects and divisions confirmed already loaded in prior session; no new fills needed
+- Kiewit Corporate HQ project (`37d90644-d524-8124`) — confirmed in Notion with full body ✓
+- Kiewitt2-PARTIAL.md 28 divisions all confirmed loaded (Kiewit Canada Group, Kiewit Foundations Co., InEight as division row, Continental Fire Sprinkler, Ganotec, etc.)
+
+**0 writes made.** Record is at full dossier depth.
+
+**Outstanding for Zack:** Delete 8 DUPLICATE— rows (6 Memberships + 2 Events) on Kiewit Corporation profile page.
+
+---
+
 ## Audit pass — 2026-06-13 (Pass #5 — /notion-audit skill)
 
 **Ground truth:** `Enlaye Notion/Kiewitt/Kiewitt.md` (primary — read in full). No fabrication.

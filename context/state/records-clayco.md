@@ -266,3 +266,22 @@
 **Rejected false positives:** Clay Carter (Clayco3.md corporate division people list) — no individual source URL in dossier; not written. Ryan Johnson (VP Power & Energy) — confirmed already exists in People DB from prior sessions.
 
 **Still genuinely sourceless (no write):** project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
+
+---
+
+## Ninth pass — 2026-06-13 (notion-audit Pass #9 — all checks re-verified)
+> Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches: Clayco TEMPLATE page, Companies DB record (`19990644`), Events collection schema + all 6 event rows, Memberships collection schema + NAIOP Chicago + USGBC-CA rows, Locations collection schema + 5 satellite location rows (Lenexa/Atlanta/Birmingham/Greenville/Raleigh), Rivian project record, Anthony Johnson person record.
+
+**Nothing to fill.** All dossier data with source URLs is already in Notion. Zero writes executed.
+
+**3a Interconnection — confirmed clean:** Companies DB record has 32 Construction Projects, 6 Software rows, 5 Subsidiaries, 7 People (6 created + Jeff Miller), BW Category/Type/Size/Address all set. All 6 events carry Companies→Clayco. All 5 membership rows carry Companies→Clayco. 19 division rows carry Companies→Clayco.
+
+**3b Description depth — confirmed adequate:** Company body rich (Snapshot + Financial trend + Attack Plan). Anthony Johnson person body has sourced Role section. Rivian project body has full sourced depth.
+
+**3c Address/location — confirmed:** Company place:Address set (35 E Wacker, 41.8869/-87.6266). SelectUSA event has place:Adress set (National Harbor, MD). AECTechCon has place:Adress + date set. All 11 location rows have addresses in Adress text field. 5 satellite offices (Lenexa/Atlanta/Birmingham/Greenville/Raleigh) all confirmed with street addresses populated. Divisions relation on those 5 remains empty — genuinely sourceless (no division assignment in any dossier).
+
+**3d Memberships — complete:** 5/5 sourced memberships present and company-linked: USGBC `81bd` · DBIA `811f` · AGC `8119-a1ba-c55c924fc91a` · NAIOP Chicago `8154` · USGBC-CA `8139`.
+
+**3e Location tags — confirmed:** SelectUSA=[Maryland] ✓ · AECTechCon=[St. Louis, Missouri] ✓ · Clayco Rising=[Florida] ✓ · AGC Convention no tag (sourceless) ✓ · INTERPHEX=[Life Sciences] ✓ · Petfood Forum=[Food & Beverage] ✓.
+
+**Still genuinely sourceless (unchanged):** project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
