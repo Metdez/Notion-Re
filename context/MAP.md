@@ -33,6 +33,7 @@ This project spreads its working memory across many small, single-topic files so
 | File | Holds |
 |---|---|
 | [playbook/loop-and-dedup.md](playbook/loop-and-dedup.md) | The task loop (§0), dedup (§1), create (§2), update (§3) |
+| [playbook/write-gate.md](playbook/write-gate.md) | **The Write Gate (§12)** — mandatory 4-line STOP before ANY Notion write (identity / additive-only / distinct-entity / dedup) + long-run checkpoint resilience (§12a) |
 | [playbook/schemas.md](playbook/schemas.md) | Field schemas (§4): Owners, Companies, People, Projects, profile-page tables |
 | [playbook/conventions.md](playbook/conventions.md) | Icon convention (§5), sourcing format (§6) |
 | [playbook/recipes.md](playbook/recipes.md) | Task recipes R1–R6 (§7) |
@@ -73,8 +74,9 @@ This project spreads its working memory across many small, single-topic files so
 ### Log spokes — *what happened* (append-only)
 | File | Holds |
 |---|---|
-| [log/2026-06.md](log/2026-06.md) | June 2026 journal (current — company loads & audits from 06-09 Clayco onward) |
+| [log/2026-06.md](log/2026-06.md) | June 2026 journal (current — 06-12 audits, Walsh load, harness hardening v2 onward) |
 | [log/archive/2026-06-part1.md](log/archive/2026-06-part1.md) | June 2026 part 1: Owners/Harvard builds, TEMPLATE work, full Consigli saga (06-08 → 06-09) |
+| [log/archive/2026-06-part2.md](log/archive/2026-06-part2.md) | June 2026 part 2: Clayco→Kiewit load surge & audits, harness upgrade, Apollo event imports, /notion-bulk-import skill (06-09 → 06-10, + 06-12 Harvard audit 8) |
 
 ### Skills (Claude Code — `.claude/skills/`)
 | Skill | Does |

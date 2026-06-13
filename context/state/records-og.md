@@ -82,70 +82,9 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 - 4 additional Mason/Materials location rows not in current 12-row set: East Lyme showroom, Hartford showroom, Waterbury showroom, Torrington Mason Supply
 - These require a separate /notion-load pass — not created during this audit (additive-only, existing records only)
 
-## Audit round 4 (2026-06-11, /notion-audit — hourly cycle)
-**1 fill** — stale Attack Plan text on profile page (`37b90644-d524-808c-9074-eb377b409060`) updated: "named-people pass not yet run" replaced with named targets + "completed 2026-06-10" note.
-All existing records complete: company record, 7 divisions (leader names from OD.md already loaded), 22 projects linked (OD.md load already applied — 10 projects beyond original 12 confirmed in Building division Projects list), 5 people, 3 events, 4 memberships, 12 locations, 4 software rows. No other fillable gaps found.
-**OD.md net-new still pending** (flagged since round 3): 4 new Mason location rows (East Lyme, Hartford, Waterbury, Torrington Mason Supply) not yet created — confirmed by live Locations table having only original 12-row schema. These require /notion-load.
-
-## Audit round 5 (2026-06-11, /notion-audit with OG1.md + OD.md)
-**1 fill** — CCIA Annual Meeting event (`37b90644-d524-81d8-86a5-f75575c0a4d9`) `Place` property filled: Aqua Turf Club, 556 Mulberry St, Plantsville CT 06479 (41.5588°N / 72.8904°W). Source: ogind.com/2025/og-industries-honored-with-top-safety-and-community-service-awards-from-ccia/
-
-**Full record audit completed — all records verified live:**
-- Company record: complete (22 Construction Projects, 4 software, all properties)
-- 7 divisions: complete (leadership, focus, projects, company + people relations)
-- 15 people linked to company (OD.md pass already applied): Ryan Oneglia, Brad Oneglia, TJ Oneglia, Kara Oneglia, Jason Travelstead, Christina Oneglia Rossi, Tyson J. Burk + original 5 + 3 pre-existing CRM contacts
-- 3 events: complete (company relation, date, location tags set; CCIA Place now filled)
-- 4 memberships: complete (company relation, sourced body content)
-- 17 locations: all present with Adress text + Company + Division relations. 4 new OD.md Mason rows (East Lyme, Hartford, Waterbury, Torrington Mason Supply) already loaded — ⚠ ledger round 4 incorrectly flagged these as "pending"; they were in fact created in a prior session.
-- 4 software rows: complete
-
-**⚠ Ledger ID corrections:** Event/membership row IDs in ledger header/section were stale. Live IDs confirmed:
-- CCIA Annual Meeting: `37b90644-d524-81d8-86a5-f75575c0a4d9`
-- AGC CT Awards: `37b90644-d524-812e-a3ac-dd26381cb8fb`
-- ENR NE Best Projects: `37b90644-d524-8140-aac8-fb1799029211`
-- CCIA membership: `37b90644-d524-81e8-af6f-d0be9930ff2e`
-- AGCCT membership: `37b90644-d524-819a-b4a5-ccc20a2e6c63`
-- CT Road Builders: `37b90644-d524-817f-8fe8-edd8fa149f07`
-- The Moles: `37b90644-d524-81e4-ad3d-dda9ce7cfb6a`
-
-**AGC CT Awards event Place**: venue not specified in source beyond "Connecticut" — genuinely sourceless, left blank.
-**ENR NE Best Projects event Place**: venue TBA — genuinely sourceless, left blank.
-
-## Audit round 6 (2026-06-11, /notion-audit — full live verification)
-**0 fills** — all records verified complete against OG1.md + OD.md. No new fillable gaps found.
-
-**Live record counts verified:**
-- Company record: complete (22 Construction Projects, 4 software, all properties filled)
-- 7 divisions: complete (leadership, focus, projects, company + people relations)
-- 15 people linked (all OD.md leaders confirmed live: Ryan Oneglia, Brad Oneglia, TJ Oneglia, Kara Oneglia, Jason Travelstead, Christina Oneglia Rossi, Tyson J. Burk + original 5 + 3 pre-existing CRM contacts)
-- 3 events: complete (CCIA Place = Aqua Turf Club filled round 5; AGC Place genuinely sourceless; ENR NE Place TBA)
-- 4 memberships: complete
-- 17 locations: all present with Adress + Company + Division relations (original 12 + 4 OD.md Mason rows + 1 Building RI)
-- 4 software rows: complete
-
-**⚠ New dup flagged (round 6):** Ryan Oneglia ×2 in People DB:
-- `37b90644-d524-81c4-b7f1-d5883c8d67ab` — has Division link (Heavy Civil), emoji icon 👤, created 23:22
-- `37b90644-d524-8182-9ac4-f95438c3c771` — no Division link, user_gray icon, created 23:23
-Both have Company→O&G and identical Function. Likely created in two separate OD.md load sub-agents racing. Delete the second (no Division link) in UI — **no destructive action taken pending Zack's confirmation.**
-
-## Audit round 7 (2026-06-11, /notion-audit — full live re-verification)
-**0 fills** — all records verified complete against OG1.md + OD.md. No new fillable gaps found.
-
-**Live verification summary:**
-- Company record: complete (22 Construction Projects, 4 software, all properties + Address place + body)
-- 7 divisions: complete — Companies + Projects + People relations all set; Address (place) populated on all; Power & Energy has no People (genuinely sourceless — no named leader in dossier)
-- 15 people confirmed live (Ryan Oneglia ×2 dup still present — see Manual UI below; all others unique)
-- 3 events: complete (CCIA Place = Aqua Turf Club, Connecticut + Plantsville tags; AGC = Connecticut tag, Place genuinely sourceless; ENR = New England tag, Place TBA)
-- 4 memberships: all rows present, Companies relation set, bodies sourced
-- 17 locations: all present (original 12 + 4 OD.md Mason rows + 1 Building RI) — Adress text + Company relation on all; Division relation on 16/17 (HQ = company-only, correct)
-- 4 software rows: complete
-
-**No new gaps — Ryan Oneglia dup still outstanding (manual UI action required, see below).**
-
 ## Manual UI steps for Zack
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
 2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
 3. **Memberships "View of People" tab** — repoint leftover company filter to O&G or remove.
 4. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
 5. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
-6. **Ryan Oneglia dup** — delete `37b90644-d524-8182-9ac4-f95438c3c771` (no Division link, user_gray icon); keep `37b90644-d524-81c4-b7f1-d5883c8d67ab` (Division linked, 👤 icon).

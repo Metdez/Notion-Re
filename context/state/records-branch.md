@@ -84,58 +84,7 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
 3. Company Country → add **North Carolina** + **West Virginia** options (no option exists; not added via MCP to avoid full-list clobber).
 4. Possible template guide rows on local tables — UI delete if Zack wants them gone.
-5. ~~Events `Location tags` → add **Virginia** and **North Carolina** options via UI, then apply to DBIA Award row (NC) and Golf Tournament row (VA).~~ **RESOLVED** (verified 2026-06-11 audit: both event rows now have Location tags set — Golf Tournament = Virginia, DBIA Award = North Carolina).
+5. Events `Location tags` → add **Virginia** and **North Carolina** options via UI, then apply to DBIA Award row (NC) and Golf Tournament row (VA). Cannot do via MCP (shared schema, anti-clobber).
 
 ## Audit log — 2026-06-10
 **Audit pass completed.** Filled 6 batch-2 project Location tags (all → Virginia). Confirmed all other records complete. No new gaps found beyond what ledger already documented.
-
-## Audit log — 2026-06-11 (pass 1)
-**Automated hourly audit — no writes needed. Record is complete.**
-- Company record: all core properties filled (Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12]). ✓
-- Divisions (4): all → Company relation, Address/place, People, Projects set. ✓
-- People (7): all → Company relation, Function, Function Qualification, Location set. ✓
-- Projects (12): all have Location tag [Virginia]. ✓
-- Events (2): Location tags now confirmed set — Golf Tournament = Virginia, DBIA Award = North Carolina. ✓ (previously deferred, now resolved)
-- Memberships (4): ABC, AGC, DBIA, VTCA — all present, company relation + URL set. ✓
-- Locations (7): all 7 rows have Adress text + Companies full database relation; 6/7 have Division relation (HQ = corporate, no division row → correct). ✓
-- No new fillable gaps found. Outstanding manual UI items: Country add NC/WV options (item 3); template rows cleanup (item 4).
-
-## Audit log — 2026-06-11 (pass 5 — notion-audit skill)
-**0 fills — record fully complete.**
-- Company record (`26890644`): Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12] — all confirmed live. ✓
-- Divisions (4): Branch Civil spot-checked live — Company relation, Adress/place (3635 Peters Creek Rd, lat/lng), People [1], Projects [5] all set. ✓
-- People (7): Bob Wills spot-checked live — Company, Function, Function Qualification=[CEO], Location=[Virginia] all set. ✓
-- Projects (12): I-95 Express Lanes ($420M) spot-checked live — Contractors, Location=[Virginia], Adress/place w/ coords, Date (2019-04-18 → 2023-08-17), Status=Done, Type=Transportation, URL set. ✓
-- Events (2): Golf Tournament = Virginia tag + date 2026-06-08 + company-linked ✓ · DBIA Award = North Carolina tag + date 2026-04-28 + company-linked ✓.
-- Memberships (4): ABC (AQC + STEP Platinum), AGC (VA + Carolinas), DBIA (Southeast), VTCA — all company-linked + URL confirmed live. ✓
-- Locations (7): schema confirmed (Adress text, Companies full database, Division relations). ✓
-- No fillable gaps found. Outstanding manual UI (unchanged): Country NC/WV options (item 3); template row cleanup (item 4).
-
-## Audit log — 2026-06-11 (pass 4 — notion-audit skill)
-**0 fills — record fully complete.**
-- Company record (`26890644`): Description, Type, Size, BW Category, Country [5 states], Website, LinkedIn, Address/place, People [7], Construction Projects [12] — all confirmed. ✓
-- Divisions (4): Branch Civil, Branch Builds, Hopkins Lacy, Young & McQueen — all → Company relation, Adress/place, People, Projects confirmed. ✓
-- People (7): Bob Wills (CEO), Jason Hoyle (COO/VP), Brian Quinlan (President), Colin Robinson (EVP/VP), Berton Austin (EVP/VP), Wilber Chen (President), John Anglin (Director) — all → Company, Function, Function Qualification, Location confirmed. ✓
-- Projects (12): I-95 ($420M) spot-checked: Contractors, Location=[Virginia], Adress/place w/ coords, Date, Status, Type, URL — all set. ✓
-- Events (2): DBIA Award = Location tags=[North Carolina], company-linked ✓ · Golf Tournament = Location tags=[Virginia], company-linked ✓.
-- Memberships (4): ABC, AGC, DBIA, VTCA — all present, company-linked, URL set. ✓
-- Locations (7): schema confirmed — Adress (text), Companies full database, Division columns present. ✓
-- No fillable gaps found anywhere. Outstanding manual UI (unchanged): Country NC/WV options (item 3); template row cleanup (item 4).
-
-## Audit log — 2026-06-11 (pass 3 — notion-audit skill)
-**0 fills — record fully complete.**
-- Company record: all core properties confirmed filled. ✓
-- Divisions (4): all → Company, Adress/place, People, Projects relations confirmed. Hopkins Lacy has no Projects (correct — no standalone projects in dossier). ✓
-- People (7): all → Company, Function, Function Qualification, Location confirmed. Bob Wills = CEO · Jason Hoyle = COO/VP · Brian Quinlan = President · Colin Robinson = EVP/VP · Berton Austin = EVP/VP · Wilber Chen = President · John Anglin = Director. ✓
-- Projects (12): all confirmed with Contractors, Location tag, Adress/place, Date, Status, Type. ✓
-- Events (2): Golf Tournament = Virginia tag ✓ · DBIA Award = North Carolina tag ✓ · both company-linked ✓.
-- Memberships (4): ABC, AGC, DBIA, VTCA — all company-linked + URL confirmed. ✓
-- Locations (7): all 7 confirmed Adress text + Companies relation; 6/7 Division relation (HQ = corporate, no division — correct). ✓
-- No fillable gaps found. Outstanding manual UI: Country NC/WV options; template row cleanup.
-
-## Audit log — 2026-06-11 (pass 2 — notion-audit skill)
-**2 fills made.** Jason Hoyle and John Anglin were missing `Function Qualification`.
-- **Jason Hoyle** (`37b90644-d524-812e-b073-c254158982e6`) → Function Qualification = [Vice President]. Source: COO title per [virginiabusiness.com/branch-group-jason-hoyle-coo-promotion/](https://virginiabusiness.com/branch-group-jason-hoyle-coo-promotion/)
-- **John Anglin** (`37b90644-d524-81dc-a3d5-d04a5627763b`) → Function Qualification = [Director]. Source: regional director-level role per [branchgroup.com/contact/](https://www.branchgroup.com/contact/)
-- All other records confirmed complete: Company ✓ · Divisions (4) ✓ · People (7 — now all have Function Qualification) ✓ · Projects (12, all Location-tagged + Adress place filled) ✓ · Events (2, Location tags set) ✓ · Memberships (4, all company-linked + URL) ✓ · Locations (7, all Adress + company relation; 6/7 Division) ✓.
-- No new sourceless gaps found. Outstanding manual UI: Country NC/WV options; template row cleanup.

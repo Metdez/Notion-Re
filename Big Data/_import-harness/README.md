@@ -8,12 +8,15 @@ _import-harness/
 ├── README.md        ← this — how to dispatch, resume, monitor
 ├── BOARD.md         ← master status of all 18 batches (the coordinator's view)
 ├── agent-brief.md   ← the instructions ONE agent follows for ONE batch
+├── company-cache.md ← canonical GC string → Notion pageID map (+ machine copy _plan/company_ids.json)
 ├── excluded-not-in-notion.md  ← track record of contacts skipped (company not in Notion)
 └── ledgers/
     ├── batch-01.md  ← per-batch, per-file progress + resume cursor + log
     └── … batch-18.md
 ```
 Data lives next door in `Big Data/batch-01/ … batch-18/` (5 CSVs of 500 each).
+
+> **Registered in working memory:** this whole harness is indexed at [context/state/records-bulk-import.md](../../context/state/records-bulk-import.md) (the dedup ledger for the import), and from STATE/MAP/LOG. Update that spoke when the import's status changes.
 
 ## How it stays resumable ("inter-looping")
 - **One agent = one batch = one ledger.** No two agents ever write the same file → zero collisions, even all 18 at once.

@@ -1,18 +1,12 @@
 {
-  "phase": "resolve_companies",
-  "companies_needed": [
-    "kiewit",
-    "clayco",
-    "flatirondragados",
-    "og",
-    "dellbrook",
-    "branch",
-    "alberici",
-    "middlesex",
-    "cianbro",
-    "jingoli"
-  ],
-  "existing_people_fetched": 0,
+  "phase": "read_existing",
+  "existing_people_total": 3122,
+  "existing_people_fetched": 93,
+  "slices_done": [],
+  "slices_partial": {"slice_00": 42, "slice_01": 24, "slice_02": 27},
+  "candidates_total": 44613,
+  "candidates_internal_dupes": 0,
   "netnew_created": 0,
-  "notes": "Dedup-first chosen 2026-06-11. Single throttled worker. Reads existing people via company People-relation URLs, then batch-creates net-new."
+  "blocked": "2026-06-12: session has NO Notion access — claude.ai Notion connector not attached (no mcp__claude_ai_Notion__* tools), no local API token, claude.ai account shows zero MCP connectors and no GitHub connection for cloud routines. See CONTINUATION.md.",
+  "notes": "Dedup-first chosen 2026-06-11. Single throttled worker. Reads existing people via company People-relation URLs (slices/), extracts LinkedIn per person (linkedin/), then filters candidates.json and batch-creates net-new. 2026-06-12: verified all 44,613 candidates carry a UNIQUE normalized LinkedIn key (zero internal dupes) — LinkedIn URL is a complete dedup key for the whole set. Partial extraction merged into existing_linkedin_partial.json (93 people, 83 with LinkedIn)."
 }

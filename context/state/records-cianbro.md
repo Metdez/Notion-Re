@@ -30,7 +30,7 @@ Page-local data sources:
 **Market-sector units (6):** Building `37b90644-d524-81df-84b5-feb998399283` · Industrial & Manufacturing (IDM) `37b90644-d524-8179-8c77-de68c89f5e7f` · Infrastructure `37b90644-d524-813c-937d-d4d67a3126c4` · Power & Energy `37b90644-d524-8135-bd43-f74ddecc16bc` · Modular Manufacturing `37b90644-d524-81b3-815c-e111706b2a1c` · Support Services `37b90644-d524-81b4-80c3-e8b00a3504fa`
 **Subsidiaries/LLCs (7):** A/Z Corporation `37b90644-d524-81ce-8fb9-f4a2c6696a71` · Starcon International `37b90644-d524-817b-be15-fcfbe2f553f7` · R.C. Stevens `37b90644-d524-8122-b9f2-c730d2cc7eb1` · Total Specialty Services `37b90644-d524-81ae-ab16-fe9c285f0bc6` · CFCC `37b90644-d524-8145-8ae6-f4cd9db02fcc` · Cianbro Equipment LLC `37b90644-d524-81ee-9dc4-f71010315315` · Cianbro Constructors LLC `37b90644-d524-8156-895b-f20a3d06a52d`
 
-## People (13 — Company → company)
+## People (12 — Company → company)
 **Existing (linked to divisions, not recreated):** Daniel Wolfe `2b690644-d524-809e-b45f-f52997652248` (QC Mgr → Support Services) · Pete Malikowski `2b690644-d524-8043-9aa1-d75ed5e08c7d` (GM IDM → IDM).
 **Created (10):** Andi Vigue (CEO) `37b90644-d524-813a-91b4-d957be2bab25` · David Schill (VP Special Projects) `…8129-b82e-f08df3a950c3` · Paul Franceschi (SVP) `…81a6-9ada-e97df9d9be86` · Peter Cianchette (EVP Corp Dev) `…8193-82c5-c015e421983d` · Sarah Malikowski (EVP) `…8149-9c52-e8815e945166` · James Doherty (CFO) `…81ca-90b9-f354378f3a93` · Eve J Parent (Dir Contracts) `…812a-a6bf-cdbbe00a106a` · Perry Lorenz (Pres A/Z → A/Z) `37b90644-d524-816e-9004-e5456e6d7876` · Jordan Henshaw (Reg Mgr Infra → Infrastructure) `37b90644-d524-81c0-941a-e5ca4db73f2b` · Lauren Walsh (Env Mgr → Power & Energy) `37b90644-d524-81ee-bae5-ddb0479beb74`.
 - 7 execs (Vigue→Parent) sourced to the Strategy-record leadership table LinkedIns (Vigue via Mainebiz, no LinkedIn). Corporate execs = company-level (no division). Division leaders linked to their division row's People relation.
@@ -54,9 +54,7 @@ Page-local data sources:
 Company ↔ 24 Construction Projects ✓ · Company ↔ 12 People ✓ · Company → 7 Software ✓ · Division→Company (all 13) ✓ · Infrastructure → Henshaw + 14 projects ✓ · Power&Energy → Walsh + 2 · IDM → P.Malikowski + 2 · Building → 5 · A/Z → Lorenz + Portland HSC · Support Services → Wolfe ✓ · Project→Contractors + Owning Department (all 24) ✓ · Locations → Company (14) + Division (9) ✓ · Events/Memberships → Company ✓.
 
 ## Left empty (no sourced value — per dossier Caveats)
-EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates (year/month-only kept in body) · per-state license numbers · Cianbro revenue share of JV/program totals (WALK/PNSY/Western Maine are program totals) · company Address place (no lat/lng) · project Adress places (no lat/lng) · most new people Email/Phone (Vigue/Lorenz/Henshaw/Walsh also no LinkedIn) · SBBA long-form name (row exists, name expansion "Specialty Balance Beam Association" is fabricated — MWMCA source only lists the abbreviation).
-
-**Note on memberships:** as of 2026-06-11 audit, Notion Memberships DB contains ~25 rows covering all named associations from the dossier. The prior "~18 missing" gap was filled in a session after the initial 06-10 load (timestamps 23:18 UTC). All are linked to company.
+EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · division-level revenue/headcount splits · Maine SOS charter # · per-project parcel/APN/FEMA/seismic · exact NTP/substantial-completion dates (year/month-only kept in body) · per-state license numbers · Cianbro revenue share of JV/program totals (WALK/PNSY/Western Maine are program totals) · company Address place (no lat/lng) · project Adress places (no lat/lng) · most new people Email/Phone (Vigue/Lorenz/Henshaw/Walsh also no LinkedIn) · ~18 of the ~30 trade memberships.
 
 ## Audit fills (2026-06-10 — notion-audit run)
 - **Events DB `Location tags`:** 3 new options added (Las Vegas, Kissimmee, Maine) — all 9 original options preserved. Applied: ABC Craft Champs 2025 → Las Vegas · ConExpo 2026 → Las Vegas · ABC Craft Champs 2024 → Kissimmee · AGC Maine Build Maine Awards → Maine. ABC Top Performers left untagged (no location in source). Source: `Enlaye Notion/Cianbro/Cianbro.md`.
@@ -66,34 +64,6 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - Events `Date` not filled — no exact dates sourced in dossier for any events.
 - Events `Place` not filled — no lat/lng for event venues sourced.
 - Locations `Adress` (text): all 14 rows already populated from prior load session.
-
-## Audit fills (2026-06-11 — hourly /notion-audit cycle)
-- **0 new writes.** All sourced fields verified populated. Membership gap (~18 missing noted at load) was closed by a subsequent session; all ~25 MWMCA-named associations now present in Memberships DB.
-- **1 data quality flag (no destructive action taken):** SBBA row title reads "SBBA (Specialty Balance Beam Association)" — the full-name expansion is not found in any source; dossier and MWMCA profile only list the abbreviation "SBBA". Row and Company relation are correct; only the parenthetical expansion is unverified. Recommend Zack confirm the correct SBBA full name or rename to "SBBA" only.
-- **Verified complete:** company record · 13 divisions (all → Company + People + Projects) · 12 people (all → Company + Division) · 24 projects (all → Contractors + Owning Department) · 14 locations (all → Company + Division) · 5 events (4 location-tagged; ABC Top Performers untagged = no location in source ✓) · ~25 memberships (all → Company) · 7 software (all → Company) · 13 sources · full interlink graph intact.
-- **Genuinely sourceless (no data available, confirmed):** EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount splits · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · company/project Address place coords · people Email/Phone/LinkedIn (most).
-
-## Audit fills (2026-06-11 — notion-audit skill run)
-- **0 new writes.** Full re-verify: all 5 events live-fetched (tags confirmed — ABC Craft 2025 → Las Vegas ✓, ABC Craft 2024 → Kissimmee ✓, ConExpo 2026 → Las Vegas ✓, AGC Maine → Maine ✓, ABC Top Performers → untagged/no location in source ✓). All 25 membership rows present + Company relation confirmed on ABC spot-check. Infrastructure division body verified. WALK Bridge project body verified (complete depth). Andi Vigue people record verified (Company + Function + body ✓).
-- **1 address judgment confirmed:** Starcon `Adress` place property empty — Cianbro2.md gives Gonzales LA office address (lat 30.2241/lng -90.9201) but HQ is La Porte TX (no lat/lng); filling place with a secondary office address would be misleading. Left empty correctly. Body already lists both addresses.
-- **1 SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — expansion unverified. Recommend Zack confirm or rename to "SBBA".
-- **Sourceless gaps confirmed unchanged:** same list as prior audit run.
-
-## Audit fills (2026-06-11 — notion-audit pass 4, autonomous)
-- **0 new writes.** All sourced fields verified populated across full record set.
-- **Company Address place confirmed filled:** `place:Address` = Cianbro Corporation HQ / 101 Cianbro Square Pittsfield ME (lat 44.7831 / lng -69.3836) — ledger previously noted as empty; live fetch confirms it is populated. No gap.
-- **Events (5):** all tags and company relations confirmed live. ABC Craft 2025 → Las Vegas ✓ · ABC Craft 2024 → Kissimmee ✓ · ConExpo 2026 → Las Vegas ✓ · AGC Maine → Maine ✓ · ABC Top Performers → no location in source (untagged = correct) ✓.
-- **Memberships (24 rows):** all 24 MWMCA-sourced associations present and linked to company. Full list: ABC, AGC, AGC Maine, AIHA, AISC, ARTCA, BPA, BWI Business Partnership, CII, CFMA, CURT, DBIA, GBC, MD Chamber, MWII, MTBMA, NAWIC, NSPE, Propeller Club, SAME, SBBA, SMPS, TAPPI, ACI ✓.
-- **SBBA flag still open:** "SBBA (Specialty Balance Beam Association)" — full-name expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
-- **Genuinely sourceless (confirmed):** same list as prior runs — EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · project Adress place coords · most people Email/Phone/LinkedIn · Starcon Adress place.
-
-## Audit fills (2026-06-11 — notion-audit pass 5)
-- **1 new write:** Created People record **Pete Vigue** (Chair, The Cianbro Companies) `37c90644-d524-8103-8d17-dfeface077ca` — sourced to LinkedIn press post `https://www.linkedin.com/posts/cianbro-corporation_the-cianbro-companies-named-to-enrs-top-activity-7340469421796167680-ERZJ`. Company → Cianbro ✓. Function Qualification = President. Location = Maine. Body includes role + source link. Division = none (company-level role). **Total people: 13.**
-- **1 gap confirmed sourceless:** Richard Brescia (EVP) named in dossier `extra.leadership` with no source URL → left blank.
-- **25th project confirmed:** "Dry Dock 4 Refueling Complex, Norfolk Naval Shipyard (NNSY)" `37c90644-d524-811d-ac66-c3891e4bf982` — created after initial load, fully linked (Contractors → Cianbro, Owning Department → Infrastructure) ✓. Ledger now reflects 25 projects.
-- **Full re-verify:** company record ✓ · 13 divisions ✓ · 13 people (12 prior + Pete Vigue) ✓ · 25 projects (Contractors + Owning Department all set) ✓ · 14 locations (Company + Division relations) ✓ · 5 events (4 tagged, 1 correctly untagged) ✓ · 24 memberships (all → Company) ✓ · 7 software ✓ · 13 sources ✓.
-- **SBBA flag carried forward:** "SBBA (Specialty Balance Beam Association)" — expansion unverified in source. Recommend Zack confirm or rename to plain "SBBA".
-- **Genuinely sourceless (confirmed):** Richard Brescia (no source URL) · EMR/TRIR/DART · bonding/surety · insurance carriers · division revenue/headcount · charter # · APN/FEMA/seismic · exact NTP/completion dates · license #s · project Adress place coords (most) · most people Email/Phone/LinkedIn · Starcon Adress place · Pete Vigue LinkedIn URL (not in source).
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.

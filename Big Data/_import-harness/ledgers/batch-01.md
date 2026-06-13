@@ -1,5 +1,7 @@
 # Batch 01 — records 00001–02500 (2500 total)
 
+> **Harness:** [BOARD](../BOARD.md) · [README](../README.md) · [agent-brief](../agent-brief.md) · [company-cache](../company-cache.md) · [excluded](../excluded-not-in-notion.md) · registered in [records-bulk-import](../../../context/state/records-bulk-import.md)
+
 > One agent owns this batch. Update this file **after every record** — cursor, count, heartbeat.
 > If you are resuming: read **Resume cursor** below and continue from the next row. Never restart a file from the top.
 
@@ -7,7 +9,7 @@
 |---|---|
 | Agent | A01 |
 | Status | `in-progress` |   <!-- pending → in-progress → done -->
-| Heartbeat | 2026-06-10 19:20 |   <!-- timestamp of last record imported -->
+| Heartbeat | 2026-06-11 19:09 |   <!-- timestamp of last record imported -->
 | Source folder | `batch-01/` |
 | Records | 0 / 2500 |
 

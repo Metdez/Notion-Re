@@ -5,6 +5,8 @@
 > **Siblings:** [loop-and-dedup](loop-and-dedup.md) · [schemas](schemas.md) · [conventions](conventions.md) · [recipes](recipes.md) · [notion-mcp](notion-mcp.md)
 > **Related:** `replace_content` / nested-DB mechanics in [notion-mcp](notion-mcp.md); pages that host live DBs in [state/pages.md](../state/pages.md).
 
+> **Note:** §8 governs *structural* changes. **Every** write (create/update) must also pass the [Write Gate §12](write-gate.md) — identity, additive-only, distinct-entity, dedup. The two stack.
+
 ## 8. Pre-write safety protocol (run before any structural Notion change)
 1. **List operations:** before touching anything, write out every planned operation — property adds, view creates, relation links, etc.
 2. **Flag destructive steps:** bold any operation that could overwrite or delete existing data (`replace_content`, new databases, column removals).

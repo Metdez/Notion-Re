@@ -38,14 +38,13 @@ Page-local data sources on this page:
 | Transportation and Infrastructure | `37b90644-d524-812c-b46c-c159138e2c32` | — | I-20, I-10, 183 North, Nashville CONRAC |
 | Water | `37b90644-d524-819f-b471-c8448cb6155a` | Sam Reidy (founded 1950) | SLC, El Paso, Gilbert, Lake Dams |
 
-## People (4 — People DB; Company → `22b9…fb7`; division via Divisions.People back-link)
-Derived from sourced division-leadership announcements + dossier `extra.ceo_succession_2025`. Function Qualification=[President/CEO]. No email/phone/LinkedIn in dossier.
+## People (3 — People DB; Company → `22b9…fb7`; division via Divisions.People back-link)
+Derived from sourced division-leadership announcements (dossier has no people array). Function Qualification=[President]. No email/phone/LinkedIn in dossier.
 | Person | ID | Role | Division |
 |---|---|---|---|
 | Alex Charland | `37b90644-d524-81b8-9568-dadd126ff3a7` | President, Advanced Facilities Group (late 2024) | Advanced Facilities |
 | Chad Buck | `37b90644-d524-8160-afae-ddab7ddb12f1` | President, Building Group (2025) | Building Group |
 | Sam Reidy | `37b90644-d524-8102-b8df-c812366346f3` | President, Water & Wastewater Group (2024) | Water |
-| Cade Rowley | `37c90644-d524-8169-9f5b-cd6093d89651` | President & CEO (since Oct 1, 2024) | — (enterprise) |
 - **Pre-existing 15 Sundt People** (Feb-2026 import) left as-is on company record; not in dossier.
 
 ## Projects (18 — Construction Projects DB; Contractors → company; body brief+sources)
@@ -99,48 +98,3 @@ Full re-fetch of all records: company record, 8 divisions, 3 people, 18 projects
 - Profile page (`37b90644…3af`) body retains template instruction text — non-destructive rule; no `replace_content` permitted without explicit confirmation.
 - Genuinely sourceless blanks unchanged: place fields (no coords), division revenue/headcount, people email/phone/LinkedIn, DBIA event date, AGC event venue address, 5 project contract values.
 - **Result: 0 writes, 0 new gaps filled, 0 data corrupted. Record is complete per available dossier data.**
-
-## Audit — 2026-06-11 (third pass — automated hourly)
-Full re-fetch: company record, divisions (spot: Advanced Facilities, Building Group, Water), people (Charland, Reidy), projects (SLC Water), events (AGC, DBIA milestone), membership (DBIA), locations (Tempe HQ). Cross-referenced all `extra` dossier fields against live Notion body.
-- **Fillable gap found & filled:** `extra.ceo_succession_2025` — Cade Rowley (President & CEO, Oct 1, 2024) was absent from Notion. Created People record `37c90644-d524-8169-9f5b-cd6093d89651`; linked to company; added CEO + President Function Qualification. Source: [Construction Dive](https://www.constructiondive.com/news/sundt-new-president-coo-cade-rowley/729527/).
-- **Fillable gap filled:** Company body — added CEO, Water milestone ($9B / 60 plants), ENR trajectory bullets with sources (3 additional fact lines under Company Snapshot).
-- All 8 divisions, 18 projects, 2 events, 1 membership, 15 locations confirmed intact — no missing relations, no broken edges.
-- Genuinely sourceless blanks (unchanged): place fields (no coords/lat/lng), division revenue/headcount, people email/phone/LinkedIn, AGC event venue address, 5 project contract values.
-- Memberships complete per dossier: DBIA only (no other membership sourced).
-- **Result: 2 write operations, 1 new People record, 3 company-body facts added. No data corrupted.**
-
-## Audit — 2026-06-11 (fourth pass — /notion-audit Sundt)
-Full re-fetch of all 52 records: company record, 8 divisions, 4 people (Charland, Buck, Reidy, Rowley), 18 projects, 2 events, 1 membership, 15 locations, 3 software, 16 sources. Cross-referenced against full Sundt.md dossier including `extra` fields.
-- **Fillable gap found & filled:** AGC Construction Safety Excellence Award event body — `extra.safety_recognition` contained "first contractor in the award's history to win three times" which was absent from the Notion event body (body only had "third overall grand-prize win"). Added the historical-first detail. Source: [AGC](https://www.agc.org/news/2026/04/16/sundt-construction-tempe-arizona-named-nations-safest-construction-company-2025-national-con).
-- 3a Interconnection ✓: all edges intact. company→20 people/18 projects/3 software. 8 divisions→company+People+Projects. 15 locations→company+division. Events/membership/software→company.
-- 3b Description depth ✓: all division/project/people bodies confirmed at full dossier depth.
-- 3c Addresses ✓: all 15 location rows have full street addresses in `Adress` text. Company Adress place genuinely unfillable (no lat/lng; confirmed for 4th time). Project place empty per no-geocoding rule.
-- 3d Memberships ✓ (1/1): DBIA present, company-linked. Dossier has exactly 1 membership. Complete.
-- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless).
-- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · AGC/DBIA event venues · 5 project contract values · TRIR/EMR · bonding · permits/APN/FEMA.
-- **Result: 1 write (AGC event body enrichment). Record otherwise fully converged.**
-
-## Audit — 2026-06-11 (fifth pass — /notion-audit Sundt)
-Live re-fetch: company record (22b9…), profile page (37b9…3af), Advanced Facilities division, Building Group division, Cade Rowley (CEO), AGC event, DBIA membership, DBIA event, SLC Water project, Tempe HQ location. Cross-referenced against Sundt.md dossier.
-- **No new fillable gaps found.** All records confirmed intact from prior passes.
-- Company Country now shows Utah, New Mexico, North Carolina — previously flagged as manual-UI items, now confirmed filled.
-- Company record shows 20 People linked (15 pre-existing + 4 new from load + 1 additional `37c90644…08` — likely a near-duplicate of Cade Rowley from a different session; noted, non-destructive, no action taken).
-- 3a Interconnection ✓: company→20 people · 18 projects · 3 software. 8 divisions→company+people+projects. 15 locations→company. Events/membership→company.
-- 3b Description depth ✓: Advanced Facilities, Building Group confirmed with full sourced bodies. AGC event confirmed with historical-first detail.
-- 3c Addresses ✓: Tempe HQ `Adress` = "2620 S 55th St, Tempe, AZ 85282" confirmed. Company place (lat/lng) remains genuinely unfillable.
-- 3d Memberships ✓ (1/1): DBIA present with company relation. Complete per dossier.
-- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone = no location (sourceless — confirmed unchanged).
-- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
-- **Result: 0 writes. Record fully converged — no fillable gaps remain.**
-
-## Audit — 2026-06-11 (sixth pass — /notion-audit Sundt)
-Independent full audit: company record (22b9…), profile page (37b9…3af), all 8 divisions (spot: Advanced Facilities, Water, Renewables), 4 people (Cade Rowley confirmed; 20th People link `37c90644…08` = Kipp Amaker — NOT a duplicate of Rowley; prior audit false-positive corrected), AGC event, DBIA membership, DBIA event, SLC Water project, Apache Junction project, Tempe HQ, Salt Lake City, El Paso locations. Full dossier re-read (company · memberships · events · extra · gaps · all 15 locations · all 18 projects · all 8 divisions).
-- **No new fillable gaps found.** All records confirmed intact.
-- 3a Interconnection ✓: company→20 people · 18 projects · 3 software · 1 membership · 2 events. 8 divisions→company+People+Projects. 15 locations→company+Division. All edges intact.
-- 3b Description depth ✓: Advanced Facilities, Water, Renewables divisions confirmed with full sourced bodies. Projects (SLC Water, Apache Junction) confirmed with full project-brief, owner, scope, timeline, sources. Cade Rowley people record confirmed with role, dates, sourced body.
-- 3c Addresses ✓: Salt Lake City location `Adress` = "1970 N Redwood Rd, Salt Lake City, UT 84116" + Division link = Renewables. El Paso `Adress` = "909 Texas AVE, El Paso, TX 79901" + Division link = Water. All 15 location rows confirmed with street address in `Adress` text field. Company place (lat/lng) genuinely unfillable — no coords in dossier.
-- 3d Memberships ✓ (1/1): DBIA present with company relation and sourced body. Dossier has exactly 1 membership.
-- 3e Location tags ✓: AGC Award = [Arizona]. DBIA milestone no location (sourceless). All located records tagged.
-- False positive corrected: 20th People link (`37c90644-d524-810c-8027-f68b227ced08`) = Kipp Amaker (Project Executive, Phoenix area) — not a Rowley duplicate as prior audit noted; both are legitimate distinct Sundt people records.
-- Genuinely sourceless blanks (unchanged): place coords everywhere · division revenue/headcount (except Renewables >$700M in body) · people email/phone/LinkedIn · AGC/DBIA event venue addresses · 5 project contract values (rPlus, Data Center, APS, Hermosa, Apache Junction) · TRIR/EMR · bonding/surety · permits/APN/FEMA.
-- **Result: 0 writes. Record fully converged — no fillable gaps remain.**

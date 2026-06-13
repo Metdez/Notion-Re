@@ -1,5 +1,7 @@
 # Batch 07 — records 15001–17500 (2500 total)
 
+> **Harness:** [BOARD](../BOARD.md) · [README](../README.md) · [agent-brief](../agent-brief.md) · [company-cache](../company-cache.md) · [excluded](../excluded-not-in-notion.md) · registered in [records-bulk-import](../../../context/state/records-bulk-import.md)
+
 > One agent owns this batch. Update this file **after every record** — cursor, count, heartbeat.
 > If you are resuming: read **Resume cursor** below and continue from the next row. Never restart a file from the top.
 
@@ -7,12 +9,12 @@
 |---|---|
 | Agent | A07 |
 | Status | `in-progress` |   <!-- pending → in-progress → done -->
-| Heartbeat | 2026-06-10 19:31 |   <!-- timestamp of last record imported -->
+| Heartbeat | 2026-06-11 19:05 |   <!-- timestamp of last record imported -->
 | Source folder | `batch-07/` |
-| Records | 0 / 2500 |
+| Records | 200 / 2500 |
 
 ## Files
-- [ ] `records-15001-15500.csv` — 0/500 — cursor: row 0 — `pending`
+- [ ] `records-15001-15500.csv` — 200/500 — cursor: row 200 — `in-progress`
 - [ ] `records-15501-16000.csv` — 0/500 — cursor: row 0 — `pending`
 - [ ] `records-16001-16500.csv` — 0/500 — cursor: row 0 — `pending`
 - [ ] `records-16501-17000.csv` — 0/500 — cursor: row 0 — `pending`
@@ -30,8 +32,8 @@
 - _TODO resolve: Clayco, Zachry Group/Engineering, HITT Contracting, Sundt Construction, Alberici Constructors, Cianbro, Dellbrook | JKS, FlatironDragados, The Middlesex Corporation, O&G Industries_
 
 ## Resume cursor
-- Last imported: **none**
-- Next up: file `records-15001-15500.csv`, row **1**
+- Last imported: file `records-15001-15500.csv`, row **200** (Jake Wray)
+- Next up: file `records-15001-15500.csv`, row **201**
 
 ## Log  (append newest at the bottom; one line per ~25 records or per file)
-- _(empty — append `YYYY-MM-DD HH:MM · file · rows a–b · created X / updated Y / skipped Z`)_
+- 2026-06-11 19:05 · records-15001-15500.csv · rows 1–200 · RECONCILED: prior run (~14:23–14:49Z) imported rows 1–200 but died before writing this ledger. Verified by Notion probes (row 1 Elmer Denubo ✓, 50 ✓, 150 ✓, 200 Jake Wray ✓, 201 John Lavoie ✗, 205 ✗, 225 ✗, 300 ✗). Cursor set to row 201.

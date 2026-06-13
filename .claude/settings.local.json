@@ -1,4 +1,16 @@
 {
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'WRITE GATE ACTIVE — before ANY Notion write (create OR update), state & satisfy the 4 lines in context/playbook/write-gate.md: (1) identity confirmed vs LIVE Notion, (2) additive-only, (3) distinct-entity check, (4) dedup done. Never edit/overwrite a preexisting record. Wrong-entity loads are the #1 disaster.'"
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
       "Bash(ls ~/.claude/CLAUDE.md 2>/dev/null && echo \"exists\" || echo \"not found\")",
@@ -54,30 +66,7 @@
       "Bash(python3 -c ' *)",
       "Bash(git -C \"/Users/zackhanna/Desktop/Enlaye to Notion\" remote -v)",
       "Bash(git -C \"/Users/zackhanna/Desktop/Enlaye to Notion\" status --short)",
-      "Bash(git commit -m 'Update working memory: harness maintenance, Shawmut research, record ledgers *)",
-      "Bash(git checkout *)",
-      "Bash(GIT_EDITOR=true git rebase --continue)",
-      "Skill(loop)",
-      "Skill(loop:*)",
-      "Skill(schedule)",
-      "Skill(schedule:*)",
-      "mcp__claude_ai_Notion__notion-update-view",
-      "Bash(python3)",
-      "Bash(echo \"exit:$?\")",
-      "Bash(git version *)",
-      "Bash(git commit *)",
-      "Bash(git pull *)",
-      "Bash(git branch *)",
-      "Bash(rm -rf .git/rebase-merge)",
-      "Bash(git symbolic-ref *)",
-      "Bash(git update-ref *)",
-      "Bash(echo \"exit-grep:$?\")",
-      "Bash(rm -rf .git/rebase-merge .git/REBASE_HEAD; echo \"removed\"; echo \"===STATUS===\"; git status; echo \"===still ahead?===\"; git log --oneline -2)",
-      "Bash(git fetch *)",
-      "Bash(git rebase *)"
-    ],
-    "additionalDirectories": [
-      "/Users/zackhanna/Desktop/Enlaye to Notion/.git/rebase-merge"
+      "Bash(git commit -m 'Update working memory: harness maintenance, Shawmut research, record ledgers *)"
     ]
   }
 }

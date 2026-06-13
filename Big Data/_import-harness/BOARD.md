@@ -7,6 +7,8 @@ Master status for the parallel Notion import. **The fleet coordinator reads this
 - **Scope (2026-06-10):** import **44,639** contacts whose employer already exists in Notion; **skip 30** (company not in Notion) → tracked in [excluded-not-in-notion.md](excluded-not-in-notion.md). **Create zero new companies.**
 - **Targets:** People DB (one record per contact) + Company DB (relation, **link existing only**, dedup-first)
 - **Rule of the board:** a row here must match its ledger. If they disagree, the **ledger wins** (it's the per-record source of truth).
+- **Company resolution:** [company-cache.md](company-cache.md) (canonical) · registered in working memory at [records-bulk-import](../../context/state/records-bulk-import.md).
+- **⛔ 2026-06-12 — BLOCKED, resume point in [_plan/CONTINUATION.md](_plan/CONTINUATION.md):** the dedup-first pre-phase (`read_existing`, 93/3,122 existing people fetched) stalled because the session had **no Notion access** (connector not attached; cloud routines have no connectors/GitHub either). Candidates verified clean: 44,613 rows, all unique LinkedIn keys, zero internal dupes. Nothing imported yet — the table below is accurate.
 
 ## Status
 

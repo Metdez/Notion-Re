@@ -1,5 +1,7 @@
 # Batch 04 — records 07501–10000 (2500 total)
 
+> **Harness:** [BOARD](../BOARD.md) · [README](../README.md) · [agent-brief](../agent-brief.md) · [company-cache](../company-cache.md) · [excluded](../excluded-not-in-notion.md) · registered in [records-bulk-import](../../../context/state/records-bulk-import.md)
+
 > One agent owns this batch. Update this file **after every record** — cursor, count, heartbeat.
 > If you are resuming: read **Resume cursor** below and continue from the next row. Never restart a file from the top.
 
@@ -7,12 +9,12 @@
 |---|---|
 | Agent | A04 |
 | Status | `in-progress` |   <!-- pending → in-progress → done -->
-| Heartbeat | 2026-06-10 (resolving company cache) |   <!-- timestamp of last record imported -->
+| Heartbeat | 2026-06-11 19:03 |   <!-- timestamp of last record imported -->
 | Source folder | `batch-04/` |
-| Records | 0 / 2500 |
+| Records | 10 / 2500 |
 
 ## Files
-- [ ] `records-07501-08000.csv` — 0/500 — cursor: row 0 — `pending`
+- [ ] `records-07501-08000.csv` — 10/500 — cursor: row 10 — `in-progress`
 - [ ] `records-08001-08500.csv` — 0/500 — cursor: row 0 — `pending`
 - [ ] `records-08501-09000.csv` — 0/500 — cursor: row 0 — `pending`
 - [ ] `records-09001-09500.csv` — 0/500 — cursor: row 0 — `pending`
@@ -36,8 +38,8 @@
 - _(pending resolve: Sundt, Dellbrook|JKS, Zachry Group)_
 
 ## Resume cursor
-- Last imported: **none**
-- Next up: file `records-07501-08000.csv`, row **1**
+- Last imported: **`records-07501-08000.csv` row 10**
+- Next up: file `records-07501-08000.csv`, row **11**
 
 ## Log  (append newest at the bottom; one line per ~25 records or per file)
 - _(empty — append `YYYY-MM-DD HH:MM · file · rows a–b · created X / updated Y / skipped Z`)_

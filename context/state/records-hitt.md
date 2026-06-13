@@ -101,37 +101,6 @@ HITT2.md (JSON) and HITT3.md (JSON) now contain content (not 0 bytes as previous
 - **DEFERRED (shared schema):** Country options `North Carolina`, `New Mexico`, `South Carolina` not in Companies DB Country schema — cannot add options without risk to shared data. UI add needed.
 - **False positives rejected:** Addresses on divisions already populated from HITT1 load — HITT3 has some updated addresses (e.g., Dallas = Frisco TX, Houston = 9300 Bamboo Rd, LA = Culver City) but fields already filled → additive rule prevents overwrite. Verified Adress (place) values set on all 18 divisions.
 
-## Post-load audit #4 (2026-06-11, automated hourly cycle → /notion-audit)
-Parallel read-only audit: events, memberships, divisions (sample), locations, people (Aaron Martens, Peter Lanfranchi), projects (NASA JSC MACC).
-- **Fills (4):**
-  1. DBIA 2025 event `37b90644…81a2aeed` → `Adress` (place) = MGM Grand Las Vegas, 3799 S Las Vegas Blvd, NV 89109 (36.102, -115.169). Source: [HITT](https://www.hitt.com/leadership/jennifer-macks/)
-  2. DBIA 2025 event → `Date` end = **2025-11-07** (was start-only). Source: [HITT](https://www.hitt.com/leadership/jennifer-macks/)
-  3. CONEXPO 2026 event `37b90644…81b7a53c` → `Adress` (place) = Las Vegas Convention Center, 3150 Paradise Rd, NV 89109 (36.13, -115.152). Source: [ZoomInfo](https://www.zoominfo.com/c/hitt-contracting-inc/17842496)
-  4. CONEXPO 2026 event → `Date` end = **2026-03-07** (was start-only). Source: [ZoomInfo](https://www.zoominfo.com/c/hitt-contracting-inc/17842496)
-- **Verified correct (no change needed):** 7 memberships (all linked to HITT); 16 locations (all addresses + company + division linked); 18 divisions (Adress place + Companies + People/Projects set); all sampled projects filled; Aaron Martens + Peter Lanfranchi company-level people records intact.
-- **Left empty-for-cause (sourceless):** Construction Safety Week + Subcontractor Appreciation Day — no Adress, no Location tags, no end date (dossier: "National"/"offices nationwide"); NAIOP NoVA Awards — no date (dossier null).
-- **False positives rejected:** Division People/Projects empty for LA/SF/Santa Clara/Raleigh/Brycon = correct (no named contacts or projects in dossier for those offices).
-
-## Post-load audit #5 (2026-06-11, /notion-audit HITT Contracting)
-Full read-only pass vs HITT1.md on profile hub, company record, 18 divisions, 16 locations, 7 memberships, 5 events, 10 projects, 14 named people.
-- **Fills (2):**
-  1. HITT New Headquarters project `37b90644-d524-8115-8d66-c69befca1c22` → `Adress` (place) = 7125 West Falls Station Blvd, Falls Church, VA 22043 (38.864, -77.196). Source: [HITT](https://www.hitt.com/news-hub/hitt-contracting-unveils-new-hq/)
-  2. Andaz Miami Beach project `37b90644-d524-81bb-8ab9-fd6332569690` → `Date` start = 2025-01-01 (year of completion; no specific date in dossier). Source: [HITT](https://www.hitt.com/projects/andaz-miami-beach/)
-- **Verified clean (no write needed):** 5 events (DBIA/CONEXPO: Adress+Date+Location tags ✓; NAIOP: Location tags ✓; Safety Week/SubDay: sourceless OK); 7 memberships all Company-linked ✓; 18 divisions all Adress+Companies+People/Projects ✓; 16 locations all Adress(text)+Company+Division ✓; 10 projects all Contractors+Location+Type+Status ✓; 14 people all Company+Function+bio ✓.
-- **Left empty-for-cause:** 9 project `Adress` place fields (dossier city/state only, no street; place requires lat/lng, no-geocoding rule); Locations DB `Adress` = text type not place (schema — converting = destructive); Size=Regional conflict preserved; people LinkedIn/Email/Phone (none in dossier); NAIOP Adress (source: "Northern Virginia"); Safety Week/SubDay Adress/date (National = sourceless).
-
-## Post-load audit #6 (2026-06-11, /notion-audit HITT Contracting — description-depth 3b)
-Full pass vs HITT1.md + HITT2.md + HITT3.md. HITT3.md contains richer per-division data (office leaders, founding dates, headcounts, revenue) that had not been loaded in prior passes (Audit #3 only used HITT3 for company-level Country + Description fields, not individual division bodies).
-- **Fills (5) — division body enrichments:**
-  1. **Atlanta** `37b90644-d524-81d4-aacf-c3b65fecab69` body → added Ryan Bixler (EVP), Erik Kandler (SVP Interiors), Edward Miko (VP Mission Critical); founded 1998; ~180 staff; ~$900M delivered in 5 yrs; 30+ active projects. Source: [hitt.com/locations/atlanta-ga/](https://www.hitt.com/locations/atlanta-ga/)
-  2. **Houston** `37b90644-d524-8105-8f3d-e893dca323ee` body → added Paul Zimmerman (VP), Todd Hudson (VP); founded 2016 (Trademark Construction acquisition); ~200 staff. Source: [hitt.com/locations/houston-tx/](https://www.hitt.com/locations/houston-tx/)
-  3. **Dallas** `37b90644-d524-81eb-86b4-fe4aee0366d3` body → added Chris Jewell (VP Office Leader), Jon Duffey (SVP); founded 2008; ~200 staff; 75 active projects; noted address relocation to Frisco TX. Source: [hitt.com/locations/dallas-tx/](https://www.hitt.com/locations/dallas-tx/)
-  4. **Los Angeles** `37b90644-d524-8119-8463-d36103934558` body → added Trevor Coffey (EVP), Kavan Ranasinghe (VP Office Leader); ~75 staff; noted address relocation to Culver City CA. Source: [hitt.com/locations/los-angeles-ca/](https://www.hitt.com/locations/los-angeles-ca/)
-  5. **Raleigh** `37b90644-d524-81c3-bec2-d6534fca6ad3` body → added Sam Holbrook (VP & Office Leader); refined focus description. Source: [hitt.com/leadership/sam-holbrook/](https://www.hitt.com/leadership/sam-holbrook/)
-- **Deferred (not audit scope — needs /notion-load):** 10 net-new projects from HITT3.md (JCC Advanced Manufacturing $35M, Leidos HQ Reston VA, MedImmune $40M Gaithersburg MD, Inova Women's/Children's, Inova Fairfax PSB 5th Floor, Inova Perioperative, + others). Additional division leaders not yet in People DB: Brad Hunley (Government EVP), Josh VanScoy (Charleston VP), Rav Dhaliwal (Bay Area VP), Ryan Bixler, Erik Kandler, Edward Miko, Paul Zimmerman, Todd Hudson, Chris Jewell, Jon Duffey, Trevor Coffey, Kavan Ranasinghe, Sam Holbrook.
-- **False positives / non-fills:** division address fields already populated → HITT3 updated addresses (Dallas=Frisco TX, LA=Culver City) noted in bodies only, not overwritten (additive rule). 13 other divisions had sufficient bodies already.
-- **Verified clean:** 7 memberships ✓, 16 locations ✓, 5 events ✓, 10 projects ✓, 6 software ✓, all 20 people ✓.
-
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.

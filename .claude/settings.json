@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__notion__notion-search",
+      "mcp__notion__notion-fetch",
+      "mcp__notion__notion-get-users",
+      "mcp__notion__notion-get-teams",
+      "mcp__notion__notion-get-comments",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Get-Content *)"
+    ]
+  }
+}

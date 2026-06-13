@@ -111,22 +111,38 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 DUNS · EIN · CT/MD state entity IDs · numeric EMR/TRIR/DART · surety provider · insurance carriers · division-level revenue/headcount · FPDS PIIDs/obligation amounts · MBE/WBE/8(a) certs (none — merit-shop).
 Event `place:Place` on Golf Tournament + CBC events — dossier gives only "Connecticut" (no venue address).
 
-## Audit (2026-06-11 — hourly cycle)
-**Result: No fills needed. Record fully up to date.**
-Verified live: company record, 3 divisions, 14+ projects, 6 memberships, 4 events. All fields that have sourced data are already populated. No new gaps found vs. 2026-06-10 state. Genuinely sourceless fields remain empty (see above).
+---
 
-## Audit (2026-06-11 — notion-audit skill pass)
-**3 location tag fills applied (3e — city-level tags missing):**
-| Project | ID | Tag added |
-|---|---|---|
-| The August at Steelpointe Harbor | 37b90644-d524-814c | + Bridgeport |
-| Residence Inn by Marriott (Steelpointe Harbor) | 37b90644-d524-81e4 | + Bridgeport |
-| UConn Health Emergency Department Expansion | 37b90644-d524-8120 | + Farmington |
+## Audit pass #6 (2026-06-12 — notion-audit skill, KBE2.md additional_federal_awards)
 
-**Schema change:** Added "Bridgeport" and "Farmington" as new options to Construction Projects `Location` multi-select (additive, all existing options preserved). Source: dossier city-level project locations.
+**Ground truth used:** `KBE2.md` — `additional_federal_awards` section (2 projects absent from all prior dossiers + loads).
 
-All other records verified: company, 3 divisions, 6 memberships, 7 events, all remaining projects — no further gaps found. Genuinely sourceless fields remain empty (see above).
+### Findings
+- **All 36 KBE2.md projects** verified present in Notion EXCEPT the 2 below — systematically searched by name; confirmed absent before creating.
+- **11 memberships** in Notion: ABC-CT · ABC Metro Washington · ABC Baltimore/Chesapeake · Arizona Builders Alliance · CBC · Stamford Chamber · ABC-CT EIC Awards (event) · Women in Construction (pre-existing event) — matches all sourced memberships; DBIA/USGBC/AGC national explicitly "not fully confirmed" in KBE2.md → NOT added (genuinely sourceless).
+- **4 software rows** confirmed: Procore · Sage 300 CRE · On-Screen Takeoff · iSqFt — all linked to KBE; matches KBE2.md confirmed stack.
+- **Company record, 3 divisions, 9+ events, interconnection graph** — verified clean.
 
-## Audit (2026-06-11 — notion-audit skill pass #2)
-**Result: No fills needed. Record fully up to date.**
-Verified live (parallel fetches): company record (`1cf90644`) — all properties populated (Description, Type, Country ×7, Address place, BW Category, LinkedIn, Website, 19 Construction Projects linked, body complete). 3 divisions (NE/MA/West) — all linked to company, People, Projects; Adress place filled on all 3; bodies complete. 7 net-new projects + 12 pre-existing — Adress place filled on all checked; Location multi-select tags applied (Bridgeport+Farmington confirmed from prior pass); bodies sourced and complete. 6 memberships confirmed in live Memberships DB (ABC-CT, ABC Metro Washington, ABC Baltimore/Chesapeake, Arizona Builders Alliance, CBC, Stamford Chamber). 4 events confirmed (KBE Annual Golf Tournament + CBC Project Team Awards + 2 pre-existing). Locations table schema is text-only (no place/relation fields; accepted per prior notes). No fillable gaps identified. Genuinely sourceless fields remain empty (see §Left empty above).
+### 2 net-new projects created
+Both from KBE2.md `additional_federal_awards`; both linked Contractors→KBE, Zack Database→KBE Northeast; Adress place filled with coords; sourced body.
+
+| Project | ID | Location | Value | Source |
+|---|---|---|---|---|
+| Naval Submarine Base Commissary (Groton) | 37d90644-d524-81d1-8ff6-cdd252308cfe | Groton, CT 06340 (41.3535/-72.0887) | $14.5M | kbebuilding.com/portfolio-cat/government/ |
+| Armed Forces Reserve Center (Middletown, CT) | 37d90644-d524-81a6-94e7-e8dba20bb68b | Middletown, CT 06457 (41.5623/-72.6506) | Design-Build | kbebuilding.com/portfolio-cat/government/ + awards-recognition |
+
+### Company record update
+- `1cf90644-d524-802a` `Construction Projects` relation updated **43 → 45 URLs** (full list re-passed with both new project URLs appended; additive replace).
+
+### New data-quality issues (not auto-fixed — non-destructive rule)
+- **Station House Greenwich duplicate ×3:** `37c90644…` (rich) + `37d90644…81b5` + `37d90644…816b` (2 thin copies from prior sessions). Recommend Zack trash the 2 thin copies.
+- **SoNo Collection duplicate ×3:** similar pattern — rich copy + 2 thin copies from prior sessions. Recommend Zack trash 2 thin copies.
+- **Choate Rosemary Hall Pedestrian Bridge** `37d90644…` — still DELETED (in trash). Recommend Zack restore if the project should remain.
+
+### Persisting data-quality issues (unchanged)
+- Mozaic duplicate: `37790644-d524-814b` + `37790644-d524-81d1` — same Stamford project.
+- "Bridgeport" stray division row `37690644-d524-8010` — satellite stub; pre-existing.
+- 3 trashed/mislabeled Mid-Atlantic rows under TEMPLATE — left as-is.
+
+### Genuinely sourceless (confirmed, no write)
+EMR/TRIR/DART · surety provider · insurance carriers · DUNS/EIN/state IDs · FPDS PIIDs · Golf Tournament + CBC Project Team Awards venue addresses · DBIA/USGBC/AGC national memberships (unconfirmed in KBE2.md).

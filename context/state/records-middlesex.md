@@ -122,88 +122,33 @@ All corporate → homed to **Northeast Region** (Littleton HQ) division per exis
 
 ---
 
-## Audit — 2026-06-11 (automated hourly cycle)
-**Result: NO WRITES NEEDED. Record is complete against all sourced dossier data.**
+## Audit — 2026-06-12 (notion-audit skill pass — Middlesex TEMPLATE page, current session)
+**Target:** Middlesex TEMPLATE page `37b90644-d524-80b2-b047-ef5e4b3a576a`
+**Result: 4 body-text counter fills. All structural checks PASS.**
 
-**Checks performed (all PASS):**
-- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)✓ · Asphalt/MassReady→Company only (no sourced people/projects) · Locations(4)→Company+Division✓ · Events(4)→Company✓ · Memberships(4)→Company✓ · Software(7)→Company✓
-- **3b Description depth:** All division bodies contain focus/leader/footprint/founded/notable-projects per dossier. Company Snapshot complete. Project bodies contain what-it-is/scope/owner/delivery/JV/timeline per available source data.
-- **3c Address/location:** Company Address place set (1 Spectacle Pond Rd, Littleton MA) ✓ · NE/SE/Paving division Adress place set ✓ · Mass Ready Mix + Asphalt LLC address = genuinely sourceless (dossier: "exact address not public") · All 4 Location rows have text Adress filled ✓ · Project Adress place set on sampled records (South Coast Rail, PNSY) ✓
-- **3d Memberships:** All 4 sourced memberships present — CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓ — each with company relation and source URL in body.
-- **3e Location tags:** Events all tagged — FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA Awards=Connecticut ✓ · Golf=Massachusetts ✓. (Florida + Massachusetts options were added in prior session; confirmed present in schema.)
+**Context note:** "Middlesex TEMPLATE" is confirmed as the operational Middlesex profile page (cosmetic template name from page clone, same pattern as Shawmut TEMPLATE and Dellbrook JKS TEMPLATE). The operational hub page `37b90644d5248003baf7e3d038b7c037` ("The Middlesex Corp") had its counts updated by a prior session; the TEMPLATE page body retained the stale counts until this pass.
 
-**Genuinely sourceless (unchanged from prior session):** People LinkedIn (Whiteman, Bennett, Hebert) · People email/phone · FTBA event specific date · Events Place/venue coords · Mass Ready Mix address · Paving LLC Projects relation · division revenue/headcount · most project APN/bond/FEMA/seismic · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon).
+**Filled (verified post-write on TEMPLATE page `37b90644d52480b2b047ef5e4b3a576a`):**
+- Company Map section: "4 divisions" → **"8 divisions"** (Middlesex Asphalt LLC · Corridor Mining · Energy Division · Rail/Transit Division added; src: https://middlesexco.com/who-we-are/overview-history/)
+- Projects Underway section: "21 projects linked" → **"24 projects linked"** (+SR-429, OIA GMP 5S.2, Basiliere Bridge; src: https://middlesexco.com/projects/)
+- Key People section: "18 people linked" → **"30 people linked"** (src: https://middlesexco.com/who-we-are/leadership/)
+- Existing Software section: "7 tools" → **"8 tools"** + added Virtual Shift Tickets/VST (field reporting) to list (src: https://jobs.ourcareerpages.com/job/990386)
 
-**Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB — Middlesex page-local Company Map divisions can't link there.
-
----
-
-## Audit — 2026-06-11 (manual full audit pass)
-**Result: 6 fields filled across 2 records; 5 icons fixed.**
-
-**Filled (verified post-write):**
-- **PNSY Dry Dock** `37b90644…cbb9b` — `Location` corrected New Hampshire→**Maine** (Kittery ME is in Maine, not NH) · `userDefined:URL` set → https://middlesexco.com/projects/p-381-multi-mission-dry-dock-1/ · `date:Date:start` = 2021-08-13 · `date:Date:end` = 2028-12-31 · body location line updated to "Kittery, ME (Portsmouth Naval Shipyard)". All sourced: https://middlesexco.com/projects/p-381-multi-mission-dry-dock-1/
-- **People icons** (placeholder `/icons/user_gray` → emoji): Seth Whiteman 🧭 · Kevin Bennett 🌴 · Michael Iapaluccio 🛣️ · Jonathan Hebert 📡. Confirmed live on re-fetch.
-
-**False positives rejected:**
-- Brightman Street Bridge JV partners — dossier `joint_venture_partners:[]` (empty); brief says "largest JV" but no partner named. Sourceless.
-- I-75 Overpass contract value/dates — all `null` in dossier. Sourceless.
-- Brightline Zone 2 contract value — `null` in dossier. Sourceless.
-- Events Place (4 events) — no venue coordinates in dossier. Sourceless.
-- FTBA Annual Conference date — no specific date in dossier. Sourceless.
-- LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) — not in dossier. Sourceless.
-- Function Qualification (4 field-ops people) — not in dossier. Sourceless.
-- Asphalt LLC / Mass Ready Mix leader/address — not in dossier. Sourceless.
-
-**3a Interconnection:** All confirmed clean (same as prior pass). No new missing edges found.
-**3b Description depth:** Project bodies are appropriately thin where source data was thin (I-75 Overpass, Brightline Zone 2 — no contract value or dates sourced).
-**3c Address/location:** PNSY location tag corrected to Maine ✓. All other project addresses confirmed set.
-**3d Memberships:** All 4 still present and complete. No new memberships found in dossier.
-**3e Location tags:** All 4 events tagged (Florida/Florida/Connecticut/Massachusetts). No change needed.
-
----
-
-## Audit — 2026-06-11 (automated notion-audit skill pass)
-**Result: 1 fill — company record icon updated; all other fields confirmed complete.**
-
-**Filled (verified post-write):**
-- **Company record** `1ce90644-d524-809e-ab40-e6e6c0a21c76` — icon upgraded from grey placeholder attachment → 🏗️ emoji (per CLAUDE.md icon rule).
+**Current live state (post-write):**
+- Divisions DB: 8 divisions total (NE · SE · Paving · Mass Ready Mix · Asphalt LLC · Corridor Mining · Energy · Rail/Transit) → all → Company ✓
+- Projects: 24 linked to Middlesex as contractor ✓
+- People: 30 linked to Middlesex company ✓
+- Software: 8 tools (Companies Software DB) ✓
+- Events: 6 (on operational page; TEMPLATE Events DB view filtered to placeholder — by design) ✓
+- Memberships: 5 (CCIA · ABC · DBIA-FL · FTBA · NSC) — body-only on TEMPLATE page ✓
+- TEMPLATE Locations DB: 8 rows (1 TEMPLATE placeholder + 7 real: Littleton HQ · Meriden CT · Orlando HQ · Tampa · Mass Ready Mix Plant · Orlando Asphalt Plant · Sparta Quarry) — all Adress text filled ✓
 
 **All checks PASS:**
-- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Company→Software(7)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)+Adress place✓ · Events(4)→Company+Location tags✓ · Memberships(4)→Company✓
-- **3b Description depth:** All division bodies confirmed full (focus/leader/footprint/founded/notable projects) · Company Snapshot complete · PNSY body complete with JV/scope/dates.
-- **3c Addresses:** Company Adress place set ✓ · NE/SE/Paving division Adress place set ✓ · Mass Ready Mix + Asphalt LLC genuinely sourceless · 4 Location rows Adress text filled ✓ · Project Adress place confirmed set on sampled records ✓
-- **3d Memberships:** All 4 present — CCIA ✓ · ABC ✓ · DBIA-FL ✓ · FTBA ✓ — each with company relation and source URL.
-- **3e Location tags:** All 4 events tagged — FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓
+- **3a Interconnection:** TEMPLATE Divisions DB uses shared Company Map collection (filtered view to TEMPLATE placeholder row by design — all real divisions visible on operational page) ✓ · TEMPLATE Locations DB 7 real rows confirmed ✓
+- **3b Description depth:** TEMPLATE body fully sourced — Company Map (8 divs), Events (6), Locations (7), Projects (24), Memberships (5), Key People (30), Software (8), Attack Plan complete ✓
+- **3c Addresses:** TEMPLATE Locations DB all 7 rows have Adress text ✓ · TEMPLATE page-local Locations schema = text (not place type) — consistent across all rows
+- **3d Memberships:** Body lists 5 — CCIA ✓ · FTBA ✓ · DBIA-FL ✓ · ABC ✓ · NSC ✓
+- **3e Location tags:** TEMPLATE Events DB has no real rows (filtered view design) — n/a
 
-**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · Event Place/venue coords · FTBA exact date · Mass Ready Mix/Asphalt LLC leader+address · division revenue/headcount · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier) · project APN/bond/FEMA/seismic.
-**Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB.
-
----
-
-## Audit — 2026-06-11 (notion-audit skill pass #3 — manual)
-**Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows re-confirmed from prior pass — now escalated to open-tasks for Zack deletion.**
-
-Checks performed — all PASS:
-- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Company→Software(7)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)+Adress place✓ · Events(4)→Company+Location tags✓ · Memberships→Company✓ · Location rows(4)→Company+Division✓
-- **3b Description depth:** All division bodies full ✓ · Company Snapshot complete ✓ · Project bodies (South Coast Rail, NE Region division) verified full ✓
-- **3c Addresses:** Company place ✓ · NE/SE/Paving division Adress place ✓ · 4 Location rows Adress text ✓ · Mass Ready Mix/Asphalt LLC = genuinely sourceless
-- **3d Memberships:** All 4 sourced memberships present (CCIA `37b…1f4e`, ABC `37b…9358`, DBIA-FL `37b…5678`, FTBA `37b…7ced`) ✓ · ⚠ CCIA/DBIA-FL/FTBA each have a duplicate `37c90644` row (created 06-11 09:15 by automated pass) → logged to open-tasks for Zack to delete.
-- **3e Location tags:** FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓
-
-**No writes made — record is complete against all sourced dossier data. Dossier has 28 projects total; 21 loaded (7 are older repeat/on-call items not separately recorded); dossier counts confirmed via parse.**
-
----
-
-## Audit — 2026-06-11 (notion-audit skill pass #2 — manual)
-**Result: NO WRITES (no fillable data gaps found). ⚠ 3 duplicate membership rows detected — flagged, not deleted (additive-only policy).**
-
-**All checks PASS:**
-- **3a Interconnection:** Company→People(18)✓ · Company→Projects(21)✓ · Company→Owners(9)✓ · Company→Software(7)✓ · Divisions(5)→Company✓ · NE Region→People(12)+Projects(14)✓ · SE Region→People(1)+Projects(7)✓ · Paving→People(1)✓ · Events(4)→Company+Location tags✓ · Memberships→Company✓ · Location rows(4)→Company+Division✓
-- **3b Description depth:** All division bodies full ✓ · Company Snapshot complete ✓ · Project bodies appropriate to available source data ✓
-- **3c Addresses:** Company place ✓ · NE/SE/Paving division Adress place ✓ · 4 Location rows Adress text ✓ · Mass Ready Mix/Asphalt LLC = genuinely sourceless (no address in dossier)
-- **3d Memberships:** All 4 sourced memberships present. ⚠ CCIA · DBIA-FL · FTBA each have DUPLICATE rows (created by automated pass on 2026-06-11 09:15). Originals: `37b90644…1f4e` / `…5678` / `…7ced`. Duplicates: `37c90644…b2a1` / `…d97b` / `…4612`. ABC has no duplicate. **Deletion is a destructive operation — flag for Zack to manually remove the `37c90644…` duplicates in Notion UI.**
-- **3e Location tags:** All 4 events tagged — FTBA=Florida ✓ · DBIA-FL=Florida ✓ · CCIA=Connecticut ✓ · Golf=Massachusetts ✓
-
-**Genuinely sourceless (unchanged):** People LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · People email/phone · Event Place/venue coords · FTBA exact date · Mass Ready Mix/Asphalt LLC leader+address · division revenue/headcount · several project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier) · project APN/bond/FEMA/seismic.
-**Structural deferred (unchanged):** People→Division relation points to global KBE-only Divisions DB.
+**Genuinely sourceless (unchanged):** Energy/Rail-Transit division leader+address · Mass Ready Mix/Asphalt LLC division leader · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
+**Structural deferred (unchanged):** People→Division → global KBE-only Divisions DB (structural impossibility; Middlesex divisions are page-local) · dup Orlando location `37c90644-d524-8138-a94d-fe1e0e886ff1` (blank body) · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows — Zack deletion required.
