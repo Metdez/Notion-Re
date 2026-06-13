@@ -215,6 +215,31 @@ These are new dossier source data — outside the scope of an audit (audit fills
 - **Ticonic Bridge Status** = "Done" in Notion but Cianbro3.md says "active, completion spring 2027" — Status field not overwritten (additive-only rule; body note added).
 - **Canopy Hotel Owning Department** = Infrastructure in Notion but Cianbro3.md says A/Z Corporation — not overwritten (body note added).
 
+## Audit fills (2026-06-13 — notion-audit run #9)
+**State as of 2026-06-13 (live re-fetch + 3 URL fills + 3 body enrichments):**
+
+### What was filled (6 writes across 3 records)
+- **North Hero-Grand Isle Drawbridge `userDefined:URL`** → `https://www.cianbro.com/projectdetail/621` (was empty). Source: Cianbro3.md.
+- **North Hero-Grand Isle Drawbridge body** → enriched: Bridge 8 detail (double-leaf bascule, Route 2 over Lake Champlain, only movable bridge in VT), replaced on new foundation with same aesthetic as 1937 structure, completed end 2023. Source: Cianbro3.md.
+- **US Naval Academy Farragut Field Seawall `userDefined:URL`** → `https://www.cianbro.com/news/safeguarding-a-historic-naval-academy` (was empty). Source: Cianbro3.md.
+- **US Naval Academy Farragut Field Seawall body** → enriched: scope includes Santee Basin + Brown Park; barge crane work; ribbon cutting Aug 2024; USASpending contract N4008022C0011; start date 2022-09-16. Source: Cianbro3.md.
+- **Founders Hall Modernization (MCI) `userDefined:URL`** → `https://www.cianbro.com/projectdetail/1043` (was empty). Source: Cianbro3.md.
+- **Founders Hall Modernization (MCI) body** → enriched: MCI semi-private high school context, 1868 Italianate building heart of 23-acre campus, 18-mo project spring 2021–end 2022, delivered by A/Z Corporation. Source: Cianbro3.md.
+
+### Verified empty + genuinely sourceless (no fill possible from dossiers)
+- **Bangor I-95 Bridge Replacements `userDefined:URL`** — empty; no direct project page URL in Cianbro.md or Cianbro3.md (only MaineDOT as generic source). Left empty.
+- **Southport Swing Bridge `userDefined:URL`** — empty; not in Cianbro3.md project list; Cianbro.md has no direct project URL. Left empty.
+- **Maine Veterans' Homes Scarborough `userDefined:URL`** — empty; no direct URL in either dossier. Left empty.
+
+### Already complete (verified this run)
+- All prior fills from runs #1–#8 confirmed still in Notion ✓
+- Canopy Hotel URL `https://www.cianbro.com/projectdetail/890` ✓ (filled run #8)
+- Ticonic Bridge URL + body ✓ (filled run #8)
+- Portland HSC URL ✓ (filled run #8)
+- Veranda Street URL ✓ (filled run #8)
+- All 24 Memberships → Company ✓; 6 Events with dates/tags ✓; 13 Divisions → Company ✓; all addresses filled ✓
+- Company Address place (44.7831/-69.3836) ✓
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).
