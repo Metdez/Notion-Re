@@ -128,7 +128,18 @@ Full re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 membe
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
 - **No new fills. Nothing fillable was missed.**
 
+## Post-load audit #7 (2026-06-13, /notion-audit vs HITT4.md — new dossier registered)
+New dossier `HITT4.md` (133KB, run_date 2026-06-12, 7 projects, 38 sources) appeared on disk. Full comparison of HITT4 vs. all live records.
+- **3 fills (all verified live):**
+  1. Boeing SC 787 body → +LEED Silver, +395 acres, +6.2M construction hours. Source: HITT LinkedIn post.
+  2. HITT New HQ body → +LEED Platinum + WELL targets, +100k sf solar canopy, +40k sf VT lab, +55k sf urban parks. Source: New England Construction News.
+  3. Andaz Miami Beach body → +groundbreaking Mar 25 2024, +18-month schedule, +ABC Florida East Coast Excellence Eagle Award (2025). Source: HITT project page.
+- **Duplicate flagged (UI):** Megan Lantz — 2 People records: `37d90644…8116acdc` (06-12, richer body, no LinkedIn) and `37c90644…81f4988e` (06-11, LinkedIn present, from Apollo CSV). Non-destructive rule → not deleted. Zack to merge/delete in UI.
+- **Verified clean:** 14 software rows (incl. FARO Scene, Synchro, EC3, TradeTapp, Pype, e4Clicks — all present); 5 events; 9 memberships; 18 divisions; 16 locations; John Kane + Brett Hitt + Megan Lantz (dup noted) all in People.
+- **HITT4 not loaded:** DBIA webinar (Feb 2026 virtual — low-confidence Facebook source); revenue trend table (body already has figures); safety programs, federal contracts (JMACC project covers it); divisional structure (0 divisions in HITT4; Notion's 18 are correct from HITT1).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
 3. **Memberships-note People view** → re-point hardcoded company filter to HITT.
+4. **Megan Lantz dup** → merge `37c90644…81f4988e` LinkedIn into `37d90644…8116acdc`, then delete the 06-11 record (Apollo CSV origin).

@@ -157,3 +157,21 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3b check:** All project and department bodies complete; no thin bodies where source has more detail.
 **3d memberships:** N/A — no memberships table on Harvard Owner record.
 **3e location tags:** All projects tagged `["Massachusetts"]`. ✓
+
+## Audit log — 2026-06-13 (fourth pass / notion-audit skill run)
+**Fill: 0** — Cleanest pass to date. 4 parallel sub-agents audited all 15 projects + 11 GCs + 6 key people. Every gap cross-referenced against both Harvard dossiers and confirmed sourceless.
+
+**All gaps are sourceless — by category:**
+
+*Projects (15 records):* Contract values on ART/Eliot/Palmer/WJH/Barker/ESL/Lewis/Gund/Steam Tunnel → all dossier-marked `[NOT DISCLOSED]` or `null`. Start/End dates on ESL and Lewis → dossier `null`. Contractors on ESL/Barker/Steam Tunnel → "GC not publicly disclosed" in dossier. People relation on Barker/Palmer/HBS Chase/Steam Tunnel → no Harvard PMs named in dossier for these.
+
+*GC companies (11 records):* Companies DB has no Address/place property column for GC records — schema gap, not a value gap; adding = structural change, not pre-authorized. BOND `Construction Projects` relation empty — Blackstone Steam Plant not in Projects DB (completed); Steam Tunnel 29/30 GC undisclosed. BOND body sections empty — dossier has `revenue: null`, `employees: null`, `hq_address: null`. Suffolk `Website` wrong (`suffolktech.com/boost/`) — correct URL not in Harvard dossier. Smoot/G.Greene/Janey/IC&E/J&J `LinkedIn` or `Website` blank — no data in either dossier.
+
+*People (26 records):* Jennifer Cohen, Rich LeBlanc, Tom O'Connor Email/Phone/LinkedIn → all explicitly `null` in dossier. Purnima Kapur Phone/LinkedIn → `null` in dossier. Edward LeFlore LinkedIn → `null` in dossier. Harvard Owner `LinkedIn` → no URL in either dossier.
+
+**False positives rejected:** Suffolk `Size` reported missing → live shows `Mutlinational` (already set). ESL/Lewis "Start Date EMPTY" → dates are `null` in dossier. "Address not present" on GC records → Companies DB has no Address column for GC records (schema gap).
+
+**3a check:** All owner↔department↔project edges intact across all 15 projects and 26+ people. ✓
+**3b check:** All project and department bodies complete per dossier depth. ✓
+**3d memberships:** N/A — no memberships table on Harvard Owner. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓

@@ -14,7 +14,7 @@
 | Dellbrook \| JKS | `Enlaye Notion/DellbrrokJKS/Dell 1.md` | ✅ 2026-06-10 | [records-dellbrook](records-dellbrook.md) |
 | O&G Industries | `Enlaye Notion/O&G/OG1.md` | ✅ 2026-06-10 | [records-og](records-og.md) |
 | Fontaine Bros. | `Enlaye Notion/Fontaine Bros/Font1.md` (1st) · `Fontaine.md` (2nd-pass, 16 proj → +6 net-new) | ✅ 2026-06-10 (both passes) | [records-fontaine](records-fontaine.md) |
-| HITT Contracting | `Enlaye Notion/HITT/HITT1.md` (HITT2.md empty) | ✅ 2026-06-10 | [records-hitt](records-hitt.md) |
+| HITT Contracting | `Enlaye Notion/HITT/HITT1.md` (primary) · `HITT4.md` (2nd-pass, 2026-06-12, 7 projects, 38 sources) | ✅ 2026-06-10 (HITT1) · ✅ 2026-06-13 (HITT4 audit pass #7) | [records-hitt](records-hitt.md) |
 | Jingoli Nuclear Services | `Enlaye Notion/Jingoli/Jingoli.md` | ✅ 2026-06-10 | [records-jingoli](records-jingoli.md) |
 | Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) | ✅ 2026-06-10 | [records-cianbro](records-cianbro.md) |
 | Bechtel Group | `Enlaye Notion/Bechtel Group/Bechtel2.md` (primary) · `Bechtel1.md` (mapped) | ✅ 2026-06-10 | [records-bechtel](records-bechtel.md) |
