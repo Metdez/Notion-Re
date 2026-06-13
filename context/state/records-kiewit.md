@@ -301,3 +301,24 @@ Sources: https://www.kiewit.com/locations/
 - "Mutlinational" size typo — pre-existing select option name; correct per DB schema; not a fillable gap
 
 **0 writes made.** Record is at full dossier depth. Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).
+
+---
+
+## Audit pass — 2026-06-13 (Pass #5 — /notion-audit skill)
+
+**Ground truth:** `Enlaye Notion/Kiewitt/Kiewitt.md` (primary — read in full). No fabrication.
+
+**Live fetches:** Company record (`17b90644` — BW/Software/Projects/People/Country/Description/Address all confirmed), profile page (`37b90644d524…830de18cf6ea0d89`), Memberships schema (`ed090644` — Name + Companies full database cols confirmed), Events schema (`17a90644` — Event name/Date/Companies/Location tags/Place confirmed), Divisions schema (`3cf90644` — Division/Adress place/Companies/People/Projects cols confirmed), Locations schema (`18e90644` — Location/Adress text/Companies/Division cols confirmed), Memberships search (15 results — 8 live + 6 DUPLICATE— + 1 TEMPLATE), Events search (10 results — 6 live + 2 DUPLICATE— + TEMPLATE + unrelated).
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company — Description ✓; Address place (Omaha 41.265948/-95.935909) ✓; BW=[Builder/Design and Architecture/Developer] ✓; 39 Construction Projects linked ✓; 8 Companies Software linked ✓; People 24+ linked ✓; Divisions schema (Companies/People/Projects relations) ✓; Memberships schema (Companies full database relation) ✓; Events schema (Companies/Date/Location tags/Place) ✓; Locations schema (Companies+Division relations) ✓
+- 3b: All division bodies confirmed complete in prior passes ✓; all project bodies at full dossier depth ✓; People bodies ✓; no new gaps surfaced
+- 3c: Company HQ place ✓; Divisions Adress = place type ✓; Locations Adress = TEXT (structural limit, flagged, unchanged); Events Place schema = place type ✓ (AGC Convention/EPC Show filled in prior passes)
+- 3d: 8 live memberships: The Beavers `37b90644-8172` · AGC `37b90644-81c1` · DBIA `37b90644-814f` · CSRA `37b90644-8184` · CISI `37b90644-818f` · CCSC `37b90644-81a6` · NCSE `37b90644-81ab` · ASCE `37d90644-81f0`; all 7 dossier memberships + ASCE present and company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Annual Convention 2026 → Florida+Orlando ✓; Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; FWIK Summit 2025 untagged ✓; Engineering Technical Summit 2026 untagged ✓; 2 DUPLICATE— Events still pending Zack UI deletion (`37d90644-81d7/81fb`)
+
+**False positives rejected:**
+- Memberships schema shows only Name + Companies full database — no separate URL/source field in schema; source URLs are stored in the page body of each membership row (correct convention per prior audit notes)
+- No new division gaps: Divisions schema has all 5 required cols (Division/Adress/Companies/People/Projects); Dave Miles linked to Kiewit Infrastructure Co. People relation ✓
+
+**0 writes made.** Record is at full dossier depth. Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).

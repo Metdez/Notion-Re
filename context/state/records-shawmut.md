@@ -125,6 +125,17 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-13 (Pass #9)
+**Full audit run (3a–3e).** Live-fetched: company record (`19990644`), profile page (`37b90644`, titled "Shawmut" ✓), all 5 division pages, both event records, AGC membership record, Divisions/Events/Memberships/Locations data-source schemas. Ground truth: `Shawmut3.md`.
+**Result: 0 fills executed.** Record is complete relative to dossier. No empty field with a sourced value found.
+**3a Interconnection ✓:** All 5 divisions → Companies full database (Shawmut) ✓. New England (Kevin Sullivan) ✓, NY Metro (David Margolius) ✓, West (Greg Skalaski + Sam Ragsdale) ✓, Mission Critical (Joel Nickel) ✓. Large Project Division People = empty — genuinely sourceless (no named VP in dossier). Both events → Companies ✓. AGC membership → Company ✓. 12 locations → Company ✓ (10/12 → Division; Miami + WPB Division empty = dossier owning_division:null ✓).
+**3b Description depth ✓:** All 5 division bodies complete (focus/leadership/footprint/sectors/notable projects). Both event bodies complete (what/where/audience/why). Company record body has 4 dated update blocks through 2026-06-12T23:07.
+**3c Addresses ✓:** Company Address place (560 Harrison Ave, Boston, MA 02118, lat/lng set) ✓. Events Place empty (nationwide events, no geocode) ✓. Locations use text `Adress` field (schema design) — all 12 rows confirmed filled in prior passes ✓.
+**3d Memberships ✓:** AGC of America present with Company relation ✓ — only sourced membership per dossier.
+**3e Location tags ✓:** Safety Week 2026 = [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] ✓. 12th Annual = [Boston, Massachusetts, National] ✓.
+**False positives rejected:** AGC-CA rows in workspace belong to Flatiron, not Shawmut — not actionable.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond HQ+San Diego, litigation, contract values for 13/19 projects, memberships beyond AGC, Miami/WPB owning division, Large Project Division VP name.
+
 ## Audit log — 2026-06-13 (Pass #8) — automated hourly cycle
 **Full audit run (3a–3e).** Verified live: company record (`19990644`), profile page (`37b90644`, now titled "Shawmut"). Ground truth: `Shawmut3.md` (on disk ✓).
 **Result: 0 fills executed.** Record is complete relative to dossier. Profile page title confirmed "Shawmut" — TEMPLATE suffix was removed in prior session; "Shawmut TEMPLATE" search target = same record.

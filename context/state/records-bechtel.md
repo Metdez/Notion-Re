@@ -114,6 +114,23 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
 
+## Audit — 2026-06-13 (notion-audit Pass #10 — manual trigger, 0 writes)
+
+### Filled
+Nothing. **0 writes made.** All live records re-fetched and verified clean.
+
+### Verified complete (all 3a–3e checks pass — live re-fetch 2026-06-13 Pass #10)
+- **3a Interconnection ✓:** Company record `18490644` confirmed: Description ✓, Address place (Reston, lat 38.9586/lng -77.357) ✓, BW Category=[Builder,Advisor] ✓, 32 Construction Projects ✓, 31 Software ✓, 200+ People ✓, Country=[USA,Virginia,Texas,UK,Australia,Saudi Arabia,Chile,Pennsylvania,Arizona,Canada,India] ✓. Energy division `37b90644-d524-817a` confirmed: Companies ✓, People (Marsden) ✓, Projects (8) ✓, Adress place (CityWestPlace Houston, lat 29.7479/lng -95.5591) ✓, body (focus/president/base/projects/parent) ✓. Memberships schema (Name + Companies full database) confirmed. Locations schema (Location, Adress text, Companies, Division) confirmed. Events schema (17 Location tags options) confirmed.
+- **3b Description depth ✓:** Profile page body (Snapshot, risk signals, Attack Plan) confirmed complete. No new dossier data to enrich.
+- **3c Addresses ✓:** Company HQ Address place (Reston, lat 38.9586/lng -77.357) ✓. Energy division Adress place confirmed live. All 6 division Adress places confirmed per prior passes. Project Adress place = genuinely sourceless (city-level only, no lat/lng in dossier).
+- **3d Memberships ✓ — 6/6 unique:** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — all company-linked (12 rows live: 6 originals + 6 dups). ⚠ 6 duplicate rows still present — Zack to trash in UI (Manual UI step #6, unchanged).
+- **3e Location tags ✓ — 17 options confirmed live in Events schema:** Texas/Plano/Connecticut/Plantsville/Phoenix/Arizona/Hartford/Waterbury/Southington/Georgia/Tennessee/Pennsylvania/Washington DC/South Carolina/California/Thailand/Italy — all confirmed via schema fetch. All Bechtel events tagged per prior passes.
+
+### Left empty (genuinely sourceless — unchanged)
+21 of 25 core project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification). 6 location rows (Washington DC / San Francisco / New Delhi / Shanghai / Taipei / Nairobi) have no Division relation — correct per dossier (general/cross-company offices).
+
+---
+
 ## Audit — 2026-06-13 (notion-audit Pass #9 — automated hourly cycle, 0 writes)
 
 ### Filled
