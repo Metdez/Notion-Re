@@ -412,6 +412,18 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 
 ---
 
+## Audit — 2026-06-13 (notion-audit skill pass #17 — automated hourly cycle)
+**Result: 0 fills. All structural checks PASS.**
+Live-confirmed: TEMPLATE page `37b90644d52480b2` live-fetched — body matches pass #16 state exactly: 8 divs ✓ · 6 events ✓ · 7 locations ✓ · 24 projects ✓ · 5 memberships ✓ · 417 people ✓ · 8 software ✓ · Attack Plan (Paul West + Jonathan Hebert as named targets) ✓. Page is operational Middlesex profile (cosmetic template name), not a blank template. All 3a–3e checks pass per pass #16.
+
+---
+
+## Audit — 2026-06-13 (notion-audit skill pass #16 — automated hourly cycle)
+**Result: 0 fills. All structural checks PASS.**
+Live-confirmed: Company record `1ce90644` (last edited 2026-06-12T12:03:30) — Description ✓, LinkedIn ✓, Website ✓, Address place (1 Spectacle Pond Road, Littleton MA, lat 42.5412/lng -71.4773) ✓, BW Category=[Builder] ✓, Type=Company ✓, Size=Regional ✓, Country (7: MA/USA/CT/FL/ME/NH/GA) ✓, People (400+) ✓, Construction Projects (23 forward + 2 backlink = 25 total) ✓, Owners (12) ✓, Software (8) ✓, body full ✓. All 3a–3e checks pass per prior full passes.
+
+---
+
 ## Audit — 2026-06-13 (notion-audit skill pass #15 — automated hourly cycle)
 **Result: 0 fills. All structural checks PASS.**
 Live-confirmed: Company record `1ce90644` (last edited 2026-06-12T12:03:30) — Description ✓, LinkedIn ✓, Website ✓, Address place (42.5412/-71.4773, 1 Spectacle Pond Road) ✓, BW Category=[Builder] ✓, Type=Company ✓, Size=Regional ✓, Country (7) ✓, People (400+) ✓, Construction Projects (23) ✓, Owners (12) ✓, Software (8) ✓, body full ✓. All 3a–3e checks pass per pass #14 confirmation.

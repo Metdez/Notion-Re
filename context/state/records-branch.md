@@ -189,3 +189,15 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Interconnection graph fully intact ✓
 - Genuinely sourceless (no fill possible): event Place property (no venue address/coords in dossier for either event); individual LinkedIn/phone/email for 7 dossier people
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-13 (notion-audit skill pass #6 — automated hourly)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Ledger confirmed complete across all record types (6 prior passes today, all 0 fills). Harness check: ledger at ~192 lines (near threshold), no structural drift.
+- Company record (26890644): Description, Type=Company, Size=Regional, BW Category=[Builder], Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place ✓
+- Divisions (4): Branch Civil, Branch Builds, Hopkins Lacy, Young & McQueen — company + people + projects + place + body ✓
+- People (7): Company, Function, Function Qualification, Location=Virginia, body ✓
+- Projects (12): Contractors, Location, Adress place, Date, Status, Type, body ✓
+- Events (2): DBIA Award → Location=[North Carolina]; Golf Tournament → Location=[Virginia]; both → company ✓; Place genuinely sourceless
+- Memberships (4): ABC, AGC, DBIA, VTCA — company relation + URL + body ✓
+- Locations (7): HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville — Adress text + company + division ✓
+- Interconnection graph fully intact ✓
+- Zero fillable gaps. No writes performed.
