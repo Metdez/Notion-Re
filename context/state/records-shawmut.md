@@ -125,6 +125,18 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-13 (Pass #10)
+**Full audit run (3a–3e).** Ground truth: Shawmut3.md + Shaw5.md (newly registered). Shaw5.md is a 2nd-pass dossier (12 divisions, 28 projects, 4 events, 7 memberships, 269.8KB) — confirmed all its content was already loaded by a prior session (2026-06-12).
+**Result: 0 fills executed.** Record is fully complete relative to both dossiers.
+**Shaw5.md cross-check:** 15 location rows all confirmed in Notion (incl. Bentonville AR + Newtown PA added 2026-06-12); all Adress text fields filled with specific street addresses (e.g., Providence = "3 Davol Square, Suite A275"; North Haven CT = "116 Washington Ave"; NY = "3 E 54th St"; Miami = "10800 Biscayne Blvd Suite 1000 PH"). 7 memberships confirmed (AGC of America + AGC-CA + CASF + Providence Chamber + USGBC/LEED + ALSD + CASF-dup). 4 events confirmed (Safety Week 2026, Women in Construction Week 2025, ALSD Conf, NACD Gala 2026-04-30).
+**3a Interconnection ✓:** 5 divisions → Companies ✓; Leaders ✓; Large Project VP empty (genuinely sourceless). Events → Companies ✓. Memberships → Company ✓. 10/12 original locations → Division ✓; Miami + WPB Division still empty (Shaw5.md lists "Miami Office" as owning_division but there is no Miami Office division row in the page-local Divisions table — only 5 regional divisions; genuinely sourceless). 14 locations → Company ✓.
+**3b Description depth ✓:** Company body 4 update blocks through 2026-06-12 ✓. Profile page body intact ✓.
+**3c Addresses ✓:** Company Address place (560 Harrison Ave, Boston, MA 02118) ✓. All 14+ location Adress text fields filled ✓. Events Place empty (nationwide or sourced city-level, no geocode) ✓.
+**3d Memberships ✓:** 7 rows present (AGC MA / AGC-CA / CASF / Providence Chamber / USGBC / ALSD / CASF dup). ⚠ AGC of America has a dup row (`37b90644-d524-81fc` + `37e90644-d524-81a3`); CASF has a dup row (`37d90644-d524-81d2` + `37d90644-d524-81d6`). Both dups are Zack UI delete items only.
+**3e Location tags ✓:** Safety Week 2026 = [MA, Boston, RI, Providence, NY, CA, NV, FL, National] ✓. 12th Annual = [Boston, MA, National] ✓. Women in Construction Week = [National] ✓. NACD Gala = [Massachusetts, Boston] ✓. ALSD = no location (sourceless) ✓.
+**Harness updated:** Shaw5.md registered in research-files.md + this ledger header; Pass #10 appended; STATE.md snapshot updated; LOG.md entry appended.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond what's already in text fields, litigation, contract values for projects where undisclosed, memberships beyond AGC+Shaw5 set, Miami/WPB owning division, Large Project VP name.
+
 ## Audit log — 2026-06-13 (Pass #9)
 **Full audit run (3a–3e).** Live-fetched: company record (`19990644`), profile page (`37b90644`, titled "Shawmut" ✓), all 5 division pages, both event records, AGC membership record, Divisions/Events/Memberships/Locations data-source schemas. Ground truth: `Shawmut3.md`.
 **Result: 0 fills executed.** Record is complete relative to dossier. No empty field with a sourced value found.

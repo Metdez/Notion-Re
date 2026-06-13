@@ -240,6 +240,13 @@ These are new dossier source data — outside the scope of an audit (audit fills
 - All 24 Memberships → Company ✓; 6 Events with dates/tags ✓; 13 Divisions → Company ✓; all addresses filled ✓
 - Company Address place (44.7831/-69.3836) ✓
 
+## Audit fills (2026-06-13 — notion-audit run #10)
+**State as of 2026-06-13 (full live re-fetch + 1 fill):**
+- **Alexandria Bay LPOE `userDefined:URL`** → `https://www.cianbro.com/projectdetail/724` (was empty). Source: Cianbro3.md. Record `37b90644-d524-8158-9e71-e4339dd571c2`. Confirmed written + re-fetched.
+- **Already confirmed complete (no writes needed):** Cross Town BESS URL (`pluspower.com`) ✓ · Lockhart Power URL (`cianbro.com/news/lockhart-power`) ✓ · Puritan P4 URL (`cianbro.com/projectdetail/989`) ✓ · Wharf Ph2 URL (`cianbro.com/projectdetail/821`) ✓ · All 7 subsidiary Adress places ✓ · 24 Memberships → Company ✓ · 6 Events with dates/tags ✓ · Division Projects (Infra 15, Building 5, IDM 3, Power&Energy 2, A/Z 1) ✓ · Infrastructure division Adress place (Portland ME, lat 43.6528) ✓ · Company Address place (44.7831/-69.3836) ✓.
+- **Genuinely sourceless (confirmed):** Bangor I-95 URL (no cianbro.com project page) · Southport Swing Bridge URL · MVH Scarborough URL · Sarah Mildred Long URL · EMR/TRIR/DART · bonding/surety/insurance · ABC NCC 2024 + AGC Maine Awards exact dates · most People contact details.
+- **3a–3e all pass.** Record fully saturated vs Cianbro.md + Cianbro3.md.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).
