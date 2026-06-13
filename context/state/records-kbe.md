@@ -252,3 +252,31 @@ All sourced data already present in Notion. Zero fillable gaps found from KBE.md
 
 ### Genuinely sourceless (confirmed for KBE.md dossier)
 DUNS/EIN/state entity IDs · EMR/TRIR/DART numerics · surety provider · insurance carriers · division-level revenue/headcount · FPDS PIIDs · Golf Tournament, CBC Awards, Special Olympics Fishing Tournament venue addresses · DBIA/USGBC/AGC national memberships.
+
+## Audit pass #10 (2026-06-13 — notion-audit skill, KBE.md + KBE2.md re-audit)
+
+**Ground truth:** `KBE.md` (primary) + `KBE2.md` (secondary). `KBEboston.md` reviewed (BD analysis only — not sourced for fills).
+
+### 2 fills executed (verified live as empty before writing)
+| Record | ID | Field | Value written | Source |
+|---|---|---|---|---|
+| Seabury Active Life Community – The Collamore Wing | `37d90644-d524-816a-afb8-dba1fd6ef040` | `Size` | `43,000 SF, 3 stories, 24 new IL apartments, 28 underground parking spaces` | nerej.com/kbe-building-breaks-ground-on-seabury-s-expansion-43-000-s-f-the-collamore-wing |
+| 1928 Farmington Town Hall (Former FHS Renovation) | `37d90644-d524-8135-a0ef-ccba7e3568a7` | `Size` | `Multi-story historic school building renovation, two-story plus historic wing` | patch.com/connecticut/farmington/local-contractor-chosen-new-farmington-town-hall-project |
+| 1928 Farmington Town Hall (Former FHS Renovation) | `37d90644-d524-8135-a0ef-ccba7e3568a7` | `Contrat Value in Million` | `12.775` | patch.com/connecticut/farmington/local-contractor-chosen-new-farmington-town-hall-project |
+
+### 3a–3e verified clean
+- 3a Interconnection: company→45 projects; 3 divisions→company+People+Projects+Adress; 11 memberships→KBE; 9+ events→KBE; 4 software→KBE.
+- 3b Description depth: sampled division and project bodies confirmed at full sourced depth.
+- 3c Addresses: company HQ, 3 divisions, sampled projects all filled. Locations DB intentionally empty.
+- 3d Memberships: 11/11 sourced rows live + 6 blank stubs (pending Zack trash from pass #9).
+- 3e Location tags: Connecticut, Texas+Plano, Arizona+Phoenix all confirmed.
+
+### New data-quality flags (for Zack)
+- **Seabury Collamore Wing duplicate:** `37d90644-d524-8163-a00f-ea6a4c566b1b` (less specific address) + `37d90644-d524-816a-afb8-dba1fd6ef040` (full street address + Size now filled = KEEP). Recommend trash `…8163`.
+- **1928 Farmington Town Hall duplicate:** `37d90644-d524-813c-a10d-e18f6c72b6cb` (shorter name, empty fields) + `37d90644-d524-8135-a0ef-ccba7e3568a7` (full name, Size + Value now filled = KEEP). Recommend trash `…813c`.
+- **Choate Welcome Center** `37d90644-d524-813e-94a7-cb02763dd87c`: still deleted/in trash but relations intact. Restore or remove from company Construction Projects relation.
+- **8 blank stubs** (pass #9 IDs unchanged): pending Zack trash.
+- **Station House Greenwich x3 + SoNo Collection x3**: thin duplicate copies still present.
+
+### Confirmed genuinely sourceless (no write)
+DUNS/EIN/state entity IDs, EMR/TRIR/DART, surety/insurance, division revenue/headcount, FPDS PIIDs, Golf Tournament + CBC Awards + Special Olympics venue addresses. KBE2.md has PIID `HDEC03-12-C-0005` for Annapolis commissary but Construction Projects DB has no PIID property — not added.
