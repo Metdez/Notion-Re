@@ -187,6 +187,19 @@ Full live re-verify of 15 original dossier records (company DB record + 5 divisi
 - **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c):** Company + Nuclear Services Adress filled; others genuinely unfillable ✓ · **Memberships (3d) ✓** (4 rows from Jing3) · **Location tags (3e) ✓**.
 - **Outstanding (destructive — Zack UI):** duplicate ENR 2012 event + duplicate HQ location row + GBCA/PWC NJ membership dups from Pass #9 still present — no change since last pass.
 
+## Audit pass 2026-06-13 Pass #12 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 dossier projects + 1 location + 1 event) via direct Notion MCP fetches. Ground truth: all 3 dossiers (Jingoli.md, Jingoli1.md, Jing3.md). No fillable gaps found — every sourced field already populated; state matches Pass #11 exactly.
+- **Company DB `37b9…f55131`:** Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country/Address(lat 40.2793/lng -74.7263) all populated; 19 people + 27 projects + 7 software linked. ✓
+- **Nuclear Services division `37b9…5333`:** Company + People (Mockaitis) + Projects (11) + Adress (lat/lng) all set. ✓
+- **Jingoli Power division `37b9…8c8c`:** Company + People (Karl Miller) + Projects (5) set; Adress empty (no lat/lng in dossier — genuinely unfillable). ✓
+- **JDC / Goldstar / DCO divisions:** Company relation only — address/people/projects all sourceless. ✓
+- **Matthew Mockaitis `37b9…b583`:** Company + Function + LinkedIn + Location=NJ + Function Qualification=President set; Division deferred (global Divisions DB `37690644` no Jingoli rows). ✓
+- **Karl Miller `37b9…ffd8`:** Company + Function + Location=NJ + Function Qualification=CEO set; LinkedIn blank (no source in dossier) — genuinely unfillable. Division deferred. ✓
+- **Event `37b9…dc9dc`:** Company + Date 2012-01-01 + Location tags ["New York"] all set. ✓
+- **Location row `37b9…770d`:** Adress text + Companies relation + Division relation all set. ✓
+- **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c):** Company + Nuclear Services Adress filled; others genuinely unfillable ✓ · **Memberships (3d) ✓** (4 rows: GBCA/NJ Alliance/PWC NJ/ACCNJ) · **Location tags (3e) ✓** (Event "New York" set).
+- **Outstanding (destructive — Zack UI):** duplicate ENR 2012 event + duplicate HQ location row + GBCA×3 + PWC NJ×3 membership dups still present — no change since Pass #9.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 7 real rows — filter should show them).

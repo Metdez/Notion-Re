@@ -182,3 +182,10 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - All properties, relations, place/address fields, location tags, and body content confirmed intact ✓
 - Interconnection graph fully intact ✓
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-13 (notion-audit skill pass #5)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record (26890644), profile hub (37b90644…4a13), Bob Wills person (spot), I-95 project (spot), Memberships DB search (4 rows: ABC, AGC, DBIA, VTCA — all with company relation + URL ✓), Events DB search (2 rows: DBIA Award=NC, Golf Tournament=VA, both → company ✓), Locations DB search (7 rows: HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville — all Adress text + company + division ✓).
+- All properties, relations, place/address fields, location tags, and body content confirmed intact ✓
+- Interconnection graph fully intact ✓
+- Genuinely sourceless (no fill possible): event Place property (no venue address/coords in dossier for either event); individual LinkedIn/phone/email for 7 dossier people
+- Zero fillable gaps. No writes performed.

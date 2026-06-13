@@ -285,3 +285,26 @@
 **3e Location tags — confirmed:** SelectUSA=[Maryland] ✓ · AECTechCon=[St. Louis, Missouri] ✓ · Clayco Rising=[Florida] ✓ · AGC Convention no tag (sourceless) ✓ · INTERPHEX=[Life Sciences] ✓ · Petfood Forum=[Food & Beverage] ✓.
 
 **Still genuinely sourceless (unchanged):** project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
+
+---
+
+## Tenth pass — 2026-06-13 (notion-audit Pass #10 — all checks re-verified)
+> Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection schema + all 5 rows (search-confirmed live), Events collection schema + all 6 event rows (search-confirmed live), Locations collection schema, Divisions collection schema.
+
+**Nothing to fill.** All dossier data with source URLs is already in Notion. Zero writes executed.
+
+**Size conflict resolved:** Live Companies DB fetch shows `Size: "Mutlinational"` — conflict from prior passes is now resolved. No longer flagged.
+
+**3a Interconnection — confirmed clean:** Companies DB record has 32 Construction Projects, 6 Software rows, 5 Subsidiaries, 7 People (6 created + Jeff Miller), BW Category/Type/Address all set. Size="Mutlinational" ✓. All 6 events carry Companies→Clayco. All 5 membership rows carry Companies→Clayco. 19 division rows carry Companies full database→Clayco.
+
+**3b Description depth — confirmed adequate:** Company body rich (Snapshot + Financial trend + Attack Plan). All project, division, and people bodies have sourced depth per prior passes. No thin bodies found.
+
+**3c Address/location — confirmed:** Company place:Address set (35 E Wacker, 41.8869/-87.6266). All 11 location rows have addresses in text Adress field. Satellite locations (Lenexa/Atlanta/Birmingham/Greenville/Raleigh) have street addresses populated. Divisions relation on 5 satellite locations remains empty — genuinely sourceless.
+
+**3d Memberships — complete (5/5):** USGBC `81bd` · DBIA `811f` · AGC `8119-a1ba-c55c924fc91a` · NAIOP Chicago `8154` · USGBC-CA `8139`. All confirmed live via search.
+
+**3e Location tags — confirmed:** SelectUSA=[Maryland] ✓ · AECTechCon=[St. Louis, Missouri] ✓ · Clayco Rising=[Florida] ✓ · AGC Convention no tag (sourceless) ✓ · INTERPHEX=[Life Sciences] ✓ · Petfood Forum=[Food & Beverage] ✓.
+
+**Rejected (no source URL):** Kevin McKenna — named in Clayco4.md division people list only, no dedicated person record or source URL in any dossier. Same treatment as Clay Carter (prior pass).
+
+**Still genuinely sourceless (unchanged):** project contract values (15/32) · precise project dates · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
