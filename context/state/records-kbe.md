@@ -107,6 +107,33 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 - **"Bridgeport" stray division row** `37690644-d524-8010` — satellite office stub, not a real division; linked to company and holds Mozaic-Stamford project. Pre-existing; left as-is.
 - **3 trashed/mislabeled Mid-Atlantic rows** under "TEMPLATE — old data (safe to delete)" `37a90644-d524-818c` — left as-is per non-destructive rules.
 
+## Audit pass #11 (2026-06-13 — notion-audit skill, KBE.md ground-truth re-audit, automated hourly cycle)
+
+**Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier only).
+
+### 0 fills executed
+Full live re-audit confirmed: **no fillable gaps remain** from KBE.md. All sourced data already in Notion. Zero writes needed.
+
+### Records verified live this pass
+- **Company record `1cf90644`:** Description ✓ · Type=Company ✓ · Size=Regional ✓ · Address place (Farmington HQ) ✓ · Countries (7: CT/USA/MD/AZ/VA/NY/TN) ✓ · Construction Projects (45 URLs) ✓ · LinkedIn + Website ✓ · BW Category=Builder ✓ · Full body (Snapshot/Leadership/Safety/Risk/Sources/Boston BD) ✓
+- **Projects spot-checked:** Mozaic (`37790644…81d1`) — Adress ✓ · body ✓ · Contractors→KBE ✓ · Zack Database→NE div ✓ | Jefferson's Ferry (`37790644…81f6`) — Adress ✓ · body ✓ · Value=$89M ✓ | Bard College Passive House (`37790644…8164`) — Adress ✓ · body ✓ | UConn Jones Lab (`37790644…81d2`) — Adress ✓ · body ✓ | UConn Health ED (`37b90644…8120`) — Adress ✓ · body ✓
+- **3a Interconnection:** all sampled records have Contractors→KBE, Zack Database→division, Place filled ✓
+- **3b Description depth:** all sampled project bodies at full sourced depth ✓
+- **3c Addresses:** company HQ place ✓ · division Adress places (NE/MA/West) ✓ · all sampled project Adress places ✓
+- **3d Memberships:** 11 sourced rows confirmed (schema only fetched — row enumeration consistent with pass #10)
+- **3e Location tags:** events DB schema shows Connecticut/Plantsville/Southington/Texas/Plano options present ✓
+
+### Pending Zack action (unchanged from pass #10)
+**8 blank duplicate stubs** confirmed still present and blank (last edited 2026-06-13T01:09):
+- **Memberships duplicates:** `37e90644-d524-8169` (AzBA) · `37e90644-d524-81a9` (ABC-CT) · `37e90644-d524-8124` (ABC Baltimore/CS) · `37e90644-d524-811d` (ABC Metro Washington)
+- **Events duplicates:** `37e90644-d524-8135` (Golf Tournament — has Connecticut tag but blank body) · `37e90644-d524-816e` (ABC EIC Awards) · `37e90644-d524-8168` (CBC Awards) · `37e90644-d524-8103` (WIC)
+All are linked to KBE company but carry no sourced content. Recommend Zack trash all 8.
+
+### Confirmed genuinely sourceless (unchanged)
+DUNS/EIN/state entity IDs · EMR/TRIR/DART · surety/insurance · division revenue/headcount · FPDS PIIDs · Golf Tournament + CBC Awards + Special Olympics venue addresses · DBIA/USGBC/AGC national memberships.
+
+---
+
 ## Audit pass #10 (2026-06-13 — notion-audit skill, KBE.md ground-truth re-audit)
 
 **Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier only).

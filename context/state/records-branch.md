@@ -134,3 +134,13 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Memberships (4): ABC, AGC, DBIA, VTCA — confirmed via live search, all have company relation + URL + body ✓
 - Locations schema: Adress text + Companies + Division relations all present ✓
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-13 (automated hourly pass)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record, profile hub, Events schema, Memberships schema, Locations schema, spot-checks on I-95 project, Bob Wills person, DBIA event row, AGC membership row, Roanoke HQ location row.
+- Company record (26890644): all properties populated — Description, Type, Size, BW Category, Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place ✓
+- Projects (12): Contractors, Location, Adress place, Date, Status, Type, body all set — I-95 spot-checked ✓
+- People (7): Company, Function, Function Qualification, Location=Virginia, body — Bob Wills spot-checked ✓
+- Events (2): DBIA Award → Location tags=[North Carolina], company relation ✓; Golf Tournament → Location tags=[Virginia], company relation ✓; Place property genuinely sourceless (no venue address in dossier)
+- Memberships (4): ABC, AGC, DBIA, VTCA — all have company relation + URL + body — AGC spot-checked ✓
+- Locations (7): 7 rows confirmed present (HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville) — HQ Adress text + Companies relation spot-checked ✓; Locations table uses Adress TEXT (not place type) — correct per schema
+- Zero fillable gaps. No writes performed.

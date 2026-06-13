@@ -128,6 +128,14 @@ Full re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 membe
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
 - **No new fills. Nothing fillable was missed.**
 
+## Post-load audit #8 (2026-06-13, /notion-audit skill vs HITT1.md — automated hourly cycle)
+Full 3a–3e re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 memberships (all confirmed live), 5 events (all confirmed live), 16 locations (schema verified), 18 divisions (schema verified), 11 projects (JMACC + Kim Roy spot-checked live).
+- **0 fills — fully converged.** Nothing fillable was missed.
+- **Live confirmations:** Company Address (place) set ✓; Country=14 ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body (Legal name/DUNS/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance) ✓; JMACC record complete (Value/Type/Status/Date/Location=Texas/body/Contractors=HITT) ✓; Kim Roy record (Function=CEO/Company=HITT/Location=Virginia/body sourced) ✓.
+- **3a–3e all ✓** — full relation graph intact; 9/9 memberships (AGC/NAIOP/USGBC/CoreNet Global/IFMA/IIDA/DBIA/ABC/ABC Metro Washington) company-linked; 3 sourced-location events tagged (DBIA/CONEXPO=Nevada+Las Vegas, NAIOP NoVA=Virginia); Safety Week/Subcontractor Day have no location tags (dossier: National/nationwide — genuinely sourceless).
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
+- **No false positives identified.**
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
