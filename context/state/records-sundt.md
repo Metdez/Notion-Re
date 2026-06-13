@@ -457,6 +457,30 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 
 ---
 
+## Audit — 2026-06-13 (thirteenth pass — /notion-audit Sundt)
+Full live re-fetch: company record (all 17 properties confirmed, last edited 2026-06-12T10:33:18), Memberships DB search (15 rows incl. TEMPLATE+dups; 8 unique: DBIA/AGC/APWA/AzBA/Beavers/ESOP Assoc/ENR Top 400 #42/USGBC — all → Companies=Sundt ✓), Events DB search (13 rows — all → Companies=Sundt ✓), Locations DB search (25 rows; 17 unique incl. Austin — all → Companies ✓). Workspace search for Sundt records created after 2026-06-13 returned 0 results — no net-new since Pass #12. All 7 Sundt3.md events and 5 memberships cross-checked against live Notion — all present ✓.
+
+### Checks (3a–3e): All pass
+- **3a Interconnection:** 9 divisions→company ✓ · 13 events→company ✓ · 8 unique memberships→company ✓ · 17 unique locations→company ✓.
+- **3b Description depth:** Company body rich ✓. All division bodies confirmed rich ✓. Events sourced ✓.
+- **3c Address/location:** Company Address place (lat 33.3979/lng -111.9662) ✓. Austin Adress text filled ✓. All 15 original location Adress text filled ✓. Division Adress empty — no coords in either dossier → genuinely sourceless.
+- **3d Membership completeness:** 5 dossier-sourced memberships all present (DBIA/AGC/APWA/AzBA/Beavers) ✓. USGBC body blank — not in any dossier → genuinely sourceless.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. All other events no venue → genuinely sourceless.
+
+**Result: 0 writes this pass. 13th consecutive no-write pass.**
+
+### Manual UI steps outstanding (unchanged)
+1. **Dup cleanup — Locations:** Vancouver WA `37d90644…8183`; Tucson Old Vail `37d90644…81d0`; Tempe HQ `37d90644…81a6` + `37d90644…81f8`; Phoenix Ops `37d90644…8114` + `37d90644…810a`; Phoenix Training `37d90644…8136` + `37d90644…8173` — all delete.
+2. **Dup cleanup — Memberships:** AGC delete `37d90644…81e5` + `37d90644…814c`; APWA delete `37d90644…817b`; AzBA delete `37d90644…819e`; Beavers delete `37d90644…8156` + `37d90644…8160`.
+3. **Dup cleanup — Events:** Cade Rowley CEO delete `37d90644…81c6`; IPS Acquisition delete `37d90644…8131`.
+4. **Orphan page:** `37d90644-d524-810e-9a9c` — delete.
+5. **I-10 dup review** — $87M vs $120M — review before deleting.
+6. **USGBC body** — blank; sourceless; fill manually if Zack has source.
+7. Projects Underway view / Software view → clear `__TEMPLATE__` filters.
+8. Construction Projects Location → add Idaho, Oregon options.
+
+---
+
 ## Audit — 2026-06-13 (twelfth pass — /notion-audit Sundt)
 Full live re-fetch: company record (all 17 properties confirmed via subagent), Memberships DB (full search = 15 rows incl. TEMPLATE), Events DB (full search = 13 rows incl. TEMPLATE + 2 shared), Locations DB (full search = 25 rows incl. TEMPLATE), Divisions DB (full search = 10 rows incl. TEMPLATE). Both dossiers cross-checked: Sundt.md (run 2026-06-10) and Sundt3.md (run 2026-06-12).
 
