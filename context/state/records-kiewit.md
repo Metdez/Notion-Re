@@ -225,3 +225,16 @@ Sources: https://www.kiewit.com/locations/
 - Peter Kiewit Sons ULC address city-level only — dossier has no street address for this entity → correct
 
 **0 writes made.** Record is at full dossier depth. Only outstanding item: Zack's manual UI deletion of the 8 DUPLICATE— rows (6 Memberships + 2 Events).
+
+## Audit pass — 2026-06-13 (Pass #1 — /notion-audit skill, automated hourly cycle)
+
+**Ground truth:** `Enlaye Notion/Kiewitt/Kiewitt.md` (primary) + Kiewitt1.md, Kiewitt2-PARTIAL.md, Kiewitt3-thin.md, Kiewitt4.md (supplementary). No web access; no fabrication.
+
+**1 fill made:**
+- Locations table row "Scottsdale, AZ — InEight HQ" (`37b90644-d524-81a8`) — `Adress` text was imprecise ("Scottsdale, AZ (InEight Inc. headquarters; also Omaha, NE)") → updated to "9977 N. 90th Street, Ste. 200, Scottsdale, AZ 85258" (source: https://www.kiewit.com/about-us/technology-at-kiewit/ineight/)
+
+**3a–3e all ✓ (consistent with Pass #0):** all division/location/membership rows company-linked ✓ · description depth ✓ · Locations `Adress` text filled on all 11 rows ✓ · 8 memberships present ✓ · location tags on events ✓ (original 2 recurring events correctly untagged)
+
+**Genuinely sourceless (unchanged):** Date/Place on Construction Safety Week + Women in Heavy Civil/Beavers (annual recurring, no specific date/venue in dossier) · EMR/TRIR · bonding limits · division revenue/headcount · per-project parcel/APN/permits
+
+**Pre-existing flags (not created by this audit):** 6 DUPLICATE membership rows + 2 DUPLICATE event rows from 2026-06-12 session — still pending Zack UI deletion.

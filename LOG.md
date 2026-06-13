@@ -10,7 +10,8 @@
 ## Monthly logs
 | Month | File | Status |
 |---|---|---|
-| June 2026 | [context/log/2026-06.md](context/log/2026-06.md) | current — append here (Clayco load onward) |
+| June 2026 | [context/log/2026-06.md](context/log/2026-06.md) | current — append here (Consigli Pass #20 onward) |
+| June 2026 · part 2 | [context/log/archive/2026-06-part2.md](context/log/archive/2026-06-part2.md) | archived — Clayco load through Middlesex Pass #7 (06-09 → 06-13) |
 | June 2026 · part 1 | [context/log/archive/2026-06-part1.md](context/log/archive/2026-06-part1.md) | archived — Owners/Harvard builds, TEMPLATE work, Consigli saga (06-08 → 06-09) |
 
 _Older entries roll into [context/log/archive/](context/log/archive/) when a month closes or the current file passes ~200 lines._

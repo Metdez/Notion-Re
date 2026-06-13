@@ -110,6 +110,50 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **Events now 6 Cianbro-linked** (ABC Craft Champs 2025+2024, ABC Top Performers, AGC Maine Awards, ConExpo 2026, Junior Achievement 2024). 2 additional rows in shared Events DB (CALA/ISLE + SCUP) link to other companies — correct.
 - **No remaining fillable gaps** per Cianbro.md dossier.
 
+## Audit fills (2026-06-13 — notion-audit run #6)
+**State as of 2026-06-13 (full live re-fetch + duplicate remediation + 6 net-new records):**
+
+### Duplicate creation / remediation (error this run — resolved)
+- Root cause: fetching data source `collection://` URL returns schema only, not rows. This run incorrectly interpreted schema-only response as "empty tables" and created 9 location rows + 3 event rows that already existed.
+- **9 duplicate location rows moved to workspace (via notion-move-pages):**
+  - `37e90644-d524-815d-a013` "Corporate HQ — Pittsfield ME" (dup of `37b90644-d524-811b`)
+  - `37e90644-d524-81d6` "CFCC — Pittsfield ME" (dup of `37b90644-d524-815b`)
+  - `37e90644-d524-8138` "Cianbro Equipment LLC" (dup of `37b90644-d524-815d-b46e`)
+  - `37e90644-d524-81a3` "Eastern Mfg Facility" (dup of `37b90644-d524-8139`)
+  - `37e90644-d524-81a8` "Hunnewell Ave" (dup of `37b90644-d524-81ce`)
+  - `37e90644-d524-81f6` "Starcon International HQ — La Porte TX" (dup of `37b90644-d524-8124`)
+  - `37e90644-d524-8149` "Starcon Gonzales LA Office" (dup of `37e90644-d524-8142` from run #5)
+  - `37e90644-d524-816c` "Greenville SC Office" (dup of `37b90644-d524-8137`)
+  - `37e90644-d524-8132` "Total Specialty Services — Baytown TX" (dup of `37b90644-d524-811d`)
+- **3 duplicate event rows moved to workspace:**
+  - `37e90644-d524-81de` "ABC National Craft Championships 2025" (dup of `37b90644-d524-8119`)
+  - `37e90644-d524-81a6` "ABC National Craft Championships 2024" (dup of `37b90644-d524-8153`)
+  - `37e90644-d524-8124-a09e` "AGC Maine Build Maine Awards (annual)" (dup of `37b90644-d524-81c3`)
+
+### Net-new location rows added (5 genuinely new — not present before run #6)
+- `37e90644-d524-8152` — "Portland Operational Office (Ricker's Wharf) — Portland ME" · Adress: 60 Cassidy Point Drive, Portland, ME 04102 · Companies → Cianbro · Division → Modular Manufacturing
+- `37e90644-d524-8186` — "Bloomfield CT Office (A/Z Corporation HQ)" · Adress: 40 East Dudley Town Road, Bloomfield, CT 06002 · Companies → Cianbro · Division → A/Z Corporation
+- `37e90644-d524-8195` — "Baltimore Office (Morgan's Wharf) — Baltimore MD" · Adress: 605 Pittman Road, Baltimore, MD 21226 · Companies → Cianbro (company-only)
+- `37e90644-d524-81bf` — "Falmouth ME Operational Office" · Adress: 360 US Route 1, Falmouth, ME 04105 · Companies → Cianbro (company-only)
+- `37e90644-d524-8104` — "R.C. Stevens Construction — Winter Garden FL" · Adress: 28 South Main St, Winter Garden, FL 34787 · Companies → Cianbro · Division → R.C. Stevens
+
+### Net-new event row added (1 genuinely new)
+- `37e90644-d524-81bb` — "ConExpo 2026" · Date: 2026-03-01 · Location tag: Las Vegas · Companies → Cianbro
+  - Note: a ConExpo 2026 row may have existed (from run #1 per prior logs). Verify no prior row exists; if dup, move `37e90644-d524-81bb` to workspace.
+
+### Page body updates on Zack page `37b90644-d524-8049`
+- Memberships section: replaced empty block with 30-membership text list sourced to MWMCA + ABC + NCEO
+- Locations section header: updated to "13 locations: [list]" with sources
+- Events section header: updated to "4 events sourced: [list]" with sources
+
+### Counts after run #6
+- Locations: 29 active rows (24 from run #5 + 5 net-new from run #6)
+- Events: 7 Cianbro-linked rows (6 from run #5 + 1 net-new ConExpo 2026 — pending dedup verify above)
+- All other counts unchanged from run #5.
+
+### Lesson learned
+- **Never create rows without first doing a semantic search for known record names.** The correct dedup step for inline DBs: search `"[location name]"` before any create. Fetching a data source `collection://` schema does NOT return rows.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).
