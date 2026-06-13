@@ -114,6 +114,23 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
 
+## Audit — 2026-06-13 (notion-audit Pass #4 — confirmed no-gap)
+
+### Filled
+Nothing. **0 writes made.** All live records re-fetched and verified identical to Pass #3.
+
+### Verified complete (all 3a–3e checks pass — live re-fetch 2026-06-13)
+- **3a Interconnection ✓:** Company record has 52 People, 25 Construction Projects (forward relation), 30 Software. All 6 divisions carry Companies+People+Projects relations. All project Contractors+Owning Department set. Locations/Events/Memberships all carry Companies relation.
+- **3b Description depth ✓:** All 6 division bodies verified (Energy/Infrastructure/Mining & Metals/NS&E/M&T/Enterprises — full focus/president/base/projects/parent). All sampled project bodies carry sourced scope, owner, delivery, dates, risk signals (Port Arthur fatality in body confirmed). People bodies carry role + sourced detail.
+- **3c Addresses ✓:** Company HQ place (Reston, lat 38.9586/lng -77.357) ✓; all 6 division Adress places ✓ (Energy→CityWestPlace Houston; Infra+NS&E+Enterprises→Reston; M&M→Santiago; M&T→Chandler AZ). Locations DB schema confirmed (Adress text + Companies + Division relations). Project Adress place = genuinely sourceless (city-level only; Notion place requires lat/lng — no coords in dossier).
+- **3d Memberships ✓ — 6/6:** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — schema + Companies relation confirmed present.
+- **3e Location tags ✓ — 17 options in Events schema:** Texas/Plano/Connecticut/Plantsville/Phoenix/Arizona/Hartford/Waterbury/Southington/Georgia/Tennessee/Pennsylvania/Washington DC/South Carolina/California/Thailand/Italy — all Bechtel events tagged per prior audit.
+
+### Left empty (genuinely sourceless — unchanged)
+21 of 25 project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng in dossier); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification).
+
+---
+
 ## Audit — 2026-06-13 (notion-audit Pass #3 — final convergence)
 
 ### Filled

@@ -111,3 +111,15 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Memberships (4): ABC, AGC, DBIA, VTCA — all have company relation + URL + body ✓
 - Locations (7): HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville — all have Adress text + company relation + Division (HQ has no Division — expected) ✓
 - Zero fillable gaps found. No writes required. All records match dossier sourced data.
+
+## Audit log — 2026-06-13 (second pass)
+**Full re-audit pass completed (no writes needed).** Re-fetched company record, profile hub page, Memberships/Events/Locations/Divisions table schemas, and spot-checked Branch Civil division, Bob Wills person, I-95 project against dossier Branch1.md:
+- Company record (26890644): Description, Type, Size, BW Category, Country, Website, LinkedIn, Address place, People (7+), Construction Projects (12) all populated ✓
+- Profile hub page body: complete with Enlaye angle block ✓
+- Divisions (4): all have company relation, people, projects, address place, body ✓ (spot-checked Branch Civil)
+- Projects (12): Contractors, Location, Adress place, Date, Status, Type, body all set ✓ (spot-checked I-95)
+- People (7): Company, Function, Function Qualification, Location=Virginia, body ✓ (spot-checked Bob Wills)
+- Events schema confirmed: Virginia + North Carolina options exist ✓
+- Memberships schema confirmed: Companies full database relation + URL properties present ✓
+- Locations schema confirmed: Adress text + Companies + Division relations present ✓
+- Zero fillable gaps found. No writes required.

@@ -118,6 +118,16 @@ Full re-audit of all HITT records: company record, 18 divisions, 11 projects, 9 
 - **Verified genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags (dossier: National/nationwide); Size="Regional" vs. "Mutlinational" conflict (non-destructive rule).
 - **No false positives identified.**
 
+## Post-load audit #6 (2026-06-13, /notion-audit orchestrated vs HITT1.md)
+Full re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 memberships, 5 events, 16 locations, 18 divisions (schema), 11 projects (2 spot-checked: NASA JMACC, N2W), key people (Kim Roy, Pamela Baughman).
+- **0 fills needed** — all records verified clean against HITT1.md ground truth.
+- **Live confirmations:** Company Address (place) set; Country = 14 values incl. NC/SC/NM; Construction Projects = 11 links; Companies Software = 14 links (expanded since audit #5 — consistent with post-dossier enrichment by other sessions); all 9 memberships present with Companies relation; all 5 events present; all 16 locations present; Division schema has Adress (place), Companies, People, Projects relations intact; Locations schema has Adress (text), Companies, Division relations intact.
+- **Memberships confirmed complete (3d):** AGC, NAIOP, USGBC, CoreNet Global, IFMA, IIDA, DBIA, ABC, ABC of Metro Washington — all 7 dossier memberships + 2 post-dossier enrichments present.
+- **Events confirmed complete (3e):** DBIA 2025 (Nevada/Las Vegas tags), CONEXPO 2026 (Nevada/Las Vegas tags), NAIOP NoVA (Virginia tag), Construction Safety Week (no tag — dossier: National), Subcontractor Day (no tag — dossier: nationwide). All sourced location-specific events tagged.
+- **False positives rejected:** Company record `Last edited` shows 2026-06-11 — post-load enrichments by other sessions (Companies Software expansion) are additive and do not conflict with dossier ground truth. Divisions Adress is `place` type; Locations Adress is `text` type (by design — address text in field body, not place property).
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
+- **No new fills. Nothing fillable was missed.**
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.

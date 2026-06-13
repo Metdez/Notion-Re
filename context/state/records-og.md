@@ -79,6 +79,21 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 **New data in OD.md (second research pass, NOT yet loaded at time of round 3):**
 - 13 additional projects, 7 new named leaders, 4 new Mason location rows — flagged for /notion-load pass.
 
+## Audit round 6 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+Live verification confirmed: company record (all properties populated), profile page body complete, 7 divisions complete, 22 projects present and linked (Contractors + Owning Department set), 12+ named People linked (Company + Division relations), 4 OG1.md memberships + 3 OD.md memberships present (6 dedup-needed rows outstanding), 16 location rows confirmed (OD.md Mason locations loaded), 4 software rows complete.
+
+**Correction still pending (not changed — requires Zack decision):** Bridgeport Mason Showroom address "240 Bostwick Ave" (OG1.md/BBB source) vs "325 Hancock Ave" (OD.md / mason.ogind.com — more authoritative). This is a correction, not an additive fill.
+
+**Outstanding for Zack (unchanged from rounds 4-5):**
+- Size=Local vs Regional conflict on company CRM record
+- 3 duplicate membership pairs (37d-prefix rows): AGC National, NAPA, CMAA CT Chapter
+- LinkedIn/Apollo bulk import People dupes (37d-prefix, 100+ thin rows linked to O&G)
+- 3 view TEMPLATE filters still showing in profile page (Projects Underway, Existing Software, Memberships "View of People")
+
+---
+
 ## Audit round 5 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
 **0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
 

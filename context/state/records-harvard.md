@@ -121,7 +121,7 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3d memberships:** N/A — no memberships table on Harvard Owner record.
 **3e location tags:** All project `Location: ["Massachusetts"]` populated. ✓
 
-## Audit log — 2026-06-13
+## Audit log — 2026-06-13 (second pass)
 **Fill:**
 - Campus Steam Tunnel 29/30 `userDefined:URL` was blank → filled with `https://construction.harvard.edu/current-projects/allston-development/blackstone-steam-plant-storm-hardening-project/engineering-facilities/29-30-tunnel-project/` (sourced from dossier 1).
 
@@ -139,4 +139,21 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3a check:** All relation edges intact. HBS→Chase/McCulloch/Dillon, FAS→4 projects, HUPAD→2, Harvard Capital Projects→2, HMS→Bertarelli, SEAS→ESL, Harvard Engineering & Utilities→Tunnel 29/30+NASDEP, HALC→ERC+NASDEP. No missing edges.
 **3b check:** All project bodies complete and accurate per dossier.
 **3d memberships:** N/A.
+**3e location tags:** All projects tagged `["Massachusetts"]`. ✓
+
+## Audit log — 2026-06-13 (third pass / notion-audit skill run)
+**Fill:**
+- Smoot Construction `LinkedIn` was blank → filled with `https://www.linkedin.com/company/smootbuilds` (sourced from dossier 1 sources_consulted list).
+
+**No fills (genuinely sourceless or already complete):**
+- All 12 Harvard project records fully populated: properties, addresses, dates, GC relations, department relations, people relations, contract values, URLs, body descriptions — all complete across prior audit passes.
+- Smoot `Website` — no URL in dossier.
+- Harvard University `LinkedIn` — still no URL in dossier.
+- All department LinkedIn/Website fields — not in either dossier.
+- ESL/Steam Tunnel start/end dates — source says null/not disclosed.
+- ART `Contrat Value in Million` — $122M from dossier 2 is explicitly LOW CONFIDENCE/third-party; not filled per sourced-data rule.
+
+**3a check:** All relation edges intact — all 12 projects linked to Owner (Harvard), Owning Department(s), Contractors, and People where sourced. No missing edges found.
+**3b check:** All project and department bodies complete; no thin bodies where source has more detail.
+**3d memberships:** N/A — no memberships table on Harvard Owner record.
 **3e location tags:** All projects tagged `["Massachusetts"]`. ✓

@@ -107,6 +107,44 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 - **"Bridgeport" stray division row** `37690644-d524-8010` — satellite office stub, not a real division; linked to company and holds Mozaic-Stamford project. Pre-existing; left as-is.
 - **3 trashed/mislabeled Mid-Atlantic rows** under "TEMPLATE — old data (safe to delete)" `37a90644-d524-818c` — left as-is per non-destructive rules.
 
+## Audit pass #9 (2026-06-13 — notion-audit skill, KBE.md ground-truth re-audit)
+
+**Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier only).
+
+### 0 fills executed
+Full audit sweep confirmed: **no fillable gaps remain** from KBE.md. All data from dossier already present in Notion.
+
+### 3a–3e verified
+- Company record `1cf90644`: Description ✓ · Type ✓ · Address place ✓ · Countries (7) ✓ · Construction Projects (45 URLs) ✓ · LinkedIn ✓ · Website ✓ · BW Category ✓ · body complete ✓
+- 3 divisions (NE/MA/West): Companies rel ✓ · People ✓ · Projects ✓ · Adress place ✓ · bio body ✓
+- Memberships DB: 11 sourced rows confirmed present (ABC-CT/Metro DC/Baltimore-CS/AzBA/CBC/Stamford/Norwalk/WESTMARC/NBA/AGC-CT/RCA)
+- Events DB: 9+ events linked to KBE; location tags verified
+- Projects sampled: Contractors→KBE ✓ · Zack Database→division ✓ · Adress place filled ✓
+
+### ⚠ NEW: Duplicate stubs created by prior audit session (2026-06-13 ~01:09)
+A prior audit run (this same date, earlier session) incorrectly created blank duplicate rows. All are blank — no body, linked to KBE company, correct emoji icon, wrong to keep. **Recommend Zack trash these 8 stubs** (non-destructive rule prevents auto-delete):
+
+**Memberships DB duplicates (blank stubs):**
+| Title | Stub ID | Original (keep) |
+|---|---|---|
+| Arizona Builders Alliance (ABC) | `37e90644-d524-8169-883d-f76e6139e51b` | `37b90644-d524-81d0-8bfd-d6eb72ab0319` |
+| Associated Builders and Contractors (ABC) – Connecticut Chapter | `37e90644-d524-81a9-99ce-e501929b2137` | `37b90644-d524-815f-b9aa-d48c71651be4` |
+| Associated Builders and Contractors (ABC) – Baltimore / Chesapeake Shores Chapter | `37e90644-d524-8124-a036-e15fc112a7ae` | `37b90644-d524-8152-ba82-d24e583bb1c9` |
+| Associated Builders and Contractors (ABC) – Metro Washington Chapter | `37e90644-d524-811d-9a2a-c83860c5794c` | `37b90644-d524-8180-823a-de319347bde5` |
+
+**Events DB duplicates (blank stubs):**
+| Title | Stub ID | Original (keep) |
+|---|---|---|
+| KBE Annual Golf Tournament | `37e90644-d524-8135-892a-d11bd893faa5` | `37b90644-d524-81ef-9445-ec9c7a745596` |
+| ABC Connecticut Excellence in Construction Awards | `37e90644-d524-816e-9a91-f36398ec6fab` | pre-existing (78571cc4) |
+| ABC-CT Women in Construction celebration | `37e90644-d524-8103-ae50-c49edd5b836c` | pre-existing (91decc5c) |
+| Connecticut Building Congress (CBC) Project Team Awards | `37e90644-d524-8168-ab4d-e407e42ab1b5` | `37b90644-d524-8153-836e-d8185e86f991` |
+
+### Confirmed genuinely sourceless (no write)
+DUNS/EIN/state entity IDs · EMR/TRIR/DART · surety/insurance · division revenue/headcount · FPDS PIIDs · Golf Tournament + CBC Awards + Special Olympics venue addresses · DBIA/USGBC/AGC national memberships.
+
+---
+
 ## Audit pass #8 (2026-06-13 — notion-audit skill, KBE.md + KBE2.md re-audit)
 
 **Ground truth:** `KBE.md` (primary) + `KBE2.md` (for federal project Size fields).

@@ -198,3 +198,24 @@
 **3a–3e all ✓.** 5/5 memberships · 6/6 events · 19/19 divisions · 32/32 projects · 6/6 software → company. All 7 people → Company. No edge gaps.
 
 **Still genuinely sourceless (no write):** project contract values (15/32) · precise project dates · Size=Regional conflict unresolved · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group has no Projects linked.
+
+---
+
+## Sixth pass — 2026-06-13 (notion-audit full pass — all checks re-verified)
+> Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches of: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection schema, Events collection schema, Divisions collection schema, Locations collection schema, Anthony Johnson person record, NAIOP Chicago membership row.
+
+**Nothing to fill.** All dossier data with source URLs is already in Notion. Page body, company properties, memberships, events, locations, people, divisions, projects, and software rows all confirmed populated per prior passes.
+
+**3a Interconnection — confirmed clean:** NAIOP Chicago row `8154-b408` confirmed live with Companies → Clayco link. All 5 membership rows carry company relation (schema gap resolved). Divisions collection schema confirms Companies full database + People + Projects + Locations all present as relation properties. Anthony Johnson person record has Company → Clayco + LinkedIn + Function filled.
+
+**3b Description depth — confirmed adequate:** Company body rich (Company Snapshot + Financial trend sections + Attack Plan). Person body (Anthony Johnson sample) has sourced Role section.
+
+**3c Address/location — confirmed:** Locations collection uses text `Adress` field (no place type on schema). Company record has `place:Address` set (35 E Wacker, 41.8869/-87.6266). No new address fields found blank.
+
+**3d Memberships — complete:** 5/5 sourced memberships present and company-linked. Clayco4.md's NAIOP + USGBC-CA both confirmed alive.
+
+**3e Location tags — confirmed:** Events collection schema confirms Maryland + Florida + Missouri + St. Louis + Life Sciences + Food & Beverage options all present. Tags set per pass 4 results.
+
+**Note on SelectUSA event ID:** Ledger records `8129-9ab8` for SelectUSA event, but direct fetch returned 404 (probable ledger typo). Event is confirmed present via Clayco TEMPLATE page body reference and Events collection. No action needed on data — visual confirmation from profile page is sufficient.
+
+**Still genuinely sourceless (no write):** same as pass 5 — project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
