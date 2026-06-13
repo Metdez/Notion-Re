@@ -260,6 +260,19 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 
 ---
 
+## Audit — 2026-06-13 (notion-audit skill pass #9 — automated hourly cycle)
+**Target:** TEMPLATE `37b90644-d524-80b2-b047-ef5e4b3a576a` + company record `1ce90644-d524-809e-ab40-e6e6c0a21c76`.
+**Result: 0 fills. All structural checks PASS. Full clean audit.**
+
+**Verified PASS — no write needed:**
+- TEMPLATE body: 8 divs ✓ · 6 events ✓ · 7 locations ✓ · 24 projects ✓ · 5 memberships ✓ · 417 people ✓ · 8 software ✓ · Attack Plan complete ✓. Matches pass #8 state exactly.
+- Company record `1ce90644`: Description ✓ · Website ✓ · LinkedIn ✓ · Address place (1 Spectacle Pond Rd, Littleton MA, lat 42.5412/lng -71.4773) ✓ · BW Category=[Builder] ✓ · Type=Company ✓ · Size=Regional ✓ · Country (7) ✓ · People (417+) ✓ · Construction Projects (23 forward + 2 backlink = 25 total) ✓ · Owners (12) ✓ · Software (8) ✓ · body full ✓.
+
+**Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
+**Structural deferred (unchanged — Zack deletion required):** People→Division → global KBE-only Divisions DB structural mismatch · dup Orlando location `37c90644-d524-8138-a94d-fe1e0e886ff1` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows.
+
+---
+
 ## Audit — 2026-06-13 (notion-audit skill pass #8 — current session)
 **Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions + 7 locations + 5 memberships + 6 events.
 **Result: 0 fills. All structural checks PASS. Full clean audit.**
@@ -295,6 +308,23 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 - All 7 locations: Companies ✓ · Division ✓ · Adress text ✓ · bodies full ✓.
 - Dossier membership check: disk dossier has 4 (CCIA/FTBA/DBIA-FL/ABC); NSC is 5th from richer in-context dossier, properly sourced — not a gap.
 - Software: disk dossier has 3 (Stratus/GPS/Procore); 5 additional from in-context dossier job-req source — all properly sourced ✓.
+
+**Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
+**Structural deferred (unchanged):** People→Division global DB mismatch · dup Orlando location `37c90644-d524-8138` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows — Zack deletion required.
+
+---
+
+## Audit — 2026-06-13 (notion-audit skill pass #9 — automated hourly cycle)
+**Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions (live-fetched) + membership spot-check.
+**Result: 0 fills. All structural checks PASS. Full clean audit.**
+
+**Live-verified (no write needed):**
+- Company record `1ce90644`: all properties filled ✓ (Description/Website/LinkedIn/Address place/BW Category/Type/Size Regional/Country 7/People 417+/Projects 23+2/Owners 12/Software 8).
+- Operational hub body: 8 divs · 6 events · 7 locations · 24 projects · 5 memberships · 417 people · 8 software · Attack Plan — all ✓.
+- TEMPLATE body: matches operational hub ✓.
+- All 8 divisions live-fetched: NE Region ✓ · SE Region ✓ · Paving LLC ✓ · Mass Ready Mix ✓ · Asphalt LLC ✓ · Corridor Mining ✓ · Energy Division ✓ · Rail/Transit Division ✓. Every division: Companies relation ✓ · Adress place ✓ · body full ✓.
+- Membership spot-check: DBIA-FL `37c90644-d524-81a1` → Companies relation ✓ · Name ✓ · sourced body ✓.
+- 3a–3e checks: interconnection ✓ · description depth ✓ · addresses ✓ · memberships (5) ✓ · location tags (6 events FL/CT/MA) ✓.
 
 **Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
 **Structural deferred (unchanged):** People→Division global DB mismatch · dup Orlando location `37c90644-d524-8138` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows — Zack deletion required.

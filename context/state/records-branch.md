@@ -157,3 +157,10 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): all 7 rows confirmed present (HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville); schema has Adress TEXT + Companies + Division relations ✓
 - Interconnection graph: Company↔People(7+)✓, Company↔Projects(12)✓, Company↔Software(2)✓, Division→Company(4)✓, Branch Civil→People(1)+Projects(5)✓, Project→Contractors(12)✓, Location→Company+Division(7)✓, Event→Company(2)✓, Membership→Company(4)✓
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-13 (automated hourly notion-audit skill pass #2)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record (26890644) properties confirmed; membership search returned all 4 rows (ABC, AGC, DBIA, VTCA) with correct titles and body content.
+- Company record (26890644): Description, Type=Company, Size=Regional, BW Category=[Builder], Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place (37.3271/−79.9822), People (170+), Construction Projects (12), Companies Software (2) ✓
+- Memberships (4): ABC, AGC, DBIA, VTCA — all 4 rows present in live search ✓
+- Dossier re-checked: memberships array = 4 (ABC/AGC/DBIA/VTCA), existing_software = 2 rows (Autodesk BIM + Trimble field), events = 2 (DBIA Award + Golf Tournament), locations = 7 — all consistent with ledger ✓
+- Zero fillable gaps. No writes performed.

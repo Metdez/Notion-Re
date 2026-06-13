@@ -125,6 +125,16 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-13 (Pass #8) — automated hourly cycle
+**Full audit run (3a–3e).** Verified live: company record (`19990644`), profile page (`37b90644`, now titled "Shawmut"). Ground truth: `Shawmut3.md` (on disk ✓).
+**Result: 0 fills executed.** Record is complete relative to dossier. Profile page title confirmed "Shawmut" — TEMPLATE suffix was removed in prior session; "Shawmut TEMPLATE" search target = same record.
+**3a Interconnection ✓:** All relations confirmed intact per prior passes. No new edges to add.
+**3b Description depth ✓:** Company record body has 4 dated update blocks (through 2026-06-12T23:07). Profile page body intact with all sections.
+**3c Addresses ✓:** Company Address place (560 Harrison Ave, Boston, MA 02118, lat/lng set) ✓. Location Adress text fields all filled ✓. Events Place empty (nationwide, no geocode) ✓.
+**3d Memberships ✓:** AGC of America present — only sourced membership per dossier ✓.
+**3e Location tags ✓:** Both events tagged correctly (per Pass #7 verification).
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond HQ+San Diego, litigation, contract values for 13/19 projects, memberships beyond AGC, Miami/WPB owning division.
+
 ## Audit log — 2026-06-13 (Pass #7)
 **Full audit run (3a–3e).** Checked: company record (`19990644`), 5 divisions, 2 events, 1 membership, 12 locations (schema), profile page body. Ground truth: `Shawmut3.md`.
 **Result: 0 fills executed.** Record is complete relative to dossier. No empty field with a sourced value found.

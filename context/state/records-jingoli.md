@@ -125,6 +125,16 @@ Full live re-verify of all 15 records (company DB record + 5 divisions + 2 peopl
 - **Location tags (3e):** Event "ENR NY Region Contractor of the Year" → [New York] ✓.
 - **Duplicates observed (not fixed — destructive):** 2× ENR 2012 event rows (`37b9…81e7`, `37e9…81a9`); 2× HQ location rows (`37b9…810a`, `37e9…8166`).
 
+## Audit pass 2026-06-13 Pass #8 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 dossier projects + 1 location + 1 event) via 3 parallel sub-agents. Ground truth: `Jingoli.md`. No fillable gaps found — every sourced field already populated.
+- **State confirmed:** Company: Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country/Address(lat/lng) all populated; 19 people + 27 projects + 7 software linked. Nuclear Services division: Company+People(Mockaitis)+Projects(11)+Adress(lat/lng) all set. Jingoli Power: Company+People(Karl Miller)+Projects(5) set; Address empty (no lat/lng in dossier — genuinely unfillable). JDC/Goldstar/DCO: Company relation only — address/people/projects all sourceless. Both people: Company relation ✓; Division deferred (no rows in global Divisions DB `37690644`); Karl Miller LinkedIn blank (no source in dossier). All 5 projects: Contractors+Owning Department set; Adress genuinely unfillable (no lat/lng in dossier). Event: [New York] tag ✓.
+- **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis+11 projects+Adress; Jingoli Power→Karl Miller+5 projects; all 5 dossier projects→Contractors+Owning Department; both people→company; Location→company+division; Event→company.
+- **Description-depth (3b) ✓:** all bodies at source-maximum depth.
+- **Address/location (3c):** Company Address place ✓; Nuclear Services Adress ✓; 4 other divisions genuinely unfillable; 5 project Adress genuinely unfillable; Location row Adress text ✓.
+- **Memberships (3d):** none in dossier → none in Notion ✓.
+- **Location tags (3e):** Event "New York" ✓. No other untagged located records.
+- **Duplicates (outstanding — destructive, Zack UI):** ENR 2012 event dup `37e9…81a9` + HQ location dup `37e9…8166` still present.
+
 ## Audit pass 2026-06-13 Pass #7 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
 Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 dossier projects + 1 location + 1 event). Ground truth: `Jingoli.md`. No fillable gaps found — every sourced field already populated.
 - **New state confirmed:** Company now has 19 people linked + 27 construction projects linked + place:Address filled (lat 40.2793 / lng -74.7263); Size = "Regional"; Nuclear Services division place:Adress filled. Jingoli1.md fills from Pass #6 confirmed present.
