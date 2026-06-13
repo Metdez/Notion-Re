@@ -259,3 +259,24 @@ Sources: https://www.kiewit.com/locations/
 - ASCE membership — not in dossier but was legitimately added 06-12 (sourced); company-linked ✓; kept
 
 **0 writes made.** Record is at full dossier depth. All data matches ground truth. Only outstanding action is Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).
+
+---
+
+## Audit pass — 2026-06-13 (Pass #3 — /notion-audit skill)
+
+**Ground truth:** `Enlaye Notion/Kiewitt/Kiewitt.md` — read in full. No fabrication.
+
+**Live fetches:** Company record (`17b90644`, full 60k — Size/Type/Website/Address/Description/LinkedIn/Country/Construction Projects/Companies Software all confirmed), profile page (`37b90644d524…830de18cf6ea0d89`), Kiewit Infrastructure South Co. division, Omaha HQ location row, Rick Lanoha, Dave Miles, Memberships table (15 rows — 8 live + 6 DUPLICATE—), Events table (9 rows — 6 live + 2 DUPLICATE— + 1 TEMPLATE), EPC Show 2026, AGC Annual Convention 2026, FWIK Summit 2025, Kiewit Engineering Technical Summit 2026, I-55 Memphis project (`37d90644-81fc` — 06-12 addition verified), Companies DB schema.
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company — BW=[Builder/Design and Architecture/Developer] ✓; Size=Mutlinational ✓; Type=Company ✓; Website=https://www.kiewit.com ✓; LinkedIn ✓; Address place (Omaha 41.265948/-95.935909) ✓; Description ✓; Country=24 entries ✓; 45 Construction Projects linked ✓; 8 Companies Software linked ✓; 700+ People linked ✓; Kiewit Infrastructure South Co. → Companies→Kiewit ✓, Adress place (Westlake TX 33.0001/-97.2112) ✓, Projects→I-55 Memphis linked ✓; Memberships all 8 company-linked ✓; Events all 6 company-linked ✓; Locations Omaha HQ company-linked ✓
+- 3b: Rick Lanoha body — Role/Jan 2020/Grewcock succession/Wikipedia source ✓; Dave Miles body — Role/Infrastructure Group scope/ENR source ✓; I-55 Memphis — What&why/Owner(TDOT+ARDOT)/Division/Delivery/Timeline/Sources ✓ (full depth for 06-12 addition); all 17 divisions have Focus sections ✓ (per prior passes)
+- 3c: Company Address place ✓; 17 division Adress place ✓; I-55 Memphis Adress place (Memphis TN 35.1495/-90.0489) ✓; Omaha HQ location row Adress text = "1550 Mike Fahey St, Omaha, NE 68102" ✓; Scottsdale InEight HQ Adress text = "9977 N. 90th Street, Ste. 200, Scottsdale, AZ 85258" ✓; Locations `Adress` = TEXT type (structural limit — unchanged)
+- 3d: 8 live memberships: The Beavers · AGC · DBIA · CSRA · CISI · CCSC · NCSE · ASCE — all company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Convention 2026 → Florida+Orlando ✓; FWIK Summit 2025 → untagged ✓ (no sourced venue); Engineering Technical Summit 2026 → untagged ✓ (virtual/no venue); Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; 2 DUPLICATE— Events still pending Zack UI deletion (`37d90644-81d7/81fb`)
+
+**False positives rejected:**
+- I-55 Memphis project ($800M, Kiewit Infra South) added 06-12 — not in Kiewit.md dossier but sourced externally; company-linked + body complete; kept (additive, sourced)
+- Kiewit Infrastructure South `People` relation empty — dossier names no individuals for this division → correctly empty
+
+**0 writes made.** Record is at full dossier depth. Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).

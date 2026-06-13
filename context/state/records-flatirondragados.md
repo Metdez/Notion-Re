@@ -84,6 +84,25 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (fifth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md`. Zero fillable gaps found. Full live verification of all record types: company record, profile page, 21+ projects, 6 divisions, 10 memberships, 2 events, location rows. Every field with sourced data is already present in Notion. No writes made this pass.
+
+### What was verified as already complete (fifth pass)
+- Company record: all properties populated (Description, Website, Size, Address place, BW Category, Country 15 tags, People 160+, Construction Projects 37 URLs, Parent Company, LinkedIn, body Snapshot with UEI/NAICS/ISO/IDIQ/revenue) ✓
+- Profile page: Bio, Snapshot, Attack Plan — complete ✓
+- All 21 original projects: Contractors→FD, Status, Contract Value, Location tags, Date (where sourced), body — complete ✓. LAX APM updated in prior session to $4.9B/In progress/richer body from Flat2.md ✓
+- Additional projects from Flat2.md (later sessions): confirmed present and linked to FD USA division (e.g. Upper San Leandro WTP `37c90644…81f6`) ✓
+- All 6 Divisions: Address place (where available), body, Companies→FD, People, Projects — complete ✓
+- All 10 Memberships: AGC of California, AGC San Diego, Carolinas AGC, The Beavers, CCIB, DBIA, IPI, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston — all have Companies→FD + body + source URLs ✓
+- Both Events: DBIA (Las Vegas, Nov 5 2025, place coords, "Las Vegas" tag, Companies→FD) · Groundbreaking Women (San Diego, Jun 14 2026, place coords, "San Diego" tag, Companies→FD) ✓
+- Gordie Howe Bridge Location: ["Ontario","Michigan"] ✓
+- I-275 Pinellas Location: ["Florida"] ✓; stale body note removed ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source). J.F. White division People relation (no named leader in any dossier).
+
+---
+
 ## Audit — 2026-06-13 (fourth pass)
 **Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. One fillable gap found and resolved.
 
