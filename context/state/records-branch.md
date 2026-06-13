@@ -164,3 +164,15 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Memberships (4): ABC, AGC, DBIA, VTCA — all 4 rows present in live search ✓
 - Dossier re-checked: memberships array = 4 (ABC/AGC/DBIA/VTCA), existing_software = 2 rows (Autodesk BIM + Trimble field), events = 2 (DBIA Award + Golf Tournament), locations = 7 — all consistent with ledger ✓
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-13 (notion-audit skill pass #3)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record (26890644), profile hub page (37b90644…4a13), Bob Wills person record, I-95 project record, Memberships DB search (all 4 rows), Events DB search (both rows), Locations DB search (all 7 rows).
+- Company record (26890644): Description, Type=Company, Size=Regional, BW Category=[Builder], Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place (37.3271/−79.9822), People (170+), Construction Projects (12), Companies Software (2) ✓
+- Profile hub: body complete with Enlaye angle block; all inline tables present ✓
+- People spot-check — Bob Wills: Company, Function=CEO, Function Qualification=[CEO], Location=Virginia, body with role + retirement note ✓
+- Projects spot-check — I-95: Contractors→company, Location=[Virginia], Adress place (38.3277/−77.4741), Date 2019-04-18→2023-08-17, Status=Done, Type=Transportation, body brief + sources ✓
+- Memberships (4): ABC, AGC, DBIA, VTCA — all 4 rows confirmed in DB search ✓
+- Events (2): DBIA Award + Golf Tournament — both rows confirmed in DB search ✓
+- Locations (7): HQ Roanoke, Chantilly, Charlottesville, Hampton Roads-Chesapeake, Richmond, Morrisville, Burnsville NC — all 7 rows confirmed ✓
+- Interconnection graph: fully intact per all fetched records ✓
+- Zero fillable gaps. No writes performed.

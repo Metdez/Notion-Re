@@ -41,7 +41,7 @@
 
 | Build | Status | Scale | ⚠ Outstanding | Ledger |
 |---|---|---|---|---|
-| Harvard | ✅ complete (06-08) · audited 6× (Pass #6 06-13: 0 fills) | 1 owner · 15 projects · 11 GCs · 27 people · 16 depts · skim page | **UI: delete Gund Hall dup `37c90644-d524-813f`** | [records-harvard](context/state/records-harvard.md) |
+| Harvard | ✅ complete (06-08) · audited 7× (Pass #7 06-13: 0 fills) | 1 owner · 15 projects · 11 GCs · 27 people · 16 depts · skim page | **UI: delete Gund Hall dup `37c90644-d524-813f`** | [records-harvard](context/state/records-harvard.md) |
 | Consigli | ✅ complete (06-09, +2 projects 06-09) | 34 projects · 41 people · 21 divisions · profile live · dup cleanup done (18 archived) | manual view filters | [records-consigli](context/state/records-consigli.md) |
 | Clayco | ✅ complete (06-09; 2nd pass 06-10) · **audited 6× (Pass #6 06-13: 1 fill — Size→Mutlinational)** | company ext. · 19 divisions · 32 projects · 7 people (6 new + Miller) · 6 events · 9 locations · sources/software · full interlink | Cheyenne Deep Atomic vs Related Digital — verify · view filters (UI) · 7 location Divisions empty (sourceless) | [records-clayco](context/state/records-clayco.md) |
 | Zachry Group | ✅ complete (06-10) · audited 10× (Pass #10 06-13: 0 fills) | company · 7 divisions · 8 people · 12 projects ($9.25B Golden Pass) | ✅ cross-links fixed + construction dups consolidated (06-10) · **UI: delete empty tombstone `33490644…`** · 2 view filters + People-tab (UI) · ≠ Zachry Construction Corp · zach2/3.md = ZCC (out of scope) | [records-zachry](context/state/records-zachry.md) |
