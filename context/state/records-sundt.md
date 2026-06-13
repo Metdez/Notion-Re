@@ -169,3 +169,32 @@ Full re-fetch: company record (schema + body), all 9 divisions, 4 memberships, 3
 3. Projects Underway view → clear `__TEMPLATE__` filter.
 4. Existing Software view → clear `__TEMPLATE__` filter.
 5. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+## Audit — 2026-06-13 (fifth pass — /notion-audit Sundt)
+Full re-fetch: company record, Memberships table (all rows), Events table (all rows), Locations table (schema + sample rows), Divisions (Advanced Facilities, Building Group, Mining + schema), sample projects (SLC Water, Building Group).
+
+### Workspace growth since 06-13 (fourth pass)
+- **Memberships** — now 5 rows: DBIA · AGC · APWA · Arizona Builders Alliance · **The Beavers** (`37d90644-d524-8118-9bc4-f7a3e08a57b9`, added ~06-12 19:07). All linked to company ✓.
+- **Locations** — now 3 "Tempe Headquarters" rows: original `37b90644…81e6…` (with body) + `37d90644…81a6…` (blank body, same address, added ~06-12 20:06) + `37d90644…81f8…` ("Tempe HQ", added ~06-12 20:18). Two new dups beyond what 06-12 audit flagged.
+- **Company record** confirmed healthy; all relations, properties as recorded.
+
+### Checks performed (3a–3e)
+- **3a Interconnection:** All 9 divisions → company ✓ · Events → company (3) ✓ · Memberships → company (5) ✓ · Locations → company ✓. No new gaps.
+- **3b Description depth:** Divisions confirm rich bodies ✓. All sampled projects have sourced body content ✓.
+- **3c Address/location:** Company Address place still filled ✓. Location `Adress` text field populated on original rows ✓. Division `Adress` (place type) still empty — no coords in dossier, no-geocoding rule → genuinely sourceless.
+- **3d Membership completeness:** Dossier `memberships` array = 1 entry (DBIA only). The 4 additional memberships (AGC, APWA, Arizona Builders Alliance, The Beavers) were added by post-dossier enrichment sessions using sources outside the original dossier — valid enrichment, not dossier-sourced. Dossier is fully covered (DBIA ✓). No new dossier-sourced memberships to add.
+- **3e Location tags:** AGC Safety Award tag "Arizona" ✓. DBIA Milestone — no date/location in dossier; sourceless ✓. Renewables Launch — no venue in dossier; sourceless ✓.
+
+### No new fillable gaps found from dossier
+All dossier-sourced data remains correctly recorded. No empty fields with sourced values were identified.
+- **Result: 0 writes this pass. Record complete per dossier.**
+
+### New duplicates to flag (UI cleanup required)
+- Locations: **"Tempe Headquarters"** — `37d90644-d524-81a6-9e90-d5ef10d12c7e` (blank body, added 06-12 20:06) is a new dup beyond those flagged 06-12. Delete via UI; retain original `37b90644…81e6…`.
+
+### Manual UI steps outstanding (updated 06-13 fifth pass)
+1. **Dup cleanup** — Locations: delete `37d90644-d524-81a6-9e90-d5ef10d12c7e` (new Tempe HQ dup) + previously flagged: `37d90644-d524-81f8-816c-efbc1f976755` (Tempe HQ), 2 Phoenix Ops dups, 2 AGC dups, 1 AzBA dup, 1 APWA dup; orphan Concrete page (`37d90644-d524-810e-9a9c-fc8149ba1b6e`).
+2. **I-10 dup review** — $87M vs $120M same or different project.
+3. Projects Underway view → clear `__TEMPLATE__` filter.
+4. Existing Software view → clear `__TEMPLATE__` filter.
+5. Construction Projects Location → add Idaho, Oregon options for Northwest projects.

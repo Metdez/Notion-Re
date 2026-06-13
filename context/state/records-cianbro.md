@@ -87,6 +87,20 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **Already complete (verified, no writes needed):** Company Address place ✓ · 24 Memberships → Company ✓ · 6 Events (dates, location tags) ✓ · 25 Projects (Contractors + Owning Department) ✓ · 13 Divisions → Company ✓ · Interlinks verified ✓ · CMiC added as 8th software (post-run-2, sourced from job postings) ✓ · Charlie Cianchette (A/Z President) added as people + linked to A/Z division ✓.
 - **Post-run-2 additions (from live Notion, not in prior ledger):** CMiC software record `37d90644-d524-81e8-85f6-ce6c26772e0e` · Charlie Cianchette people `37d90644-d524-813d-a8bd-cdfac41ba8f4` · Multiple 37c-prefix People records (sourced externally, all → Cianbro company). These appear genuine; dedup checks showed no double-records.
 
+## Audit fills (2026-06-13 — notion-audit run #4)
+**State as of 2026-06-13 audit (full live re-fetch verify):**
+- **1 cosmetic fix:** NSPE membership body had a duplicate "Member — [mwmca.org/...]" line (leftover from run #2 insert + original body). Removed the duplicate; body now reads clean single line with MWMCA source.
+- **All prior fills confirmed in Notion:**
+  - Company Address place ✓ (44.7831, -69.3836, "101 Cianbro Square, Pittsfield, ME 04967")
+  - All 13 Divisions → Companies relation ✓; all 7 subsidiaries Adress place filled ✓
+  - 25 Events + Location tags (4 of 6 tagged; ABC Top Performers + ConExpo + AGC Maine Awards missing dates — genuinely unfillable); 6th event Junior Achievement 2024 confirmed ✓
+  - 25 Memberships → Company ✓ (NSPE deduped this run)
+  - 25 Projects → Contractors + Owning Department ✓
+  - 14 Locations → Company + Division ✓
+  - 8 Software records → Company ✓
+- **No new fillable gaps found** per Cianbro.md dossier as of 2026-06-13.
+- **Infrastructure Projects relation shows 1 entry** in division view — this is a Notion view filter issue (`__TEMPLATE__` filter still active on Projects Underway view), not a data gap. All 14+ infrastructure projects have Owning Department → Infrastructure set correctly.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).
