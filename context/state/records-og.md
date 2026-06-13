@@ -76,11 +76,169 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 ## Audit round 3 (2026-06-10, /notion-audit with OD.md)
 **0 fills** — all existing records complete against OG1.md scope. Full record audit performed: company record, 7 divisions, 12 projects, 5 people, 3 events, 4 memberships, 12 locations, 4 software rows — all fields verified live against Notion. No empty fillable gaps found.
 
-**New data in OD.md (second research pass, NOT yet loaded):**
-- 13 additional projects: AirTrain Newark $1.18B (Heavy Civil JV w/ Tutor Perini), Darien Schools $101.5M JV (A.P. Construction, Building), UConn South Campus $75M (Building), Farmington HS 236k SF (Building), plus 9 others sourced to ogind.com project pages
-- 7 new named division leaders: Ryan Oneglia (VP Heavy Civil), Bradford 'Brad' Oneglia (VP Asphalt), Thomas J. 'TJ' Oneglia (VP Materials), Kara Oneglia (VP Mason), Jason Travelstead (EVP Building), Christina Oneglia Rossi (VP Business Dev), Tyson J. Burk (contact, Industrial/Mfg)
-- 4 additional Mason/Materials location rows not in current 12-row set: East Lyme showroom, Hartford showroom, Waterbury showroom, Torrington Mason Supply
-- These require a separate /notion-load pass — not created during this audit (additive-only, existing records only)
+**New data in OD.md (second research pass, NOT yet loaded at time of round 3):**
+- 13 additional projects, 7 new named leaders, 4 new Mason location rows — flagged for /notion-load pass.
+
+## Audit round 6 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+Live verification confirmed: company record (all properties populated), profile page body complete, 7 divisions complete, 22 projects present and linked (Contractors + Owning Department set), 12+ named People linked (Company + Division relations), 4 OG1.md memberships + 3 OD.md memberships present (6 dedup-needed rows outstanding), 16 location rows confirmed (OD.md Mason locations loaded), 4 software rows complete.
+
+**Correction still pending (not changed — requires Zack decision):** Bridgeport Mason Showroom address "240 Bostwick Ave" (OG1.md/BBB source) vs "325 Hancock Ave" (OD.md / mason.ogind.com — more authoritative). This is a correction, not an additive fill.
+
+**Outstanding for Zack (unchanged from rounds 4-5):**
+- Size=Local vs Regional conflict on company CRM record
+- 3 duplicate membership pairs (37d-prefix rows): AGC National, NAPA, CMAA CT Chapter
+- LinkedIn/Apollo bulk import People dupes (37d-prefix, 100+ thin rows linked to O&G)
+- 3 view TEMPLATE filters still showing in profile page (Projects Underway, Existing Software, Memberships "View of People")
+
+---
+
+## Audit round 5 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+**New flag:** OD.md gives Bridgeport Mason address as "325 Hancock Ave" (mason.ogind.com — more authoritative); existing row uses "240 Bostwick Ave" (OG1.md/BBB). This is a **correction** not an additive fill — flagged for Zack. Not changed this pass.
+
+**Outstanding (same as round 4):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix) · LinkedIn import People dupes · 3 view TEMPLATE filters.
+
+---
+
+## Audit round 4 (2026-06-12, /notion-audit — OD.md data check)
+**0 fills** — OD.md data was fully loaded by an intervening session (between round 3 and round 4). All records verified live.
+
+**What was loaded (by a post-round-3 session, not recorded):**
+- 22 Construction Projects now linked on company record (was 12 after round 3) — OD.md projects confirmed present: AirTrain Newark ($1.18B), Darien Schools ($101.5M JV w/ A.P. Construction), UConn South Campus ($75M), Farmington HS, Winsted Health Center ($30M), USJ Pope Pious XII Library ($10M), Middlefield Memorial School ($63M), Cricket Valley Energy Center, SMART Technology Solution, and others.
+- 7 OD.md division leaders created in People DB: Ryan Oneglia (VP Heavy Civil) `37b90644-d524-81c4`, Bradford 'Brad' Oneglia (VP Asphalt) `37b90644-d524-8179`, Thomas J. 'TJ' Oneglia (VP Materials) `37b90644-d524-81ac`, Kara Oneglia (VP Mason) `37b90644-d524-819c`, Jason Travelstead (EVP Building) `37b90644-d524-8162`, Christina Oneglia Rossi (VP Business Dev) `37b90644-d524-81d1`, Tyson J. Burk (contact, Industrial/Mfg) `37b90644-d524-81f6`. All linked to O&G company record + respective divisions.
+- 4 new Mason location rows: East Lyme `37b90644-d524-8192` · Hartford `37b90644-d524-81fd` · Waterbury `37b90644-d524-814a` · Torrington Mason Supply `37b90644-d524-813c`. All linked to company + Mason division. Addresses filled (text field).
+- 3 additional Memberships: AGC National `37c90644-d524-81e8` · NAPA `37c90644-d524-81da` · CMAA CT Chapter `37c90644-d524-8140`. All linked → O&G.
+
+⚠ **DUPLICATES detected — flag for Zack (dedup decisions needed):**
+
+**Memberships (3 duplicate pairs, all linked to O&G):**
+- AGC National: `37c90644-d524-81e8` (2026-06-11) AND `37d90644-d524-8158` (2026-06-12) — identical content
+- NAPA: `37c90644-d524-81da` (2026-06-11) AND `37d90644-d524-81ec` (2026-06-12) — identical content
+- CMAA CT Chapter: `37c90644-d524-8140` (2026-06-11) AND `37d90644-d524-8135` (2026-06-12) — identical content
+→ Delete the 37d-prefix rows in each pair (they are the later duplicates). Decision for Zack.
+
+**People (duplicates from LinkedIn/Apollo bulk import ~2026-06-12):**
+- Ryan Oneglia: `37b90644-d524-81c4` (OD.md load, has Division) AND `37b90644-d524-8182` (second OD.md load) — identical content; keep `81c4`, delete `8182`
+- Raymond R. Oneglia: `37b90644-d524-8124` (original, full bio) AND `37d90644-d524-81cc` "Raymond Oneglia" (LinkedIn import, thin) — keep `8124`, delete `81cc`
+- Gregory Oneglia (Vice Chairman): `37b90644-d524-816f` AND `37d90644-d524-8133` "Greg Oneglia" (LinkedIn) — keep `816f`, delete `8133`
+- T.J. Oneglia: `37b90644-d524-81ac` "Thomas J. 'TJ' Oneglia" (OD.md, full) AND `37d90644-d524-8156` "T.J. Oneglia" (LinkedIn) — keep `81ac`, delete `8156`
+- Many more 37d-prefix LinkedIn imports may be present on the company People relation (company has 100+ People linked as of 2026-06-12 — bulk import). These are NOT O&G-specific audit scope — flag to Zack as a broader dedup/data-quality issue.
+→ **Dedup of 37d-prefix LinkedIn People is an open task for Zack (UI or bulk operation).**
+
+**Left empty (unchanged from OG1.md gaps — no source):** EMR/TRIR/DART · bonding/surety · insurance carriers · UEI/CAGE/DUNS/EIN · CT SoS entity ID · license numbers · division revenue/headcounts · contract types for most projects · permits/APNs/FEMA/seismic · New Britain fuel-cell owner · union status.
+
+## Manual UI steps for Zack (updated 2026-06-12)
+1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
+2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
+3. **Memberships "View of People" tab** — repoint leftover company filter to O&G or remove.
+4. **Duplicate Memberships** — delete 3 duplicate 37d-prefix rows: AGC National `37d90644-d524-8158`, NAPA `37d90644-d524-81ec`, CMAA CT Chapter `37d90644-d524-8135`.
+5. **Duplicate People** — delete: Ryan Oneglia `37b90644-d524-8182`; LinkedIn-import dupes `37d90644-d524-81cc` (Raymond), `37d90644-d524-8133` (Greg), `37d90644-d524-8156` (T.J.). Broader 37d-prefix LinkedIn import may have 100+ thin People rows linked to O&G — review and dedup in bulk.
+6. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
+7. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
+## Audit round 15 (2026-06-13, /notion-audit — automated hourly cycle)
+**0 fills** — convergence confirmed via ledger cross-check (14 prior 0-fill passes) + live spot-check of company CRM record (`1cf90644`): all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 6 Software rows). No new data in either dossier. All 3a–3e confirmed per rounds 12–14.
+
+**No changes made this pass.** All dossier scope fully loaded.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National `37d90644-d524-8158` / NAPA `37d90644-d524-81ec` / CMAA CT `37d90644-d524-8135`) · LinkedIn/Apollo People dupes (~100+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave) · 3 view TEMPLATE filters (UI).
+
+---
+
+## Audit round 14 (2026-06-13, /notion-audit — OG1.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md dossier.
+
+Live verification confirmed: company CRM record (`1cf90644`) — all key properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 6 Software rows). Profile page body complete. Building Construction division — Companies + Projects (14 linked) + People (Mednick, Travelstead, Rossi) relations set; Adress/place set; body sourced. Amtrak CT River Bridge project — Contractors→O&G, Owning Department→Heavy Civil, Value=1300, Status=In Progress, Date=2024-09-01, body complete. Memberships table: 7 unique memberships present (CCIA, AGCCT, CT Road Builders, The Moles, AGC National, NAPA, CMAA CT) + 3 known 37d-prefix dup pairs (unchanged — for Zack). Locations data source schema confirmed (Location + Adress text + Division + Companies relation).
+
+**No changes made this pass.** All OG1.md scope fully loaded.
+
+**Outstanding (all for Zack — unchanged from rounds 4–13):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National `37d90644-d524-8158` / NAPA `37d90644-d524-81ec` / CMAA CT `37d90644-d524-8135`) · LinkedIn/Apollo People dupes (~100+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave) · 3 view TEMPLATE filters (UI).
+
+---
+
+## Audit round 13 (2026-06-13, /notion-audit — OG1.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md dossier.
+
+Live verification confirmed: company record (`1cf90644`) — all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 6 Software rows). Profile page body complete. Building Construction division — Companies + Projects (14 linked) + People (Mednick, Travelstead, Rossi) relations set; place/Adress set; body sourced. Amtrak CT River Bridge project — Contractors→O&G, Owning Department→Heavy Civil, Value=1300, Status=In Progress, Date=2024-09-01, body complete. Events schema confirmed: 3 rows, Location tags schema includes "New England" + "Connecticut" + "Plantsville" options. Memberships schema confirmed (Name + Companies relation). David Oneglia People record: Company→O&G set, Function=President, body sourced. Locations data source schema confirmed (Location + Adress text + Division + Companies relation).
+
+**No changes made this pass.** All OG1.md scope is fully loaded; no empty fillable gaps found.
+
+**Outstanding (all for Zack — unchanged from rounds 4–12):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National/NAPA/CMAA CT) · LinkedIn/Apollo People dupes (~100+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave) · 3 view TEMPLATE filters (UI).
+
+---
+
+## Audit round 12 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+Live verification confirmed: company record (`1cf90644`) — all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 6 Software rows). Profile page body complete. All 7 divisions present. 22 projects linked (Contractors + Owning Department set). 12+ named People linked. 7 unique memberships + 3 dup pairs (unchanged). 3 Events with Location tags.
+
+**No changes made this pass.** All dossier scope fully loaded.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National/NAPA/CMAA CT) · LinkedIn/Apollo People dupes (~100+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave) · 3 view TEMPLATE filters (UI).
+
+---
+
+## Audit round 11 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+Live verification confirmed: company record (`1cf90644`) — all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 4 Software rows). Profile page body complete. Building Construction division — Companies + Projects (14 linked) + People (Mednick, Travelstead, Rossi) relations set; place/Adress set; body sourced. Amtrak CT River Bridge project — Contractors→O&G, Owning Department→Heavy Civil, Value=1300, Status=In Progress, Date=2024-09-01, body complete. Events schema confirmed: 3 rows, Location tags schema includes "New England" option. Memberships schema confirmed (Name + Companies relation). All 7 divisions present; all 22 projects linked.
+
+**No changes made this pass.** All dossier scope fully loaded.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National/NAPA/CMAA CT) · LinkedIn/Apollo People dupes (~100+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave).
+
+---
+
+## Audit round 11 (2026-06-13, /notion-audit — automated hourly cycle)
+**0 fills** — convergence confirmed via ledger cross-check (10 prior 0-fill passes). All 3a–3e confirmed per round 10.
+
+---
+
+## Audit round 10 (2026-06-13, /notion-audit — OG1.md + OD.md automated hourly cycle)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+Live verification confirmed: company record (`1cf90644`) — all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 4 Software). Profile page body complete. All 7 division rows present (Construction Materials row `8108-9362` confirmed — prior sub-agent false positive). All 16 location rows present (full count confirmed via direct search). All 25 projects linked (spot-checked Amtrak, I-91/I-691, Manchester Library — fully populated). Memberships: 7 unique + 3 dup pairs (unchanged). Events: 3 rows, all Location-tagged and Companies-linked.
+
+**False positives rejected:** (1) "O&G Construction Materials division row missing" — row exists at `37b90644-d524-8108-9362-d8d505cfa3ce`; sub-agent pagination limit caused false negative. (2) "Corporate HQ missing Division relation" — intentional per dossier (`owning_division` = "" / parent-company-only); not a fillable gap.
+
+**Genuinely sourceless (no dossier data):** Power & Energy division People relation (leader = null in both dossiers) · Mason/Industrial/Asphalt Projects relations (no projects listed for those divisions in either dossier) · Apollo/LinkedIn import People (37d-prefix): Division + body fields — those stubs are not in any dossier scope; not auditable from ground truth.
+
+**No changes made this pass.** All dossier scope fully loaded.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National/NAPA/CMAA CT) · LinkedIn/Apollo People dupes (~20+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave).
+
+---
+
+## Audit round 9 (2026-06-13, /notion-audit — OG1.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md.
+
+Live verification confirmed: company record (`1cf90644`) — Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects linked, 4 Software rows all present. Profile page body complete. Building Construction division — Companies + Projects (14 linked) + People (3 incl. Mednick, Travelstead, Rossi) relations set; place/Adress set; body sourced. Asphalt Paving division — Companies + People (Brad Oneglia) relations set; place set; body sourced. Amtrak CT River Bridge project — Contractors→O&G, Owning Department→Heavy Civil, Value=1300, Status=In Progress, Date=2024-09-01, body complete. Memberships data source schema confirmed (Name + Companies relation). Locations data source schema confirmed (Location + Adress text + Division + Companies relation).
+
+**No changes made this pass.** All OG1.md scope is fully loaded; no empty fillable gaps found.
+
+**Outstanding (all for Zack — unchanged from rounds 4–8):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix) · LinkedIn/Apollo People dupes · Bridgeport Mason address conflict.
+
+---
+
+## Audit round 8 (2026-06-13, /notion-audit — OG1.md automated hourly cycle)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md.
+
+Live verification confirmed: company record (`1cf90644`) — all key properties present (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects linked, 4 Software rows). Profile page body complete. Building Construction division — Companies + Projects + People relations set, address/place set, body sourced. Amtrak CT River Bridge project — Contractors→O&G, Owning Department→Heavy Civil, Value=1300, Status=In Progress, Date=2024-09-01, body complete. Divisions schema confirmed (Division+Companies+Projects+People+Adress). Memberships schema confirmed (Name+Companies relation).
+
+**No changes made this pass.** All OG1.md scope is fully loaded; no empty fillable gaps found.
+
+**Outstanding (all for Zack — unchanged from rounds 4–7):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix) · LinkedIn/Apollo People dupes · Bridgeport Mason address conflict.
+
+---
+
+## Audit round 7 (2026-06-13, /notion-audit — OG1.md re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md.
+
+Live verification: company record (all properties populated), profile page body complete, 7 divisions (Companies + Projects + People relations set; address/place on each; bodies sourced), 22 projects (Contractors + Owning Department set; spot-checked Amtrak CT River Bridge — complete), 12+ named People (Company + Division relations set; role bodies sourced), 7 memberships (CCIA, AGCCT, CT Road Builders, The Moles, AGC National, NAPA, CMAA CT Chapter — all linked → O&G; bodies sourced), 16 location rows (Adress text set; Division linked where applicable; Companies → O&G on all rows), 3 events (Date, Location tags, Place all set; Companies → O&G), 4 software rows complete.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix): AGC National `37d90644-d524-8158-bbac-dc8e03f0e0d7` / NAPA `37d90644-d524-81ec-89b4-e28bba80eeab` / CMAA CT `37d90644-d524-8135-8336-c64493d6d45e` · LinkedIn/Apollo People dupes (37d-prefix bulk import) · Bridgeport Mason address conflict (OG1.md: 240 Bostwick Ave vs OD.md: 325 Hancock Ave — correction needed, not additive fill).
 
 ## Manual UI steps for Zack
 1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
@@ -88,3 +246,6 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 3. **Memberships "View of People" tab** — repoint leftover company filter to O&G or remove.
 4. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
 5. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
+6. **Duplicate memberships** — delete 3 duplicate 37d-prefix rows: AGC National `37d90644-d524-8158`, NAPA `37d90644-d524-81ec`, CMAA CT `37d90644-d524-8135`.
+7. **Duplicate People** — LinkedIn/Apollo bulk import created 37d-prefix thin rows; review and dedup in bulk.
+8. **Bridgeport Mason address** — 240 Bostwick Ave (OG1.md/BBB) vs 325 Hancock Ave (OD.md/mason.ogind.com — more authoritative); correct in UI.

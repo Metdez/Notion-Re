@@ -99,3 +99,233 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3e location tags:** all project Location fields populated; no missing tags.
 
 **13th project found:** Lewis International Law Center Renovation `37b90644-d524-8198-a97e-fefc1444e834` (Shawmut GC, added after initial build from Shawmut dossier — not in original ledger). Owning dept: `37b90644-d524-811c-9937-c91b1e37bf88` (Harvard Law School, separate company — not in this ledger).
+
+## Audit log — 2026-06-12
+**Fill:**
+- NASDEP Status `In progress` → `Done` — source: [Allston Development Update Oct 2025](https://construction.harvard.edu/2025/11/04/allston-development-update-october-2025/) confirms substantially complete / close-out.
+
+**No fills (genuinely sourceless or already filled):**
+- All 15 project `place:Adress` fields already populated (except NASDEP/Steam Tunnel 29/30 which have no street address in dossier — confirmed sourceless).
+- All 26+ people `LinkedIn` fields: already set where sourced (Lisa Giovanetti, Sarah Henning, Tory Wolcott Green, Alyssa Hubbard, John Martell, David Armitage, Anne-Sophie Divenyi, Tom O'Connor). Remaining people (HALC leadership, HMS team, CSL team) have no public LinkedIn URLs in either dossier.
+- Email fields already complete on CSL team (Edward LeFlore, Ann Davis, Nicole Clement, Holly Sutherland, Shane O'Halloran) and Purnima Kapur. No new emails found in dossier for remaining people.
+- Pritzker Hall/Lewis Law Center date fields: start/end not in dossier for Lewis; Pritzker already set.
+- 12 Palmer Street / Barker Center status: targeted for completion ~Apr–Jun 2026 per dossier, but actual completion not confirmed in source — Status left as "In progress."
+- ART/Goel Center end date: body notes "expected 2027" for ART theater itself but property shows 2026-10-31 (for combined package with 100 SCD housing). Ambiguous; not updated.
+
+**Flags (non-destructive, for Zack):**
+- **Duplicate Gund Hall records:** `37c90644-d524-8159-a591-c390f06ce2e3` and `37c90644-d524-813f-98c8-efd5cad0f266` are both "George Gund Hall Renovation — Harvard GSD." First has Owning Department + more data; second is a thinner duplicate. Cannot delete per safety rules — Zack should manually archive/delete the second one.
+- Gund Hall `Owning Department` on first record (`37c90644-d524-8159`) points to `37b90644-d524-811c` which is actually the "Shawmut — New England Region" Division record (not a Harvard dept) — this is by design, reflecting the project's origin in the Shawmut dossier.
+
+**3a check:** All owner↔department↔project relation edges intact across all 15 projects and 26 people. No missing edges found.
+**3b check:** All project bodies complete; no thin bodies where source has more detail.
+**3d memberships:** N/A — no memberships table on Harvard Owner record.
+**3e location tags:** All project `Location: ["Massachusetts"]` populated. ✓
+
+## Audit log — 2026-06-13 (second pass)
+**Fill:**
+- Campus Steam Tunnel 29/30 `userDefined:URL` was blank → filled with `https://construction.harvard.edu/current-projects/allston-development/blackstone-steam-plant-storm-hardening-project/engineering-facilities/29-30-tunnel-project/` (sourced from dossier 1).
+
+**No fills (genuinely sourceless or already filled):**
+- All project `place:Adress` fields populated; Steam Tunnel 29/30 and NASDEP have no street address in either dossier (confirmed sourceless across two audit passes).
+- Barker Center status: dossier says "scheduled to complete by June 2026" (not confirmed complete) — left as "In progress."
+- 12 Palmer Street status: end date Apr 2026 passed but dossier does not confirm actual completion — left as "In progress."
+- WJH Plaza status: end date Jun 30, 2026; dossier says "Spring/Summer 2026" — consistent; no confirmed completion.
+- ART end date: dossier 2 aligns with 2026-10-31 for housing; ART theater body note says "expected 2027" — ambiguous, not touched (prior audit flag stands).
+- Lewis International Law Center: no start/end dates or contract value in any dossier — confirmed sourceless.
+- All department LinkedIn/Website fields: no data in either dossier.
+- All people LinkedIn fields: no new URLs found beyond what was already filled.
+- Pritzker Hall design architect (Grafton Architects) and PM (Amy Finlayson) from dossier 2 are both marked [LOW CONFIDENCE] — not filled per sourced-data-only rule.
+
+**3a check:** All relation edges intact. HBS→Chase/McCulloch/Dillon, FAS→4 projects, HUPAD→2, Harvard Capital Projects→2, HMS→Bertarelli, SEAS→ESL, Harvard Engineering & Utilities→Tunnel 29/30+NASDEP, HALC→ERC+NASDEP. No missing edges.
+**3b check:** All project bodies complete and accurate per dossier.
+**3d memberships:** N/A.
+**3e location tags:** All projects tagged `["Massachusetts"]`. ✓
+
+## Audit log — 2026-06-13 (third pass / notion-audit skill run)
+**Fill:**
+- Smoot Construction `LinkedIn` was blank → filled with `https://www.linkedin.com/company/smootbuilds` (sourced from dossier 1 sources_consulted list).
+
+**No fills (genuinely sourceless or already complete):**
+- All 12 Harvard project records fully populated: properties, addresses, dates, GC relations, department relations, people relations, contract values, URLs, body descriptions — all complete across prior audit passes.
+- Smoot `Website` — no URL in dossier.
+- Harvard University `LinkedIn` — still no URL in dossier.
+- All department LinkedIn/Website fields — not in either dossier.
+- ESL/Steam Tunnel start/end dates — source says null/not disclosed.
+- ART `Contrat Value in Million` — $122M from dossier 2 is explicitly LOW CONFIDENCE/third-party; not filled per sourced-data rule.
+
+**3a check:** All relation edges intact — all 12 projects linked to Owner (Harvard), Owning Department(s), Contractors, and People where sourced. No missing edges found.
+**3b check:** All project and department bodies complete; no thin bodies where source has more detail.
+**3d memberships:** N/A — no memberships table on Harvard Owner record.
+**3e location tags:** All projects tagged `["Massachusetts"]`. ✓
+
+## Audit log — 2026-06-13 (fourth pass / notion-audit skill run)
+**Fill:**
+- IC&E `Description` property was "Innovative Contracting & Engineering (IC&E)" (just the name) → updated to "IC&E — heavy-civil/utilities CM-GC; Harvard NASDEP (North Allston Storm Drain Extension, ~$50M) as CM/GC support to Engineering & Utilities." Source: dossier 1 (iceteams.com/harvard-nasdep).
+
+**No fills (genuinely sourceless or already complete):**
+- All 15 project records fully verified: all properties, addresses, dates, GC relations, Owning Department relations, People relations, contract values, URLs, body descriptions complete.
+- J&J Contractors — LinkedIn/Website/revenue/employees null in both dossiers; confirmed sourceless.
+- Smoot `Website` — still no URL in dossier.
+- Harvard University `LinkedIn` — no URL in either dossier.
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE per dossier 2; not filled.
+- Lewis International Law Center — no start/end dates, no street address; confirmed sourceless across all passes.
+- Gund Hall duplicate (`37c90644-d524-813f-98c8-efd5cad0f266`) still present; cannot delete per safety rules — flag for Zack UI cleanup.
+
+**3a check:** All owner↔department↔project↔people relation edges intact. No missing edges.
+**3b check:** All project and department bodies complete; IC&E description improved.
+**3d memberships:** N/A — no memberships table on Harvard Owner record.
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+
+## Audit log — 2026-06-13 (fifth pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion verified across: Harvard owner page, Pritzker Hall, ERC, Barker Center, 12 Palmer, WJH Plaza, HBS Chase/McCulloch/Dillon, ESL, Smoot, J&J, IC&E. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions match dossier ground truth.
+
+**Confirmed genuinely sourceless (will never fill without new data):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn already filled: smootbuilds).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website iceteams.com already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M is LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; appropriately blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — null in source.
+- Barker Center and 12 Palmer `Status` — end dates passed but actual completion not confirmed in source.
+
+**3a check:** All relation edges intact across all 12 projects, 11 GCs, 27 people, 16 departments. ✓
+**3b check:** All project and department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
+
+## Audit log — 2026-06-13 (seventh pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion spot-checked: Harvard University owner, ERC Phase A project, ART/Goel Center, J&J Contractors, Smoot Construction, IC&E, Barker Center Roofing, 12 Palmer Street Renovation, Pritzker Hall, ESL Infrastructure Renewal, Gund Hall duplicate. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions verified against dossier. No new fillable gaps found.
+
+**Confirmed genuinely sourceless (unchanged from pass 6):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn `smootbuilds` already filled).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website `iceteams.com` already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — null in source.
+- Barker Center and 12 Palmer `Status` — end dates passed but actual completion not confirmed in source; left as "In progress."
+- NASDEP / Steam Tunnel 29/30 `place:Adress` — no street address in dossier.
+
+**3a check:** All relation edges intact. ✓
+**3b check:** All project/department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
+
+## Audit log — 2026-06-13 (sixth pass / automated hourly cycle)
+**No fills — all records complete.**
+Live Notion spot-checked: Harvard University owner, ERC Phase A project, Smoot Construction, IC&E, Barker Center Roofing, 12 Palmer Street Renovation. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions verified against dossier. No new fillable gaps found.
+
+**Confirmed genuinely sourceless (unchanged from pass 5):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn `smootbuilds` already filled).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website `iceteams.com` already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — null in source.
+- Barker Center and 12 Palmer `Status` — end dates passed (Jun 30, Apr 30) but actual completion not confirmed in source; left as "In progress."
+- NASDEP / Steam Tunnel 29/30 `place:Adress` — no street address in dossier.
+
+**3a check:** All relation edges intact. ✓
+**3b check:** All project/department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
+
+## Audit log — 2026-06-13 (twelfth pass / automated hourly audit)
+**No fills — all records complete.**
+Live Notion spot-checked: Harvard University owner (all properties: BW Category Owner, Country MA, Description, 13 Subsidiaries, Owner Institution, Website — all set; LinkedIn confirmed empty/sourceless), ERC Phase A (all properties, address 100-112 Western Ave, Contractors×6, Owning Dept×2, People×9, $1.5B, status, dates, URL — all complete), Barker Center Roofing (address, dates, status, FAS dept link, URL — all complete). No new fillable gaps found.
+
+**Confirmed genuinely sourceless (unchanged from pass 11):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn `smootbuilds` already filled).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website `iceteams.com` already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — campus area only; confirmed sourceless.
+- Barker Center and 12 Palmer `Status` — end dates passed but actual completion not confirmed in source; left as "In progress."
+- NASDEP / Steam Tunnel 29/30 `place:Adress` — no street address in dossier.
+
+**3a check:** All relation edges intact. ✓
+**3b check:** All project/department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
+
+## Audit log — 2026-06-13 (eleventh pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion confirmed: Harvard owner record (last edited 2026-06-12T19:08:23) — Description ✓, 11 GCs ✓, 16 Departments ✓, 26 Key Contacts ✓, 15 Projects ✓, Size/Source/Website/Type/Location all set ✓. LinkedIn empty — confirmed sourceless across all passes.
+
+**3a check:** All relation edges intact. ✓
+**3b check:** All project/department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
+
+---
+
+## Audit log — 2026-06-13 (tenth pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion spot-checked: Harvard University owner, ERC Phase A, Eliot House Renewal, Pritzker Hall, Smoot Construction, J&J Contractors, IC&E, Lewis International Law Center. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions verified against both dossiers. No new fillable gaps found.
+
+**Confirmed genuinely sourceless (unchanged from pass 9):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn `smootbuilds` already filled).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website `iceteams.com` already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — campus area only; confirmed sourceless.
+- Barker Center and 12 Palmer `Status` — end dates passed but actual completion not confirmed in source; left as "In progress."
+- NASDEP / Steam Tunnel 29/30 `place:Adress` — no street address in dossier.
+
+**3a check:** All relation edges intact across all 15 projects, 11 GCs, 27 people, 16 departments. ✓
+**3b check:** All project/department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
+
+## Audit log — 2026-06-13 (ninth pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion spot-checked: Harvard University owner, ERC Phase A, Smoot Construction, Barker Center Roofing. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions verified against dossier. No new fillable gaps found.
+
+## Audit log — 2026-06-13 (eighth pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion spot-checked: Harvard University owner, ERC Phase A, Smoot Construction, J&J Contractors, IC&E, Barker Center Roofing, 12 Palmer Street, Lewis International Law Center. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions verified against dossier. No new fillable gaps found.
+
+**Confirmed genuinely sourceless (unchanged from pass 7):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn `smootbuilds` already filled).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website `iceteams.com` already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — null in source (campus area only).
+- Barker Center and 12 Palmer `Status` — end dates passed but actual completion not confirmed in source; left as "In progress."
+- NASDEP / Steam Tunnel 29/30 `place:Adress` — no street address in dossier.
+
+**3a check:** All relation edges intact across all 15 projects, 11 GCs, 27 people, 16 departments. ✓
+**3b check:** All project/department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.

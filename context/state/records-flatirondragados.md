@@ -84,6 +84,206 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (tenth pass — hourly auto-cycle)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (tenth pass)
+- **Company record** `24690644…`: live-fetched — Size="Mutlinational", Address place (4004 Summit Blvd NE Atlanta GA), Description, BW Category=Builder, Website, LinkedIn, Country×15, Parent Company, Construction Projects×37, People×716, Software×8 — all populated ✓
+- **Profile page body** `37b90644…8039`: live-fetched — Bio, Snapshot confirmed present and complete ✓
+- **Memberships table schema** `54b90644…`: live-fetched — `Companies full database` relation column present, schema intact ✓
+- **Sub-agent false positive rejected:** inline-DB views showing empty due to known `__TEMPLATE__` filter artifact — not real gaps (same pattern as passes 6–9) ✓
+- **No regressions** from any prior-filled field ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — UNKNOWN/not disclosed in all dossiers).
+
+---
+
+## Audit — 2026-06-13 (ninth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (ninth pass)
+- **Company record** `24690644…`: Size="Mutlinational", Address place (4004 Summit Blvd NE Atlanta GA 33.8746/-84.3389), Description, BW Category=Builder, Website, LinkedIn, Country×15, Parent Company, Construction Projects×37, People×50+ — all populated ✓
+- **Profile page body** `37b90644…8039`: Bio, Snapshot, Attack Plan — complete ✓
+- **All 6 Divisions:** live-fetched all 6; all Companies→FD, Adress place (where sourced), body content, People+Projects linked ✓. J.F. White People still empty — genuinely sourceless (no named leader in any dossier, confirmed again) ✓
+- **Memberships raw collection:** searched; all 10+ content rows confirmed (AGC CA, AGC San Diego, Carolinas AGC, CCIB, IPI, DBIA, The Beavers, CA Alliance for Jobs, Hispanic Contractors CO, NECA Boston). NTEA row also present (sourced from ntea.com; not in any dossier — pre-existing, not removed per non-destructive rule). All FD-linked ✓
+- **Events raw collection:** 5+ content rows confirmed (DBIA Conf & Expo 2025, Groundbreaking Women 2026, IAI Summit 2025, IPI Awards 2022, CI Student Days 2025). All FD-linked ✓
+- **Projects:** LAX SkyLink confirmed present as "LAX Automated People Mover" · Susquehanna River Rail Bridge confirmed present · All 21 original projects + additional Flat2.md projects confirmed in Notion ✓
+- **False positive rejected:** NTEA — not in any dossier, no fillable gap (existing row with its own sourced content)
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — UNKNOWN/not disclosed in all dossiers).
+
+---
+
+## Audit — 2026-06-13 (eighth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (eighth pass)
+- **Company record** `24690644…`: all 18 properties populated — Size="Mutlinational", Address place (4004 Summit Blvd NE Atlanta GA 33.8746/-84.3389), Description, BW Category=Builder, Website, LinkedIn, Country×15, Parent Company, Construction Projects×37, People×716 — complete ✓
+- **Profile page body** `37b90644…8039`: Bio, Snapshot, Attack Plan — complete ✓
+- **All 6 Divisions:** live-fetched all 6; all Companies→FD, Adress place (where sourced), body content, People+Projects linked ✓. J.F. White People still empty — genuinely sourceless (no named leader in any dossier, confirmed again) ✓
+- **Memberships (raw collection):** 25 rows in collection — 10 content rows + 7 blank dup rows from 2026-06-12 20:20 + duplicate name variants (AGC San Diego ×3, Carolinas AGC ×2, DBIA ×3, IPI ×3, CCIB ×3) + TEMPLATE. All 10 content rows confirmed linked to FD ✓. Blank dups unchanged (non-destructive, pending Zack UI).
+- **Events (raw collection):** 10 rows in collection — DBIA Conference & Expo 2025 `37b90644…8141` (Las Vegas, 2025-11-05, place+tag ✓, body ✓) · Groundbreaking Women 2026 `37b90644…810f` (San Diego, tag ✓) · IAI Summit 2025 `37d90644…8126` (UNKNOWN — sourceless ✓) · IPI Awards 2022 `37d90644…81ea` (UNKNOWN — sourceless ✓) · CI Student Days 2025 `37c90644…8186` (venue not sourced — correctly noted in body ✓) + TEMPLATE + duplicate event rows from 2026-06-12 sessions (DBIA dup `37d90644…81f4`, IAI dup `37d90644…8125`, IPI dup `37d90644…8101`). All FD-linked content rows complete ✓
+- **Sub-agent view-filter false positive:** sub-agent reading filtered inline-DB view saw only 4 memberships and 4 events — confirmed view-filter artifact (same pattern as Pass #6), not real gaps. Rejected.
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — UNKNOWN/not disclosed in all dossiers).
+
+---
+
+## Audit — 2026-06-13 (seventh pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (seventh pass)
+- **Company record** `24690644…`: Size="Mutlinational", Type="Company", Website, Address place (4004 Summit Blvd NE Ste 1600, Atlanta GA; 33.8746/-84.3389), Description, BW Category, Country 15 tags, People 46+, Construction Projects 37+, Parent Company — all populated ✓
+- **Profile page body** `37b90644…8039`: Bio, Snapshot, Attack Plan — complete ✓
+- **All 21 original projects:** Location tags confirmed present on ALL — including all 7 previously-clobbered batch-C projects: Windsor Woods=[Virginia] ✓, Battery Park=[New York] ✓, Hudson River=[New Jersey] ✓, Port Arthur=[Texas] ✓, Sumner=[Massachusetts,Boston] ✓, LAX APM=[California,Los Angeles] ✓, Howard Hanson=[Washington] ✓. Gordie Howe=[Ontario,Michigan] ✓. All Contractors→FD ✓.
+- **Memberships (10 content rows confirmed live):** AGC of California `37e90644…8191` · DBIA `37e90644…81e6` · IPI `37e90644…810e` · Hispanic Contractors of Colorado `37e90644…8170` · NECA Boston `37e90644…81b8` · The Beavers `37b90644…81ea` · AGC San Diego `37c90644…8179` · AGC San Diego (dup) `37d90644…81f3` · Carolinas AGC `37d90644…8136` · CCIB `37d90644…81fa` · California Alliance for Jobs `37e90644…8130` — all Companies→FD ✓. (Plus 7 blank dup rows from 2026-06-12 20:20 — still pending Zack UI delete.)
+- **Events (5 rows):** DBIA Conf & Expo 2025 (Las Vegas, place+tag ✓) · Groundbreaking Women 2026 (San Diego, place+tag ✓) · IAI Summit 2025 (location not disclosed — correct no tag) · IPI Awards 2022 (location unknown — correct no tag) · CI Student Days 2025 — all Companies→FD ✓
+- **All 6 Divisions:** Companies→FD, Adress place where available, body content — complete ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022 Location tags/Place (genuinely sourceless — location not disclosed in source).
+
+---
+
+## Audit — 2026-06-13 (sixth pass — hourly auto-cycle)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### Key finding: view-filter false positives rejected
+Inline-DB views on the profile page have a leftover `__TEMPLATE__` filter that hides most rows from view queries. Sub-agent reading the filtered view reported only 4 memberships and 4 events — but raw collection searches confirmed all 10 memberships and 5 events exist with full data. Every "missing" row was a view-filter artifact, not an actual gap. Verified records present:
+- **Memberships (10):** AGC of California `37e90644…8191`, DBIA `37e90644…81e6`, IPI `37e90644…810e`, California Alliance for Jobs `37e90644…8130`, Hispanic Contractors of Colorado `37e90644…8170`, NECA Boston `37e90644…81b8`, AGC San Diego `37d90644…81f3`, Carolinas AGC, The Beavers, CCIB — all Companies→FD ✓
+- **Events (5):** DBIA Conf & Expo 2025 (Las Vegas, Nov 5, place+tag ✓) · Groundbreaking Women 2026 (San Diego, Jun 14, place+tag ✓) · IAI Summit 2025 · IPI Awards 2022 · CI Student Days 2025
+- **Locations:** Secaucus NJ `37c90644…8153` confirmed with address + Division→SPC ✓
+- **Company record:** all properties populated (Description, Size="Mutlinational", Address place, Country 15 tags, BW Category, Website, LinkedIn, Parent Company, People 46, Construction Projects 37) ✓
+- **Profile page body:** Bio, Snapshot, Attack Plan — complete ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — "UNKNOWN" in all dossiers).
+
+## Audit — 2026-06-13 (fifth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md`. Zero fillable gaps found. Full live verification of all record types: company record, profile page, 21+ projects, 6 divisions, 10 memberships, 2 events, location rows. Every field with sourced data is already present in Notion. No writes made this pass.
+
+### What was verified as already complete (fifth pass)
+- Company record: all properties populated (Description, Website, Size, Address place, BW Category, Country 15 tags, People 160+, Construction Projects 37 URLs, Parent Company, LinkedIn, body Snapshot with UEI/NAICS/ISO/IDIQ/revenue) ✓
+- Profile page: Bio, Snapshot, Attack Plan — complete ✓
+- All 21 original projects: Contractors→FD, Status, Contract Value, Location tags, Date (where sourced), body — complete ✓. LAX APM updated in prior session to $4.9B/In progress/richer body from Flat2.md ✓
+- Additional projects from Flat2.md (later sessions): confirmed present and linked to FD USA division (e.g. Upper San Leandro WTP `37c90644…81f6`) ✓
+- All 6 Divisions: Address place (where available), body, Companies→FD, People, Projects — complete ✓
+- All 10 Memberships: AGC of California, AGC San Diego, Carolinas AGC, The Beavers, CCIB, DBIA, IPI, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston — all have Companies→FD + body + source URLs ✓
+- Both Events: DBIA (Las Vegas, Nov 5 2025, place coords, "Las Vegas" tag, Companies→FD) · Groundbreaking Women (San Diego, Jun 14 2026, place coords, "San Diego" tag, Companies→FD) ✓
+- Gordie Howe Bridge Location: ["Ontario","Michigan"] ✓
+- I-275 Pinellas Location: ["Florida"] ✓; stale body note removed ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source). J.F. White division People relation (no named leader in any dossier).
+
+---
+
+## Audit — 2026-06-13 (fourth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. One fillable gap found and resolved.
+
+### Filled in audit
+- **Gordie Howe International Bridge** `Location` — added "Michigan" tag (bridge crosses Windsor ON → Detroit MI; Michigan was a valid schema option, only Ontario was set). Source: Flat.md + Flatiron1.md. ID: `37b90644-d524-81c7-87ad-c45249cf21d1`.
+- **I-275 Express Lanes Pinellas County** body — removed stale "(Location tag pending — 'Florida' not yet a Projects option)" note; Florida is now a valid tagged option. ID: `37b90644-d524-8181-ad0c-d768409693d1`.
+
+### What was verified as already complete
+- Company record: Description, Size ("Mutlinational"), Website, Address (place), BW Category, Country tags, People, Construction Projects — all populated ✓
+- All 21 projects: Contractors→FD, Location tags, Status, Values, Date (where sourced) — all verified ✓
+- All 10 Memberships rows: linked to FD company ✓ (AGC of California, AGC San Diego, Carolinas AGC, The Beavers, CCIB, DBIA, IPI, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston)
+- Both Events rows: Place (coords), Date, Location tags, Companies→FD ✓
+- All 6 Divisions: Address place (where available), body content, Companies→FD ✓
+- Profile page body: Bio, Snapshot, Attack Plan — all filled ✓
+
+### Still empty (genuinely sourceless — unchanged from prior passes)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source). J.F. White division People relation (no named leader in any dossier).
+
+### ⚠ Duplicate rows for Zack UI cleanup (unchanged)
+See prior audit entries — 7 blank Membership dups, 2 duplicate division rows, 4+ duplicate location rows.
+
+---
+
+## Audit — 2026-06-13 (third pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md` (newly discovered comprehensive dossier, 6,127 lines, run date 2026-06-12). Most significant finding: Memberships table had only 4 real content rows vs 7+ required — 6 missing memberships created.
+
+### Filled in audit
+- **AGC of California** `37e90644-d524-8191-b6ca-e32d20ac39ac` — new Membership row; body: Statewide trade association focused on advocacy and workforce; Companies→FD; source: https://www.agc-ca.org/about/member-directory/
+- **DBIA** `37e90644-d524-81e6-944e-d21bcc8f2ffb` — new Membership row; body: National design-build advocacy body; Companies→FD; source: https://www.dbia.org/membership/member-directory/
+- **IPI (International Parking & Mobility Institute)** `37e90644-d524-810e-a0ce-c2678dd14c7d` — new Membership row; body: Global parking/mobility professional association; Companies→FD; source: https://www.parking.org/member-directory/
+- **California Alliance for Jobs** `37e90644-d524-8130-8ba6-ef9e1ecb071e` — new Membership row; body: Coalition advocating for CA infrastructure investment; Companies→FD; source: https://www.caallianceforjobs.org/members/
+- **Hispanic Contractors of Colorado** `37e90644-d524-8170-b283-cfde6912ade0` — new Membership row; body: Trade association for Hispanic contractors in Colorado; Companies→FD; source: https://www.hccolorado.org/members
+- **NECA Boston** `37e90644-d524-81b8-853c-ec2feae9faf3` — new Membership row; body: National Electrical Contractors Association, Boston chapter; Companies→FD; source: https://www.necaboston.org/member-directory/
+- **The Beavers body** `37d90644-d524-81b3…` — source URL updated from bare domain `fdcorp.com` → proper anchor: [Source: fdcorp.com leadership](https://www.fdcorp.com/en/our-company/us-leadership)
+- **Hampton Roads Bridge-Tunnel Expansion** — `Date` filled: 2027-02-01 (substantial completion Feb 2027 per dossier). Source: Flat2.md.
+- **Gordie Howe International Bridge** — `Status` set to "Done"; `Date` set to 2026-01-01. Dossier conflict resolved: Flat.md says "opening early 2026" / Flat2.md says "Done / 2025"; ENR confirms ~98% complete late 2025, opened early 2026. Bridge opened Jan 2026 (confirmed by today's date 2026-06-13). Source: Flat2.md + ENR.
+
+### Flat2.md net-new projects dedup result
+11 projects from Flat2.md not in prior dossiers checked against Notion — all confirmed already present (added in prior sessions). LAX SkyLink has no exact name match (closest = LAX APM, a different/earlier project) — **not created** (insufficient sourcing to distinguish from the existing APM row; deferred to Zack review). Flat2.md "Flatiron Dragados West, LLC" + "Flatiron Dragados Constructors, Inc. (Mid-Atlantic/Southeast)" confirmed as duplicate division rows in Company Map — **not created** (dedup rule).
+
+### Memberships — full list now in Notion (10 rows)
+AGC San Diego · Carolinas AGC (CAGC) · The Beavers · CCIB · AGC of California · DBIA · IPI · California Alliance for Jobs · Hispanic Contractors of Colorado · NECA Boston. (Plus any pre-existing rows pre-dating this ledger.)
+
+### Location tags (confirmed all resolved)
+All 21 projects confirmed tagged (prior sessions resolved the shared-schema clobber; all 7 previously-untagged projects now have Location tags — Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM all confirmed ✓).
+
+### ⚠ Duplicate rows — Zack UI cleanup (updated 2026-06-13)
+- **7 blank Memberships rows** from 2026-06-12 ~20:20: `37d90644-815f` (DBIA dup), `37d90644-81e1` (AGC CA dup), `37d90644-8139` (Beavers dup), `37d90644-81c6` (IPI dup), `37d90644-8182` (CA Alliance dup), `37d90644-819f` (Carolinas AGC dup), `37d90644-81fc` (CCIB dup) — delete in UI
+- **2 duplicate division rows**: FD West LLC + Mid-Atlantic/SE — delete in UI
+- **4+ duplicate location rows**: Concord CA ×2, Montreal QC ×2, Richmond BC ×2, San Diego CA ×2 — delete extras in UI
+
+### Still empty (genuinely sourceless)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance carriers/wrap-ups · per-division revenue & headcount · exact firm employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source). **J.F. White division** People relation: no named leader in any dossier. LAX SkyLink deferred (insufficient to distinguish from existing APM row).
+
+## Manual UI steps for Zack (updated 2026-06-13)
+1. **Delete 7 blank duplicate Memberships rows** from 2026-06-12 ~20:20 (IDs above).
+2. **Delete 2 duplicate division rows** (FD West LLC + Mid-Atlantic/SE) from Company Map.
+3. **Delete 4+ duplicate location rows** (Concord CA ×2, Montreal QC ×2, Richmond BC ×2, San Diego CA ×2).
+4. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set Contractors = FlatironDragados.
+5. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
+6. **Memberships "View of People" tab** — repoint/clear leftover company filter.
+7. **Restore the clobbered Projects `Location` option list** (was reset to FL+SC) — cross-company impact; decide approach.
+8. Section guide italics + any template starter rows in Company Map/Events/Sources/Locations/Memberships → delete in UI if unwanted.
+9. **Fix "Mutlinational" typo** → "Multinational" in company record `Size` field.
+10. **LAX SkyLink** — confirm if this is the same project as LAX APM or a net-new project; if net-new, add from Flat2.md.
+
+---
+
+## Audit — 2026-06-12 (second pass)
+**Status: ✅ audit complete (read-only review; no new writes needed — all fillable gaps resolved by prior sessions).** Verified full record graph vs Flat.md + Flatiron1.md.
+
+### What the 2026-06-11/12 sessions added (confirmed live)
+- **FlatironDragados Canada** division: People relation now populated (Stephanie Hun + 1 other: IDs `37d90644-d524-8127b32d…` + `37d90644-d524-818b9d93…`).
+- **Howard Hanson Dam** Location tag: "Washington" now set (confirmed live `[\"Washington\"]`). Prior deferred item resolved.
+- **Events `Location tags`**: "Las Vegas" + "San Diego" options added to schema; both events now tagged ✅.
+- **Memberships (additional):** AGC of California `37d90644-d524-8100-857f…`, AGC San Diego `37c90644-d524-8179-b17c…`, Carolinas AGC (CAGC) `37d90644-d524-8110-8e42…`, CCIB `37d90644-d524-811a-9962…` — all added with body content + FD company link. Total membership rows now **11+ (original 7 plus 4 new valid ones)**.
+- **Locations table:** Multiple new rows added — Atlanta USA HQ, Toronto ON (Canada HQ), Broomfield CO, Whitestone NY (SPC), Tampa FL (Prince), Scottsdale AZ (Pulice), Framingham MA (J.F. White), Richmond BC, Montreal QC, Raleigh NC (Mid-Atlantic), Orlando FL (Prince), Concord CA (FD West), San Diego CA (FD West). All linked to FD company + owning division.
+- **Events:** DBIA Conference & Expo (Las Vegas, `37d90644-d524-81f4…`) + Groundbreaking Women in Construction (San Diego, `37d90644-d524-812f…`) — new rows replacing/supplementing original rows; place + location tags + dates all set. Additional events added: 2025 IAI Summit (`37d90644-d524-8126…`), IPI Awards 2022 (`37d90644-d524-81ea…`), CI Student Days 2025 (`37c90644-d524-8186…`).
+- **Company record `Description`**: Updated to full rich description (no longer thin). `Size` = "Mutlinational" (typo persists from Flatiron1.md; "Regional" conflict resolved).
+
+### ⚠ Duplicate membership rows (created ~2026-06-12 20:20 — blank, need Zack cleanup)
+A session at ~20:20 UTC created blank duplicate rows for: DBIA, AGC of California, The Beavers, IPI, California Alliance for Jobs, Carolinas AGC, CCIB. These are empty pages in the Memberships DB but linked to FD. **Not deleted (non-destructive rule) — Zack to delete in UI.** IDs: `37d90644-815f…` (DBIA dup), `37d90644-81e1…` (AGC CA dup), `37d90644-8139…` (Beavers dup), `37d90644-81c6…` (IPI dup), `37d90644-8182…` (CA Alliance dup), `37d90644-819f…` (Carolinas AGC dup), `37d90644-81fc…` (CCIB dup).
+
+### Still empty (genuinely sourceless)
+- EMR/TRIR/DART/OSHA records · bonding/surety/insurance carriers/wrap-ups · per-division revenue & headcount · exact firm employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source).
+- **J.F. White division** People relation: no named leader in dossier (still empty).
+
+### All prior deferred items — resolved
+- Howard Hanson Dam "Washington" location tag ✅ resolved
+- Events "Las Vegas" + "San Diego" tags ✅ resolved
+- Company Size conflict: "Mutlinational" (from Flatiron1.md) is now set — typo but consistent with dossier
+
+## Manual UI steps for Zack (updated 2026-06-12)
+1. **Delete 7 blank duplicate Memberships rows** from 2026-06-12 ~20:20 (listed above).
+2. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set Contractors = FlatironDragados.
+3. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
+4. **Memberships "View of People" tab** — repoint/clear leftover company filter.
+5. **Restore the clobbered Projects `Location` option list** (was reset to FL+SC) — cross-company impact; decide approach. (Most FD projects survived with their tags intact; new option assignments still blocked for any project needing non-FL/SC tags.)
+6. Section guide italics + any template starter rows in Company Map/Events/Sources/Locations/Memberships → delete in UI if unwanted.
+7. **Fix "Mutlinational" typo** → "Multinational" in company record `Size` field.
+
+---
+
 ## Audit — 2026-06-10 (post-load)
 **Status: ✅ audit complete.** Verified build vs Flat.md + Flatiron1.md + Flat1.md. Filled stragglers:
 

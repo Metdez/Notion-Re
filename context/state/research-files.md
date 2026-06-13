@@ -14,19 +14,18 @@
 | Dellbrook \| JKS | `Enlaye Notion/DellbrrokJKS/Dell 1.md` | ✅ 2026-06-10 | [records-dellbrook](records-dellbrook.md) |
 | O&G Industries | `Enlaye Notion/O&G/OG1.md` | ✅ 2026-06-10 | [records-og](records-og.md) |
 | Fontaine Bros. | `Enlaye Notion/Fontaine Bros/Font1.md` (1st) · `Fontaine.md` (2nd-pass, 16 proj → +6 net-new) | ✅ 2026-06-10 (both passes) | [records-fontaine](records-fontaine.md) |
-| HITT Contracting | `Enlaye Notion/HITT/HITT1.md` (HITT2.md empty) | ✅ 2026-06-10 | [records-hitt](records-hitt.md) |
+| HITT Contracting | `Enlaye Notion/HITT/HITT1.md` (HITT2.md empty) · `HITT4.md` (2nd-pass 2026-06-12; 7 projects/8 software/3 people — all already loaded by prior session) | ✅ 2026-06-10 (initial) · ✅ 2026-06-13 Pass #14 (HITT4.md cross-checked; 0 fills) | [records-hitt](records-hitt.md) |
 | Jingoli Nuclear Services | `Enlaye Notion/Jingoli/Jingoli.md` | ✅ 2026-06-10 | [records-jingoli](records-jingoli.md) |
-| Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) | ✅ 2026-06-10 | [records-cianbro](records-cianbro.md) |
+| Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) · `Cianbro3.md` (398KB structured JSON 2nd-pass, 2026-06-13; ~65 projects, people, locations) | ✅ 2026-06-10 (initial) · ✅ 2026-06-13 audit pass #8 from Cianbro3.md | [records-cianbro](records-cianbro.md) |
 | Bechtel Group | `Enlaye Notion/Bechtel Group/Bechtel2.md` (primary) · `Bechtel1.md` (mapped) | ✅ 2026-06-10 | [records-bechtel](records-bechtel.md) |
 | Branch Group | `Enlaye Notion/Branch Group/Branch1.md` (single-line JSON dossier) | ✅ 2026-06-10 | [records-branch](records-branch.md) |
-| Alberici | `Enlaye Notion/Alberici Corp/Alb.md` (single sourced JSON dossier) | 🔄 2026-06-10 in progress | [records-alberici](records-alberici.md) |
+| Alberici | `Enlaye Notion/Alberici Corp/Alb.md` (original dossier) · `Alb2.md` (enriched 2nd dossier, 2026-06-12; 13 divs, 49 projects, 94 sources) | ✅ Alb.md 2026-06-10; Alb2.md discovered 2026-06-13 (prior sessions already loaded bulk; 3 location-Division fills this session) | [records-alberici](records-alberici.md) |
 | KBE Building | `Enlaye Notion/KBE Building/KBE.md` (KBE1.md empty) | ✅ 2026-06-10 (additive gap-fill on pre-existing 06-05 build) | [records-kbe](records-kbe.md) |
 | The Middlesex Corporation | `Enlaye Notion/The Middlesex Corp/Middlesex.md` (disk dossier; truncated mid-`sources`) **+ richer in-chat-only dossier** (not on disk: exec roster, $609.9M/#203, more tools) | ✅ 2026-06-10 (disk) · ✅ 2026-06-10 2nd pass (in-chat extras: +10 execs, Middlesex Asphalt div, +4 software) | [records-middlesex](records-middlesex.md) |
 | FlatironDragados | `Enlaye Notion/FlatironDragados/Flat.md` (primary) · `Flatiron1.md` (secondary; Flat1.md empty) | ✅ 2026-06-10 | [records-flatirondragados](records-flatirondragados.md) |
-| Sundt | `Enlaye Notion/Sundt/Sundt.md` (single-line JSON dossier; no people array) | ✅ 2026-06-10 | [records-sundt](records-sundt.md) |
+| Sundt | `Enlaye Notion/Sundt/Sundt.md` (primary; run 2026-06-10; 1 membership/18 projects/15 locations) · `Sundt3.md` (2nd-pass; run 2026-06-12; 7 divisions/37 projects/16 locations/5 memberships/7 events — bulk loaded by prior session 2026-06-12; Sundt2-PARTIAL.md = partial/truncated) | ✅ 2026-06-10 (initial) · ✅ 2026-06-12 (Sundt3.md bulk loaded) | [records-sundt](records-sundt.md) |
 | Kiewit Corporation | `Enlaye Notion/Kiewitt/Kiewitt.md` (Kiewitt1.md empty) | ✅ 2026-06-10 | [records-kiewit](records-kiewit.md) |
-| Shawmut | `Enlaye Notion/Shawmut/Shawmut3.md` (Shawmut2 truncated/corrupt; 1 & 4 empty) | ✅ 2026-06-10 (prior-session build + this-session audit/complete/record) | [records-shawmut](records-shawmut.md) |
-| The Walsh Group | `Enlaye Notion/Walsh Corp/walsh_group_dossier_v2.json` (+ `WALSH_LOAD_HANDOFF.md`) | ✅ 2026-06-12 (onto EXISTING `17b90644`; ≠ Walsh Brothers `1cf90644`; memberships/locations body-only pending profile-page decision) | [records-walsh](records-walsh.md) |
+| Shawmut | `Enlaye Notion/Shawmut/Shawmut3.md` (Shawmut2 truncated/corrupt; 1 & 4 empty) · `Shaw5.md` (2nd-pass 2026-06-12; 12 divisions, 28 projects, 4 events, 7 memberships, 94 sources — bulk loaded by prior session 2026-06-12) | ✅ 2026-06-10 (initial) · ✅ 2026-06-12 (Shaw5.md bulk loaded) | [records-shawmut](records-shawmut.md) |
 
 | Event attendees (not a company) | `Enlaye Notion/Events/apollo-contacts-export-9.csv` (89 → Paris BW Summit 2026) · `apollo-contacts-export-10.csv` (39 → SB Innovation Day) | ✅ 2026-06-10 | [records-event-imports](records-event-imports.md) |
 
