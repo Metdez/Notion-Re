@@ -138,6 +138,17 @@ Live verification confirmed: company record (all properties populated), profile 
 5. **Duplicate People** — delete: Ryan Oneglia `37b90644-d524-8182`; LinkedIn-import dupes `37d90644-d524-81cc` (Raymond), `37d90644-d524-8133` (Greg), `37d90644-d524-8156` (T.J.). Broader 37d-prefix LinkedIn import may have 100+ thin People rows linked to O&G — review and dedup in bulk.
 6. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
 7. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
+## Audit round 9 (2026-06-13, /notion-audit — OG1.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md.
+
+Live verification confirmed: company record (`1cf90644`) — Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects linked, 4 Software rows all present. Profile page body complete. Building Construction division — Companies + Projects (14 linked) + People (3 incl. Mednick, Travelstead, Rossi) relations set; place/Adress set; body sourced. Asphalt Paving division — Companies + People (Brad Oneglia) relations set; place set; body sourced. Amtrak CT River Bridge project — Contractors→O&G, Owning Department→Heavy Civil, Value=1300, Status=In Progress, Date=2024-09-01, body complete. Memberships data source schema confirmed (Name + Companies relation). Locations data source schema confirmed (Location + Adress text + Division + Companies relation).
+
+**No changes made this pass.** All OG1.md scope is fully loaded; no empty fillable gaps found.
+
+**Outstanding (all for Zack — unchanged from rounds 4–8):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix) · LinkedIn/Apollo People dupes · Bridgeport Mason address conflict.
+
+---
+
 ## Audit round 8 (2026-06-13, /notion-audit — OG1.md automated hourly cycle)
 **0 fills** — all records verified live against Notion; no fillable gaps against OG1.md.
 

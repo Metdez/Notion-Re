@@ -144,3 +144,16 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Memberships (4): ABC, AGC, DBIA, VTCA — all have company relation + URL + body — AGC spot-checked ✓
 - Locations (7): 7 rows confirmed present (HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville) — HQ Adress text + Companies relation spot-checked ✓; Locations table uses Adress TEXT (not place type) — correct per schema
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-13 (notion-audit skill pass)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record (26890644), profile hub page (37b90644…4a13), Branch Civil division (spot), Bob Wills person (spot), I-95 project (spot), Memberships schema + all 4 rows via search, Events schema + both rows via search, Locations schema + all 7 rows via search.
+- Company record (26890644): Description, Type=Company, Size=Regional, BW Category=[Builder], Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place (37.3271/−79.9822), People (170+), Construction Projects (12) ✓
+- Profile hub: body complete with Enlaye angle block; all inline tables (Company Map, Events, Sources, Locations, Memberships) present ✓
+- Divisions (4): Branch Civil spot-checked — company relation, People (Brian Quinlan), Projects (5), Adress place, full body content ✓
+- Projects (12): I-95 spot-checked — Contractors→company, Location=Virginia, Adress place, Date range, Status=Done, Type=Transportation, body brief + sources ✓
+- People (7): Bob Wills spot-checked — Company, Function, Function Qualification=[CEO], Location=Virginia, body ✓
+- Events (2): DBIA Award → Location tags=[North Carolina], date=2026-04-28, company ✓; Golf Tournament → Location tags=[Virginia], date=2026-06-08, company ✓; Place property genuinely sourceless (no venue address/coords in dossier for either event) ✓
+- Memberships (4): ABC, AGC, DBIA, VTCA — all 4 rows present via search, all have company relation + URL ✓
+- Locations (7): all 7 rows confirmed present (HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville); schema has Adress TEXT + Companies + Division relations ✓
+- Interconnection graph: Company↔People(7+)✓, Company↔Projects(12)✓, Company↔Software(2)✓, Division→Company(4)✓, Branch Civil→People(1)+Projects(5)✓, Project→Contractors(12)✓, Location→Company+Division(7)✓, Event→Company(2)✓, Membership→Company(4)✓
+- Zero fillable gaps. No writes performed.

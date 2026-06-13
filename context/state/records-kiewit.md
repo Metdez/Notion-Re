@@ -238,3 +238,24 @@ Sources: https://www.kiewit.com/locations/
 **Genuinely sourceless (unchanged):** Date/Place on Construction Safety Week + Women in Heavy Civil/Beavers (annual recurring, no specific date/venue in dossier) · EMR/TRIR · bonding limits · division revenue/headcount · per-project parcel/APN/permits
 
 **Pre-existing flags (not created by this audit):** 6 DUPLICATE membership rows + 2 DUPLICATE event rows from 2026-06-12 session — still pending Zack UI deletion.
+
+---
+
+## Audit pass — 2026-06-13 (Pass #2 — /notion-audit skill)
+
+**Live verification (MCP fetch):** Company record (`17b90644`), profile page (`37b90644d524…830de18cf6ea0d89`), Kiewit Infrastructure Co. division, Key Bridge project, Homer City project, Rick Lanoha, Dave Miles, Memberships table (full 15-row result), Events table (full result), Locations table (11 rows confirmed), Divisions DB schema, Scottsdale/InEight HQ location row, Weeks Marine division, Kiewit Nuclear Solutions division — all fetched live.
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company record — Description ✓, Address place (Omaha 41.265948/-95.935909) ✓, 39 Construction Projects linked ✓, BW=[Builder/Design and Architecture/Developer] ✓, Country=24 entries ✓, People 24+ linked ✓, 8 Software linked ✓; Kiewit Infrastructure Co. — Companies→Kiewit ✓, People→Dave Miles ✓, Projects→6 linked ✓, Adress place ✓; all 8 memberships company-linked ✓; all 6+ events company-linked ✓; all 11 location rows company-linked ✓
+- 3b: Key Bridge body — owner/delivery/scope/value/risk event/competing bidders/sources ✓; Homer City body — owner/delivery/scope/4.5GW/3200 acres/turbines/2027 est/sources ✓; Rick Lanoha body — Role + Jan 2020 / Grewcock succession + source ✓; Dave Miles body — Role + Infrastructure Group scope + source ✓; Kiewit Infrastructure Co. — Focus/Leader/Office/Notable/Parent ✓; Kiewit Nuclear Solutions — Focus/Offices/Notable/Parent ✓; Weeks Marine — Focus/Office/Notable/acquisition note/Parent ✓; all 17 division bodies have Focus sections confirmed in prior passes ✓
+- 3c: Company HQ place ✓; all 17 division Adress place ✓ (Kiewit Infrastructure Co. 39.5519/-104.8722 ✓; Nuclear 36.0104/-84.2696 ✓; Weeks Marine 40.6576/-74.2988 ✓); Key Bridge Adress place (39.2186/-76.5282) ✓; Homer City Adress place (40.564/-79.0803) ✓; Scottsdale InEight HQ Adress text = "9977 N. 90th Street, Ste. 200, Scottsdale, AZ 85258" ✓ (filled in Pass #1); Omaha HQ location row Adress = "1550 Mike Fahey St, Omaha, NE 68102" ✓; Lone Tree location row Adress = "10055 Trainstation Circle, Lone Tree, CO 80124" ✓; Locations `Adress` = TEXT type (structural limit — flagged in prior passes, unchanged)
+- 3d: 8 live memberships confirmed: The Beavers `37b90644-8172` · AGC `37b90644-81c1` · DBIA `37b90644-814f` · CSRA `37b90644-8184` · CISI `37b90644-818f` · CCSC `37b90644-81a6` · NCSE `37b90644-81ab` · ASCE `37d90644-81f0`; all 7 dossier memberships + ASCE present and company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Annual Convention 2026 → Florida+Orlando ✓; Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; FWIK Summit + Engineering Technical Summit untagged (correct — no sourced location) ✓; 2 DUPLICATE— Events still pending Zack UI deletion (`37d90644-81d7/81fb`)
+
+**False positives rejected:**
+- Scottsdale InEight HQ location row `Division` relation points to a valid division row (`37d90644-817b…`) — confirmed linked, not empty
+- Lone Tree location row `Division` links 4 divisions (Kiewit Infrastructure Co., TIC, Engineering Group, Mining Group) — correct multi-division campus ✓
+- Omaha HQ location row `Division` links Kiewit Building Group — correct (Omaha HQ) ✓
+- ASCE membership — not in dossier but was legitimately added 06-12 (sourced); company-linked ✓; kept
+
+**0 writes made.** Record is at full dossier depth. All data matches ground truth. Only outstanding action is Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).

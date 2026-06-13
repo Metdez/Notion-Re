@@ -125,6 +125,17 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-13 (Pass #7)
+**Full audit run (3a–3e).** Checked: company record (`19990644`), 5 divisions, 2 events, 1 membership, 12 locations (schema), profile page body. Ground truth: `Shawmut3.md`.
+**Result: 0 fills executed.** Record is complete relative to dossier. No empty field with a sourced value found.
+**3a Interconnection ✓:** All 5 divisions → Companies full database (Shawmut) ✓. New England (Kevin Sullivan linked) ✓, NY Metro (David Margolius) ✓, West (Greg Skalaski + Sam Ragsdale) ✓, Mission Critical (Joel Nickel) ✓. Large Project Division People = empty — genuinely sourceless (no named VP in dossier). 2 events → Companies ✓. AGC membership → Company ✓.
+**3b Description depth ✓:** All 5 division bodies confirmed complete (focus/leadership/footprint/sectors/projects). Events bodies complete (what/where/audience/why). Company record body has 4 dated update blocks through 2026-06-12T23:07.
+**3c Addresses ✓:** Company Address place (560 Harrison Ave, Boston, MA 02118) ✓. Events Place empty (nationwide, no geocode) ✓. Location Adress text fields all filled (confirmed per prior passes; schema uses text not place for this table).
+**3d Memberships ✓:** AGC of America present — only sourced membership per dossier ✓.
+**3e Location tags ✓:** Safety Week 2026 = [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] ✓. 12th Annual = [Boston, Massachusetts, National] ✓.
+**Observation (non-actionable):** Company Country field in Notion includes "Pennsylvania" — not in dossier (PA appears only in ENR East region geographic *definition*, not as a Shawmut office state). This is a pre-existing value; additive-only rules prevent removal. Flagged for Zack's awareness.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond HQ+San Diego, litigation, contract values for 13/19 projects, memberships beyond AGC, Miami/WPB owning division.
+
 ## Audit log — 2026-06-13 (Pass #6) — automated hourly cycle
 **Full audit run.** Verified: company record (`19990644`), 5 divisions, 12 locations, 2 events, 1 membership (AGC of America), 7 software records. Ground truth: `Shawmut3.md`.
 **Result: 0 fills executed.** All dossier-sourced data confirmed present in Notion. No empty field found with a sourced value not yet applied.

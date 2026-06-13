@@ -219,3 +219,29 @@
 **Note on SelectUSA event ID:** Ledger records `8129-9ab8` for SelectUSA event, but direct fetch returned 404 (probable ledger typo). Event is confirmed present via Clayco TEMPLATE page body reference and Events collection. No action needed on data — visual confirmation from profile page is sufficient.
 
 **Still genuinely sourceless (no write):** same as pass 5 — project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
+
+---
+
+## Seventh pass — 2026-06-13 (notion-audit full pass — all checks re-verified)
+> Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches of: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection (schema), Software DB schema, Procore/PMWeb/P6 software row (`37c90644-d524-811a-82f0`).
+
+**Fill executed (1 item):**
+| Record | Field | Value written | Source |
+|---|---|---|---|
+| Procore / PMWeb / Primavera P6 `37c90644-d524-811a-82f0` | `Software used` | +PMWeb, +Clearstory, +BridgIT (tags added to schema + applied to row) | https://www.simplyhired.com/job/sqqI8cmT9TgWKDRWKcmUu1gN1r8lTjCszc9VcN6hUiRU-leN6X_PcQ |
+
+**Schema ALTER:** Software DB `Software used` multi-select +3 options (PMWeb, Clearstory, BridgIT) — all 39 existing options preserved.
+
+**3a Interconnection — confirmed clean:** All relations intact as per pass 6.
+
+**3b Description depth — confirmed adequate:** No thin bodies found.
+
+**3c Address/location — confirmed:** No new empty place fields found.
+
+**3d Memberships — complete:** 5/5 sourced memberships present and company-linked.
+
+**3e Location tags — confirmed:** All events/locations tagged where sourced venue exists.
+
+**Rejected false positives:** Clay Carter (Clayco3.md corporate division people list) — no individual source URL in dossier; not written. Ryan Johnson (VP Power & Energy) — confirmed already exists in People DB from prior sessions.
+
+**Still genuinely sourceless (no write):** project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.

@@ -176,3 +176,25 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3b check:** All project and department bodies complete; IC&E description improved.
 **3d memberships:** N/A — no memberships table on Harvard Owner record.
 **3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+
+## Audit log — 2026-06-13 (fifth pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion verified across: Harvard owner page, Pritzker Hall, ERC, Barker Center, 12 Palmer, WJH Plaza, HBS Chase/McCulloch/Dillon, ESL, Smoot, J&J, IC&E. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions match dossier ground truth.
+
+**Confirmed genuinely sourceless (will never fill without new data):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn already filled: smootbuilds).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website iceteams.com already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M is LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; appropriately blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — null in source.
+- Barker Center and 12 Palmer `Status` — end dates passed but actual completion not confirmed in source.
+
+**3a check:** All relation edges intact across all 12 projects, 11 GCs, 27 people, 16 departments. ✓
+**3b check:** All project and department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.

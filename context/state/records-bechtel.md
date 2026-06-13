@@ -114,6 +114,23 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
 
+## Audit — 2026-06-13 (notion-audit Pass #7 — manual trigger, 0 writes)
+
+### Filled
+Nothing. **0 writes made.** All live records re-fetched and verified clean.
+
+### Verified complete (all 3a–3e checks pass — live re-fetch 2026-06-13 Pass #7)
+- **3a Interconnection ✓:** Company record has 200+ People (shared DB, large), 32 Construction Projects, 31 Software. All 6 divisions carry Companies+People+Projects. All sampled project Contractors+Owning Department set. All 12 unique memberships carry Companies relation (6 unique + 6 dup rows — dup issue unchanged, still flagged for manual UI). Events carry Companies relation. 19+ location rows carry Companies+Division.
+- **3b Description depth ✓:** All 6 division bodies confirmed full (focus/president/base/projects/parent). Port Arthur LNG body confirmed with ⚠ triple-fatality risk signal, $10.5B value, owner, delivery, division. Plant Vogtle body confirmed with scope/owner/design/status. People bodies not re-sampled (no new dossier data).
+- **3c Addresses ✓:** Company HQ Address place (Reston, lat 38.9586/lng -77.357) ✓; all 6 division Adress places ✓ (Energy→CityWestPlace Houston lat 29.7479/lng -95.5591; Infra+NS&E+Enterprises→Reston lat 38.9586/lng -77.357; M&M→Santiago lat -33.4489/lng -70.6693; M&T→Chandler AZ lat 33.3062/lng -111.9008). Gastech 2024 Place=George R. Brown Convention Center ✓; Gastech 2025 Place=Fiera Milano ✓. Location rows Adress text confirmed (Chandler/Houston/Reston/etc). Project Adress place = genuinely sourceless (city-level only, no lat/lng in dossier).
+- **3d Memberships ✓ — 6/6 unique:** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — all company-linked. ⚠ 6 duplicate rows still present (Manual UI step #6 — trash in UI).
+- **3e Location tags ✓ — 17 options in Events schema:** Texas/Plano/Connecticut/Plantsville/Phoenix/Arizona/Hartford/Waterbury/Southington/Georgia/Tennessee/Pennsylvania/Washington DC/South Carolina/California/Thailand/Italy. All 12 Bechtel events carry tags. Gastech 2025 [Italy] confirmed ✓; ENR LA + LACMTA dates still empty (genuinely unconfirmed in dossier).
+
+### Left empty (genuinely sourceless — unchanged)
+21 of 25 core project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification). 6 location rows (Washington DC / San Francisco / New Delhi / Shanghai / Taipei / Nairobi) have no Division relation — correct per dossier (general/cross-company offices).
+
+---
+
 ## Audit — 2026-06-13 (notion-audit Pass #6 — automated hourly cycle, 0 writes)
 
 ### Filled

@@ -125,6 +125,15 @@ Full live re-verify of all 15 records (company DB record + 5 divisions + 2 peopl
 - **Location tags (3e):** Event "ENR NY Region Contractor of the Year" → [New York] ✓.
 - **Duplicates observed (not fixed — destructive):** 2× ENR 2012 event rows (`37b9…81e7`, `37e9…81a9`); 2× HQ location rows (`37b9…810a`, `37e9…8166`).
 
+## Audit pass 2026-06-13 Pass #7 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 dossier projects + 1 location + 1 event). Ground truth: `Jingoli.md`. No fillable gaps found — every sourced field already populated.
+- **New state confirmed:** Company now has 19 people linked + 27 construction projects linked + place:Address filled (lat 40.2793 / lng -74.7263); Size = "Regional"; Nuclear Services division place:Adress filled. Jingoli1.md fills from Pass #6 confirmed present.
+- **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis + 11 projects + Adress filled; Jingoli Power→Karl Miller + 5 Power projects; all 5 dossier projects→Contractors + Owning Department (Nuclear Services); both people→company; Location→company+division; Event→company. People `Division` deferred (global Divisions DB `37690644` has no Jingoli rows).
+- **Description-depth (3b) ✓:** all 5 division bodies + all 5 project bodies + both people bodies at source-maximum depth.
+- **Address/location (3c):** Company Address place ✓; Nuclear Services division Adress ✓; 4 other divisions sourceless (no lat/lng in dossier); 5 project Adress genuinely unfillable (no lat/lng in dossier); Location row Adress text ✓; Event Place genuinely unfillable.
+- **Memberships (3d):** none in dossier → none in Notion ✓.
+- **Location tags (3e):** Event "New York" ✓. No other untagged located records.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).

@@ -1,7 +1,7 @@
 # State · Records — KBE Building Corporation
 
 > **Holds:** the KBE dedup ledger — every record created/updated loading the KBE dossier onto the pre-existing (06-05→06-09) build, with Notion IDs, so the next session deduplicates before touching a KBE record.
-> **Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (KBE1.md is empty/0 bytes). Dossier index: [research-files](research-files.md).
+> **Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary) · `KBE2.md` (federal projects) · `KBEboston.md` (Boston/MA BD research — 0 confirmed MA projects; findings already in Notion body). KBE1.md is empty/0 bytes. Dossier index: [research-files](research-files.md).
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md) · siblings: the other `records-*` ledgers.
 
 ---
@@ -106,6 +106,37 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 - **Mozaic duplicate:** `37790644-d524-814b` + `37790644-d524-81d1` — same Stamford project. NE division now linked to both. Recommend Zack manually merge/trash one.
 - **"Bridgeport" stray division row** `37690644-d524-8010` — satellite office stub, not a real division; linked to company and holds Mozaic-Stamford project. Pre-existing; left as-is.
 - **3 trashed/mislabeled Mid-Atlantic rows** under "TEMPLATE — old data (safe to delete)" `37a90644-d524-818c` — left as-is per non-destructive rules.
+
+## Audit pass #12 (2026-06-13 — notion-audit skill, KBE.md + KBEboston.md re-audit)
+
+**Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary) + `KBEboston.md` (new file, first time audited).
+
+### 0 fills executed
+Full live re-audit confirmed: **no fillable gaps remain.** All sourced data from both dossiers already in Notion. Zero writes needed.
+
+### New file audited: KBEboston.md
+- `KBEboston.md` confirmed present in file tree (previously unaudited). Contains the Boston/MA BD research (0 confirmed MA projects 2021–2026).
+- The company record body already contains a **Boston / MA BD Context** section with all KBEboston.md findings (zero MA projects, treat as out-of-market entrant, only MA connections are client/architect HQ on CT-sited projects). No new data to add.
+
+### Records verified live this pass (2026-06-13)
+- **Company record `1cf90644`:** All key properties filled ✓. Body complete including Boston BD context section ✓.
+- **KBE Northeast `37690644-d524-8037`:** Companies rel ✓ · 62 People ✓ · 44 Projects ✓ · Adress place (Farmington) ✓ · division bio ✓
+- **KBE Mid-Atlantic `37690644-d524-807c`:** Companies rel ✓ · 6 People ✓ · 9 Projects ✓ · Adress place (Laurel MD) ✓ · division bio ✓
+- **KBE West `37690644-d524-80e6`:** Companies rel ✓ · 4 People ✓ · 2 Projects ✓ · Adress place (Scottsdale AZ) ✓ · division bio ✓
+- **Events sampled:** Golf Tournament `37b90644…81ef` — body ✓ · Connecticut tag ✓ · KBE linked ✓ | CBC Awards `37b90644…8153` — body ✓ · Connecticut tag ✓ | Both correctly have Place empty (genuinely sourceless venue address) ✓
+- **Memberships sampled:** ABC-CT `37b90644…815f` — body ✓ · KBE linked ✓
+- **Projects sampled:** The August `37b90644…814c` — all props ✓ · body ✓ | Jefferson's Ferry `37790644…81f6` — all props ✓ · body ✓ | UConn Jones Lab `37790644…81d2` — all props ✓ · body ✓
+- **3a–3e checks:** All interconnections clean ✓ · All addresses in place fields ✓ · Memberships 11 sourced rows ✓ · Location tags on events ✓
+
+### Persisting Zack action items (8 blank duplicate stubs — unchanged)
+**Memberships duplicates (blank, no body):** `37e90644-d524-8169` (AzBA) · `37e90644-d524-81a9` (ABC-CT) · `37e90644-d524-8124` (ABC Baltimore/CS) · `37e90644-d524-811d` (ABC Metro Washington)
+**Events duplicates (blank body):** `37e90644-d524-8135` (Golf Tournament) · `37e90644-d524-816e` (ABC EIC Awards) · `37e90644-d524-8168` (CBC Awards) · `37e90644-d524-8103` (WIC)
+All confirmed still blank and linked to KBE. Cannot auto-delete per non-destructive rules. **Recommend Zack trash all 8.**
+
+### Confirmed genuinely sourceless (unchanged)
+DUNS/EIN/state entity IDs · EMR/TRIR/DART · surety/insurance · division revenue/headcount · FPDS PIIDs · Golf Tournament + CBC Awards + Special Olympics venue addresses · DBIA/USGBC/AGC national memberships.
+
+---
 
 ## Audit pass #11 (2026-06-13 — notion-audit skill, KBE.md ground-truth re-audit, automated hourly cycle)
 
