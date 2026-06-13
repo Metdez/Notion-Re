@@ -72,6 +72,26 @@ All matched. #4 *100 South Campus Drive* + #5 *American Repertory Theater* = ONE
 - Employees ~1,200 (LeadIQ) vs ~1,500 (older snapshot) — both kept.
 - Gaps the dossier itself flags (EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, litigation, exact 2024 revenue, most office street addresses) — **do not fill** (no source).
 
+## Audit log — 2026-06-13 (Pass #5)
+**Full audit run (3a–3e) + extended background agent (Locations/Events/Memberships table deep-fetch).** Checked: company record (`19990644`), 5 divisions (all rows fetched), 2 events, 7 membership rows, 15 location rows, profile page. Sample project check: UMass Chan, Yale Divinity, Pawtucket HS, Governor's Academy, Martin Middle.
+**Result: 0 fills executed.** Record confirmed complete relative to Shawmut3.md dossier for all fields that have sourced data.
+
+**New anomalies surfaced by extended agent (not fillable by this audit — require Zack decision):**
+- **CASF duplicate:** Memberships table has 2 CASF rows: "Construction Association of South Florida (CASF)" and "CASF — Contractors Association of South Florida". One should be deleted. Requires Zack confirm — manual UI (non-destructive rule; deletion not authorized without explicit approval).
+- **Locations count: 15 live rows vs. 12 in ledger.** Three extra rows (Newtown PA, Bentonville AR, unknown 3rd) added by parallel sessions. Bentonville ties to Walmart Home Office project (Large Project Div); Newtown PA has no dossier entry. Ledger updated to reflect 15.
+- **Miami + West Palm Beach → Division empty.** Confirmed genuinely sourceless (dossier `owning_division: null` for both). Not a fillable gap.
+- **6 extra memberships (AGC-CA, CASF×2, ALSD, Greater Providence Chamber, USGBC)** added by parallel sessions. Dossier explicitly flags all as "only individual-employee involvement signals, not confirmed corporate memberships." Not valid fills from Shawmut3.md; recorded for awareness.
+
+**3a Interconnection ✓:** all 5 divisions → Companies full database; AGC membership → Company; 2 events → Companies. People edges: Kevin Sullivan→NE, Joel Nickel→MC, David Margolius→NY, Greg Skalaski→West ✓. Large Project VP people edge: genuinely sourceless (no named VP).
+**3b Description-depth ✓:** sampled 5 projects confirm full brief+owner+scope+sources bodies.
+**3c Address/location ✓:** 12 dossier location rows all have Adress text filled. Company HQ place set (560 Harrison Ave). Events Place empty = legitimate (nationwide events, no geocode per dossier).
+**3d Membership check:** 7 live rows; only AGC confirmed from dossier. 6 others may be valid but sourced outside Shawmut3.md. CASF duplicate is data error.
+**3e Location tags ✓:** Safety Week 2026 [MA, Boston, RI, Providence, NY, CA, NV, FL, National] ✓. 12th Annual [Boston, MA, National] ✓.
+**Profile page title:** confirmed "Shawmut" (no TEMPLATE suffix) — prior note in ledger corrected.
+**False positives rejected:** NE Region showing 29 projects (grew from cross-company shared DB work — not an error). Large Project Division People field empty (VP name not in dossier). Martin Middle Owner empty (dossier: "Providence school district/city — entity not named in source").
+**⚠ Action items for Zack:** (1) Delete CASF duplicate row in Memberships table; (2) Confirm whether Newtown PA and Bentonville AR location rows are intentional; (3) Confirm whether 6 extra memberships (AGC-CA, ALSD, Greater Providence Chamber, USGBC) have sourced backing from a secondary dossier.
+**→ STATE: records-shawmut.md updated — location count 12→15, membership anomaly noted; STATE.md snapshot unchanged from Pass #4.**
+
 ## Audit log — 2026-06-13 (Pass #4)
 **Full audit run (3a–3e).** Checked: company record, 5 divisions, 2 events, 1 membership, 12 locations, profile page body. Also checked Companies DB shared schema for Country options.
 **2 fills executed:**

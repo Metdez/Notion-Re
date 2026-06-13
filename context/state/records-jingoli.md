@@ -108,7 +108,27 @@ Full live re-verify of all 15 records (company + 5 divisions + 2 people + 5 proj
 - **Memberships (3d):** none in dossier → none in Notion ✓.
 - **Location tags (3e):** Event "New York" ✓. No other untagged located records.
 
+## Audit pass 2026-06-13 third run (`/notion-audit Jingoli Nuclear Services`) — 26 writes
+Triggered by discovery of large state divergence: "Jing3 Enrichment" session (2026-06-12) added 22 new 37d-prefix projects, 17 new people, and 7 software rows — none recorded in ledger. All 22 new projects had `Owning Department` empty.
+
+**Schema ALTERs (2):** Added "Nebraska" to Construction Projects `Location` multi-select (`collection://4c8ed827`); added "PDS Vista" to Companies Software `Software used` multi-select (`collection://37690644-d524-804f`). Both additive, pre-authorized.
+
+**Owning Department fills (22 projects):**
+- 6 nuclear projects → Nuclear Services `37b90644-d524-8176`: PSE&G Multiple `81dc`, Zion `81f8`, Oyster Creek `8148`, Limerick `8192`, Fort Calhoun `81d4`, Indian Point `8112`
+- 5 power projects → Jingoli Power `37b90644-d524-818e`: Atlantic Shores `81fe`, ACE Harbor Beach `8184`, Outerbridge `81de`, Reynolds-Topeka `81ed`, PP&L T&D `81d7`
+- 11 GC projects → Jingoli-DCO `37b90644-d524-8111`: Holtec Campus `81ba-b9a8`, Hard Rock `8102`, Stockton P1 `814b`, Stockton P2 `8120`, PA Convention `81ba-adde`, Rowan `813a`, S. Amboy Warehouse `81b2`, Bucks DART `81b3`, Jack Morris Cancer Center `815b`, HELIX `8180`, NBPAC `817b`
+
+**Tag fills (2):** Fort Calhoun `81d4` → `Location`=["Nebraska"]; PDS Vista `37d90644-d524-8158-b644` → `Software used`=["PDS Vista"].
+
+**Updated live state:** 27 construction projects total (5 original 37b + 22 new 37d); 19 people; 7 software rows. Owning Department now set on all 27 projects. Nuclear Services division→11 projects (5 original + 6 nuclear) + Mockaitis ✓. Power division→5 Power projects + Karl Miller ✓. DCO division→11 GC projects ✓.
+
+- **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis + 11 projects; Power→Karl Miller + 5 Power projects; all 27 projects→Contractors + Owning Department; both original people→company; Location→company+division; Event→company. People `Division` still deferred (global Divisions DB `37690644` has no Jingoli rows).
+- **Description-depth (3b):** original 5 project bodies at full sourced depth ✓. New 37d project bodies from enrichment session — not audited against original dossier scope.
+- **Address/location (3c):** place fields genuinely unfillable — no lat/lng in dossier; no-geocoding rule. Location row `Adress` text ✓.
+- **Memberships (3d):** none in dossier → none in Notion ✓.
+- **Location tags (3e):** Event "New York" ✓. Fort Calhoun "Nebraska" added this pass ✓.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
-2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).
+2. **Existing Software** view → clear `__TEMPLATE__` filter (now 7 software rows — Procore, Primavera P6, Hard Dollar, PDS Vista, and others from Jing3 session).
 3. Possible template guide rows on local tables (Divisions/Events/Sources/Locations) — UI delete if Zack wants them gone.

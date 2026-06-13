@@ -178,3 +178,12 @@ Matthew Consigli `37a90644-d524-8118-ac0a-dd11a95e672c` · Jeff Navin `…81e3-b
 - **Memberships confirmed complete (13 rows):** AGC MA · USGBC · Built Environment Plus · AGC Metro DC · WBC NYC · NAIOP MA · NAIOP DC/MD · NH Hospital Association · SCUP · BIA NH · BuildingGreen · WoodWorks Innovation Network · AGC of Maine · IDEA. DBIA not added (unconfirmed per dossier).
 - **RECONFIRMED GENUINELY SOURCELESS (no write):** LinkedIn for Chiarelli/Nickel/Ockershausen/Geary/Christian; all People Email/Phone; contract values for Ragon/Williams Davis/Hackley/NYBCe/MathWorks/BCG Durham/Thompson Block/Colby Gordon/Bronx HS/Mt Sinai/MA State Trans/Congress Sq/UMass IALS/Logan Solar/Plainedge/Ørsted; project dates for Congress Sq/UMass IALS/BCG Durham; RAIISE venue; WBC 2025 exact date; AGC Metro DC Awards exact date; Location tags on MA/NY/ME projects (shared schema missing state options); AGC of America Boston Marathon event date/venue.
 - **Full counts confirmed:** 41+ projects in company `Construction Projects` · 73+ people · 21 divisions · 13 events · 13 memberships · 9 software rows · 15 locations — all intact and interlinked.
+
+**Audit pass #19 — 2026-06-13 (notion-audit skill, pass #19):** Full 3a–3e sweep vs all 4 dossiers. **3 WRITES — 1 fill + 2 Apollo dupes archived.**
+- **Bob Lizza `37a90644-d524-81c2` `Function Qualification`** → ["Director", "Legal"] (was ["Director"]). CLO confirmed; "Legal" option pre-exists in schema. Source: LeadIQ (in record body).
+- **Steven Sommer duplicate `37d90644-d524-81d5`** → archived to `37a90644-d524-818c`. Apollo CSV scrape 2026-06-12; no Division; same LinkedIn as canonical `37a90644-d524-8136`.
+- **Anthony Consigli duplicate `37d90644-d524-81c7`** → archived to `37a90644-d524-818c`. Apollo CSV scrape 2026-06-12; thin record; duplicate of canonical `37990644-d524-81fd`.
+- **False positives rejected:** Vern Kuehn + Laura Bush (both confirmed present with full data).
+- **3a–3e ✓:** all relations intact; all 13 memberships present; all location tags set; all project bodies at full dossier depth.
+- **RECONFIRMED SOURCELESS:** same list as pass #18 — no new gaps found.
+- **Full counts:** 41+ projects · 73+ people · 21 divisions · 13 events · 13 memberships · 9 software · 15 locations.
