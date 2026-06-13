@@ -1,7 +1,7 @@
 # State · Records — Shawmut Design and Construction
 
 > **Holds:** the dedup ledger for the Shawmut build — company record, profile page, 5 divisions, 19 projects, 13 people, 12 locations, 2 events, 1 membership, 7 software, 14 owner-clients, full interlink map.
-> **Ground truth dossier:** `Enlaye Notion/Shawmut/Shawmut3.md` (valid JSON; Shawmut2.md is a truncated/corrupt earlier copy — ignore; Shawmut1/4 empty).
+> **Ground truth dossiers:** `Enlaye Notion/Shawmut/Shawmut3.md` (valid JSON; Shawmut2.md is a truncated/corrupt earlier copy — ignore; Shawmut1/4 empty) · `Enlaye Notion/Shawmut/Shaw5.md` (2nd-pass 2026-06-12; 12 divisions, 28 projects, 4 events, 7 memberships, 269.8KB — bulk loaded by prior session 2026-06-12; all content confirmed present in Notion as of Pass #10).
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md) · index: [research-files](research-files.md)
 > **Siblings:** [databases](databases.md) · [records-hitt](records-hitt.md) (closest analog: existing-record extend + full interlink) · [records-cianbro](records-cianbro.md)
 

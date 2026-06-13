@@ -25,7 +25,7 @@
 | FlatironDragados | `Enlaye Notion/FlatironDragados/Flat.md` (primary) · `Flatiron1.md` (secondary; Flat1.md empty) | ✅ 2026-06-10 | [records-flatirondragados](records-flatirondragados.md) |
 | Sundt | `Enlaye Notion/Sundt/Sundt.md` (single-line JSON dossier; no people array) | ✅ 2026-06-10 | [records-sundt](records-sundt.md) |
 | Kiewit Corporation | `Enlaye Notion/Kiewitt/Kiewitt.md` (Kiewitt1.md empty) | ✅ 2026-06-10 | [records-kiewit](records-kiewit.md) |
-| Shawmut | `Enlaye Notion/Shawmut/Shawmut3.md` (Shawmut2 truncated/corrupt; 1 & 4 empty) | ✅ 2026-06-10 (prior-session build + this-session audit/complete/record) | [records-shawmut](records-shawmut.md) |
+| Shawmut | `Enlaye Notion/Shawmut/Shawmut3.md` (Shawmut2 truncated/corrupt; 1 & 4 empty) · `Shaw5.md` (2nd-pass 2026-06-12; 12 divisions, 28 projects, 4 events, 7 memberships, 94 sources — bulk loaded by prior session 2026-06-12) | ✅ 2026-06-10 (initial) · ✅ 2026-06-12 (Shaw5.md bulk loaded) | [records-shawmut](records-shawmut.md) |
 
 | Event attendees (not a company) | `Enlaye Notion/Events/apollo-contacts-export-9.csv` (89 → Paris BW Summit 2026) · `apollo-contacts-export-10.csv` (39 → SB Innovation Day) | ✅ 2026-06-10 | [records-event-imports](records-event-imports.md) |
 
