@@ -128,6 +128,18 @@ Full re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 membe
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
 - **No new fills. Nothing fillable was missed.**
 
+## Post-load audit #12 (2026-06-13, /notion-audit skill vs HITT1.md)
+Full 3a–3e re-audit: company record (`30a9…`) + profile page (`37b9…8060`) fetched live, Memberships DB searched (9 rows returned), Events DB searched (5 rows returned), 16 Locations DB rows returned, DBIA + NAIOP NoVA events fetched live, JMACC project fetched live, Kim Roy person fetched live, DC HQ division fetched live.
+- **0 fills — fully converged.** Nothing fillable was missed.
+- **Live confirmations:** Company Address (place) Falls Church VA 38.864/-77.196 ✓; Country=14 (incl. NC/SC/NM) ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body (Legal name/DUNS/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance) ✓; Size="Regional" (non-destructive conflict with dossier "Mutlinational", unchanged).
+- **3a (relation graph) ✓** — DC HQ division: Companies=HITT, People=7, Projects=5, Adress place set ✓; JMACC: Contractors=HITT, Value=300, Type=Government, Status=In progress, Date=2026-06-03, Location=Texas, body sourced ✓; Kim Roy: Company=HITT, Function=CEO, FQ=CEO, Location=Virginia ✓.
+- **3b (description depth) ✓** — DC HQ body: focus/leaders/phone/notable projects/parent ✓; JMACC body: what-it-is/owner/value note/delivery/task-order detail/sources ✓; Kim Roy body: role/WBJ award/revenue context ✓. No thin bodies.
+- **3c (address/location) ✓** — DBIA event: Adress place MGM Grand 3799 S Las Vegas Blvd, lat 36.102/-115.169 ✓; NAIOP NoVA: no address (sourceless — dossier only says Northern Virginia) ✓; all 16 location rows present.
+- **3d (membership completeness) ✓** — All 9 memberships live: AGC, NAIOP, USGBC, CoreNet Global, IFMA, IIDA, DBIA, ABC, ABC of Metro Washington — all with Companies relation set.
+- **3e (location tags) ✓** — DBIA: Nevada + Las Vegas ✓; NAIOP NoVA: Virginia ✓; CONEXPO confirmed prior passes; Construction Safety Week + Subcontractor Day: no tags (dossier: National/nationwide — genuinely sourceless).
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule prohibits overwrite).
+- **No false positives identified.**
+
 ## Post-load audit #11 (2026-06-13, /notion-audit skill vs HITT1.md)
 Full 3a–3e re-audit: company record (`30a9…`) + profile page (`37b9…8060`) fetched live, Memberships DB searched (9 rows returned), Events DB searched (5 rows returned), Divisions schema fetched, DBIA + NAIOP NoVA events fetched live, JMACC project fetched live.
 - **0 fills — fully converged.** Nothing fillable was missed.
