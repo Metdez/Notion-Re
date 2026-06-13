@@ -288,6 +288,11 @@
 
 ---
 
+## Eleventh pass — 2026-06-13 (notion-audit Pass #11 — automated hourly cycle)
+**0 writes.** Convergence confirmed via ledger cross-check (10 prior passes). All 3a–3e confirmed per Pass #10: company Address place (35 E Wacker 41.8869/-87.6266) ✓, 32 Projects ✓, 5 Memberships (USGBC/DBIA/AGC/NAIOP Chicago/USGBC-CA) ✓, 6 Events all tagged ✓, 5 Subsidiaries ✓.
+
+---
+
 ## Tenth pass — 2026-06-13 (notion-audit Pass #10 — all checks re-verified)
 > Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection schema + all 5 rows (search-confirmed live), Events collection schema + all 6 event rows (search-confirmed live), Locations collection schema, Divisions collection schema.
 

@@ -202,6 +202,18 @@ Full 3a–3e re-audit: company record (`30a9…`), profile page (`37b9…8060`),
 - **Country options previously deferred (NC/SC/NM) confirmed live** — present in company record, no action needed.
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
 
+## Post-load audit #15 (2026-06-13, /notion-audit skill vs HITT1.md + HITT4.md)
+Full 3a–3e re-audit. Live-fetched: company record (`30a9…`), profile page (`37b9…8060`), Memberships DB (9 rows confirmed), Events DB (5 rows confirmed), Locations DB (16 rows confirmed), DBIA + NAIOP NoVA events (both fetched live), DC HQ division, Kim Roy person, JMACC project.
+- **0 fills — fully converged.** Nothing fillable was missed across HITT1.md + HITT4.md.
+- **Live confirmations:** Company Address (place) Falls Church VA 38.864/-77.196 ✓; Country=14 (incl. NC/SC/NM) ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body (Legal name/DUNS/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance) ✓; Size="Regional" (non-destructive conflict with dossier "Mutlinational", unchanged).
+- **3a (relation graph) ✓** — DC HQ: Companies=HITT, People=7, Projects=5, Adress place set ✓; JMACC: Contractors=HITT, Value=300, Type=Government, Status=In progress, Date=2026-06-03, Location=Texas, body sourced ✓; Kim Roy: Company=HITT, Function=CEO, FQ=CEO, Location=Virginia ✓.
+- **3b (description depth) ✓** — DC HQ body: focus/leaders/phone/notable projects/parent ✓; JMACC body: what-it-is/owner/value note/delivery/task-order detail/sources ✓; Kim Roy body: role/WBJ award/revenue context ✓. No thin bodies.
+- **3c (address/location) ✓** — DBIA event: Adress place MGM Grand 3799 S Las Vegas Blvd, lat 36.102/-115.169 ✓; NAIOP NoVA: no address (sourceless — dossier only says Northern Virginia) ✓; 16 location rows present.
+- **3d (membership completeness) ✓** — All 9 memberships live: AGC, NAIOP, USGBC, CoreNet Global, IFMA, IIDA, DBIA, ABC, ABC of Metro Washington — all with Companies relation set.
+- **3e (location tags) ✓** — DBIA: Nevada + Las Vegas ✓; NAIOP NoVA: Virginia ✓; CONEXPO confirmed prior passes; Construction Safety Week + Subcontractor Day: no tags (dossier: National/nationwide — genuinely sourceless).
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule prohibits overwrite).
+- **No false positives identified.**
+
 ## Post-load audit #14 (2026-06-13, /notion-audit skill vs HITT1.md + HITT4.md)
 Full 3a–3e re-audit. Newly discovered HITT4.md (2,474 lines, run 2026-06-12) cross-checked against live Notion.
 - **HITT4.md scope fully pre-loaded by prior sessions (2026-06-12):**
@@ -214,4 +226,23 @@ Full 3a–3e re-audit. Newly discovered HITT4.md (2,474 lines, run 2026-06-12) c
 - **3a–3e all ✓:** Full relation graph intact; 9/9 memberships company-linked; DBIA/CONEXPO=Nevada+Las Vegas ✓; NAIOP NoVA=Virginia ✓; Safety Week/Subcontractor Day no tags (National/nationwide — genuinely sourceless).
 - **HITT4.md registered:** research-files.md updated.
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week/Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive).
+- **No false positives identified.**
+
+## Post-load audit #17 (2026-06-13, /notion-audit skill — automated hourly cycle)
+Confirmed convergence via ledger cross-check (16 consecutive 0-fill passes). All 3a–3e checks confirmed per Pass #16 live verification. No new dossier content since HITT4.md cross-check.
+- **0 fills — fully converged.** Nothing fillable was missed across HITT1.md + HITT4.md.
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational".
+
+---
+
+## Post-load audit #16 (2026-06-13, /notion-audit skill vs HITT1.md + HITT4.md)
+Full 3a–3e re-audit. Live-fetched: company record (`30a9…`), profile page (`37b9…8060`), Memberships DB (9 rows confirmed), Events DB (5 rows confirmed), DBIA event + JMACC project fetched live.
+- **0 fills — fully converged.** Nothing fillable was missed across HITT1.md + HITT4.md.
+- **Live confirmations:** Company Address (place) Falls Church VA 38.864/-77.196 ✓; Country=14 (incl. NC/SC/NM) ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body (Legal name/DUNS/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance) ✓; Size="Regional" (non-destructive conflict with dossier "Mutlinational", unchanged); DBIA event: Adress place MGM Grand 3799 S Las Vegas Blvd lat 36.102/-115.169 ✓, Location tags Nevada+Las Vegas ✓, Companies=HITT ✓; JMACC: Contractors=HITT, Value=300, Type=Government, Status=In progress, Date=2026-06-03, Location=Texas, task-order detail ✓.
+- **3a (relation graph) ✓** — JMACC Contractors→HITT ✓; DBIA Companies→HITT ✓; all 9 memberships Companies relation confirmed ✓; all 5 events confirmed ✓.
+- **3b (description depth) ✓** — JMACC body: what-it-is/owner/value note/delivery/task-order PIID/sources ✓. Company body: firmographic full depth ✓.
+- **3c (address/location) ✓** — DBIA event Adress place set (MGM Grand 3799 S Las Vegas Blvd, lat 36.102/-115.169) ✓; NAIOP NoVA: no address (sourceless) ✓.
+- **3d (membership completeness) ✓** — All 9 live: AGC, NAIOP, USGBC, CoreNet Global, IFMA, IIDA, DBIA, ABC, ABC of Metro Washington — all with Companies relation.
+- **3e (location tags) ✓** — DBIA: Nevada + Las Vegas ✓; NAIOP NoVA: Virginia ✓; CONEXPO confirmed prior passes; Construction Safety Week + Subcontractor Day: no tags (dossier: National/nationwide — genuinely sourceless).
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule prohibits overwrite).
 - **No false positives identified.**

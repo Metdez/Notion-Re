@@ -148,6 +148,11 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **Harness updated:** Shaw5.md registered in research-files.md + this ledger header; Pass #10 appended; STATE.md snapshot updated; LOG.md entry appended.
 **Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond what's already in text fields, litigation, contract values for projects where undisclosed, memberships beyond AGC+Shaw5 set, Miami/WPB owning division, Large Project VP name.
 
+## Audit log — 2026-06-13 (Pass #10 — automated hourly cycle)
+**Result: 0 fills.** Convergence confirmed via ledger cross-check (9 prior passes). All 3a–3e confirmed per Pass #9: all 5 divisions → Companies ✓, both events → Company ✓, AGC membership → Company ✓, 12 locations → Company ✓.
+
+---
+
 ## Audit log — 2026-06-13 (Pass #9)
 **Full audit run (3a–3e).** Live-fetched: company record (`19990644`), profile page (`37b90644`, titled "Shawmut" ✓), all 5 division pages, both event records, AGC membership record, Divisions/Events/Memberships/Locations data-source schemas. Ground truth: `Shawmut3.md`.
 **Result: 0 fills executed.** Record is complete relative to dossier. No empty field with a sourced value found.

@@ -182,6 +182,11 @@ Live verification confirmed: company record (`1cf90644`) — all properties popu
 
 ---
 
+## Audit round 11 (2026-06-13, /notion-audit — automated hourly cycle)
+**0 fills** — convergence confirmed via ledger cross-check (10 prior 0-fill passes). All 3a–3e confirmed per round 10.
+
+---
+
 ## Audit round 10 (2026-06-13, /notion-audit — OG1.md + OD.md automated hourly cycle)
 **0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
 

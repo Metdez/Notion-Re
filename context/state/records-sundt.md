@@ -457,6 +457,33 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 
 ---
 
+## Audit — 2026-06-13 (fourteenth pass — /notion-audit Sundt)
+Full live re-fetch: company record (60K chars, all 17 properties confirmed, last edited 2026-06-12T10:33:18), Memberships DB search (15 rows; 8 unique: DBIA/AGC/APWA/AzBA/Beavers/ESOP Assoc/ENR Top 400 #42/USGBC — all → Companies=Sundt ✓), Events DB search (13 rows — all → Companies=Sundt ✓), Locations DB search (25 rows), Divisions (Concrete + Nashville CONRAC fetched direct). Both dossiers cross-checked (Sundt.md + Sundt3.md). No workspace net-new since Pass #13.
+
+### New duplicate found since Pass #13
+- **Locations · Salt Lake City** — 3 rows total: `37b90644-d524-8134-a905-c91d95ff8079` (original, Renewables, 2026-06-10) + `37d90644-d524-81f6-881c-f6d24dc5f63f` (dup, 2026-06-12 20:06) + `37d90644-d524-81b6-a7ea-d567a80de261` (dup, 2026-06-12 20:18). Retain original; delete 2 dups via UI.
+
+### Checks (3a–3e): All pass
+- **3a Interconnection:** 9 divisions→company ✓ · 13 events→company ✓ · 8 unique memberships→company ✓ · 17 unique locations (incl. Austin+SLC original)→company ✓.
+- **3b Description depth:** Company body rich ✓. All 9 division bodies confirmed rich ✓ (Concrete: Danny Gumm, 400+ craft, 3D VDC). Events sourced ✓. Nashville CONRAC project body rich ✓.
+- **3c Address/location:** Company Address place (lat 33.3979/lng -111.9662) ✓. All location Adress text fields filled ✓. Division Adress (place type) empty — no coords in either dossier → genuinely sourceless.
+- **3d Membership completeness:** 5 dossier-sourced memberships all present (DBIA/AGC/APWA/AzBA/Beavers) ✓. USGBC body confirmed blank — not in any dossier → genuinely sourceless. Complete.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. All other events no venue → genuinely sourceless.
+
+**Result: 0 writes this pass. 14th consecutive no-write pass.**
+
+### Manual UI steps outstanding (updated 06-13 fourteenth pass)
+1. **Dup cleanup — Locations:** Salt Lake City `37d90644…81f6` + `37d90644…81b6` (delete — NEW); Vancouver WA `37d90644…8183`; Tucson Old Vail `37d90644…81d0`; Tempe HQ `37d90644…81a6` + `37d90644…81f8`; Phoenix Ops `37d90644…8114` + `37d90644…810a`; Phoenix Training `37d90644…8136` + `37d90644…8173` — all delete.
+2. **Dup cleanup — Memberships:** AGC delete `37d90644…81e5` + `37d90644…814c`; APWA delete `37d90644…817b`; AzBA delete `37d90644…819e`; Beavers delete `37d90644…8156` + `37d90644…8160`.
+3. **Dup cleanup — Events:** Cade Rowley CEO delete `37d90644…81c6`; IPS Acquisition delete `37d90644…8131`.
+4. **Orphan page:** `37d90644-d524-810e-9a9c` — delete.
+5. **I-10 dup review** — $87M vs $120M — review before deleting.
+6. **USGBC body** — blank; sourceless from both dossiers; fill manually if Zack has source.
+7. Projects Underway view / Software view → clear `__TEMPLATE__` filters.
+8. Construction Projects Location → add Idaho, Oregon options.
+
+---
+
 ## Audit — 2026-06-13 (thirteenth pass — /notion-audit Sundt)
 Full live re-fetch: company record (all 17 properties confirmed, last edited 2026-06-12T10:33:18), Memberships DB search (15 rows incl. TEMPLATE+dups; 8 unique: DBIA/AGC/APWA/AzBA/Beavers/ESOP Assoc/ENR Top 400 #42/USGBC — all → Companies=Sundt ✓), Events DB search (13 rows — all → Companies=Sundt ✓), Locations DB search (25 rows; 17 unique incl. Austin — all → Companies ✓). Workspace search for Sundt records created after 2026-06-13 returned 0 results — no net-new since Pass #12. All 7 Sundt3.md events and 5 memberships cross-checked against live Notion — all present ✓.
 

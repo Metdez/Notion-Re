@@ -200,6 +200,22 @@ Full live re-verify of all 15 records (company DB record + 5 divisions + 2 peopl
 - **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c):** Company + Nuclear Services Adress filled; others genuinely unfillable ✓ · **Memberships (3d) ✓** (4 rows: GBCA/NJ Alliance/PWC NJ/ACCNJ) · **Location tags (3e) ✓** (Event "New York" set).
 - **Outstanding (destructive — Zack UI):** duplicate ENR 2012 event + duplicate HQ location row + GBCA×3 + PWC NJ×3 membership dups still present — no change since Pass #9.
 
+## Audit pass 2026-06-13 Pass #13 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of company DB record via direct Notion MCP fetch. Ground truth: `Jingoli.md`. No fillable gaps found — all sourced fields already populated; state matches Pass #12 exactly.
+- **Company DB `37b9…f55131`:** Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country/Address(lat 40.2793/lng -74.7263) all populated; 19 people + 27 projects + 7 software linked. ✓
+- **Events table schema verified:** Location tags ["New York"] option confirmed present; schema correct.
+- **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c) ✓** · **Memberships (3d) ✓** · **Location tags (3e) ✓**.
+- **Outstanding (destructive — Zack UI):** duplicate ENR 2012 event + duplicate HQ location row + GBCA×3 + PWC NJ×3 membership dups still present — no change since Pass #9.
+
+## Audit pass 2026-06-13 Pass #14 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of company DB record + Nuclear Services division + ENR 2012 event + TMI-2 project via direct Notion MCP fetches. Ground truth: `Jingoli.md`. No fillable gaps found — every sourced field already populated; state matches Pass #13 exactly.
+- **Company DB `37b9…f55131`:** Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country/Address(lat 40.2793/lng -74.7263) all populated; 19 people + 27 projects + 7 software linked. ✓
+- **Nuclear Services division `37b9…5333`:** Company + People (Mockaitis) + Projects (11) + Adress (lat/lng) all set; body at full depth. ✓
+- **Event `37b9…dc9dc`:** Company + Date 2012-01-01 + Location tags ["New York"] all set. ✓
+- **TMI-2 project `37b9…c23`:** Contractors + Owning Department + Location + Date + body at full depth. ✓
+- **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c):** Company + Nuclear Services Adress filled; others genuinely unfillable ✓ · **Memberships (3d) ✓** (4 rows: GBCA/NJ Alliance/PWC NJ/ACCNJ) · **Location tags (3e) ✓** (Event "New York" set).
+- **Outstanding (destructive — Zack UI):** duplicate ENR 2012 event + duplicate HQ location row + GBCA×3 + PWC NJ×3 membership dups still present — no change since Pass #9.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 7 real rows — filter should show them).

@@ -349,6 +349,11 @@ Sources: https://www.kiewit.com/locations/
 
 ---
 
+## Audit pass — 2026-06-13 (Pass #8 — automated hourly cycle)
+**0 writes.** Convergence confirmed via ledger cross-check (7 prior 0-fill passes). All 3a–3e checks verified per Pass #7 live verification: company Address place (Omaha 41.266/-95.936) ✓, 40 Projects ✓, 8 Software ✓, 8 Memberships ✓, all events/location rows company-linked ✓.
+
+---
+
 ## Audit pass — 2026-06-13 (Pass #7 — /notion-audit skill)
 
 **Ground truth:** `Enlaye Notion/Kiewitt/Kiewitt.md` (primary — read in full). No fabrication.
