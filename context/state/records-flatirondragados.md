@@ -84,6 +84,23 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (ninth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (ninth pass)
+- **Company record** `24690644…`: Size="Mutlinational", Address place (4004 Summit Blvd NE Atlanta GA 33.8746/-84.3389), Description, BW Category=Builder, Website, LinkedIn, Country×15, Parent Company, Construction Projects×37, People×50+ — all populated ✓
+- **Profile page body** `37b90644…8039`: Bio, Snapshot, Attack Plan — complete ✓
+- **All 6 Divisions:** live-fetched all 6; all Companies→FD, Adress place (where sourced), body content, People+Projects linked ✓. J.F. White People still empty — genuinely sourceless (no named leader in any dossier, confirmed again) ✓
+- **Memberships raw collection:** searched; all 10+ content rows confirmed (AGC CA, AGC San Diego, Carolinas AGC, CCIB, IPI, DBIA, The Beavers, CA Alliance for Jobs, Hispanic Contractors CO, NECA Boston). NTEA row also present (sourced from ntea.com; not in any dossier — pre-existing, not removed per non-destructive rule). All FD-linked ✓
+- **Events raw collection:** 5+ content rows confirmed (DBIA Conf & Expo 2025, Groundbreaking Women 2026, IAI Summit 2025, IPI Awards 2022, CI Student Days 2025). All FD-linked ✓
+- **Projects:** LAX SkyLink confirmed present as "LAX Automated People Mover" · Susquehanna River Rail Bridge confirmed present · All 21 original projects + additional Flat2.md projects confirmed in Notion ✓
+- **False positive rejected:** NTEA — not in any dossier, no fillable gap (existing row with its own sourced content)
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — UNKNOWN/not disclosed in all dossiers).
+
+---
+
 ## Audit — 2026-06-13 (eighth pass)
 **Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
 

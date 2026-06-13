@@ -159,6 +159,20 @@ Full live re-verify of all 15 original dossier records (company DB record + 5 di
   - PWC NJ membership: 3 rows (`37c9…8140`, `37d9…810a`, `37d9…81f0`) — keep richest, delete other 2
   - NJ Alliance for Action events: multiple rows across event table — confirm which is primary
 
+## Audit pass 2026-06-13 Pass #11 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 dossier projects + 1 location + 1 event). Ground truth: `Jingoli.md`. No fillable gaps found — every sourced field already populated; state matches Pass #10 ledger exactly.
+- **Company DB `37b9…f55131`:** Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country/Address(lat 40.2793/lng -74.7263) all populated; 19 people + 27 projects + 7 software linked. ✓
+- **Nuclear Services division `37b9…5333`:** Company + People (Mockaitis) + Projects (11) + Adress (lat/lng) all set. ✓
+- **Jingoli Power division `37b9…8c8c`:** Company + People (Karl Miller) + Projects (5) set; Adress empty (no lat/lng in dossier — genuinely unfillable). ✓
+- **JDC / Goldstar / DCO divisions:** Company relation only — address/people/projects all sourceless. ✓
+- **Matthew Mockaitis `37b9…b583`:** Company + Function + LinkedIn set; Division deferred (global Divisions DB `37690644` no Jingoli rows). ✓
+- **Karl Miller `37b9…ffd8`:** Company + Function set; LinkedIn blank (no source in dossier) — genuinely unfillable. Division deferred. ✓
+- **All 5 dossier projects:** Contractors + Owning Department set; Adress genuinely unfillable (no lat/lng in dossier). ✓
+- **Location row `37b9…770d`:** Adress text + Company + Division all set. ✓
+- **Event `37b9…dc9dc`:** Company + Date + Location tags ["New York"] all set. ✓
+- **Interconnection (3a) ✓** · **Description-depth (3b) ✓** · **Address/location (3c):** Company + Nuclear Services Adress filled; others genuinely unfillable ✓ · **Memberships (3d) ✓** (4 rows from Jing3) · **Location tags (3e) ✓**.
+- **Outstanding (destructive — Zack UI):** duplicate ENR 2012 event + duplicate HQ location row + GBCA/PWC NJ membership dups from Pass #9 still present — no change since last pass.
+
 ## Audit pass 2026-06-13 Pass #10 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
 Full live re-verify of 15 original dossier records (company DB record + 5 divisions + 2 people + 5 projects + 1 location + 1 event). Ground truth: `Jingoli.md`. No fillable gaps found — every sourced field already populated; state matches Pass #9 ledger exactly.
 - **Company DB `37b9…f55131`:** Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country/Address(lat 40.2793/lng -74.7263) all populated; 19 people + 27 projects + 7 software linked. ✓

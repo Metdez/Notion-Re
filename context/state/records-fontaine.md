@@ -89,6 +89,11 @@ Verified: all 21 projects have Contractors→Fontaine + Owning Department set (S
 - 3a–3e verified: all relations intact; 3 events all tagged ✓; 2 memberships ✓; 2 locations ✓.
 - ⚠ Dup David Fontaine Jr. `37d90644-d524-8189` still outstanding — Zack UI action needed.
 
+**✅ Audited 2026-06-13 (scope: full profile — company, 22 projects, 10+ people, 2 divisions, 3 events, 2 locations, 2 memberships, 4 software — notion-audit skill, eleventh pass):** All records re-fetched live vs Font1.md + Fontaine.md + Fon2.md. **2 fills: Jason Boudreau + Mark Fulton Function Qualification + Location.**
+1. **Jason Boudreau `37c90644-d524-8100`** — Function Qualification → ["Vice President", "Project"] + Location → ["Massachusetts", "USA"]. Added by concurrent session 2026-06-12 with FQ blank. Source: `https://fontainebros.com/news-and-updates/fontaine-bros.-inc.-adds-two-industry-veterans-to-the-team`
+2. **Mark Fulton `37c90644-d524-81f6`** — Function Qualification → ["Superintendent"] + Location → ["Massachusetts", "USA"]. Added by concurrent session 2026-06-12 with FQ blank. Source: `https://fontainebros.com/news-and-updates/fontaine-bros.-inc.-adds-two-industry-veterans-to-the-team`
+- All other records verified complete. Note: ledger Event IDs (81d4, 8166) were stale — live IDs are `81d4-a8a4` (2024) + `8166-9eac` (2025); records themselves intact and complete. Worcester Division People now 3 (Joel Kent + Jason Boudreau + Mark Fulton). Joel Kent FQ ["Project"] false-positive held — no COO schema option exists. ⚠ Dup David Fontaine Jr. `37d90644-d524-8189` still outstanding — Zack UI action needed.
+
 **⚠ Manual UI steps for Zack:**
 1. **Projects Underway** view on the profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = Fontaine Bros. Inc.
 2. **Memberships "View of People"** tab — re-point leftover company filter to Fontaine Bros. Inc.

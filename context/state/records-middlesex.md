@@ -349,6 +349,29 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 
 ---
 
+## Audit — 2026-06-13 (notion-audit skill pass #12 — current session)
+**Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions live-fetched + 5 memberships (schema) + Events schema `3f590644` + Locations schema `eb190644`.
+**Result: 0 fills. All structural checks PASS. Full clean audit.**
+
+**Live-verified (no write needed):**
+- Company record `1ce90644`: Description ✓ · Website ✓ · LinkedIn ✓ · Address place (1 Spectacle Pond Rd, Littleton MA, lat 42.5412/lng -71.4773) ✓ · BW Category=[Builder] ✓ · Type=Company ✓ · Size=Regional ✓ · Country (7) ✓ · People (417+) ✓ · Construction Projects (23 forward + 2 backlink = 25 total) ✓ · Owners (12) ✓ · Software (8) ✓ · body full ✓.
+- Operational hub body: 8 divs ✓ · 6 events ✓ · 7 locations ✓ · 24 projects ✓ · 5 memberships ✓ · 417 people ✓ · 8 software ✓ · Attack Plan ✓.
+- TEMPLATE body: 8 divs ✓ · 6 events ✓ · 7 locations ✓ · 24 projects ✓ · 5 memberships ✓ · 417 people ✓ · 8 software ✓ · Attack Plan ✓.
+- All 8 divisions live-fetched: NE Region (12 People/15 Projects/Adress place ✓) · SE Region (1 People/9 Projects/Adress place ✓) · Paving LLC (1 People/Adress place ✓) · Mass Ready Mix (Adress place ✓) · Asphalt LLC (Adress place ✓) · Corridor Mining (Adress place: Sparta GA ✓) · Energy Division (Adress place: Littleton HQ ✓) · Rail/Transit Division (2 Projects/Adress place ✓). All → Companies ✓.
+- Events schema `3f590644`: Florida (green) ✓ + Massachusetts (blue) ✓ + Connecticut ✓ options confirmed live. 11 total options.
+- Memberships schema `83490644`: Companies full database relation ✓ · Name property ✓. CCIA + DBIA-FL both confirmed with Companies rel → `1ce90644` ✓ and sourced body ✓.
+- Locations schema `eb190644`: Adress (text) ✓ · Division relation ✓ · Companies full database relation ✓.
+- 3a Interconnection: all 8 divisions → Companies ✓ · NE People (12) ✓ · SE People (1) ✓ · Paving People (1) ✓ · Rail/Transit Projects (2) ✓.
+- 3b Description depth: all 8 division bodies sourced and detailed ✓.
+- 3c Addresses: all 8 divisions Adress place ✓; all 7 locations Adress text ✓.
+- 3d Memberships: 5 total (CCIA/FTBA/DBIA-FL/ABC/NSC) — dossier lists 4 (CCIA/FTBA/DBIA-FL/ABC), NSC sourced from richer context dossier ✓.
+- 3e Location tags: Events schema has FL/MA/CT options ✓; all 6 Middlesex events tagged ✓.
+
+**Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
+**Structural deferred (unchanged — Zack deletion required):** People→Division → global KBE-only Divisions DB structural mismatch · dup Orlando location `37c90644-d524-8138-a94d-fe1e0e886ff1` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows.
+
+---
+
 ## Audit — 2026-06-13 (notion-audit skill pass #11 — current session)
 **Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions live-fetched + 7 locations + 5 memberships + 6 events + Basiliere Bridge project spot-check.
 **Result: 0 fills. All structural checks PASS. Full clean audit.**

@@ -247,6 +247,26 @@ These are new dossier source data — outside the scope of an audit (audit fills
 - **Genuinely sourceless (confirmed):** Bangor I-95 URL (no cianbro.com project page) · Southport Swing Bridge URL · MVH Scarborough URL · Sarah Mildred Long URL · EMR/TRIR/DART · bonding/surety/insurance · ABC NCC 2024 + AGC Maine Awards exact dates · most People contact details.
 - **3a–3e all pass.** Record fully saturated vs Cianbro.md + Cianbro3.md.
 
+## Audit fills (2026-06-13 — notion-audit run #11)
+**State as of 2026-06-13 (full live re-fetch verify — no new writes needed):**
+
+### What was verified
+- **Company record** `1cf90644` — Description ✓ · Address place (44.7831/-69.3836) ✓ · Country ✓ · Website ✓ · LinkedIn ✓ · People (90+ records) ✓ · Construction Projects + Software relations ✓.
+- **Profile page** `37b90644-d524-8049` — Events section (6 events) ✓ · Locations section ✓ · Memberships section ✓.
+- **All 13 Divisions → Companies** ✓; Adress places: Infrastructure (Portland ME) ✓ · Building (North Stonington CT, A/Z HQ) ✓ · IDM (Baltimore MD) ✓ · Power & Energy (Falmouth ME) ✓ · Modular Mfg (Brewer ME) ✓ · Support Services (CFCC/Equipment, Pittsfield ME) ✓ · A/Z (North Stonington CT) ✓ · Starcon (La Porte TX) ✓ + all other subsidiaries confirmed filled in run #3.
+- **Division Projects:** Infrastructure=15 ✓ · Building=5 ✓ · IDM=3 ✓ · Power&Energy=2 ✓ · A/Z=1 ✓.
+- **6 Events** — ABC NCC 2025 (Las Vegas, 2025-03-06) ✓ · ABC NCC 2024 (Kissimmee) ✓ · ABC Top Performers (2026-02-23) ✓ · AGC Maine (Maine tag) ✓ · ConExpo 2026 (Las Vegas, 2026-03-03) ✓ · JA Hall of Fame (2024-11-12) ✓. All → Company ✓.
+- **Memberships (24)** — NSPE body clean (single line) ✓ · AGC ✓ · all others verified → Company ✓.
+- **Projects** — Ticonic URL (`cianbro.com/news/connecting-communities`) ✓ · Alexandria Bay URL (`cianbro.com/projectdetail/724`) ✓ · USNA Farragut URL ✓ · North Hero-Grand Isle URL ✓ · Founders Hall URL ✓ · Portland HSC URL ✓ · Canopy Hotel URL ✓ · Veranda St URL ✓. Bangor I-95 URL empty (confirmed genuinely sourceless) ✓. Southport empty ✓. Sarah Mildred Long empty ✓. MVH Scarborough empty ✓.
+- **Locations DB** — 210 Hunnewell Ave (Pittsfield ME operations) text Adress ✓. All 24+ rows → Company confirmed.
+- **People** — Division is a one-way relation (Divisions→People); People records have no Division back-property — by design, not a gap. Gary Smith / Pete Vigue / Ben Beaulieu all → Company ✓.
+
+### No writes made this run
+All data fully saturated vs Cianbro.md + Cianbro3.md dossiers. Record is complete.
+
+### Genuinely unfillable (confirmed, all sources exhausted)
+EMR/TRIR/DART · bonding/surety/insurance carriers · division revenue/headcount splits · ABC NCC 2024 exact date · AGC Maine Awards exact dates · Bangor I-95/Southport/Sarah Mildred Long/MVH Scarborough direct project URLs · most People Email/Phone/LinkedIn · per-state license numbers · JV revenue shares.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).

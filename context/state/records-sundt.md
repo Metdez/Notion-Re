@@ -454,3 +454,45 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 4. Projects Underway view → clear `__TEMPLATE__` filter.
 5. Existing Software view → clear `__TEMPLATE__` filter.
 6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+---
+
+## Audit — 2026-06-13 (twelfth pass — /notion-audit Sundt)
+Full live re-fetch: company record (all 17 properties confirmed via subagent), Memberships DB (full search = 15 rows incl. TEMPLATE), Events DB (full search = 13 rows incl. TEMPLATE + 2 shared), Locations DB (full search = 25 rows incl. TEMPLATE), Divisions DB (full search = 10 rows incl. TEMPLATE). Both dossiers cross-checked: Sundt.md (run 2026-06-10) and Sundt3.md (run 2026-06-12).
+
+### State confirmed (no writes since 11th pass)
+- **Company record** — last edited 2026-06-12T10:33:18. All 17 properties populated ✓. Address place filled (lat 33.3979/lng -111.9662) ✓. Country = 10 states ✓. 53 projects, 835 people, 5 software ✓.
+- **Divisions (9)** — stable since 06-12. Schema: Division title · Adress (place) · Companies full database · People · Projects ✓.
+- **Memberships (8 unique + TEMPLATE)** — DBIA · AGC · APWA · AzBA · The Beavers · ESOP Assoc · ENR Top 400 #42 · USGBC. All linked to company ✓. Dup rows still present (pending manual UI).
+- **Events (11 unique + TEMPLATE + 2 shared)** — AGC Safety, DBIA Milestone, Renewables Launch, Cade Rowley ×2 (dup), Advanced Facilities Created, Water Group Created, IPS Acquisition ×2 (dup), Chad Buck Building Group. All → Companies relation set ✓.
+- **Locations (17 unique + TEMPLATE)** — 15 originals + Austin + new dups enumerated below.
+
+### Checks performed (3a–3e)
+- **3a Interconnection:** Company ↔ Divisions (9) ✓ · Events → company (all rows) ✓ · Memberships → company (all rows incl. dups) ✓ · Locations → company ✓. No new unset edges from dossier.
+- **3b Description depth:** All 9 division bodies confirmed rich (prior passes) ✓. Company body very rich ✓. Event bodies sourced ✓.
+- **3c Address/location:** Company Address place filled ✓. All 16 original+Austin location Adress text filled ✓. Division `Adress` (place type) empty — no coords in either dossier, no-geocoding rule → genuinely sourceless ✓.
+- **3d Membership completeness:** Sundt.md names 1 (DBIA); Sundt3.md names 5 (DBIA, AGC, APWA, AzBA, The Beavers). All 5 present ✓. ESOP/ENR/USGBC are valid post-dossier enrichment. No dossier-sourced membership missing.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. All other events lack venue in both dossiers → genuinely sourceless ✓.
+
+### No new fillable gaps found from either dossier
+All dossier-sourced data (Sundt.md + Sundt3.md) correctly recorded. No empty field with a sourced value identified.
+**Result: 0 writes this pass. Record complete per dossier. 12th consecutive no-write pass.**
+
+### NEW duplicates flagged since 11th pass (UI cleanup required)
+| Table | New dup (added 06-12) | Retain |
+|---|---|---|
+| Locations · Vancouver WA | `37d90644-d524-8183-b78e-ddc63e45a94e` (added 06-12 20:18) | `37b90644-d524-81ac-a26d-fce1824d16d8` (original) |
+| Locations · Tucson Old Vail Road | `37d90644-d524-81d0-985a-c73bc8339449` (added 06-12 20:18) | `37b90644-d524-8109-b9e1-c88b8b6b08ea` (original) |
+| Events · Cade Rowley CEO | `37d90644-d524-81c6-8da9` "Cade Rowley promoted…" (06-12 19:08) vs `37d90644-d524-81c1-958a` "Cade Rowley Named…" (06-12 12:09) — same event, two rows | Retain `…81c1` (first created); delete `…81c6` |
+| Events · IPS Acquisition | `37d90644-d524-8131-9768` "Acquired Industrial Power Solutions" (06-12 19:08) vs `37d90644-d524-81e0-b9aa` "IPS Acquisition…" (06-12 12:09) — same event, two rows | Retain `…81e0` (first created); delete `…8131` |
+
+### Manual UI steps outstanding (updated 06-13 twelfth pass)
+1. **Dup cleanup — Locations:** Vancouver WA `37d90644…8183` (delete); Tucson Old Vail `37d90644…81d0` (delete); previously flagged: Tempe HQ `37d90644…81a6` + `37d90644…81f8` (delete); Phoenix Ops `37d90644…8114` + `37d90644…810a` (delete); Phoenix Training `37d90644…8136` + `37d90644…8173` (delete).
+2. **Dup cleanup — Memberships:** AGC: delete `37d90644…81e5` + `37d90644…814c`; APWA: delete `37d90644…817b`; AzBA: delete `37d90644…819e`; The Beavers: delete `37d90644…8156` + `37d90644…8160`.
+3. **Dup cleanup — Events:** Cade Rowley CEO: delete `37d90644…81c6`; IPS Acquisition: delete `37d90644…8131`.
+4. **Orphan page:** `37d90644-d524-810e-9a9c` (Concrete standalone) — delete.
+5. **I-10 dup review** — `37b90644…8102` ($87M) vs `37d90644…81a5` ($120M) — review before deleting.
+6. **USGBC membership body** — blank; not in either dossier; fill manually if Zack has a source.
+7. Projects Underway view → clear `__TEMPLATE__` filter.
+8. Existing Software view → clear `__TEMPLATE__` filter.
+9. Construction Projects Location → add Idaho, Oregon options for Northwest projects.

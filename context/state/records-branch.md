@@ -176,3 +176,9 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): HQ Roanoke, Chantilly, Charlottesville, Hampton Roads-Chesapeake, Richmond, Morrisville, Burnsville NC — all 7 rows confirmed ✓
 - Interconnection graph: fully intact per all fetched records ✓
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-13 (notion-audit skill pass #4)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record (26890644), profile hub (37b90644…4a13), Bob Wills person, I-95 project, Memberships DB search (4 rows: ABC, AGC, DBIA, VTCA), Events DB search (2 rows: DBIA Award + Golf Tournament), Locations DB search (7 rows: HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville NC).
+- All properties, relations, place/address fields, location tags, and body content confirmed intact ✓
+- Interconnection graph fully intact ✓
+- Zero fillable gaps. No writes performed.

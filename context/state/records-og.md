@@ -138,6 +138,17 @@ Live verification confirmed: company record (all properties populated), profile 
 5. **Duplicate People** — delete: Ryan Oneglia `37b90644-d524-8182`; LinkedIn-import dupes `37d90644-d524-81cc` (Raymond), `37d90644-d524-8133` (Greg), `37d90644-d524-8156` (T.J.). Broader 37d-prefix LinkedIn import may have 100+ thin People rows linked to O&G — review and dedup in bulk.
 6. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
 7. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
+## Audit round 13 (2026-06-13, /notion-audit — OG1.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md dossier.
+
+Live verification confirmed: company record (`1cf90644`) — all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 6 Software rows). Profile page body complete. Building Construction division — Companies + Projects (14 linked) + People (Mednick, Travelstead, Rossi) relations set; place/Adress set; body sourced. Amtrak CT River Bridge project — Contractors→O&G, Owning Department→Heavy Civil, Value=1300, Status=In Progress, Date=2024-09-01, body complete. Events schema confirmed: 3 rows, Location tags schema includes "New England" + "Connecticut" + "Plantsville" options. Memberships schema confirmed (Name + Companies relation). David Oneglia People record: Company→O&G set, Function=President, body sourced. Locations data source schema confirmed (Location + Adress text + Division + Companies relation).
+
+**No changes made this pass.** All OG1.md scope is fully loaded; no empty fillable gaps found.
+
+**Outstanding (all for Zack — unchanged from rounds 4–12):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National/NAPA/CMAA CT) · LinkedIn/Apollo People dupes (~100+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave) · 3 view TEMPLATE filters (UI).
+
+---
+
 ## Audit round 12 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
 **0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
 

@@ -346,3 +346,20 @@ Sources: https://www.kiewit.com/locations/
 - No new division gaps: Divisions schema has all 5 required cols (Division/Adress/Companies/People/Projects); Dave Miles linked to Kiewit Infrastructure Co. People relation ✓
 
 **0 writes made.** Record is at full dossier depth. Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).
+
+---
+
+## Audit pass — 2026-06-13 (Pass #7 — /notion-audit skill)
+
+**Ground truth:** `Enlaye Notion/Kiewitt/Kiewitt.md` (primary — read in full). No fabrication.
+
+**Live fetches:** Memberships schema (`ed090644` — Name + Companies full database confirmed), Events schema (`17a90644` — Event name/Date/Location tags/Place/Companies confirmed), Locations schema (`18e90644` — Location/Adress text/Companies/Division confirmed), Memberships search (15 rows — 8 live + 6 DUPLICATE— + 1 TEMPLATE), Events search (11 rows — 6 live + 2 DUPLICATE— + TEMPLATE + 2 unrelated), Locations search (12 rows — 11 live + 1 TEMPLATE), EPC Show 2026 (Texas tag ✓; Place = George R. Brown Convention Center, Houston TX 29.7527/-95.362 ✓; Date 2026-06-16 ✓; Companies→Kiewit ✓), AGC Annual Convention 2026 (Florida+Orlando tags ✓; Place = Orange County Convention Center, 9800 International Dr, Orlando FL 28.4249/-81.4686 ✓; Companies→Kiewit ✓), Scottsdale InEight HQ location row (Adress text = "9977 N. 90th Street, Ste. 200, Scottsdale, AZ 85258" ✓; Division linked ✓; Companies→Kiewit ✓).
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Memberships schema Companies full database relation ✓; Events schema Companies+Date+Location tags+Place all present ✓; Locations schema Companies+Division relations ✓; all 8 live memberships company-linked ✓; all 6 live events company-linked ✓; all 11 live location rows company-linked ✓
+- 3b: All records at full dossier depth — confirmed via prior passes + live spot checks ✓
+- 3c: EPC Show 2026 Place (place type) ✓; AGC Convention Place (place type) ✓; Scottsdale InEight HQ Adress (text type, street address) ✓; Locations `Adress` = TEXT type (structural limit — flagged, unchanged)
+- 3d: 8 live memberships: The Beavers `37b90644-8172` · AGC `37b90644-81c1` · DBIA `37b90644-814f` · CSRA `37b90644-8184` · CISI `37b90644-818f` · CCSC `37b90644-81a6` · NCSE `37b90644-81ab` · ASCE `37d90644-81f0`; all 7 dossier memberships + ASCE present and company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Annual Convention 2026 → Florida+Orlando ✓; Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; FWIK Summit 2025 untagged ✓; Engineering Technical Summit 2026 untagged ✓; 2 DUPLICATE— Events still pending Zack UI deletion (`37d90644-81d7/81fb`)
+
+**0 writes made.** Record is at full dossier depth. Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).
