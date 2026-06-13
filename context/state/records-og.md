@@ -79,6 +79,23 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 **New data in OD.md (second research pass, NOT yet loaded at time of round 3):**
 - 13 additional projects, 7 new named leaders, 4 new Mason location rows — flagged for /notion-load pass.
 
+## Audit round 7 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+**One harness fix:** 4th Events row (CMAA CT Chapter Project Achievement Awards 2025, `37d90644-d524-8175-8ede-d861642bd3e5`, created 2026-06-12) was not in the ledger — added to Events line above. Company linked, Location tags=Connecticut, date=2025-01-01 placeholder, body sourced from LinkedIn. This is a net-new event row that a prior session added; not a fill by this audit.
+
+**Locations count correction:** 16 rows confirmed live (was 12 at OG1 build + 4 OD.md Mason rows). Events count: 4 (3 OG1 + 1 CMAA CT Jun-12). Memberships: 7 real rows (4 OG1 + 3 OD) + 2 confirmed dup 37d-prefix rows (AGC National, NAPA); third dup (CMAA CT) not found in memberships — may have been deleted or stored elsewhere.
+
+Live verification confirmed: company record (all properties populated), profile page body complete, 7 divisions complete, 22 projects present and linked (Contractors + Owning Department set), 12+ named People linked (Company + Division relations), 7 memberships (4 OG1 + 3 OD), 16 location rows, 4 events, 4 software rows complete.
+
+**Correction still pending (not changed — requires Zack decision):** Bridgeport Mason Showroom address "240 Bostwick Ave" (OG1.md/BBB source) vs "325 Hancock Ave" (OD.md / mason.ogind.com — more authoritative). This is a correction, not an additive fill.
+
+**Outstanding for Zack (unchanged from rounds 4-6):**
+- Size=Local vs Regional conflict on company CRM record
+- 2 confirmed duplicate membership rows (37d-prefix): AGC National `37d90644-d524-8158-bbac-dc8e03f0e0d7`, NAPA `37d90644-d524-81ec-89b4-e28bba80eeab`
+- LinkedIn/Apollo bulk import People dupes (37d-prefix, 100+ thin rows linked to O&G)
+- 3 view TEMPLATE filters still showing in profile page (Projects Underway, Existing Software, Memberships "View of People")
+
 ## Audit round 6 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
 **0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
 

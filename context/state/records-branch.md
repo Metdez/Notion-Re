@@ -123,3 +123,15 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Memberships schema confirmed: Companies full database relation + URL properties present ✓
 - Locations schema confirmed: Adress text + Companies + Division relations present ✓
 - Zero fillable gaps found. No writes required.
+
+## Audit log — 2026-06-13 (third pass, /notion-audit skill)
+**Full re-audit pass completed (no writes needed).** Live-fetched and verified all record categories against dossier Branch1.md. Note: a sub-agent initially reported the Locations table as empty — the view has a TEMPLATE filter hiding real rows; all 7 rows confirmed present via direct search + spot-fetches.
+- Company record (26890644): Description, Type, Size, BW Category, Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place (3635 Peters Creek Rd Roanoke), People (7+), Construction Projects (12) ✓
+- Profile hub page body: Enlaye angle block + all inline databases present ✓
+- Divisions (4): Branch Civil, Branch Builds, Hopkins Lacy, Young & McQueen — company relation, people, projects, Adress place, body ✓ (all 4 schemas + Branch Civil spot-checked)
+- Projects (12): Contractors→Branch Group, Location tag, Adress place, Date, Status, Type, body ✓ (I-95 Express Lanes spot-checked)
+- People (7): Bob Wills, Brian Quinlan, John Anglin spot-checked — Company, Function, Function Qualification, Location, body ✓
+- Events (2 Branch Group rows): Golf Tournament → Location=Virginia ✓; DBIA Award → Location=North Carolina ✓; both → company ✓; Place genuinely sourceless (no venue address/coords in dossier) ✓
+- Memberships (4): AGC, ABC, VTCA, DBIA — Name, URL, Companies relation → Branch Group, body ✓
+- Locations (7): HQ (Roanoke), Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville NC, Burnsville NC — all confirmed via direct search + spot-fetches; Adress text + Companies relation + Division (HQ no Division = expected) ✓
+- Zero fillable gaps found. No writes required. Sub-agent false positive (Locations empty due to view filter) rejected after live verification.

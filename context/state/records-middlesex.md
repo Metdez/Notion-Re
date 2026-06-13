@@ -122,6 +122,27 @@ All corporate → homed to **Northeast Region** (Littleton HQ) division per exis
 
 ---
 
+## Audit — 2026-06-13 Pass #6 (notion-audit skill — current session)
+**Target:** Company record `1ce90644…21c76` + operational hub `37b90644d5248003baf7e3d038b7c037` + TEMPLATE `37b90644-d524-80b2-b047-ef5e4b3a576a` + all 8 divisions + 6 events + 5 memberships + 7 locations + sample projects.
+**Result: 0 fills. All structural checks PASS. Build fully converged.**
+
+**All checks PASS — no write needed:**
+- Company record `1ce90644`: Description ✓, Website ✓, LinkedIn ✓, Address place ✓, BW Category ✓, Type ✓, Size=Regional ✓, Country (7) ✓, People (417) ✓, Construction Projects (23 forward property / 24+ via backlinks) ✓, Owners (12) ✓, Software (8) ✓.
+- All 8 divisions: Companies ✓, Adress place ✓ (NE/SE/Paving/Mass Ready Mix/Asphalt LLC/Energy/Rail-Transit/Corridor Mining), body ✓. People sparse on 5 divisions (genuinely sourceless — no dossier-named leaders for Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC).
+- All 6 events: Companies ✓, Location tags (Florida ×4, Connecticut ×1, Massachusetts ×1) ✓, Place set on 4 of 6 (CCIA + Charity Golf venue genuinely sourceless).
+- All 5 memberships: CCIA `37b90644-d524-8178…` · FTBA `37b90644-d524-8137…` · DBIA-FL `37b90644-d524-8132…` · ABC `37b90644-d524-810f…` · NSC `37d90644-d524-8198…` — all → Companies ✓. (Dup `37c90644` rows for CCIA/FTBA/DBIA-FL flagged — Zack deletion required.)
+- All 7 locations: Adress text ✓ (Littleton MA HQ / Meriden CT / Orlando FL SE-HQ / Tampa FL / Mass Ready Mix Plant / Orlando Asphalt Plant / Sparta Quarry), Division ✓, Companies ✓. Note: Sparta Quarry shows "Sparta, GA" only (city-level — no street address in source).
+- Operational hub body: 8 divs / 24 projects / 417 people / 8 software / 6 events / 5 memberships / 7 locations / Attack Plan ✓.
+- TEMPLATE body: same counts ✓.
+- Projects spot-checked: Basiliere Bridge ✓, SR-429 ✓, OIA GMP 5S.2 ✓, MBTA Orange Line Surge ✓ — all Adress place + Contractors + Location + Owner set.
+
+**False positive rejected:** NE Region shown as "25 projects" by sub-agent — actual is 15 (14 original NE + Basiliere). SE Region confirmed 9 (7 original + SR-429 + OIA GMP). Total = 24.
+
+**Genuinely sourceless (unchanged):** Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC division leaders · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Charity Golf event venue coords · FTBA Annual exact date · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier) · Sparta Quarry street address.
+**Structural deferred (unchanged — Zack action required):** People→Division → global KBE-only Divisions DB mismatch · dup Orlando location `37c90644-d524-8138-a94d-fe1e0e886ff1` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows (3) · Projects Underway + Existing Software view filters (clear `__TEMPLATE__` filter, UI) · Company `Construction Projects` property 23 vs body 24 (display discrepancy — SR-429/OIA GMP appear via Contractors backlink, not forward property).
+
+---
+
 ## Audit — 2026-06-12 #2 (notion-audit skill pass — full re-audit, current session)
 **Target:** Middlesex TEMPLATE page `37b90644-d524-80b2-b047-ef5e4b3a576a` + operational hub + all divisions/events/memberships
 **Result: 2 fills + 2 schema extensions. All structural checks PASS.**
