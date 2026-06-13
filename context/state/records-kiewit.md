@@ -280,3 +280,24 @@ Sources: https://www.kiewit.com/locations/
 - Kiewit Infrastructure South `People` relation empty — dossier names no individuals for this division → correctly empty
 
 **0 writes made.** Record is at full dossier depth. Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).
+
+---
+
+## Audit pass — 2026-06-13 (Pass #4 — /notion-audit skill, automated hourly cycle)
+
+**Ground truth:** `Enlaye Notion/Kiewitt/Kiewitt.md` (primary) + Kiewitt2-PARTIAL.md, Kiewitt3-thin.md, Kiewitt4.md (supplementary — all read in full). No fabrication.
+
+**Live fetches:** Company record (`17b90644` — Description/Address/Size/Type/Website/LinkedIn/BW/Country/Projects/Software/People confirmed), profile page (`37b90644d524…830de18cf6ea0d89`), Memberships schema (`ed090644`), Events schema (`17a90644`), Locations schema (`18e90644`), Kiewit Building Group division, Kiewit Engineering Group division, Kiewit Canada Group division (`37d90644-81e0`), Kiewit Foundations Co. division (`37d90644-8100`), search over Kiewit page (25 results — all membership/event/division rows enumerated).
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company — Description ✓; Address place (Omaha 41.265948/-95.935909) ✓; Size=Mutlinational ✓; Type=Company ✓; Website ✓; LinkedIn ✓; BW=[Builder/Design and Architecture/Developer] ✓; Country=24 entries ✓; 39+ Construction Projects linked ✓; 8 Companies Software linked ✓; 715+ People linked ✓; all divisions in Divisions DB → Companies→Kiewit ✓ (Kiewit Canada Group + Kiewit Foundations Co. + Kiewit Building Group verified live); all 8 memberships company-linked ✓ (verified via search); Events table company-linked ✓; Locations schema has Companies+Division relations ✓
+- 3b: Kiewit Building Group body — Focus/Notable (Kiewit Corporate HQ 7-story tower) / Offices / Phone ✓; Kiewit Engineering Group body — Focus (4,000+ employees / ISO 9001) / Office / IDs / Parent ✓; Kiewit Canada Group body — Focus (since 1941) / Scale ($2.1B / 4,000 staff) / Footprint / Phone / Parent ✓; all key division bodies have Focus sections confirmed from prior passes ✓
+- 3c: Company HQ place ✓; Kiewit Canada Group Adress place (Oakville ON 43.4675/-79.7202) ✓; Kiewit Foundations Co. Adress place (Omaha NE 41.265948/-95.935909) ✓; Kiewit Building Group Adress place (Omaha NE 41.265948/-95.935909) ✓; all other 17+ divisions Adress place confirmed in prior passes ✓; Locations `Adress` = TEXT type (structural limit — unchanged)
+- 3d: 8 live memberships confirmed via search: The Beavers `37b90644-8172` · AGC `37b90644-81c1` · DBIA `37b90644-814f` · CSRA `37b90644-8184` · CISI `37b90644-818f` · CCSC `37b90644-81a6` · NCSE `37b90644-81ab` · ASCE `37d90644-81f0`; all match dossier sources + company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Annual Convention 2026 → Florida+Orlando ✓; Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; FWIK Summit 2025 → untagged ✓; Engineering Technical Summit 2026 → untagged ✓; 2 DUPLICATE— Events still pending Zack UI deletion (`37d90644-81d7/81fb`)
+
+**False positives rejected:**
+- Kiewitt2/3/4 supplementary dossiers contain many additional net-new facts (additional division rows, projects, addresses, software, awards) — all confirmed already added in 06-12 session (Kiewit Canada Group, Kiewit Foundations Co., Kiewit Supply Network, Kiewit Water Facilities South/Florida, additional historical projects); all company-linked + bodies complete → no new fills needed
+- "Mutlinational" size typo — pre-existing select option name; correct per DB schema; not a fillable gap
+
+**0 writes made.** Record is at full dossier depth. Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).

@@ -138,6 +138,21 @@ Live verification confirmed: company record (all properties populated), profile 
 5. **Duplicate People** — delete: Ryan Oneglia `37b90644-d524-8182`; LinkedIn-import dupes `37d90644-d524-81cc` (Raymond), `37d90644-d524-8133` (Greg), `37d90644-d524-8156` (T.J.). Broader 37d-prefix LinkedIn import may have 100+ thin People rows linked to O&G — review and dedup in bulk.
 6. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
 7. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
+## Audit round 10 (2026-06-13, /notion-audit — OG1.md + OD.md automated hourly cycle)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+Live verification confirmed: company record (`1cf90644`) — all properties populated (Description, Type, Address/place, Country, Website, LinkedIn, BW Category, 22 Construction Projects, 4 Software). Profile page body complete. All 7 division rows present (Construction Materials row `8108-9362` confirmed — prior sub-agent false positive). All 16 location rows present (full count confirmed via direct search). All 25 projects linked (spot-checked Amtrak, I-91/I-691, Manchester Library — fully populated). Memberships: 7 unique + 3 dup pairs (unchanged). Events: 3 rows, all Location-tagged and Companies-linked.
+
+**False positives rejected:** (1) "O&G Construction Materials division row missing" — row exists at `37b90644-d524-8108-9362-d8d505cfa3ce`; sub-agent pagination limit caused false negative. (2) "Corporate HQ missing Division relation" — intentional per dossier (`owning_division` = "" / parent-company-only); not a fillable gap.
+
+**Genuinely sourceless (no dossier data):** Power & Energy division People relation (leader = null in both dossiers) · Mason/Industrial/Asphalt Projects relations (no projects listed for those divisions in either dossier) · Apollo/LinkedIn import People (37d-prefix): Division + body fields — those stubs are not in any dossier scope; not auditable from ground truth.
+
+**No changes made this pass.** All dossier scope fully loaded.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix AGC National/NAPA/CMAA CT) · LinkedIn/Apollo People dupes (~20+ 37d-prefix thin stubs) · Bridgeport Mason address conflict (240 Bostwick Ave vs 325 Hancock Ave).
+
+---
+
 ## Audit round 9 (2026-06-13, /notion-audit — OG1.md full re-verify)
 **0 fills** — all records verified live against Notion; no fillable gaps against OG1.md.
 
