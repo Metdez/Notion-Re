@@ -112,7 +112,22 @@ Full live re-verify of all 15 records (company DB record + 5 divisions + 2 peopl
 - **Memberships (3d):** none in dossier → none in Notion ✓.
 - **Location tags (3e):** Event "New York" ✓. No other untagged located records.
 
+## Audit pass 2026-06-13 Pass #6 (`/notion-audit Jingoli Nuclear Services`) — 2 FILLS
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 projects + 1 location + 1 event) + cross-check with `Jingoli1.md`. **2 fillable gaps found and filled — previously missed because prior passes only checked `Jingoli.md` (no lat/lng), not `Jingoli1.md` (HQ lat/lng present).**
+- **Filled (2):**
+  1. Company DB record `37b90644-d524-8127-824d-f2c6e9f55131` — `place:Address` → "100 Lenox Drive Suite 100, Lawrenceville, NJ 08648" (lat 40.2793 / lng -74.7263). Source: Jingoli1.md / jingoli.com/contact.
+  2. Division `37b90644-d524-8176-9b58-e01587bd5333` (Nuclear Services market-sector unit) — `place:Adress` → same address + coords. Source: Jingoli1.md / documents.dps.ny.gov.
+- **Project Adress fills attempted (5) — rejected:** dossier lat/lng = null for all project sites; Notion place validation requires lat/lng; no-geocoding rule blocks fabrication. All 5 remain genuinely unfillable.
+- **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis+11 projects; Jingoli Power→Karl Miller+5 projects; all 5 dossier projects→Contractors+Owning Department; both people→company; Location→company+division; Event→company.
+- **Description-depth (3b) ✓:** all bodies at full sourced depth.
+- **Address/location (3c):** Company Address place now filled ✓; Nuclear Services division Adress now filled ✓; 4 other division Adress empty (no physical offices — market-sector units, sourceless). Project Adress genuinely unfillable (lat/lng null in both dossiers).
+- **Memberships (3d):** none — `Jingoli.md` memberships array all-null; `Jingoli1.md` memberships belong to parent entity JINGOLI/Joseph Jingoli & Son (not nuclear subsidiary). Complete ✓.
+- **Location tags (3e):** Event "ENR NY Region Contractor of the Year" → [New York] ✓.
+- **Duplicates observed (not fixed — destructive):** 2× ENR 2012 event rows (`37b9…81e7`, `37e9…81a9`); 2× HQ location rows (`37b9…810a`, `37e9…8166`).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).
 3. Possible template guide rows on local tables (Divisions/Events/Sources/Locations) — UI delete if Zack wants them gone.
+4. Delete duplicate ENR 2012 event row (`37e90644-d524-81a9-a79c-c45a8d7fb1a5`) — duplicate of `37b9…81e7`.
+5. Delete duplicate HQ location row (`37e90644-d524-8166-aeb9-f6c727613765`) — duplicate of `37b9…810a`.
