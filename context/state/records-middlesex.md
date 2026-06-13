@@ -237,3 +237,23 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 
 **Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
 **Structural deferred (unchanged):** People→Division global DB mismatch · dup Orlando location `37c90644-d524-8138` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows — Zack deletion required.
+## Audit — 2026-06-13 (notion-audit skill pass #6 — current session)
+**Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions + 7 locations + 5 memberships (operational hub) + 6 events.
+**Result: 0 fills. All structural checks PASS. Full clean audit.**
+
+**Verified PASS — no write needed:**
+- Company record `1ce90644`: Description ✓, Website ✓, LinkedIn ✓, Address place ✓, BW Category ✓, Type ✓, Size (Regional) ✓, Country (7) ✓, People (417) ✓, Construction Projects (23 forward + 2 backlink-only = 25 total) ✓, Owners (12) ✓, Software (8) ✓, body full ✓.
+- Operational hub body: 8 divs ✓ · 6 events ✓ · 7 locations ✓ · 24 projects ✓ · 5 memberships ✓ · 417 people ✓ · 8 software ✓ · Attack Plan ✓.
+- TEMPLATE body: matches operational hub exactly ✓.
+- All 8 divisions: Companies relation ✓ · Adress place ✓ (all 8) · bodies full ✓. NE People (12) ✓, NE Projects (15) ✓, SE People (1) ✓, SE Projects (9) ✓, Rail Projects (2) ✓.
+- All 6 events: Companies ✓ · Location tags ✓ (FTBA Annual/Symposium/DBIA Awards/DBIA 19th = Florida; CCIA = Connecticut; Golf = Massachusetts) · FL+MA options in schema ✓. FTBA Annual + DBIA-FL 19th have Place filled ✓.
+- All 5 memberships (operational hub): CCIA ✓ · FTBA ✓ · DBIA-FL ✓ · ABC ✓ · NSC ✓ · Companies relation ✓.
+- All 7 locations: Companies ✓ · Division ✓ · Adress text ✓ · bodies full ✓.
+- Project count note: company record `Construction Projects` property = 23 URLs; OIA GMP 5S.2 `37d90644…a39a3bcee9aa1019b0` + SR-429 `37d90644…f39c38c80f4a93adb7` have Contractors=Middlesex but do not appear in company forward relation. This is a known display issue, not a data gap. SE Region Projects = 9 (7 original + these 2) ✓. Body counter (24) is correct.
+
+**Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address (dossier only says "Sparta, GA") · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
+**Structural deferred (unchanged — Zack deletion required):**
+- People→Division → global KBE-only Divisions DB structural mismatch (impossible to fix without structural change).
+- Dup Orlando location `37c90644-d524-8138-a94d-fe1e0e886ff1` (blank body) — needs deletion.
+- Dup CCIA/DBIA-FL/FTBA `37c90644`-era membership rows — needs deletion.
+**Log overdue for archive roll** (2026-06.md at 417 lines — exceeds 200-line threshold). Recommend splitting before next session.

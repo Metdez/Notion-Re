@@ -100,6 +100,16 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **Profile page:** now titled "Shawmut" (TEMPLATE suffix gone — prior session). Attack Plan section present.
 **3d membership check:** AGC of America is the only corporate membership in the dossier. Confirmed complete.
 **3e location tags check:** both events tagged correctly. Locations table uses text Adress field (schema design) — no place property to audit.
+## Audit log — 2026-06-13 (Pass #5)
+**Full audit run (3a–3e).** Checked: profile page body, 5 divisions, 12 locations, 2 events, 1 membership.
+**Result: 0 fills executed.** Record is complete relative to Shawmut3.md dossier.
+**3a interconnection check:** All 5 divisions → Companies full database set ✅. 10/12 location rows → Division linked ✅. Miami and West Palm Beach Division = empty (dossier says owning division not stated → genuinely sourceless ✅). Both events → Companies full database linked ✅. Memberships → Company linked ✅.
+**3b description-depth:** Profile page body intact — Company Map, Events, Locations, Memberships, Software, Projects, Attack Plan sections all present ✅.
+**3c address check:** Company Address (560 Harrison Ave) ✅. All 12 location Adress text fields filled ✅. Events Place empty (nationwide, no geocode) ✅.
+**3d membership check:** AGC of America — only sourced membership, present ✅.
+**3e location tags:** Safety Week 2026 [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] ✅. 12th Annual [Boston, Massachusetts, National] ✅.
+**Profile page title:** "Shawmut" (TEMPLATE suffix already removed in prior session) ✅.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond HQ+San Diego, litigation, per-project delivery/architect/dates for most, contract values for 13/19 projects, memberships beyond AGC, Miami/WPB owning division.
 
 ## Audit log — 2026-06-10 (this session)
 **Full audit run.** Checked: company record, 5 divisions, 13 named people, 20 projects, 14 owners, 12 locations, 2 events, 1 membership, 7 software records.

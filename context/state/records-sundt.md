@@ -99,6 +99,7 @@ Full re-fetch of all records: company record, 8 divisions, 3 people, 18 projects
 - Genuinely sourceless blanks unchanged: place fields (no coords), division revenue/headcount, people email/phone/LinkedIn, DBIA event date, AGC event venue address, 5 project contract values.
 - **Result: 0 writes, 0 new gaps filled, 0 data corrupted. Record is complete per available dossier data.**
 
+
 ## Audit — 2026-06-12 (third pass — /notion-audit Sundt)
 Full re-fetch: company record, all linked tables (Divisions, Events, Memberships, Locations, Software, Projects). Workspace was substantially enriched by a subsequent session between 06-10 and 06-12.
 
@@ -198,3 +199,91 @@ All dossier-sourced data remains correctly recorded. No empty fields with source
 3. Projects Underway view → clear `__TEMPLATE__` filter.
 4. Existing Software view → clear `__TEMPLATE__` filter.
 5. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+- **Construction Projects** — 18 → 53+ linked. New projects include: State Route 347 ($396M, AZ/Transportation), Boeckman Road Corridor Improvement (Sundt-Tapani JV, $27M, WA/Transportation), US-30 Rocky Point Wildlife Crossing ($11.9M, Idaho/Transportation), TxDOT I-10 Widening Phase II ($120M, TX/Transportation), Valley Metro NW Extension Light Rail (Phoenix/Transportation), SF SE Water Pollution Control Headworks ($540M, CA/Water), and more.
+- **Divisions** — 8 → 9 (new: Concrete `37d90644-d524-8155-b8ec-ea2507ae6474` — Leader Danny Gumm; 400+ concrete craft workers; linked to company ✓).
+- **People (Divisions)** — new leaders added: Renewables (Tom Dodson, Chris Steves); Transportation (Jeff Williamson, Ken Kubacki, Jasen Bennie, Jeffrey Hamilton); Water (Omar Chavez, Matt Bothun, Paul Laufer); Advanced Facilities (+Josh Anderson); Building Group (+Ryan Nessen, Sarah Owen, Shawn Blubaum).
+- **Memberships** — 1 → 4+: DBIA (original) + AGC (`37d90644-d524-811e-b8fc-fa65bc716c58`) + APWA (`37d90644-d524-81f2-902d-c7ddbe28f8e6`) + Arizona Builders Alliance (`37d90644-d524-8146-abe0-d82ef36fe939`). All linked to company ✓.
+- **Events** — 2 → 3: AGC Safety Award (original) + DBIA Milestone (original) + Sundt Renewables Launch (`37d90644-d524-812a-b79f-dbc5cb84f476`, Dec 2020, linked ✓).
+- **Software** — 3 → 5: original 3 + Bluebeam Revu `37d90644-d524-81d1` + Bluebeam Revu/Studio `37d90644-d524-8156`. Both linked to company ✓.
+- **Country** — Utah, New Mexico, North Carolina now present in company record ✓.
+
+### Duplicates flagged (UI cleanup required)
+- Locations: "Tempe Headquarters" `37b90644…81e6` (original) vs "Tempe HQ" `37d90644…81f8` (blank) — delete new.
+- Locations: "Phoenix Operations Support Services" `37b90644…81f2` (original) vs 2 blank dups — delete dups.
+- Memberships: AGC x3 (`37d90644…811e` has body; delete `…81e5` + `…814c`).
+- Memberships: AzBA x2 (`37d90644…8146` has body; delete `…819e`).
+- Memberships: APWA x2 (`37d90644…81f2` has body; delete `…817b`).
+- Projects: "I-10 Widening West Phase II" `37b90644…8102` ($87M) vs "TxDOT I-10 Widening Phase II" `37d90644…81a5` ($120M) — review before deleting.
+- Orphan page: `37d90644-d524-810e-9a9c-fc8149ba1b6e` (Concrete content duplicate of DB row) — delete via UI.
+- **Result: 0 writes. No dossier-sourceable gaps remain. Duplicate/orphan cleanup requires manual UI action.**
+
+---
+
+## Audit — 2026-06-13 (fourth pass — /notion-audit Sundt)
+Full re-fetch: company record (schema + body), all 9 divisions, 4 memberships, 3 events, 15 locations schema, sample projects. Companies DB schema confirmed (no Ownership/Founded/Revenue/Employees/ENR Rank properties — those fields don't exist in the schema; correctly in body only).
+
+### New since 06-12
+- **Company Address (place)** now filled: `2620 S 55th St Tempe AZ 85282`, lat=33.3979, lng=-111.9662. Previously flagged as outstanding; resolved by an intervening session. ✓
+- **People count** — 835 people relations on company record (ongoing workspace enrichment).
+
+### Checks (3a–3e): All clean. No new fillable gaps.
+- Division `Adress` (place type) still empty — no coords in dossier, no-geocoding rule → sourceless.
+- DBIA event Date null — sourceless. Renewables Launch Location tag — no venue in dossier → sourceless. PoweR division People — no leader in dossier → sourceless.
+- **Result: 0 writes. Dup/orphan cleanup (~8 records) still requires manual UI.**
+
+---
+
+## Audit — 2026-06-13 (fifth pass — /notion-audit Sundt)
+Full re-fetch: company record, Memberships (all rows), Events (all 3), Locations (schema + sample rows), Divisions (sample + schema), sample projects.
+
+### Workspace growth since fourth pass
+- **Memberships** — 5 rows now: DBIA · AGC · APWA · AzBA · The Beavers (`37d90644-d524-8118-9bc4-f7a3e08a57b9`, added ~06-12 19:07). All linked to company ✓.
+- **Locations** — 3 "Tempe Headquarters" rows: original `37b90644…81e6` (with body) + `37d90644…81a6` (blank, added ~06-12 20:06) + `37d90644…81f8` (blank "Tempe HQ", added ~06-12 20:18).
+
+### Checks (3a–3e): All clean. No new fillable gaps.
+- All relations intact ✓. Bodies rich ✓. Address place filled ✓. Division Adress empty (no coords) ✓. Memberships complete per dossier ✓.
+- New dup: Tempe Headquarters `37d90644-d524-81a6-9e90-d5ef10d12c7e` (blank body, 06-12 20:06) — delete via UI.
+- **Result: 0 writes. Record complete per dossier.**
+
+---
+
+## Audit — 2026-06-13 (sixth pass — /notion-audit Sundt)
+Full re-fetch: company record (subagent reading 60K-char output), all Memberships rows (search + direct fetch = 10+ rows found), Events (all 3), Divisions (Advanced Facilities, Water, Heavy Industrial, Concrete + schemas), SLC Water project, Locations schema + Tempe HQ row.
+
+### Workspace growth since fifth pass
+- **New valid memberships:** ESOP Association (`37d90644-d524-8159-b423-e293eb9157cb`, body: Sundt is 100% ESOP; linked ✓) · ENR Top 400 Contractors 2026 #42 (`37d90644-d524-8123-98b3-eceea24be19a`, body: ENR rank trajectory; linked ✓) · USGBC (`37d90644-d524-81e9-b651-d5dc104aa131`, **body blank**; linked ✓). All added by an intervening session.
+- **The Beavers** — now 3 rows total: `37d90644…8118` (original, body present) + `37d90644…8156` + `37d90644…8160` (both have bodies). Retain `…8118`; delete `…8156` + `…8160` via UI.
+- **Company record** — unchanged: Address place filled, 53 projects, 835 people, 5 software, all relations intact ✓.
+- **Divisions (9)** — all bodies rich. Heavy Industrial has 3 People. Advanced Facilities has 2 People. Water has 4 People. Concrete has no Projects (correct).
+
+### Checks (3a–3e)
+- **3a Interconnection:** All 9 divisions → company ✓ · Events → company (3) ✓ · Memberships → company (all rows) ✓ · Locations → company ✓. No unset edges.
+- **3b Description depth:** All sampled divisions fully rich ✓. SLC Water project body rich (PCL JV detail, $900M/$528M dual-value note) ✓. USGBC membership body blank — post-dossier add, no dossier source → genuinely sourceless.
+- **3c Address/location:** Company Address place filled ✓. Tempe HQ location row `Adress` text filled ✓. Division `Adress` (place type) empty — no coords, no-geocoding rule → sourceless ✓.
+- **3d Membership completeness:** Dossier names only DBIA (1 entry). Table now has: DBIA · AGC · APWA · AzBA · The Beavers · ESOP Association · ENR Top 400 · USGBC + dup rows. All dossier-sourced memberships present ✓. Post-dossier rows valid enrichment. No dossier-sourced membership missing.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. DBIA Milestone — no date/location → sourceless ✓. Renewables Launch — no venue → sourceless ✓.
+
+### No new fillable gaps found from dossier
+All dossier-sourced data correctly recorded. No empty field with a sourced value found.
+
+### Full duplicate register for UI cleanup
+| Table | Retain | Delete |
+|---|---|---|
+| Memberships · The Beavers | `37d90644-d524-8118` (body: Cade Rowley) | `37d90644-d524-8156` + `37d90644-d524-8160` |
+| Memberships · AGC | `37d90644-d524-811e` (has body) | `37d90644-d524-81e5` + `37d90644-d524-814c` |
+| Memberships · AzBA | `37d90644-d524-8146` (has body) | `37d90644-d524-819e` |
+| Memberships · APWA | `37d90644-d524-81f2` (has body) | `37d90644-d524-817b` |
+| Locations · Tempe HQ | `37b90644-d524-81e6` (original, has body) | `37d90644-d524-81a6` + `37d90644-d524-81f8` |
+| Locations · Phoenix Ops | `37b90644-d524-81f2-ad5d` (original, has body) | `37d90644-d524-8114` + `37d90644-d524-810a` (blank dups) |
+| Orphan page | — | `37d90644-d524-810e-9a9c` (Concrete orphan standalone page) |
+| Projects · I-10 | `37b90644-d524-8102` ($87M) | `37d90644-d524-81a5` ($120M) — **review before deleting** |
+
+### Manual UI steps outstanding (updated 06-13 sixth pass)
+1. **Dup cleanup** — see table above: 7 membership dups, 3 location dups, 1 orphan page.
+2. **I-10 project review** — determine if $87M and $120M are same project or different phases.
+3. **USGBC membership body** — blank; fill manually if sourced data available.
+4. Projects Underway view → clear `__TEMPLATE__` filter.
+5. Existing Software view → clear `__TEMPLATE__` filter.
+6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+**Result: 0 writes this pass. Record complete per dossier. 6th consecutive no-write audit.**

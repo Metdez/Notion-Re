@@ -145,3 +145,24 @@ Nothing. Build fully converged. **0 writes made.**
 
 ### Left empty (genuinely sourceless — unchanged from prior audits)
 21 of 25 project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification).
+6. **⚠ Memberships DB has 6 duplicate rows** — the 6 original rows (created 2026-06-10) and 6 newer duplicate rows (created 2026-06-13 by a prior audit session) both exist. All 12 have the Companies relation set but the content is duplicated. Delete the 6 older (2026-06-10) rows or the 6 newer ones — keep whichever set has richer body content. Zack to trash duplicates in UI.
+
+---
+
+## Audit — 2026-06-13 (notion-audit Pass #5 — live re-verification, 0 writes)
+
+### Filled
+Nothing. **0 writes made.** All live records re-fetched and verified.
+
+### New issue found — ⚠ Duplicate memberships
+The Memberships DB (`ddc90644`) has **12 substantive rows** (6 created 2026-06-10 + 6 created 2026-06-13 by a prior audit session). All 12 carry the Companies full database relation. The dossier only lists 6 memberships (BRT, CII, NEI, ETEBA, CCITNZ, NABTU). **6 are duplicates — flagged for Zack to trash in UI.** (Above in Manual UI steps.)
+
+### Verified complete (all 3a–3e checks pass — live re-fetch 2026-06-13 Pass #5)
+- **3a Interconnection ✓:** Company record has 52 People, 25+ Construction Projects (forward relation), 30+ Software. All 6 divisions carry Companies+People+Projects relations. All project Contractors+Owning Department set. Locations/Events/Memberships all carry Companies relation.
+- **3b Description depth ✓:** All 6 division bodies present (Energy/Infrastructure/Mining & Metals/NS&E/M&T/Enterprises). Project bodies carry sourced scope/owner/delivery/dates (Port Arthur fatality signal confirmed in body). People bodies carry sourced role detail.
+- **3c Addresses ✓:** Company HQ Address place (Reston, lat 38.9586/lng -77.357) ✓; all 6 division Adress places ✓ (Energy→CityWestPlace Houston; Infra+NS&E+Enterprises→Reston; M&M→Santiago; M&T→Chandler AZ). All 19 location rows Adress text ✓. Project Adress place = genuinely sourceless (city-level only; Notion place requires lat/lng — no coords in dossier). 6 locations (Washington DC, San Francisco, New Delhi/Gurgaon, Shanghai, Taipei, Nairobi) have no Division relation — correct per dossier (these are general/cross-company offices, no single-division assignment in source).
+- **3d Memberships ✓ — 6/6 (ignoring duplicates):** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — all company-linked. ⚠ 6 duplicate rows also present — see Manual UI #6.
+- **3e Location tags ✓ — 12 events georeferenced, 17 options in Events schema:** Gastech 2024 [Texas] · Gastech 2025 [Italy] · Gastech 2026 [Thailand] · H2 & Ammonia 2024 [Texas] · NECX 2025 [Georgia] · ETEBA BOTC 2025 [Tennessee] · ETEBA Savannah River 2025 [South Carolina] · NEI Policy Forum 2025 [Washington DC] · NEI Assembly 2024 [Pennsylvania] · NVIDIA GTC 2025 [Washington DC] · ENR LA Forum [California] · LACMTA C-Line [California]. All 12 real events have location tags; ENR LA + LACMTA dates still empty (dates genuinely unconfirmed in dossier).
+
+### Left empty (genuinely sourceless — unchanged)
+21 of 25 project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng in dossier); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification). 6 location rows missing Division (Washington DC / San Francisco / New Delhi / Shanghai / Taipei / Nairobi — general offices, no single division in source).

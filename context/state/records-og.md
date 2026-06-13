@@ -138,3 +138,19 @@ Live verification confirmed: company record (all properties populated), profile 
 5. **Duplicate People** — delete: Ryan Oneglia `37b90644-d524-8182`; LinkedIn-import dupes `37d90644-d524-81cc` (Raymond), `37d90644-d524-8133` (Greg), `37d90644-d524-8156` (T.J.). Broader 37d-prefix LinkedIn import may have 100+ thin People rows linked to O&G — review and dedup in bulk.
 6. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
 7. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
+## Audit round 7 (2026-06-13, /notion-audit — OG1.md re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against OG1.md.
+
+Live verification: company record (all properties populated), profile page body complete, 7 divisions (Companies + Projects + People relations set; address/place on each; bodies sourced), 22 projects (Contractors + Owning Department set; spot-checked Amtrak CT River Bridge — complete), 12+ named People (Company + Division relations set; role bodies sourced), 7 memberships (CCIA, AGCCT, CT Road Builders, The Moles, AGC National, NAPA, CMAA CT Chapter — all linked → O&G; bodies sourced), 16 location rows (Adress text set; Division linked where applicable; Companies → O&G on all rows), 3 events (Date, Location tags, Place all set; Companies → O&G), 4 software rows complete.
+
+**Outstanding (all for Zack — unchanged):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix): AGC National `37d90644-d524-8158-bbac-dc8e03f0e0d7` / NAPA `37d90644-d524-81ec-89b4-e28bba80eeab` / CMAA CT `37d90644-d524-8135-8336-c64493d6d45e` · LinkedIn/Apollo People dupes (37d-prefix bulk import) · Bridgeport Mason address conflict (OG1.md: 240 Bostwick Ave vs OD.md: 325 Hancock Ave — correction needed, not additive fill).
+
+## Manual UI steps for Zack
+1. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set filter Contractors = O&G Industries Inc.
+2. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
+3. **Memberships "View of People" tab** — repoint leftover company filter to O&G or remove.
+4. Possible template **guide rows** still visible in Company Map / Events / Sources / Locations / Memberships — delete in UI if unwanted.
+5. **Size conflict** on company record: Local (existing) vs Regional (dossier, sourced) — pick one.
+6. **Duplicate memberships** — delete 3 duplicate 37d-prefix rows: AGC National `37d90644-d524-8158`, NAPA `37d90644-d524-81ec`, CMAA CT `37d90644-d524-8135`.
+7. **Duplicate People** — LinkedIn/Apollo bulk import created 37d-prefix thin rows; review and dedup in bulk.
+8. **Bridgeport Mason address** — 240 Bostwick Ave (OG1.md/BBB) vs 325 Hancock Ave (OD.md/mason.ogind.com — more authoritative); correct in UI.

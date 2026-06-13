@@ -157,3 +157,22 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3b check:** All project and department bodies complete; no thin bodies where source has more detail.
 **3d memberships:** N/A — no memberships table on Harvard Owner record.
 **3e location tags:** All projects tagged `["Massachusetts"]`. ✓
+
+## Audit log — 2026-06-13 (fourth pass / notion-audit skill run)
+**Fill:**
+- IC&E `Description` property was "Innovative Contracting & Engineering (IC&E)" (just the name) → updated to "IC&E — heavy-civil/utilities CM-GC; Harvard NASDEP (North Allston Storm Drain Extension, ~$50M) as CM/GC support to Engineering & Utilities." Source: dossier 1 (iceteams.com/harvard-nasdep).
+
+**No fills (genuinely sourceless or already complete):**
+- All 15 project records fully verified: all properties, addresses, dates, GC relations, Owning Department relations, People relations, contract values, URLs, body descriptions complete.
+- J&J Contractors — LinkedIn/Website/revenue/employees null in both dossiers; confirmed sourceless.
+- Smoot `Website` — still no URL in dossier.
+- Harvard University `LinkedIn` — no URL in either dossier.
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE per dossier 2; not filled.
+- Lewis International Law Center — no start/end dates, no street address; confirmed sourceless across all passes.
+- Gund Hall duplicate (`37c90644-d524-813f-98c8-efd5cad0f266`) still present; cannot delete per safety rules — flag for Zack UI cleanup.
+
+**3a check:** All owner↔department↔project↔people relation edges intact. No missing edges.
+**3b check:** All project and department bodies complete; IC&E description improved.
+**3d memberships:** N/A — no memberships table on Harvard Owner record.
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓

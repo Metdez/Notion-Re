@@ -104,6 +104,10 @@ Full live re-verify of all 15 records (company + 5 divisions + 2 people + 5 proj
 - **New state since prior 06-13 pass:** Company now has 19 people linked and 27 construction projects linked (added by other sessions since 06-12).
 - **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis + 11 projects; Power→Karl Miller + 5 Power projects; all 5 Jingoli dossier projects→Contractors + Owning Department (Nuclear Services div); both people→company; Location→company+division; Event→company. People `Division` deferred (global Divisions DB no Jingoli rows).
 - **Description-depth (3b) ✓:** all project/division/people bodies carry full sourced depth.
+## Audit pass 2026-06-13 Pass #5 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 dossier projects + 1 location + 1 event). Ground truth: `Jingoli.md`. No fillable gaps found.
+- **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis + 11 projects; Jingoli Power→Karl Miller + 5 projects; all 5 dossier projects→Contractors + Owning Department (Nuclear Services); both people→company; Location→company+division; Event→company. People `Division` deferred (global Divisions DB no Jingoli rows).
+- **Description-depth (3b) ✓:** all 5 division bodies + all 5 project bodies + both people bodies at source-maximum depth.
 - **Address/location (3c):** place fields genuinely unfillable — no lat/lng in dossier; no-geocoding rule. Location row `Adress` text ✓.
 - **Memberships (3d):** none in dossier → none in Notion ✓.
 - **Location tags (3e):** Event "New York" ✓. No other untagged located records.

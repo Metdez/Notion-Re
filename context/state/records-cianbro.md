@@ -100,12 +100,21 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
   - 8 Software records → Company ✓
 - **No new fillable gaps found** per Cianbro.md dossier as of 2026-06-13.
 - **Infrastructure Projects relation shows 1 entry** in division view — this is a Notion view filter issue (`__TEMPLATE__` filter still active on Projects Underway view), not a data gap. All 14+ infrastructure projects have Owning Department → Infrastructure set correctly.
+## Audit fills (2026-06-13 — notion-audit run #5)
+**State as of 2026-06-13 (full live re-fetch + 1 fill):**
+- **Infrastructure division `Projects` relation filled** — was 1 of 15; now 15 confirmed via re-fetch. Root cause: Divisions `Projects` and Projects `Owning Department` are independent relation fields (not bidirectional). Division side must be set explicitly. All 15 infrastructure projects now linked. Source: Cianbro.md + project IDs from prior load.
+- **All prior fills confirmed:** Company Address place (44.7831/-69.3836) ✓ · 13 Divisions→Companies ✓ · 7 subsidiary Adress places ✓ · 24 Locations→Companies (22→Division; HQ + Pittsfield ops company-only ✓) · 24 Memberships→Companies ✓ · 6 Events→Companies (4/6 tagged) ✓ · 8 Software→Companies ✓ · 25 Projects→Contractors+Owning Department ✓.
+- **Division Projects now complete:** Infrastructure=15 · Building=5 · IDM=3 · Power&Energy=2 · A/Z=1 · Modular Mfg/Support Services correctly empty.
+- **Locations DB grew to 24 active rows** (A/Z satellite offices + Starcon offices added post-run-2).
+- **Memberships grew to 24** (full MWMCA list — ABC/AGC/AGC Maine/ACI/AIHA/AISC/ARTCA/BPA/BWI/CFMA/CII/CURT/DBIA/GBC/MD Chamber/MTBMA/MWII/NAWIC/NSPE/Propeller Club/SAME/SBBA/SMPS/TAPPI).
+- **Events now 6 Cianbro-linked** (ABC Craft Champs 2025+2024, ABC Top Performers, AGC Maine Awards, ConExpo 2026, Junior Achievement 2024). 2 additional rows in shared Events DB (CALA/ISLE + SCUP) link to other companies — correct.
+- **No remaining fillable gaps** per Cianbro.md dossier.
 
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
-2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).
+2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).
 3. **Company Map / Memberships** People-tab views may carry leftover template filters.
 4. Possible template guide rows on local tables + remaining section guide italics (Company Map/Events/Locations/Memberships) — UI cleanup if wanted.
-5. **Software dedup (Zack's call, destructive):** Cianbro's Procore row adds to the existing Procore×3 pile — merge later if consolidating.
+5. **Software dedup (Zack's call, destructive):** Cianbro's Procore row adds to the existing Procore×N pile — merge later if consolidating.
 6. Optional: add Maine/Vermont/SC + towns to Projects `Location` select (deferred — concurrent-session clobber risk at load time).
 7. Optional: event icons used `trophy_*`/`medal_*` (may be non-standard built-in names → verify render).

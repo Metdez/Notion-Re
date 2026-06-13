@@ -123,3 +123,14 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Memberships schema confirmed: Companies full database relation + URL properties present ✓
 - Locations schema confirmed: Adress text + Companies + Division relations present ✓
 - Zero fillable gaps found. No writes required.
+
+## Audit log — 2026-06-13 (third pass)
+**Full re-audit pass completed (no writes needed).** Live Notion fetches across all record types; zero fillable gaps found:
+- Company record (26890644): Description, Type=Company, Size=Regional, BW Category=[Builder], Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place (37.3271, -79.9822), People (170+), Construction Projects (12) ✓
+- Profile hub page body: Enlaye angle block present ✓
+- Divisions (4): spot-checked Branch Civil — company relation, People (Brian Quinlan), Projects (5), Adress place, body content all ✓
+- People (7): spot-checked Bob Wills — Company, Function, Function Qualification=[CEO], Location=Virginia, body ✓
+- Events (2): DBIA Award → Location tags=[North Carolina], date=2026-04-28, company ✓; Golf Tournament → Location tags=[Virginia], date=2026-06-08, company ✓; Place property genuinely sourceless ✓
+- Memberships (4): ABC, AGC, DBIA, VTCA — confirmed via live search, all have company relation + URL + body ✓
+- Locations schema: Adress text + Companies + Division relations all present ✓
+- Zero fillable gaps. No writes performed.

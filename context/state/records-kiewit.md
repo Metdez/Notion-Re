@@ -208,3 +208,20 @@ Sources: https://www.kiewit.com/locations/
 - Delete 8 DUPLICATE— rows: 6 in Memberships + 2 in Events inline tables on the Kiewit Corporation page
 
 **0 writes made this session.** Record is at full dossier depth.
+## Audit pass — 2026-06-13 (third session — /notion-audit)
+
+**Live verification (MCP fetch of all key records):** Company record, all 17 divisions, both people records, Key Bridge + Homer City projects, Memberships table, Events table — all fetched and confirmed.
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company record — Description ✓, Address place (Omaha 41.265948/-95.935909) ✓, 40 Construction Projects linked ✓, 715 People linked ✓, 8 Software linked ✓, BW=[Builder/Design and Architecture/Developer] ✓, Country=24 entries ✓; all 17 divisions → Kiewit ✓; Kiewit Infrastructure Co. — People: Dave Miles ✓, Projects: 6 ✓, Adress place ✓; Memberships table — Companies full database relation schema confirmed present ✓; Events table — Companies full database + Date + Location tags + Place schema all present ✓
+- 3b: Key Bridge body — owner/delivery/scope/value/risk event/sources all present ✓; Homer City body — owner/delivery/scope/4.5GW/3200 acres/turbines/sources ✓; Rick Lanoha body — Role + source ✓; Dave Miles body — Role + source ✓; all 17 division bodies have Focus sections ✓
+- 3c: Company HQ place ✓; all 17 division Adress place ✓; Key Bridge Adress (39.2186/-76.5282) ✓; Homer City Adress (40.564/-79.0803) ✓; Peter Kiewit Sons ULC Adress = Vancouver BC city-level only (no street address in dossier → correct as-is); Locations `Adress` = TEXT type (structural limit — not a place property; flagged, unchanged)
+- 3d: 8 live memberships: The Beavers `37b90644-8172` · AGC `37b90644-81c1` · DBIA `37b90644-814f` · CSRA `37b90644-8184` · CISI `37b90644-818f` · CCSC `37b90644-81a6` · NCSE `37b90644-81ab` · ASCE `37d90644-81f0`; all 7 dossier memberships present + ASCE (added 06-12); all company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Annual Convention 2026 → Florida+Orlando ✓; Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; FWIK Summit + Engineering Technical Summit untagged (correct — no sourced location); 2 DUPLICATE— Events still pending Zack UI deletion (`37d90644-81d7/81fb`)
+
+**False positives rejected (would have been over-writes):**
+- Division People relations empty (16 of 17) — dossier names no individuals assigned to those divisions → genuinely sourceless
+- Weeks Marine + MEC + Power Delivery + Mining have no projects linked — dossier names no projects for them → correct
+- Peter Kiewit Sons ULC address city-level only — dossier has no street address for this entity → correct
+
+**0 writes made.** Record is at full dossier depth. Only outstanding item: Zack's manual UI deletion of the 8 DUPLICATE— rows (6 Memberships + 2 Events).

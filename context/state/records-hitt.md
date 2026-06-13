@@ -132,3 +132,12 @@ Full re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 membe
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
 3. **Memberships-note People view** → re-point hardcoded company filter to HITT.
+4. **Company Country** → add options: North Carolina, New Mexico, South Carolina (cannot do via MCP on shared schema).
+
+## Post-load audit #7 (2026-06-13, /notion-audit skill vs HITT1.md)
+Full 3a–3e re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 memberships (all fetched live), 5 events (all fetched live), 16 locations (all returned from search), 18 divisions (schema verified), 11 projects (JMACC + N2W spot-checked live), key people (Kim Roy, Pamela Baughman spot-checked live).
+- **0 fills — fully converged.** Nothing fillable was missed.
+- **Live confirmations:** Address place (Falls Church VA 38.864/-77.196) ✓; Country=14 ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body (Legal name/DUNS/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance) ✓; Divisions schema (Adress place + Companies + People + Projects) ✓; JMACC ✓; N2W ✓; Kim Roy ✓; Pamela Baughman ✓.
+- **3a–3e all ✓** — full relation graph intact; 9/9 memberships company-linked; 3 sourced-location events tagged (DBIA/CONEXPO=Nevada+Las Vegas, NAIOP NoVA=Virginia); Safety Week/Subcontractor Day sourceless (National/nationwide).
+- **Country options previously deferred (NC/SC/NM) confirmed live** — present in company record, no action needed.
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).

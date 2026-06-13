@@ -107,6 +107,34 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 - **"Bridgeport" stray division row** `37690644-d524-8010` — satellite office stub, not a real division; linked to company and holds Mozaic-Stamford project. Pre-existing; left as-is.
 - **3 trashed/mislabeled Mid-Atlantic rows** under "TEMPLATE — old data (safe to delete)" `37a90644-d524-818c` — left as-is per non-destructive rules.
 
+## Audit pass #10 (2026-06-13 — notion-audit skill, KBE.md ground-truth re-audit)
+
+**Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier only).
+
+### 0 fills executed
+Full live re-audit confirmed: **no fillable gaps remain** from KBE.md. All sourced data already in Notion. Zero writes needed.
+
+### 3a–3e re-verified (live fetches, 2026-06-13)
+- **Company record `1cf90644`:** Description ✓ · Type=Company ✓ · Size=Regional ✓ · Address place (Farmington HQ) ✓ · Countries (7: CT/USA/MD/AZ/VA/NY/TN) ✓ · Construction Projects (45 URLs) ✓ · LinkedIn + Website ✓ · BW Category=Builder ✓ · Body (Snapshot/Leadership/Safety/Risk/Sources/Boston BD) ✓
+- **Divisions:** NE `37690644-d524-8037` (63 people, 44 projects, Farmington Adress) ✓ · MA `37690644-d524-807c` (6 people, 9 projects, Laurel Adress) ✓ · West `37690644-d524-80e6` (4 people, 2 projects, Scottsdale Adress) ✓ · All Companies rel → KBE ✓ · All division bios ✓
+- **Memberships DB `37690644-d524-80b0`:** ABC-CT `37b90644…815f` confirmed live (body + KBE link ✓). Schema: Name + Companies full database relation only (no source URL property — sources inline in body). 11 rows previously confirmed present.
+- **Events DB `37690644-d524-80cb`:** Golf Tournament `37b90644…81ef` confirmed live (Location tags=Connecticut, body sourced ✓, Place empty = genuinely sourceless ✓). 13 events linked to KBE in Untitled Database property (includes 4 blank stubs).
+- **Projects sampled:** The August `37b90644…814c` — Contractors→KBE ✓ · Zack Database→NE ✓ · Adress place (Bridgeport CT) ✓ · Size ✓ · Value ✓ · body ✓ · URL ✓
+- **3c Addresses:** company HQ ✓ · NE div ✓ · MA div ✓ · West div ✓ · project Adress places verified
+- **3d Memberships:** 11 sourced rows confirmed (from prior passes). No new memberships in KBE.md ground truth.
+- **3e Location tags:** Events Location tags verified (Connecticut on Golf Tournament and other CT events ✓; Texas+Plano on InterFace Active Adult ✓).
+
+### Pending Zack action (no auto-fix possible — non-destructive rule)
+**8 blank duplicate stubs** created by prior audit session (2026-06-13 ~01:09) — confirmed still present and blank:
+- **Memberships duplicates (blank, no body):** `37e90644-d524-8169` (Arizona Builders Alliance) · `37e90644-d524-81a9` (ABC-CT) · `37e90644-d524-8124` (ABC Baltimore/Chesapeake) · `37e90644-d524-811d` (ABC Metro Washington)
+- **Events duplicates (blank body):** `37e90644-d524-8135` (Golf Tournament) · `37e90644-d524-816e` (ABC EIC Awards) · `37e90644-d524-8168` (CBC Awards) · `37e90644-d524-8103` (WIC)
+All are linked to KBE company but carry no sourced content. Recommend Zack trash all 8.
+
+### Confirmed genuinely sourceless (unchanged)
+DUNS/EIN/state entity IDs · EMR/TRIR/DART · surety/insurance · division revenue/headcount · FPDS PIIDs · Golf Tournament + CBC Awards + Special Olympics venue addresses · DBIA/USGBC/AGC national memberships.
+
+---
+
 ## Audit pass #9 (2026-06-13 — notion-audit skill, KBE.md ground-truth re-audit)
 
 **Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier only).
