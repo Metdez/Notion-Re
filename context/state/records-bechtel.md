@@ -145,3 +145,24 @@ Nothing. Build fully converged. **0 writes made.**
 
 ### Left empty (genuinely sourceless — unchanged from prior audits)
 21 of 25 project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification).
+
+---
+
+## Audit — 2026-06-13 (notion-audit Pass #5 — post-gap-fill confirmation)
+
+### Filled
+Nothing. **0 writes made.** All live records re-fetched and verified clean.
+
+### Verified complete (all 3a–3e checks pass — live re-fetch 2026-06-13)
+- **3a Interconnection ✓:** Company record has 302 People (grown from 52 — bulk session additions since Pass #4), 32 projects (7 added by other sessions since Pass #4 load), 30 Software. All 6 divisions carry Companies+People+Projects+Adress place. All 6 memberships company-linked. All 19 location rows company+division linked. All 13 events company-linked.
+- **3b Description depth ✓:** All sampled project bodies (Port Arthur, Vogtle, AI Data Center) confirmed at full sourced depth with Contractors+Owning Department. Division bodies all verified rich.
+- **3c Addresses ✓:** Company HQ Address place (12011 Sunset Hills Rd Reston VA) ✓; all 6 division Adress places ✓ (Energy=CityWestPlace Houston; Infra+NS&E+Enterprises=Reston; M&M=Santiago; M&T=Chandler AZ); all 19 location rows Adress text ✓. Project Adress place = genuinely sourceless.
+- **3d Memberships ✓ — 6/6:** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — all company-linked. No additional memberships in Bechtel2.md.
+- **3e Location tags ✓:** Events schema confirmed 17 options. All 12 events tagged. ENR LA / LACMTA events have no date — genuinely sourceless in Bechtel2.md.
+
+### New records from other sessions (not in dossier — no fills possible)
+- **7 net-new projects** added by other sessions (Sabine Pass, WIPP, Cold Creek Solar, Mammoth Solar, Eva Copper Mine, Quebrada Blanca QB2, Big Dig) — not in Bechtel2.md. 3 have empty Location tags (no schema options for New Mexico/Australia/Chile); 3 have empty contract values. All genuinely sourceless; no fills applied.
+- **~250 additional People** added by other sessions (bulk Apollo/LinkedIn imports). Not from dossier. Not audited individually in this pass.
+
+### Left empty (genuinely sourceless — unchanged)
+21/25 original project `Contrat Value in Million` (undisclosed per all dossiers); project `Adress` place (city-level only; no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — SAM.gov verification pending).

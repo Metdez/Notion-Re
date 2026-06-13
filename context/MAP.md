@@ -73,8 +73,9 @@ This project spreads its working memory across many small, single-topic files so
 ### Log spokes — *what happened* (append-only)
 | File | Holds |
 |---|---|
-| [log/2026-06.md](log/2026-06.md) | June 2026 journal (current — company loads & audits from 06-09 Clayco onward) |
+| [log/2026-06.md](log/2026-06.md) | June 2026 journal (current — 06-10 Dellbrook Pass #3 onward; see archives for earlier entries) |
 | [log/archive/2026-06-part1.md](log/archive/2026-06-part1.md) | June 2026 part 1: Owners/Harvard builds, TEMPLATE work, full Consigli saga (06-08 → 06-09) |
+| [log/archive/2026-06-part2.md](log/archive/2026-06-part2.md) | June 2026 part 2: 2026-06-09 Clayco load through 2026-06-10 Shawmut audit/complete/record |
 
 ### Skills (Claude Code — `.claude/skills/`)
 | Skill | Does |
