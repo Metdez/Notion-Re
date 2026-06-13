@@ -68,6 +68,15 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 - Employees ~1,200 (LeadIQ) vs ~1,500 (older snapshot) — both kept.
 - Gaps the dossier itself flags (EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, litigation, exact 2024 revenue, most office street addresses) — **do not fill** (no source).
 
+## Audit log — 2026-06-13 (Pass #4)
+**Full audit run (3a–3e).** Checked: company record, 5 divisions, 2 events, 1 membership, 12 locations, profile page body. Also checked Companies DB shared schema for Country options.
+**2 fills executed:**
+- Shared Companies DB Country multi-select: added **Nevada** option (yellow) — additive schema extend, all 74 existing options preserved ([Craft.co](https://craft.co/shawmut-design-and-construction))
+- Shawmut company record `Country` field: added **Nevada** — now `[USA, Massachusetts, New York, California, Florida, Rhode Island, Connecticut, Nevada]` ([Craft.co](https://craft.co/shawmut-design-and-construction))
+**3a–3e checks:** all pass; no new gaps found beyond what was already recorded.
+**Deferred from Pass #3 resolved:** Nevada gap fully closed.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond HQ+San Diego, litigation, per-project delivery/architect/dates for most, contract values for 13/19 projects, memberships beyond AGC.
+
 ## Audit log — 2026-06-13 (Pass #3)
 **Full audit run (3a–3e).** Checked: company record, 5 divisions, 2 events, 1 membership, 12 locations, profile page body.
 **Result: 0 fills executed.** Record is complete relative to Shawmut3.md dossier. All 2026-06-12 enrichment (First Finish acquisition, NACD Board of Year, ENR #61, full revenue trend) confirmed present in Notion body.
