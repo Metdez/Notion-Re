@@ -154,6 +154,31 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 ### Lesson learned
 - **Never create rows without first doing a semantic search for known record names.** The correct dedup step for inline DBs: search `"[location name]"` before any create. Fetching a data source `collection://` schema does NOT return rows.
 
+## Audit fills (2026-06-13 — notion-audit run #7)
+**State as of 2026-06-13 (full live re-fetch across all record types + 1 fill + 5 duplicate remediations):**
+
+### What was filled
+- **ConExpo 2026 date** — primary record `37b90644-d524-81d3` now has `date:Date:start = 2026-03-03` (ConExpo ran Mar 3–7, 2026; [conexpoconagg.com](https://www.conexpoconagg.com)). Previously empty.
+
+### Duplicates remediated (moved to workspace)
+5 pages moved to workspace (non-destructive removal):
+- `37e90644-d524-81bb` — "ConExpo 2026" (dup of primary `37b90644-d524-81d3`; run #6 created, has date 2026-03-01 but blank body — superseded by fill on primary)
+- `37e90644-d524-8152` — "Portland Operational Office (Ricker's Wharf) — Portland ME" (dup of `37b90644-d524-8139`-series Ricker's Wharf row)
+- `37e90644-d524-81bf` — "Falmouth ME Operational Office" (dup of `37b90644-d524-81d3-82dd` "Falmouth ME office")
+- `37e90644-d524-8104` — "R.C. Stevens Construction — Winter Garden FL" (dup of `37b90644-d524-8122` series R.C. Stevens row)
+- `37e90644-d524-8186` — "Bloomfield CT Office (A/Z Corporation HQ)" (dup of Bloomfield CT office row)
+
+### Verified complete (no further fills needed per dossier)
+- **All 13 Divisions** → Companies ✓ · all Adress places filled ✓ · Projects linked (Infrastructure=15, Building=5, IDM=3, Power&Energy=2, A/Z=1) ✓
+- **25 Construction Projects** → Contractors + Owning Department ✓. WALK Bridge + PNSY DD1 address places filled; others (Cross Town BESS, MVH Augusta, Portland HSC, PNSY Pre-Con) — address place genuinely sourceless (no street address + lat/lng in dossier).
+- **24 Memberships** → Company ✓ · all sourced. Minor: 12 records have cosmetic body duplication (bullet + sentence, same content) — not a data gap, low-priority cleanup.
+- **Locations: 24 active rows** (29 − 5 dups removed this run). All → Company ✓.
+- **6 Events** → Company ✓; dates: ABC NCC 2025 (2025-03-06) ✓ · ABC Top Performers (2026-02-23) ✓ · JA Hall of Fame (2024-11-12) ✓ · ConExpo 2026 (2026-03-03, filled this run) ✓. ABC NCC 2024 + AGC Maine Awards — no sourced date, genuinely unfillable.
+- **People (12 original + many 37c/37d-prefix additions):** Email/Phone empty across all — not publicly disclosed. LinkedIn filled on Schill + Doherty only. Body content thin on Schill/Henshaw/Doherty — dossier has no additional detail beyond what's recorded.
+
+### Genuinely unfillable (confirmed per Cianbro.md dossier)
+EMR/TRIR/DART · bonding capacity/surety · insurance carriers · division revenue/headcount splits · project addresses (most — no lat/lng sourced) · ABC NCC 2024 exact date · AGC Maine Awards exact dates · most People contact details (email/phone/LinkedIn) · per-state license numbers · JV revenue shares.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).
@@ -162,3 +187,4 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 5. **Software dedup (Zack's call, destructive):** Cianbro's Procore row adds to the existing Procore×N pile — merge later if consolidating.
 6. Optional: add Maine/Vermont/SC + towns to Projects `Location` select (deferred — concurrent-session clobber risk at load time).
 7. Optional: event icons used `trophy_*`/`medal_*` (may be non-standard built-in names → verify render).
+8. **Membership body cleanup (optional, cosmetic):** 12 membership records have duplicate content (bullet + identical sentence). TAPPI has the full sentence twice. Non-destructive cleanup whenever convenient.
