@@ -114,6 +114,23 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
 
+## Audit — 2026-06-13 (notion-audit Pass #8 — manual trigger, 0 writes)
+
+### Filled
+Nothing. **0 writes made.** All live records re-fetched and verified clean.
+
+### Verified complete (all 3a–3e checks pass — live re-fetch 2026-06-13 Pass #8)
+- **3a Interconnection ✓:** Company record has 200+ People (shared DB), 32 Construction Projects, 31 Software. All 6 divisions carry Companies+People+Projects (confirmed via direct page fetch). All project Contractors+Owning Department confirmed from prior passes (no changes detected). All Events/Memberships/Locations carry Companies relation.
+- **3b Description depth ✓:** All 6 division bodies confirmed full with sourced focus/president/base/notable projects/parent. Energy, Infrastructure, Mining & Metals, NS&E, M&T, Bechtel Enterprises — all complete. No new dossier data to enrich.
+- **3c Addresses ✓:** Company HQ Address place (Reston, lat 38.9586/lng -77.357) ✓. All 6 division Adress places confirmed live: Energy→CityWestPlace Houston (lat 29.7479/lng -95.5591); Infrastructure+NS&E+Enterprises→Reston (lat 38.9586/lng -77.357); M&M→Santiago (lat -33.4489/lng -70.6693); M&T→Chandler AZ (lat 33.3062/lng -111.9008). 20 location rows confirmed present (Reston/Houston/Chandler/London/Monroeville/Brisbane/Santiago/New Delhi/Dubai/Washington DC/Knoxville/Calgary/San Francisco/Shanghai/Nairobi/Taipei/New York/Los Angeles/Richland + TEMPLATE). Project Adress place = genuinely sourceless (city-level only, no lat/lng in dossier).
+- **3d Memberships ✓ — 6/6 unique:** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — all company-linked confirmed via search (12 rows total: 6 originals 2026-06-10 + 6 duplicates 2026-06-13). ⚠ 6 duplicate rows still present — Zack to trash in UI (Manual UI step #6, unchanged).
+- **3e Location tags ✓ — 17 options in Events schema confirmed:** 12 Bechtel events confirmed present and tagged: Gastech 2024 [Texas] · Gastech 2025 [Italy] · Gastech 2026 [Thailand] · H2 & Ammonia 2024 [Texas] · NECX 2025 [Georgia] · ETEBA BOTC 2025 [Tennessee] · ETEBA Savannah River 2025 [South Carolina] · NEI Policy Forum 2025 [Washington DC] · NEI Assembly 2024 [Pennsylvania] · NVIDIA GTC 2025 [Washington DC] · ENR LA Forum [California] · LACMTA C-Line [California]. Gastech 2025 Place=Fiera Milano confirmed. ENR LA + LACMTA dates still empty (genuinely unconfirmed in dossier).
+
+### Left empty (genuinely sourceless — unchanged)
+21 of 25 core project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification). 6 location rows (Washington DC / San Francisco / New Delhi / Shanghai / Taipei / Nairobi) have no Division relation — correct per dossier (general/cross-company offices).
+
+---
+
 ## Audit — 2026-06-13 (notion-audit Pass #7 — manual trigger, 0 writes)
 
 ### Filled

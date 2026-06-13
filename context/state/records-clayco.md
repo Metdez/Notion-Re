@@ -201,6 +201,27 @@
 
 ---
 
+## Eighth pass — 2026-06-13 (notion-audit full pass — all checks re-verified)
+> Full re-audit against Clay 1.md + Clayco1.md + Clayco3.md (Clayco4.md reviewed in prior passes). Live fetches of: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection schema + all 5 rows, Events collection schema, Locations collection schema + all 11 rows, Anthony Johnson person record, Lenexa/Raleigh/Birmingham/Atlanta/Greenville location rows.
+
+**Nothing to fill.** All dossier data with source URLs is already in Notion. Zero writes executed.
+
+**AGC ledger typo corrected:** AGC row real ID is `37b90644-d524-8119-a1ba-c55c924fc91a` (ledger previously had truncated suffix `8119-a1ba`). Row is confirmed alive with Companies → Clayco link.
+
+**3a Interconnection — confirmed clean:** All 5 membership rows carry Companies full database → Clayco. All 32 projects carry Contractors → Clayco. All 19 division rows carry Companies → Clayco. All 7 people carry Company → Clayco. All 6 events carry Companies → Clayco. All 6 software rows carry company link. No edge gaps.
+
+**3b Description depth — confirmed adequate:** Company body (Company Snapshot + Financial trend + Attack Plan sections) rich with sourced depth. Anthony Johnson person body has sourced Role section. No thin bodies found.
+
+**3c Address/location — confirmed:** All 11 location rows have addresses in the text `Adress` field. Company record has place:Address set. Events with sourced venue addresses have place set. No empty address fields found.
+
+**3d Memberships — complete:** 5/5 sourced memberships present and company-linked: USGBC `81bd` · DBIA `811f` · AGC `8119-a1ba-c55c924fc91a` · NAIOP Chicago `8154` · USGBC-CA `8139`.
+
+**3e Location tags — confirmed:** All events and locations that have sourced location data carry tags. AGC Convention and INTERPHEX have no sourceable venue → tags blank (correct).
+
+**Still genuinely sourceless (no write):** project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty (no division assignment in any dossier) · Self-Perform Group no Projects linked.
+
+---
+
 ## Sixth pass — 2026-06-13 (notion-audit full pass — all checks re-verified)
 > Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches of: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection schema, Events collection schema, Divisions collection schema, Locations collection schema, Anthony Johnson person record, NAIOP Chicago membership row.
 
