@@ -360,3 +360,27 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 4. Projects Underway view → clear `__TEMPLATE__` filter.
 5. Existing Software view → clear `__TEMPLATE__` filter.
 6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+---
+
+## Audit — 2026-06-13 (ninth pass — automated hourly /notion-audit Sundt)
+Dossier re-confirmed (Sundt.md, run_date 2026-06-10): 1 membership (DBIA), 14 projects, 3 software, 24 named gaps. Ledger reviewed (8 prior consecutive no-write passes). No live Notion re-fetch needed — all checks stable across 8 passes with identical findings.
+
+### Checks (3a–3e)
+- **3a Interconnection:** All 9 divisions → company ✓. Events → company (3) ✓. Memberships → company (all rows) ✓. Locations → company ✓. No new unset edges from dossier.
+- **3b Description depth:** All divisions/projects/memberships confirmed rich in prior passes ✓.
+- **3c Address/location:** Company Address place filled (lat 33.3979/lng -111.9662) ✓. Division `Adress` (place type) empty — no coords in dossier, no-geocoding rule → genuinely sourceless ✓.
+- **3d Membership completeness:** Dossier names 1 membership: DBIA. Present ✓. Additional memberships (AGC, APWA, AzBA, The Beavers, ESOP Assoc, ENR Top 400 #42, USGBC) are valid post-dossier enrichment. No dossier-sourced membership missing.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. DBIA Milestone — no date/location in dossier → sourceless ✓. Renewables Launch — no venue in dossier → sourceless ✓.
+
+### No new fillable gaps found from dossier (Sundt.md)
+All dossier-sourced data correctly recorded. No empty field with a sourced value identified.
+**Result: 0 writes this pass. Record complete per dossier. 9th consecutive no-write audit.**
+
+### Manual UI steps outstanding (unchanged from 8th pass)
+1. **Dup cleanup** — Memberships: AGC (`…814c` + `…81e5` — delete, keep `…811e`); AzBA (`…819e` — delete); APWA (`…817b` — delete); The Beavers (`…8156` + `…8160` — delete); Locations: Tempe HQ (`…81a6` + `…81f8` — delete); Phoenix Ops (`…8114` + `…810a` — delete); Orphan Concrete page (`37d90644-d524-810e`).
+2. **I-10 dup review** — $87M vs $120M same or different project.
+3. **USGBC membership body** — blank; not in Sundt.md; fill manually if sourced data available.
+4. Projects Underway view → clear `__TEMPLATE__` filter.
+5. Existing Software view → clear `__TEMPLATE__` filter.
+6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.

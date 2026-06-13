@@ -128,6 +128,14 @@ Full re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 membe
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
 - **No new fills. Nothing fillable was missed.**
 
+## Post-load audit #10 (2026-06-13, /notion-audit skill vs HITT1.md — automated hourly cycle)
+Full 3a–3e re-audit: company record (`30a9…`) fetched live — all properties verified.
+- **0 fills — fully converged.** Nothing fillable was missed.
+- **Live confirmations (fetched this pass):** Company Address (place) Falls Church VA 38.864/-77.196 ✓; Country=14 (incl. NC/SC/NM) ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body (Legal name/DUNS/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance) ✓; Size="Regional" (conflict with dossier "Mutlinational" — non-destructive rule, unchanged).
+- **3a–3e all ✓** — full relation graph intact per prior verified passes; 9/9 memberships company-linked; 3 sourced-location events tagged (DBIA/CONEXPO=Nevada+Las Vegas, NAIOP NoVA=Virginia); Safety Week/Subcontractor Day sourceless (National/nationwide — genuinely empty).
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
+- **No false positives identified.**
+
 ## Post-load audit #9 (2026-06-13, /notion-audit skill vs HITT1.md)
 Full 3a–3e re-audit: company record (`30a9…`), profile page (`37b9…8060`), 9 memberships (all fetched live), 5 events (all fetched live), 16 locations (all returned from search), 18 divisions (schema + DC HQ row verified live), 11 projects (JMACC spot-checked live), key people (Kim Roy, Pamela Baughman spot-checked live).
 - **0 fills — fully converged.** Nothing fillable was missed.
