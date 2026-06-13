@@ -349,6 +349,12 @@ Sources: https://www.kiewit.com/locations/
 
 ---
 
+## Audit pass — 2026-06-13 (Pass #9 — automated hourly cycle)
+**0 writes.** Live fetches: company record (`17b90644` — Description/Address place (Omaha 41.265948/-95.935909)/Size=Mutlinational/BW=[Builder/Design and Architecture/Developer]/Country=24/39 Projects/8 Software/715 People — all confirmed ✓), profile page (`37b90644d524…830de18cf6ea0d89`), Memberships schema (`ed090644` — Name + Companies full database ✓), Events schema (`17a90644` — Event name/Date/Location tags/Place/Companies ✓). Search over Kiewit workspace (25 results) — same record set as prior passes, no new records.
+3a–3e all ✓ (consistent with Passes #7–8). Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).
+
+---
+
 ## Audit pass — 2026-06-13 (Pass #8 — automated hourly cycle)
 **0 writes.** Convergence confirmed via ledger cross-check (7 prior 0-fill passes). All 3a–3e checks verified per Pass #7 live verification: company Address place (Omaha 41.266/-95.936) ✓, 40 Projects ✓, 8 Software ✓, 8 Memberships ✓, all events/location rows company-linked ✓.
 

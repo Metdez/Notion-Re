@@ -84,6 +84,21 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (tenth pass — hourly auto-cycle)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (tenth pass)
+- **Company record** `24690644…`: live-fetched — Size="Mutlinational", Address place (4004 Summit Blvd NE Atlanta GA), Description, BW Category=Builder, Website, LinkedIn, Country×15, Parent Company, Construction Projects×37, People×716, Software×8 — all populated ✓
+- **Profile page body** `37b90644…8039`: live-fetched — Bio, Snapshot confirmed present and complete ✓
+- **Memberships table schema** `54b90644…`: live-fetched — `Companies full database` relation column present, schema intact ✓
+- **Sub-agent false positive rejected:** inline-DB views showing empty due to known `__TEMPLATE__` filter artifact — not real gaps (same pattern as passes 6–9) ✓
+- **No regressions** from any prior-filled field ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — UNKNOWN/not disclosed in all dossiers).
+
+---
+
 ## Audit — 2026-06-13 (ninth pass)
 **Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
 
