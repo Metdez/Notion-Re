@@ -144,9 +144,26 @@ Full live re-verify of all 15 records (company DB record + 5 divisions + 2 peopl
 - **Memberships (3d):** none in dossier → none in Notion ✓.
 - **Location tags (3e):** Event "New York" ✓. No other untagged located records.
 
+## Audit pass 2026-06-13 Pass #9 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 original dossier records (company DB record + 5 divisions + 2 people + 5 projects + 1 location + 1 event) + cross-check against all 3 dossiers (Jingoli.md, Jingoli1.md, Jing3.md). No fillable gaps found — all sourced fields already populated.
+- **New state since last audit:** Jing3 session (2026-06-12/13) added: 22 net-new projects (total 27 linked), 7 software rows (Procore, P6, Hard Dollar, +4), 4 memberships in Memberships table, 4 new events in Events table. Company body has "Jing3 Enrichment (2026-06-12)" section with legal name/founded/revenue/$884M/ENR#153/ENR Power#15/employees/CEO/COO.
+- **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis+11 projects+Adress(lat/lng); Jingoli Power→Karl Miller+5 projects; all 5 dossier projects→Contractors+Owning Department; both people→company; Location→company+division; Event (ENR 2012)→company. People `Division` deferred (global Divisions DB `37690644` no Jingoli rows).
+- **Description-depth (3b) ✓:** all bodies at source-maximum depth for both original and Jing3 data.
+- **Address/location (3c):** Company Address place ✓ (lat 40.2793/lng -74.7263); Nuclear Services Adress ✓; Jingoli Power Adress empty (same HQ addr but Jing3.md doesn't explicitly assign lat/lng to the Power division record — genuinely unfillable from dossier scope); JDC/Goldstar/DCO Adress genuinely unfillable. Location row Adress text ✓.
+- **Memberships (3d):** 4 unique memberships now in Notion (GBCA, NJ Alliance for Action, PWC NJ, ACCNJ) — all sourced from Jing3.md. Complete per all 3 dossiers.
+- **Location tags (3e):** Event "New York" ✓. Jing3 events: NJ Alliance Eagle Awards → [New Jersey] ✓ (inferred from event data); PWC NJ → [New Jersey, Jersey City] ✓; HELIX topping-out → [New Jersey, New Brunswick] ✓. All tagged.
+- **Duplicates (outstanding — destructive, Zack UI):**
+  - ENR 2012 event: `37b9…81e7` (original) + `37e9…81a9` (dup — delete)
+  - HQ location row: `37b9…810a` (original) + `37e9…8166` (dup — delete)
+  - GBCA membership: 3 rows (`37c9…81d8`, `37d9…81c1`, `37d9…81ea`) — keep richest, delete other 2
+  - PWC NJ membership: 3 rows (`37c9…8140`, `37d9…810a`, `37d9…81f0`) — keep richest, delete other 2
+  - NJ Alliance for Action events: multiple rows across event table — confirm which is primary
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
-2. **Existing Software** view → clear `__TEMPLATE__` filter (table is empty — no software to show).
-3. Possible template guide rows on local tables (Divisions/Events/Sources/Locations) — UI delete if Zack wants them gone.
-4. Delete duplicate ENR 2012 event row (`37e90644-d524-81a9-a79c-c45a8d7fb1a5`) — duplicate of `37b9…81e7`.
-5. Delete duplicate HQ location row (`37e90644-d524-8166-aeb9-f6c727613765`) — duplicate of `37b9…810a`.
+2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 7 real rows — filter should show them).
+3. Delete duplicate ENR 2012 event row (`37e90644-d524-81a9-a79c-c45a8d7fb1a5`) — duplicate of `37b9…81e7`.
+4. Delete duplicate HQ location row (`37e90644-d524-8166-aeb9-f6c727613765`) — duplicate of `37b9…810a`.
+5. Dedup GBCA membership rows (3 → 1): delete `37c90644-d524-81d8-8e25-f63da3126784` and `37d90644-d524-81c1-af0b-db58bc999958`; keep `37d90644-d524-81ea-9b4f-fc8a369845e8` (richest body with chapter/date).
+6. Dedup PWC NJ membership rows (3 → 1): Zack to pick richest and delete others.
+7. Review NJ Alliance for Action — multiple event rows + 1 membership row; confirm no additional dups.
