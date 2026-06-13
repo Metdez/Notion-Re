@@ -190,3 +190,21 @@ Sources: https://www.kiewit.com/locations/
 - Homer City project ledger ID `81a083b6` was a truncation artifact — correct full ID is `37b90644-d524-81a0-83b6-cfeacdc72ac5` (confirmed via search + fetch).
 
 **0 writes made.** Record is complete and clean at dossier depth. Only outstanding item is Zack's manual UI deletion of the 8 DUPLICATE— rows.
+
+---
+
+## Audit pass — 2026-06-13 (second session)
+
+**Live re-verification via MCP fetch:** Company record, Kiewit Infrastructure Co. division, Key Bridge project, Homer City project, Rick Lanoha person, and both Memberships + Events inline-table schemas fetched live. All checks pass.
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company record — Description ✓, Address place (Omaha 41.265948/-95.935909) ✓, 40 Construction Projects linked ✓, 300+ People linked ✓, 8 Software linked ✓, BW Category=[Builder/Design and Architecture/Developer] ✓, Country=24 entries ✓; Kiewit Infrastructure Co. — Companies → Kiewit ✓, People → Dave Miles ✓, Projects → Key Bridge + 5 more ✓, Adress place ✓; all 7 dossier memberships + ASCE (8 total) company-linked ✓; Events table company-linked ✓
+- 3b: Key Bridge body — owner/delivery/scope/value/risk event/sources all present ✓; Homer City body — owner/delivery/scope/4.5GW/3200 acres/turbines/completion/sources ✓; Rick Lanoha body — Role + source ✓; Kiewit Infrastructure Co. body — focus/leader/office/notable project/parent ✓
+- 3c: Company HQ place ✓; all 17 division Adress place ✓; Key Bridge Adress place (39.2186/-76.5282) ✓; Homer City Adress place (40.564/-79.0803) ✓; Locations `Adress` = TEXT (structural limit flagged, unchanged)
+- 3d: 8 live memberships confirmed (The Beavers `37b90644-8172`, AGC `37b90644-81c1`, DBIA `37b90644-814f`, CSRA `37b90644-8184`, CISI `37b90644-818f`, CCSC `37b90644-81a6`, NCSE `37b90644-81ab`, ASCE `37d90644-81f0`); all match dossier + are company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Convention 2026 → Florida+Orlando ✓; Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; FWIK Summit + Engineering Technical Summit untagged (correct — no sourced location) ✓; DUPLICATE — Construction Safety Week (`37d90644-81d7`) and DUPLICATE — The Beavers/WIHC (`37d90644-81fb`) still pending Zack UI deletion
+
+**Outstanding for Zack (UI only — cannot be done via MCP):**
+- Delete 8 DUPLICATE— rows: 6 in Memberships + 2 in Events inline tables on the Kiewit Corporation page
+
+**0 writes made this session.** Record is at full dossier depth.

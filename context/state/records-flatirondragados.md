@@ -84,6 +84,29 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (fourth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. One fillable gap found and resolved.
+
+### Filled in audit
+- **Gordie Howe International Bridge** `Location` — added "Michigan" tag (bridge crosses Windsor ON → Detroit MI; Michigan was a valid schema option, only Ontario was set). Source: Flat.md + Flatiron1.md. ID: `37b90644-d524-81c7-87ad-c45249cf21d1`.
+- **I-275 Express Lanes Pinellas County** body — removed stale "(Location tag pending — 'Florida' not yet a Projects option)" note; Florida is now a valid tagged option. ID: `37b90644-d524-8181-ad0c-d768409693d1`.
+
+### What was verified as already complete
+- Company record: Description, Size ("Mutlinational"), Website, Address (place), BW Category, Country tags, People, Construction Projects — all populated ✓
+- All 21 projects: Contractors→FD, Location tags, Status, Values, Date (where sourced) — all verified ✓
+- All 10 Memberships rows: linked to FD company ✓ (AGC of California, AGC San Diego, Carolinas AGC, The Beavers, CCIB, DBIA, IPI, California Alliance for Jobs, Hispanic Contractors of Colorado, NECA Boston)
+- Both Events rows: Place (coords), Date, Location tags, Companies→FD ✓
+- All 6 Divisions: Address place (where available), body content, Companies→FD ✓
+- Profile page body: Bio, Snapshot, Attack Plan — all filled ✓
+
+### Still empty (genuinely sourceless — unchanged from prior passes)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source). J.F. White division People relation (no named leader in any dossier).
+
+### ⚠ Duplicate rows for Zack UI cleanup (unchanged)
+See prior audit entries — 7 blank Membership dups, 2 duplicate division rows, 4+ duplicate location rows.
+
+---
+
 ## Audit — 2026-06-13 (third pass)
 **Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md` (newly discovered comprehensive dossier, 6,127 lines, run date 2026-06-12). Most significant finding: Memberships table had only 4 real content rows vs 7+ required — 6 missing memberships created.
 
