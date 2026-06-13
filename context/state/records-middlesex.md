@@ -260,6 +260,27 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 
 ---
 
+## Audit — 2026-06-13 (notion-audit skill pass #8 — current session)
+**Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions + 7 locations + 5 memberships + 6 events.
+**Result: 0 fills. All structural checks PASS. Full clean audit.**
+
+**Verified PASS — no write needed:**
+- Company record `1ce90644`: Description ✓, Website ✓, LinkedIn ✓, Address place ✓, BW Category ✓, Type ✓, Size (Regional) ✓, Country (7) ✓, People (417+) ✓, Construction Projects (23 forward + 2 backlink = 25 total) ✓, Owners (12) ✓, Software (8) ✓, body full ✓.
+- Operational hub body: 8 divs ✓ · 6 events ✓ · 7 locations ✓ · 24 projects ✓ · 5 memberships ✓ · 417 people ✓ · 8 software ✓ · Attack Plan ✓.
+- TEMPLATE body: matches operational hub ✓.
+- All 8 divisions: Companies ✓ · Adress place ✓ (all 8 live-confirmed) · bodies full ✓.
+- All 6 events: Companies ✓ · Location tags ✓ (FL/CT/MA options present; tags applied) · FTBA Annual has Place filled ✓.
+- All 5 memberships: CCIA ✓ · FTBA ✓ · DBIA-FL ✓ · ABC ✓ · NSC ✓ · Companies relation ✓.
+- All 7 locations: Companies ✓ · Division ✓ · Adress text ✓ · bodies full ✓.
+- Dossier cross-check: disk dossier has 4 memberships (CCIA/FTBA/DBIA-FL/ABC) + 4 events + no `people` key. NSC (5th membership) + 2 extra events + 14 people leaders came from in-context dossier passes — all properly sourced ✓.
+- Projects spot-checked: Orange Line Surge `37d90644…ef3bcf` + Basiliere Bridge `37d90644…e2965` both have Contractors/Owner/Adress place/body ✓.
+- Events schema `3f590644` (operational hub) + `ff290644` (TEMPLATE): Florida ✓ · Massachusetts ✓ options confirmed live.
+
+**Genuinely sourceless (unchanged):** all division leaders (Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC) · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date · Sparta Quarry street address · project contract values (Brightline Zone 2, Tampa Air Cargo, I-75 Overpass, Niantic, SunRail, Needham, East Selmon — null in dossier).
+**Structural deferred (unchanged — Zack deletion required):** People→Division global DB mismatch · dup Orlando location `37c90644-d524-8138` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows.
+
+---
+
 ## Audit — 2026-06-13 (notion-audit skill pass #7 — automated hourly cycle)
 **Target:** Company record `1ce90644` + operational hub `37b90644d5248003` + TEMPLATE `37b90644d52480b2` + all 8 divisions + 7 locations + 5 memberships + 6 events.
 **Result: 0 fills. All structural checks PASS. Full clean audit.**

@@ -326,3 +326,37 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
 
 **Result: 0 writes this pass. Record complete per Sundt.md ground truth. 7th consecutive no-write audit.**
+
+---
+
+## Audit — 2026-06-13 (eighth pass — /notion-audit Sundt)
+Full re-fetch: company record (subagent, 60K chars), Memberships schema + all rows (DBIA, ESOP Assoc, ENR Top 400 #42, USGBC, AGC ×3, AzBA ×2, APWA ×2, The Beavers ×3), Events schema + all 3 rows (AGC Safety, DBIA Milestone, Renewables Launch), Locations search (Tempe HQ ×3, Phoenix Ops ×3 confirmed), Sundt profile page.
+
+### State confirmed (no new writes since 7th pass)
+- **Company record** — last edited 2026-06-12T10:33:18. Address place filled (lat 33.3979 / lng -111.9662) ✓. All 17 properties populated ✓. 835 people, 53 projects, 5 software ✓.
+- **Memberships schema** — Name + Companies full database only (no source URL property). All membership rows linked to company ✓.
+- **USGBC** (`37d90644-d524-81e9`) — still blank-page. Dossier (Sundt.md) has no USGBC entry → genuinely sourceless from ground truth. Not filled.
+- **ENR Top 400 #42** (`37d90644-d524-8123`) — body rich ✓ ("Sundt ranked #42… up from #62 in 2023").
+- **ESOP Association** (`37d90644-d524-8159`) — body rich ✓ ("100% employee-owned… IPS acquisition May 2026").
+- **AGC dups** — `37d90644-d524-814c` blank, `37d90644-d524-81e5` has body. Both still present; retain `…811e` (original with body), delete two dups via UI.
+- **Events** — AGC Safety Award (Date 2026-04-16, Tag Arizona, body rich) ✓. DBIA Milestone (no date, no tag — sourceless) ✓. Renewables Launch (no tag — sourceless) ✓.
+- **Locations** — Tempe HQ ×3 still present (`37b90644…81e6` original + `37d90644…81a6` + `37d90644…81f8`). Phoenix Ops ×3 still present. All dup cleanup still pending manual UI.
+
+### Checks (3a–3e)
+- **3a Interconnection:** All 9 divisions → company ✓. Events → company (3) ✓. All membership rows → company ✓. Locations → company ✓. No new unset edges.
+- **3b Description depth:** All division bodies rich (confirmed prior passes) ✓. ENR/ESOP membership bodies rich ✓.
+- **3c Address/location:** Company Address place filled ✓. Division `Adress` (place type) empty — no coords in dossier, no-geocoding rule → sourceless ✓.
+- **3d Membership completeness:** Dossier names DBIA only. Present: DBIA ✓, AGC ✓, APWA ✓, AzBA ✓, The Beavers ✓, ESOP Assoc ✓, ENR Top 400 ✓, USGBC ✓ (blank body). No dossier-sourced membership missing.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. DBIA Milestone no location — sourceless ✓. Renewables Launch no venue — sourceless ✓.
+
+### No new fillable gaps found from dossier (Sundt.md)
+All dossier-sourced data correctly recorded. No empty field with a sourced value identified.
+**Result: 0 writes this pass. Record complete per dossier. 8th consecutive no-write audit.**
+
+### Manual UI steps outstanding (unchanged)
+1. **Dup cleanup** — Memberships: AGC (`…814c` blank, `…81e5` body — delete both, keep `…811e`); AzBA (`…819e` — delete); APWA (`…817b` — delete); The Beavers (`…8156` + `…8160` — delete); Locations: Tempe HQ (`…81a6` + `…81f8` — delete); Phoenix Ops (`…8114` + `…810a` — delete); Orphan Concrete page (`37d90644-d524-810e`).
+2. **I-10 dup review** — $87M vs $120M same or different project.
+3. **USGBC membership body** — blank; not in Sundt.md; fill manually if sourced data available.
+4. Projects Underway view → clear `__TEMPLATE__` filter.
+5. Existing Software view → clear `__TEMPLATE__` filter.
+6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
