@@ -384,3 +384,44 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 4. Projects Underway view → clear `__TEMPLATE__` filter.
 5. Existing Software view → clear `__TEMPLATE__` filter.
 6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+---
+
+## Audit — 2026-06-13 (tenth pass — /notion-audit Sundt)
+Full live re-fetch: company record (60K-char subagent), Memberships table (all rows via 5 search queries), Events table (all 13 rows), USGBC page direct fetch, DBIA Milestone + Renewables Launch direct fetch, 5 new event rows direct fetch. Dossier (Sundt.md, run_date 2026-06-10) re-confirmed as ground truth.
+
+### Workspace state confirmed (live)
+- **Company record** — last edited 2026-06-12T10:33:18. All 17 properties populated. Address place filled (lat 33.3979 / lng -111.9662) ✓. Country = 10 states ✓. 835 people, 53 projects, 5 software ✓.
+- **Memberships** — 8 unique memberships confirmed (DBIA, AGC, APWA, AzBA, The Beavers, ESOP Association, ENR Top 400 #42, USGBC). All have Companies relation → Sundt ✓. Dup rows still present (AGC ×3, APWA ×2, AzBA ×2, Beavers ×3). USGBC body confirmed blank.
+- **Events** — 13 rows total: original 3 (AGC Safety Award, DBIA Milestone, Renewables Launch) + 7 post-dossier enrichment rows (IPS Acquisition, Cade Rowley CEO, Water Group Created, Advanced Facilities Group Created, Chad Buck Building Group President, + 2 SCUP/CALA shared events). All 13 → Companies relation set to Sundt ✓. DBIA Milestone: Date=empty, Location=empty. Renewables Launch: Date=2020-12-07 ✓, Location=empty. New leadership-event rows: Date filled; "Water Group Created", "Advanced Facilities Group Created", "Chad Buck" have no Location tag (no venue in source — genuinely sourceless).
+
+### Checks performed (3a–3e)
+- **3a Interconnection:** Company ↔ Divisions (9) ✓ · Events → company (all 13 rows) ✓ · Memberships → company (all rows, incl. dups) ✓ · Locations → company ✓. No unset edges.
+- **3b Description depth:** Company body rich (CEO, M&A, ENR, ESOP, revenue, licenses) ✓. Divisions confirmed rich (prior passes) ✓. Events have sourced bodies ✓. USGBC body blank — post-dossier add, no dossier source → genuinely sourceless.
+- **3c Address/location:** Company Address place filled ✓. Division `Adress` (place type) empty — no coords in dossier, no-geocoding rule → sourceless ✓. AGC Safety Award Place field not present as a separate property on that row (field absent from schema on that record). Location tag "Arizona" confirmed ✓.
+- **3d Membership completeness:** Dossier names 1 membership (DBIA). Present ✓. 7 additional memberships are valid post-dossier enrichment. No dossier-sourced membership missing.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. DBIA Milestone — no date/venue in dossier → sourceless ✓. Renewables Launch — no venue in dossier → sourceless ✓. New leadership events (Water Group, Advanced Facilities, Chad Buck) — no venue → sourceless ✓.
+
+### No new fillable gaps found from dossier (Sundt.md)
+All dossier-sourced data correctly recorded. No empty field with a sourced value identified. USGBC body blank = genuinely sourceless from Sundt.md.
+**Result: 0 writes this pass. Record complete per dossier. 10th consecutive no-write audit.**
+
+### Updated duplicate register for UI cleanup (corrected from live re-fetch)
+| Table | Retain | Delete |
+|---|---|---|
+| Memberships · AGC | `37d90644-d524-811e` (body: AGC awards/safety) | `37d90644-d524-81e5` (body) + `37d90644-d524-814c` (blank) |
+| Memberships · APWA | `37d90644-d524-81f2` (org-level body) | `37d90644-d524-817b` (person-detail body — merge content first if wanted) |
+| Memberships · AzBA | `37d90644-d524-819e` (richer, newer) | `37d90644-d524-8146` |
+| Memberships · The Beavers | `37d90644-d524-8118` (Cade Rowley detail) | `37d90644-d524-8156` + `37d90644-d524-8160` |
+| Locations · Tempe HQ | `37b90644-d524-81e6` (original, has body) | `37d90644-d524-81a6` + `37d90644-d524-81f8` |
+| Locations · Phoenix Ops | `37b90644-d524-81f2-ad5d` (original) | `37d90644-d524-8114` + `37d90644-d524-810a` |
+| Orphan page | — | `37d90644-d524-810e-9a9c` (Concrete standalone) |
+| Projects · I-10 | `37b90644-d524-8102` ($87M dossier-sourced) | `37d90644-d524-81a5` ($120M) — **review before deleting** |
+
+### Manual UI steps outstanding (updated 10th pass)
+1. **Dup cleanup** — see table above: AGC ×2 delete, APWA ×1 delete, AzBA ×1 delete, Beavers ×2 delete; 3 location dups; orphan Concrete page.
+2. **I-10 dup review** — $87M vs $120M same or different project.
+3. **USGBC membership body** — blank; sourceless from Sundt.md; fill manually if Zack has a source.
+4. Projects Underway view → clear `__TEMPLATE__` filter.
+5. Existing Software view → clear `__TEMPLATE__` filter.
+6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
