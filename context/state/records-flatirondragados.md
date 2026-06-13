@@ -84,6 +84,20 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (sixth pass — hourly auto-cycle)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### Key finding: view-filter false positives rejected
+Inline-DB views on the profile page have a leftover `__TEMPLATE__` filter that hides most rows from view queries. Sub-agent reading the filtered view reported only 4 memberships and 4 events — but raw collection searches confirmed all 10 memberships and 5 events exist with full data. Every "missing" row was a view-filter artifact, not an actual gap. Verified records present:
+- **Memberships (10):** AGC of California `37e90644…8191`, DBIA `37e90644…81e6`, IPI `37e90644…810e`, California Alliance for Jobs `37e90644…8130`, Hispanic Contractors of Colorado `37e90644…8170`, NECA Boston `37e90644…81b8`, AGC San Diego `37d90644…81f3`, Carolinas AGC, The Beavers, CCIB — all Companies→FD ✓
+- **Events (5):** DBIA Conf & Expo 2025 (Las Vegas, Nov 5, place+tag ✓) · Groundbreaking Women 2026 (San Diego, Jun 14, place+tag ✓) · IAI Summit 2025 · IPI Awards 2022 · CI Student Days 2025
+- **Locations:** Secaucus NJ `37c90644…8153` confirmed with address + Division→SPC ✓
+- **Company record:** all properties populated (Description, Size="Mutlinational", Address place, Country 15 tags, BW Category, Website, LinkedIn, Parent Company, People 46, Construction Projects 37) ✓
+- **Profile page body:** Bio, Snapshot, Attack Plan — complete ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — "UNKNOWN" in all dossiers).
+
 ## Audit — 2026-06-13 (fifth pass)
 **Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md`. Zero fillable gaps found. Full live verification of all record types: company record, profile page, 21+ projects, 6 divisions, 10 memberships, 2 events, location rows. Every field with sourced data is already present in Notion. No writes made this pass.
 

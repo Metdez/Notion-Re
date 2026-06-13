@@ -16,10 +16,10 @@
 | Fontaine Bros. | `Enlaye Notion/Fontaine Bros/Font1.md` (1st) · `Fontaine.md` (2nd-pass, 16 proj → +6 net-new) | ✅ 2026-06-10 (both passes) | [records-fontaine](records-fontaine.md) |
 | HITT Contracting | `Enlaye Notion/HITT/HITT1.md` (HITT2.md empty) | ✅ 2026-06-10 | [records-hitt](records-hitt.md) |
 | Jingoli Nuclear Services | `Enlaye Notion/Jingoli/Jingoli.md` | ✅ 2026-06-10 | [records-jingoli](records-jingoli.md) |
-| Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) | ✅ 2026-06-10 | [records-cianbro](records-cianbro.md) |
+| Cianbro | `Enlaye Notion/Cianbro/Cianbro.md` (Cianbro2.md empty) · `Cianbro3.md` (398KB structured JSON 2nd-pass, 2026-06-13; ~65 projects, people, locations) | ✅ 2026-06-10 (initial) · ✅ 2026-06-13 audit pass #8 from Cianbro3.md | [records-cianbro](records-cianbro.md) |
 | Bechtel Group | `Enlaye Notion/Bechtel Group/Bechtel2.md` (primary) · `Bechtel1.md` (mapped) | ✅ 2026-06-10 | [records-bechtel](records-bechtel.md) |
 | Branch Group | `Enlaye Notion/Branch Group/Branch1.md` (single-line JSON dossier) | ✅ 2026-06-10 | [records-branch](records-branch.md) |
-| Alberici | `Enlaye Notion/Alberici Corp/Alb.md` (single sourced JSON dossier) | 🔄 2026-06-10 in progress | [records-alberici](records-alberici.md) |
+| Alberici | `Enlaye Notion/Alberici Corp/Alb.md` (original dossier) · `Alb2.md` (enriched 2nd dossier, 2026-06-12; 13 divs, 49 projects, 94 sources) | ✅ Alb.md 2026-06-10; Alb2.md discovered 2026-06-13 (prior sessions already loaded bulk; 3 location-Division fills this session) | [records-alberici](records-alberici.md) |
 | KBE Building | `Enlaye Notion/KBE Building/KBE.md` (KBE1.md empty) | ✅ 2026-06-10 (additive gap-fill on pre-existing 06-05 build) | [records-kbe](records-kbe.md) |
 | The Middlesex Corporation | `Enlaye Notion/The Middlesex Corp/Middlesex.md` (disk dossier; truncated mid-`sources`) **+ richer in-chat-only dossier** (not on disk: exec roster, $609.9M/#203, more tools) | ✅ 2026-06-10 (disk) · ✅ 2026-06-10 2nd pass (in-chat extras: +10 execs, Middlesex Asphalt div, +4 software) | [records-middlesex](records-middlesex.md) |
 | FlatironDragados | `Enlaye Notion/FlatironDragados/Flat.md` (primary) · `Flatiron1.md` (secondary; Flat1.md empty) | ✅ 2026-06-10 | [records-flatirondragados](records-flatirondragados.md) |
