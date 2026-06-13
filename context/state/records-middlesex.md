@@ -217,6 +217,35 @@ NE Region ✓ · SE Region ✓ · Middlesex Paving LLC ✓ · Mass Ready Mix ✓
 
 ---
 
+## Audit — 2026-06-13 (notion-audit skill pass #6 — current session)
+**Target:** Middlesex TEMPLATE `37b90644d52480b2b047ef5e4b3a576a` + operational hub `37b90644d5248003baf7e3d038b7c037` + company record `1ce90644` + spot-check of 7 projects vs Mid2.md dossier.
+**Result: 0 fills. All structural checks PASS. This is a clean audit.**
+
+**Ground truth used:** Both dossier files — `Middlesex.md` (v1, 2026-06-10) and `Mid2.md` (v2, 2026-06-12, richer per-project scope data).
+
+**Verified PASS — no write needed:**
+- TEMPLATE page body: 8 div · 24 proj · 417 people · 8 software · 6 events · 5 memberships · 7 locations · Attack Plan — all current ✓
+- Operational hub body: same counts ✓; Attack Plan full ✓
+- Company record `1ce90644`: Description ✓, Website ✓, LinkedIn ✓, Address place (Littleton HQ) ✓, BW Category=[Builder] ✓, Type=Company ✓, Size=Regional ✓, Country (7: MA/USA/CT/FL/ME/NH/GA) ✓, People (417) ✓, Construction Projects (23 in property + 24+ via Contractors backlink) ✓, Owners (12) ✓, Software (8) ✓.
+- Projects spot-checked (contract values all filled via prior session):
+  - Brightline Zone 2 GOAA: $85M ✓, body full ✓
+  - I-75 Overpass Rd: $67M ✓, body full (802-ft flyover, DBIA-FL award) ✓
+  - Tampa Air Cargo (UPS): $70M ✓, body full (30,260 SF, 19-acre site) ✓
+  - OIA TKJV GMP 5S.2: $63M ✓, body full (155-acre site, 2023 ENR Best Project) ✓
+  - SR-429 Widening: $89M ✓, body full (2022 FTE Road Builder of Year) ✓
+  - Basiliere Bridge: $214.98M ✓, body full (competing bids listed) ✓
+  - MBTA Orange Line Surge: $75M ✓, body full ✓
+- East Selmon Expressway Slip Ramps: no contract value — genuinely null in both dossiers (v1 and v2); body has scope + awards ✓
+- All 8 divisions: Adress place set on all 8 ✓ (Energy + Rail/Transit filled in pass #3)
+- All 6 events: Location tags applied ✓; FL+MA options in Events schema ✓
+- All 5 memberships: CCIA · FTBA · DBIA-FL · ABC · NSC — Companies relation ✓
+- All 7 locations: Adress text + Companies + Division relations ✓
+
+**Genuinely sourceless (unchanged):** East Selmon contract value (null in both dossiers) · Energy/Rail-Transit/Corridor Mining/Mass Ready Mix/Asphalt LLC division leaders · People email/phone/LinkedIn (Whiteman, Bennett, Hebert, R.W. Pereira) · CCIA + Golf event venue coords · FTBA Annual exact date.
+**Structural deferred (unchanged):** People→Division global KBE-only DB mismatch · dup Orlando location `37c90644-d524-8138` · dup CCIA/DBIA-FL/FTBA `37c90644` membership rows — Zack deletion required.
+
+---
+
 ## Audit — 2026-06-13 (notion-audit skill pass #5 — current session)
 **Target:** Operational hub `37b90644d5248003baf7e3d038b7c037` + TEMPLATE `37b90644d52480b2b047ef5e4b3a576a` + company record `1ce90644…21c76`.
 **Result: 2 fills. All structural checks PASS.**

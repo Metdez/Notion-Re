@@ -219,3 +219,40 @@
 **Note on SelectUSA event ID:** Ledger records `8129-9ab8` for SelectUSA event, but direct fetch returned 404 (probable ledger typo). Event is confirmed present via Clayco TEMPLATE page body reference and Events collection. No action needed on data — visual confirmation from profile page is sufficient.
 
 **Still genuinely sourceless (no write):** same as pass 5 — project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
+
+---
+
+## Seventh pass — 2026-06-13 (notion-audit full pass — all checks re-verified)
+> Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches of: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection (schema + NAIOP Chicago row `8154`), Events DB (schema + view config), Divisions collection schema, Locations collection schema, Rivian project record, Anthony Johnson person record.
+
+**Nothing to fill.** All dossier-sourced data is confirmed in Notion. No new gaps identified relative to pass 6.
+
+**3a Interconnection — confirmed clean:**
+- NAIOP Chicago `8154-b408` confirmed live, Properties show `Companies full database` → Clayco (`19990644`) and body + source intact.
+- Anthony Johnson record properties confirmed: `Company` → Clayco, `LinkedIn` filled, `Function` = Chief Executive Officer, `Location` = Missouri.
+- Rivian project confirmed: `Contractors` → Clayco, `Contrat Value in Million` = 5000, `Location` = [Georgia], `Owning Department` set, `Status` = In progress, `Type` = Advanced Manufacturing, sourced body.
+- Divisions collection schema confirms: `Companies full database` + `People` + `Projects` + `Untitled Database` (Locations reverse) all present as relation properties.
+- Company record `19990644` has `Construction Projects` = 32 URLs (confirmed array count in live fetch), `Companies Software` = 6 URLs, `People` = many URLs (large list), `Subsidiaries` = 5 URLs.
+- Memberships collection schema: `Name` + `Companies full database` relation — both present. 5 rows confirmed in prior passes; NAIOP spot-check confirmed alive and linked this pass.
+
+**3b Description depth — confirmed adequate:**
+- Company body: rich Company Snapshot + Financial trend & safety section + Attack Plan; all inline-sourced.
+- Anthony Johnson body: sourced `## Role` section with titles, dates, and two source URLs.
+- Rivian project body: Project Brief with owner, architect, division attribution, sourced section.
+
+**3c Address/location check — confirmed:**
+- Company record has `place:Address:name`=Clayco HQ, `place:Address:address`=35 East Wacker Drive Suite 1300 Chicago IL 60601, lat=41.8869, lng=-87.6266.
+- Locations collection schema confirms `Adress` is type `text` (not `place`) — text addresses in all 11 location rows are correct per schema.
+- Events collection schema confirms `Adress` is type `place` — AECTechCon has place set (confirmed pass 4).
+- Rivian project has no `Adress` property on the Construction Projects schema (projects use `Location` multi-select tag instead, not a place property) — confirmed by live record schema. No gap.
+
+**3d Memberships — complete:** 5/5 sourced memberships confirmed — USGBC · DBIA · AGC-unconfirmed · NAIOP Chicago · USGBC-CA. NAIOP confirmed alive this pass. No new memberships in any dossier.
+
+**3e Location tags — confirmed:**
+- Events collection schema: Maryland + Florida + Missouri + St. Louis + Life Sciences + Food & Beverage options all present (confirmed in schema fetch this pass).
+- AECTechCon: [Missouri, St. Louis] ✓ (set pass 4) · SelectUSA: [Maryland] ✓ · Clayco Rising: [Florida] ✓ · AGC Convention: no tag (no sourceable venue) ✓ · INTERPHEX: [Life Sciences] ✓ · Petfood Forum: [Food & Beverage] ✓.
+
+**Events view filter observation (non-blocking):**
+- The Events DB view (`e9090644`) has an `advancedFilter` set to `Event name = "TEMPLATE"` — this means the in-page view shows only a template row (which was likely deleted) and hides real event rows. The underlying data (6 event rows with Companies→Clayco) is intact. This is a UI-only filter issue, not a data gap. **UI action for Zack:** remove the `Event name = "TEMPLATE"` filter from the Events view on the Clayco TEMPLATE profile page to make event rows visible.
+
+**Still genuinely sourceless (no write):** same as passes 5–6 — project contract values (15/32) · precise project dates · Size=Regional conflict · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group has no Projects linked.

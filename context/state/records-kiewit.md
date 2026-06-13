@@ -208,3 +208,21 @@ Sources: https://www.kiewit.com/locations/
 - Delete 8 DUPLICATE— rows: 6 in Memberships + 2 in Events inline tables on the Kiewit Corporation page
 
 **0 writes made this session.** Record is at full dossier depth.
+
+---
+
+## Audit pass — 2026-06-13 (third session)
+
+**Live re-verification via MCP fetch:** Company record (properties + page body), Kiewit Infrastructure Co. division (properties + body), Memberships table (all rows searched), Events table (all rows searched), Locations table (all rows searched), Divisions schema — all fetched live. All checks pass.
+
+**3a–3e verified ✓ (all clean):**
+- 3a: Company record — Description ✓, Address place (Omaha 41.265948/-95.935909) ✓, 39 Construction Projects linked ✓, 300+ People linked ✓, 8 Software linked ✓, BW Category=[Builder/Design and Architecture/Developer] ✓, Country=24 entries ✓, Type=Company, Size=Mutlinational ✓; Kiewit Infrastructure Co. — Companies → Kiewit ✓, People → Dave Miles ✓, Projects → Key Bridge + 5 more ✓, Adress place (Lone Tree CO 39.5519/-104.8722) ✓; all 8 memberships company-linked ✓; 6 Events (4 new + 2 original) company-linked ✓; 12 Location rows (incl. TEMPLATE) present
+- 3b: Company page body — 4 rich sections (People contacts, Org Structure, Entry Strategy, Snapshot + 2026-06-12 update) ✓; Attack Plan fully filled ✓; Kiewit Infrastructure Co. body — focus/leader/office/notable project/parent ✓; all bodies at full dossier depth ✓
+- 3c: Company HQ place ✓; all 17 division Adress place ✓; Locations `Adress` = TEXT type (structural limit, not fixable via MCP — flagged in prior audit passes, unchanged)
+- 3d: 8 live memberships: The Beavers `37b90644-8172` · AGC `37b90644-81c1` · DBIA `37b90644-814f` · CSRA `37b90644-8184` · CISI `37b90644-818f` · CCSC `37b90644-81a6` · NCSE `37b90644-81ab` · ASCE `37d90644-81f0`; all company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion (`37d90644-8169/81e1/81ab/81e3/81ca/8141`)
+- 3e: EPC Show 2026 → Texas ✓; AGC Convention 2026 → Florida+Orlando ✓; Construction Safety Week (national) untagged ✓; Women in Heavy Civil (national) untagged ✓; FWIK Summit 2025 + Kiewit Engineering Technical Summit 2026 untagged (correct — no sourced location) ✓; 2 DUPLICATE— Events still pending Zack UI deletion (`37d90644-81d7`, `37d90644-81fb`)
+
+**Outstanding for Zack (UI only — cannot be done via MCP):**
+- Delete 8 DUPLICATE— rows: 6 in Memberships + 2 in Events inline tables on the Kiewit Corporation page
+
+**0 writes made this session.** Record confirmed at full dossier depth for third consecutive audit pass.
