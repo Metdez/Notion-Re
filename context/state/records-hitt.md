@@ -1,7 +1,7 @@
 # State · Records — HITT Contracting
 
 > **Holds:** the HITT Contracting dedup ledger — every record created/updated in the 2026-06-10 load, with Notion IDs, so the next session deduplicates before touching a HITT record.
-> **Ground truth:** `Enlaye Notion/HITT/HITT1.md` (HITT2.md is empty/0 bytes). Dossier index: [research-files](research-files.md).
+> **Ground truth:** `Enlaye Notion/HITT/HITT1.md` (HITT2.md empty) · `HITT4.md` (2nd-pass 2026-06-12; all content already loaded by prior session — fully cross-checked Pass #14). Dossier index: [research-files](research-files.md).
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md) · siblings: the other `records-*` ledgers.
 
 ---
@@ -201,3 +201,17 @@ Full 3a–3e re-audit: company record (`30a9…`), profile page (`37b9…8060`),
 - **3a–3e all ✓** — full relation graph intact; 9/9 memberships company-linked; 3 sourced-location events tagged (DBIA/CONEXPO=Nevada+Las Vegas, NAIOP NoVA=Virginia); Safety Week/Subcontractor Day sourceless (National/nationwide).
 - **Country options previously deferred (NC/SC/NM) confirmed live** — present in company record, no action needed.
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive rule).
+
+## Post-load audit #14 (2026-06-13, /notion-audit skill vs HITT1.md + HITT4.md)
+Full 3a–3e re-audit. Newly discovered HITT4.md (2,474 lines, run 2026-06-12) cross-checked against live Notion.
+- **HITT4.md scope fully pre-loaded by prior sessions (2026-06-12):**
+  - Software: 14 rows live (Procore/Bluebeam/Autodesk BIM/OpenSpace/Hilti Jaibot/Microsoft 365/Autodesk Navisworks/Autodesk Revit/FARO Scene/Synchro-Bentley/Building Transparency EC3/Autodesk BIM360-ACC/TradeTapp/e4Clicks-Gordian + Autodesk Pype = 14+ confirmed in Companies Software relation)
+  - People: Megan Lantz, Brett Hitt, John Kane — all confirmed in Notion (timestamps 2026-06-12)
+  - Projects: all 7 HITT4 projects map to existing 11 Notion records with richer bodies than HITT4
+- **DBIA webinar event rejected:** HITT4.md "DBIA 2025/2026 Webinar - Design-Build Misconceptions" (Feb 15, 2026, virtual). Source = generic Facebook URL not naming HITT → no write per "sourced data only" rule.
+- **0 fills — fully converged.** Nothing fillable was missed across all dossiers.
+- **Live confirmations (fetched this pass):** Company Address (place) Falls Church VA 38.864/-77.196 ✓; Country=14 ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body ✓; Boeing SC body ($1B/BE&K JV/BRPH/LEED Silver/Nov 7 2025/~1.2M sf) ✓; HITT HQ body (Gensler/topped Mar 19 2026/270K sf/LEED Platinum+WELL) ✓; Microsoft Alviso body (John Kane SVP/Jun 10 2026/48MW/397,205 sf) ✓; N2W body (McCarthy JV/B&V+Gensler A/E/Jan 26 2026/$711.7M/$1.7B) ✓ — richer than HITT4.
+- **3a–3e all ✓:** Full relation graph intact; 9/9 memberships company-linked; DBIA/CONEXPO=Nevada+Las Vegas ✓; NAIOP NoVA=Virginia ✓; Safety Week/Subcontractor Day no tags (National/nationwide — genuinely sourceless).
+- **HITT4.md registered:** research-files.md updated.
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week/Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive).
+- **No false positives identified.**
