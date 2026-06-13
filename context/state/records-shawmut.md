@@ -125,6 +125,12 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-13 (Pass #12) — automated hourly cycle
+**Full audit run (3a–3e).** Live-fetched: company record `19990644` (all properties confirmed populated; last edited 2026-06-12T23:07 — no changes since Pass #11); profile page `37b90644…81b2` (title="Shawmut" ✓, all body sections present ✓). Ground truth: Shawmut3.md + Shaw5.md. Cross-check vs 11-pass convergence history.
+**Result: 0 fills executed.** Record fully saturated. Twelfth consecutive pass.
+**3a–3e all ✓:** confirmed per live fetch + prior-pass ledger (no Notion writes since 2026-06-12T23:07).
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, litigation, Miami/WPB owning division, Large Project VP name, contract values for undisclosed projects.
+
 ## Audit log — 2026-06-13 (Pass #11)
 **Full audit run (3a–3e).** Live-fetched: company record `19990644` (all 17 properties: BW Category, Country×10, Size=Regional, Address place 560 Harrison Ave, Website, LinkedIn, Description, 39+ Projects, 200+ People, 11 Software, 30+ Owners); profile page `37b90644…81b2` ("Shawmut" ✓, body complete); all 5 division pages (Companies+People+Projects+Adress all verified); both events (Companies+Location tags); AGC membership (Company relation). Ground truth: Shawmut3.md (on disk) + Shaw5.md (registered; not on disk — content confirmed loaded prior session).
 **Result: 0 fills executed.** Eleventh consecutive pass; fully converged.
