@@ -198,3 +198,65 @@ All dossier-sourced data remains correctly recorded. No empty fields with source
 3. Projects Underway view → clear `__TEMPLATE__` filter.
 4. Existing Software view → clear `__TEMPLATE__` filter.
 5. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+## Audit — 2026-06-13 (sixth pass — /notion-audit Sundt)
+Full parallel re-fetch: company record (full body + properties), all 9 divisions (individual page fetches), all 3 event pages, all Locations rows, all 5+ Membership rows, sample project pages (SLC Water, Nashville, I-10 $87M, 183 North, rPlus, Gilbert, TxDOT $120M dup), hub page full scan.
+
+### Workspace growth since 06-13 (fifth pass)
+- **Memberships** — grew from 5 to 8 unique + 6 dup rows: added **ESOP Association** (`37d90644-d524-81XX`), **U.S. Green Building Council (USGBC)** (`37d90644-d524-81XX`), **ENR Top 400 Contractors (2026, #42)** (`37d90644-d524-81XX`) — all from post-dossier enrichment ~06-12 20:18. Also **6 additional duplicate rows** (Beavers ×3 total, AGC ×3 total, APWA ×2 total, AzBA ×2 total).
+- **Locations** — **Austin TX** is a new unique location (`37d90644-d524-81fb-bebb-e76c42c97838`, 1701 Directors Blvd Suite 730, Austin TX 78744, Division SET, body present) — net-new, not a duplicate. Also Vancouver WA now has 2 extra dups beyond the 1 flagged in pass 5. Phoenix Training Center now has 2 dups. Total dup count in Locations escalated.
+- **Company record** — Size property confirmed `"Mutlinational"` (typo for "Multinational" — pre-existing schema option, not correctable without full-list clobber risk).
+
+### Full dup inventory (updated 06-13 sixth pass)
+**Locations dupes (delete via UI — keep 37b90644-... originals):**
+| Dup ID | Name | Keep? |
+|---|---|---|
+| `37d90644-d524-81f8-816c-efbc1f976755` | Tempe HQ | Delete — keep `37b90644…81e6…` |
+| `37d90644-d524-81a6-9e90-d5ef10d12c7e` | Tempe Headquarters | Delete — keep `37b90644…81e6…` |
+| `37d90644-d524-810a-b472-d132ceb0ee9d` | Phoenix Operations Support Services | Delete — keep `37b90644…81f2…` |
+| `37d90644-d524-8114-8c2c-e8dbd32e549b` | Phoenix Operations Support Services | Delete — keep `37b90644…81f2…` |
+| `37d90644-d524-8173-bd01-f579963d0509` | Phoenix Training Center | Delete — keep `37b90644…81fb…` |
+| `37d90644-d524-....` (second Phoenix TC dup) | Phoenix Training Center | Delete |
+| `37d90644-d524-81ac-...` (Vancouver WA dup 1) | Vancouver, WA | Delete — keep `37b90644…81ac…` |
+| `37d90644-d524-....` (Vancouver WA dup 2) | Vancouver, WA | Delete |
+| `37d90644-d524-81d0-985a-c73bc8339449` | Tucson Old Vail Road | Delete — keep `37b90644…8109…` |
+| `37d90644-d524-8134-9783-eca223dba0cb` | Irvine | Delete — keep `37b90644…814a…` |
+| `37d90644-d524-81f8-8dbe-e3e07785560f` | Sacramento | Delete — keep `37b90644…8111…` |
+
+**Memberships dupes (delete via UI — keep the one with fullest content):**
+| Dup ID(s) | Name | Keep |
+|---|---|---|
+| 2 extra rows | The Beavers (×3 total) | Keep `37d90644-d524-8118-9bc4-f7a3e08a57b9` |
+| 2 extra rows | AGC (×3 total) | Keep `37d90644-d524-811e-b8fc-fa65bc716c58` |
+| 1 extra row | APWA (×2 total) | Keep `37d90644-d524-81f2-902d-c7ddbe28f8e6` |
+| 1 extra row | Arizona Builders Alliance (×2 total) | Keep `37d90644-d524-8146-abe0-d82ef36fe939` |
+
+**Projects dup:**
+- I-10 $87M (`37b90644-d524-8102-85cd-efb13a29614c`) vs TxDOT I-10 $120M (`37d90644-d524-81a5-af38-c58e478f03a3`) — same source URL, same award, different values. $87M record richer; $120M record very thin. Review and merge/delete via UI.
+
+**Orphan page:** `37d90644-d524-810e-9a9c-fc8149ba1b6e` (blank-titled Concrete Division standalone, not in DB)
+
+### Checks performed (3a–3e)
+- **3a Interconnection:** Company ↔ Divisions (9) ✓ · Divisions → Company (9) ✓ · Divisions → People (7 of 9 — PoweR has 0, Concrete has 1; both sourceless) ✓ · Divisions → Projects (7 of 9 linked; Concrete has 0 projects — sourceless per dossier) ✓ · Events → Company (3, all Sundt-linked) ✓ · Memberships → Company (8 unique, all SET) ✓ · Locations → Company (all originals SET) ✓ · Location originals → Division: 12/15 SET; Tempe HQ, Phoenix Ops, Phoenix Training = corporate, no division → genuinely sourceless ✓.
+- **3b Description depth:** All 9 division bodies rich (Advanced Facilities, Building Group, Mining, PoweR, Heavy Industrial, Renewables, Transportation, Water, Concrete) ✓. Events have sourced bodies ✓. Memberships have sourced bodies ✓. Sample projects have sourced body content ✓ (Nashville body noted thin — scope/metrics missing — but dossier has no more detail; genuinely sourceless).
+- **3c Address/location:** Company Address place filled (`place:Address`, lat/lng set) ✓. All 15 original Location rows have Adress text filled ✓. Austin TX new location has body + Division + Companies SET ✓. Division `Adress` (place type) empty on all 9 — requires lat/lng; dossier has none; no-geocoding rule → genuinely sourceless. Project `Adress` (place type) empty on all sampled projects — same rule.
+- **3d Membership completeness:** 8 unique memberships present (DBIA, AGC, APWA, AzBA, The Beavers, ESOP Association, USGBC, ENR Top 400). Dossier names only DBIA. All others are post-dossier enrichment — valid. Dossier fully covered ✓.
+- **3e Location tags:** AGC Safety Award = "Arizona" ✓. DBIA Milestone — no date/venue in dossier; sourceless ✓. Renewables Launch — date SET (2020-12-07) ✓; location tag empty — no specific venue in dossier; sourceless ✓.
+
+### No new fillable gaps found from dossier
+- All dossier-sourced data correctly recorded across company, divisions, projects, events, memberships, locations.
+- Nashville CONRAC body thin (scope/metrics) — dossier has no additional detail; genuinely sourceless.
+- PoweR division People — no leader named in dossier; genuinely sourceless.
+- Concrete division Projects — no specific projects in dossier; genuinely sourceless.
+- DBIA event date — no date in dossier; genuinely sourceless.
+- Division/project place fields — no lat/lng in dossier; no-geocoding rule.
+- **Result: 0 writes this pass. Record complete per dossier. Dup/orphan cleanup escalated (see below).**
+
+### Manual UI steps outstanding (updated 06-13 sixth pass)
+1. **Locations dup cleanup** — delete 11+ dup rows (see table above); Austin TX is net-new unique, keep it.
+2. **Memberships dup cleanup** — delete 6 dup rows (see table above); 8 unique memberships correct.
+3. **Orphan Concrete page** — delete `37d90644-d524-810e-9a9c-fc8149ba1b6e` via UI.
+4. **I-10 dup review** — $87M vs $120M: same press release, same award; recommend keeping $87M record (richer) and deleting $120M record, or merging the $120M figure into the $87M body.
+5. Projects Underway view → clear `__TEMPLATE__` filter, set Contractors = Sundt.
+6. Existing Software view → clear `__TEMPLATE__` filter.
+7. Construction Projects Location → add Idaho, Oregon options for Northwest projects.

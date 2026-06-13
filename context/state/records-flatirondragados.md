@@ -84,8 +84,48 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (fifth pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md`. (Flat2.md no longer on disk — was a session-temp file; contents from prior audit pass recorded in ledger.) Two fillable gaps found and filled.
+
+### Filled in audit
+- **Pulice — Houston, TX** location row `37c90644-d524-819c-ab83-e11cb56399f5` — body filled with division, office type, address, phone, focus. Source: [pulice.com](https://www.pulice.com/en/privacy-policy).
+- **Pulice — Irving, TX** location row `37c90644-d524-81f2-b1f1-c6c5882d6a39` — body filled with division, office type, address, phone, focus. Source: [pulice.com](https://www.pulice.com/en/privacy-policy).
+
+### What was verified as already complete
+- Company record: all fields filled (Description, Size "Mutlinational", Website, LinkedIn, Address place, BW Category, Country, People 716, Construction Projects 37, Companies Software 8) ✓
+- Profile page body: Company Snapshot filled ✓
+- All 7 real divisions: Address, Companies, People (except J.F. White — no named leader), Projects — all populated ✓
+- DBIA Conference & Expo 2025 event: confirmed present (`37b90644-8141-bf5e`), fully populated (Place, date, Location tags, Companies) ✓
+- Groundbreaking Women 2026 event: Place + Location tags + Companies ✓
+- IPI 2022, IAI Summit 2025, CI Student Days 2025 events: Place/Location tags EMPTY but source says "not disclosed" — genuinely sourceless ✓
+- All 10 memberships present with Companies relation; AGC, DBIA, IPI, Beavers, CA Alliance for Jobs, Hispanic Contractors CO, NECA Boston, AGC San Diego, Carolinas AGC, CCIB ✓
+- 15 location rows present; all have Address and Companies filled; duplicates noted below ✓
+
+### Still empty (genuinely sourceless)
+Same as prior passes — EMR/TRIR/DART/OSHA records · bonding/surety · per-division revenue/headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets · People Email/Phone/LinkedIn · Project Adress place property · J.F. White division People relation (no named leader in any dossier) · IPI 2022/IAI 2025/CI Student Days 2025 venue addresses (not publicly sourced).
+
+### ⚠ Duplicate rows for Zack UI cleanup (updated 2026-06-13 pass 5)
+**Memberships (heavy duplication from multiple session batches):**
+- Blank dups: CCIB `37d90644-81fc-9988`, Carolinas AGC `37d90644-819f-ae5c`, AGC San Diego `37d90644-81d1-9049`, AGC of California `37d90644-81e1-ab90`, The Beavers `37d90644-8139-8038`, DBIA `37d90644-815f-9e56`, IPI `37d90644-81c6-9c2f` — delete in UI
+- Non-blank dups (content in both copies): Carolinas AGC ×2, CCIB ×2, AGC San Diego ×2, AGC of California ×3, IPI ×2, DBIA ×2, Hispanic Contractors CO ×2, California Alliance for Jobs ×2, NECA Boston ×2 — consolidate in UI
+- NTEA (National Truck Equipment Association) — present; verify this is intended (not in original dossier; may have been added from a later source)
+
+**Locations:**
+- Montreal QC ×2 (`37d90644-8129-b17b`, `37d90644-81f8-a5a1`) — delete extra in UI
+- Richmond BC ×2 (`37d90644-81cb-bb27`, `37d90644-812d-8f51`) — delete extra in UI
+- Concord CA ×2 (`37d90644-8103-bc00`, `37d90644-815a-8e16`) — delete extra in UI
+- Whitestone NY ×2 (`37d90644-81c8-9460`, `37d90644-8170-bb9f`) — delete extra in UI
+- San Diego CA ×2 (`37d90644-81fe-b45d`, `37d90644-81fb-a3ae`) — delete extra in UI
+
+**Divisions:**
+- FD West LLC dup `37d90644-8104-ba55` (older emoji-icon copy) — delete in UI
+- FD Constructors Mid-Atlantic dup `37d90644-8101-8214` (older emoji-icon copy) — delete in UI
+
+**Projects (Flat2.md batch from 2026-06-12 10:54/10:59):** Many net-new projects created in prior sessions exist as duplicate pairs; recommend UI cleanup.
+
+---
+
 ## Audit — 2026-06-13 (fourth pass)
-**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. One fillable gap found and resolved.
 
 ### Filled in audit
 - **Gordie Howe International Bridge** `Location` — added "Michigan" tag (bridge crosses Windsor ON → Detroit MI; Michigan was a valid schema option, only Ontario was set). Source: Flat.md + Flatiron1.md. ID: `37b90644-d524-81c7-87ad-c45249cf21d1`.

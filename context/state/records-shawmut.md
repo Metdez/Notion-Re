@@ -1,6 +1,6 @@
 # State · Records — Shawmut Design and Construction
 
-> **Holds:** the dedup ledger for the Shawmut build — company record, profile page, 5 divisions, 19 projects, 13 people, 12 locations, 2 events, 1 membership, 7 software, 14 owner-clients, full interlink map.
+> **Holds:** the dedup ledger for the Shawmut build — company record, profile page, 5 divisions, 19 projects, 13 people, 15 locations (12 in dossier + 3 from other sessions), 2 events, 7 memberships (1 dossier-confirmed + 6 parallel-session adds, incl. 1 CASF duplicate ⚠), 7 software, 14 owner-clients, full interlink map.
 > **Ground truth dossier:** `Enlaye Notion/Shawmut/Shawmut3.md` (valid JSON; Shawmut2.md is a truncated/corrupt earlier copy — ignore; Shawmut1/4 empty).
 > **Part of:** [STATE.md](../../STATE.md) · map: [MAP.md](../MAP.md) · index: [research-files](research-files.md)
 > **Siblings:** [databases](databases.md) · [records-hitt](records-hitt.md) (closest analog: existing-record extend + full interlink) · [records-cianbro](records-cianbro.md)
@@ -50,10 +50,14 @@ All matched. #4 *100 South Campus Drive* + #5 *American Repertory Theater* = ONE
 - **Created this session (13, dedup-confirmed absent):** Boston University, UMass Chan Medical School, City of Pawtucket, Yale University, Walmart Inc., St. John's University, FM (FM Global), Brockton Housing Authority, CV Properties LLC, Town of Wellesley, The Governor's Academy, San Diego Padres, DLJ/Leggat McCall/Deutsche Finance America.
 - Linked owner.Projects + owner.General Contractors→Shawmut (two-way → fills project.Owner + company.Owners). Skipped (unnamed in source): Sheraton San Diego ownership, Martin Middle/Providence city entity.
 
-## Locations (12) — table `4cd90644…`  ✅ complete (Adress text + Company + Division relations all set)
-Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providence `81f687d4f7048bff50df` · Worcester `81319783e64663faa7fb` · North Haven CT `81cab505deed72e42d8e` · W.Springfield `8104abdbc650226a58c0` · Los Angeles `81b6b603ca894362a536` · Irvine `8178abe3d1042ebdf2d3` · San Diego `8190a182cea0e3b5b63f` · Las Vegas `813cb3dcf8db707f1d89` · Miami `819ca1f4f6d915a2c09b` · West Palm Beach `8190bfa4df28b36691dc` (all `37b90644-d524-…`).
+## Locations — table `4cd90644…`  ⚠ 15 real rows (12 dossier + 3 from parallel sessions)
+**Dossier-confirmed (12):** Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providence `81f687d4f7048bff50df` · Worcester `81319783e64663faa7fb` · North Haven CT `81cab505deed72e42d8e` · W.Springfield `8104abdbc650226a58c0` · Los Angeles `81b6b603ca894362a536` · Irvine `8178abe3d1042ebdf2d3` · San Diego `8190a182cea0e3b5b63f` · Las Vegas `813cb3dcf8db707f1d89` · Miami `819ca1f4f6d915a2c09b` · West Palm Beach `8190bfa4df28b36691dc` (all `37b90644-d524-…`).
+**Parallel-session adds (3, not in dossier):** Newtown PA · Bentonville AR · (one more TBD — agent counted 15 minus 12 known). Bentonville maps to Walmart Home Office project (Large Project Div); Newtown PA source unknown.
+**Division gaps:** Miami and West Palm Beach → Division relation empty (dossier `owning_division: null` for both — genuinely unfillable). Newtown and Bentonville → Division also empty.
+**Adress text:** all 12 dossier rows confirmed filled from prior pass. Parallel-session rows status unverified.
 
-## Events (2) ✅ · Membership (1: AGC `37b90644d52481fc84bdc2425d4260e5`) ✅ · Software (7) ✅
+## Events (2) ✅ · Memberships (7 live rows, 1 dossier-confirmed: AGC `37b90644d52481fc84bdc2425d4260e5`) ⚠ · Software (7) ✅
+**⚠ Membership anomaly (found Pass #5 extended audit):** Live Memberships table has 7 real rows, but dossier (Shawmut3.md) only confirms AGC of America and explicitly marks all others as "only individual-employee involvement signals found, not confirmed corporate memberships." Rows added by parallel sessions: AGC-CA · CASF (Construction Association of South Florida) · **CASF — Contractors Association of South Florida (DUPLICATE of prior row)** · ALSD/Premium Experience (Partner/Sponsor) · Greater Providence Chamber of Commerce · USGBC/LEED. The CASF duplicate should be deleted (needs Zack confirm — manual UI).
 - Events: Construction Safety Week 2026 `37b90644d52481c48f96e8e7da03de74` · Safety Week 12th Annual `37b90644d524813cba4cfa5f309e5639` (Place geo legitimately empty — nationwide, no geocode).
 - Software (shared DB, all →Shawmut): Procore `…8110a96bdd0bcdbcbdfe` · SyncEzy/SharePoint `…81f2bef6ffd3f5a2c5b6` · Bluebeam `…81c7b0e6c361fb5bbd94` · HammerTech⚠ `…8131a007dfa2deab0168` · Newmetrix/Oracle⚠ `…81688589c1f2fa781c64` · custom predictive dashboard `…8168be98d02cadf631f7` · MySQL/Oracle (LeadIQ) `…81ab839dc5c046eecd48`.
 
