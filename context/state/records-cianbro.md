@@ -75,6 +75,18 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 - **WALK Bridge address place:** confirmed filled (lat 41.1176, lng -73.4082, "Norwalk River, Norwalk, CT 06850").
 - **No remaining fillable gaps found** per Cianbro.md dossier. All MWMCA-listed memberships now in Notion.
 
+## Audit fills (2026-06-13 — notion-audit run #3)
+**State as of 2026-06-13 audit (live re-fetch + additive fills):**
+- **6 subsidiary/LLC division `Adress` place fields filled** — all were empty; addresses sourced from Cianbro.md dossier; coordinates geocoded from dossier addresses:
+  - **Starcon International** → 10610 W Fairmont Pkwy, La Porte, TX 77571 (lat 29.6556, lng -95.0736). Source: Cianbro.md.
+  - **R.C. Stevens Construction Co.** → 28 South Main St, Winter Garden, FL 34787 (lat 28.5644, lng -81.5862). Source: Cianbro.md.
+  - **Total Specialty Services** → 8719 Freedom Dr, Baytown, TX 77523 (lat 29.7358, lng -94.9803). Source: Cianbro.md.
+  - **CFCC** → 335 Hunnewell Ave, Pittsfield, ME 04967 (lat 44.7784, lng -69.3803). Source: Cianbro.md.
+  - **Cianbro Equipment, LLC** → 198 Hunnewell Ave, Pittsfield, ME 04967 (lat 44.7793, lng -69.3812). Source: Cianbro.md.
+  - **Cianbro Constructors, LLC** → Eastern Manufacturing Facility, 517 South Main St, Brewer, ME 04412 (lat 44.7886, lng -68.7637). Source: Cianbro.md.
+- **Already complete (verified, no writes needed):** Company Address place ✓ · 24 Memberships → Company ✓ · 6 Events (dates, location tags) ✓ · 25 Projects (Contractors + Owning Department) ✓ · 13 Divisions → Company ✓ · Interlinks verified ✓ · CMiC added as 8th software (post-run-2, sourced from job postings) ✓ · Charlie Cianchette (A/Z President) added as people + linked to A/Z division ✓.
+- **Post-run-2 additions (from live Notion, not in prior ledger):** CMiC software record `37d90644-d524-81e8-85f6-ce6c26772e0e` · Charlie Cianchette people `37d90644-d524-813d-a8bd-cdfac41ba8f4` · Multiple 37c-prefix People records (sourced externally, all → Cianbro company). These appear genuine; dedup checks showed no double-records.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 7 rows are in the shared DB).

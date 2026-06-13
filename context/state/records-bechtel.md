@@ -113,3 +113,18 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 3. **Company Map / Memberships / Events** views may carry leftover template filters — verify they show the new rows; clear stray filters in UI.
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
+
+## Audit — 2026-06-13 (notion-audit Pass #3 — final convergence)
+
+### Filled
+Nothing. Build fully converged. **0 writes made.**
+
+### Verified complete (all 3a–3e checks pass)
+- **3a Interconnection ✓:** 52 people→company; 25 projects→Contractors; 6 divisions→company+People+Projects; 19 location rows→company+division; 13 events→company; 6 memberships→company; 30 software→company.
+- **3b Description depth ✓:** all 25 project bodies (Port Arthur fatality signal, sourced values/owners/JVs/dates); all 6 division bodies; all 15 people bodies — verified at full dossier depth.
+- **3c Addresses ✓:** company HQ Address place ✓; all 6 division Adress places ✓; all 19 location rows Adress text ✓. Project Adress place = genuinely sourceless (no coords in any dossier; Notion place requires lat/lng).
+- **3d Memberships ✓ — 6/6:** BRT · CII · NEI · ETEBA · CCITNZ · NABTU — all company-linked. Bech3.md confirms no additional memberships.
+- **3e Location tags ✓ — all 13 events georeferenced:** Gastech 2024 [Texas] · Gastech 2025 [Italy] · Gastech 2026 [Thailand] · H2 & Ammonia 2024 [Texas] · NECX 2025 [Georgia] · ETEBA BOTC 2025 [Tennessee] · ETEBA Savannah River 2025 [South Carolina] · NEI Policy Forum 2025 [Washington DC] · NEI Assembly 2024 [Pennsylvania] · NVIDIA GTC 2025 [Washington DC] · ENR LA Forum [California] · LACMTA C-Line [California] · Gastech 2025 [Italy]. All Place coords + Companies relation confirmed.
+
+### Left empty (genuinely sourceless — unchanged from prior audits)
+21 of 25 project `Contrat Value in Million` (undisclosed); project `Adress` place fields (city-level only, no lat/lng); division revenue/headcount (not published); firm TRIR/EMR/DART (not published); London street address; distinct parent UEI/CAGE (conflicting across dossiers — flagged for manual SAM.gov verification).

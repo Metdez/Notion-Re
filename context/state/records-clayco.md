@@ -170,3 +170,31 @@
 **Event dates — genuinely sourceless:** SelectUSA 2026, Clayco Rising 2025, AGC Convention 2026 — no specific dates in any dossier (Clayco3 explicitly notes dates not stated). Left blank (correct).
 
 **Leftovers still blank (no source):** project contract values (15 of 32 projects) · precise project dates (most) · Size=Regional conflict unresolved · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty (no division assignment in source) · Clayco Self-Perform Group division has no Projects linked (source lists none).
+
+---
+
+## Fifth pass — 2026-06-13 (notion-audit full pass — all checks re-verified)
+> Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Completed the cross-reference from the context-window carry-over.
+
+**Software audit completed — all 6 rows confirmed linked to Clayco Companies DB record (`19990644`):**
+| Row | ID | Software used tags |
+|---|---|---|
+| DESTINI Estimator + Power BI | `37b90644-d524-812b-99dd` | DESTINI Estimator, Power BI |
+| 4D BIM / VDC + Drone Reality Capture | `37b90644-d524-815b-b57e` | (methodology row — no tag) |
+| AWS · MongoDB · Splunk · Juniper Square | `37b90644-d524-8168-ab06` | (infra stack — no tag) |
+| Autodesk BIM 360 / ACC | `37a90644-d524-818a-8603` | Autodesk, **Autodesk Navisworks**, **Autodesk Revit** (tags added this pass) |
+| Procore / PMWeb / Primavera P6 | `37c90644-d524-811a-82f0` | Procore, Primavera P6 |
+| Bluebeam (Clayco design/field) | `37c90644-d524-8126-aac9` | Bluebeam |
+
+**Fill executed (1 item):**
+| Record | Field | Value written | Source |
+|---|---|---|---|
+| Autodesk BIM 360 / ACC `37a90644-d524-818a` | `Software used` | +Autodesk Navisworks, +Autodesk Revit | https://www.linkedin.com/posts/clayco_how-clayco-inc-made-the-switch-to-autodesk-activity-7270497835991592961-5aLI |
+
+**NAIOP Chicago membership** `37b90644-d524-8154-b408-e38648168f31` — confirmed alive (earlier 404 was a transient MCP fetch error, not a missing record). Body + Companies link intact.
+
+**Hankook Tire project** `37b90644-d524-817d-ab41` — already has `Contrat Value in Million: 1600` (filled prior session). No action needed.
+
+**3a–3e all ✓.** 5/5 memberships · 6/6 events · 19/19 divisions · 32/32 projects · 6/6 software → company. All 7 people → Company. No edge gaps.
+
+**Still genuinely sourceless (no write):** project contract values (15/32) · precise project dates · Size=Regional conflict unresolved · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group has no Projects linked.

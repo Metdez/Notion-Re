@@ -169,3 +169,24 @@ Sources: https://www.kiewit.com/locations/
 - 3e: EPC Show 2026 → Texas ✓; AGC Convention → Florida+Orlando ✓; national events correctly untagged ✓
 
 **Manual UI for Zack:** delete 8 "DUPLICATE —" rows in Memberships + Events inline tables.
+
+---
+
+## Audit pass — 2026-06-13
+
+**Live verification (MCP fetch of all key records):** All records confirmed intact and correctly linked. No new fills needed — record is at full dossier depth.
+
+**3a–3e re-verified ✓ (all clean):**
+- 3a: Company record ✓ (People 715 linked, 39 projects, 8 software, Divisions filter view active); all 17 divisions → Kiewit ✓; Kiewit Infrastructure Co. fetched + verified (People: Dave Miles, Projects: Key Bridge + 5 more, Adress place ✓); Memberships table Companies full database → Kiewit on all rows (DBIA verified live ✓); Locations Division + Companies relations ✓
+- 3b: Project bodies at full depth (Key Bridge + Homer City fetched live — both complete with owner/delivery/scope/value/risk events/sources) ✓; Division bodies verified (Kiewit Infrastructure Co. full ✓); People bodies verified (Lanoha + Miles both have Role sections + sources) ✓
+- 3c: Company HQ place ✓; all 17 division Adress place ✓; project Adress place verified (Key Bridge: Baltimore MD 39.2186/-76.5282 ✓; Homer City: Indiana County PA 40.564/-79.0803 ✓); Locations `Adress` = TEXT type (structural limit, not fixable without schema change — flagged in prior audit)
+- 3d: 8 memberships in live table (The Beavers, AGC, DBIA, CSRA, CISI, NCSE, CCSC, ASCE); all match dossier + are company-linked ✓; 6 DUPLICATE— rows still pending Zack UI deletion
+- 3e: EPC Show 2026 → Texas ✓; AGC Convention → Florida+Orlando ✓; national/virtual events correctly untagged ✓; FWIK Summit + Engineering Technical Summit untagged (correct — no specific location in source)
+
+**False positives rejected:**
+- Company `Founded`, `Revenue`, `Employees`, `ENR rank` — these are NOT properties in the Companies DB schema; they exist only in the Description and page body. No schema mismatch — correct as-is.
+- People `LinkedIn` (Lanoha, Miles) — empty; dossier does not contain LinkedIn URLs for either individual → genuinely sourceless, leave blank.
+- Project `Owning Department` — DB convention leaves this empty (per original load); no change needed.
+- Homer City project ledger ID `81a083b6` was a truncation artifact — correct full ID is `37b90644-d524-81a0-83b6-cfeacdc72ac5` (confirmed via search + fetch).
+
+**0 writes made.** Record is complete and clean at dossier depth. Only outstanding item is Zack's manual UI deletion of the 8 DUPLICATE— rows.

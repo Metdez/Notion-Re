@@ -83,3 +83,11 @@ Verified: all 21 projects have Contractors→Fontaine + Owning Department set (S
 2. **Memberships "View of People"** tab — re-point leftover company filter to Fontaine Bros. Inc.
 3. Template guide/starter rows in Company Map/Events/Sources/Locations/Memberships may still show — delete in UI if unwanted.
 4. Consider renaming the page from "Fontaine Bros TEMPLATE" to "Fontaine Bros." once reviewed.
+
+**✅ Audited 2026-06-13 (scope: full profile — company, 21 projects, 8+ people, 2 divisions, Events/Locations/Memberships/Sources — notion-audit skill, third pass, Fon2.md cross-check):** New dossier `Enlaye Notion/Fontaine Bros/Fon2.md` (run_date 2026-06-12, 2146 lines) discovered — not previously registered in this ledger. Cross-checked all prior records vs Fon2.md. 2 fillable gaps found and filled:
+1. **Sources table** +1 row: `37e90644-d524-81b5-9271-cff0d8131b71` — "iBerkshires — North Adams holds groundbreaking for new $65M Greylock School (April 2026, story 82489)". Source: `https://www.iberkshires.com/story/82489/North-Adams-Holds-Groundbreaking-for-New-65M-Greylock-School-.html`
+2. **Sources table** +1 row: `37e90644-d524-8127-bbd0-d05a94460000` — "Vertex Companies (OPM) case study — Walpole Bird Middle School; confirms Fontaine as GC, LEED Gold/Net-Zero Ready, opened Oct 2024". Source: `https://vertexeng.com/projects/walpole-bird-middle-school/`
+- **Concurrent-session confirms (no write):** Jason Boudreau (Project Executive/VP CM Services, joined 2024) + Mark Fulton (Senior Superintendent) — both present in People DB (added by concurrent session 2026-06-12); bodies and Company relations confirmed complete.
+- **Conflict HELD:** Walpole $120M (Fon2.md construction budget) vs $115.77M (Notion — from Patch, a precise government source). Existing Notion value retained; conflict noted in body.
+- **New leadership from Fon2.md:** Tyler Langan (Senior Marketing & BD Coordinator) — not in People DB; low priority for Enlaye B2B context (no ICP signal), left blank per dossier gap / sourcing threshold.
+- **Sources table now ~37 rows** (was ~35; +2 this pass). All 21 projects, 8+ people, 2 divisions, 3 events, 2 locations, 2 memberships re-verified clean vs Fon2.md. Remaining blanks all dossier-gap or deliberate.

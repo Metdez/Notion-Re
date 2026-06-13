@@ -79,6 +79,15 @@ Both verdicts COMPLETE on field values — 0 value fills. Interlink pass applied
 **New data in OD.md (second research pass, NOT yet loaded at time of round 3):**
 - 13 additional projects, 7 new named leaders, 4 new Mason location rows — flagged for /notion-load pass.
 
+## Audit round 5 (2026-06-13, /notion-audit — OG1.md + OD.md full re-verify)
+**0 fills** — all records verified live against Notion; no fillable gaps against either dossier.
+
+**New flag:** OD.md gives Bridgeport Mason address as "325 Hancock Ave" (mason.ogind.com — more authoritative); existing row uses "240 Bostwick Ave" (OG1.md/BBB). This is a **correction** not an additive fill — flagged for Zack. Not changed this pass.
+
+**Outstanding (same as round 4):** Size=Local vs Regional conflict · 3 dup membership pairs (37d-prefix) · LinkedIn import People dupes · 3 view TEMPLATE filters.
+
+---
+
 ## Audit round 4 (2026-06-12, /notion-audit — OD.md data check)
 **0 fills** — OD.md data was fully loaded by an intervening session (between round 3 and round 4). All records verified live.
 

@@ -100,3 +100,14 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Projects (12): Location tags, place/address, Contractors relation, body content ✓
 - People (7): Company, Function, Function Qualification, Location=Virginia, body ✓
 - Zero fillable gaps remain. All outstanding items from prior audit resolved or confirmed genuinely sourceless.
+
+## Audit log — 2026-06-13
+**Full re-audit pass completed (no writes needed).** Re-fetched and verified all record categories against dossier Branch1.md:
+- Company record (26890644): all properties populated — Description, Type, Size, BW Category, Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place, People (7+), Construction Projects (12) ✓
+- Divisions (4): Branch Civil, Branch Builds, Hopkins Lacy, Young & McQueen — all have company relation, people, projects (where applicable), address place, and full body content ✓
+- Projects (12): all have Contractors→company, Location tag, Adress place, Date, Status, Type, body brief, source URL ✓
+- People (7): Bob Wills, Jason Hoyle, Brian Quinlan, Colin Robinson, Berton Austin, Wilber Chen, John Anglin — all have Company, Function, Function Qualification, Location=Virginia, body ✓
+- Events (2): DBIA Award → Location=North Carolina ✓; Golf Tournament → Location=Virginia ✓; both → company ✓; Place property genuinely sourceless (no venue address in dossier)
+- Memberships (4): ABC, AGC, DBIA, VTCA — all have company relation + URL + body ✓
+- Locations (7): HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville — all have Adress text + company relation + Division (HQ has no Division — expected) ✓
+- Zero fillable gaps found. No writes required. All records match dossier sourced data.

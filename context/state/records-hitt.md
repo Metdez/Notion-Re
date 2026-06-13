@@ -109,8 +109,16 @@ Full re-audit of all HITT records: company, 18 divisions, 11 projects, 9 members
 - **Verified genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags (dossier: National/nationwide); Size="Regional" vs. "Mutlinational" conflict (non-destructive rule).
 - **No false positives identified.**
 
+## Post-load audit #5 (2026-06-13, /notion-audit solo agent vs HITT1.md)
+Full re-audit of all HITT records: company record, 18 divisions, 11 projects, 9 memberships, 5 events, 16 locations, all people.
+- **0 fills needed** — all records verified clean against HITT1.md ground truth. Nothing fillable was missed.
+- **Previously deferred Country options now confirmed present:** North Carolina, South Carolina, New Mexico all live in Company record Country field — resolved without action.
+- **Notable post-dossier enrichments in live records (not from HITT1.md; no action):** Company body has Americon acquisition (2016), Glenstone litigation/settlement detail, St. Paul/Travelers insurance carrier, ENR #8 (2026 rank). Division bodies enriched with leader names, scale/headcount, founded dates. Houston division now has 2 People links (Paul Zimmerman, Todd Hudson) added post-load. Dallas and LA bodies note office relocations.
+- **Mike Smith (person `37c90644…f7a320…`) verified correctly linked to BOTH Richmond and Fort Lauderdale** — accurate, he leads both offices.
+- **Verified genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Construction Safety Week / Subcontractor Day location tags (dossier: National/nationwide); Size="Regional" vs. "Mutlinational" conflict (non-destructive rule).
+- **No false positives identified.**
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = HITT.
 2. **Existing Software** view → clear `__TEMPLATE__` filter.
 3. **Memberships-note People view** → re-point hardcoded company filter to HITT.
-4. **Company Country** → add options: North Carolina, New Mexico, South Carolina (cannot do via MCP on shared schema).

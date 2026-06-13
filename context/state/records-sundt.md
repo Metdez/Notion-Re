@@ -139,3 +139,33 @@ Full re-fetch: company record, all linked tables (Divisions, Events, Memberships
 4. Existing Software view → clear `__TEMPLATE__` filter.
 5. Country → Utah, New Mexico, North Carolina now present ✓ (resolved).
 6. Construction Projects Location multi-select → add Idaho, Oregon options for new Northwest projects.
+
+## Audit — 2026-06-13 (fourth pass — /notion-audit Sundt)
+Full re-fetch: company record (schema + body), all 9 divisions, 4 memberships, 3 events, 15 locations schema, sample projects (SLC Water, APS Four Corners, Hermosa Mine). Companies DB schema confirmed (no Ownership/Founded/Revenue/Employees/ENR Rank properties — those fields don't exist in the schema; correctly in body only).
+
+### New since 06-12
+- **Company record Address (place)** — now filled: `place:Address:name=Sundt Construction HQ`, address=2620 S 55th St Tempe AZ 85282, lat=33.3979, lng=-111.9662. Previously flagged as outstanding; resolved by an intervening session. ✓
+- **People count** — 835 people relations on company record (was ~18 dossier-sourced + 15 pre-existing; bulk growth reflects ongoing workspace enrichment from Apollo/LinkedIn imports).
+
+### Checks performed (3a–3e)
+- **3a Interconnection:** Company ↔ Divisions (9) ✓ · Divisions → Company (9) ✓ · Divisions → People ✓ · Divisions → Projects ✓ (where linked) · Events → Company (3) ✓ · Memberships → Company (4) ✓ · Locations → Company ✓. PoweR division has no People — dossier names no PoweR leader; genuinely sourceless.
+- **3b Description depth:** All 9 division bodies confirmed rich with focus/leader/footprint/portfolio. Events have sourced bodies. Memberships have sourced bodies.
+- **3c Address/location:** Company Address place = filled ✓. Division `Adress` (place type) = still empty; requires lat/lng; dossier has none; no-geocoding rule applies → genuinely sourceless. Location rows have Address text filled ✓.
+- **3d Membership completeness:** 4 memberships present: DBIA ✓ · AGC ✓ · APWA ✓ · Arizona Builders Alliance ✓. Dossier names no additional memberships beyond these 4. Complete.
+- **3e Location tags:** AGC Safety Award has Location tag "Arizona" ✓. DBIA Milestone has no date and no location tag — dossier gives no event date or location for the milestone; genuinely sourceless. Sundt Renewables Launch has no Location tag — event occurred Dec 2020, no specific venue in dossier; genuinely sourceless.
+
+### No new fillable gaps found
+- Companies DB schema has no Ownership/Founded/Revenue/Employees/ENR Rank properties — these don't exist; body-only is correct.
+- DBIA event date null — sourceless (no date in dossier).
+- Renewables Launch location tag — sourceless (no venue in dossier).
+- Division place (Adress) — no coords, no-geocoding rule.
+- PoweR division People — no leader named in dossier.
+- Concrete division Projects — cross-company support group; no specific projects attributed in dossier.
+- **Result: 0 writes this pass. Record complete per dossier. Dup/orphan cleanup (~8 records) still requires manual UI action.**
+
+### Manual UI steps outstanding (cumulative — unchanged from 06-12)
+1. **Dup cleanup** — delete 2 Tempe HQ, 2 Phoenix Ops, 2 AGC, 1 AzBA, 1 APWA membership dups; orphan Concrete page (`37d90644-d524-810e-9a9c-fc8149ba1b6e`).
+2. **I-10 dup review** — $87M vs $120M same or different project.
+3. Projects Underway view → clear `__TEMPLATE__` filter.
+4. Existing Software view → clear `__TEMPLATE__` filter.
+5. Construction Projects Location → add Idaho, Oregon options for Northwest projects.

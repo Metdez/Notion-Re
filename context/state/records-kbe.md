@@ -107,6 +107,28 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 - **"Bridgeport" stray division row** `37690644-d524-8010` — satellite office stub, not a real division; linked to company and holds Mozaic-Stamford project. Pre-existing; left as-is.
 - **3 trashed/mislabeled Mid-Atlantic rows** under "TEMPLATE — old data (safe to delete)" `37a90644-d524-818c` — left as-is per non-destructive rules.
 
+## Audit pass #8 (2026-06-13 — notion-audit skill, KBE.md + KBE2.md re-audit)
+
+**Ground truth:** `KBE.md` (primary) + `KBE2.md` (for federal project Size fields).
+
+### 2 fills (both verified live as empty before writing)
+| Project | ID | Field | Value written | Source |
+|---|---|---|---|---|
+| Naval Submarine Base Commissary (Groton) | 37d90644-d524-81d1-8ff6-cdd252308cfe | `Size` | "56,847 SF new commissary at Naval Submarine Base New London" | kbebuilding.com/portfolio-cat/government/ |
+| Armed Forces Reserve Center (Middletown, CT) | 37d90644-d524-81a6-94e7-e8dba20bb68b | `Size` | "164,000 SF training facility + 36,000 SF maintenance facility; classrooms, SIPRNET center, weapons simulator, vault" | kbebuilding.com/portfolio-cat/government/ |
+
+### Full 3a–3e verified clean
+- 3a Interconnection ✓: company→45 projects; 3 divisions→company+People+Projects+Adress; 11 memberships→KBE; 9 events→KBE; 4 software→KBE.
+- 3b Description depth ✓: all division bodies and project bodies at full sourced depth.
+- 3c Addresses ✓: company HQ place, 3 division Adress places, sampled project Adress places all set. Locations DB intentionally empty.
+- 3d Memberships ✓ — 11/11: ABC-CT · ABC Metro Washington · ABC Baltimore/Chesapeake · Arizona Builders Alliance · CBC · Stamford Chamber · Greater Norwalk Chamber · WESTMARC · National Builders Alliance · AGC-CT/CCIA · Retail Contractors Association. All company-linked.
+- 3e Location tags ✓: 9 events — all have Connecticut tag (or no location tag needed for sourceless venues).
+
+### Confirmed genuinely sourceless (no write)
+DUNS/EIN/state entity IDs · EMR/TRIR/DART · surety provider · insurance carriers · division-level revenue/headcount · FPDS PIIDs · Golf Tournament + CBC Awards + Special Olympics venue addresses · DBIA/USGBC/AGC national memberships.
+
+---
+
 ## Left empty (no sourced value in dossier — per gaps list)
 DUNS · EIN · CT/MD state entity IDs · numeric EMR/TRIR/DART · surety provider · insurance carriers · division-level revenue/headcount · FPDS PIIDs/obligation amounts · MBE/WBE/8(a) certs (none — merit-shop).
 Event `place:Place` on Golf Tournament + CBC events — dossier gives only "Connecticut" (no venue address).

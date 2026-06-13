@@ -84,6 +84,51 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-13 (third pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md` (newly discovered comprehensive dossier, 6,127 lines, run date 2026-06-12). Most significant finding: Memberships table had only 4 real content rows vs 7+ required — 6 missing memberships created.
+
+### Filled in audit
+- **AGC of California** `37e90644-d524-8191-b6ca-e32d20ac39ac` — new Membership row; body: Statewide trade association focused on advocacy and workforce; Companies→FD; source: https://www.agc-ca.org/about/member-directory/
+- **DBIA** `37e90644-d524-81e6-944e-d21bcc8f2ffb` — new Membership row; body: National design-build advocacy body; Companies→FD; source: https://www.dbia.org/membership/member-directory/
+- **IPI (International Parking & Mobility Institute)** `37e90644-d524-810e-a0ce-c2678dd14c7d` — new Membership row; body: Global parking/mobility professional association; Companies→FD; source: https://www.parking.org/member-directory/
+- **California Alliance for Jobs** `37e90644-d524-8130-8ba6-ef9e1ecb071e` — new Membership row; body: Coalition advocating for CA infrastructure investment; Companies→FD; source: https://www.caallianceforjobs.org/members/
+- **Hispanic Contractors of Colorado** `37e90644-d524-8170-b283-cfde6912ade0` — new Membership row; body: Trade association for Hispanic contractors in Colorado; Companies→FD; source: https://www.hccolorado.org/members
+- **NECA Boston** `37e90644-d524-81b8-853c-ec2feae9faf3` — new Membership row; body: National Electrical Contractors Association, Boston chapter; Companies→FD; source: https://www.necaboston.org/member-directory/
+- **The Beavers body** `37d90644-d524-81b3…` — source URL updated from bare domain `fdcorp.com` → proper anchor: [Source: fdcorp.com leadership](https://www.fdcorp.com/en/our-company/us-leadership)
+- **Hampton Roads Bridge-Tunnel Expansion** — `Date` filled: 2027-02-01 (substantial completion Feb 2027 per dossier). Source: Flat2.md.
+- **Gordie Howe International Bridge** — `Status` set to "Done"; `Date` set to 2026-01-01. Dossier conflict resolved: Flat.md says "opening early 2026" / Flat2.md says "Done / 2025"; ENR confirms ~98% complete late 2025, opened early 2026. Bridge opened Jan 2026 (confirmed by today's date 2026-06-13). Source: Flat2.md + ENR.
+
+### Flat2.md net-new projects dedup result
+11 projects from Flat2.md not in prior dossiers checked against Notion — all confirmed already present (added in prior sessions). LAX SkyLink has no exact name match (closest = LAX APM, a different/earlier project) — **not created** (insufficient sourcing to distinguish from the existing APM row; deferred to Zack review). Flat2.md "Flatiron Dragados West, LLC" + "Flatiron Dragados Constructors, Inc. (Mid-Atlantic/Southeast)" confirmed as duplicate division rows in Company Map — **not created** (dedup rule).
+
+### Memberships — full list now in Notion (10 rows)
+AGC San Diego · Carolinas AGC (CAGC) · The Beavers · CCIB · AGC of California · DBIA · IPI · California Alliance for Jobs · Hispanic Contractors of Colorado · NECA Boston. (Plus any pre-existing rows pre-dating this ledger.)
+
+### Location tags (confirmed all resolved)
+All 21 projects confirmed tagged (prior sessions resolved the shared-schema clobber; all 7 previously-untagged projects now have Location tags — Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM all confirmed ✓).
+
+### ⚠ Duplicate rows — Zack UI cleanup (updated 2026-06-13)
+- **7 blank Memberships rows** from 2026-06-12 ~20:20: `37d90644-815f` (DBIA dup), `37d90644-81e1` (AGC CA dup), `37d90644-8139` (Beavers dup), `37d90644-81c6` (IPI dup), `37d90644-8182` (CA Alliance dup), `37d90644-819f` (Carolinas AGC dup), `37d90644-81fc` (CCIB dup) — delete in UI
+- **2 duplicate division rows**: FD West LLC + Mid-Atlantic/SE — delete in UI
+- **4+ duplicate location rows**: Concord CA ×2, Montreal QC ×2, Richmond BC ×2, San Diego CA ×2 — delete extras in UI
+
+### Still empty (genuinely sourceless)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance carriers/wrap-ups · per-division revenue & headcount · exact firm employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property (no per-project street addresses in source). **J.F. White division** People relation: no named leader in any dossier. LAX SkyLink deferred (insufficient to distinguish from existing APM row).
+
+## Manual UI steps for Zack (updated 2026-06-13)
+1. **Delete 7 blank duplicate Memberships rows** from 2026-06-12 ~20:20 (IDs above).
+2. **Delete 2 duplicate division rows** (FD West LLC + Mid-Atlantic/SE) from Company Map.
+3. **Delete 4+ duplicate location rows** (Concord CA ×2, Montreal QC ×2, Richmond BC ×2, San Diego CA ×2).
+4. **Projects Underway** view on profile page — still filtered `Name="__TEMPLATE__"`; set Contractors = FlatironDragados.
+5. **Existing Software** view — same `__TEMPLATE__` filter; shared DB has no relation filter via MCP.
+6. **Memberships "View of People" tab** — repoint/clear leftover company filter.
+7. **Restore the clobbered Projects `Location` option list** (was reset to FL+SC) — cross-company impact; decide approach.
+8. Section guide italics + any template starter rows in Company Map/Events/Sources/Locations/Memberships → delete in UI if unwanted.
+9. **Fix "Mutlinational" typo** → "Multinational" in company record `Size` field.
+10. **LAX SkyLink** — confirm if this is the same project as LAX APM or a net-new project; if net-new, add from Flat2.md.
+
+---
+
 ## Audit — 2026-06-12 (second pass)
 **Status: ✅ audit complete (read-only review; no new writes needed — all fillable gaps resolved by prior sessions).** Verified full record graph vs Flat.md + Flatiron1.md.
 

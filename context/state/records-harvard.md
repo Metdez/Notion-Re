@@ -120,3 +120,23 @@ Harvard owner `Departments` rollup = 16 companies; `General Contractors` unchang
 **3b check:** All project bodies complete; no thin bodies where source has more detail.
 **3d memberships:** N/A — no memberships table on Harvard Owner record.
 **3e location tags:** All project `Location: ["Massachusetts"]` populated. ✓
+
+## Audit log — 2026-06-13
+**Fill:**
+- Campus Steam Tunnel 29/30 `userDefined:URL` was blank → filled with `https://construction.harvard.edu/current-projects/allston-development/blackstone-steam-plant-storm-hardening-project/engineering-facilities/29-30-tunnel-project/` (sourced from dossier 1).
+
+**No fills (genuinely sourceless or already filled):**
+- All project `place:Adress` fields populated; Steam Tunnel 29/30 and NASDEP have no street address in either dossier (confirmed sourceless across two audit passes).
+- Barker Center status: dossier says "scheduled to complete by June 2026" (not confirmed complete) — left as "In progress."
+- 12 Palmer Street status: end date Apr 2026 passed but dossier does not confirm actual completion — left as "In progress."
+- WJH Plaza status: end date Jun 30, 2026; dossier says "Spring/Summer 2026" — consistent; no confirmed completion.
+- ART end date: dossier 2 aligns with 2026-10-31 for housing; ART theater body note says "expected 2027" — ambiguous, not touched (prior audit flag stands).
+- Lewis International Law Center: no start/end dates or contract value in any dossier — confirmed sourceless.
+- All department LinkedIn/Website fields: no data in either dossier.
+- All people LinkedIn fields: no new URLs found beyond what was already filled.
+- Pritzker Hall design architect (Grafton Architects) and PM (Amy Finlayson) from dossier 2 are both marked [LOW CONFIDENCE] — not filled per sourced-data-only rule.
+
+**3a check:** All relation edges intact. HBS→Chase/McCulloch/Dillon, FAS→4 projects, HUPAD→2, Harvard Capital Projects→2, HMS→Bertarelli, SEAS→ESL, Harvard Engineering & Utilities→Tunnel 29/30+NASDEP, HALC→ERC+NASDEP. No missing edges.
+**3b check:** All project bodies complete and accurate per dossier.
+**3d memberships:** N/A.
+**3e location tags:** All projects tagged `["Massachusetts"]`. ✓

@@ -68,6 +68,17 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 - Employees ~1,200 (LeadIQ) vs ~1,500 (older snapshot) — both kept.
 - Gaps the dossier itself flags (EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, litigation, exact 2024 revenue, most office street addresses) — **do not fill** (no source).
 
+## Audit log — 2026-06-13 (Pass #3)
+**Full audit run (3a–3e).** Checked: company record, 5 divisions, 2 events, 1 membership, 12 locations, profile page body.
+**Result: 0 fills executed.** Record is complete relative to Shawmut3.md dossier. All 2026-06-12 enrichment (First Finish acquisition, NACD Board of Year, ENR #61, full revenue trend) confirmed present in Notion body.
+**3a interconnection check:** all 5 divisions → Companies full database relation set ✅. Large Project Division People = empty (no named VP in dossier → genuinely unfillable). Mission Critical → Joel Nickel linked ✅.
+**3b description-depth:** New England and Large Project division bodies confirmed complete with focus/leadership/footprint/sectors/projects. Mission Critical confirmed lean but correct (new division, 0 projects).
+**3c address check:** Company Address place filled (560 Harrison Ave) ✅. Location rows use text Adress field (schema design) — all confirmed filled from prior session. Events Place legitimately empty (nationwide) ✅.
+**3d membership check:** AGC of America only — complete ✅.
+**3e location tags:** Safety Week 2026 [MA, Boston, RI, Providence, NY, CA, NV, FL, National] ✅. 12th Annual [Boston, MA, National] ✅.
+**1 deferred (held from prior pass):** `Country` missing **Nevada** — option still not in shared Companies DB multi-select.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, per-office addresses beyond HQ+San Diego, litigation, per-project delivery/architect/dates for most, contract values for 13/19 projects, memberships beyond AGC.
+
 ## Audit log — 2026-06-12 (Pass #2)
 **Full audit run (3a–3e).** Checked: company record, 5 divisions, 13 people, 20 projects, 14 owners, 12 locations, 2 events, 1 membership, 7 software.
 **1 fill executed:**
