@@ -179,6 +179,42 @@ EMR/TRIR/DART numerics · bonding capacity/surety · insurance carriers · divis
 ### Genuinely unfillable (confirmed per Cianbro.md dossier)
 EMR/TRIR/DART · bonding capacity/surety · insurance carriers · division revenue/headcount splits · project addresses (most — no lat/lng sourced) · ABC NCC 2024 exact date · AGC Maine Awards exact dates · most People contact details (email/phone/LinkedIn) · per-state license numbers · JV revenue shares.
 
+## Audit fills (2026-06-13 — notion-audit run #8, from Cianbro3.md new dossier)
+**New ground truth:** `Enlaye Notion/Cianbro/Cianbro3.md` (398KB structured JSON, run_date 2026-06-12) — ~65 projects, detailed divisions/locations/people.
+
+### What was filled (5 writes across 4 records)
+- **Ticonic Bridge `userDefined:URL`** → `https://www.cianbro.com/news/connecting-communities-through-the-ticonic-bridge` (was empty). Source: Cianbro3.md.
+- **Ticonic Bridge body** → enriched with phase detail (Phase 1 done by end 2024, Phase 2 started early 2025, completion spring 2027, 600 cu yd concrete Phase 1). Source: Cianbro3.md.
+- **Canopy Hotel `userDefined:URL`** → `https://www.cianbro.com/projectdetail/890` (was empty). Source: Cianbro3.md.
+- **Canopy Hotel body** → enriched with full description (104,551 SF, 135-room, 6-story, rooftop bar overlooking Casco Bay, high-end finishes). Division discrepancy flagged (Cianbro3.md says A/Z, Notion has Infrastructure — not overwritten). Source: Cianbro3.md.
+- **Portland Homeless Services Center `userDefined:URL`** → `https://www.cianbro.com/news/portland-homeless-shelter` (was empty). Source: Cianbro3.md.
+- **Portland HSC body** → added "208-bed" metric. Source: Cianbro3.md.
+- **Veranda Street Bridge `userDefined:URL`** → `https://www.cianbro.com/news/veranda-street-bridge-replacement-earns-build-maine-award` (was empty). Source: Cianbro3.md.
+- **Cianbro profile page Events section** → updated "4 events sourced" to "6 events sourced" with full list + dates.
+
+### Already complete (no writes needed — verified against live Notion)
+- All people from Cianbro3.md (Gary Smith, Aric Dreher, Mark Parsons, Tim Keating, Allyn Brice, Charlie Cianchette etc.) already in Notion ✓
+- All locations from Cianbro3.md (A/Z offices: Groton CT, North Kingstown RI, Hopkinton RI, Marlborough MA, Portsmouth NH, Iselin NJ, Pittsfield ME; Starcon New Lenox IL; Starcon Gonzales LA; all others) already in Notion ✓
+- 24 Memberships → Company ✓ (Cianbro3.md has only ABC + AGC as evidenced memberships — a subset; all already present)
+- 6 Events → Company ✓ (all dates + location tags from prior runs still intact)
+- Company Address place, Description, all division Adress places ✓ (all from prior runs)
+
+### Net-new projects in Cianbro3.md NOT yet in Notion (~40+ projects)
+These are new dossier source data — outside the scope of an audit (audit fills existing records; load creates net-new). Flag for `/notion-load` if Zack wants them added:
+- Bridge Rehab Over Lewes-Rehoboth Canal (Delaware, completed 2021)
+- Blue Hill Falls Bridge Replacement (Maine)
+- Merrimack River Bridge Pier Rehabilitation
+- WEX Global Corporate Headquarters (Portland ME)
+- Bangor Savings Bank Headquarters and Parking Garage
+- Big Level Wind project
+- Many Power & Energy / transmission / substation projects (~20+)
+- Boston-area projects (MGH Ragon Building — Walsh/Turner JV, not Cianbro GC)
+- USASpending federal awards (P-310 DD1 $264.6M, Alex Bay LPOE $223.7M, Dry Dock 4 $120.3M, Tidal Basin seawall $112.8M, etc.)
+
+### Flags / discrepancies (not overwritten)
+- **Ticonic Bridge Status** = "Done" in Notion but Cianbro3.md says "active, completion spring 2027" — Status field not overwritten (additive-only rule; body note added).
+- **Canopy Hotel Owning Department** = Infrastructure in Notion but Cianbro3.md says A/Z Corporation — not overwritten (body note added).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).
