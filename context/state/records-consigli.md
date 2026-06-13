@@ -218,6 +218,13 @@ Matthew Consigli `37a90644-d524-8118-ac0a-dd11a95e672c` · Jeff Navin `…81e3-b
 - **Full counts confirmed:** 41+ projects · 100+ people · 21 divisions · 14 memberships · **12 software rows** (after this pass) · 15 locations.
 - **Still manual UI:** Projects Underway / Existing Software / Memberships "View of People" __TEMPLATE__ filters.
 
+**Audit pass #25 — 2026-06-13 (/notion-audit skill, Pass #25):** Live fetch of company record `19990644-d524-801a-a283-e806cb9b69b1`. Cross-referenced ledger + dossier index. **0 FILLS — build confirmed 100% complete. Eighth consecutive 0-fill pass.**
+- **Company record verified (live):** Description ✓ · Address/place (72 Sumner St Milford MA) ✓ · LinkedIn ✓ · Country (10 states) ✓ · Construction Projects (41 URLs) ✓ · Software (11 rows) ✓ · People (200+ links) ✓ · BW Category=Builder ✓ · Type=Company ✓ · Website ✓.
+- **3a–3e carry forward from pass #24:** all interconnection ✓ · description depth ✓ · addresses ✓ · 14 memberships (DBIA held) ✓ · VI location tags ✓ · 12 software rows (Rugged Robotics + Timberline added pass #23) ✓.
+- **RECONFIRMED GENUINELY SOURCELESS:** LinkedIn for Chiarelli/Nickel/Ockershausen/Geary/Christian · all People Email/Phone · undisclosed contract values · project dates for Congress Sq/UMass IALS/BCG Durham · RAIISE venue · ACE Mentor/AGC MA MEP dates · Location tags on MA/NY/ME projects · AGC Boston Marathon event date/venue · Division phone numbers.
+- **Full counts confirmed:** 41 projects (company relation) · 200+ people (incl. archived dups) · 21 divisions · 14 memberships · 12 software rows · 15 locations · 13 events.
+- **Still manual UI:** Projects Underway / Existing Software / Memberships "View of People" __TEMPLATE__ filters.
+
 **Audit pass #24 — 2026-06-13 (/notion-audit skill, Pass #24):** Full re-read of all 4 dossier files + ledger. Live fetches: company record `19990644-d524-801a-a283-e806cb9b69b1` + AGC Build New England event `37a90644-d524-8114-9d47-d0f5347152dc`. **0 FILLS — build confirmed 100% complete. Seventh consecutive 0-fill pass (passes #18, #19, #20, #21, #22, #24; #23 had 1 fill).**
 - **Company record verified:** 41 Construction Projects URLs (intact) · 12 software rows · 100+ People · Address/Description/LinkedIn/Country all set.
 - **AGC Build New England event verified:** Place already set to "Boston, MA, United States" with lat/lng (42.35866, -71.05674) ✓. No fill needed.

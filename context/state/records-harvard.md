@@ -245,6 +245,10 @@ Live Notion spot-checked: Harvard University owner, ERC Phase A project, Smoot C
 **3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
 **Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
 
+## Audit log — 2026-06-13 (ninth pass / notion-audit skill run)
+**No fills — all records complete.**
+Live Notion spot-checked: Harvard University owner, ERC Phase A, Smoot Construction, Barker Center Roofing. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions verified against dossier. No new fillable gaps found.
+
 ## Audit log — 2026-06-13 (eighth pass / notion-audit skill run)
 **No fills — all records complete.**
 Live Notion spot-checked: Harvard University owner, ERC Phase A, Smoot Construction, J&J Contractors, IC&E, Barker Center Roofing, 12 Palmer Street, Lewis International Law Center. All properties, addresses, dates, GC/department/people relations, URLs, and body descriptions verified against dossier. No new fillable gaps found.
