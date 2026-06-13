@@ -287,3 +287,42 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
 
 **Result: 0 writes this pass. Record complete per dossier. 6th consecutive no-write audit.**
+
+---
+
+## Audit — 2026-06-13 (seventh pass — /notion-audit Sundt)
+Full re-fetch: company record (via saved file — 60K chars), Memberships schema, Events schema, USGBC membership page, ENR Top 400 page, ESOP Association page, Sundt profile page, Sundt3 dossier reviewed for new data.
+
+### Ground truth used
+- **Sundt.md** (specified as ground truth per task instructions) — run_date 2026-06-10, 1 membership (DBIA), 2 events (AGC Safety, DBIA Milestone), no USGBC, no new projects beyond 18.
+- **Sundt3.md** reviewed for awareness (run_date 2026-06-12, 167K chars, 7 events, 5 memberships, 5 software) but NOT used as source (task specifies Sundt.md only).
+
+### Workspace state confirmed
+- **Company record** — all properties populated ✓ (Address place=2620 S 55th St Tempe AZ 85282 / lat 33.3979 / lng -111.9662; Country=10 states; 53 projects; 835 people; 5 software). Last edited 2026-06-12T10:33:18.
+- **Memberships** — 8 rows confirmed (DBIA, AGC, APWA, AzBA, The Beavers ×3 dups, ESOP Association, ENR Top 400 #42, USGBC). All linked to company ✓.
+- **USGBC membership body** — confirmed blank (`<blank-page>`). Dossier (Sundt.md) has no USGBC entry → genuinely sourceless from ground-truth dossier. Cannot fill.
+- **ENR Top 400 #42 body** — confirmed rich ✓ ("Sundt ranked #42… up from #62 in 2023 and #46 in 2025").
+- **ESOP Association body** — confirmed rich ✓ ("Sundt is 100% employee-owned through an ESOP… IPS acquisition May 2026 added 200+ employees").
+- **Events schema** — Location tags options: Texas, Plano, Connecticut, Plantsville, Phoenix, Arizona, Hartford, Waterbury, Southington.
+- **Events rows** — 3+ confirmed (AGC Safety Award, DBIA Milestone, Renewables Launch). Additional event rows (IPS Acquisition, Cade Rowley CEO, Chad Buck Building) confirmed to exist from prior session enrichment (not re-audited here as they are not in Sundt.md).
+- **Locations schema** — unchanged: Location (title), Adress (text), Companies full database (relation), Division (relation).
+
+### Checks performed (3a–3e)
+- **3a Interconnection:** Company ↔ Divisions (9) ✓ · Events → company ✓ · Memberships → company (all rows) ✓ · Locations schema confirms relations ✓. No new unset edges from dossier.
+- **3b Description depth:** Company body very rich (CEO, M&A, ENR trajectory, ESOP, revenue, employees, licenses). Divisions confirmed rich in prior passes ✓.
+- **3c Address/location:** Company Address place filled ✓. Locations schema has Adress (text) field. No lat/lng in dossier → division place fields still genuinely sourceless ✓.
+- **3d Membership completeness:** Dossier (Sundt.md) names 1 membership: DBIA. DBIA present ✓. All additional memberships (AGC, APWA, AzBA, Beavers, ESOP, ENR, USGBC) are post-dossier enrichment — valid. No dossier-sourced membership missing.
+- **3e Location tags:** AGC Safety Award = Arizona ✓. DBIA Milestone and Renewables Launch have no venue in dossier → sourceless ✓.
+
+### No new fillable gaps found from dossier (Sundt.md)
+All dossier-sourced data correctly recorded. No empty field with a sourced value (from Sundt.md) was identified. USGBC body blank = genuinely sourceless from Sundt.md.
+
+### Manual UI steps outstanding (unchanged from sixth pass)
+1. **Dup cleanup** — 7 membership dups (The Beavers ×2, AGC ×2, AzBA ×1, APWA ×1), 3 location dups (2 Tempe HQ, 2 Phoenix Ops), orphan Concrete page (`37d90644-d524-810e`).
+2. **I-10 dup review** — $87M vs $120M same or different project.
+3. **USGBC membership body** — blank; sourceless from Sundt.md; fill manually if Zack has a source.
+4. Projects Underway view → clear `__TEMPLATE__` filter.
+5. Existing Software view → clear `__TEMPLATE__` filter.
+6. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+**Result: 0 writes this pass. Record complete per Sundt.md ground truth. 7th consecutive no-write audit.**
