@@ -267,6 +267,25 @@ All data fully saturated vs Cianbro.md + Cianbro3.md dossiers. Record is complet
 ### Genuinely unfillable (confirmed, all sources exhausted)
 EMR/TRIR/DART · bonding/surety/insurance carriers · division revenue/headcount splits · ABC NCC 2024 exact date · AGC Maine Awards exact dates · Bangor I-95/Southport/Sarah Mildred Long/MVH Scarborough direct project URLs · most People Email/Phone/LinkedIn · per-state license numbers · JV revenue shares.
 
+## Audit fills (2026-06-13 — notion-audit run #12)
+**State as of 2026-06-13 (full live re-fetch + 4 Owner relation fills):**
+
+### What was filled (4 writes — Owner relation on 4 projects)
+- **CP243 Interlocking & Danbury Branch Dockyard `37b90644-d524-8136-ae56`** → Owner = CTDOT `37b90644-d524-81f1-bcc2-d2b3501af02a`. Source: Cianbro.md ("CTDOT, CMJV, $237M").
+- **P-381 Multi-Mission Dry Dock #1 Extension `37b90644-d524-8136-b945`** → Owner = NAVFAC `37b90644-d524-81c2-8696-ce3142972bdd`. Source: Cianbro.md ("Owner US Navy/NAVFAC").
+- **US Naval Academy Farragut Field Seawall `37b90644-d524-8190-842a`** → Owner = NAVFAC. Source: Cianbro.md line 95 + USASpending N4008022C0011.
+- **PNSY Dry Dock 2 Complex Pre-Con `37d90644-d524-816b-b419`** → Owner = NAVFAC. Source: Cianbro.md + USASpending PIID N6247025C4000.
+
+### Owner field status (all 25 projects)
+Projects with Owner now filled: WALK Bridge (CTDOT) ✓ · TIME-2 (CTDOT) ✓ · CP243 (CTDOT — filled this run) ✓ · P-381 (NAVFAC — filled this run) ✓ · USNA Farragut (NAVFAC — filled this run) ✓ · PNSY Pre-Con (NAVFAC — filled this run) ✓ · PNSY 2-bay (US Navy, pre-existing) ✓.
+Remaining 18 projects: Owner genuinely sourceless — owner entities don't have records in the Owners DB (MaineDOT, NPS, Hoffman-Madison, Maine Veterans' Homes, GSA-PBS, City of Portland, MCI, Plus Power, Lockhart Power Co., Puritan Medical, Cianbro self-developed for Western Maine Hydro, undisclosed for Canopy Hotel).
+
+### Verified complete (no further writes needed)
+All prior fills from runs #1–#11 confirmed intact ✓. 3a–3e all pass. Full interlink graph verified ✓.
+
+### Genuinely unfillable (confirmed — all sources exhausted)
+EMR/TRIR/DART · bonding/surety/insurance · division revenue/headcount splits · ABC NCC 2024 exact date · AGC Maine Awards exact dates · Bangor I-95/Southport/Sarah Mildred Long/CP243/P-381 direct project URLs · most People Email/Phone/LinkedIn · per-state license numbers · JV revenue shares · Owner relation for 18 projects (owner records absent from Owners DB) · Division Projects for 8 subsidiary/support units (no dossier-named standalone projects).
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).
