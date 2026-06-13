@@ -102,7 +102,7 @@ Page-local data sources:
 - **Events (4):** DBIA Water/WW 2026 Grapevine `37b90644-d524-81b5-b038-d4f96bb2c8f5` (Place set) · AGC MO AEC TechCon 2025 `…81bc-b834-ee6cd982c752` · Procore Groundbreak 2022 `…81ea-b23d-db7130922a62` (no date — year-only) · DBIA Water/WW 2024 Cincinnati `…8190-b0ec-df3cb1a7f9ca` (Place set).
 - **Memberships (4):** NSC `…813a-9da6-e0f5559d0fcc` · AGC `…81cc-a60b-e1d63dd94e5b` · DBIA `…81aa-93a1-fd8c847b14a6` · USGBC `…8180-abe4-f95e8edf4658`.
 - **Software (1, shared DB):** "Alberici" `37b90644-d524-81df-a781-fc26e98dc085` — Software used [Procore, Autodesk, Bluebeam, Primavera P6]; full stack (eCMS, StructionSite, DroneDeploy, Navisworks, Touchplan, InEight, PlanSwift, AGTEK) in body. **Consolidated single row** (not per-tool) to avoid the shared DB's known dup-row mess + option-clobber.
-- **Locations (10):** St. Louis HQ · Hillsdale · Washington IL · Atlanta · Detroit · Topeka · Burlington · Cambridge · Saskatoon · León — all → Company; 7 → Division (Washington/Atlanta/Detroit have no dossier owning_division → Company only). Adress = text (table's Adress is text type).
+- **Locations (10):** St. Louis HQ · Hillsdale · Washington IL · Atlanta · Detroit · Topeka · Burlington · Cambridge · Saskatoon · León — all → Company; **10 → Division** (Washington IL → Alberici Constructors Inc.; Atlanta → WWPS; Detroit → Alberici Constructors Inc. — filled 2026-06-13 from Alb2.md). Adress = text (table's Adress is text type).
 - **Sources (10):** operating-companies, contact, projects index, leadership, ENR 2026, flintco news, HigherGov UEI, Procore case study, OSHA 2023, USACE Soo Locks.
 
 ## Schema ALTERs (additive, pre-authorized 2026-06-10)
