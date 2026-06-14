@@ -228,6 +228,14 @@ Full 3a–3e re-audit. Newly discovered HITT4.md (2,474 lines, run 2026-06-12) c
 - **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week/Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational" (non-destructive).
 - **No false positives identified.**
 
+## Post-load audit #19 (2026-06-14, /notion-audit skill vs HITT1.md + HITT4.md)
+Live-fetched: company record (`30a9…`) — all properties verified; profile page (`37b9…8060`); Memberships DB (9 rows confirmed: AGC/NAIOP/USGBC/CoreNet Global/IFMA/IIDA/DBIA/ABC/ABC Metro Washington); Events DB (5 rows confirmed: DBIA/CONEXPO/NAIOP NoVA/Safety Week/Subcontractor Day). No new rows or gaps since Pass #18.
+- **0 fills — fully converged.** Nothing fillable was missed across HITT1.md + HITT4.md.
+- **Live confirmations (fetched this pass):** Company Address (place) Falls Church VA 38.864/-77.196 ✓; Country=14 (incl. NC/SC/NM) ✓; Construction Projects=11 ✓; Companies Software=14 ✓; Description body (Legal name/DUNS/UEI/CAGE/NAICS/Founded/Revenue/M&A/Litigation/Insurance) ✓; Size="Regional" (non-destructive conflict with dossier "Mutlinational", unchanged); 9/9 memberships present ✓; 5/5 events present ✓.
+- **3a–3e all ✓** — full relation graph intact per prior verified passes; 9/9 memberships company-linked; DBIA/CONEXPO=Nevada+Las Vegas ✓; NAIOP NoVA=Virginia ✓; Safety Week/Subcontractor Day no tags (National/nationwide — genuinely sourceless).
+- **Genuinely sourceless (unchanged):** LinkedIn URLs for people; HCA Chippenham Size; One Preserve/QTS contract values; Safety Week + Subcontractor Day location tags; Size="Regional" conflict with dossier "Mutlinational".
+- **No false positives identified.**
+
 ## Post-load audit #18 (2026-06-13, /notion-audit skill — automated hourly cycle)
 Live-fetched: company record (`30a9…`) — all properties verified; Memberships DB (9 rows confirmed: AGC/NAIOP/USGBC/CoreNet Global/IFMA/IIDA/DBIA/ABC/ABC Metro Washington); Events DB (5 rows confirmed: DBIA/CONEXPO/NAIOP NoVA/Safety Week/Subcontractor Day). No new rows or gaps since Pass #17.
 - **0 fills — fully converged.** Nothing fillable was missed across HITT1.md + HITT4.md.
