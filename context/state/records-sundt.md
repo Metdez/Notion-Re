@@ -457,6 +457,33 @@ All dossier-sourced data correctly recorded. No empty field with a sourced value
 
 ---
 
+## Audit — 2026-06-14 (sixteenth pass — /notion-audit Sundt)
+Full live re-fetch: company record (60K chars — all 17 properties confirmed, last edited 2026-06-12T10:33:18 — unchanged), Memberships DB search (15 rows: DBIA/AGC×3/APWA×2/AzBA×2/Beavers×3/ESOP/ENR Top 400/USGBC + TEMPLATE — all unique → Companies=Sundt ✓), Events DB search (13 rows confirmed — all → Companies=Sundt ✓), Locations DB search (25 rows — 17 unique originals + Charlotte dup NEW). Workspace search for Sundt records created after 2026-06-13 → 0 results. Ground truth cross-checked: Sundt.md + Sundt3.md both exhausted across 15 prior passes.
+
+### Checks (3a–3e): All pass
+- **3a Interconnection:** 9 divisions→company ✓ · 13 events→company ✓ · 8 unique memberships→company ✓ · 17 unique locations→company ✓. No net-new records → no new unset edges.
+- **3b Description depth:** Company body, all 9 division bodies, project bodies — confirmed rich per all prior passes ✓. USGBC body confirmed blank (genuinely sourceless).
+- **3c Address/location:** Company Address place (lat 33.3979/lng -111.9662) ✓. All location Adress text fields filled ✓. Division `Adress` (place type) empty — no coords in either dossier, no-geocoding rule → genuinely sourceless.
+- **3d Membership completeness:** 5 dossier-sourced memberships (DBIA/AGC/APWA/AzBA/Beavers) all present ✓. ESOP/ENR/USGBC = valid post-dossier enrichment. USGBC body blank — genuinely sourceless (not in either dossier).
+- **3e Location tags:** AGC Safety Award = Arizona ✓. All other events: no venue in either dossier → genuinely sourceless.
+
+**Result: 0 writes this pass. Record complete per all dossier data. 16th consecutive no-write pass.**
+
+### New dup since 15th pass
+- **Locations · Charlotte** — `37d90644-d524-8128-9f22-decba0573e28` (added 2026-06-12 20:18) is a new dup of original `37b90644-d524-81ef-b3a3-fc04c866eb3d`. Retain original; delete new via UI.
+
+### Manual UI steps outstanding (updated 06-14 sixteenth pass)
+1. **Dup cleanup — Locations:** SLC `37d90644…81f6` + `37d90644…81b6` (delete); Tempe HQ `37d90644…81a6` + `37d90644…81f8`; Phoenix Ops `37d90644…8114` + `37d90644…810a`; Phoenix Training `37d90644…8136` + `37d90644…8173`; Vancouver WA `37d90644…8183`; Tucson Old Vail `37d90644…81d0`; **Charlotte `37d90644…8128` (NEW)**.
+2. **Dup cleanup — Memberships:** AGC `37d90644…81e5` + `37d90644…814c`; APWA `37d90644…817b`; AzBA `37d90644…819e`; Beavers `37d90644…8156` + `37d90644…8160`.
+3. **Dup cleanup — Events:** Cade Rowley CEO `37d90644…81c6`; IPS Acquisition `37d90644…8131`.
+4. **Orphan page:** `37d90644-d524-810e-9a9c` (Concrete standalone) — delete.
+5. **I-10 dup review** — $87M vs $120M — review before deleting.
+6. **USGBC body** — blank; not in either dossier; fill manually if Zack has a source.
+7. Projects Underway view / Existing Software view → clear `__TEMPLATE__` filters.
+8. Construction Projects Location → add Idaho, Oregon options for Northwest projects.
+
+---
+
 ## Audit — 2026-06-13 (fifteenth pass — automated hourly /notion-audit Sundt)
 Full spot-check: workspace search for Sundt records created since 2026-06-13 → 0 results (no net-new). Company record `22b90644` confirmed (last edited 2026-06-12T10:33:18 — unchanged). USGBC membership `37d90644-d524-81e9` confirmed blank-page (still no source in either dossier). Ground truth cross-checked: Sundt.md + Sundt3.md both exhausted across 14 prior passes.
 
