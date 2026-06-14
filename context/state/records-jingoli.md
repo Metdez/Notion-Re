@@ -239,6 +239,22 @@ Full live re-verify of company DB record + Nuclear Services division + Matthew M
 - **Location tags (3e):** Event "New York" ✓. No other untagged located records.
 - **Outstanding (destructive — Zack UI, unchanged):** ENR 2012 event dup `37e9…81a9` + HQ location dup `37e9…8166` + GBCA×3 + PWC NJ×3 membership dups.
 
+## Audit pass 2026-06-14 Pass #17 (`/notion-audit Jingoli Nuclear Services`) — CONVERGED, zero writes
+Full live re-verify of all 15 records (company DB record + 5 divisions + 2 people + 5 dossier projects + 1 location + 1 event) via direct Notion MCP fetches. Ground truth: `Jingoli.md`. No fillable gaps found — every sourced field already populated; state matches Pass #16 exactly.
+- **Company DB `37b9…f55131`:** Description/Type/BW Category/Size=Regional/Website/LinkedIn/Country×4/Address(lat 40.2793/lng -74.7263) all populated; 19 people + 27 projects + 7 software linked. ✓
+- **Nuclear Services division `37b9…5333`:** Company + People (Mockaitis) + Projects (11) + Adress (lat/lng) all set; body at full depth. ✓
+- **Matthew Mockaitis `37b9…b583`:** Company + Function + Function Qualification + LinkedIn + Location=NJ set; Division deferred (global Divisions DB `37690644` no Jingoli rows). ✓
+- **Karl Miller `37b9…ffd8`:** Company + Function + Function Qualification + Location=NJ set; LinkedIn blank (no source in dossier) — genuinely unfillable. Division deferred. ✓
+- **All 5 dossier projects:** Contractors + Owning Department (Nuclear Services) set; Adress genuinely unfillable (no lat/lng in dossier). ✓
+- **Location row `37b9…770d`:** Adress text + Companies relation + Division relation all set. ✓
+- **Event `37b9…dc9dc`:** Company + Date 2012-01-01 + Location tags ["New York"] all set. ✓
+- **Interconnection (3a) ✓:** all 5 divisions→company; Nuclear Services→Mockaitis+11 projects+Adress; Jingoli Power→Karl Miller+5 projects; all 5 dossier projects→Contractors+Owning Department; both people→company; Location→company+division; Event→company.
+- **Description-depth (3b) ✓:** all bodies at source-maximum depth.
+- **Address/location (3c):** Company Address place ✓; Nuclear Services Adress ✓; 4 other divisions genuinely unfillable (no lat/lng in dossier); 5 project Adress genuinely unfillable; Location row Adress text ✓.
+- **Memberships (3d):** 4 rows (GBCA/NJ Alliance/PWC NJ/ACCNJ) present from Jing3 session ✓. Dossier `Jingoli.md` memberships null — complete ✓.
+- **Location tags (3e):** Event "New York" ✓. No other untagged located records.
+- **Outstanding (destructive — Zack UI, unchanged):** ENR 2012 event dup `37e9…81a9` + HQ location dup `37e9…8166` + GBCA×3 + PWC NJ×3 membership dups still present — no change since Pass #9.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Jingoli Nuclear Services.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (now has 7 real rows — filter should show them).
