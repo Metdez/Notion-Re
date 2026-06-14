@@ -114,6 +114,9 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
 
+## Audit — 2026-06-14 (notion-audit Pass #16 — automated audit cycle, 0 writes)
+**0 writes.** Live-confirmed: Company record `18490644-d524-80ff` (last edited 2026-02-17T22:08:25) — Description ✓, Address place (Reston 38.9586/-77.357) ✓, BW Category=[Builder,Advisor] ✓, 32 Construction Projects ✓ (32 URLs in property), 31 Software ✓ (31 URLs in property), 200+ People ✓, Country×11 ✓, LinkedIn ✓, Website ✓. Big Dig project `37d90644-8192` confirmed present in Notion (from Bech3.md). All 3a–3e checks confirmed per Pass #15. Bech3.md cross-checked: no new fills (all 1 project already loaded, no new memberships/events/software/locations vs. primary dossiers).
+
 ## Audit — 2026-06-13 (notion-audit Pass #15 — automated hourly cycle, 0 writes)
 **0 writes.** Live-confirmed: Company record `18490644-d524-80ff` (last edited 2026-02-17T22:08:25) — Description ✓, Address place (Reston 38.9586/-77.357) ✓, BW Category=[Builder,Advisor] ✓, 32 Construction Projects ✓, 31 Software ✓, 200+ People ✓, Country×11 ✓, LinkedIn ✓, Website ✓. All 3a–3e checks confirmed per Pass #14.
 

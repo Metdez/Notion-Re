@@ -298,6 +298,11 @@
 
 ---
 
+## Thirteenth pass — 2026-06-14 (notion-audit Pass #13 — automated cycle)
+**0 writes.** Live fetches confirmed: Clayco TEMPLATE page `37b90644-d524-808d-bef1-d27afa5baa1f` (body complete: Company Map, Events, Locations, Memberships, Software, Attack Plan all present ✓); Companies DB record `19990644` (Size="Mutlinational", Address place 35 E Wacker 41.8869/-87.6266 ✓, BW Category=[Builder, Developer, Design and Architecture] ✓, 32 Construction Projects ✓, 6 Software ✓, 5 Subsidiaries ✓, Type=Company ✓, LinkedIn ✓, Website ✓, Country=[USA, Illinois, Missouri] ✓). All 3a–3e confirmed per prior passes — no gaps found. No new dossier data. Zero writes executed. Genuinely sourceless (unchanged): project contract values (15/32) · precise project dates · Lenexa/Greenville/Birmingham/Atlanta/Raleigh location Divisions relations empty · Self-Perform Group no Projects linked.
+
+---
+
 ## Tenth pass — 2026-06-13 (notion-audit Pass #10 — all checks re-verified)
 > Full re-audit against all 4 dossiers (Clay 1.md + Clayco1.md + Clayco3.md + Clayco4.md). Live fetches: Clayco TEMPLATE page, Companies DB record (`19990644`), Memberships collection schema + all 5 rows (search-confirmed live), Events collection schema + all 6 event rows (search-confirmed live), Locations collection schema, Divisions collection schema.
 

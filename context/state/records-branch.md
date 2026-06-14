@@ -201,3 +201,30 @@ Company ↔ People (7) ✓ · Company ↔ Construction Projects (12) ✓ · Comp
 - Locations (7): HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville — Adress text + company + division ✓
 - Interconnection graph fully intact ✓
 - Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-14 (automated audit cycle — notion-audit skill pass #8)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record (26890644) all properties confirmed; profile hub (37b90644…4a13) body + Enlaye angle verified; Memberships DB search (4 rows: AGC, ABC, VTCA, DBIA ✓); Events DB search (2 rows: Carilion Golf Tournament + DBIA Southeast Regional Award ✓); Locations DB search (7 rows: HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville ✓); Branch Civil division spot-check (company relation, People, Projects, place, body ✓).
+- Company record (26890644): Description, Type=Company, Size=Regional, BW Category=[Builder], Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place (37.3271/−79.9822), People (170+), Construction Projects (12), Companies Software (2) ✓
+- Profile hub: body complete with Enlaye angle block ✓; all inline tables present ✓
+- Divisions (4): Branch Civil spot-checked — company relation, People (Brian Quinlan), Projects (5), Adress place, full body content ✓
+- People (7): Company, Function, Function Qualification, Location=Virginia, body ✓
+- Events (2): DBIA Award → Location=[North Carolina], date=2026-04-28, company ✓; Golf Tournament → Location=[Virginia], date=2026-06-08, company ✓; Place property genuinely sourceless (no venue address/coords in dossier)
+- Memberships (4): AGC, ABC, VTCA, DBIA — all 4 rows confirmed live ✓; company relation + URL ✓
+- Locations (7): HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville — all 7 confirmed ✓
+- Interconnection graph fully intact ✓
+- ⚠ Ledger now past 200-line split threshold — split to records-branch-archive.md recommended
+- Zero fillable gaps. No writes performed.
+
+## Audit log — 2026-06-14 (automated audit cycle — notion-audit skill pass #7)
+**Full re-audit pass completed (no writes needed).** Ground truth: Branch1.md. Live fetches: company record (26890644) all properties confirmed; profile hub (37b90644…4a13) body + Enlaye angle verified; Memberships DB search (4 rows: AGC, ABC, VTCA, DBIA ✓); Events DB search (2 rows: Carilion Golf Tournament + DBIA Southeast Regional Award ✓); spot-checks confirmed from prior-pass state.
+- Company record (26890644): Description, Type=Company, Size=Regional, BW Category=[Builder], Country (VA/MD/TN/NC/WV), Website, LinkedIn, Address place (37.3271/−79.9822), People (170+), Construction Projects (12), Companies Software (2) ✓
+- Profile hub: body complete with Enlaye angle block ✓; all inline tables present ✓
+- Divisions (4): Branch Civil, Branch Builds, Hopkins Lacy, Young & McQueen — all verified complete from prior passes; no new source data ✓
+- People (7): Company, Function, Function Qualification, Location=Virginia, body ✓
+- Projects (12): Contractors, Location, Adress place, Date, Status, Type, body ✓
+- Events (2): DBIA Award → Location=[North Carolina], date=2026-04-28, company ✓; Golf Tournament → Location=[Virginia], date=2026-06-08, company ✓; Place property genuinely sourceless (no venue address/coords in dossier)
+- Memberships (4): AGC, ABC, VTCA, DBIA — all 4 rows confirmed live ✓; company relation + URL ✓
+- Locations (7): HQ, Chantilly, Charlottesville, Chesapeake, Richmond, Morrisville, Burnsville — Adress text + company + division ✓
+- Interconnection graph fully intact ✓
+- ⚠ Ledger now at ~230 lines — past 200-line split threshold; split to records-branch-archive.md recommended next session
+- Zero fillable gaps. No writes performed.

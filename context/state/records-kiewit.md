@@ -349,6 +349,11 @@ Sources: https://www.kiewit.com/locations/
 
 ---
 
+## Audit pass — 2026-06-14 (Pass #10 — /notion-audit skill, automated cycle)
+**0 writes.** Ground truth: `Kiewitt.md` (read in full). Live fetches: company record (`17b90644` — BW=[Builder/Design and Architecture/Developer]/Country=24/39 Projects/8 Software — all confirmed ✓), profile page (`37b90644d524…830de18cf6ea0d89`), Memberships schema (`ed090644` — Name + Companies full database ✓), Events schema (`17a90644` — Event name/Date/Location tags/Place/Companies ✓), Locations schema (`18e90644` — Location/Adress text/Companies/Division ✓); Memberships search (13 results: 8 live + 6 DUPLICATE— + 1 TEMPLATE ✓); Events search (10 results: 6 live + 2 DUPLICATE— + 1 TEMPLATE + 1 unrelated ✓). 3a–3e all ✓ (consistent with Passes #7–9). Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).
+
+---
+
 ## Audit pass — 2026-06-13 (Pass #9 — automated hourly cycle)
 **0 writes.** Live fetches: company record (`17b90644` — Description/Address place (Omaha 41.265948/-95.935909)/Size=Mutlinational/BW=[Builder/Design and Architecture/Developer]/Country=24/39 Projects/8 Software/715 People — all confirmed ✓), profile page (`37b90644d524…830de18cf6ea0d89`), Memberships schema (`ed090644` — Name + Companies full database ✓), Events schema (`17a90644` — Event name/Date/Location tags/Place/Companies ✓). Search over Kiewit workspace (25 results) — same record set as prior passes, no new records.
 3a–3e all ✓ (consistent with Passes #7–8). Only outstanding action: Zack's manual UI deletion of 8 DUPLICATE— rows (6 Memberships + 2 Events).

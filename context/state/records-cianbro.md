@@ -294,6 +294,27 @@ EMR/TRIR/DART · bonding/surety/insurance · division revenue/headcount splits �
 - **Profile page** `37b90644-d524-8049` — Events header (6 sourced) ✓ · Locations header (13 locations) ✓ · Memberships body (30 listed) ✓.
 - **No new fillable gaps found.** Record fully saturated vs Cianbro.md + Cianbro3.md.
 
+## Audit fills (2026-06-14 — notion-audit run #14, automated cycle)
+**State as of 2026-06-14 (full live re-fetch verify — 0 writes):**
+- **Company record** `1cf90644` — Address place (44.7831/-69.3836) ✓ · Description ✓ · Country (12 states) ✓ · LinkedIn ✓ · Website ✓ · People (330+) ✓ · Construction Projects + Companies Software ✓.
+- **Divisions DB** — 13 active rows (6 market-sector + 7 subsidiaries) + 1 TEMPLATE ✓. All → Company ✓. Adress places confirmed filled on all 7 subsidiaries ✓.
+- **Memberships DB** — 24 named rows + 1 TEMPLATE ✓. All ABC/AGC/AGC Maine/ACI/AIHA/AISC/ARTCA/BPA/BWI/CFMA/CII/CURT/DBIA/GBC/MD Chamber/MTBMA/MWII/NAWIC/NSPE/Propeller Club/SAME/SBBA/SMPS/TAPPI confirmed present → Company ✓. No duplicates.
+- **Events DB** — 6 Cianbro-linked rows (JA Hall of Fame 2024 · ABC NCC 2024 · ABC NCC 2025 · ABC Top Performers · AGC Maine Awards · ConExpo 2026) ✓ · 2 non-Cianbro rows (SCUP + CALA/ISLE) correct ✓. All dates + location tags per prior runs ✓.
+- **Locations DB** — 25 active rows (14 original + 11 satellite offices added from Cianbro3.md) ✓. No duplicates observed. All → Company ✓.
+- **Profile page** `37b90644-d524-8049` — Events header (6 sourced) ✓ · Locations header (13 locations) ✓ · Memberships body (30 listed) ✓. Company Map + Memberships body verified intact.
+- **3a–3e checks:** Interconnection ✓ · Description depth ✓ · Address/location ✓ · Membership completeness (24/24) ✓ · Location tags ✓.
+- **No new fillable gaps found.** Record fully saturated vs Cianbro.md + Cianbro3.md.
+
+## Audit fills (2026-06-14 — notion-audit run #15, automated cycle)
+**State as of 2026-06-14 (live re-fetch spot-check — 0 writes):**
+- **Company record** `1cf90644` — Address place (44.7831/-69.3836) ✓ · Description ✓ · Country (12 states) ✓ · LinkedIn ✓ · Website ✓ · People (330+) ✓ · Construction Projects + Companies Software ✓ · BW Category (Builder) ✓.
+- **Infrastructure division** `37b90644-d524-813c` — Companies ✓ · Adress place (43.6528/-70.2553) ✓ · People (Henshaw + Dreher) ✓ · Projects (15) ✓. Body complete.
+- **Events DB** — duplicate `37e90644-d524-81de` (ABC NCC 2025) confirmed blank + no ancestor DB path (moved to workspace correctly; not in live Events collection) ✓.
+- **Projects spot-checked:** Bangor I-95 `userDefined:URL` = empty (genuinely sourceless — MaineDOT generic only) ✓ · Sarah Mildred Long `userDefined:URL` = empty (genuinely sourceless) ✓ · Southport Swing Bridge `userDefined:URL` = empty (genuinely sourceless) ✓ · MVH Scarborough `userDefined:URL` = empty (genuinely sourceless — maineveteranshomes.org generic only) ✓.
+- **Memberships spot-check:** TAPPI → Company ✓; cosmetic body dup (2× "Member. Source:") still present — non-data issue, flagged in outstanding items.
+- **No fillable gaps found.** Record fully saturated vs Cianbro.md + Cianbro3.md dossiers.
+- **Note:** TAPPI and ~11 other membership records carry duplicate body lines (identical sentence twice). Optional cosmetic cleanup, not a data gap.
+
 ## Manual UI steps outstanding
 1. **Projects Underway** view → clear `__TEMPLATE__` filter, set Contractors = Cianbro.
 2. **Existing Software** view → clear `__TEMPLATE__` filter (Cianbro's 8 rows are in the shared DB).

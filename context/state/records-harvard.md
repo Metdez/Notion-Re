@@ -245,6 +245,30 @@ Live Notion spot-checked: Harvard University owner, ERC Phase A project, Smoot C
 **3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
 **Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — manual archive/delete needed.
 
+## Audit log — 2026-06-14 (thirteenth pass / notion-audit skill run)
+**0 fills — fully audited.**
+Live Notion verified: Harvard University owner (Description, 13 Subsidiaries, Owner Institution, Website — all set; LinkedIn confirmed sourceless), ERC Phase A (all properties, Contractors×6, Owning Dept×2, People×9, $1.5B, address 100-112 Western Ave, dates, URL — complete), Barker Center Roofing (address 12 Quincy St, FAS dept link, dates, URL — complete), 12 Palmer Street Renovation (address 12 Palmer St, Consigli GC link, Harvard Real Estate dept, dates, URL — complete), Gund Hall dup `37c90644-d524-813f` confirmed still present and still a dup — flagged for Zack cleanup.
+
+**3a check:** All relation edges intact. ✓
+**3b check:** All project/department bodies complete. ✓
+**3d memberships:** N/A. ✓
+**3e location tags:** All 15 projects tagged `["Massachusetts"]`. ✓
+
+**Confirmed genuinely sourceless (unchanged from pass 12):**
+- Harvard University `LinkedIn` — no URL in either dossier.
+- Smoot `Website` — no URL in either dossier (LinkedIn `smootbuilds` already filled).
+- J&J Contractors `LinkedIn`, `Website`, revenue, employees, founded — null in both dossiers.
+- IC&E `LinkedIn` — no URL in either dossier (Website `iceteams.com` already filled).
+- All department LinkedIn/Website fields — not in either dossier.
+- ART `Contrat Value in Million` — $122M LOW CONFIDENCE/third-party; not filled.
+- Pritzker Hall `Contrat Value in Million` — $175M is fundraising goal, not contract value; blank.
+- ESL start/end dates — null in source.
+- Lewis International Law Center start/end dates, street address — campus area only; confirmed sourceless.
+- Barker Center and 12 Palmer `Status` — end dates passed but actual completion not confirmed in source; left as "In progress."
+- NASDEP / Steam Tunnel 29/30 `place:Adress` — no street address in dossier.
+
+**Outstanding flag for Zack:** Gund Hall duplicate (`37c90644-d524-813f`) still present — both records are fully populated; Zack should merge/delete second one via UI.
+
 ## Audit log — 2026-06-13 (twelfth pass / automated hourly audit)
 **No fills — all records complete.**
 Live Notion spot-checked: Harvard University owner (all properties: BW Category Owner, Country MA, Description, 13 Subsidiaries, Owner Institution, Website — all set; LinkedIn confirmed empty/sourceless), ERC Phase A (all properties, address 100-112 Western Ave, Contractors×6, Owning Dept×2, People×9, $1.5B, status, dates, URL — all complete), Barker Center Roofing (address, dates, status, FAS dept link, URL — all complete). No new fillable gaps found.

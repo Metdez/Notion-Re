@@ -107,6 +107,27 @@ Michael Kolakowski (CEO) EXISTS `37790644-d524-8101-914b-f2dafad69d75`. Leadersh
 - **"Bridgeport" stray division row** `37690644-d524-8010` — satellite office stub, not a real division; linked to company and holds Mozaic-Stamford project. Pre-existing; left as-is.
 - **3 trashed/mislabeled Mid-Atlantic rows** under "TEMPLATE — old data (safe to delete)" `37a90644-d524-818c` — left as-is per non-destructive rules.
 
+## Audit pass #19 (2026-06-14 — notion-audit skill, automated audit cycle)
+
+**Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier).
+
+### 0 fills executed
+Live fetch of company record `1cf90644` confirmed: **no fillable gaps remain.** Record unchanged since pass #18 (last edited 2026-06-12T11:46:32). Zero writes needed.
+
+### Records verified live this pass (2026-06-14)
+- **Company record `1cf90644`:** All key properties filled ✓. Description ✓ · Type=Company ✓ · Size=Regional ✓ · Address place (76 Batterson Park Road, Farmington, CT 06032; 41.726/-72.832) ✓ · Countries (7: CT/USA/MD/AZ/VA/NY/TN) ✓ · Construction Projects (46 URLs) ✓ · LinkedIn + Website ✓ · BW Category=Builder ✓ · Full body (Snapshot/Leadership/Safety/Risk/Sources/Boston BD) ✓
+- **3a–3e checks:** All interconnections consistent with prior passes ✓ · Address place on company record ✓ · Memberships 11 sourced rows per prior passes ✓ · Location tags on events per prior passes ✓
+
+### Persisting Zack action items (8 blank duplicate stubs — unchanged)
+**Memberships duplicates (blank, no body):** `37e90644-d524-8169` (AzBA) · `37e90644-d524-81a9` (ABC-CT) · `37e90644-d524-8124` (ABC Baltimore/CS) · `37e90644-d524-811d` (ABC Metro Washington)
+**Events duplicates (blank body):** `37e90644-d524-8135` (Golf Tournament) · `37e90644-d524-816e` (ABC EIC Awards) · `37e90644-d524-8168` (CBC Awards) · `37e90644-d524-8103` (WIC)
+All confirmed still blank and linked to KBE. Cannot auto-delete per non-destructive rules. **Recommend Zack trash all 8.**
+
+### Confirmed genuinely sourceless (unchanged)
+DUNS/EIN/state entity IDs · EMR/TRIR/DART · surety/insurance · division revenue/headcount · FPDS PIIDs · Golf Tournament + CBC Awards + Special Olympics venue addresses · DBIA/USGBC/AGC national memberships.
+
+---
+
 ## Audit pass #18 (2026-06-13 — notion-audit skill, automated hourly cycle)
 
 **Ground truth:** `Enlaye Notion/KBE Building/KBE.md` (primary dossier).

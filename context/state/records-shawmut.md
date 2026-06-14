@@ -125,6 +125,17 @@ Boston HQ `81c88d0cd5b8ffd16be0` · New York `81289f2addd8762684cc` · Providenc
 **3e location tags check:** Safety Week 2026 has tags [Massachusetts, Boston, Rhode Island, Providence, New York, California, Nevada, Florida, National] — all present. 12th Annual has [Boston, Massachusetts, National] — matches dossier. Location rows have `Adress` text field (not a place property) — by schema design; all 12 rows have Adress filled.
 **Harness updated:** this ledger only. No Notion writes executed.
 
+## Audit log — 2026-06-14 (Pass #13) — automated audit cycle
+**Full audit run (3a–3e).** Live-fetched: company record `19990644` (last edited 2026-06-12T23:07 — no changes since Pass #12; all 17 properties confirmed populated: BW Category, Country×10, Size=Regional, Address place 560 Harrison Ave lat/lng, Website, LinkedIn, Description, 39+ Projects, 200+ People, 11 Software, 30 Owners, Strategy linked); profile page `37b90644…81b2` (title="Shawmut" ✓, all body sections present). Ground truth: Shawmut3.md + Shaw5.md.
+**Identity confirmed:** "Shawmut TEMPLATE" = this real Shawmut profile page (cosmetic title artifact, already renamed). NOT a separate blank template copy. Normal audit performed.
+**Result: 0 fills executed.** Record fully saturated. Thirteenth consecutive clean pass.
+**3a Interconnection ✓:** 5 divisions → Companies ✓; Leaders (Sullivan/NE, Margolius/NY, Skalaski+Ragsdale/West, Nickel/MC) ✓; Large Project VP empty (sourceless); events → Companies ✓; AGC membership → Company ✓; 39+ projects → Contractors + Owning Department ✓.
+**3b Description depth ✓:** Company body 4 dated blocks through 2026-06-12T23:07. Profile page all sections intact.
+**3c Addresses ✓:** Company Address place (560 Harrison Ave, Boston, MA 02118, lat 42.3417/lng -71.0661) ✓. All 14+ location Adress text fields filled ✓. Events Place empty (nationwide, no geocode) ✓.
+**3d Memberships ✓:** 7 rows (AGC MA / AGC-CA / CASF / Providence Chamber / USGBC / ALSD / CASF-dup) present per Shaw5.md ✓. ⚠ AGC dup `37e90644` + CASF dup `37d90644-d524-81d6` still pending Zack UI delete.
+**3e Location tags ✓:** Safety Week 2026 = [MA, Boston, RI, Providence, NY, CA, NV, FL, National] ✓. 12th Annual = [Boston, MA, National] ✓. Women in Construction Week = [National] ✓. NACD Gala = [MA, Boston] ✓.
+**Genuinely sourceless (unchanged):** EMR/TRIR, bonding, UEI/CAGE/DUNS, license #s, litigation, Miami/WPB owning division, Large Project VP name, contract values for undisclosed projects.
+
 ## Audit log — 2026-06-13 (Pass #12) — automated hourly cycle
 **Full audit run (3a–3e).** Live-fetched: company record `19990644` (all properties confirmed populated; last edited 2026-06-12T23:07 — no changes since Pass #11); profile page `37b90644…81b2` (title="Shawmut" ✓, all body sections present ✓). Ground truth: Shawmut3.md + Shaw5.md. Cross-check vs 11-pass convergence history.
 **Result: 0 fills executed.** Record fully saturated. Twelfth consecutive pass.
