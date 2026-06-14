@@ -114,6 +114,9 @@ All 13 events: dates ✓, location tags ✓, place coords ✓, Companies relatio
 4. Template helper-text rows/instructions on the page can be deleted in UI once confirmed.
 5. Verify non-`building_*/user_*` icons (atom/gas/calendar/star/etc. on projects/events/software/memberships) render — fall back to confirmed icons if any show broken.
 
+## Audit — 2026-06-14 (notion-audit Pass #17 — automated audit cycle, 0 writes)
+**0 writes.** Live-confirmed: Company record `18490644-d524-80ff` — Description ✓, Address place (Reston 38.9586/-77.357) ✓, BW Category=[Builder,Advisor] ✓, 32 Construction Projects ✓, 31 Software ✓, 200+ People ✓, Country×11 ✓, LinkedIn ✓, Website ✓. Energy division `37b90644-d524-817a` confirmed: Companies→Bechtel ✓, People (Marsden) ✓, 8 Projects ✓, Adress place (CityWestPlace Houston, lat 29.7479/lng -95.5591) ✓, body complete ✓. Divisions schema (Division/Adress/Companies/People/Projects) ✓. Locations schema (Location/Adress text/Companies/Division) ✓. Events schema (17 Location tags options) ✓. Memberships: 12 rows live (6 originals + 6 dups — BRT/CII/NEI/ETEBA/CCITNZ/NABTU × 2); all company-linked ✓. ⚠ 6 duplicate membership rows still pending manual trash in UI (Manual UI step #6 — unchanged). All 3a–3e checks confirmed per Pass #16. 0 fillable gaps found.
+
 ## Audit — 2026-06-14 (notion-audit Pass #16 — automated audit cycle, 0 writes)
 **0 writes.** Live-confirmed: Company record `18490644-d524-80ff` (last edited 2026-02-17T22:08:25) — Description ✓, Address place (Reston 38.9586/-77.357) ✓, BW Category=[Builder,Advisor] ✓, 32 Construction Projects ✓ (32 URLs in property), 31 Software ✓ (31 URLs in property), 200+ People ✓, Country×11 ✓, LinkedIn ✓, Website ✓. Big Dig project `37d90644-8192` confirmed present in Notion (from Bech3.md). All 3a–3e checks confirmed per Pass #15. Bech3.md cross-checked: no new fills (all 1 project already loaded, no new memberships/events/software/locations vs. primary dossiers).
 

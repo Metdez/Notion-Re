@@ -84,6 +84,26 @@ Dates set (month-precise only): New Harbor 2025-06-28 · Long Bridge 2025-07-01�
 ## ⚠ Concurrent-session clobber incident (2026-06-10)
 Mid-load, a **parallel session reset the shared Projects `Location` multi-select to only `["Florida","South Carolina"]`** (the ~115-option list was wiped from the selectable schema). Caught when project batch C failed validation. **Existing page values survived** (HRBT still shows Virginia/Norfolk) — Notion keeps values when an option is removed; only NEW assignments are blocked. Impact on this build: batch C's 7 projects (Windsor Woods, Battery Park, Hudson River, Port Arthur, Howard Hanson, Sumner, LAX APM) have **no Location tag** (geography in body). Did NOT restore the option list — destructive-class re-write of a shared multi-select while another session is actively writing; needs Zack's call. **This likely affects other companies' projects too** (cross-company shared DB).
 
+## Audit — 2026-06-14 (eleventh pass)
+**Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
+
+### What was verified (eleventh pass)
+- **Company record** `24690644…`: live-fetched — Size="Mutlinational", Address place (4004 Summit Blvd NE Suite 1600 Atlanta GA 33.8746/-84.3389), Description, BW Category=Builder, Website, LinkedIn, Country×15, Parent Company, Construction Projects×38+, People×100+, Software×8, body Snapshot — all populated ✓
+- **Profile page body** `37b90644…8039`: live-fetched — Bio, Snapshot, Company Map/Events/Locations/Memberships/Projects sections confirmed present and complete ✓
+- **3 sampled projects (live-fetched):**
+  - Hampton Roads Bridge-Tunnel Expansion: Location=[Virginia,Norfolk], Contractors→FD, Value=$3.9B, Status=In progress, Date=2027-02-01, body complete ✓
+  - Windsor Woods Stormwater: Location=[Virginia], Contractors→FD, Value=$518M, Status=In progress, body complete ✓
+  - LAX Automated People Mover: Location=[California,Los Angeles], Contractors→FD, Value=$4.9B, Status=In progress, body complete ✓
+- **Memberships table** `54b90644…`: 25 rows confirmed — all 10 content rows present (AGC of California, DBIA, IPI, Hispanic Contractors CO, NECA Boston, AGC San Diego, Carolinas AGC, The Beavers, CCIB, California Alliance for Jobs) + 7 blank dup rows (pending Zack UI delete) + TEMPLATE ✓
+- **Events table** `94d90644…`: 5 content rows confirmed (DBIA Conference & Expo 2025, Groundbreaking Women 2026, CI Student Days 2025, IAI Summit 2025, IPI Awards 2022) + dup rows from 2026-06-12 (pending Zack UI) ✓. Schema has Las Vegas + San Diego options present ✓
+- **Divisions table** `e7190644…`: All 6 canonical divisions confirmed (FD USA, FD Canada, Pulice, SPC Construction, Prince Contracting, J.F. White) + 2 dup division rows (pending Zack UI) ✓
+- **False positives rejected:** inline-DB view-filter artifact (known `__TEMPLATE__` filter) — not real gaps ✓
+
+### Still empty (genuinely sourceless — unchanged)
+EMR/TRIR/DART/OSHA records · bonding/surety/insurance · per-division revenue & headcount · exact employee count · DUNS · project permit/parcel/APN/FEMA/seismic · most per-project full date sets. InEight/SAP/Viewpoint Vista/Trimble One UNVERIFIED. People Email/Phone/LinkedIn. Project `Adress` place property. J.F. White division People relation (no named leader in any dossier). IAI Summit 2025, IPI Awards 2022, CI Student Days 2025 Location tags/Place (genuinely sourceless — UNKNOWN/not disclosed in all dossiers).
+
+---
+
 ## Audit — 2026-06-13 (tenth pass — hourly auto-cycle)
 **Status: ✅ audit complete.** Ground truth: `Flat.md` + `Flatiron1.md` + `Flat2.md`. Zero fillable gaps found. No writes made this pass.
 
